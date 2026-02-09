@@ -67,7 +67,22 @@ const ImpactSection = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {outcomes.map((o) => (
+          {outcomes.slice(0, 3).map((o) => (
+            <div
+              key={o.short}
+              className="flex items-start gap-5 p-6 lg:p-7 rounded-lg border border-border bg-card"
+            >
+              <p className="font-display font-extrabold text-3xl md:text-4xl text-accent shrink-0 leading-none mt-0.5 min-w-[3.5rem]">
+                {o.metric}
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed pt-1">
+                {mode === "scan" ? o.short : o.label}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="grid sm:grid-cols-2 gap-5 mt-5">
+          {outcomes.slice(3).map((o) => (
             <div
               key={o.short}
               className="flex items-start gap-5 p-6 lg:p-7 rounded-lg border border-border bg-card"
