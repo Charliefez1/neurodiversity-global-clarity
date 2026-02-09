@@ -7,12 +7,25 @@ import RiskCallout from "@/components/blocks/RiskCallout";
 import OutcomeBlock from "@/components/blocks/OutcomeBlock";
 import TestimonialBlock from "@/components/blocks/TestimonialBlock";
 import AccessibilityNote from "@/components/blocks/AccessibilityNote";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
+import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
 import { Users, GraduationCap, Headphones, Settings } from "lucide-react";
 
 const WhoWeWorkWithTemplate = () => {
   return (
     <>
+      <SEOHead
+        title="HR & People Leaders"
+        description="Neurodiversity training, coaching, and strategy support for HR and People leaders navigating neurodiversity in work."
+        path="/who-we-work-with"
+      />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://www.neurodiversityglobal.com/" },
+        { name: "Who We Work With", url: "https://www.neurodiversityglobal.com/who-we-work-with" },
+      ])} />
       <Navbar />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Who We Work With" }]} />
       <main>
         {/* 1. Orientation */}
         <PageHero

@@ -7,12 +7,26 @@ import RiskCallout from "@/components/blocks/RiskCallout";
 import OutcomeBlock from "@/components/blocks/OutcomeBlock";
 import TestimonialBlock from "@/components/blocks/TestimonialBlock";
 import AccessibilityNote from "@/components/blocks/AccessibilityNote";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
+import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
 import { GraduationCap, Headphones, Settings } from "lucide-react";
 
 const IndustryTemplate = () => {
   return (
     <>
+      <SEOHead
+        title="Neurodiversity in Financial Services"
+        description="Neurodiversity training and consultancy for financial services. Reduce risk, retain talent, and meet regulatory expectations."
+        path="/industries/financial-services"
+      />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://www.neurodiversityglobal.com/" },
+        { name: "Industries", url: "https://www.neurodiversityglobal.com/industries" },
+        { name: "Financial Services", url: "https://www.neurodiversityglobal.com/industries/financial-services" },
+      ])} />
       <Navbar />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Industries" }, { label: "Financial Services" }]} />
       <main>
         {/* 1. Industry context */}
         <PageHero
