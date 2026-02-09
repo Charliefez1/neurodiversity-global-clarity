@@ -25,10 +25,10 @@ const pathways = [
 ];
 
 const stats = [
-  { value: "15+", label: "Years of specialist experience" },
-  { value: "500+", label: "Organisations supported" },
-  { value: "30", label: "Countries reached" },
-  { value: "50,000+", label: "People trained" },
+  { value: "20+", label: "Years of specialist delivery" },
+  { value: "750+", label: "Organisations supported" },
+  { value: "1,000+", label: "Projects delivered" },
+  { value: "30,000+", label: "People trained" },
 ];
 
 const HeroSection = () => {
@@ -37,14 +37,17 @@ const HeroSection = () => {
       <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 pb-14 lg:pt-24 lg:pb-20">
         {/* Headline */}
         <div className="max-w-3xl">
+          <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-4">
+            Neurodiversity in work. Designed as infrastructure.
+          </p>
           <h1
             id="hero-heading"
             className="font-display font-extrabold text-4xl md:text-5xl lg:text-[3.5rem] tracking-tight leading-[1.08]"
           >
-            We help organisations design work that includes neurodivergent people — and performs better because of it.
+            We redesign the systems that decide who succeeds, who burns out, and who leaves.
           </h1>
           <p className="mt-6 text-lg md:text-xl leading-relaxed opacity-80 max-w-[58ch]">
-            Training, coaching, and systems change that reduce employment risk, improve retention, and turn inclusion into a measurable operational advantage.
+            Neurodiversity Global is a UK-based, neurodivergent-led consultancy specialising in strategic redesign, workforce capability building, and digital enablement — helping organisations improve retention, reduce risk, and unlock performance that traditional systems leave behind.
           </p>
         </div>
 
@@ -54,11 +57,11 @@ const HeroSection = () => {
             href="#contact"
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-md bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Book a discovery call for 2026
+            Book a discovery call
             <ArrowRight size={18} aria-hidden="true" />
           </a>
           <a
-            href="#services"
+            href="/workshops"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             View training catalogue

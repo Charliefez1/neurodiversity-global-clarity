@@ -5,9 +5,9 @@ const problems = [
     icon: AlertTriangle,
     title: "Systems designed for the neurotypical majority",
     points: [
-      "Recruitment filters out neurodivergent candidates.",
+      "Recruitment filters out neurodivergent candidates before they start.",
       "Performance management penalises different working styles.",
-      "Workplace norms assume one way of thinking.",
+      "Workplace norms assume one way of thinking — and punish the rest.",
     ],
   },
   {
@@ -15,8 +15,8 @@ const problems = [
     title: "The cost of inaction is measurable",
     points: [
       "Employment tribunal claims involving neurodiversity are rising year on year.",
-      "Talented employees leave when adjustments fail.",
-      "Sickness absence and disengagement increase.",
+      "Talented employees leave when adjustments fail or never arrive.",
+      "Sickness absence and disengagement increase where systems are misaligned.",
     ],
   },
   {
@@ -39,8 +39,11 @@ const ProblemSection = () => {
             The challenge
           </p>
           <h2 id="problem-heading" className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight">
-            Why awareness alone isn't working
+            Most organisations approach neurodiversity as training. We approach it as infrastructure.
           </h2>
+          <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[55ch]">
+            That means inclusion is designed into operations, tied to performance and risk, owned by leadership, and measured, reviewed, and improved over time.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

@@ -1,14 +1,16 @@
+import { Link } from "react-router-dom";
+
 const footerLinks = {
   services: [
-    { label: "Training", href: "#services" },
-    { label: "Coaching & Support", href: "#services" },
-    { label: "Strategy", href: "#services" },
-    { label: "Customer Capability", href: "#services" },
+    { label: "Workshops", href: "/workshops" },
+    { label: "What We Do", href: "/what-we-do" },
+    { label: "Who We Work With", href: "/who-we-work-with" },
+    { label: "Industries", href: "/industries/financial-services" },
   ],
   company: [
-    { label: "About", href: "#values" },
-    { label: "Evidence", href: "#evidence" },
-    { label: "Contact", href: "#contact" },
+    { label: "About", href: "/#values" },
+    { label: "Evidence", href: "/#evidence" },
+    { label: "Contact", href: "/#contact" },
   ],
   legal: [
     { label: "Privacy Policy", href: "#" },
@@ -28,7 +30,7 @@ const Footer = () => {
               Neurodiversity<span className="text-accent"> Global</span>
             </p>
             <p className="text-sm opacity-60 leading-relaxed max-w-xs">
-              UK-based global consultancy specialising in neurodiversity in work, leadership, systems design and performance.
+              UK-based, neurodivergent-led consultancy redefining neuroinclusion as business-critical infrastructure. We do not deliver tick-box inclusion. We redesign systems.
             </p>
           </div>
 
@@ -38,9 +40,9 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {footerLinks.services.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
+                  <Link to={l.href} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -75,7 +77,14 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-primary-foreground/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Manifesto line */}
+        <div className="mt-12 pt-8 border-t border-primary-foreground/10">
+          <p className="text-sm opacity-60 leading-relaxed max-w-2xl italic">
+            "We do not do performative inclusion. We do the hard, human work of making it real. We are here to take the pain out of inclusion for everyone."
+          </p>
+        </div>
+
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs opacity-50">© {new Date().getFullYear()} Neurodiversity Global. All rights reserved.</p>
           <p className="text-xs opacity-50">Designed with accessibility at the centre.</p>
         </div>

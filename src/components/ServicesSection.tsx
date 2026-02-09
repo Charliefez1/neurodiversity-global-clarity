@@ -1,25 +1,27 @@
 import { GraduationCap, Users, Settings, Headphones } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: GraduationCap,
     title: "Training & Development",
-    description: "Accredited programmes for managers, HR teams, and leaders. Designed to change practice, not just raise awareness.",
+    description: "Accredited programmes for managers, HR teams, and leaders. Designed to change practice, not just raise awareness. Over 50 workshops available.",
+    href: "/workshops",
   },
   {
     icon: Users,
     title: "In-Work Coaching & Support",
-    description: "One-to-one and group coaching for neurodivergent employees and the people who manage them.",
+    description: "One-to-one and group coaching for neurodivergent employees and the people who manage them. Practical strategies for managing work day to day.",
   },
   {
     icon: Settings,
     title: "Strategy & Organisational Change",
-    description: "Policy review, systems redesign, and neurodiversity strategy embedded into how your organisation operates.",
+    description: "Policy review, systems redesign, and neurodiversity strategy embedded into how your organisation operates. From recruitment to exit.",
   },
   {
     icon: Headphones,
     title: "Customer-Facing Capability",
-    description: "Equip frontline teams to recognise and respond to neurodivergent customers, service users, and citizens.",
+    description: "Equip frontline teams to recognise and respond to neurodivergent customers, service users, and citizens. Internal and external delivery.",
   },
 ];
 
@@ -35,27 +37,38 @@ const ServicesSection = () => {
             Four areas of expertise. One clear purpose.
           </h2>
           <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[55ch]">
-            We work across the full scope of neurodiversity in organisations — from individual coaching to system-level change.
+            We work across the full scope of neurodiversity in organisations — from individual coaching to system-level change. From depots to boardrooms, we meet people where they are and build systems that scale.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 gap-5">
-          {services.map((s) => (
-            <article
-              key={s.title}
-              className="rounded-lg bg-card border border-border p-7 lg:p-8"
-            >
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 shrink-0 rounded-md bg-accent/10 flex items-center justify-center mt-0.5">
-                  <s.icon size={20} className="text-accent" aria-hidden="true" />
+          {services.map((s) => {
+            const content = (
+              <article
+                className="rounded-lg bg-card border border-border p-7 lg:p-8 h-full"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 shrink-0 rounded-md bg-accent/10 flex items-center justify-center mt-0.5">
+                    <s.icon size={20} className="text-accent" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-base text-card-foreground mb-1.5">{s.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{s.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-display font-bold text-base text-card-foreground mb-1.5">{s.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{s.description}</p>
-                </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+
+            if (s.href) {
+              return (
+                <Link key={s.title} to={s.href} className="group hover:shadow-md transition-shadow rounded-lg">
+                  {content}
+                </Link>
+              );
+            }
+
+            return <div key={s.title}>{content}</div>;
+          })}
         </div>
       </div>
     </section>
