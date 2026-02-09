@@ -38,13 +38,13 @@ const ServicesSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section id="services" className="bg-secondary py-20 lg:py-28" aria-labelledby="services-heading">
+    <section id="services" className="bg-background py-20 lg:py-28" aria-labelledby="services-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-14">
           <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
             What we deliver
           </p>
-          <h2 id="services-heading" className="font-display font-extrabold text-3xl md:text-4xl text-secondary-foreground leading-tight">
+          <h2 id="services-heading" className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight">
             Four areas of expertise. One clear purpose.
           </h2>
           {mode === "read" && (
@@ -62,9 +62,9 @@ const ServicesSection = () => {
         <div className="grid sm:grid-cols-2 gap-5">
           {services.map((s) => {
             const content = (
-              <article className="rounded-lg bg-card border border-border p-7 lg:p-8 h-full">
+              <article className="rounded-2xl bg-card border border-border p-7 lg:p-8 h-full shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 shrink-0 rounded-md bg-accent/10 flex items-center justify-center mt-0.5">
+                  <div className="w-11 h-11 shrink-0 rounded-xl bg-accent/10 flex items-center justify-center mt-0.5">
                     <s.icon size={20} className="text-accent" aria-hidden="true" />
                   </div>
                   <div>
@@ -79,7 +79,7 @@ const ServicesSection = () => {
 
             if (s.href) {
               return (
-                <Link key={s.title} to={s.href} className="group hover:shadow-md transition-shadow rounded-lg">
+                <Link key={s.title} to={s.href} className="group rounded-2xl">
                   {content}
                 </Link>
               );
@@ -91,11 +91,11 @@ const ServicesSection = () => {
 
         {/* Coaching platform teaser */}
         {mode !== "scan" && (
-          <div className="mt-14 rounded-xl bg-card border border-border p-6 lg:p-8 flex flex-col md:flex-row items-center gap-8">
+          <div className="mt-14 rounded-2xl bg-card border border-border p-6 lg:p-8 flex flex-col md:flex-row items-center gap-8 shadow-sm">
             <img
               src={coachingDashboard}
               alt="Coaching platform dashboard showing pending requests, analytics, and team insights"
-              className="w-full md:w-1/2 max-w-md rounded-lg"
+              className="w-full md:w-1/2 max-w-md rounded-xl"
               loading="lazy"
             />
             <div className="flex-1">

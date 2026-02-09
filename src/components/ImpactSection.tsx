@@ -45,7 +45,7 @@ const ImpactSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section className="bg-background py-20 lg:py-28" aria-labelledby="impact-heading">
+    <section className="bg-secondary/40 py-20 lg:py-28" aria-labelledby="impact-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-14">
           <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
@@ -56,7 +56,7 @@ const ImpactSection = () => {
           </h2>
           {mode === "read" && (
             <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[55ch]">
-              We measure what matters — performance, retention, risk, and culture. Not just training completion rates. This is not one-off training. It is continuous optimisation.
+              We measure what matters: performance, retention, risk, and culture. Not just training completion rates. This is not one-off training. It is continuous optimisation.
             </p>
           )}
           {mode === "listen" && (
@@ -70,7 +70,7 @@ const ImpactSection = () => {
           {outcomes.slice(0, 3).map((o) => (
             <div
               key={o.short}
-              className="p-6 lg:p-7 rounded-lg border border-border bg-card"
+              className="p-6 lg:p-7 rounded-2xl border border-border bg-card shadow-sm"
             >
               <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
                 {o.metric}
@@ -85,7 +85,7 @@ const ImpactSection = () => {
           {outcomes.slice(3).map((o) => (
             <div
               key={o.short}
-              className="p-6 lg:p-7 rounded-lg border border-border bg-card"
+              className="p-6 lg:p-7 rounded-2xl border border-border bg-card shadow-sm"
             >
               <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
                 {o.metric}
@@ -99,7 +99,7 @@ const ImpactSection = () => {
 
         {/* What changes for individuals */}
         {mode !== "scan" && (
-          <div className="mt-12 rounded-lg border border-accent/20 bg-accent/5 p-7 lg:p-8">
+          <div className="mt-12 rounded-2xl border border-accent/15 bg-accent/5 p-7 lg:p-8">
             <h3 className="font-display font-bold text-base text-foreground mb-5">What changes for individuals</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {individualOutcomes.map((item, i) => (
@@ -117,8 +117,8 @@ const ImpactSection = () => {
           <div className="mt-12 flex justify-center">
             <img
               src={measuresOfSuccess}
-              alt="Measures of success — pipeline growth, satisfaction score, and session completion"
-              className="max-w-2xl w-full h-auto rounded-xl"
+              alt="Measures of success: pipeline growth, satisfaction score, and session completion"
+              className="max-w-2xl w-full h-auto rounded-2xl"
               loading="lazy"
             />
           </div>

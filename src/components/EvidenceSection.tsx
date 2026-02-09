@@ -47,12 +47,12 @@ const EvidenceSection = () => {
         </div>
 
         {/* Logo placeholders */}
-        <div className="flex flex-wrap gap-4 mb-14 pb-10 border-b border-primary-foreground/8" role="list" aria-label="Organisations we have worked with">
+        <div className="flex flex-wrap gap-4 mb-14 pb-10 border-b border-primary-foreground/10" role="list" aria-label="Organisations we have worked with">
           {logos.map((name) => (
             <div
               key={name}
               role="listitem"
-              className="px-5 py-2.5 rounded border border-primary-foreground/12 text-xs font-display font-semibold opacity-50 tracking-wide uppercase"
+              className="px-5 py-2.5 rounded-xl border border-primary-foreground/15 text-xs font-display font-semibold opacity-50 tracking-wide uppercase"
             >
               {name}
             </div>
@@ -63,9 +63,9 @@ const EvidenceSection = () => {
         {mode === "scan" ? (
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
-              <div key={i} className="rounded-lg bg-primary-foreground/[0.04] border border-primary-foreground/8 p-5">
+              <div key={i} className="rounded-2xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-5">
                 <p className="text-sm opacity-80 italic">"{t.quote}"</p>
-                <p className="text-xs opacity-50 mt-2">— {t.author}, {t.org}</p>
+                <p className="text-xs opacity-50 mt-2">{t.author}, {t.org}</p>
               </div>
             ))}
           </div>
@@ -74,11 +74,11 @@ const EvidenceSection = () => {
             {testimonials.map((t, i) => (
               <blockquote
                 key={i}
-                className="rounded-lg bg-primary-foreground/[0.04] border border-primary-foreground/8 p-7 flex flex-col"
+                className="rounded-2xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-7 flex flex-col"
               >
                 <Quote size={20} className="text-accent mb-3 shrink-0" aria-hidden="true" />
                 <p className="text-sm leading-relaxed opacity-80 flex-1">{t.quote}</p>
-                <footer className="mt-5 pt-4 border-t border-primary-foreground/8">
+                <footer className="mt-5 pt-4 border-t border-primary-foreground/10">
                   <p className="font-display font-semibold text-sm">{t.author}</p>
                   <p className="text-xs opacity-50 mt-0.5">{t.org}</p>
                 </footer>
