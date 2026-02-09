@@ -35,7 +35,7 @@ const problems = [
   },
 ];
 
-const sectionAudioText = "The challenge. Most organisations approach neurodiversity as training. We approach it as infrastructure. Systems designed for the neurotypical majority filter out neurodivergent candidates, penalise different working styles, and assume one way of thinking. The cost of inaction is measurable: tribunal claims are rising, talent leaves, and disengagement increases. Awareness training alone changes nothing. The gap between intention and impact is where we operate.";
+const sectionAudioText = "The challenge. Most organisations treat neurodiversity as a training issue. We treat it as infrastructure. Systems designed for the neurotypical majority filter out neurodivergent candidates, penalise different working styles, and assume one way of thinking. The cost of inaction is measurable: tribunal claims are rising, talent leaves, and disengagement increases. Awareness training alone changes nothing. The gap between intention and impact is where we operate.";
 
 const ProblemSection = () => {
   const { mode } = useExperienceMode();
@@ -48,7 +48,7 @@ const ProblemSection = () => {
             The challenge
           </p>
           <h2 id="problem-heading" className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight">
-            Most organisations approach neurodiversity as training. We approach it as infrastructure.
+            Most organisations treat neurodiversity as a training issue. We treat it as infrastructure.
           </h2>
           {mode === "read" && (
             <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[55ch]">
