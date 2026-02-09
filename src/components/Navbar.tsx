@@ -17,12 +17,12 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <nav className="mx-auto max-w-wide px-6 lg:px-10 flex items-center justify-between h-16" aria-label="Main navigation">
-        <a href="#" className="font-display font-800 text-lg tracking-tight text-foreground">
+        <a href="#" className="font-display font-extrabold text-lg tracking-tight text-foreground">
           Neurodiversity<span className="text-accent"> Global</span>
         </a>
 
         {/* Desktop */}
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
@@ -37,7 +37,7 @@ const Navbar = () => {
 
         <a
           href="#contact"
-          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-md bg-accent text-accent-foreground font-display font-600 text-sm hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-md bg-accent text-accent-foreground font-display font-semibold text-sm hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Book a call
         </a>
