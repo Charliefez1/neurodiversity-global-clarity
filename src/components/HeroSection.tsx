@@ -47,7 +47,7 @@ const trainingCategories = [
 const HeroSection = () => {
   return (
     <section className="bg-primary text-primary-foreground" aria-labelledby="hero-heading">
-      <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 pb-14 lg:pt-24 lg:pb-20">
+      <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 lg:pt-24">
         {/* Headline + Training Card */}
         <div className="lg:flex lg:items-start lg:gap-12">
           <div className="max-w-3xl lg:flex-1">
@@ -140,11 +140,11 @@ const HeroSection = () => {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Client logos */}
-        <div className="mt-10">
-          <ClientMarquee embedded />
-        </div>
+      {/* Client logos — full width */}
+      <div className="mt-10 pb-14 lg:pb-20">
+        <ClientMarquee embedded />
       </div>
 
       {/* ── Tell us why you're here ── */}

@@ -9,11 +9,7 @@ const ClientMarquee = ({ embedded = false }: ClientMarqueeProps) => {
   const items = [...marqueeClients, ...marqueeClients];
 
   const inner = (
-    <div className="relative">
-      {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-primary to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-primary to-transparent z-10 pointer-events-none" />
-
+    <div className="relative overflow-hidden">
       <div className="flex animate-marquee items-center gap-14">
         {items.map((client, i) => (
           <a
