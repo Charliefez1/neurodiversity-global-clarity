@@ -9,6 +9,7 @@ import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { organisationSchema } from "@/components/JsonLd";
+import ExperienceSelector from "@/components/ExperienceSelector";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       />
       <JsonLd data={organisationSchema} />
       <Navbar />
+      <ExperienceSelector />
       <HeroSection />
       <ProblemSection />
       <ServicesSection />

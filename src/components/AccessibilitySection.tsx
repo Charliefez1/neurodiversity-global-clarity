@@ -1,4 +1,6 @@
 import { Accessibility, Eye, Heart, Shield } from "lucide-react";
+import { useExperienceMode } from "@/contexts/ExperienceModeContext";
+import SectionAudio from "@/components/SectionAudio";
 
 const values = [
   {
@@ -25,7 +27,11 @@ const inclusionMeans = [
   "Everyone is invited into the conversation, not forced into silence",
 ];
 
+const sectionAudioText = "What neuroinclusion means to us. Inclusion is not comfort, it is clarity. We build environments where people can say 'this is me' without fear. We are accessible by design, transparent and honest, and led by lived experience with over 20 years of delivery across 1,000 projects.";
+
 const AccessibilitySection = () => {
+  const { mode } = useExperienceMode();
+
   return (
     <section id="values" className="bg-secondary py-16 lg:py-20" aria-labelledby="values-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
@@ -37,17 +43,26 @@ const AccessibilitySection = () => {
             <h2 id="values-heading" className="font-display font-extrabold text-2xl md:text-3xl text-secondary-foreground leading-tight">
               Inclusion is not comfort. It is clarity.
             </h2>
-            <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
-              We build environments where people can say, "This is me," without fear.
-            </p>
-            <ul className="mt-5 space-y-2">
-              {inclusionMeans.map((item, i) => (
-                <li key={i} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
-                  <span className="block w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" aria-hidden="true" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            {mode === "read" && (
+              <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
+                We build environments where people can say, "This is me," without fear.
+              </p>
+            )}
+            {mode === "listen" && (
+              <div className="mt-4">
+                <SectionAudio sectionText={sectionAudioText} label="Listen to this section" />
+              </div>
+            )}
+            {mode !== "scan" && (
+              <ul className="mt-5 space-y-2">
+                {inclusionMeans.map((item, i) => (
+                  <li key={i} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
+                    <span className="block w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           <div className="grid sm:grid-cols-3 gap-8 lg:gap-10 flex-1">
