@@ -4,13 +4,12 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
 const quickButtons = [
-  "I need neurodiversity in work training",
-  "I need manager support",
-  "I need board level strategy and risk",
-  "I need early support before escalation",
-  "I need customer facing training",
-  "I need an industry specific solution",
-  "I am exploring options",
+  "We need neurodiversity awareness training for our team",
+  "We need 20 champions to be trained on neurodiversity in work",
+  "We are looking for a keynote speaker",
+  "Do you do lunch and learns?",
+  "How much does a session cost?",
+  "Are you free on the 15th?",
 ];
 
 interface BestFitItem {
