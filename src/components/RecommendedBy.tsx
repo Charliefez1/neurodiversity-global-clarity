@@ -13,7 +13,7 @@ const partners = [
 ];
 
 const RecommendedBy = () => (
-  <div className="border-t border-primary-foreground/8">
+  <div>
     <div className="mx-auto max-w-wide px-6 lg:px-10 py-10 lg:py-14">
       <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-8">
         Recommended by
