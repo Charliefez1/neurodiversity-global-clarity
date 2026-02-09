@@ -1,6 +1,7 @@
 import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield } from "lucide-react";
 import Concierge from "@/components/Concierge";
 import ADHDi from "@/components/ADHDi";
+import conciergeTeam from "@/assets/concierge-team.png";
 
 const pathways = [
   {
@@ -149,8 +150,13 @@ const HeroSection = () => {
                 Tell us why you're here
               </h2>
               <p className="mt-3 text-sm opacity-60 leading-relaxed max-w-[38ch]">
-                Describe what you need and we'll point you to the right training, service, or next step — in seconds.
+                Describe what you need and we'll point you to the right training, service, or next step.
               </p>
+              <img
+                src={conciergeTeam}
+                alt="Our concierge team ready to help"
+                className="mt-6 w-full max-w-[300px] object-contain"
+              />
             </div>
             <div className="flex-1 min-w-0">
               <Concierge />
