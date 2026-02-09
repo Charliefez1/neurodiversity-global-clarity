@@ -6,6 +6,7 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Who We Work With", href: "/who-we-work-with" },
   { label: "What We Do", href: "/what-we-do" },
+  { label: "Workshops", href: "/workshops" },
   { label: "Industries", href: "/industries/financial-services" },
   { label: "Evidence", href: "/#evidence" },
   { label: "About", href: "/#values" },

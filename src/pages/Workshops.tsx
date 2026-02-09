@@ -1,0 +1,185 @@
+import { useState, useMemo } from "react";
+import { Search, Clock, User } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
+import JsonLd, { breadcrumbSchema, serviceSchema } from "@/components/JsonLd";
+import PageHero from "@/components/templates/PageHero";
+import PageCTA from "@/components/templates/PageCTA";
+import { workshopCategories, allWorkshops, type Workshop } from "@/data/workshops";
+
+const WorkshopCard = ({ workshop }: { workshop: Workshop }) => {
+  const [expanded, setExpanded] = useState(false);
+  const Icon = workshop.icon;
+
+  return (
+    <button
+      onClick={() => setExpanded(!expanded)}
+      className="group text-left w-full rounded-lg border border-border bg-card p-5 transition-all hover:border-accent/40 hover:shadow-md focus-visible:outline-2 focus-visible:outline-accent"
+      aria-expanded={expanded}
+    >
+      <div className="flex items-start gap-4">
+        <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors">
+          <Icon size={20} className="text-accent" aria-hidden="true" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="font-display font-bold text-sm text-card-foreground leading-snug">
+            {workshop.title}
+          </h3>
+          <div className="flex flex-wrap items-center gap-3 mt-1.5">
+            <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+              <Clock size={12} aria-hidden="true" />
+              {workshop.duration}
+            </span>
+            <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
+              <User size={12} aria-hidden="true" />
+              {workshop.ledBy}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {expanded && (
+        <div className="mt-4 pt-4 border-t border-border space-y-3">
+          <div>
+            <p className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-accent mb-1">What this covers</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">{workshop.summary}</p>
+          </div>
+          <div>
+            <p className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-accent mb-1">Outcomes</p>
+            <p className="text-sm text-muted-foreground leading-relaxed">{workshop.outcomes}</p>
+          </div>
+        </div>
+      )}
+    </button>
+  );
+};
+
+const Workshops = () => {
+  const [query, setQuery] = useState("");
+
+  const filteredCategories = useMemo(() => {
+    if (!query.trim()) return workshopCategories;
+
+    const q = query.toLowerCase();
+    return workshopCategories
+      .map((cat) => ({
+        ...cat,
+        workshops: cat.workshops.filter(
+          (w) =>
+            w.title.toLowerCase().includes(q) ||
+            w.summary.toLowerCase().includes(q) ||
+            w.outcomes.toLowerCase().includes(q) ||
+            w.ledBy.toLowerCase().includes(q) ||
+            w.duration.toLowerCase().includes(q)
+        ),
+      }))
+      .filter((cat) => cat.workshops.length > 0);
+  }, [query]);
+
+  const totalCount = allWorkshops.length;
+  const filteredCount = filteredCategories.reduce((sum, c) => sum + c.workshops.length, 0);
+
+  return (
+    <>
+      <SEOHead
+        title="Workshops & Training Sessions"
+        description={`${totalCount} neurodiversity training workshops and sessions for managers, HR teams, leaders, and organisations. Accredited, evidence-based, led by lived experience.`}
+        path="/workshops"
+      />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://www.neurodiversityglobal.com/" },
+        { name: "Workshops", url: "https://www.neurodiversityglobal.com/workshops" },
+      ])} />
+      <JsonLd data={serviceSchema(
+        "Neurodiversity Workshops",
+        `${totalCount} accredited neurodiversity training workshops and sessions covering awareness, leadership, condition-specific understanding, and sector-specific delivery.`,
+        "https://www.neurodiversityglobal.com/workshops"
+      )} />
+      <Navbar />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Workshops" }]} />
+
+      <main>
+        <PageHero
+          badge="Workshops"
+          title="Neurodiversity training that changes practice"
+          description={`${totalCount} accredited sessions covering awareness, leadership, condition-specific understanding, lived experience, sector delivery, and organisational strategy. All designed by neurodivergent professionals.`}
+        />
+
+        {/* Search bar */}
+        <section className="bg-background border-b border-border">
+          <div className="mx-auto max-w-wide px-6 lg:px-10 py-6">
+            <div className="max-w-xl">
+              <label htmlFor="workshop-search" className="sr-only">Search workshops</label>
+              <div className="relative">
+                <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
+                <input
+                  id="workshop-search"
+                  type="search"
+                  placeholder="Search workshops by name, topic, or audience…"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  className="w-full rounded-lg border border-border bg-card pl-10 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
+                />
+              </div>
+              {query.trim() && (
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Showing {filteredCount} of {totalCount} workshops
+                </p>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* Categories and cards */}
+        {filteredCategories.map((category, catIdx) => (
+          <section
+            key={category.id}
+            id={category.id}
+            className={`${catIdx % 2 === 0 ? "bg-background" : "bg-secondary"} py-16 lg:py-24`}
+            aria-labelledby={`${category.id}-heading`}
+          >
+            <div className="mx-auto max-w-wide px-6 lg:px-10">
+              <div className="max-w-2xl mb-10">
+                <h2
+                  id={`${category.id}-heading`}
+                  className="font-display font-extrabold text-2xl md:text-3xl leading-tight text-foreground"
+                >
+                  {category.title}
+                </h2>
+                <p className="mt-3 text-base text-muted-foreground leading-relaxed max-w-[55ch]">
+                  {category.description}
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {category.workshops.map((workshop) => (
+                  <WorkshopCard key={workshop.id} workshop={workshop} />
+                ))}
+              </div>
+            </div>
+          </section>
+        ))}
+
+        {filteredCategories.length === 0 && query.trim() && (
+          <section className="bg-background py-24">
+            <div className="mx-auto max-w-wide px-6 lg:px-10 text-center">
+              <p className="text-muted-foreground text-base">
+                No workshops match "<strong className="text-foreground">{query}</strong>". Try a different search term.
+              </p>
+            </div>
+          </section>
+        )}
+
+        <PageCTA
+          title="Not sure which workshop is right?"
+          description="Book a discovery call and we'll recommend the right sessions for your organisation — no obligation."
+        />
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default Workshops;
