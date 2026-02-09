@@ -1,5 +1,6 @@
 import { ArrowRight, Building2, Landmark, Heart } from "lucide-react";
 import teamWelcome from "@/assets/team-welcome.png";
+import Concierge from "@/components/Concierge";
 
 const pathways = [
   {
@@ -92,6 +93,25 @@ const HeroSection = () => {
               <p className="mt-0.5 text-sm opacity-65 leading-snug">{stat.label}</p>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* ── Tell us why you're here ── */}
+      <div className="border-t border-primary-foreground/8">
+        <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-16">
+          <div className="lg:flex lg:gap-14">
+            <div className="lg:w-[340px] shrink-0 mb-8 lg:mb-0">
+              <h2 className="font-display font-extrabold text-2xl md:text-3xl leading-tight">
+                Tell us why you're here
+              </h2>
+              <p className="mt-3 text-sm opacity-60 leading-relaxed max-w-[38ch]">
+                Describe what you need and we'll point you to the right training, service, or next step — in seconds.
+              </p>
+            </div>
+            <div className="flex-1 min-w-0">
+              <Concierge />
+            </div>
+          </div>
         </div>
       </div>
 
