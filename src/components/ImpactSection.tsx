@@ -70,12 +70,12 @@ const ImpactSection = () => {
           {outcomes.slice(0, 3).map((o) => (
             <div
               key={o.short}
-              className="flex items-start gap-5 p-6 lg:p-7 rounded-lg border border-border bg-card"
+              className="p-6 lg:p-7 rounded-lg border border-border bg-card"
             >
-              <p className="font-display font-extrabold text-3xl md:text-4xl text-accent shrink-0 leading-none mt-0.5 min-w-[3.5rem]">
+              <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
                 {o.metric}
               </p>
-              <p className="text-muted-foreground text-sm leading-relaxed pt-1">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {mode === "scan" ? o.short : o.label}
               </p>
             </div>
@@ -85,12 +85,12 @@ const ImpactSection = () => {
           {outcomes.slice(3).map((o) => (
             <div
               key={o.short}
-              className="flex items-start gap-5 p-6 lg:p-7 rounded-lg border border-border bg-card"
+              className="p-6 lg:p-7 rounded-lg border border-border bg-card"
             >
-              <p className="font-display font-extrabold text-3xl md:text-4xl text-accent shrink-0 leading-none mt-0.5 min-w-[3.5rem]">
+              <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
                 {o.metric}
               </p>
-              <p className="text-muted-foreground text-sm leading-relaxed pt-1">
+              <p className="text-muted-foreground text-sm leading-relaxed">
                 {mode === "scan" ? o.short : o.label}
               </p>
             </div>
