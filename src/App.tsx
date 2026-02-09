@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 import WhatWeDo from "./pages/WhatWeDo";
 import IndustryTemplate from "./pages/IndustryTemplate";
+import KnowledgeBase from "./pages/KnowledgeBase";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
           <Route path="/industries/financial-services" element={<IndustryTemplate />} />
+          <Route path="/knowledge-base" element={<KnowledgeBase />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
