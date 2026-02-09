@@ -1,5 +1,6 @@
 import { GraduationCap, Users, Settings, Headphones } from "lucide-react";
 import { Link } from "react-router-dom";
+import coachingDashboard from "@/assets/coaching-dashboard.png";
 
 const services = [
   {
@@ -69,6 +70,23 @@ const ServicesSection = () => {
 
             return <div key={s.title}>{content}</div>;
           })}
+        </div>
+
+        {/* Coaching platform teaser */}
+        <div className="mt-14 rounded-xl bg-card border border-border p-6 lg:p-8 flex flex-col md:flex-row items-center gap-8">
+          <img
+            src={coachingDashboard}
+            alt="Coaching platform dashboard showing pending requests, analytics, and team insights"
+            className="w-full md:w-1/2 max-w-md rounded-lg"
+            loading="lazy"
+          />
+          <div className="flex-1">
+            <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-2">Coming soon</p>
+            <h3 className="font-display font-bold text-lg text-card-foreground mb-2">Digital Coaching Platform</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Our integrated coaching solution connects neurodivergent employees with specialist support — tracked, measured, and designed to scale across your organisation.
+            </p>
+          </div>
         </div>
       </div>
     </section>

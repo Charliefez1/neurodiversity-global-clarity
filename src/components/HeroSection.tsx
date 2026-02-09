@@ -1,4 +1,5 @@
 import { ArrowRight, Building2, Landmark, Heart } from "lucide-react";
+import teamWelcome from "@/assets/team-welcome.png";
 
 const pathways = [
   {
@@ -35,8 +36,9 @@ const HeroSection = () => {
   return (
     <section className="bg-primary text-primary-foreground" aria-labelledby="hero-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 pb-14 lg:pt-24 lg:pb-20">
-        {/* Headline */}
-        <div className="max-w-3xl">
+        {/* Headline + Image */}
+        <div className="lg:flex lg:items-center lg:gap-12">
+        <div className="max-w-3xl lg:flex-1">
           <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-4">
             Neurodiversity in work. Designed as infrastructure.
           </p>
@@ -49,6 +51,16 @@ const HeroSection = () => {
           <p className="mt-6 text-lg md:text-xl leading-relaxed opacity-80 max-w-[58ch]">
             Neurodiversity Global is a UK-based, neurodivergent-led consultancy specialising in strategic redesign, workforce capability building, and digital enablement — helping organisations improve retention, reduce risk, and unlock performance that traditional systems leave behind.
           </p>
+        </div>
+
+        <div className="hidden lg:block lg:flex-shrink-0 lg:w-[340px] xl:w-[400px]">
+          <img
+            src={teamWelcome}
+            alt="Neurodiversity Global consultants ready to help"
+            className="w-full h-auto rounded-xl opacity-90"
+            loading="eager"
+          />
+        </div>
         </div>
 
         {/* CTAs */}
