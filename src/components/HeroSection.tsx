@@ -1,6 +1,7 @@
 import { ArrowRight, Building2, Landmark, Heart } from "lucide-react";
 import teamWelcome from "@/assets/team-welcome.png";
 import Concierge from "@/components/Concierge";
+import ADHDi from "@/components/ADHDi";
 
 const pathways = [
   {
@@ -80,6 +81,7 @@ const HeroSection = () => {
           >
             View training catalogue
           </a>
+          <ADHDi />
         </div>
 
         {/* Stats bar */}
