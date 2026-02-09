@@ -6,6 +6,8 @@ import acasLogo from "@/assets/logos/acas.png";
 import nhsLogo from "@/assets/logos/nhs.png";
 import tpeLogo from "@/assets/logos/transpennine-express.png";
 import smartestLogo from "@/assets/logos/smartest-energy.png";
+import suezLogo from "@/assets/logos/suez.png";
+import agillioLogo from "@/assets/logos/agillio.png";
 
 const testimonials = [
   {
@@ -39,6 +41,22 @@ const testimonials = [
     role: "Chief People Officer",
     quote:
       "What sets Neurodiversity Global apart is their refusal to treat this as a tick-box exercise. They helped us build neurodiversity into our performance review process, our office design, and our leadership development. The ROI has been extraordinary, both in retention and in the quality of ideas reaching leadership.",
+  },
+  {
+    company: "Suez",
+    logo: suezLogo,
+    name: "Claire Pennington",
+    role: "Group HR Director",
+    quote:
+      "Working with Neurodiversity Global helped us understand that our operational environments were unintentionally excluding neurodivergent colleagues. Their site-level training programme reached over 400 frontline managers, and we have seen a significant improvement in how adjustments are handled. Grievances related to disability dropped by 30% in the first year.",
+  },
+  {
+    company: "Agillio",
+    logo: agillioLogo,
+    name: "David Chen",
+    role: "Managing Director",
+    quote:
+      "As a growing business, we needed to get neurodiversity right from the start rather than retrofitting later. Neurodiversity Global helped us embed inclusive practices into our hiring, onboarding, and management frameworks. Our neurodivergent employees consistently rate us higher on belonging than the industry average.",
   },
 ];
 

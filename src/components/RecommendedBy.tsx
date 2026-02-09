@@ -4,12 +4,16 @@ import acasLogo from "@/assets/logos/acas.png";
 import nhsLogo from "@/assets/logos/nhs.png";
 import tpeLogo from "@/assets/logos/transpennine-express.png";
 import smartestLogo from "@/assets/logos/smartest-energy.png";
+import suezLogo from "@/assets/logos/suez.png";
+import agillioLogo from "@/assets/logos/agillio.png";
 
 const partners = [
   { name: "ACAS", logo: acasLogo },
   { name: "NHS", logo: nhsLogo },
   { name: "TransPennine Express", logo: tpeLogo },
   { name: "Smartest Energy", logo: smartestLogo },
+  { name: "Suez", logo: suezLogo },
+  { name: "Agillio", logo: agillioLogo },
 ];
 
 const RecommendedBy = () => (
