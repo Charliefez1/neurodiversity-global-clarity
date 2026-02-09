@@ -10,7 +10,7 @@ export interface ClientCategory {
   clients: Client[];
 }
 
-const logo = (domain: string) => `https://logo.clearbit.com/${domain}`;
+const logo = (domain: string) => `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
 
 export const publicSector: Client[] = [
   { name: "NHS", url: "https://www.nhs.uk", logo: logo("nhs.uk") },

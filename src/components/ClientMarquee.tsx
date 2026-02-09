@@ -24,25 +24,16 @@ const ClientMarquee = () => {
               href={client.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-shrink-0 flex items-center justify-center h-10 opacity-50 hover:opacity-90 transition-opacity grayscale brightness-[2] hover:brightness-[2.5]"
+              className="flex-shrink-0 flex items-center justify-center gap-2 h-10 opacity-60 hover:opacity-100 transition-opacity"
               title={client.name}
             >
               <img
                 src={client.logo}
-                alt={client.name}
-                className="h-8 w-auto max-w-[120px] object-contain"
+                alt=""
+                className="h-6 w-6 object-contain rounded-sm"
                 loading="lazy"
                 onError={(e) => {
-                  // Fallback to text if logo fails
-                  const target = e.currentTarget;
-                  const parent = target.parentElement;
-                  if (parent) {
-                    target.style.display = "none";
-                    const span = document.createElement("span");
-                    span.className = "font-display font-bold text-sm text-primary-foreground/50 whitespace-nowrap";
-                    span.textContent = client.name;
-                    parent.appendChild(span);
-                  }
+                  e.currentTarget.style.display = "none";
                 }}
               />
             </a>
