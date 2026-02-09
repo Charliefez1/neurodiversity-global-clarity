@@ -1,5 +1,6 @@
 import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield } from "lucide-react";
 import Concierge from "@/components/Concierge";
+import ClientMarquee from "@/components/ClientMarquee";
 import ADHDi from "@/components/ADHDi";
 import conciergeTeam from "@/assets/concierge-team.png";
 
@@ -138,6 +139,11 @@ const HeroSection = () => {
               <p className="mt-0.5 text-sm opacity-65 leading-snug">{stat.label}</p>
             </div>
           ))}
+        </div>
+
+        {/* Client logos */}
+        <div className="mt-10">
+          <ClientMarquee embedded />
         </div>
       </div>
 
