@@ -10,6 +10,7 @@ import WhatWeDo from "./pages/WhatWeDo";
 import Workshops from "./pages/Workshops";
 import IndustryTemplate from "./pages/IndustryTemplate";
 import KnowledgeBase from "./pages/KnowledgeBase";
+import Clients from "./pages/Clients";
 import NotFound from "./pages/NotFound";
 import Concierge from "./components/Concierge";
 
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/workshops" element={<Workshops />} />
             <Route path="/industries/financial-services" element={<IndustryTemplate />} />
             <Route path="/knowledge-base" element={<KnowledgeBase />} />
+            <Route path="/clients" element={<Clients />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
