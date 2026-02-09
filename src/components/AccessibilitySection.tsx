@@ -1,4 +1,4 @@
-import { Accessibility, Eye, Heart } from "lucide-react";
+import { Accessibility, Eye, Heart, Shield } from "lucide-react";
 
 const values = [
   {
@@ -14,8 +14,15 @@ const values = [
   {
     icon: Heart,
     title: "Led by lived experience",
-    description: "Our team includes neurodivergent professionals. Our work is grounded in research and real experience.",
+    description: "Founded on lived experience and backed by 20+ years of delivery. We have led over 1,000 projects across public, private, and education sectors.",
   },
+];
+
+const inclusionMeans = [
+  "Everyone has language",
+  "Everyone has agency",
+  "Everyone is treated with dignity, even when it is messy",
+  "Everyone is invited into the conversation, not forced into silence",
 ];
 
 const AccessibilitySection = () => {
@@ -25,11 +32,22 @@ const AccessibilitySection = () => {
         <div className="lg:flex lg:items-start lg:gap-16">
           <div className="max-w-md mb-10 lg:mb-0 lg:shrink-0">
             <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
-              How we work
+              What neuroinclusion means to us
             </p>
             <h2 id="values-heading" className="font-display font-extrabold text-2xl md:text-3xl text-secondary-foreground leading-tight">
-              Accessibility is how we operate, not a feature we sell.
+              Inclusion is not comfort. It is clarity.
             </h2>
+            <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
+              We build environments where people can say, "This is me," without fear.
+            </p>
+            <ul className="mt-5 space-y-2">
+              {inclusionMeans.map((item, i) => (
+                <li key={i} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
+                  <span className="block w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="grid sm:grid-cols-3 gap-8 lg:gap-10 flex-1">

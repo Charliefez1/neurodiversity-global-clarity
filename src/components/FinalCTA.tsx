@@ -9,7 +9,7 @@ const FinalCTA = () => {
             Start a conversation
           </h2>
           <p className="mt-5 text-muted-foreground text-base leading-relaxed">
-            A 30-minute discovery call to understand your context, answer your questions, and outline what working together could look like. No obligation. No sales pressure.
+            We are not a training company. We are a strategic partner. A 30-minute discovery call to understand your context, answer your questions, and outline what working together could look like. No obligation. No sales pressure.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
