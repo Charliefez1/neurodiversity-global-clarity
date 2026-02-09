@@ -11,7 +11,7 @@ interface PageCTAProps {
 
 const PageCTA = ({
   title = "Ready to take the next step?",
-  description = "Book a free discovery call. We'll listen, understand your context, and recommend next steps — with no obligation.",
+  description = "Book a free discovery call. We'll listen, understand your context, and recommend next steps with no obligation.",
   primaryLabel = "Book a discovery call",
   primaryHref = "mailto:hello@neurodiversityglobal.com",
   secondaryLabel = "Email us directly",

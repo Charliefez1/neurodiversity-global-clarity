@@ -31,7 +31,7 @@ const IndustryTemplate = () => {
         {/* 1. Industry context */}
         <PageHero
           badge="Neurodiversity in financial services"
-          title="High-performance cultures need neuroinclusive systems — not just good intentions"
+          title="High-performance cultures need neuroinclusive systems, not just good intentions"
           description="Financial services organisations face unique pressures: regulatory scrutiny, high staff turnover costs, and performance cultures that often exclude neurodivergent talent."
         />
 
@@ -40,7 +40,7 @@ const IndustryTemplate = () => {
           id="challenges"
           badge="Sector challenges"
           title="Where financial services organisations typically struggle"
-          description="The sector's strengths — speed, precision, high standards — can become barriers when systems aren't designed for cognitive diversity."
+          description="The sector's strengths (speed, precision, high standards) can become barriers when systems aren't designed for cognitive diversity."
         >
           <div className="grid md:grid-cols-2 gap-6">
             <div className="rounded-lg border border-border bg-card p-6">
@@ -89,7 +89,7 @@ const IndustryTemplate = () => {
               {
                 icon: Headphones,
                 title: "Coaching for high-performance roles",
-                description: "Support for neurodivergent employees in demanding roles — and the managers responsible for their performance.",
+                description: "Support for neurodivergent employees in demanding roles, and the managers responsible for their performance.",
               },
               {
                 icon: Settings,

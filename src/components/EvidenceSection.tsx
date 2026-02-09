@@ -9,7 +9,7 @@ const testimonials = [
     org: "FTSE 250 Financial Services",
   },
   {
-    quote: "This changed how we design services and how our teams work together — not just what they know about neurodiversity.",
+    quote: "This changed how we design services and how our teams work together, not just what they know about neurodiversity.",
     author: "Director of Operations",
     org: "NHS Trust",
   },
@@ -24,7 +24,7 @@ const logos = [
   "NHS", "Civil Service", "Deloitte", "Barclays", "KPMG", "Capita",
 ];
 
-const sectionAudioText = "Evidence and trust. We're trusted by organisations including NHS, Civil Service, Deloitte, Barclays, KPMG, and Capita. Clients report remarkable impact on retention, changed service design, and genuine improvements for neurodivergent people — not just box-ticking.";
+const sectionAudioText = "Evidence and trust. We're trusted by organisations including NHS, Civil Service, Deloitte, Barclays, KPMG, and Capita. Clients report remarkable impact on retention, changed service design, and genuine improvements for neurodivergent people, not just box-ticking.";
 
 const EvidenceSection = () => {
   const { mode } = useExperienceMode();

@@ -36,14 +36,14 @@ const WhatWeDoTemplate = () => {
         <PageHero
           badge="What we do"
           title="Neurodiversity training that changes practice, not just awareness"
-          description="Accredited, evidence-based programmes for managers, HR professionals, and leaders — designed to create lasting change in how organisations include neurodivergent people."
+          description="Accredited, evidence-based programmes for managers, HR professionals, and leaders. Designed to create lasting change in how organisations include neurodivergent people."
         />
 
         {/* 2. Why this matters */}
         <PageSection
           id="why"
           badge="Why this matters"
-          title="The risk of doing nothing — or doing it badly"
+          title="The risk of doing nothing, or doing it badly"
           description="Most organisations have completed some form of neurodiversity awareness training. Very few have changed how they actually work."
         >
           <div className="grid md:grid-cols-2 gap-6">
@@ -83,7 +83,7 @@ const WhatWeDoTemplate = () => {
             <RiskCallout
               title="The cost of getting this wrong"
               items={[
-                "Tribunal claims are increasing — awareness alone is not a defence.",
+                "Tribunal claims are increasing. Awareness alone is not a defence.",
                 "Employees lose trust in organisations that train but don't change.",
                 "Money spent on ineffective training is budget wasted.",
               ]}
@@ -203,7 +203,7 @@ const WhatWeDoTemplate = () => {
         {/* 7. CTA */}
         <PageCTA
           title="Interested in training for your organisation?"
-          description="Book a discovery call and we'll recommend the right programme for your context — no obligation."
+          description="Book a discovery call and we'll recommend the right programme for your context. No obligation."
         />
       </main>
       <Footer />

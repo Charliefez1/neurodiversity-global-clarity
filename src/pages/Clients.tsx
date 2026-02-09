@@ -13,7 +13,7 @@ const Clients = () => {
   return (
     <>
       <SEOHead
-        title="Our Clients — Neurodiversity Global"
+        title="Our Clients. Neurodiversity Global"
         description="750+ organisations trust Neurodiversity Global for neurodiversity training, strategy, and workforce development. See who we work with across public, private, and third sectors."
         path="/clients"
       />
@@ -29,7 +29,7 @@ const Clients = () => {
         <PageHero
           badge="Our clients"
           title="750+ organisations. Every sector. One shared ambition."
-          description="From FTSE 250 boardrooms to NHS trusts, government departments to high-growth startups — these are the organisations building neuroinclusive workplaces with us."
+          description="From FTSE 250 boardrooms to NHS trusts, government departments to high-growth startups: these are the organisations building neuroinclusive workplaces with us."
         />
 
         {/* Trust signals */}

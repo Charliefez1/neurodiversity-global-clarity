@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <main>
       <SEOHead
-        title="Neurodiversity in Work — Designed as Infrastructure"
+        title="Neurodiversity in Work. Designed as Infrastructure"
         description="UK-based, neurodivergent-led consultancy redefining neuroinclusion as business-critical infrastructure. Strategic redesign, workforce capability building, and 50+ accredited workshops."
         path="/"
       />

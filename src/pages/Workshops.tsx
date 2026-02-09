@@ -264,7 +264,7 @@ const Workshops = () => {
 
         <PageCTA
           title="Not sure which workshop is right?"
-          description="Book a discovery call and we'll recommend the right sessions for your organisation — no obligation."
+          description="Book a discovery call and we'll recommend the right sessions for your organisation. No obligation."
         />
       </main>
       <Footer />
