@@ -10,6 +10,7 @@ import Workshops from "./pages/Workshops";
 import IndustryTemplate from "./pages/IndustryTemplate";
 import KnowledgeBase from "./pages/KnowledgeBase";
 import NotFound from "./pages/NotFound";
+import Concierge from "./components/Concierge";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Concierge />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
