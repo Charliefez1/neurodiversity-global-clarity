@@ -56,7 +56,7 @@ const HeroSection = () => {
               id="hero-heading"
               className="font-display font-extrabold text-4xl md:text-5xl lg:text-[3.5rem] tracking-tight leading-[1.08]"
             >
-              We redesign the systems that decide who succeeds, who burns out, and who leaves.
+              Neurodiversity training, strategy, and workplace redesign.
             </h1>
             <p className="mt-6 text-lg md:text-xl leading-relaxed opacity-80 max-w-[58ch]">
               UK-based, neurodivergent-led consultancy delivering accredited neurodiversity training, strategic redesign, and workforce capability building. Helping organisations improve retention, reduce risk, and unlock performance.
