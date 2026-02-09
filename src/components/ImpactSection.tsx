@@ -1,3 +1,5 @@
+import measuresOfSuccess from "@/assets/measures-of-success.png";
+
 const outcomes = [
   {
     metric: "30–40%",
@@ -71,6 +73,16 @@ const ImpactSection = () => {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Visual */}
+        <div className="mt-12 flex justify-center">
+          <img
+            src={measuresOfSuccess}
+            alt="Measures of success — pipeline growth, satisfaction score, and session completion"
+            className="max-w-2xl w-full h-auto rounded-xl"
+            loading="lazy"
+          />
         </div>
 
         <p className="mt-6 text-xs text-muted-foreground opacity-70">
