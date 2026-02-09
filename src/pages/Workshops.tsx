@@ -1,5 +1,5 @@
-import { useState, useMemo } from "react";
-import { Search, Clock, User } from "lucide-react";
+import { useState, useMemo, useRef } from "react";
+import { Search, Clock, User, Sparkles, Loader2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -8,6 +8,8 @@ import JsonLd, { breadcrumbSchema, serviceSchema } from "@/components/JsonLd";
 import PageHero from "@/components/templates/PageHero";
 import PageCTA from "@/components/templates/PageCTA";
 import { workshopCategories, allWorkshops, type Workshop } from "@/data/workshops";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const WorkshopCard = ({ workshop }: { workshop: Workshop }) => {
   const [expanded, setExpanded] = useState(false);
@@ -58,8 +60,45 @@ const WorkshopCard = ({ workshop }: { workshop: Workshop }) => {
 
 const Workshops = () => {
   const [query, setQuery] = useState("");
+  const [aiQuery, setAiQuery] = useState("");
+  const [aiLoading, setAiLoading] = useState(false);
+  const [aiResults, setAiResults] = useState<string[] | null>(null);
+  const { toast } = useToast();
+
+  const handleAiSearch = async () => {
+    const q = aiQuery.trim();
+    if (!q) return;
+    setAiLoading(true);
+    setAiResults(null);
+    setQuery("");
+    try {
+      const { data, error } = await supabase.functions.invoke("workshop-finder", {
+        body: { query: q },
+      });
+      if (error) throw error;
+      if (data?.workshopIds) {
+        setAiResults(data.workshopIds);
+      }
+    } catch (e: any) {
+      console.error(e);
+      toast({ title: "Could not reach the AI advisor", description: "Try using the text search instead.", variant: "destructive" });
+    } finally {
+      setAiLoading(false);
+    }
+  };
 
   const filteredCategories = useMemo(() => {
+    // AI results mode
+    if (aiResults && aiResults.length > 0) {
+      const idSet = new Set(aiResults);
+      return workshopCategories
+        .map((cat) => ({
+          ...cat,
+          workshops: cat.workshops.filter((w) => idSet.has(w.id)),
+        }))
+        .filter((cat) => cat.workshops.length > 0);
+    }
+
     if (!query.trim()) return workshopCategories;
 
     const q = query.toLowerCase();
@@ -76,7 +115,7 @@ const Workshops = () => {
         ),
       }))
       .filter((cat) => cat.workshops.length > 0);
-  }, [query]);
+  }, [query, aiResults]);
 
   const totalCount = allWorkshops.length;
   const filteredCount = filteredCategories.reduce((sum, c) => sum + c.workshops.length, 0);
@@ -107,7 +146,58 @@ const Workshops = () => {
           description={`${totalCount} accredited sessions covering awareness, leadership, condition-specific understanding, lived experience, sector delivery, and organisational strategy. All designed by neurodivergent professionals.`}
         />
 
-        {/* Search bar */}
+        {/* AI Workshop Finder */}
+        <section className="bg-primary">
+          <div className="mx-auto max-w-wide px-6 lg:px-10 py-10">
+            <div className="max-w-2xl">
+              <div className="flex items-center gap-2 mb-3">
+                <Sparkles size={18} className="text-accent" aria-hidden="true" />
+                <p className="font-display font-bold text-sm text-primary-foreground">AI Workshop Finder</p>
+              </div>
+              <p className="text-sm text-primary-foreground/75 mb-4">
+                Tell us what you're looking for and we'll recommend the best sessions for you.
+              </p>
+              <form
+                onSubmit={(e) => { e.preventDefault(); handleAiSearch(); }}
+                className="flex gap-3"
+              >
+                <label htmlFor="ai-search" className="sr-only">Describe what you need</label>
+                <input
+                  id="ai-search"
+                  type="text"
+                  placeholder="e.g. 'Training for line managers who struggle with performance reviews'"
+                  value={aiQuery}
+                  onChange={(e) => { setAiQuery(e.target.value); if (aiResults) setAiResults(null); }}
+                  disabled={aiLoading}
+                  className="flex-1 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 pl-4 pr-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent transition-colors disabled:opacity-50"
+                />
+                <button
+                  type="submit"
+                  disabled={aiLoading || !aiQuery.trim()}
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-accent text-accent-foreground font-display font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-50"
+                >
+                  {aiLoading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
+                  Find
+                </button>
+              </form>
+              {aiResults && (
+                <div className="mt-3 flex items-center gap-3">
+                  <p className="text-xs text-primary-foreground/75">
+                    Found {aiResults.length} recommended workshop{aiResults.length !== 1 ? "s" : ""} below
+                  </p>
+                  <button
+                    onClick={() => { setAiResults(null); setAiQuery(""); }}
+                    className="text-xs text-accent hover:underline"
+                  >
+                    Clear
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* Text search */}
         <section className="bg-background border-b border-border">
           <div className="mx-auto max-w-wide px-6 lg:px-10 py-6">
             <div className="max-w-xl">
@@ -117,9 +207,9 @@ const Workshops = () => {
                 <input
                   id="workshop-search"
                   type="search"
-                  placeholder="Search workshops by name, topic, or audience…"
+                  placeholder="Or search by name, topic, or audience…"
                   value={query}
-                  onChange={(e) => setQuery(e.target.value)}
+                  onChange={(e) => { setQuery(e.target.value); if (aiResults) setAiResults(null); }}
                   className="w-full rounded-lg border border-border bg-card pl-10 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-colors"
                 />
               </div>
