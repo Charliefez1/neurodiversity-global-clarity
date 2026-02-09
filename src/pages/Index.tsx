@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ClientMarquee from "@/components/ClientMarquee";
+
 import ProblemSection from "@/components/ProblemSection";
 import ServicesSection from "@/components/ServicesSection";
 import ImpactSection from "@/components/ImpactSection";
@@ -23,7 +23,7 @@ const Index = () => {
       <JsonLd data={organisationSchema} />
       <Navbar />
       <HeroSection />
-      <ClientMarquee />
+      
       <ProblemSection />
       <ServicesSection />
       <ImpactSection />
