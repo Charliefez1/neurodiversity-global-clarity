@@ -8,11 +8,29 @@ import OutcomeBlock from "@/components/blocks/OutcomeBlock";
 import PricingSummary from "@/components/blocks/PricingSummary";
 import TestimonialBlock from "@/components/blocks/TestimonialBlock";
 import AccessibilityNote from "@/components/blocks/AccessibilityNote";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
+import JsonLd, { breadcrumbSchema, serviceSchema } from "@/components/JsonLd";
 
 const WhatWeDoTemplate = () => {
   return (
     <>
+      <SEOHead
+        title="Neurodiversity Training"
+        description="Accredited neurodiversity training for managers, HR teams and leaders. Designed to change practice and deliver measurable outcomes."
+        path="/what-we-do"
+      />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://www.neurodiversityglobal.com/" },
+        { name: "What We Do", url: "https://www.neurodiversityglobal.com/what-we-do" },
+      ])} />
+      <JsonLd data={serviceSchema(
+        "Neurodiversity Training",
+        "Accredited neurodiversity training programmes for managers, HR professionals and leaders.",
+        "https://www.neurodiversityglobal.com/what-we-do"
+      )} />
       <Navbar />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "What We Do" }]} />
       <main>
         {/* 1. Overview */}
         <PageHero
