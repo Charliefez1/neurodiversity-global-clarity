@@ -57,7 +57,8 @@ const HeroSection = () => {
           <img
             src={teamWelcome}
             alt="Neurodiversity Global consultants ready to help"
-            className="w-full h-auto rounded-xl opacity-90"
+            className="w-full h-auto rounded-xl"
+            style={{ mixBlendMode: "lighten" }}
             loading="eager"
           />
         </div>
