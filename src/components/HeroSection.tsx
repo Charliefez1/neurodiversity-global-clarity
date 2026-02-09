@@ -2,6 +2,7 @@ import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users,
 import Concierge from "@/components/Concierge";
 import ClientMarquee from "@/components/ClientMarquee";
 import ADHDi from "@/components/ADHDi";
+import RecommendedBy from "@/components/RecommendedBy";
 import conciergeTeam from "@/assets/concierge-team.png";
 
 const pathways = [
@@ -143,9 +144,12 @@ const HeroSection = () => {
       </div>
 
       {/* Client logos — full width */}
-      <div className="mt-10 pb-14 lg:pb-20">
+      <div className="mt-10">
         <ClientMarquee embedded />
       </div>
+
+      {/* Recommended by */}
+      <RecommendedBy />
 
       {/* ── Tell us why you're here ── */}
       <div className="border-t border-primary-foreground/8">
