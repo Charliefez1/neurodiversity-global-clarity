@@ -155,7 +155,7 @@ const HeroSection = () => {
               <img
                 src={conciergeTeam}
                 alt="Our concierge team ready to help"
-                className="mt-6 w-full max-w-[300px] object-contain"
+                className="mt-6 w-full max-w-[150px] object-contain"
               />
             </div>
             <div className="flex-1 min-w-0">
