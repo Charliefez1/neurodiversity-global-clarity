@@ -1,1 +1,10 @@
 project_id = "mvjfepuvxgzgmgawubfx"
+
+[functions.workshop-finder]
+verify_jwt = false
+
+[functions.concierge]
+verify_jwt = false
+
+[functions.send-recommendations]
+verify_jwt = false
