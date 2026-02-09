@@ -13,6 +13,7 @@ import KnowledgeBase from "./pages/KnowledgeBase";
 import Clients from "./pages/Clients";
 import NotFound from "./pages/NotFound";
 import Concierge from "./components/Concierge";
+import ExperienceSelector from "./components/ExperienceSelector";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ExperienceSelector />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
