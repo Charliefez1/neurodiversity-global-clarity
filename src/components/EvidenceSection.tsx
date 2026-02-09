@@ -1,4 +1,6 @@
 import { Quote } from "lucide-react";
+import { useExperienceMode } from "@/contexts/ExperienceModeContext";
+import SectionAudio from "@/components/SectionAudio";
 
 const testimonials = [
   {
@@ -22,7 +24,11 @@ const logos = [
   "NHS", "Civil Service", "Deloitte", "Barclays", "KPMG", "Capita",
 ];
 
+const sectionAudioText = "Evidence and trust. We're trusted by organisations including NHS, Civil Service, Deloitte, Barclays, KPMG, and Capita. Clients report remarkable impact on retention, changed service design, and genuine improvements for neurodivergent people — not just box-ticking.";
+
 const EvidenceSection = () => {
+  const { mode } = useExperienceMode();
+
   return (
     <section id="evidence" className="bg-primary text-primary-foreground py-20 lg:py-28" aria-labelledby="evidence-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
@@ -33,6 +39,11 @@ const EvidenceSection = () => {
           <h2 id="evidence-heading" className="font-display font-extrabold text-3xl md:text-4xl leading-tight">
             Trusted by organisations that take this seriously
           </h2>
+          {mode === "listen" && (
+            <div className="mt-4">
+              <SectionAudio sectionText={sectionAudioText} label="Listen to this section" />
+            </div>
+          )}
         </div>
 
         {/* Logo placeholders */}
@@ -49,21 +60,32 @@ const EvidenceSection = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
-            <blockquote
-              key={i}
-              className="rounded-lg bg-primary-foreground/[0.04] border border-primary-foreground/8 p-7 flex flex-col"
-            >
-              <Quote size={20} className="text-accent mb-3 shrink-0" aria-hidden="true" />
-              <p className="text-sm leading-relaxed opacity-80 flex-1">{t.quote}</p>
-              <footer className="mt-5 pt-4 border-t border-primary-foreground/8">
-                <p className="font-display font-semibold text-sm">{t.author}</p>
-                <p className="text-xs opacity-50 mt-0.5">{t.org}</p>
-              </footer>
-            </blockquote>
-          ))}
-        </div>
+        {mode === "scan" ? (
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <div key={i} className="rounded-lg bg-primary-foreground/[0.04] border border-primary-foreground/8 p-5">
+                <p className="text-sm opacity-80 italic">"{t.quote}"</p>
+                <p className="text-xs opacity-50 mt-2">— {t.author}, {t.org}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map((t, i) => (
+              <blockquote
+                key={i}
+                className="rounded-lg bg-primary-foreground/[0.04] border border-primary-foreground/8 p-7 flex flex-col"
+              >
+                <Quote size={20} className="text-accent mb-3 shrink-0" aria-hidden="true" />
+                <p className="text-sm leading-relaxed opacity-80 flex-1">{t.quote}</p>
+                <footer className="mt-5 pt-4 border-t border-primary-foreground/8">
+                  <p className="font-display font-semibold text-sm">{t.author}</p>
+                  <p className="text-xs opacity-50 mt-0.5">{t.org}</p>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

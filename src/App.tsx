@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ExperienceModeProvider } from "@/contexts/ExperienceModeContext";
 import Index from "./pages/Index";
 import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 import WhatWeDo from "./pages/WhatWeDo";
@@ -17,21 +18,23 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
-          <Route path="/what-we-do" element={<WhatWeDo />} />
-          <Route path="/workshops" element={<Workshops />} />
-          <Route path="/industries/financial-services" element={<IndustryTemplate />} />
-          <Route path="/knowledge-base" element={<KnowledgeBase />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Concierge />
-      </BrowserRouter>
+      <ExperienceModeProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
+            <Route path="/what-we-do" element={<WhatWeDo />} />
+            <Route path="/workshops" element={<Workshops />} />
+            <Route path="/industries/financial-services" element={<IndustryTemplate />} />
+            <Route path="/knowledge-base" element={<KnowledgeBase />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Concierge />
+        </BrowserRouter>
+      </ExperienceModeProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
