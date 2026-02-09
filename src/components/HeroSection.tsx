@@ -59,7 +59,7 @@ const HeroSection = () => {
               We redesign the systems that decide who succeeds, who burns out, and who leaves.
             </h1>
             <p className="mt-6 text-lg md:text-xl leading-relaxed opacity-80 max-w-[58ch]">
-              UK-based, neurodivergent-led consultancy delivering accredited neurodiversity training, strategic redesign, and workforce capability building — helping organisations improve retention, reduce risk, and unlock performance.
+              UK-based, neurodivergent-led consultancy delivering accredited neurodiversity training, strategic redesign, and workforce capability building. Helping organisations improve retention, reduce risk, and unlock performance.
             </p>
 
             {/* CTAs */}

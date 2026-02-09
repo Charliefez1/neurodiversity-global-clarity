@@ -49,7 +49,7 @@ const ServicesSection = () => {
           </h2>
           {mode === "read" && (
             <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[55ch]">
-              We work across the full scope of neurodiversity in organisations — from individual coaching to system-level change. From depots to boardrooms, we meet people where they are and build systems that scale.
+              We work across the full scope of neurodiversity in organisations, from individual coaching to system-level change. From depots to boardrooms, we meet people where they are and build systems that scale.
             </p>
           )}
           {mode === "listen" && (
@@ -102,7 +102,7 @@ const ServicesSection = () => {
               <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-2">Coming soon</p>
               <h3 className="font-display font-bold text-lg text-card-foreground mb-2">Digital Coaching Platform</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Our integrated coaching solution connects neurodivergent employees with specialist support — tracked, measured, and designed to scale across your organisation.
+                Our integrated coaching solution connects neurodivergent employees with specialist support: tracked, measured, and designed to scale across your organisation.
               </p>
             </div>
           </div>

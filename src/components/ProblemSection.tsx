@@ -6,11 +6,11 @@ const problems = [
   {
     icon: AlertTriangle,
     title: "Systems designed for the neurotypical majority",
-    summary: "Recruitment, performance management, and workplace norms assume one way of thinking — and penalise the rest.",
+    summary: "Recruitment, performance management, and workplace norms assume one way of thinking and penalise the rest.",
     points: [
       "Recruitment filters out neurodivergent candidates before they start.",
       "Performance management penalises different working styles.",
-      "Workplace norms assume one way of thinking — and punish the rest.",
+      "Workplace norms assume one way of thinking and punish the rest.",
     ],
   },
   {
@@ -35,7 +35,7 @@ const problems = [
   },
 ];
 
-const sectionAudioText = "The challenge. Most organisations approach neurodiversity as training. We approach it as infrastructure. Systems designed for the neurotypical majority filter out neurodivergent candidates, penalise different working styles, and assume one way of thinking. The cost of inaction is measurable: tribunal claims are rising, talent leaves, and disengagement increases. Awareness training alone changes nothing — the gap between intention and impact is where we operate.";
+const sectionAudioText = "The challenge. Most organisations approach neurodiversity as training. We approach it as infrastructure. Systems designed for the neurotypical majority filter out neurodivergent candidates, penalise different working styles, and assume one way of thinking. The cost of inaction is measurable: tribunal claims are rising, talent leaves, and disengagement increases. Awareness training alone changes nothing. The gap between intention and impact is where we operate.";
 
 const ProblemSection = () => {
   const { mode } = useExperienceMode();

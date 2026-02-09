@@ -31,7 +31,7 @@ const WhoWeWorkWithTemplate = () => {
         <PageHero
           badge="Who we work with"
           title="HR and People leaders navigating neurodiversity in work"
-          description="You're responsible for policy, culture, and compliance — but the guidance is unclear, the risks are rising, and awareness training hasn't changed enough."
+          description="You're responsible for policy, culture, and compliance, but the guidance is unclear, the risks are rising, and awareness training hasn't changed enough."
         />
 
         {/* 2. Their reality */}
@@ -85,7 +85,7 @@ const WhoWeWorkWithTemplate = () => {
               {
                 icon: GraduationCap,
                 title: "Manager and HR training",
-                description: "Accredited programmes that build confidence and change practice — not just raise awareness.",
+                description: "Accredited programmes that build confidence and change practice, not just raise awareness.",
               },
               {
                 icon: Headphones,
@@ -140,11 +140,11 @@ const WhoWeWorkWithTemplate = () => {
           badge="Evidence"
           title="Experience that's relevant to you"
           variant="secondary"
-          description="We've worked with People teams across sectors — from FTSE 250 companies to NHS trusts and government departments."
+          description="We've worked with People teams across sectors, from FTSE 250 companies to NHS trusts and government departments."
         >
           <div className="grid md:grid-cols-2 gap-6">
             <TestimonialBlock
-              quote="Neurodiversity Global gave our HR team the confidence and the frameworks to actually change how we support neurodivergent employees — not just talk about it."
+              quote="Neurodiversity Global gave our HR team the confidence and the frameworks to actually change how we support neurodivergent employees, not just talk about it."
               author="Director of People"
               org="FTSE 250 Financial Services"
             />

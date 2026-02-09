@@ -35,7 +35,7 @@ const FinalCTA = () => {
             <ol className="space-y-1.5 text-sm text-muted-foreground">
               <li className="flex gap-2"><span className="font-display font-bold text-accent">1.</span> We arrange a 30-minute call at a time that suits you.</li>
               <li className="flex gap-2"><span className="font-display font-bold text-accent">2.</span> We listen, ask questions, and understand your needs.</li>
-              <li className="flex gap-2"><span className="font-display font-bold text-accent">3.</span> We recommend next steps — or point you elsewhere if we're not the right fit.</li>
+              <li className="flex gap-2"><span className="font-display font-bold text-accent">3.</span> We recommend next steps, or point you elsewhere if we're not the right fit.</li>
             </ol>
           </div>
         </div>
