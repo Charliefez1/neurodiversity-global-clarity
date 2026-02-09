@@ -1,5 +1,5 @@
 import { ArrowRight, Building2, Landmark, Heart } from "lucide-react";
-
+import teamWelcome from "@/assets/team-welcome.png";
 
 const pathways = [
   {
@@ -53,6 +53,15 @@ const HeroSection = () => {
           </p>
         </div>
 
+        <div className="hidden lg:block lg:flex-shrink-0 lg:w-[340px] xl:w-[400px]">
+          <img
+            src={teamWelcome}
+            alt="Neurodiversity Global consultants"
+            className="w-full h-auto rounded-xl"
+            style={{ mixBlendMode: "lighten" }}
+            loading="eager"
+          />
+        </div>
         </div>
 
         {/* CTAs */}
