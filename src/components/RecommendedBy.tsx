@@ -17,9 +17,9 @@ const partners = [
 ];
 
 const RecommendedBy = () => (
-  <div>
+  <div className="bg-secondary/40">
     <div className="mx-auto max-w-wide px-6 lg:px-10 py-10 lg:py-14">
-      <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-8">
+      <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-muted-foreground/60 mb-8">
         Recommended by
       </p>
       <div className="flex flex-wrap items-center gap-10 lg:gap-16 mb-8">
@@ -28,9 +28,9 @@ const RecommendedBy = () => (
             <img
               src={p.logo}
               alt={p.name}
-              className="h-12 w-12 object-contain rounded-md bg-white p-1"
+              className="h-12 w-12 object-contain rounded-xl bg-white p-1 shadow-sm"
             />
-            <span className="font-display font-bold text-lg text-primary-foreground">
+            <span className="font-display font-bold text-lg text-foreground">
               {p.name}
             </span>
           </div>

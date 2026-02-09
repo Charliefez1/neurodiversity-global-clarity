@@ -132,7 +132,7 @@ const Concierge = () => {
         <div>
           <label
             htmlFor="concierge-input"
-            className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-primary-foreground/50 block mb-2"
+            className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-muted-foreground/70 block mb-2"
           >
             In your own words
           </label>
@@ -142,21 +142,21 @@ const Concierge = () => {
             onChange={(e) => setUserInput(e.target.value)}
             placeholder="Example: I need manager training for a logistics site. Performance issues are rising and disclosure is becoming more common."
             rows={3}
-            className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/[0.06] px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/35 focus:outline-none focus:ring-2 focus:ring-accent resize-none leading-relaxed"
+            className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent resize-none leading-relaxed shadow-sm"
           />
         </div>
 
         <button
           onClick={() => handleSubmit(userInput)}
           disabled={!userInput.trim()}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all disabled:opacity-40"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/15 hover:shadow-xl hover:shadow-accent/25 hover:-translate-y-0.5 transition-all disabled:opacity-40"
         >
           Get my recommendations
           <ArrowRight size={16} aria-hidden="true" />
         </button>
 
         <div>
-          <p className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-primary-foreground/40 mb-3">
+          <p className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-muted-foreground/50 mb-3">
             Or choose a starting point
           </p>
           <div className="flex flex-wrap gap-2">
@@ -167,7 +167,7 @@ const Concierge = () => {
                   setUserInput(label);
                   handleSubmit(label);
                 }}
-                className="px-3 py-2 rounded-md border border-primary-foreground/15 bg-primary-foreground/[0.04] text-xs text-primary-foreground/80 hover:bg-primary-foreground/[0.1] transition-colors text-left leading-snug"
+                className="px-3 py-2 rounded-xl border border-border bg-card text-xs text-muted-foreground hover:bg-secondary transition-colors text-left leading-snug shadow-sm"
               >
                 {label}
               </button>
