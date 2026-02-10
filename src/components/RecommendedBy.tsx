@@ -30,18 +30,14 @@ const RecommendedBy = () => (
       <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-8">
         Recommended by
       </p>
-      <div className="flex flex-wrap items-center gap-4 lg:gap-6 mb-8">
+      <div className="flex flex-wrap items-center gap-8 lg:gap-12 mb-8">
         {partners.map((p) => (
-          <div
+          <img
             key={p.name}
-            className="flex items-center justify-center h-14 px-4 rounded-lg bg-white/90"
-          >
-            <img
-              src={p.logo}
-              alt={p.name}
-              className="h-8 max-w-[120px] object-contain"
-            />
-          </div>
+            src={p.logo}
+            alt={p.name}
+            className="h-8 md:h-10 max-w-[160px] object-contain brightness-0 invert opacity-80"
+          />
         ))}
       </div>
       <Link
