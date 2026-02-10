@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import acasLogo from "@/assets/logos/acas.png";
-import nhsLogo from "@/assets/logos/nhs.png";
+import nhsBtLogo from "@/assets/logos/nhs-bt.png";
 import tpeLogo from "@/assets/logos/transpennine-express.png";
 import smartestLogo from "@/assets/logos/smartest-energy.png";
 import suezLogo from "@/assets/logos/suez.png";
@@ -10,10 +10,11 @@ import fareshareLogo from "@/assets/logos/fareshare.png";
 import kyndrylLogo from "@/assets/logos/kyndryl.png";
 import nasaLogo from "@/assets/logos/nasa.png";
 import cwaLogo from "@/assets/logos/college-west-anglia.png";
+import cognassistLogo from "@/assets/logos/cognassist.png";
 
 const partners = [
   { name: "ACAS", logo: acasLogo },
-  { name: "NHS Blood and Transplant", logo: nhsLogo },
+  { name: "NHS Blood and Transplant", logo: nhsBtLogo },
   { name: "TransPennine Express", logo: tpeLogo },
   { name: "Smartest Energy", logo: smartestLogo },
   { name: "Suez", logo: suezLogo },
@@ -22,6 +23,7 @@ const partners = [
   { name: "Kyndryl", logo: kyndrylLogo },
   { name: "NASA", logo: nasaLogo },
   { name: "The College of West Anglia", logo: cwaLogo },
+  { name: "Cognassist", logo: cognassistLogo },
 ];
 
 const RecommendedBy = () => (
