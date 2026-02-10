@@ -145,13 +145,7 @@ const Workshops = () => {
           badge="Workshops"
           title="Neurodiversity training that changes practice"
           description="50+ 'live' (Online or In Person) Workshops covering awareness, leadership, condition-specific understanding, lived experience, sector delivery, and organisational strategy. All designed by neurodivergent professionals."
-        >
-          <img
-            src={workshopHeroTeam}
-            alt="Diverse professionals from healthcare, corporate, and emergency services attending neurodiversity training"
-            className="mt-8 w-full max-w-[520px] object-contain"
-          />
-        </PageHero>
+        />
 
         {/* AI Workshop Finder */}
         <section className="bg-primary -mt-8">
