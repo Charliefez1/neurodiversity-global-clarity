@@ -152,7 +152,7 @@ const Workshops = () => {
             <div className="max-w-2xl">
               <div className="flex items-center gap-2 mb-3">
                 <Sparkles size={18} className="text-accent" aria-hidden="true" />
-                <p className="font-display font-bold text-sm text-primary-foreground">AI Workshop Finder</p>
+                <p className="font-display font-bold text-sm text-primary-foreground">Neurodiversity In Work Workshop Finder</p>
               </div>
               <p className="text-sm text-primary-foreground/75 mb-4">
                 Tell us what you're looking for and we'll recommend the best sessions for you.
