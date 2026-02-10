@@ -13,17 +13,17 @@ import cwaLogo from "@/assets/logos/college-west-anglia.png";
 import cognassistLogo from "@/assets/logos/cognassist.png";
 
 const partners = [
-  { name: "ACAS", logo: acasLogo },
-  { name: "NHS Blood and Transplant", logo: nhsBtLogo },
-  { name: "TransPennine Express", logo: tpeLogo },
-  { name: "Smartest Energy", logo: smartestLogo },
-  { name: "Suez", logo: suezLogo },
-  { name: "Agilio", logo: agillioLogo },
-  { name: "FareShare", logo: fareshareLogo },
-  { name: "Kyndryl", logo: kyndrylLogo },
-  { name: "NASA", logo: nasaLogo },
-  { name: "The College of West Anglia", logo: cwaLogo },
-  { name: "Cognassist", logo: cognassistLogo },
+  { name: "ACAS", logo: acasLogo, className: "h-8 md:h-10 max-w-[120px]" },
+  { name: "NHS Blood and Transplant", logo: nhsBtLogo, className: "h-10 md:h-14 max-w-[180px]" },
+  { name: "TransPennine Express", logo: tpeLogo, className: "h-10 md:h-14 max-w-[180px]" },
+  { name: "Smartest Energy", logo: smartestLogo, className: "h-10 md:h-14 max-w-[180px]" },
+  { name: "Suez", logo: suezLogo, className: "h-8 md:h-10 max-w-[120px]" },
+  { name: "Agilio", logo: agillioLogo, className: "h-8 md:h-10 max-w-[140px]" },
+  { name: "FareShare", logo: fareshareLogo, className: "h-8 md:h-10 max-w-[120px]" },
+  { name: "Kyndryl", logo: kyndrylLogo, className: "h-8 md:h-10 max-w-[120px]" },
+  { name: "NASA", logo: nasaLogo, className: "h-12 md:h-16 max-w-[180px]" },
+  { name: "The College of West Anglia", logo: cwaLogo, className: "h-10 md:h-14 max-w-[180px]" },
+  { name: "Cognassist", logo: cognassistLogo, className: "h-10 md:h-14 max-w-[180px]" },
 ];
 
 const RecommendedBy = () => (
@@ -38,7 +38,7 @@ const RecommendedBy = () => (
             key={p.name}
             src={p.logo}
             alt={p.name}
-            className="h-8 md:h-10 max-w-[160px] object-contain brightness-0 invert opacity-80"
+            className={`object-contain opacity-90 ${p.className}`}
           />
         ))}
       </div>
