@@ -8,6 +8,7 @@ import JsonLd, { breadcrumbSchema, serviceSchema } from "@/components/JsonLd";
 import PageHero from "@/components/templates/PageHero";
 import PageCTA from "@/components/templates/PageCTA";
 import { workshopCategories, allWorkshops, type Workshop } from "@/data/workshops";
+import workshopHeroTeam from "@/assets/workshop-hero-team.png";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
@@ -144,7 +145,13 @@ const Workshops = () => {
           badge="Workshops"
           title="Neurodiversity training that changes practice"
           description="50+ 'live' (Online or In Person) Workshops covering awareness, leadership, condition-specific understanding, lived experience, sector delivery, and organisational strategy. All designed by neurodivergent professionals."
-        />
+        >
+          <img
+            src={workshopHeroTeam}
+            alt="Diverse professionals from healthcare, corporate, and emergency services attending neurodiversity training"
+            className="mt-8 w-full max-w-[520px] object-contain"
+          />
+        </PageHero>
 
         {/* AI Workshop Finder */}
         <section className="bg-primary -mt-8">
