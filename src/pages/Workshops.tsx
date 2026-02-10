@@ -147,7 +147,7 @@ const Workshops = () => {
         />
 
         {/* AI Workshop Finder */}
-        <section className="bg-primary">
+        <section className="bg-primary -mt-8">
           <div className="mx-auto max-w-wide px-6 lg:px-10 py-10">
             <div className="max-w-2xl">
               <div className="flex items-center gap-2 mb-3">
