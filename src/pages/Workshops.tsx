@@ -23,8 +23,8 @@ const WorkshopCard = ({ workshop }: { workshop: Workshop }) => {
       aria-expanded={expanded}
     >
       <div className="flex items-start gap-4">
-        <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors">
-          <Icon size={20} className="text-accent" aria-hidden="true" />
+         <div className={`w-10 h-10 rounded-lg ${workshop.flagship ? 'bg-burnt-orange/15' : 'bg-accent/10'} flex items-center justify-center shrink-0 group-hover:${workshop.flagship ? 'bg-burnt-orange/25' : 'bg-accent/20'} transition-colors`}>
+           <Icon size={20} className={workshop.flagship ? "text-burnt-orange" : "text-accent"} aria-hidden="true" />
         </div>
         <div className="flex-1 min-w-0">
           <h3 className="font-display font-bold text-sm text-card-foreground leading-snug">
