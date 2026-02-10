@@ -51,6 +51,8 @@
     --warm-white: 40 30% 97%;
     --warm-grey: 40 10% 62%;
     --text-secondary: 220 15% 46%;
+    --burnt-orange: 24 80% 50%;
+    --burnt-orange-foreground: 0 0% 100%;
 
     font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
   }

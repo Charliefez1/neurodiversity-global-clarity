@@ -1,9 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
-import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield } from "lucide-react";
+import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield, Search, Sparkles, Loader2 } from "lucide-react";
 import Concierge from "@/components/Concierge";
 import ClientMarquee from "@/components/ClientMarquee";
 import ADHDi from "@/components/ADHDi";
 import RecommendedBy from "@/components/RecommendedBy";
+import HeroWorkshopSearch from "@/components/HeroWorkshopSearch";
 import conciergeTeam from "@/assets/concierge-team.png";
 
 const heroMessages = [
@@ -221,7 +222,7 @@ const HeroSection = () => {
       {/* Recommended by */}
       <RecommendedBy />
 
-      {/* ── Tell us why you're here ── */}
+      {/* ── Tell us why you're here + Workshop Finder ── */}
       <div className="border-t border-primary-foreground/8">
         <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-16">
           <div className="lg:flex lg:gap-14">
@@ -238,8 +239,9 @@ const HeroSection = () => {
                 className="mt-6 w-full max-w-[150px] object-contain"
               />
             </div>
-            <div className="flex-1 min-w-0">
+            <div className="flex-1 min-w-0 space-y-8">
               <Concierge />
+              <HeroWorkshopSearch />
             </div>
           </div>
         </div>
