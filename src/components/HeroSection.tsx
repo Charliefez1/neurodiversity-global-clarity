@@ -1,9 +1,45 @@
+import { useState, useEffect, useCallback } from "react";
 import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield } from "lucide-react";
 import Concierge from "@/components/Concierge";
 import ClientMarquee from "@/components/ClientMarquee";
 import ADHDi from "@/components/ADHDi";
 import RecommendedBy from "@/components/RecommendedBy";
 import conciergeTeam from "@/assets/concierge-team.png";
+
+const heroMessages = [
+  {
+    headline: "Neurodiversity training, strategy, and workplace consultancy.",
+    subline: "UK-based, neurodivergent-led consultancy delivering accredited neurodiversity training, strategic redesign, and workforce capability building. Helping organisations improve retention, reduce risk, and unlock performance.",
+  },
+  {
+    headline: "We do the hard, human work of making neuroinclusion real.",
+    subline: "Live, engaging, lived experience training that changes behaviour, builds trust, and keeps delivering long after the session ends.",
+  },
+  {
+    headline: "Neuroinclusion that actually changes how work feels.",
+    subline: "Rated Excellent with a 9.7 out of 10 average because it is an experience that stays with people.",
+  },
+  {
+    headline: "This is not awareness training. This is change.",
+    subline: "We work alongside leaders and teams to turn intention into action and conversations into lasting shift.",
+  },
+  {
+    headline: "Neurodiversity at work. Real. Human. Effective.",
+    subline: "Practical sessions grounded in lived experience that translate directly into better decisions and better work.",
+  },
+  {
+    headline: "Where inclusion stops being performative and starts working.",
+    subline: "Managers leave with language, confidence, and clarity they can use immediately.",
+  },
+  {
+    headline: "We do the hard work most inclusion programmes avoid.",
+    subline: "We create the space and structure for honest conversations that actually move things forward.",
+  },
+  {
+    headline: "Be seen. Be valued. Be supported.",
+    subline: "Workshops designed to support neurodivergent people and the people carrying responsibility around them.",
+  },
+];
 
 const pathways = [
   {
@@ -46,6 +82,24 @@ const trainingCategories = [
 ];
 
 const HeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  const rotateMessage = useCallback(() => {
+    setIsVisible(false);
+    setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroMessages.length);
+      setIsVisible(true);
+    }, 600);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(rotateMessage, 6000);
+    return () => clearInterval(interval);
+  }, [rotateMessage]);
+
+  const current = heroMessages[currentIndex];
+
   return (
     <section className="bg-primary text-primary-foreground" aria-labelledby="hero-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 lg:pt-24">
@@ -55,15 +109,35 @@ const HeroSection = () => {
             <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-4">
               Neurodiversity in work. Designed as infrastructure.
             </p>
-            <h1
-              id="hero-heading"
-              className="font-display font-extrabold text-4xl md:text-5xl lg:text-[3.5rem] tracking-tight leading-[1.08]"
-            >
-              Neurodiversity training, strategy, and workplace consultancy.
-            </h1>
-            <p className="mt-6 text-lg md:text-xl leading-relaxed opacity-80 max-w-[58ch]">
-              UK-based, neurodivergent-led consultancy delivering accredited neurodiversity training, strategic redesign, and workforce capability building. Helping organisations improve retention, reduce risk, and unlock performance.
-            </p>
+            <div className="min-h-[180px] md:min-h-[160px] lg:min-h-[200px]">
+              <h1
+                id="hero-heading"
+                className="font-display font-extrabold text-4xl md:text-5xl lg:text-[3.5rem] tracking-tight leading-[1.08] transition-all duration-500 ease-in-out"
+                style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(12px)' }}
+              >
+                {current.headline}
+              </h1>
+              <p
+                className="mt-6 text-lg md:text-xl leading-relaxed opacity-80 max-w-[58ch] transition-all duration-500 ease-in-out delay-100"
+                style={{ opacity: isVisible ? 0.8 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(12px)' }}
+              >
+                {current.subline}
+              </p>
+            </div>
+
+            {/* Dot indicators */}
+            <div className="flex gap-2 mt-6" role="tablist" aria-label="Hero messages">
+              {heroMessages.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => { setIsVisible(false); setTimeout(() => { setCurrentIndex(i); setIsVisible(true); }, 400); }}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-accent w-6' : 'bg-primary-foreground/25 hover:bg-primary-foreground/40'}`}
+                  aria-label={`Message ${i + 1}`}
+                  aria-selected={i === currentIndex}
+                  role="tab"
+                />
+              ))}
+            </div>
 
             {/* CTAs */}
             <div className="mt-10 flex flex-wrap gap-4 items-center">
