@@ -128,7 +128,7 @@ const Concierge = () => {
   return (
     <>
       {/* ── Inline hero section ── */}
-      <div className="space-y-5">
+      <div className="space-y-5 relative z-10">
         <div>
           <label
             htmlFor="concierge-input"
