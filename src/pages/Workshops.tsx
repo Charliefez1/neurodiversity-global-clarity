@@ -143,7 +143,7 @@ const Workshops = () => {
         <PageHero
           badge="Workshops"
           title="Neurodiversity training that changes practice"
-          description={`${totalCount} accredited sessions covering awareness, leadership, condition-specific understanding, lived experience, sector delivery, and organisational strategy. All designed by neurodivergent professionals.`}
+          description="50+ 'live' (Online or In Person) Workshops covering awareness, leadership, condition-specific understanding, lived experience, sector delivery, and organisational strategy. All designed by neurodivergent professionals."
         />
 
         {/* AI Workshop Finder */}
