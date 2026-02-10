@@ -6,14 +6,22 @@ import tpeLogo from "@/assets/logos/transpennine-express.png";
 import smartestLogo from "@/assets/logos/smartest-energy.png";
 import suezLogo from "@/assets/logos/suez.png";
 import agillioLogo from "@/assets/logos/agillio.png";
+import fareshareLogo from "@/assets/logos/fareshare.png";
+import kyndrylLogo from "@/assets/logos/kyndryl.png";
+import nasaLogo from "@/assets/logos/nasa.png";
+import cwaLogo from "@/assets/logos/college-west-anglia.png";
 
 const partners = [
   { name: "ACAS", logo: acasLogo },
-  { name: "NHS", logo: nhsLogo },
+  { name: "NHS Blood and Transplant", logo: nhsLogo },
   { name: "TransPennine Express", logo: tpeLogo },
   { name: "Smartest Energy", logo: smartestLogo },
   { name: "Suez", logo: suezLogo },
-  { name: "Agillio", logo: agillioLogo },
+  { name: "Agilio", logo: agillioLogo },
+  { name: "FareShare", logo: fareshareLogo },
+  { name: "Kyndryl", logo: kyndrylLogo },
+  { name: "NASA", logo: nasaLogo },
+  { name: "The College of West Anglia", logo: cwaLogo },
 ];
 
 const RecommendedBy = () => (
@@ -22,18 +30,14 @@ const RecommendedBy = () => (
       <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-8">
         Recommended by
       </p>
-      <div className="flex flex-wrap items-center gap-10 lg:gap-16 mb-8">
+      <div className="flex flex-wrap items-center gap-8 lg:gap-12 mb-8">
         {partners.map((p) => (
-          <div key={p.name} className="flex items-center gap-3">
-            <img
-              src={p.logo}
-              alt={p.name}
-              className="h-12 w-12 object-contain rounded-md bg-white p-1"
-            />
-            <span className="font-display font-bold text-lg text-primary-foreground">
-              {p.name}
-            </span>
-          </div>
+          <img
+            key={p.name}
+            src={p.logo}
+            alt={p.name}
+            className="h-10 md:h-12 max-w-[140px] object-contain"
+          />
         ))}
       </div>
       <Link
