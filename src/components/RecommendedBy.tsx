@@ -6,7 +6,6 @@ import tpeLogo from "@/assets/logos/transpennine-express.png";
 import smartestLogo from "@/assets/logos/smartest-energy.png";
 import suezLogo from "@/assets/logos/suez.png";
 import agillioLogo from "@/assets/logos/agillio.png";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion/FadeIn";
 
 const partners = [
   { name: "ACAS", logo: acasLogo },
@@ -18,37 +17,31 @@ const partners = [
 ];
 
 const RecommendedBy = () => (
-  <div className="py-12 lg:py-16">
-    <div className="mx-auto max-w-wide px-6 lg:px-10">
-      <FadeIn>
-        <p className="font-display font-semibold text-xs uppercase tracking-[0.2em] text-muted-foreground/60 mb-8">
-          Recommended by
-        </p>
-      </FadeIn>
-      <StaggerContainer className="flex flex-wrap items-center gap-8 lg:gap-14 mb-8" staggerDelay={0.08}>
+  <div>
+    <div className="mx-auto max-w-wide px-6 lg:px-10 py-10 lg:py-14">
+      <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-8">
+        Recommended by
+      </p>
+      <div className="flex flex-wrap items-center gap-10 lg:gap-16 mb-8">
         {partners.map((p) => (
-          <StaggerItem key={p.name}>
-            <div className="flex items-center gap-3 group">
-              <img
-                src={p.logo}
-                alt={p.name}
-                className="h-12 w-12 object-contain rounded-xl bg-white p-1.5 shadow-sm group-hover:shadow-md transition-shadow"
-              />
-              <span className="font-display font-bold text-lg text-foreground">
-                {p.name}
-              </span>
-            </div>
-          </StaggerItem>
+          <div key={p.name} className="flex items-center gap-3">
+            <img
+              src={p.logo}
+              alt={p.name}
+              className="h-12 w-12 object-contain rounded-md bg-white p-1"
+            />
+            <span className="font-display font-bold text-lg text-primary-foreground">
+              {p.name}
+            </span>
+          </div>
         ))}
-      </StaggerContainer>
-      <FadeIn delay={0.3}>
-        <Link
-          to="/testimonials"
-          className="group inline-flex items-center gap-2 text-accent font-display font-bold text-sm hover:gap-3 transition-all"
-        >
-          Read testimonials <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-        </Link>
-      </FadeIn>
+      </div>
+      <Link
+        to="/testimonials"
+        className="inline-flex items-center gap-2 text-accent font-display font-semibold text-sm hover:gap-3 transition-all"
+      >
+        Read testimonials <ArrowRight size={15} aria-hidden="true" />
+      </Link>
     </div>
   </div>
 );

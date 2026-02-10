@@ -1,10 +1,9 @@
-import { ArrowRight, GraduationCap, BookOpen, Briefcase, Building2, Shield, Users, Mic, Heart, Landmark } from "lucide-react";
+import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield } from "lucide-react";
 import Concierge from "@/components/Concierge";
+import ClientMarquee from "@/components/ClientMarquee";
 import ADHDi from "@/components/ADHDi";
 import RecommendedBy from "@/components/RecommendedBy";
-import ClientMarquee from "@/components/ClientMarquee";
 import conciergeTeam from "@/assets/concierge-team.png";
-import { FadeIn, StaggerContainer, StaggerItem, CountUp } from "@/components/motion/FadeIn";
 
 const pathways = [
   {
@@ -48,67 +47,58 @@ const trainingCategories = [
 
 const HeroSection = () => {
   return (
-    <section className="bg-background text-foreground overflow-hidden" aria-labelledby="hero-heading">
-      {/* ── Main Hero ── */}
-      <div className="mx-auto max-w-wide px-6 lg:px-10 pt-20 lg:pt-32 pb-6">
-        <div className="lg:flex lg:items-start lg:gap-14">
+    <section className="bg-primary text-primary-foreground" aria-labelledby="hero-heading">
+      <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 lg:pt-24">
+        {/* Headline + Training Card */}
+        <div className="lg:flex lg:items-start lg:gap-12">
           <div className="max-w-3xl lg:flex-1">
-            <FadeIn delay={0.1} direction="none">
-              <p className="font-display font-semibold text-xs uppercase tracking-[0.2em] text-accent mb-5">
-                Neurodiversity in work
-              </p>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <h1
-                id="hero-heading"
-                className="font-display font-extrabold text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.05] text-foreground"
-              >
-                Training. Strategy.{" "}
-                <span className="text-accent">Workplace change.</span>
-              </h1>
-            </FadeIn>
-            <FadeIn delay={0.4}>
-              <p className="mt-8 text-lg md:text-xl leading-relaxed text-muted-foreground max-w-[52ch]">
-                UK-based, neurodivergent-led consultancy helping organisations improve retention, reduce risk, and unlock the performance of every mind.
-              </p>
-            </FadeIn>
+            <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-4">
+              Neurodiversity in work. Designed as infrastructure.
+            </p>
+            <h1
+              id="hero-heading"
+              className="font-display font-extrabold text-4xl md:text-5xl lg:text-[3.5rem] tracking-tight leading-[1.08]"
+            >
+              Neurodiversity training, strategy, and workplace consultancy.
+            </h1>
+            <p className="mt-6 text-lg md:text-xl leading-relaxed opacity-80 max-w-[58ch]">
+              UK-based, neurodivergent-led consultancy delivering accredited neurodiversity training, strategic redesign, and workforce capability building. Helping organisations improve retention, reduce risk, and unlock performance.
+            </p>
 
             {/* CTAs */}
-            <FadeIn delay={0.5}>
-              <div className="mt-10 flex flex-wrap gap-4 items-center">
-                <a
-                  href="#contact"
-                  className="group inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/15 hover:shadow-xl hover:shadow-accent/25 hover:-translate-y-0.5 transition-all"
-                >
-                  Book a discovery call
-                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                </a>
-                <a
-                  href="/workshops"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-foreground/15 text-foreground font-display font-semibold text-sm hover:border-accent hover:text-accent transition-colors"
-                >
-                  View training catalogue
-                </a>
-                <ADHDi />
-              </div>
-            </FadeIn>
+            <div className="mt-10 flex flex-wrap gap-4 items-center">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-md bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                Book a discovery call
+                <ArrowRight size={18} aria-hidden="true" />
+              </a>
+              <a
+                href="/workshops"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                View training catalogue
+              </a>
+              <ADHDi />
+            </div>
           </div>
 
-          {/* Training Card — floating, offset */}
-          <FadeIn delay={0.6} direction="right" className="mt-12 lg:mt-4 lg:flex-shrink-0 lg:w-[380px] xl:w-[420px]">
-            <div className="rounded-3xl border border-border bg-card p-7 lg:p-8 shadow-xl shadow-foreground/[0.03] rotate-0 lg:rotate-1 hover:rotate-0 transition-transform duration-500">
+          {/* Training Card */}
+          <div className="mt-10 lg:mt-0 lg:flex-shrink-0 lg:w-[380px] xl:w-[420px]">
+            <div className="rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.05] p-7 lg:p-8">
               <div className="flex items-center gap-3 mb-5">
-                <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center">
-                  <GraduationCap size={22} className="text-accent" aria-hidden="true" />
+                <div className="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center">
+                  <GraduationCap size={20} className="text-accent" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="font-display font-extrabold text-3xl text-accent leading-none">50+</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">Accredited sessions</p>
+                  <p className="font-display font-extrabold text-2xl text-accent leading-none">50+</p>
+                  <p className="text-xs opacity-60 mt-0.5">Accredited sessions</p>
                 </div>
               </div>
 
-              <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                Expert-led training across 6 categories. CPD-accredited and tailored to your sector.
+              <p className="text-sm opacity-70 leading-relaxed mb-5">
+                Expert-led training across 6 categories, from 60-minute awareness sessions to full-day strategic programmes. CPD-accredited and tailored to your sector.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
@@ -116,7 +106,7 @@ const HeroSection = () => {
                   <a
                     key={cat.label}
                     href="/workshops"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border bg-secondary/50 text-xs text-muted-foreground hover:bg-accent/10 hover:text-accent hover:border-accent/30 transition-all"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-primary-foreground/12 bg-primary-foreground/[0.04] text-xs text-primary-foreground/80 hover:bg-primary-foreground/[0.1] transition-colors"
                   >
                     <cat.icon size={12} className="text-accent shrink-0" aria-hidden="true" />
                     {cat.label}
@@ -126,31 +116,35 @@ const HeroSection = () => {
 
               <a
                 href="/workshops"
-                className="group flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/15 hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 transition-all"
+                className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all"
               >
-                Browse catalogue
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                Browse training catalogue
+                <ArrowRight size={16} aria-hidden="true" />
               </a>
+
+              <p className="mt-4 text-xs opacity-40 text-center">
+                30,000+ people trained · 750+ organisations
+              </p>
             </div>
-          </FadeIn>
+          </div>
         </div>
 
-        {/* Stats — big, dramatic numbers */}
-        <StaggerContainer className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12" staggerDelay={0.12}>
+        {/* Stats bar */}
+        <div
+          className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-6 border-t border-primary-foreground/12 pt-8"
+          aria-label="Key figures"
+        >
           {stats.map((stat) => (
-            <StaggerItem key={stat.label}>
-              <CountUp
-                value={stat.value}
-                className="font-display font-black text-4xl md:text-5xl text-foreground block"
-              />
-              <p className="mt-2 text-sm text-muted-foreground leading-snug">{stat.label}</p>
-            </StaggerItem>
+            <div key={stat.label}>
+              <p className="font-display font-extrabold text-2xl md:text-3xl text-accent">{stat.value}</p>
+              <p className="mt-0.5 text-sm opacity-65 leading-snug">{stat.label}</p>
+            </div>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
 
-      {/* Client logos — full bleed */}
-      <div className="py-10 lg:py-14 border-y border-border/50">
+      {/* Client logos — full width */}
+      <div className="mt-10 py-8 lg:py-12">
         <ClientMarquee embedded />
       </div>
 
@@ -158,62 +152,56 @@ const HeroSection = () => {
       <RecommendedBy />
 
       {/* ── Tell us why you're here ── */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/[0.04] to-transparent pointer-events-none" />
-        <div className="mx-auto max-w-wide px-6 lg:px-10 py-16 lg:py-24 relative">
-          <div className="lg:flex lg:gap-16 lg:items-center">
-            <FadeIn direction="left" className="lg:w-[380px] shrink-0 mb-10 lg:mb-0">
-              <h2 className="font-display font-extrabold text-3xl md:text-4xl leading-tight text-foreground">
-                Tell us why{" "}
-                <span className="text-accent">you're here</span>
+      <div className="border-t border-primary-foreground/8">
+        <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-16">
+          <div className="lg:flex lg:gap-14">
+            <div className="lg:w-[340px] shrink-0 mb-8 lg:mb-0">
+              <h2 className="font-display font-extrabold text-2xl md:text-3xl leading-tight">
+                Tell us why you're here
               </h2>
-              <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-[38ch]">
+              <p className="mt-3 text-sm opacity-60 leading-relaxed max-w-[38ch]">
                 Describe what you need and we'll point you to the right training, service, or next step.
               </p>
               <img
                 src={conciergeTeam}
                 alt="Our concierge team ready to help"
-                className="mt-8 w-full max-w-[150px] object-contain"
+                className="mt-6 w-full max-w-[150px] object-contain"
               />
-            </FadeIn>
-            <FadeIn direction="right" delay={0.2} className="flex-1 min-w-0">
+            </div>
+            <div className="flex-1 min-w-0">
               <Concierge />
-            </FadeIn>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Pathway cards — staggered grid */}
-      <div id="pathways" className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-wide px-6 lg:px-10 py-16 lg:py-24">
-          <FadeIn>
-            <p className="font-display font-semibold text-xs uppercase tracking-[0.2em] text-accent mb-3">
-              Choose your path
-            </p>
-            <h2 className="font-display font-extrabold text-3xl md:text-4xl leading-tight mb-12">
-              I'm looking for support as...
-            </h2>
-          </FadeIn>
-          <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.15}>
+      {/* Pathway cards */}
+      <div id="pathways" className="border-t border-primary-foreground/8">
+        <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-14">
+          <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] opacity-50 mb-8">
+            I'm looking for support as
+          </p>
+          <div className="grid md:grid-cols-3 gap-5">
             {pathways.map((p) => (
-              <StaggerItem key={p.title}>
-                <a
-                  href={p.href}
-                  className="group flex flex-col rounded-3xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-8 hover:bg-primary-foreground/[0.12] hover:-translate-y-1 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 rounded-2xl bg-accent/15 flex items-center justify-center mb-5">
-                    <p.icon size={22} className="text-accent" aria-hidden="true" />
+              <a
+                key={p.title}
+                href={p.href}
+                className="group flex flex-col rounded-lg border border-primary-foreground/12 bg-primary-foreground/[0.04] p-7 hover:bg-primary-foreground/[0.08] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <p.icon size={22} className="text-accent shrink-0" aria-hidden="true" />
+                  <div>
+                    <h2 className="font-display font-bold text-lg leading-tight">{p.title}</h2>
+                    <p className="text-xs opacity-50 mt-0.5">{p.subtitle}</p>
                   </div>
-                  <h3 className="font-display font-bold text-xl leading-tight mb-1">{p.title}</h3>
-                  <p className="text-xs text-primary-foreground/50 mb-3">{p.subtitle}</p>
-                  <p className="text-sm text-primary-foreground/70 leading-relaxed flex-1">{p.description}</p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-accent text-sm font-bold group-hover:gap-3 transition-all">
-                    Learn more <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-                  </span>
-                </a>
-              </StaggerItem>
+                </div>
+                <p className="text-sm opacity-70 leading-relaxed flex-1">{p.description}</p>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-accent text-sm font-semibold group-hover:gap-2.5 transition-all">
+                  Learn more <ArrowRight size={14} aria-hidden="true" />
+                </span>
+              </a>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </div>
     </section>

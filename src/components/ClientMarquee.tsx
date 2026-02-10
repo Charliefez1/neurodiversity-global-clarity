@@ -17,7 +17,7 @@ const ClientMarquee = ({ embedded = false }: ClientMarqueeProps) => {
             href={client.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 flex items-center justify-center gap-2.5 h-12 opacity-50 hover:opacity-90 transition-opacity"
+            className="flex-shrink-0 flex items-center justify-center gap-2.5 h-12 opacity-60 hover:opacity-100 transition-opacity"
             title={client.name}
           >
             <img
@@ -29,7 +29,7 @@ const ClientMarquee = ({ embedded = false }: ClientMarqueeProps) => {
                 e.currentTarget.style.display = "none";
               }}
             />
-            <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">{client.name}</span>
+            <span className="text-sm font-medium text-primary-foreground whitespace-nowrap">{client.name}</span>
           </a>
         ))}
       </div>
@@ -41,9 +41,9 @@ const ClientMarquee = ({ embedded = false }: ClientMarqueeProps) => {
   }
 
   return (
-    <section className="bg-secondary/30 border-t border-border overflow-hidden py-10 lg:py-12">
+    <section className="bg-primary border-t border-primary-foreground/8 overflow-hidden py-10 lg:py-12">
       <div className="mx-auto max-w-wide px-6 lg:px-10 mb-6">
-        <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-muted-foreground/50">
+        <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40">
           Trusted by leading organisations
         </p>
       </div>

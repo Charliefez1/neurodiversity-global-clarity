@@ -10,7 +10,6 @@ const footerLinks = {
   company: [
     { label: "About", href: "/#values" },
     { label: "Evidence", href: "/#evidence" },
-    { label: "Testimonials", href: "/testimonials" },
     { label: "Contact", href: "/#contact" },
   ],
   legal: [
@@ -22,7 +21,7 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground">
+    <footer className="bg-primary text-primary-foreground border-t border-primary-foreground/10">
       <div className="mx-auto max-w-wide px-6 lg:px-10 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -55,15 +54,9 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {footerLinks.company.map((l) => (
                 <li key={l.label}>
-                  {l.href.startsWith("/") && !l.href.includes("#") ? (
-                    <Link to={l.href} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
-                      {l.label}
-                    </Link>
-                  ) : (
-                    <a href={l.href} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
-                      {l.label}
-                    </a>
-                  )}
+                  <a href={l.href} className="text-sm opacity-70 hover:opacity-100 transition-opacity">
+                    {l.label}
+                  </a>
                 </li>
               ))}
             </ul>

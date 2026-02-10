@@ -56,14 +56,14 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
         <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
-        <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-xl shadow-lg py-2 z-50">
+        <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg py-2 z-50">
           {item.children!.map((child) => (
             <div key={child.label}>
               {child.href.startsWith("/") && !child.href.includes("#") ? (
                 <Link
                   to={child.href}
                   onClick={() => setOpen(false)}
-                  className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary transition-colors"
+                  className="block px-4 py-2 text-sm text-foreground hover:bg-muted transition-colors"
                 >
                   {child.label}
                 </Link>
@@ -71,7 +71,7 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
                 <a
                   href={child.href}
                   onClick={() => setOpen(false)}
-                  className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary transition-colors"
+                  className="block px-4 py-2 text-sm text-foreground hover:bg-muted transition-colors"
                 >
                   {child.label}
                 </a>
@@ -89,7 +89,7 @@ const Navbar = () => {
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/60">
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <nav className="mx-auto max-w-wide px-6 lg:px-10 flex items-center justify-between h-16" aria-label="Main navigation">
         <Link to="/" className="font-display font-extrabold text-lg tracking-tight text-foreground">
           Neurodiversity<span className="text-accent"> Global</span>
@@ -110,7 +110,7 @@ const Navbar = () => {
 
         <Link
           to="/#contact"
-          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-xl bg-accent text-accent-foreground font-display font-semibold text-sm hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-md bg-accent text-accent-foreground font-display font-semibold text-sm hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Book a call
         </Link>
@@ -128,7 +128,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden border-t border-border/60 bg-background px-6 pb-6 pt-4">
+        <div className="lg:hidden border-t border-border bg-background px-6 pb-6 pt-4">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) =>
               link.children ? (
@@ -193,7 +193,7 @@ const Navbar = () => {
           <Link
             to="/#contact"
             onClick={() => setOpen(false)}
-            className="mt-6 inline-flex items-center px-5 py-2.5 rounded-xl bg-accent text-accent-foreground font-display font-semibold text-sm"
+            className="mt-6 inline-flex items-center px-5 py-2.5 rounded-md bg-accent text-accent-foreground font-display font-semibold text-sm"
           >
             Book a call
           </Link>

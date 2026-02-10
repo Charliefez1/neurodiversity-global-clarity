@@ -1,7 +1,6 @@
 import { AlertTriangle, TrendingDown, Lightbulb } from "lucide-react";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
-import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion/FadeIn";
 
 const problems = [
   {
@@ -42,61 +41,55 @@ const ProblemSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section className="py-24 lg:py-32 overflow-hidden" aria-labelledby="problem-heading">
+    <section className="bg-background py-20 lg:py-28" aria-labelledby="problem-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
-        {/* Big dramatic statement */}
-        <FadeIn>
-          <p className="font-display font-semibold text-xs uppercase tracking-[0.2em] text-accent mb-4">
+        <div className="max-w-2xl mb-16">
+          <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
             The challenge
           </p>
-        </FadeIn>
-        <FadeIn delay={0.15}>
-          <h2 id="problem-heading" className="font-display font-black text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.05] max-w-4xl">
-            Most organisations treat neurodiversity as a training issue.{" "}
-            <span className="text-accent">We treat it as infrastructure.</span>
+          <h2 id="problem-heading" className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight">
+            Most organisations treat neurodiversity as a training issue. We treat it as infrastructure.
           </h2>
-        </FadeIn>
-        {mode === "read" && (
-          <FadeIn delay={0.3}>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-[55ch]">
+          {mode === "read" && (
+            <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[55ch]">
               That means inclusion is designed into operations, tied to performance and risk, owned by leadership, and measured, reviewed, and improved over time.
             </p>
-          </FadeIn>
-        )}
-        {mode === "listen" && (
-          <div className="mt-4">
-            <SectionAudio sectionText={sectionAudioText} label="Listen to this section" />
-          </div>
-        )}
+          )}
+          {mode === "listen" && (
+            <div className="mt-4">
+              <SectionAudio sectionText={sectionAudioText} label="Listen to this section" />
+            </div>
+          )}
+        </div>
 
-        {/* Cards — staggered heights, not uniform */}
-        <StaggerContainer className="mt-16 grid md:grid-cols-3 gap-6 lg:gap-8 items-start" staggerDelay={0.15}>
-          {problems.map((p, i) => (
-            <StaggerItem key={p.title} className={i === 1 ? "md:mt-8" : ""}>
-              <article className="rounded-3xl border border-border bg-card p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
-                  <p.icon size={22} className="text-accent" aria-hidden="true" />
-                </div>
-                <h3 className="font-display font-bold text-lg text-card-foreground mb-4 leading-snug">{p.title}</h3>
+        <div className="grid md:grid-cols-3 gap-8">
+          {problems.map((p) => (
+            <article
+              key={p.title}
+              className="rounded-lg border border-border bg-card p-7 lg:p-8"
+            >
+              <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
+                <p.icon size={20} className="text-accent" aria-hidden="true" />
+              </div>
+              <h3 className="font-display font-bold text-base text-card-foreground mb-4 leading-snug">{p.title}</h3>
 
-                {mode === "scan" ? (
-                  <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
-                ) : mode === "read" ? (
-                  <ul className="space-y-3">
-                    {p.points.map((point, j) => (
-                      <li key={j} className="text-muted-foreground text-sm leading-relaxed flex gap-2.5">
-                        <span className="block w-2 h-2 rounded-full bg-accent mt-1.5 shrink-0" aria-hidden="true" />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
-                )}
-              </article>
-            </StaggerItem>
+              {mode === "scan" ? (
+                <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
+              ) : mode === "read" ? (
+                <ul className="space-y-2.5">
+                  {p.points.map((point, i) => (
+                    <li key={i} className="text-muted-foreground text-sm leading-relaxed flex gap-2">
+                      <span className="text-accent mt-1.5 shrink-0 block w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
+              )}
+            </article>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );
