@@ -49,6 +49,7 @@ export interface Workshop {
   summary: string;
   outcomes: string;
   icon: LucideIcon;
+  flagship?: boolean;
 }
 
 export interface WorkshopCategory {
@@ -75,48 +76,53 @@ export const workshopCategories: WorkshopCategory[] = [
       },
       {
         id: "champions",
-        title: "Neurodiversity champions programme",
+        title: "Neurodiversity Champions Workshop",
         duration: "3 hours",
         ledBy: "Rich Ferriman",
         summary: "Champion role definition, boundaries, peer support, escalation routes, influence skills, how to spot systemic issues, how to drive practical change without becoming informal HR.",
         outcomes: "Sustainable internal capability, clearer ownership, reduced pressure on HR, better early intervention.",
         icon: Award,
+        flagship: true,
       },
       {
         id: "advocate",
-        title: "Neurodiversity advocate training",
+        title: "Neurodiversity Advocate Workshop",
         duration: "3 hours",
         ledBy: "Rich Ferriman",
         summary: "Advocacy versus support, challenge with credibility, influencing leaders, navigating resistance, systems thinking.",
         outcomes: "Stronger internal challenge, better decision quality, reduced performative inclusion.",
         icon: Shield,
+        flagship: true,
       },
       {
         id: "line-manager",
-        title: "Line manager training",
+        title: "Neurodiversity Line Managers Workshop",
         duration: "3 hours",
         ledBy: "Rich Ferriman",
         summary: "Day to day management, communication styles, workload design, reasonable adjustments, early warning signs, handling issues before crisis.",
         outcomes: "Fewer escalations, improved performance conversations, reduced absence and turnover.",
         icon: Briefcase,
+        flagship: true,
       },
       {
         id: "manager-dev",
-        title: "Manager development",
+        title: "Neurodiversity Managers Workshop",
         duration: "3 hours",
         ledBy: "Rich Ferriman",
         summary: "Managing difference fairly, consistency versus sameness, accountability, pressure, feedback.",
         outcomes: "More confident managers, reduced inconsistency, improved team trust.",
         icon: GraduationCap,
+        flagship: true,
       },
       {
         id: "people-leader",
-        title: "People leader programme",
+        title: "Neurodiversity People Leaders Workshop",
         duration: "3 hours",
         ledBy: "Rich Ferriman",
         summary: "Culture shaping, leadership behaviour, psychological safety, risk ownership.",
         outcomes: "Stronger leadership impact, improved engagement and retention.",
         icon: Crown,
+        flagship: true,
       },
       {
         id: "exec-briefing",
