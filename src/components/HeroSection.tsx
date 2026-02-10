@@ -217,10 +217,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Client logos — full width */}
-      <div className="mt-10 py-8 lg:py-12">
-        <ClientMarquee embedded />
-      </div>
 
       {/* Recommended by */}
       <RecommendedBy />
