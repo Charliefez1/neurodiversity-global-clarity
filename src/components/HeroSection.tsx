@@ -94,7 +94,7 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(rotateMessage, 6000);
+    const interval = setInterval(rotateMessage, 10000);
     return () => clearInterval(interval);
   }, [rotateMessage]);
 
