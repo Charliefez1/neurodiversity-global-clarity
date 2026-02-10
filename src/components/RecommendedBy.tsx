@@ -9,7 +9,7 @@ import agillioLogo from "@/assets/logos/agillio.png";
 import fareshareLogo from "@/assets/logos/fareshare.png";
 import kyndrylLogo from "@/assets/logos/kyndryl.png";
 import nasaLogo from "@/assets/logos/nasa.png";
-import cwaLogo from "@/assets/logos/college-west-anglia.png";
+
 import cognassistLogo from "@/assets/logos/cognassist.png";
 
 const partners = [
@@ -22,7 +22,7 @@ const partners = [
   { name: "FareShare", logo: fareshareLogo, className: "h-8 md:h-10 max-w-[120px]" },
   { name: "Kyndryl", logo: kyndrylLogo, className: "h-8 md:h-10 max-w-[120px]" },
   { name: "NASA", logo: nasaLogo, className: "h-12 md:h-16 max-w-[180px]" },
-  { name: "The College of West Anglia", logo: cwaLogo, className: "h-10 md:h-14 max-w-[180px]" },
+  
   { name: "Cognassist", logo: cognassistLogo, className: "h-10 md:h-14 max-w-[180px]" },
 ];
 
