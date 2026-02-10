@@ -149,7 +149,7 @@ const Concierge = () => {
         <button
           onClick={() => handleSubmit(userInput)}
           disabled={!userInput.trim()}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all disabled:opacity-40"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all disabled:opacity-60"
         >
           Get my recommendations
           <ArrowRight size={16} aria-hidden="true" />
