@@ -15,8 +15,8 @@ import cognassistLogo from "@/assets/logos/cognassist.png";
 const partners = [
   { name: "ACAS", logo: acasLogo, className: "h-8 md:h-10 max-w-[120px]" },
   { name: "NHS Blood and Transplant", logo: nhsBtLogo, className: "h-10 md:h-14 max-w-[180px]" },
-  { name: "TransPennine Express", logo: tpeLogo, className: "h-10 md:h-14 max-w-[180px]" },
-  { name: "Smartest Energy", logo: smartestLogo, className: "h-10 md:h-14 max-w-[180px]" },
+  { name: "TransPennine Express", logo: tpeLogo, className: "h-[60px] md:h-[84px] max-w-[270px]" },
+  { name: "Smartest Energy", logo: smartestLogo, className: "h-[60px] md:h-[84px] max-w-[270px]" },
   { name: "Suez", logo: suezLogo, className: "h-8 md:h-10 max-w-[120px]" },
   { name: "Agilio", logo: agillioLogo, className: "h-8 md:h-10 max-w-[140px]" },
   { name: "FareShare", logo: fareshareLogo, className: "h-8 md:h-10 max-w-[120px]" },
