@@ -73,13 +73,12 @@ const stats = [
   { value: "30,000+", label: "People trained" },
 ];
 
-const trainingCategories = [
-  { label: "Core Awareness", icon: BookOpen },
-  { label: "Role-Specific", icon: Briefcase },
-  { label: "Industry", icon: Building2 },
-  { label: "Strategy & Leadership", icon: Shield },
-  { label: "Lived Experience", icon: Users },
-  { label: "Keynotes & Events", icon: Mic },
+const flagshipSessions = [
+  { label: "Neurodiversity Champions Workshop" },
+  { label: "Neurodiversity Managers Workshop" },
+  { label: "Neurodiversity People Leaders Workshop" },
+  { label: "Neurodiversity Advocate Workshop" },
+  { label: "Neurodiversity Line Managers Workshop" },
 ];
 
 const HeroSection = () => {
@@ -177,14 +176,14 @@ const HeroSection = () => {
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {trainingCategories.map((cat) => (
+                {flagshipSessions.map((session) => (
                   <a
-                    key={cat.label}
+                    key={session.label}
                     href="/workshops"
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-primary-foreground/12 bg-primary-foreground/[0.04] text-xs text-primary-foreground/80 hover:bg-primary-foreground/[0.1] transition-colors"
                   >
-                    <cat.icon size={12} className="text-accent shrink-0" aria-hidden="true" />
-                    {cat.label}
+                    <Sparkles size={12} className="text-burnt-orange shrink-0" aria-hidden="true" />
+                    {session.label}
                   </a>
                 ))}
               </div>
