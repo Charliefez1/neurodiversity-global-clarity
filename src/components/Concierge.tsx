@@ -128,7 +128,7 @@ const Concierge = () => {
   return (
     <>
       {/* ── Inline hero section ── */}
-      <div className="space-y-5 relative z-10">
+      <div className="space-y-5 relative z-10 bg-primary-foreground/[0.06] rounded-xl p-6 border border-primary-foreground/15">
         <div>
           <label
             htmlFor="concierge-input"
@@ -149,10 +149,10 @@ const Concierge = () => {
         <button
           onClick={() => handleSubmit(userInput)}
           disabled={!userInput.trim()}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all disabled:opacity-60"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-10 py-4.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-lg shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all disabled:opacity-60"
         >
           Get my recommendations
-          <ArrowRight size={16} aria-hidden="true" />
+          <ArrowRight size={18} aria-hidden="true" />
         </button>
 
         <div>
