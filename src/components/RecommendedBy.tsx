@@ -1,6 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import nasaLogo from "@/assets/logos/nasa.png";
 import nhsBtLogo from "@/assets/logos/nhs-bt.png";
 import smartestLogo from "@/assets/logos/smartest-energy.png";
 import suezLogo from "@/assets/logos/suez.png";
@@ -10,7 +9,6 @@ import kyndrylLogo from "@/assets/logos/kyndryl.png";
 import fareshareLogo from "@/assets/logos/fareshare.png";
 
 const partners = [
-  { name: "NASA", logo: nasaLogo },
   { name: "NHS Blood and Transplant", logo: nhsBtLogo },
   { name: "ACAS", logo: acasLogo },
   { name: "Kyndryl", logo: kyndrylLogo },
