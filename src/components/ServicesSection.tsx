@@ -44,7 +44,7 @@ const ServicesSection = () => {
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             What we deliver
           </p>
-          <h2 id="services-heading" className="font-display font-extrabold text-3xl md:text-4xl text-secondary-foreground leading-tight">
+          <h2 id="services-heading" className="font-display font-bold text-2xl md:text-3xl text-secondary-foreground leading-tight">
             Four areas of expertise. One clear purpose.
           </h2>
           {mode === "read" && (

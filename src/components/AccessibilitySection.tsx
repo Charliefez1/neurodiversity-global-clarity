@@ -40,7 +40,7 @@ const AccessibilitySection = () => {
             <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
               What neuroinclusion means to us
             </p>
-            <h2 id="values-heading" className="font-display font-extrabold text-2xl md:text-3xl text-secondary-foreground leading-tight">
+            <h2 id="values-heading" className="font-display font-bold text-xl md:text-2xl text-secondary-foreground leading-tight">
               Inclusion is not comfort. It is clarity.
             </h2>
             {mode === "read" && (

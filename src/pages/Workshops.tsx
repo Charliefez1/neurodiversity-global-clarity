@@ -235,7 +235,7 @@ const Workshops = () => {
               <div className="max-w-2xl mb-10">
                 <h2
                   id={`${category.id}-heading`}
-                  className="font-display font-extrabold text-2xl md:text-3xl leading-tight text-foreground"
+                  className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground"
                 >
                   {category.title}
                 </h2>

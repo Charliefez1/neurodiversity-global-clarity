@@ -256,7 +256,7 @@ const HeroSection = () => {
         <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-16">
           <div className="lg:flex lg:gap-14">
             <div className="lg:w-[340px] shrink-0 mb-8 lg:mb-0">
-              <h2 className="font-display font-extrabold text-2xl md:text-3xl leading-tight">
+              <h2 className="font-display font-bold text-xl md:text-2xl leading-tight">
                 Tell us why you're here
               </h2>
               <p className="mt-3 text-sm opacity-60 leading-relaxed max-w-[38ch]">
@@ -311,7 +311,7 @@ const HeroSection = () => {
           <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-3">
             Resources
           </p>
-          <h2 className="font-display font-extrabold text-2xl md:text-3xl leading-tight mb-8">
+          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight mb-8">
             Key resources from our team
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
