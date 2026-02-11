@@ -170,7 +170,7 @@ const Workshops = () => {
                   value={aiQuery}
                   onChange={(e) => { setAiQuery(e.target.value); if (aiResults) setAiResults(null); }}
                   disabled={aiLoading}
-                  className="flex-1 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 pl-4 pr-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent transition-colors disabled:opacity-50"
+                  className="flex-1 rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 pl-4 pr-4 py-3 text-xs text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent transition-colors disabled:opacity-50"
                 />
                 <button
                   type="submit"
