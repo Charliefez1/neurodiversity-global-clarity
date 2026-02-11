@@ -34,10 +34,10 @@ const EvidenceSection = () => {
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-12">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
-            Evidence & trust
+            Industry Solutions
           </p>
           <h2 id="evidence-heading" className="font-display font-bold text-lg md:text-xl leading-tight text-foreground">
-            Trusted by organisations that take this seriously
+            Public sector, charity, blue light services, legal sector, big tech, engineering and manufacturing, software, facilities and construction
           </h2>
           {mode === "listen" && (
             <div className="mt-4">
