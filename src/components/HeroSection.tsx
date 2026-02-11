@@ -144,16 +144,8 @@ const HeroSection = () => {
               ))}
             </div>
 
-            {/* Ask Rich explainer */}
-            <div className="mt-8 rounded-lg border border-primary-foreground/10 bg-primary-foreground/[0.04] p-5">
-              <p className="text-sm text-primary-foreground/80 leading-relaxed">
-                <strong className="text-accent font-display font-bold">Ask Rich anything.</strong>{" "}
-                Rich is our co-founder and resident neurodiversity-in-work expert. Even if you're not looking for training but have a question about neurodiversity at work — ask! Our knowledge base is continually updated, but if you can't find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
-              </p>
-            </div>
-
-            {/* CTAs — static position */}
-            <div className="mt-6 flex flex-wrap gap-4 items-center">
+            {/* Discovery CTA */}
+            <div className="mt-8 flex flex-wrap gap-4 items-center">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -161,14 +153,23 @@ const HeroSection = () => {
                 Book a discovery call
                 <ArrowRight size={16} aria-hidden="true" />
               </a>
+              <ADHDi />
+            </div>
+
+            {/* Ask Rich explainer + CTA */}
+            <div className="mt-6 rounded-lg border border-primary-foreground/10 bg-primary-foreground/[0.04] p-5">
+              <p className="text-sm text-primary-foreground/80 leading-relaxed">
+                <strong className="text-[hsl(20,100%,55%)] font-display font-bold">Ask Rich anything.</strong>{" "}
+                Rich is our co-founder and resident neurodiversity-in-work expert. Even if you're not looking for training but have a question about neurodiversity at work — ask! Our knowledge base is continually updated, but if you can't find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
+              </p>
               <a
                 href="/ask-rich"
-                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-md border border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="mt-4 inline-flex items-center gap-2.5 px-8 py-3.5 rounded-lg bg-[hsl(20,100%,55%)] text-white font-display font-bold text-sm shadow-lg shadow-[hsl(20,100%,55%)]/30 hover:shadow-xl hover:shadow-[hsl(20,100%,55%)]/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(20,100%,55%)]"
               >
-                <Sparkles size={16} className="text-accent" aria-hidden="true" />
+                <Sparkles size={16} aria-hidden="true" />
                 Ask Rich Anything
+                <ArrowRight size={16} aria-hidden="true" />
               </a>
-              <ADHDi />
             </div>
           </div>
 
