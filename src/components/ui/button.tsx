@@ -20,11 +20,11 @@ const buttonVariants = cva(
         ctaDark: "border-2 border-primary-foreground/30 text-primary-foreground font-display font-semibold hover:bg-primary-foreground/15 hover:border-primary-foreground/50 transition-all",
       },
       size: {
-        default: "h-11 px-5 py-2.5 text-sm",
+        default: "h-10 px-5 py-2.5 text-sm",
         sm: "h-9 rounded-lg px-4 text-sm",
-        lg: "h-13 rounded-lg px-8 text-base",
-        xl: "h-14 rounded-lg px-10 text-lg",
-        icon: "h-11 w-11",
+        lg: "h-11 rounded-lg px-8 py-3.5 text-sm",
+        xl: "h-12 rounded-lg px-8 py-3.5 text-sm",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {

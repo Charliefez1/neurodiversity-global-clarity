@@ -144,14 +144,14 @@ const HeroSection = () => {
             <div className="mt-10 flex flex-wrap gap-4 items-center">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-9 py-4.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 Book a discovery call
-                <ArrowRight size={18} aria-hidden="true" />
+                <ArrowRight size={16} aria-hidden="true" />
               </a>
               <a
                 href="/workshops"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground font-display font-bold text-base hover:bg-primary-foreground/15 hover:border-primary-foreground/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground font-display font-bold text-sm hover:bg-primary-foreground/15 hover:border-primary-foreground/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 View training catalogue
               </a>
@@ -191,7 +191,7 @@ const HeroSection = () => {
 
               <a
                 href="/workshops"
-                className="flex items-center justify-center gap-2 w-full px-6 py-4 rounded-lg bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
+                className="flex items-center justify-center gap-2 w-full px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
               >
                 Browse training catalogue
                 <ArrowRight size={16} aria-hidden="true" />
