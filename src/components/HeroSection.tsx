@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield, Search, Sparkles, Loader2 } from "lucide-react";
+import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Shield, Search, Sparkles, Loader2 } from "lucide-react";
 import Concierge from "@/components/Concierge";
 import ClientMarquee from "@/components/ClientMarquee";
 import ADHDi from "@/components/ADHDi";
@@ -74,12 +74,12 @@ const stats = [
 ];
 
 const trainingCategories = [
-  { label: "Core Awareness", icon: BookOpen },
-  { label: "Role-Specific", icon: Briefcase },
-  { label: "Industry", icon: Building2 },
-  { label: "Strategy & Leadership", icon: Shield },
-  { label: "Lived Experience", icon: Users },
-  { label: "Keynotes & Events", icon: Mic },
+  { label: "Champions", icon: BookOpen, href: "/workshops#core" },
+  { label: "Managers", icon: Briefcase, href: "/workshops#core" },
+  { label: "Leaders", icon: Shield, href: "/workshops#core" },
+  { label: "Executive", icon: Building2, href: "/workshops#core" },
+  { label: "HR", icon: Users, href: "/workshops#role-function" },
+  { label: "L&D", icon: GraduationCap, href: "/workshops#role-function" },
 ];
 
 const HeroSection = () => {
@@ -180,7 +180,7 @@ const HeroSection = () => {
                 {trainingCategories.map((cat) => (
                   <a
                     key={cat.label}
-                    href="/workshops"
+                    href={cat.href}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-primary-foreground/12 bg-primary-foreground/[0.04] text-xs text-primary-foreground/80 hover:bg-primary-foreground/[0.1] transition-colors"
                   >
                     <cat.icon size={12} className="text-accent shrink-0" aria-hidden="true" />
