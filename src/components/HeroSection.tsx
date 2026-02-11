@@ -145,7 +145,7 @@ const HeroSection = () => {
             </div>
 
             {/* Discovery CTA */}
-            <div className="mt-8 flex flex-wrap gap-4 items-center">
+            <div className="mt-8">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -153,7 +153,6 @@ const HeroSection = () => {
                 Book a discovery call
                 <ArrowRight size={16} aria-hidden="true" />
               </a>
-              <ADHDi />
             </div>
 
             {/* Ask Rich explainer + CTA */}
