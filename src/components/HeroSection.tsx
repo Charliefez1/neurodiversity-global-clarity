@@ -161,6 +161,13 @@ const HeroSection = () => {
                 Book a discovery call
                 <ArrowRight size={16} aria-hidden="true" />
               </a>
+              <a
+                href="/ask-rich"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-md border border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                <Sparkles size={16} className="text-accent" aria-hidden="true" />
+                Ask Rich Anything
+              </a>
               <ADHDi />
             </div>
           </div>
