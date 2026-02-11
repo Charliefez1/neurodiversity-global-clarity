@@ -51,7 +51,7 @@ const ImpactSection = () => {
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             Proven impact
           </p>
-          <h2 id="impact-heading" className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight">
+          <h2 id="impact-heading" className="font-display font-bold text-2xl md:text-3xl text-foreground leading-tight">
             One workforce, stronger together, where difference fuels performance rather than friction.
           </h2>
           {mode === "read" && (

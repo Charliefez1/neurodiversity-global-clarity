@@ -48,7 +48,7 @@ const PageSection = ({ id, badge, title, description, variant = "default", child
           )}
           <h2
             id={id ? `${id}-heading` : undefined}
-            className={`font-display font-extrabold text-2xl md:text-3xl leading-tight ${fgMap[variant]}`}
+            className={`font-display font-bold text-xl md:text-2xl leading-tight ${fgMap[variant]}`}
           >
             {title}
           </h2>

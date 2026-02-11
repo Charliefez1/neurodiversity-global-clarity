@@ -36,7 +36,7 @@ const EvidenceSection = () => {
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             Evidence & trust
           </p>
-          <h2 id="evidence-heading" className="font-display font-extrabold text-3xl md:text-4xl leading-tight">
+          <h2 id="evidence-heading" className="font-display font-bold text-2xl md:text-3xl leading-tight">
             Trusted by organisations that take this seriously
           </h2>
           {mode === "listen" && (

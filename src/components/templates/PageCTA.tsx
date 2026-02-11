@@ -21,7 +21,7 @@ const PageCTA = ({
     <section className="bg-sage py-16 lg:py-24">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-xl mx-auto text-center">
-          <h2 className="font-display font-extrabold text-2xl md:text-3xl text-foreground leading-tight">
+          <h2 className="font-display font-bold text-xl md:text-2xl text-foreground leading-tight">
             {title}
           </h2>
           <p className="mt-4 text-muted-foreground text-base leading-relaxed">{description}</p>

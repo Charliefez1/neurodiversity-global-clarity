@@ -47,7 +47,7 @@ const ProblemSection = () => {
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             The challenge
           </p>
-          <h2 id="problem-heading" className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight">
+          <h2 id="problem-heading" className="font-display font-bold text-2xl md:text-3xl text-foreground leading-tight">
             Most organisations treat neurodiversity as a training issue. We treat it as infrastructure.
           </h2>
           {mode === "read" && (

@@ -194,7 +194,7 @@ const AskRich = () => {
       {/* Browse Q&A */}
       <section className="bg-muted/30 py-14 lg:py-20">
         <div className="mx-auto max-w-wide px-6 lg:px-10">
-          <h2 className="font-display font-extrabold text-2xl md:text-3xl text-foreground mb-2">
+          <h2 className="font-display font-bold text-xl md:text-2xl text-foreground mb-2">
             Browse the knowledge base
           </h2>
           <p className="text-muted-foreground text-sm mb-8">
@@ -263,7 +263,7 @@ const AskRich = () => {
         <div className="mx-auto max-w-wide px-6 lg:px-10">
           <div className="max-w-2xl mx-auto text-center">
             <Lock size={20} className="mx-auto text-accent mb-4" />
-            <h2 className="font-display font-extrabold text-2xl md:text-3xl mb-3">
+            <h2 className="font-display font-bold text-xl md:text-2xl mb-3">
               Can't find your answer?
             </h2>
             <p className="text-primary-foreground/70 text-sm mb-8 max-w-[48ch] mx-auto leading-relaxed">
