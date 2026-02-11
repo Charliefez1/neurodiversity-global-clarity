@@ -145,13 +145,25 @@ const HeroSection = () => {
             </div>
 
             {/* Discovery CTA */}
-            <div className="mt-8">
+            <div className="mt-8 flex flex-wrap gap-4 items-center">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 Book a discovery call
                 <ArrowRight size={16} aria-hidden="true" />
+              </a>
+              <a
+                href="/testimonials"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md border border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                Read Testimonials
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md border border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                Contact Us
               </a>
             </div>
 
