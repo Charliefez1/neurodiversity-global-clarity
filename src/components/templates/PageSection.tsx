@@ -14,7 +14,7 @@ const bgMap = {
   secondary: "bg-secondary",
   dark: "bg-primary text-primary-foreground",
   sand: "bg-warm-stone",
-  sage: "bg-cool-blue",
+  sage: "bg-warm-stone",
   lavender: "bg-warm-stone",
 };
 
@@ -48,7 +48,7 @@ const PageSection = ({ id, badge, title, description, variant = "default", child
           )}
           <h2
             id={id ? `${id}-heading` : undefined}
-            className={`font-display font-bold text-xl md:text-2xl leading-tight ${fgMap[variant]}`}
+            className={`font-display font-bold text-lg md:text-xl leading-tight ${fgMap[variant]}`}
           >
             {title}
           </h2>

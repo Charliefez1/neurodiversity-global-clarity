@@ -6,10 +6,6 @@ import ADHDi from "@/components/ADHDi";
 import RecommendedBy from "@/components/RecommendedBy";
 import HeroWorkshopSearch from "@/components/HeroWorkshopSearch";
 import conciergeTeam from "@/assets/concierge-team.png";
-import sendNavigatorImg from "@/assets/resources/send-navigator.png";
-import badParentsImg from "@/assets/resources/are-we-bad-parents.png";
-import dopamineImg from "@/assets/resources/dopamine-on-demand.png";
-import performanceImg from "@/assets/resources/neuroinclusive-performance.png";
 
 const heroMessages = [
   {
@@ -121,13 +117,13 @@ const HeroSection = () => {
             <div className="min-h-[220px] md:min-h-[200px] lg:min-h-[240px]">
               <h1
                 id="hero-heading"
-                className="font-display font-extrabold text-4xl md:text-5xl lg:text-[3.5rem] tracking-tight leading-[1.08] transition-all duration-500 ease-in-out"
+                className="font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight leading-[1.08] transition-all duration-500 ease-in-out"
                 style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(12px)' }}
               >
                 {current.headline}
               </h1>
               <p
-                className="mt-6 text-lg md:text-xl leading-relaxed text-primary-foreground/85 max-w-[58ch] transition-all duration-500 ease-in-out delay-100"
+                className="mt-6 text-sm md:text-base leading-relaxed text-primary-foreground/85 max-w-[58ch] transition-all duration-500 ease-in-out delay-100"
                 style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(12px)' }}
               >
                 {current.subline}
@@ -196,7 +192,7 @@ const HeroSection = () => {
                   <GraduationCap size={20} className="text-accent" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="font-display font-extrabold text-2xl text-accent leading-none">50+</p>
+                  <p className="font-display font-extrabold text-xl text-accent leading-none">50+</p>
                   <p className="text-xs opacity-60 mt-0.5">Accredited sessions</p>
                 </div>
               </div>
@@ -240,8 +236,8 @@ const HeroSection = () => {
         >
           {stats.map((stat) => (
             <div key={stat.label}>
-              <p className="font-display font-extrabold text-2xl md:text-3xl text-accent">{stat.value}</p>
-              <p className="mt-0.5 text-sm text-primary-foreground/70 leading-snug">{stat.label}</p>
+              <p className="font-display font-extrabold text-xl md:text-2xl text-accent">{stat.value}</p>
+              <p className="mt-0.5 text-xs text-primary-foreground/70 leading-snug">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -256,7 +252,7 @@ const HeroSection = () => {
         <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-16">
           <div className="lg:flex lg:gap-14">
             <div className="lg:w-[340px] shrink-0 mb-8 lg:mb-0">
-              <h2 className="font-display font-bold text-xl md:text-2xl leading-tight">
+              <h2 className="font-display font-bold text-lg md:text-xl leading-tight">
                 Tell us why you're here
               </h2>
               <p className="mt-3 text-sm opacity-60 leading-relaxed max-w-[38ch]">
@@ -292,7 +288,7 @@ const HeroSection = () => {
                 <div className="flex items-center gap-3 mb-3">
                   <p.icon size={22} className={`${p.title === "Parents" ? "text-red-500" : "text-accent"} shrink-0`} aria-hidden="true" />
                   <div>
-                    <h2 className="font-display font-bold text-lg leading-tight">{p.title}</h2>
+                    <h2 className="font-display font-bold text-base leading-tight">{p.title}</h2>
                     <p className="text-xs opacity-50 mt-0.5">{p.subtitle}</p>
                   </div>
                 </div>
@@ -300,77 +296,6 @@ const HeroSection = () => {
                 <span className="mt-5 inline-flex items-center gap-1.5 text-accent text-sm font-semibold group-hover:gap-2.5 transition-all">
                   Learn more <ArrowRight size={14} aria-hidden="true" />
                 </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-      {/* Resources */}
-      <div id="resources" className="border-t border-primary-foreground/8">
-        <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-14">
-          <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-3">
-            Resources
-          </p>
-          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight mb-8">
-            Key resources from our team
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              {
-                title: "The SEND Navigator",
-                description: "Plain English answers about SEND reform. What we know, what is being discussed, and what remains uncertain.",
-                href: "#send-navigator",
-                badge: "Interactive Tool",
-                image: sendNavigatorImg,
-              },
-              {
-                title: "Are We Bad Parents?",
-                description: "One tired accusation. And the reality of parenting a neurodivergent child. An open letter that resonated with thousands.",
-                href: "https://awbp.neuro.support/",
-                badge: "Open Letter",
-                image: badParentsImg,
-                external: true,
-              },
-              {
-                title: "The Day We Gave Our Children Dopamine",
-                description: "Then wondered why they couldn't cope. Smartphones, dopamine, and what it means for neurodivergent young people.",
-                href: "https://smartphonefree.neurodiversityglobal.com/",
-                badge: "Long Read",
-                image: dopamineImg,
-                external: true,
-              },
-              {
-                title: "Neuroinclusive Performance",
-                description: "Understanding the performance curve, from growth to burnout, and where neuroinclusion makes the difference.",
-                href: "https://understand-magic.lovable.app/",
-                badge: "Interactive",
-                image: performanceImg,
-                external: true,
-              },
-            ].map((resource) => (
-              <a
-                key={resource.title}
-                href={resource.href}
-                {...(resource.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] overflow-hidden hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
-                    src={resource.image}
-                    alt={resource.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-5 flex flex-col flex-1">
-                  <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-3">
-                    {resource.badge}
-                  </span>
-                  <h3 className="font-display font-bold text-base leading-tight mb-2">{resource.title}</h3>
-                  <p className="text-sm text-primary-foreground/75 leading-relaxed flex-1">{resource.description}</p>
-                  <span className="mt-4 inline-flex items-center gap-1.5 text-accent text-sm font-semibold group-hover:gap-2.5 transition-all">
-                    {resource.external ? "Visit" : "Explore"} <ArrowRight size={14} aria-hidden="true" />
-                  </span>
-                </div>
               </a>
             ))}
           </div>

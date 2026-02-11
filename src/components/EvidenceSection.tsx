@@ -30,13 +30,13 @@ const EvidenceSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section id="evidence" className="bg-cool-blue py-20 lg:py-28" aria-labelledby="evidence-heading">
+    <section id="evidence" className="bg-warm-stone py-20 lg:py-28" aria-labelledby="evidence-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-12">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             Evidence & trust
           </p>
-          <h2 id="evidence-heading" className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
+          <h2 id="evidence-heading" className="font-display font-bold text-lg md:text-xl leading-tight text-foreground">
             Trusted by organisations that take this seriously
           </h2>
           {mode === "listen" && (

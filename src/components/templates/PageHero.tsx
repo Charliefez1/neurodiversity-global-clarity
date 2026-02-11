@@ -14,11 +14,11 @@ const PageHero = ({ badge, title, description, children }: PageHeroProps) => {
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
           {badge}
         </p>
-        <h1 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.1] max-w-3xl">
+        <h1 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight leading-[1.1] max-w-3xl">
           {title}
         </h1>
         {description && (
-          <p className="mt-5 text-lg md:text-xl leading-relaxed opacity-80 max-w-[58ch]">
+          <p className="mt-5 text-sm md:text-base leading-relaxed opacity-80 max-w-[58ch]">
             {description}
           </p>
         )}

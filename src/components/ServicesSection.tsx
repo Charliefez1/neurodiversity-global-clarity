@@ -38,17 +38,17 @@ const ServicesSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section id="services" className="bg-warm-stone py-20 lg:py-28" aria-labelledby="services-heading">
+    <section id="services" className="bg-primary text-primary-foreground py-20 lg:py-28" aria-labelledby="services-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-14">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             What we deliver
           </p>
-          <h2 id="services-heading" className="font-display font-bold text-2xl md:text-3xl text-secondary-foreground leading-tight">
+          <h2 id="services-heading" className="font-display font-bold text-lg md:text-xl leading-tight">
             Four areas of expertise. One clear purpose.
           </h2>
           {mode === "read" && (
-            <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[55ch]">
+            <p className="mt-4 opacity-75 text-sm leading-relaxed max-w-[55ch]">
               We work across the full scope of neurodiversity in organisations, from individual coaching to system-level change. From depots to boardrooms, we meet people where they are and build systems that scale.
             </p>
           )}
@@ -62,14 +62,14 @@ const ServicesSection = () => {
         <div className="grid sm:grid-cols-2 gap-5">
           {services.map((s) => {
             const content = (
-              <article className="rounded-xl bg-card border border-border p-7 lg:p-8 h-full shadow-sm hover:shadow-md transition-shadow">
+              <article className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/12 p-7 lg:p-8 h-full shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 shrink-0 rounded-md bg-accent/10 flex items-center justify-center mt-0.5">
+                  <div className="w-10 h-10 shrink-0 rounded-md bg-accent/15 flex items-center justify-center mt-0.5">
                     <s.icon size={20} className="text-accent" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-lg text-card-foreground mb-1.5">{s.title}</h3>
-                    <p className="text-muted-foreground text-base leading-relaxed">
+                    <h3 className="font-display font-bold text-sm mb-1.5">{s.title}</h3>
+                    <p className="opacity-75 text-sm leading-relaxed">
                       {mode === "scan" ? s.summary : s.description}
                     </p>
                   </div>
@@ -91,7 +91,7 @@ const ServicesSection = () => {
 
         {/* Coaching platform teaser */}
         {mode !== "scan" && (
-          <div className="mt-14 rounded-xl bg-card border border-border p-6 lg:p-8 flex flex-col md:flex-row items-center gap-8">
+          <div className="mt-14 rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/12 p-6 lg:p-8 flex flex-col md:flex-row items-center gap-8">
             <img
               src={coachingDashboard}
               alt="Coaching platform dashboard showing pending requests, analytics, and team insights"
@@ -100,8 +100,8 @@ const ServicesSection = () => {
             />
             <div className="flex-1">
               <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-2">Coming soon</p>
-              <h3 className="font-display font-bold text-lg text-card-foreground mb-2">Digital Coaching Platform</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <h3 className="font-display font-bold text-sm mb-2">Digital Coaching Platform</h3>
+              <p className="opacity-75 text-xs leading-relaxed">
                 Our integrated coaching solution connects neurodivergent employees with specialist support: tracked, measured, and designed to scale across your organisation.
               </p>
             </div>

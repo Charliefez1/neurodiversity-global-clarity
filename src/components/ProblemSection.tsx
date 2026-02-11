@@ -41,17 +41,17 @@ const ProblemSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section className="bg-cool-blue py-20 lg:py-28" aria-labelledby="problem-heading">
+    <section className="bg-warm-stone py-20 lg:py-28" aria-labelledby="problem-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-16">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             The challenge
           </p>
-          <h2 id="problem-heading" className="font-display font-bold text-2xl md:text-3xl text-foreground leading-tight">
+          <h2 id="problem-heading" className="font-display font-bold text-lg md:text-xl text-foreground leading-tight">
             Most organisations treat neurodiversity as a training issue. We treat it as infrastructure.
           </h2>
           {mode === "read" && (
-            <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[55ch]">
+            <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-[55ch]">
               That means inclusion is designed into operations, tied to performance and risk, owned by leadership, and measured, reviewed, and improved over time.
             </p>
           )}
@@ -71,7 +71,7 @@ const ProblemSection = () => {
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
                 <p.icon size={20} className="text-accent" aria-hidden="true" />
               </div>
-              <h3 className="font-display font-bold text-lg text-card-foreground mb-4 leading-snug">{p.title}</h3>
+              <h3 className="font-display font-bold text-sm text-card-foreground mb-4 leading-snug">{p.title}</h3>
 
               {mode === "scan" ? (
                 <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
