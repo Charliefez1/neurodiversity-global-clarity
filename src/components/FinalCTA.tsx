@@ -15,17 +15,17 @@ const FinalCTA = () => {
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href="mailto:hello@neurodiversityglobal.com"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-md bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="inline-flex items-center gap-2.5 px-9 py-4.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-lg shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              <Phone size={18} aria-hidden="true" />
+              <Phone size={20} aria-hidden="true" />
               Book a discovery call
-              <ArrowRight size={16} aria-hidden="true" />
+              <ArrowRight size={18} aria-hidden="true" />
             </a>
             <a
               href="mailto:hello@neurodiversityglobal.com"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-border text-foreground font-display font-semibold text-sm hover:bg-muted transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-border text-foreground font-display font-bold text-base hover:bg-muted hover:border-accent/30 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              <Mail size={16} aria-hidden="true" />
+              <Mail size={18} aria-hidden="true" />
               Email us directly
             </a>
           </div>

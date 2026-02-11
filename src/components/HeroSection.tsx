@@ -107,7 +107,7 @@ const HeroSection = () => {
         {/* Headline + Training Card */}
         <div className="lg:flex lg:items-start lg:gap-12">
           <div className="max-w-3xl lg:flex-1">
-            <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-4">
+            <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
               Neurodiversity in work. Designed as infrastructure.
             </p>
             <div className="min-h-[180px] md:min-h-[160px] lg:min-h-[200px]">
@@ -119,8 +119,8 @@ const HeroSection = () => {
                 {current.headline}
               </h1>
               <p
-                className="mt-6 text-lg md:text-xl leading-relaxed opacity-80 max-w-[58ch] transition-all duration-500 ease-in-out delay-100"
-                style={{ opacity: isVisible ? 0.8 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(12px)' }}
+                className="mt-6 text-lg md:text-xl leading-relaxed text-primary-foreground/85 max-w-[58ch] transition-all duration-500 ease-in-out delay-100"
+                style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(12px)' }}
               >
                 {current.subline}
               </p>
@@ -144,14 +144,14 @@ const HeroSection = () => {
             <div className="mt-10 flex flex-wrap gap-4 items-center">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-md bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex items-center gap-2.5 px-9 py-4.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 Book a discovery call
                 <ArrowRight size={18} aria-hidden="true" />
               </a>
               <a
                 href="/workshops"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground font-display font-bold text-base hover:bg-primary-foreground/15 hover:border-primary-foreground/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 View training catalogue
               </a>
@@ -172,7 +172,7 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <p className="text-sm opacity-70 leading-relaxed mb-5">
+              <p className="text-sm text-primary-foreground/75 leading-relaxed mb-5">
                 Expert-led training across 6 categories, from 60-minute awareness sessions to full-day strategic programmes. CPD-accredited and tailored to your sector.
               </p>
 
@@ -191,7 +191,7 @@ const HeroSection = () => {
 
               <a
                 href="/workshops"
-                className="flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 transition-all"
+                className="flex items-center justify-center gap-2 w-full px-6 py-4 rounded-lg bg-accent text-accent-foreground font-display font-bold text-base shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
               >
                 Browse training catalogue
                 <ArrowRight size={16} aria-hidden="true" />
@@ -212,7 +212,7 @@ const HeroSection = () => {
           {stats.map((stat) => (
             <div key={stat.label}>
               <p className="font-display font-extrabold text-2xl md:text-3xl text-accent">{stat.value}</p>
-              <p className="mt-0.5 text-sm opacity-65 leading-snug">{stat.label}</p>
+              <p className="mt-0.5 text-sm text-primary-foreground/70 leading-snug">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -250,7 +250,7 @@ const HeroSection = () => {
       {/* Pathway cards */}
       <div id="pathways" className="border-t border-primary-foreground/8">
         <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-14">
-          <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] opacity-50 mb-8">
+          <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-8">
             I'm looking for support as
           </p>
           <div className="grid md:grid-cols-3 gap-5">
@@ -258,8 +258,8 @@ const HeroSection = () => {
               <a
                 key={p.title}
                 href={p.href}
-                className="group flex flex-col rounded-lg border border-primary-foreground/12 bg-primary-foreground/[0.04] p-7 hover:bg-primary-foreground/[0.08] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
+               className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+             >
                 <div className="flex items-center gap-3 mb-3">
                   <p.icon size={22} className="text-accent shrink-0" aria-hidden="true" />
                   <div>
@@ -267,7 +267,7 @@ const HeroSection = () => {
                     <p className="text-xs opacity-50 mt-0.5">{p.subtitle}</p>
                   </div>
                 </div>
-                <p className="text-sm opacity-70 leading-relaxed flex-1">{p.description}</p>
+                <p className="text-sm text-primary-foreground/75 leading-relaxed flex-1">{p.description}</p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-accent text-sm font-semibold group-hover:gap-2.5 transition-all">
                   Learn more <ArrowRight size={14} aria-hidden="true" />
                 </span>

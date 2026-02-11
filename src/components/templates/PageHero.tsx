@@ -11,7 +11,7 @@ const PageHero = ({ badge, title, description, children }: PageHeroProps) => {
   return (
     <section className="bg-primary text-primary-foreground py-16 lg:py-24">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
-        <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-4">
+        <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
           {badge}
         </p>
         <h1 className="font-display font-extrabold text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.1] max-w-3xl">
