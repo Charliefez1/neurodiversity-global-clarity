@@ -301,6 +301,57 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      {/* Resources */}
+      <div id="resources" className="border-t border-primary-foreground/8">
+        <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-14">
+          <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-3">
+            Resources
+          </p>
+          <h2 className="font-display font-extrabold text-2xl md:text-3xl leading-tight mb-8">
+            Key resources from our team
+          </h2>
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              {
+                title: "The SEND Navigator",
+                description: "Ask a question about SEND reform. Get a plain English explanation based on what we know, what is being discussed, and what remains uncertain.",
+                href: "#send-navigator",
+                badge: "Interactive Tool",
+              },
+              {
+                title: "Are We Bad Parents?",
+                description: "One social media comment. One tired accusation. And the reality of parenting a neurodivergent child. An open letter that resonated with thousands.",
+                href: "https://awbp.neuro.support/",
+                badge: "Open Letter",
+                external: true,
+              },
+              {
+                title: "The Day We Gave Our Children Dopamine",
+                description: "Then wondered why they couldn't cope. An exploration of smartphones, dopamine, and what it means for neurodivergent young people.",
+                href: "https://smartphonefree.neurodiversityglobal.com/",
+                badge: "Long Read",
+                external: true,
+              },
+            ].map((resource) => (
+              <a
+                key={resource.title}
+                href={resource.href}
+                {...(resource.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-4">
+                  {resource.badge}
+                </span>
+                <h3 className="font-display font-bold text-lg leading-tight mb-2">{resource.title}</h3>
+                <p className="text-sm text-primary-foreground/75 leading-relaxed flex-1">{resource.description}</p>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-accent text-sm font-semibold group-hover:gap-2.5 transition-all">
+                  {resource.external ? "Visit" : "Explore"} <ArrowRight size={14} aria-hidden="true" />
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
