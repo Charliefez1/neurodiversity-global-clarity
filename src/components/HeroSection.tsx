@@ -109,12 +109,12 @@ const HeroSection = () => {
     <section className="bg-primary text-primary-foreground" aria-labelledby="hero-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 lg:pt-24">
         {/* Headline + Training Card */}
-        <div className="lg:flex lg:items-start lg:gap-12">
+        <div className="lg:flex lg:items-end lg:gap-12">
           <div className="max-w-3xl lg:flex-1">
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
               Neurodiversity in work. Designed as infrastructure.
             </p>
-            <div className="min-h-[180px] md:min-h-[160px] lg:min-h-[200px]">
+            <div className="min-h-[220px] md:min-h-[200px] lg:min-h-[240px]">
               <h1
                 id="hero-heading"
                 className="font-display font-extrabold text-4xl md:text-5xl lg:text-[3.5rem] tracking-tight leading-[1.08] transition-all duration-500 ease-in-out"
@@ -144,8 +144,16 @@ const HeroSection = () => {
               ))}
             </div>
 
-            {/* CTAs */}
-            <div className="mt-10 flex flex-wrap gap-4 items-center">
+            {/* Ask Rich explainer */}
+            <div className="mt-8 rounded-lg border border-primary-foreground/10 bg-primary-foreground/[0.04] p-5">
+              <p className="text-sm text-primary-foreground/80 leading-relaxed">
+                <strong className="text-accent font-display font-bold">Ask Rich anything.</strong>{" "}
+                Rich is our co-founder and resident neurodiversity-in-work expert. Even if you're not looking for training but have a question about neurodiversity at work — ask! Our knowledge base is continually updated, but if you can't find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
+              </p>
+            </div>
+
+            {/* CTAs — static position */}
+            <div className="mt-6 flex flex-wrap gap-4 items-center">
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
