@@ -33,7 +33,7 @@ const AccessibilitySection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section id="values" className="bg-secondary py-16 lg:py-20" aria-labelledby="values-heading">
+    <section id="values" className="bg-lavender py-16 lg:py-20" aria-labelledby="values-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="lg:flex lg:items-start lg:gap-16">
           <div className="max-w-md mb-10 lg:mb-0 lg:shrink-0">

@@ -96,7 +96,7 @@ const WhatWeDoTemplate = () => {
           id="included"
           badge="What's included"
           title="Programme components"
-          variant="secondary"
+          variant="sand"
           description="Every programme is tailored to your context, but typically includes the following."
         >
           <div className="grid sm:grid-cols-2 gap-5">
@@ -161,7 +161,7 @@ const WhatWeDoTemplate = () => {
           id="outcomes"
           badge="Outcomes"
           title="What changes after training"
-          variant="secondary"
+          variant="lavender"
         >
           <OutcomeBlock
             outcomes={[

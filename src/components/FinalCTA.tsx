@@ -2,7 +2,7 @@ import { ArrowRight, Phone, Mail } from "lucide-react";
 
 const FinalCTA = () => {
   return (
-    <section id="contact" className="bg-background py-20 lg:py-28" aria-labelledby="cta-heading">
+    <section id="contact" className="bg-sage py-20 lg:py-28" aria-labelledby="cta-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-xl mx-auto text-center">
           <h2 id="cta-heading" className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight">
