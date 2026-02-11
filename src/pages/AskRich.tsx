@@ -141,7 +141,7 @@ const AskRich = () => {
       </section>
 
       {/* Search */}
-      <section className="bg-background border-b border-border">
+      <section className="bg-warm-sand border-b border-border">
         <div className="mx-auto max-w-wide px-6 lg:px-10 py-10 lg:py-14">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-display font-bold text-xl text-foreground mb-4">Ask a question</h2>
@@ -192,7 +192,7 @@ const AskRich = () => {
       </section>
 
       {/* Browse Q&A */}
-      <section className="bg-muted/30 py-14 lg:py-20">
+      <section className="bg-sage py-14 lg:py-20">
         <div className="mx-auto max-w-wide px-6 lg:px-10">
           <h2 className="font-display font-bold text-xl md:text-2xl text-foreground mb-2">
             Browse the knowledge base

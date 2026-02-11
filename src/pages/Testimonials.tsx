@@ -83,7 +83,7 @@ const Testimonials = () => (
       </div>
     </section>
 
-    <section className="bg-background py-14 lg:py-20">
+    <section className="bg-warm-sand py-14 lg:py-20">
       <div className="mx-auto max-w-wide px-6 lg:px-10 space-y-10">
         {testimonials.map((t) => (
           <article
