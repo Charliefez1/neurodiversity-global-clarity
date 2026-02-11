@@ -5,7 +5,7 @@ interface PageSectionProps {
   badge?: string;
   title: string;
   description?: string;
-  variant?: "default" | "secondary" | "dark";
+  variant?: "default" | "secondary" | "dark" | "sand" | "sage" | "lavender";
   children: ReactNode;
 }
 
@@ -13,18 +13,27 @@ const bgMap = {
   default: "bg-background",
   secondary: "bg-secondary",
   dark: "bg-primary text-primary-foreground",
+  sand: "bg-warm-sand",
+  sage: "bg-sage",
+  lavender: "bg-lavender",
 };
 
 const fgMap = {
   default: "text-foreground",
   secondary: "text-secondary-foreground",
   dark: "text-primary-foreground",
+  sand: "text-foreground",
+  sage: "text-foreground",
+  lavender: "text-foreground",
 };
 
 const mutedMap = {
   default: "text-muted-foreground",
   secondary: "text-muted-foreground",
   dark: "opacity-75",
+  sand: "text-muted-foreground",
+  sage: "text-muted-foreground",
+  lavender: "text-muted-foreground",
 };
 
 const PageSection = ({ id, badge, title, description, variant = "default", children }: PageSectionProps) => {

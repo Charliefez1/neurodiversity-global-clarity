@@ -53,6 +53,9 @@
     --text-secondary: 220 15% 46%;
     --burnt-orange: 20 100% 55%;
     --burnt-orange-foreground: 0 0% 100%;
+    --warm-sand: 32 45% 93%;
+    --sage: 155 20% 92%;
+    --lavender: 260 22% 94%;
 
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 20px;

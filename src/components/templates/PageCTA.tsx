@@ -18,7 +18,7 @@ const PageCTA = ({
   secondaryHref = "mailto:hello@neurodiversityglobal.com",
 }: PageCTAProps) => {
   return (
-    <section className="bg-background py-16 lg:py-24">
+    <section className="bg-sage py-16 lg:py-24">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-xl mx-auto text-center">
           <h2 className="font-display font-extrabold text-2xl md:text-3xl text-foreground leading-tight">

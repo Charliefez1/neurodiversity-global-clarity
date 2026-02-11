@@ -228,7 +228,7 @@ const Workshops = () => {
           <section
             key={category.id}
             id={category.id}
-            className={`${catIdx % 2 === 0 ? "bg-background" : "bg-secondary"} py-16 lg:py-24`}
+            className={`${catIdx % 3 === 0 ? "bg-background" : catIdx % 3 === 1 ? "bg-warm-sand" : "bg-lavender"} py-16 lg:py-24`}
             aria-labelledby={`${category.id}-heading`}
           >
             <div className="mx-auto max-w-wide px-6 lg:px-10">

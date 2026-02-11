@@ -78,7 +78,7 @@ const WhoWeWorkWithTemplate = () => {
           id="support"
           badge="How we help"
           title="What Neurodiversity Global provides for People teams"
-          variant="secondary"
+          variant="sand"
         >
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
@@ -139,7 +139,7 @@ const WhoWeWorkWithTemplate = () => {
           id="evidence"
           badge="Evidence"
           title="Experience that's relevant to you"
-          variant="secondary"
+          variant="lavender"
           description="We've worked with People teams across sectors, from FTSE 250 companies to NHS trusts and government departments."
         >
           <div className="grid md:grid-cols-2 gap-6">

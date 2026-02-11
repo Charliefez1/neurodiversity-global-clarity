@@ -45,7 +45,7 @@ const ImpactSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section className="bg-background py-20 lg:py-28" aria-labelledby="impact-heading">
+    <section className="bg-warm-sand py-20 lg:py-28" aria-labelledby="impact-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-14">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
