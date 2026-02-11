@@ -1,7 +1,24 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import nasaLogo from "@/assets/logos/nasa.png";
+import nhsBtLogo from "@/assets/logos/nhs-bt.png";
+import smartestLogo from "@/assets/logos/smartest-energy.png";
+import suezLogo from "@/assets/logos/suez.png";
+import agillioLogo from "@/assets/logos/agillio.png";
+import acasLogo from "@/assets/logos/acas.png";
+import kyndrylLogo from "@/assets/logos/kyndryl.png";
+import fareshareLogo from "@/assets/logos/fareshare.png";
 
-const partners: { name: string; logo: string; className: string }[] = [];
+const partners = [
+  { name: "NASA", logo: nasaLogo },
+  { name: "NHS Blood and Transplant", logo: nhsBtLogo },
+  { name: "ACAS", logo: acasLogo },
+  { name: "Kyndryl", logo: kyndrylLogo },
+  { name: "Suez", logo: suezLogo },
+  { name: "Smartest Energy", logo: smartestLogo },
+  { name: "FareShare", logo: fareshareLogo },
+  { name: "Agillio", logo: agillioLogo },
+];
 
 const RecommendedBy = () => (
   <div>
@@ -9,13 +26,13 @@ const RecommendedBy = () => (
       <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-8">
         Recommended by
       </p>
-      <div className="flex flex-wrap items-center gap-8 lg:gap-12 mb-8">
+      <div className="flex flex-wrap items-center gap-10 lg:gap-14 mb-8">
         {partners.map((p) => (
           <img
             key={p.name}
             src={p.logo}
             alt={p.name}
-            className={`object-contain opacity-90 ${p.className}`}
+            className="h-10 w-auto object-contain"
           />
         ))}
       </div>
