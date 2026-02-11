@@ -110,7 +110,7 @@ const Navbar = () => {
 
         <Link
           to="/#contact"
-          className="hidden lg:inline-flex items-center px-5 py-2.5 rounded-md bg-accent text-accent-foreground font-display font-semibold text-sm hover:opacity-90 transition-opacity focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="hidden lg:inline-flex items-center px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/20 hover:shadow-lg hover:shadow-accent/35 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Book a call
         </Link>

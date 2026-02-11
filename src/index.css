@@ -22,7 +22,7 @@
     --muted: 40 12% 90%;
     --muted-foreground: 220 15% 46%;
 
-    --accent: 174 50% 36%;
+    --accent: 170 85% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 51%;
@@ -30,31 +30,32 @@
 
     --border: 220 20% 88%;
     --input: 220 20% 88%;
-    --ring: 174 50% 36%;
+    --ring: 170 85% 40%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 220 40% 13%;
     --sidebar-foreground: 40 30% 97%;
-    --sidebar-primary: 174 50% 36%;
+    --sidebar-primary: 170 85% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 220 35% 20%;
     --sidebar-accent-foreground: 40 30% 97%;
     --sidebar-border: 220 30% 22%;
-    --sidebar-ring: 174 50% 36%;
+    --sidebar-ring: 170 85% 40%;
 
     /* Custom tokens */
     --navy: 220 40% 13%;
     --navy-light: 220 30% 22%;
-    --teal: 174 50% 36%;
-    --teal-light: 174 40% 90%;
+    --teal: 170 85% 40%;
+    --teal-light: 170 60% 92%;
     --warm-white: 40 30% 97%;
     --warm-grey: 40 10% 62%;
     --text-secondary: 220 15% 46%;
-    --burnt-orange: 24 80% 50%;
+    --burnt-orange: 22 90% 52%;
     --burnt-orange-foreground: 0 0% 100%;
 
     font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
+    font-size: 17px;
   }
 
   .dark {
@@ -70,13 +71,13 @@
     --secondary-foreground: 40 30% 95%;
     --muted: 220 25% 18%;
     --muted-foreground: 220 15% 60%;
-    --accent: 174 50% 40%;
+    --accent: 170 85% 44%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
     --border: 220 25% 20%;
     --input: 220 25% 20%;
-    --ring: 174 50% 40%;
+    --ring: 170 85% 44%;
   }
 
   * {

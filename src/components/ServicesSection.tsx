@@ -41,7 +41,7 @@ const ServicesSection = () => {
     <section id="services" className="bg-secondary py-20 lg:py-28" aria-labelledby="services-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-14">
-          <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             What we deliver
           </p>
           <h2 id="services-heading" className="font-display font-extrabold text-3xl md:text-4xl text-secondary-foreground leading-tight">
@@ -62,14 +62,14 @@ const ServicesSection = () => {
         <div className="grid sm:grid-cols-2 gap-5">
           {services.map((s) => {
             const content = (
-              <article className="rounded-lg bg-card border border-border p-7 lg:p-8 h-full">
+              <article className="rounded-xl bg-card border border-border p-7 lg:p-8 h-full shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 shrink-0 rounded-md bg-accent/10 flex items-center justify-center mt-0.5">
                     <s.icon size={20} className="text-accent" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-base text-card-foreground mb-1.5">{s.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <h3 className="font-display font-bold text-lg text-card-foreground mb-1.5">{s.title}</h3>
+                    <p className="text-muted-foreground text-base leading-relaxed">
                       {mode === "scan" ? s.summary : s.description}
                     </p>
                   </div>

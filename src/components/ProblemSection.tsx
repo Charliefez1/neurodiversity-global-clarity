@@ -44,7 +44,7 @@ const ProblemSection = () => {
     <section className="bg-background py-20 lg:py-28" aria-labelledby="problem-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-16">
-          <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             The challenge
           </p>
           <h2 id="problem-heading" className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight">
@@ -66,12 +66,12 @@ const ProblemSection = () => {
           {problems.map((p) => (
             <article
               key={p.title}
-              className="rounded-lg border border-border bg-card p-7 lg:p-8"
+              className="rounded-xl border border-border bg-card p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
                 <p.icon size={20} className="text-accent" aria-hidden="true" />
               </div>
-              <h3 className="font-display font-bold text-base text-card-foreground mb-4 leading-snug">{p.title}</h3>
+              <h3 className="font-display font-bold text-lg text-card-foreground mb-4 leading-snug">{p.title}</h3>
 
               {mode === "scan" ? (
                 <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>

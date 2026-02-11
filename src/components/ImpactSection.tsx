@@ -48,7 +48,7 @@ const ImpactSection = () => {
     <section className="bg-background py-20 lg:py-28" aria-labelledby="impact-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-14">
-          <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             Proven impact
           </p>
           <h2 id="impact-heading" className="font-display font-extrabold text-3xl md:text-4xl text-foreground leading-tight">
@@ -70,7 +70,7 @@ const ImpactSection = () => {
           {outcomes.slice(0, 3).map((o) => (
             <div
               key={o.short}
-              className="p-6 lg:p-7 rounded-lg border border-border bg-card"
+              className="p-6 lg:p-7 rounded-xl border border-border bg-card shadow-sm"
             >
               <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
                 {o.metric}
@@ -85,7 +85,7 @@ const ImpactSection = () => {
           {outcomes.slice(3).map((o) => (
             <div
               key={o.short}
-              className="p-6 lg:p-7 rounded-lg border border-border bg-card"
+              className="p-6 lg:p-7 rounded-xl border border-border bg-card shadow-sm"
             >
               <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
                 {o.metric}

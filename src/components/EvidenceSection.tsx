@@ -33,7 +33,7 @@ const EvidenceSection = () => {
     <section id="evidence" className="bg-primary text-primary-foreground py-20 lg:py-28" aria-labelledby="evidence-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-12">
-          <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             Evidence & trust
           </p>
           <h2 id="evidence-heading" className="font-display font-extrabold text-3xl md:text-4xl leading-tight">
