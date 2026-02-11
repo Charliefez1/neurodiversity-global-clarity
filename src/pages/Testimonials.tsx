@@ -90,15 +90,17 @@ const Testimonials = () => (
             key={t.company}
             className="rounded-xl border border-border bg-card p-8 lg:p-10"
           >
-            <div className="flex items-center gap-4 mb-6">
-              <img
-                src={t.logo}
-                alt={t.company}
-                className="h-14 w-14 object-contain rounded-lg bg-white p-1.5"
-              />
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6 mb-8">
+              <div className="flex items-center justify-center rounded-lg bg-white border border-border p-4 sm:w-40 sm:h-20 shrink-0">
+                <img
+                  src={t.logo}
+                  alt={t.company}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
               <div>
-                <p className="font-display font-bold text-lg text-card-foreground">{t.company}</p>
-                <p className="text-sm text-muted-foreground">
+                <p className="font-display font-bold text-xl text-card-foreground">{t.company}</p>
+                <p className="text-sm text-muted-foreground mt-1">
                   {t.name}, {t.role}
                 </p>
               </div>
