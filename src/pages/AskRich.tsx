@@ -192,7 +192,7 @@ const AskRich = () => {
       </section>
 
       {/* Browse Q&A */}
-      <section className="bg-cool-blue py-14 lg:py-20">
+      <section className="bg-warm-stone py-14 lg:py-20">
         <div className="mx-auto max-w-wide px-6 lg:px-10">
           <h2 className="font-display font-bold text-xl md:text-2xl text-foreground mb-2">
             Browse the knowledge base

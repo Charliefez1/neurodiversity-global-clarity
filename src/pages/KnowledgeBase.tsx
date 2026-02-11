@@ -347,7 +347,7 @@ const KnowledgeBase = () => {
 
         {/* Categories */}
         {knowledgeData.map((category) => (
-          <section key={category.category} className="bg-cool-blue py-12 border-b border-border" aria-labelledby={`cat-${category.category}`}>
+          <section key={category.category} className="bg-warm-stone py-12 border-b border-border" aria-labelledby={`cat-${category.category}`}>
             <div className="mx-auto max-w-wide px-6 lg:px-10">
               <div className="mb-6">
                 <h2 id={`cat-${category.category}`} className="font-display font-extrabold text-xl text-foreground">

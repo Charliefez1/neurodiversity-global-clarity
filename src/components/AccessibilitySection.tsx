@@ -33,18 +33,18 @@ const AccessibilitySection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section id="values" className="bg-warm-stone py-16 lg:py-20" aria-labelledby="values-heading">
+    <section id="values" className="bg-primary text-primary-foreground py-16 lg:py-20" aria-labelledby="values-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="lg:flex lg:items-start lg:gap-16">
           <div className="max-w-md mb-10 lg:mb-0 lg:shrink-0">
             <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-3">
               What neuroinclusion means to us
             </p>
-            <h2 id="values-heading" className="font-display font-bold text-xl md:text-2xl text-secondary-foreground leading-tight">
+            <h2 id="values-heading" className="font-display font-bold text-lg md:text-xl leading-tight">
               Inclusion is not comfort. It is clarity.
             </h2>
             {mode === "read" && (
-              <p className="mt-4 text-muted-foreground text-sm leading-relaxed">
+              <p className="mt-4 opacity-75 text-sm leading-relaxed">
                 We build environments where people can say, "This is me," without fear.
               </p>
             )}
@@ -56,7 +56,7 @@ const AccessibilitySection = () => {
             {mode !== "scan" && (
               <ul className="mt-5 space-y-2">
                 {inclusionMeans.map((item, i) => (
-                  <li key={i} className="text-sm text-muted-foreground leading-relaxed flex gap-2">
+                   <li key={i} className="text-sm opacity-75 leading-relaxed flex gap-2">
                     <span className="block w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" aria-hidden="true" />
                     {item}
                   </li>
@@ -69,8 +69,8 @@ const AccessibilitySection = () => {
             {values.map((v) => (
               <div key={v.title}>
                 <v.icon size={22} className="text-accent mb-3" aria-hidden="true" />
-                <h3 className="font-display font-bold text-sm text-secondary-foreground mb-1.5">{v.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{v.description}</p>
+                <h3 className="font-display font-bold text-sm mb-1.5">{v.title}</h3>
+                <p className="opacity-75 text-sm leading-relaxed">{v.description}</p>
               </div>
             ))}
           </div>

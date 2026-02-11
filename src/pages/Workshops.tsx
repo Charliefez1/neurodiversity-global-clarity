@@ -228,18 +228,18 @@ const Workshops = () => {
           <section
             key={category.id}
             id={category.id}
-            className={`${catIdx % 2 === 0 ? "bg-cool-blue" : "bg-warm-stone"} py-16 lg:py-24`}
+            className={`${catIdx % 2 === 0 ? "bg-warm-stone" : "bg-primary text-primary-foreground"} py-16 lg:py-24`}
             aria-labelledby={`${category.id}-heading`}
           >
             <div className="mx-auto max-w-wide px-6 lg:px-10">
               <div className="max-w-2xl mb-10">
                 <h2
                   id={`${category.id}-heading`}
-                  className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground"
+                  className="font-display font-bold text-lg md:text-xl leading-tight"
                 >
                   {category.title}
                 </h2>
-                <p className="mt-3 text-base text-muted-foreground leading-relaxed max-w-[55ch]">
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-[55ch]">
                   {category.description}
                 </p>
               </div>
@@ -254,7 +254,7 @@ const Workshops = () => {
         ))}
 
         {filteredCategories.length === 0 && query.trim() && (
-          <section className="bg-cool-blue py-24">
+          <section className="bg-warm-stone py-24">
             <div className="mx-auto max-w-wide px-6 lg:px-10 text-center">
               <p className="text-muted-foreground text-base">
                 No workshops match "<strong className="text-foreground">{query}</strong>". Try a different search term.

@@ -1,6 +1,6 @@
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
-import measuresOfSuccess from "@/assets/measures-of-success.png";
+
 
 const outcomes = [
   {
@@ -51,7 +51,7 @@ const ImpactSection = () => {
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             Proven impact
           </p>
-          <h2 id="impact-heading" className="font-display font-bold text-2xl md:text-3xl leading-tight">
+          <h2 id="impact-heading" className="font-display font-bold text-lg md:text-xl leading-tight">
             One workforce, stronger together, where difference fuels performance rather than friction.
           </h2>
           {mode === "read" && (
@@ -72,7 +72,7 @@ const ImpactSection = () => {
               key={o.short}
               className="p-6 lg:p-7 rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] shadow-sm"
             >
-              <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
+              <p className="font-display font-extrabold text-3xl md:text-4xl text-accent leading-none mb-3">
                 {o.metric}
               </p>
               <p className="opacity-75 text-sm leading-relaxed">
@@ -87,7 +87,7 @@ const ImpactSection = () => {
               key={o.short}
               className="p-6 lg:p-7 rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] shadow-sm"
             >
-              <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
+              <p className="font-display font-extrabold text-3xl md:text-4xl text-accent leading-none mb-3">
                 {o.metric}
               </p>
               <p className="opacity-75 text-sm leading-relaxed">
@@ -112,17 +112,6 @@ const ImpactSection = () => {
           </div>
         )}
 
-        {/* Visual */}
-        {mode === "read" && (
-          <div className="mt-12 flex justify-center">
-            <img
-              src={measuresOfSuccess}
-              alt="Measures of success — pipeline growth, satisfaction score, and session completion"
-              className="max-w-2xl w-full h-auto rounded-xl"
-              loading="lazy"
-            />
-          </div>
-        )}
 
         <p className="mt-6 text-xs opacity-50">
           Figures are indicative and based on aggregated client-reported data and published research. Individual outcomes vary by context and scope.
