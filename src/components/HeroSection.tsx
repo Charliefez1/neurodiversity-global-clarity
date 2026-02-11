@@ -175,7 +175,7 @@ const HeroSection = () => {
             <div className="mt-6 rounded-lg border border-primary-foreground/10 bg-primary-foreground/[0.04] p-5">
               <p className="text-sm text-primary-foreground/80 leading-relaxed">
                 <strong className="text-[hsl(20,100%,55%)] font-display font-bold">Ask Rich anything.</strong>{" "}
-                Rich is our co-founder and resident neurodiversity-in-work expert. Even if you're not looking for training but have a question about neurodiversity at work — ask! Our knowledge base is continually updated, but if you can't find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
+                Rich is our co-founder and resident neurodiversity-in-work expert. Even if you are not looking for training but have a question about neurodiversity at work, ask! Our knowledge base is continually updated, but if you cannot find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
               </p>
               <a
                 href="/ask-rich"
@@ -318,7 +318,7 @@ const HeroSection = () => {
             {[
               {
                 title: "The SEND Navigator",
-                description: "Plain English answers about SEND reform — what we know, what's discussed, and what remains uncertain.",
+                description: "Plain English answers about SEND reform. What we know, what is being discussed, and what remains uncertain.",
                 href: "#send-navigator",
                 badge: "Interactive Tool",
                 image: sendNavigatorImg,
@@ -341,7 +341,7 @@ const HeroSection = () => {
               },
               {
                 title: "Neuroinclusive Performance",
-                description: "Understanding the performance curve — from growth to burnout — and where neuroinclusion makes the difference.",
+                description: "Understanding the performance curve, from growth to burnout, and where neuroinclusion makes the difference.",
                 href: "https://understand-magic.lovable.app/",
                 badge: "Interactive",
                 image: performanceImg,
