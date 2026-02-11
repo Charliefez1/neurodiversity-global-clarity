@@ -52,7 +52,7 @@ const HeroWorkshopSearch = () => {
         </p>
       </div>
       <p className="text-xs text-primary-foreground/60 mb-4">
-        Search by name or topic, or describe what you need and let the AI recommend the best sessions.
+        Search by name or topic, or describe what you need and our team will recommend the best sessions.
       </p>
 
       <form

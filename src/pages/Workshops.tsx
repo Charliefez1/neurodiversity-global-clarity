@@ -82,14 +82,14 @@ const Workshops = () => {
       }
     } catch (e: any) {
       console.error(e);
-      toast({ title: "Could not reach the AI advisor", description: "Try using the text search instead.", variant: "destructive" });
+      toast({ title: "Could not reach our workshop advisor", description: "Try using the text search instead.", variant: "destructive" });
     } finally {
       setAiLoading(false);
     }
   };
 
   const filteredCategories = useMemo(() => {
-    // AI results mode
+    // Recommended results mode
     if (aiResults && aiResults.length > 0) {
       const idSet = new Set(aiResults);
       return workshopCategories
@@ -147,7 +147,7 @@ const Workshops = () => {
           description="50+ 'live' (Online or In Person) Workshops covering awareness, leadership, condition-specific understanding, lived experience, sector delivery, and organisational strategy. All designed by neurodivergent professionals."
         />
 
-        {/* AI Workshop Finder */}
+        {/* Workshop Finder */}
         <section className="bg-primary -mt-8">
           <div className="mx-auto max-w-wide px-6 lg:px-10 py-10">
             <div className="max-w-2xl">
@@ -162,9 +162,9 @@ const Workshops = () => {
                 onSubmit={(e) => { e.preventDefault(); handleAiSearch(); }}
                 className="flex gap-3"
               >
-                <label htmlFor="ai-search" className="sr-only">Describe what you need</label>
+                <label htmlFor="workshop-search" className="sr-only">Describe what you need</label>
                 <input
-                  id="ai-search"
+                  id="workshop-search"
                   type="text"
                   placeholder="e.g. 'Training for line managers who struggle with performance reviews'"
                   value={aiQuery}
