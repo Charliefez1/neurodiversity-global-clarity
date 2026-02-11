@@ -161,12 +161,6 @@ const HeroSection = () => {
                 Book a discovery call
                 <ArrowRight size={16} aria-hidden="true" />
               </a>
-              <a
-                href="/workshops"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground font-display font-bold text-sm hover:bg-primary-foreground/15 hover:border-primary-foreground/50 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                View training catalogue
-              </a>
               <ADHDi />
             </div>
           </div>
