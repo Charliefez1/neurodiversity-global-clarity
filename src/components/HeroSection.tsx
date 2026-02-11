@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Shield, Search, Sparkles, Loader2 } from "lucide-react";
+import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield, Search, Sparkles, Loader2 } from "lucide-react";
 import Concierge from "@/components/Concierge";
 import ClientMarquee from "@/components/ClientMarquee";
 import ADHDi from "@/components/ADHDi";
@@ -74,12 +74,16 @@ const stats = [
 ];
 
 const trainingCategories = [
-  { label: "Champions", icon: BookOpen, href: "/workshops#core" },
+  { label: "Core Awareness", icon: BookOpen, href: "/workshops#core" },
+  { label: "Champions", icon: Shield, href: "/workshops#core" },
   { label: "Managers", icon: Briefcase, href: "/workshops#core" },
-  { label: "Leaders", icon: Shield, href: "/workshops#core" },
+  { label: "Leaders", icon: Users, href: "/workshops#core" },
   { label: "Executive", icon: Building2, href: "/workshops#core" },
-  { label: "HR", icon: Users, href: "/workshops#role-function" },
+  { label: "HR", icon: Heart, href: "/workshops#role-function" },
   { label: "L&D", icon: GraduationCap, href: "/workshops#role-function" },
+  { label: "Industry", icon: Building2, href: "/workshops#industry" },
+  { label: "Strategy & Leadership", icon: Shield, href: "/workshops#strategy" },
+  { label: "Keynotes & Events", icon: Mic, href: "/workshops#keynotes" },
 ];
 
 const HeroSection = () => {
