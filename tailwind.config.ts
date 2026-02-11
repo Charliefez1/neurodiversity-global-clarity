@@ -73,9 +73,8 @@ export default {
           DEFAULT: "hsl(var(--burnt-orange))",
           foreground: "hsl(var(--burnt-orange-foreground))",
         },
-        "warm-sand": "hsl(var(--warm-sand))",
-        sage: "hsl(var(--sage))",
-        lavender: "hsl(var(--lavender))",
+        "cool-blue": "hsl(var(--cool-blue))",
+        "warm-stone": "hsl(var(--warm-stone))",
       },
       borderRadius: {
         lg: "var(--radius)",
