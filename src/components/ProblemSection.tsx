@@ -41,7 +41,7 @@ const ProblemSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section className="bg-sage py-20 lg:py-28" aria-labelledby="problem-heading">
+    <section className="bg-cool-blue py-20 lg:py-28" aria-labelledby="problem-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-16">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">

@@ -18,13 +18,13 @@ const PageCTA = ({
   secondaryHref = "mailto:hello@neurodiversityglobal.com",
 }: PageCTAProps) => {
   return (
-    <section className="bg-sage py-16 lg:py-24">
+    <section className="bg-primary text-primary-foreground py-16 lg:py-24">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-xl mx-auto text-center">
-          <h2 className="font-display font-bold text-xl md:text-2xl text-foreground leading-tight">
+          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight">
             {title}
           </h2>
-          <p className="mt-4 text-muted-foreground text-base leading-relaxed">{description}</p>
+          <p className="mt-4 opacity-75 text-base leading-relaxed">{description}</p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
               href={primaryHref}
@@ -37,7 +37,7 @@ const PageCTA = ({
             {secondaryLabel && (
               <a
                 href={secondaryHref}
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-border text-foreground font-display font-bold text-sm hover:bg-muted hover:border-accent/30 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/25 text-primary-foreground font-display font-bold text-sm hover:bg-primary-foreground/10 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {secondaryLabel}
               </a>

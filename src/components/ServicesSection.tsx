@@ -38,7 +38,7 @@ const ServicesSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section id="services" className="bg-warm-sand py-20 lg:py-28" aria-labelledby="services-heading">
+    <section id="services" className="bg-warm-stone py-20 lg:py-28" aria-labelledby="services-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-14">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">

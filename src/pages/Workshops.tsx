@@ -199,7 +199,7 @@ const Workshops = () => {
         </section>
 
         {/* Text search */}
-        <section className="bg-warm-sand border-b border-border">
+        <section className="bg-warm-stone border-b border-border">
           <div className="mx-auto max-w-wide px-6 lg:px-10 py-6">
             <div className="max-w-xl">
               <label htmlFor="workshop-search" className="sr-only">Search workshops</label>
@@ -228,7 +228,7 @@ const Workshops = () => {
           <section
             key={category.id}
             id={category.id}
-            className={`${catIdx % 3 === 0 ? "bg-warm-sand" : catIdx % 3 === 1 ? "bg-sage" : "bg-lavender"} py-16 lg:py-24`}
+            className={`${catIdx % 2 === 0 ? "bg-cool-blue" : "bg-warm-stone"} py-16 lg:py-24`}
             aria-labelledby={`${category.id}-heading`}
           >
             <div className="mx-auto max-w-wide px-6 lg:px-10">
@@ -254,7 +254,7 @@ const Workshops = () => {
         ))}
 
         {filteredCategories.length === 0 && query.trim() && (
-          <section className="bg-warm-sand py-24">
+          <section className="bg-cool-blue py-24">
             <div className="mx-auto max-w-wide px-6 lg:px-10 text-center">
               <p className="text-muted-foreground text-base">
                 No workshops match "<strong className="text-foreground">{query}</strong>". Try a different search term.

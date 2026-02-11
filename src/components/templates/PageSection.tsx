@@ -13,9 +13,9 @@ const bgMap = {
   default: "bg-background",
   secondary: "bg-secondary",
   dark: "bg-primary text-primary-foreground",
-  sand: "bg-warm-sand",
-  sage: "bg-sage",
-  lavender: "bg-lavender",
+  sand: "bg-warm-stone",
+  sage: "bg-cool-blue",
+  lavender: "bg-warm-stone",
 };
 
 const fgMap = {

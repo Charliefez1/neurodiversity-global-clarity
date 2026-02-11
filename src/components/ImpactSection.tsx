@@ -45,17 +45,17 @@ const ImpactSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section className="bg-warm-sand py-20 lg:py-28" aria-labelledby="impact-heading">
+    <section className="bg-primary text-primary-foreground py-20 lg:py-28" aria-labelledby="impact-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="max-w-2xl mb-14">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             Proven impact
           </p>
-          <h2 id="impact-heading" className="font-display font-bold text-2xl md:text-3xl text-foreground leading-tight">
+          <h2 id="impact-heading" className="font-display font-bold text-2xl md:text-3xl leading-tight">
             One workforce, stronger together, where difference fuels performance rather than friction.
           </h2>
           {mode === "read" && (
-            <p className="mt-4 text-muted-foreground text-base leading-relaxed max-w-[55ch]">
+            <p className="mt-4 opacity-75 text-base leading-relaxed max-w-[55ch]">
               We measure what matters — performance, retention, risk, and culture. Not just training completion rates. This is not one-off training. It is continuous optimisation.
             </p>
           )}
@@ -70,12 +70,12 @@ const ImpactSection = () => {
           {outcomes.slice(0, 3).map((o) => (
             <div
               key={o.short}
-              className="p-6 lg:p-7 rounded-xl border border-border bg-card shadow-sm"
+              className="p-6 lg:p-7 rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] shadow-sm"
             >
               <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
                 {o.metric}
               </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="opacity-75 text-sm leading-relaxed">
                 {mode === "scan" ? o.short : o.label}
               </p>
             </div>
@@ -85,12 +85,12 @@ const ImpactSection = () => {
           {outcomes.slice(3).map((o) => (
             <div
               key={o.short}
-              className="p-6 lg:p-7 rounded-xl border border-border bg-card shadow-sm"
+              className="p-6 lg:p-7 rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] shadow-sm"
             >
               <p className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none mb-3">
                 {o.metric}
               </p>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="opacity-75 text-sm leading-relaxed">
                 {mode === "scan" ? o.short : o.label}
               </p>
             </div>
@@ -99,11 +99,11 @@ const ImpactSection = () => {
 
         {/* What changes for individuals */}
         {mode !== "scan" && (
-          <div className="mt-12 rounded-lg border border-accent/20 bg-accent/5 p-7 lg:p-8">
-            <h3 className="font-display font-bold text-base text-foreground mb-5">What changes for individuals</h3>
+          <div className="mt-12 rounded-lg border border-accent/20 bg-accent/10 p-7 lg:p-8">
+            <h3 className="font-display font-bold text-base mb-5">What changes for individuals</h3>
             <div className="grid sm:grid-cols-2 gap-3">
               {individualOutcomes.map((item, i) => (
-                <div key={i} className="flex gap-2.5 text-sm text-muted-foreground leading-relaxed">
+                <div key={i} className="flex gap-2.5 text-sm opacity-75 leading-relaxed">
                   <span className="block w-1.5 h-1.5 rounded-full bg-accent mt-2 shrink-0" aria-hidden="true" />
                   {item}
                 </div>
@@ -124,7 +124,7 @@ const ImpactSection = () => {
           </div>
         )}
 
-        <p className="mt-6 text-xs text-muted-foreground opacity-70">
+        <p className="mt-6 text-xs opacity-50">
           Figures are indicative and based on aggregated client-reported data and published research. Individual outcomes vary by context and scope.
         </p>
       </div>
