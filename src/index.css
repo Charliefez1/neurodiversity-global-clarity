@@ -51,11 +51,11 @@
     --warm-white: 40 30% 97%;
     --warm-grey: 40 10% 62%;
     --text-secondary: 220 15% 46%;
-    --burnt-orange: 22 90% 52%;
+    --burnt-orange: 20 100% 55%;
     --burnt-orange-foreground: 0 0% 100%;
 
-    font-family: 'Atkinson Hyperlegible', system-ui, sans-serif;
-    font-size: 17px;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 18px;
   }
 
   .dark {
@@ -91,6 +91,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-    line-height: 1.2;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
   }
 }
