@@ -173,7 +173,7 @@ const HeroSection = () => {
               </div>
 
               <p className="text-sm text-primary-foreground/75 leading-relaxed mb-5">
-                Expert-led training across 6 categories, from 60-minute awareness sessions to full-day strategic programmes. CPD-accredited and tailored to your sector.
+                Expert-led, always 'live', workshops from 60-minute awareness sessions to full-day strategic programmes tailored to your setting and industry.
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
