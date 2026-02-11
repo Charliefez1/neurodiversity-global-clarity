@@ -69,7 +69,7 @@ const HeroWorkshopSearch = () => {
             value={query}
             onChange={(e) => { setQuery(e.target.value); if (results) setResults(null); }}
             disabled={aiLoading}
-            className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/[0.06] pl-10 pr-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/35 focus:outline-none focus:ring-2 focus:ring-burnt-orange transition-colors disabled:opacity-50"
+            className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/[0.06] pl-10 pr-4 py-3 text-xs text-primary-foreground placeholder:text-primary-foreground/35 focus:outline-none focus:ring-2 focus:ring-burnt-orange transition-colors disabled:opacity-50"
           />
         </div>
         <button
