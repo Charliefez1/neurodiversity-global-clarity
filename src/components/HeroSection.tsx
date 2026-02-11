@@ -236,7 +236,7 @@ const HeroSection = () => {
               <img
                 src={conciergeTeam}
                 alt="Our concierge team ready to help"
-                className="mt-6 w-full max-w-[225px] object-contain"
+                className="mt-6 w-full max-w-[280px] object-contain"
               />
             </div>
             <div className="flex-1 min-w-0 space-y-8">
