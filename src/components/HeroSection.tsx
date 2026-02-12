@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield, Search, Sparkles, Loader2, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Concierge from "@/components/Concierge";
 import ClientMarquee from "@/components/ClientMarquee";
 import ADHDi from "@/components/ADHDi";
@@ -7,103 +8,73 @@ import RecommendedBy from "@/components/RecommendedBy";
 import HeroWorkshopSearch from "@/components/HeroWorkshopSearch";
 import conciergeTeam from "@/assets/concierge-team.png";
 
-const heroMessages = [
-  {
-    headline: "Neurodiversity training, strategy, and workplace consultancy.",
-    subline: "UK-based, neurodivergent-led consultancy delivering accredited neurodiversity training, strategic redesign, and workforce capability building. Helping organisations improve retention, reduce risk, and unlock performance.",
-  },
-  {
-    headline: "We do the hard, human work of making neuroinclusion real.",
-    subline: "Live, engaging, lived experience training that changes behaviour, builds trust, and keeps delivering long after the session ends.",
-  },
-  {
-    headline: "Neuroinclusion that actually changes how work feels.",
-    subline: "Rated Excellent with a 9.7 out of 10 average because it is an experience that stays with people.",
-  },
-  {
-    headline: "This is not awareness training. This is change.",
-    subline: "We work alongside leaders and teams to turn intention into action and conversations into lasting shift.",
-  },
-  {
-    headline: "Neurodiversity at work. Real. Human. Effective.",
-    subline: "Practical sessions grounded in lived experience that translate directly into better decisions and better work.",
-  },
-  {
-    headline: "Where inclusion stops being performative and starts working.",
-    subline: "Managers leave with language, confidence, and clarity they can use immediately.",
-  },
-  {
-    headline: "We do the hard work most inclusion programmes avoid.",
-    subline: "We create the space and structure for honest conversations that actually move things forward.",
-  },
-  {
-    headline: "Be seen. Be valued. Be supported.",
-    subline: "Workshops designed to support neurodivergent people and the people carrying responsibility around them.",
-  },
-];
-
-const pathways = [
+const pathwayKeys = [
   {
     icon: Building2,
-    title: "Employers",
-    subtitle: "Private & corporate",
-    description: "Reduce risk, retain talent, and build workplaces where neurodivergent employees perform.",
+    titleKey: "pathways.employers",
+    subtitleKey: "pathways.employersSub",
+    descKey: "pathways.employersDesc",
     href: "#services",
+    accent: "text-accent",
   },
   {
     icon: Landmark,
-    title: "Public Sector",
-    subtitle: "Government & NHS",
-    description: "Meet legal duties, redesign services, and improve outcomes for neurodivergent citizens and staff.",
+    titleKey: "pathways.publicSector",
+    subtitleKey: "pathways.publicSectorSub",
+    descKey: "pathways.publicSectorDesc",
     href: "#services",
+    accent: "text-accent",
   },
   {
     icon: Heart,
-    title: "Parents",
-    subtitle: "Families & carers",
-    description: "Navigate systems, understand rights, and advocate effectively for your neurodivergent child.",
+    titleKey: "pathways.parents",
+    subtitleKey: "pathways.parentsSub",
+    descKey: "pathways.parentsDesc",
     href: "#services",
+    accent: "text-red-500",
   },
 ];
 
 const stats = [
-  { value: "20+", label: "Years of specialist delivery" },
-  { value: "750+", label: "Organisations supported" },
-  { value: "1,000+", label: "Projects delivered" },
-  { value: "30,000+", label: "People trained" },
+  { value: "20+", labelKey: "stats.years" },
+  { value: "750+", labelKey: "stats.orgs" },
+  { value: "1,000+", labelKey: "stats.projects" },
+  { value: "30,000+", labelKey: "stats.trained" },
 ];
 
-const trainingCategories = [
-  { label: "Core Awareness", icon: BookOpen, href: "/workshops#core" },
-  { label: "Champions", icon: Shield, href: "/workshops#core" },
-  { label: "Managers", icon: Briefcase, href: "/workshops#core" },
-  { label: "Leaders", icon: Users, href: "/workshops#core" },
-  { label: "Executive", icon: Building2, href: "/workshops#core" },
-  { label: "HR", icon: Heart, href: "/workshops#role-function" },
-  { label: "L&D", icon: GraduationCap, href: "/workshops#role-function" },
-  { label: "Industry", icon: Building2, href: "/workshops#industry" },
-  { label: "Strategy & Leadership", icon: Shield, href: "/workshops#strategy" },
-  { label: "Keynotes & Events", icon: Mic, href: "/workshops#keynotes" },
+const trainingCategoryKeys = [
+  { labelKey: "training.coreAwareness", icon: BookOpen, href: "/workshops#core" },
+  { labelKey: "training.champions", icon: Shield, href: "/workshops#core" },
+  { labelKey: "training.managers", icon: Briefcase, href: "/workshops#core" },
+  { labelKey: "training.leaders", icon: Users, href: "/workshops#core" },
+  { labelKey: "training.executive", icon: Building2, href: "/workshops#core" },
+  { labelKey: "training.hr", icon: Heart, href: "/workshops#role-function" },
+  { labelKey: "training.ld", icon: GraduationCap, href: "/workshops#role-function" },
+  { labelKey: "training.industry", icon: Building2, href: "/workshops#industry" },
+  { labelKey: "training.strategyLeadership", icon: Shield, href: "/workshops#strategy" },
+  { labelKey: "training.keynotes", icon: Mic, href: "/workshops#keynotes" },
 ];
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+
+  const messages = t("hero.messages", { returnObjects: true }) as string[];
+  const sublines = t("hero.sublines", { returnObjects: true }) as string[];
 
   const rotateMessage = useCallback(() => {
     setIsVisible(false);
     setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % heroMessages.length);
+      setCurrentIndex((prev) => (prev + 1) % messages.length);
       setIsVisible(true);
     }, 600);
-  }, []);
+  }, [messages.length]);
 
   useEffect(() => {
     const interval = setInterval(rotateMessage, 10000);
     return () => clearInterval(interval);
   }, [rotateMessage]);
-
-  const current = heroMessages[currentIndex];
 
   return (
     <section className="bg-primary text-primary-foreground" aria-labelledby="hero-heading">
@@ -112,7 +83,7 @@ const HeroSection = () => {
         <div className="lg:flex lg:items-end lg:gap-12">
           <div className="max-w-3xl lg:flex-1">
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
-              Neurodiversity in work. Training, Workshops, Consultancy
+              {t("hero.badge")}
             </p>
             <div className="min-h-[220px] md:min-h-[200px] lg:min-h-[240px]">
               <h1
@@ -120,19 +91,19 @@ const HeroSection = () => {
                 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight leading-[1.08] transition-all duration-500 ease-in-out"
                 style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(12px)' }}
               >
-                {current.headline}
+                {messages[currentIndex]}
               </h1>
               <p
                 className="mt-6 text-sm md:text-base leading-relaxed text-primary-foreground/85 max-w-[58ch] transition-all duration-500 ease-in-out delay-100"
                 style={{ opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(12px)' }}
               >
-                {current.subline}
+                {sublines[currentIndex]}
               </p>
             </div>
 
             {/* Dot indicators */}
             <div className="flex gap-2 mt-6" role="tablist" aria-label="Hero messages">
-              {heroMessages.map((_, i) => (
+              {messages.map((_, i) => (
                 <button
                   key={i}
                   onClick={() => { setIsVisible(false); setTimeout(() => { setCurrentIndex(i); setIsVisible(true); }, 400); }}
@@ -150,7 +121,7 @@ const HeroSection = () => {
                 href="#contact"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                Book a discovery call
+                {t("hero.bookDiscovery")}
                 <ArrowRight size={16} aria-hidden="true" />
               </a>
               <a
@@ -158,29 +129,29 @@ const HeroSection = () => {
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md border border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/20 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <Users size={16} aria-hidden="true" />
-                Read Testimonials
+                {t("hero.readTestimonials")}
               </a>
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md border border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/20 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <Mail size={16} aria-hidden="true" />
-                Contact Us
+                {t("hero.contactUs")}
               </a>
             </div>
 
             {/* Ask Rich explainer + CTA */}
             <div className="mt-6 rounded-lg border border-primary-foreground/10 bg-primary-foreground/[0.04] p-5">
               <p className="text-sm text-primary-foreground/80 leading-relaxed">
-                <strong className="text-[hsl(20,100%,55%)] font-display font-bold">Ask Rich anything.</strong>{" "}
-                Rich is our co-founder and resident neurodiversity-in-work expert. Even if you are not looking for training but have a question about neurodiversity at work, ask! Our knowledge base is continually updated, but if you cannot find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
+                <strong className="text-[hsl(20,100%,55%)] font-display font-bold">{t("hero.askRichTitle")}</strong>{" "}
+                {t("hero.askRichDesc")}
               </p>
               <a
                 href="/ask-rich"
                 className="mt-4 inline-flex items-center gap-2.5 px-8 py-3.5 rounded-lg bg-[hsl(20,100%,55%)] text-white font-display font-bold text-sm shadow-lg shadow-[hsl(20,100%,55%)]/30 hover:shadow-xl hover:shadow-[hsl(20,100%,55%)]/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(20,100%,55%)]"
               >
                 <Sparkles size={16} aria-hidden="true" />
-                Ask Rich Anything
+                {t("hero.askRichCta")}
                 <ArrowRight size={16} aria-hidden="true" />
               </a>
             </div>
@@ -195,23 +166,23 @@ const HeroSection = () => {
                 </div>
                 <div>
                   <p className="font-display font-extrabold text-xl text-accent leading-none">50+</p>
-                  <p className="text-xs opacity-60 mt-0.5">Accredited sessions</p>
+                  <p className="text-xs opacity-60 mt-0.5">{t("hero.accreditedSessions")}</p>
                 </div>
               </div>
 
               <p className="text-sm text-primary-foreground/75 leading-relaxed mb-5">
-                Expert-led, always 'live', workshops from 60-minute awareness sessions to full-day strategic programmes tailored to your setting and industry.
+                {t("hero.trainingCardDesc")}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {trainingCategories.map((cat) => (
+                {trainingCategoryKeys.map((cat) => (
                   <a
-                    key={cat.label}
+                    key={cat.labelKey}
                     href={cat.href}
                     className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-primary-foreground/12 bg-primary-foreground/[0.04] text-xs text-primary-foreground/80 hover:bg-primary-foreground/[0.18] transition-colors"
                   >
                     <cat.icon size={12} className="text-accent shrink-0" aria-hidden="true" />
-                    {cat.label}
+                    {t(cat.labelKey)}
                   </a>
                 ))}
               </div>
@@ -220,12 +191,12 @@ const HeroSection = () => {
                 href="/workshops"
                 className="flex items-center justify-center gap-2 w-full px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
               >
-                Browse training catalogue
+                {t("hero.browseCatalogue")}
                 <ArrowRight size={16} aria-hidden="true" />
               </a>
 
               <p className="mt-4 text-xs opacity-40 text-center">
-                30,000+ people trained · 750+ organisations
+                {t("hero.peopleTrained")}
               </p>
             </div>
           </div>
@@ -237,9 +208,9 @@ const HeroSection = () => {
           aria-label="Key figures"
         >
           {stats.map((stat) => (
-            <div key={stat.label}>
+            <div key={stat.labelKey}>
               <p className="font-display font-extrabold text-xl md:text-2xl text-accent">{stat.value}</p>
-              <p className="mt-0.5 text-xs text-primary-foreground/70 leading-snug">{stat.label}</p>
+              <p className="mt-0.5 text-xs text-primary-foreground/70 leading-snug">{t(stat.labelKey)}</p>
             </div>
           ))}
         </div>
@@ -249,16 +220,16 @@ const HeroSection = () => {
       {/* Recommended by */}
       <RecommendedBy />
 
-      {/* ── Tell us why you're here + Workshop Finder ── */}
+      {/* Tell us why you're here + Workshop Finder */}
       <div className="border-t border-primary-foreground/8">
         <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-16">
           <div className="lg:flex lg:gap-14">
             <div className="lg:w-[340px] shrink-0 mb-8 lg:mb-0">
               <h2 className="font-display font-bold text-lg md:text-xl leading-tight">
-                Tell us why you're here
+                {t("hero.tellUsTitle")}
               </h2>
               <p className="mt-3 text-sm opacity-60 leading-relaxed max-w-[38ch]">
-                Describe what you need and we'll point you to the right training, service, or next step.
+                {t("hero.tellUsDesc")}
               </p>
               <img
                 src={conciergeTeam}
@@ -278,25 +249,25 @@ const HeroSection = () => {
       <div id="pathways" className="border-t border-primary-foreground/8">
         <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-14">
           <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-8">
-            I'm looking for support as
+            {t("hero.lookingForSupport")}
           </p>
           <div className="grid md:grid-cols-3 gap-5">
-            {pathways.map((p) => (
+            {pathwayKeys.map((p) => (
               <a
-                key={p.title}
+                key={p.titleKey}
                 href={p.href}
-               className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-             >
+                className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
                 <div className="flex items-center gap-3 mb-3">
-                  <p.icon size={20} className={`${p.title === "Parents" ? "text-red-500" : "text-accent"} shrink-0`} aria-hidden="true" />
+                  <p.icon size={20} className={`${p.accent} shrink-0`} aria-hidden="true" />
                   <div>
-                    <h2 className="font-display font-bold text-base leading-tight">{p.title}</h2>
-                    <p className="text-xs opacity-50 mt-0.5">{p.subtitle}</p>
+                    <h2 className="font-display font-bold text-base leading-tight">{t(p.titleKey)}</h2>
+                    <p className="text-xs opacity-50 mt-0.5">{t(p.subtitleKey)}</p>
                   </div>
                 </div>
-                <p className="text-sm text-primary-foreground/75 leading-relaxed flex-1">{p.description}</p>
+                <p className="text-sm text-primary-foreground/75 leading-relaxed flex-1">{t(p.descKey)}</p>
                 <span className="mt-5 inline-flex items-center gap-1.5 text-accent text-sm font-semibold group-hover:gap-2.5 transition-all">
-                  Learn more <ArrowRight size={14} aria-hidden="true" />
+                  {t("hero.learnMore")} <ArrowRight size={14} aria-hidden="true" />
                 </span>
               </a>
             ))}

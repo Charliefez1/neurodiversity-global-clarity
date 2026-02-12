@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Início",
+    "whoWeWorkWith": "Com quem trabalhamos",
+    "whatWeDo": "O que fazemos",
+    "workshops": "Workshops",
+    "about": "Sobre",
+    "industries": "Indústrias",
+    "evidence": "Evidências",
+    "knowledgeBase": "Base de conhecimento",
+    "contact": "Contacto",
+    "bookACall": "Agendar chamada",
+    "language": "Idioma"
+  },
+  "hero": {
+    "badge": "Neurodiversidade no trabalho. Formação, Workshops, Consultoria",
+    "bookDiscovery": "Agendar chamada de descoberta",
+    "readTestimonials": "Ler testemunhos",
+    "contactUs": "Contacte-nos",
+    "askRichTitle": "Pergunte ao Rich.",
+    "askRichDesc": "Rich é o nosso cofundador e especialista em neurodiversidade no trabalho. Se tem alguma questão, pergunte! Estritamente confidencial.",
+    "askRichCta": "Perguntar ao Rich",
+    "accreditedSessions": "Sessões acreditadas",
+    "trainingCardDesc": "Workshops liderados por especialistas, sempre ao vivo, desde sessões de sensibilização de 60 minutos até programas estratégicos de dia inteiro.",
+    "browseCatalogue": "Explorar catálogo de formação",
+    "peopleTrained": "30.000+ pessoas formadas · 750+ organizações",
+    "tellUsTitle": "Diga-nos por que está aqui",
+    "tellUsDesc": "Descreva o que precisa e nós indicamos o caminho certo.",
+    "lookingForSupport": "Procuro apoio como",
+    "learnMore": "Saber mais",
+    "messages": [
+      "Formação em neurodiversidade, estratégia e consultoria laboral.",
+      "Fazemos o trabalho difícil e humano de tornar a neuroinclusão real.",
+      "Neuroinclusão que realmente muda como o trabalho se sente.",
+      "Isto não é formação de sensibilização. Isto é mudança.",
+      "Neurodiversidade no trabalho. Real. Humana. Eficaz.",
+      "Onde a inclusão deixa de ser performativa e começa a funcionar.",
+      "Fazemos o trabalho difícil que a maioria dos programas de inclusão evita.",
+      "Ser visto. Ser valorizado. Ser apoiado."
+    ],
+    "sublines": [
+      "Consultoria sediada no Reino Unido, liderada por neurodivergentes.",
+      "Formação experiencial, ao vivo, que muda comportamentos e constrói confiança.",
+      "Avaliado como Excelente com média de 9,7 em 10.",
+      "Trabalhamos ao lado de líderes e equipas para transformar intenção em ação.",
+      "Sessões práticas baseadas em experiência vivida.",
+      "Os gestores saem com linguagem, confiança e clareza que podem usar imediatamente.",
+      "Criamos o espaço e a estrutura para conversas honestas.",
+      "Workshops desenhados para apoiar pessoas neurodivergentes e quem as rodeia."
+    ]
+  },
+  "stats": {
+    "years": "Anos de experiência especializada",
+    "orgs": "Organizações apoiadas",
+    "projects": "Projetos realizados",
+    "trained": "Pessoas formadas"
+  },
+  "pathways": {
+    "employers": "Empregadores",
+    "employersSub": "Privado e corporativo",
+    "employersDesc": "Reduzir riscos, reter talento e construir locais de trabalho onde funcionários neurodivergentes prosperam.",
+    "publicSector": "Setor Público",
+    "publicSectorSub": "Governo e saúde",
+    "publicSectorDesc": "Cumprir obrigações legais, redesenhar serviços e melhorar resultados.",
+    "parents": "Pais",
+    "parentsSub": "Famílias e cuidadores",
+    "parentsDesc": "Navegar sistemas, compreender direitos e defender eficazmente o seu filho neurodivergente."
+  },
+  "training": {
+    "coreAwareness": "Sensibilização básica",
+    "champions": "Campeões",
+    "managers": "Gestores",
+    "leaders": "Líderes",
+    "executive": "Executivo",
+    "hr": "RH",
+    "ld": "F&D",
+    "industry": "Indústria",
+    "strategyLeadership": "Estratégia e Liderança",
+    "keynotes": "Palestras e Eventos"
+  },
+  "footer": {
+    "tagline": "Consultoria sediada no Reino Unido, liderada por neurodivergentes. Não fazemos inclusão de fachada. Redesenhamos sistemas.",
+    "services": "Serviços",
+    "company": "Empresa",
+    "legal": "Legal",
+    "privacyPolicy": "Política de privacidade",
+    "accessibilityStatement": "Declaração de acessibilidade",
+    "termsOfService": "Termos de serviço",
+    "manifesto": "Não fazemos inclusão performativa. Fazemos o trabalho difícil e humano de a tornar real.",
+    "copyright": "© {{year}} Neurodiversity Global. Todos os direitos reservados.",
+    "designedWith": "Desenhado com acessibilidade no centro."
+  },
+  "i18nNotice": "Alguns conteúdos e idiomas ainda estão a ser implementados. Inglês UK é a versão de referência."
+}

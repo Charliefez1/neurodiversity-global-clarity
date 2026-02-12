@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ExperienceModeProvider } from "@/contexts/ExperienceModeContext";
 import { PageSectionsProvider } from "@/contexts/PageSectionsContext";
+import useLanguageDirection from "@/hooks/useLanguageDirection";
 import Index from "./pages/Index";
 import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 import WhatWeDo from "./pages/WhatWeDo";
@@ -20,30 +21,39 @@ import ExperienceSelector from "./components/ExperienceSelector";
 
 const queryClient = new QueryClient();
 
+const AppContent = () => {
+  useLanguageDirection();
+  return (
+    <>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ExperienceSelector />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
+          <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/workshops" element={<Workshops />} />
+          <Route path="/industries/financial-services" element={<IndustryTemplate />} />
+          <Route path="/knowledge-base" element={<KnowledgeBase />} />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/ask-rich" element={<AskRich />} />
+          <Route path="/admin" element={<AdminQA />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <ExperienceModeProvider>
         <PageSectionsProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <ExperienceSelector />
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
-              <Route path="/what-we-do" element={<WhatWeDo />} />
-              <Route path="/workshops" element={<Workshops />} />
-              <Route path="/industries/financial-services" element={<IndustryTemplate />} />
-              <Route path="/knowledge-base" element={<KnowledgeBase />} />
-              <Route path="/clients" element={<Clients />} />
-              <Route path="/testimonials" element={<Testimonials />} />
-              <Route path="/ask-rich" element={<AskRich />} />
-              <Route path="/admin" element={<AdminQA />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
+          <AppContent />
         </PageSectionsProvider>
       </ExperienceModeProvider>
     </TooltipProvider>
