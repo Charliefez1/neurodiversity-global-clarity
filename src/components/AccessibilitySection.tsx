@@ -65,9 +65,9 @@ const AccessibilitySection = () => {
             )}
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-8 lg:gap-10 flex-1">
+          <div className="grid sm:grid-cols-3 gap-5 lg:gap-6 flex-1">
             {values.map((v) => (
-              <div key={v.title}>
+              <div key={v.title} className="rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5">
                 <v.icon size={20} className="text-accent mb-3" aria-hidden="true" />
                 <h3 className="font-display font-bold text-sm mb-1.5">{v.title}</h3>
                 <p className="opacity-75 text-sm leading-relaxed">{v.description}</p>
