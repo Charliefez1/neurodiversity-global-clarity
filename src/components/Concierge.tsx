@@ -136,13 +136,13 @@ const Concierge = () => {
           >
             In your own words
           </label>
-          <div className="flex flex-col sm:flex-row gap-3 sm:items-stretch">
+          <div className="flex flex-col sm:flex-row gap-3 sm:items-center">
             <textarea
               id="concierge-input"
               value={userInput}
               onChange={(e) => setUserInput(e.target.value)}
               placeholder="Example: I need manager training for a logistics site. Performance issues are rising and disclosure is becoming more common."
-              rows={3}
+              rows={2}
               className="flex-1 rounded-lg border border-primary-foreground/15 bg-primary-foreground/[0.06] px-4 py-3 text-xs text-primary-foreground placeholder:text-xs placeholder:text-primary-foreground/35 focus:outline-none focus:ring-2 focus:ring-accent resize-none leading-relaxed"
             />
             <button
