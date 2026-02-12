@@ -112,7 +112,7 @@ const HeroSection = () => {
         <div className="lg:flex lg:items-end lg:gap-12">
           <div className="max-w-3xl lg:flex-1">
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
-              Neurodiversity in work. Designed as infrastructure.
+              Neurodiversity in work. Training, Workshops, Consultancy
             </p>
             <div className="min-h-[220px] md:min-h-[200px] lg:min-h-[240px]">
               <h1
