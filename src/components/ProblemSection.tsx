@@ -63,11 +63,11 @@ const ProblemSection = () => {
               </div>
             )}
           </div>
-          <div>
+          <div className="flex items-center justify-center">
             <img
               src={challengeStats}
               alt="Training statistics dashboard showing neurodiversity workshop engagement and a team video call"
-              className="rounded-xl shadow-md w-full"
+              className="rounded-xl shadow-md w-full max-w-md"
             />
           </div>
         </div>
@@ -88,7 +88,7 @@ const ProblemSection = () => {
               ) : mode === "read" ? (
                 <ul className="space-y-2.5">
                   {p.points.map((point, i) => (
-                    <li key={i} className="text-muted-foreground text-sm leading-relaxed flex gap-2">
+                    <li key={i} className="text-muted-foreground text-xs leading-relaxed flex gap-2">
                       <span className="text-accent mt-1.5 shrink-0 block w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true" />
                       {point}
                     </li>
