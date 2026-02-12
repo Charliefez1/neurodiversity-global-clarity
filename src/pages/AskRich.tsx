@@ -134,7 +134,7 @@ const AskRich = () => {
               Your neurodiversity questions, answered by Rich.
             </h1>
             <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed max-w-[58ch]">
-              Rich is our co-founder and resident neurodiversity-in-work expert. Even if you're not looking for training but have a question about neurodiversity at work — ask! Our knowledge base is continually updated, but if you can't find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
+              Rich is our co-founder and resident neurodiversity-in-work expert. Even if you're not looking for training but have a question about neurodiversity at work, ask! Our knowledge base is continually updated, but if you can't find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
             </p>
           </div>
         </div>
@@ -228,7 +228,7 @@ const AskRich = () => {
           )}
 
           {filteredItems.length === 0 ? (
-            <p className="text-muted-foreground text-sm">No Q&A items yet. Check back soon — the knowledge base is being built.</p>
+            <p className="text-muted-foreground text-sm">No Q&A items yet. Check back soon, the knowledge base is being built.</p>
           ) : (
             <div className="space-y-4">
               {filteredItems.map((item) => (
@@ -291,7 +291,7 @@ const AskRich = () => {
                   type="email"
                   value={submitEmail}
                   onChange={(e) => setSubmitEmail(e.target.value)}
-                  placeholder="Your email (optional — if you'd like us to notify you)"
+                  placeholder="Your email (optional, if you'd like us to notify you)"
                   className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/[0.06] px-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent"
                 />
                 <button

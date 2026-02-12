@@ -56,7 +56,7 @@ const ImpactSection = () => {
           </h2>
           {mode === "read" && (
             <p className="mt-4 opacity-75 text-base leading-relaxed max-w-[55ch]">
-              We measure what matters — performance, retention, risk, and culture. Not just training completion rates. This is not one-off training. It is continuous optimisation.
+              We measure what matters: performance, retention, risk, and culture. Not just training completion rates. This is not one-off training. It is continuous optimisation.
             </p>
           )}
           {mode === "listen" && (

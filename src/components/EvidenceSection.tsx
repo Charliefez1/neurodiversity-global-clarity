@@ -65,7 +65,7 @@ const EvidenceSection = () => {
             {testimonials.map((t, i) => (
               <div key={i} className="rounded-lg bg-card border border-border p-5">
                 <p className="text-sm text-muted-foreground italic">"{t.quote}"</p>
-                <p className="text-xs text-muted-foreground/70 mt-2">— {t.author}, {t.org}</p>
+                <p className="text-xs text-muted-foreground/70 mt-2">{t.author}, {t.org}</p>
               </div>
             ))}
           </div>
