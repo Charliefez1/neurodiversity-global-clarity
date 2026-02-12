@@ -24,7 +24,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-warm-stone text-foreground border-t border-border">
+    <footer className="bg-primary text-primary-foreground border-t border-primary-foreground/10">
       <div className="mx-auto max-w-wide px-6 lg:px-10 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -32,18 +32,18 @@ const Footer = () => {
             <p className="font-display font-extrabold text-base mb-3">
               Neurodiversity<span className="text-accent"> Global</span>
             </p>
-            <p className="text-xs text-muted-foreground leading-relaxed max-w-xs">
+            <p className="text-xs text-primary-foreground/70 leading-relaxed max-w-xs">
               {t("footer.tagline")}
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <p className="font-display font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-4">{t("footer.services")}</p>
+            <p className="font-display font-semibold text-xs uppercase tracking-widest text-primary-foreground/50 mb-4">{t("footer.services")}</p>
             <ul className="space-y-2.5">
               {footerLinks.services.map((l) => (
                 <li key={l.href}>
-                  <Link to={l.href} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                  <Link to={l.href} className="text-xs text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -53,11 +53,11 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <p className="font-display font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-4">{t("footer.company")}</p>
+            <p className="font-display font-semibold text-xs uppercase tracking-widest text-primary-foreground/50 mb-4">{t("footer.company")}</p>
             <ul className="space-y-2.5">
               {footerLinks.company.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                     <a href={l.href} className="text-xs text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {l.label}
                   </a>
                 </li>
@@ -67,11 +67,11 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <p className="font-display font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-4">{t("footer.legal")}</p>
+            <p className="font-display font-semibold text-xs uppercase tracking-widest text-primary-foreground/50 mb-4">{t("footer.legal")}</p>
             <ul className="space-y-2.5">
               {footerLinks.legal.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+                  <a href={l.href} className="text-xs text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {l.label}
                   </a>
                 </li>
@@ -81,20 +81,20 @@ const Footer = () => {
         </div>
 
         {/* Manifesto line */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-xs text-muted-foreground leading-relaxed max-w-2xl italic">
+        <div className="mt-12 pt-8 border-t border-primary-foreground/10">
+          <p className="text-xs text-primary-foreground/70 leading-relaxed max-w-2xl italic">
             "{t("footer.manifesto")}"
           </p>
         </div>
 
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
-          <p className="text-xs text-muted-foreground">{t("footer.designedWith")}</p>
+          <p className="text-xs text-primary-foreground/50">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
+          <p className="text-xs text-primary-foreground/50">{t("footer.designedWith")}</p>
         </div>
 
         {/* i18n notice */}
         <div className="mt-4 text-center">
-          <p className="text-xs text-muted-foreground/60 italic">{t("i18nNotice")}</p>
+          <p className="text-xs text-primary-foreground/40 italic">{t("i18nNotice")}</p>
         </div>
       </div>
     </footer>
