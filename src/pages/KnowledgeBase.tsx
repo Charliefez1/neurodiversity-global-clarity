@@ -35,7 +35,7 @@ const knowledgeData: KnowledgeCategory[] = [
         status: "needs-content",
         pageTitle: "Aware Neurodiversity Training and Workshops",
         extractedContent: "Foundation-level workshop. Appears to be the entry point for organisations new to neurodiversity. Likely covers: what neurodiversity is, why it matters, and basic awareness for all staff.",
-        notes: "This content should map to a detailed service page under /what-we-do/training or be part of the training breakdown. Full body copy could not be extracted — site blocks scraping.",
+        notes: "This content should map to a detailed service page under /what-we-do/training or be part of the training breakdown. Full body copy could not be extracted. Site blocks scraping.",
         newLocation: "/what-we-do",
       },
       {
@@ -51,8 +51,8 @@ const knowledgeData: KnowledgeCategory[] = [
         title: "Managers Workshops",
         oldUrl: "https://neurodiversityglobal.com/managers-workshops/",
         status: "extracted",
-        pageTitle: "Great Managers Don't Just Lead—They Understand. They Listen. They Act.",
-        extractedContent: "Workshop for people with management responsibility. Key content extracted: 'Partnering with Neurodiversity Global offers truly disproportionate value to your organisation—driving lasting change in culture, performance, and profitability, far exceeding the return of higher-cost services and tools. Instead of transformation through system development and dependency, we create real, measurable impact by equipping people at all levels—regardless of role or seniority—with the understanding, skills, and confidence to drive neuroinclusion from within.'",
+        pageTitle: "Great Managers Don't Just Lead. They Understand. They Listen. They Act.",
+        extractedContent: "Workshop for people with management responsibility. Key content extracted: 'Partnering with Neurodiversity Global offers truly disproportionate value to your organisation, driving lasting change in culture, performance, and profitability, far exceeding the return of higher-cost services and tools. Instead of transformation through system development and dependency, we create real, measurable impact by equipping people at all levels, regardless of role or seniority, with the understanding, skills, and confidence to drive neuroinclusion from within.'",
         notes: "Best extracted content. The value proposition here is strong and should be carried forward. Maps to both /what-we-do and /who-we-work-with (managers audience).",
         newLocation: "/what-we-do",
       },
@@ -93,7 +93,7 @@ const knowledgeData: KnowledgeCategory[] = [
         title: "Crisis Management Services",
         oldUrl: "https://neurodiversityglobal.com/crisis-management/",
         status: "needs-content",
-        extractedContent: "Specialist service for organisations facing neurodiversity-related crises — likely tribunal preparation, urgent culture issues, or reputational situations.",
+        extractedContent: "Specialist service for organisations facing neurodiversity-related crises, likely tribunal preparation, urgent culture issues, or reputational situations.",
         notes: "This is a differentiator. Could be a standalone service page or a prominent section within /what-we-do. Full content needed.",
         newLocation: "/what-we-do",
       },
@@ -107,11 +107,11 @@ const knowledgeData: KnowledgeCategory[] = [
         newLocation: "/who-we-work-with",
       },
       {
-        title: "Neurodivergent Coaching — Group & 1:1",
+        title: "Neurodivergent Coaching, Group and 1:1",
         oldUrl: "https://neurodiversityglobal.com/coaching-mentoring-121/",
         status: "needs-content",
         pageTitle: "Neurodivergent Coaching, Mentoring and Advisory Services",
-        extractedContent: "Coaching services for neurodivergent individuals — both group and one-to-one formats. Includes mentoring and advisory support.",
+        extractedContent: "Coaching services for neurodivergent individuals, both group and one-to-one formats. Includes mentoring and advisory support.",
         notes: "Core service. Maps to /what-we-do (coaching section). Full body copy needed.",
         newLocation: "/what-we-do",
       },
@@ -137,7 +137,7 @@ const knowledgeData: KnowledgeCategory[] = [
         title: "Centre of Excellence",
         oldUrl: "https://neurodiversityglobal.com/centre-of-excellence/",
         status: "needs-content",
-        extractedContent: "Appears to be a premium or embedded service — likely an ongoing partnership model where Neurodiversity Global acts as an external centre of excellence for client organisations.",
+        extractedContent: "Appears to be a premium or embedded service, likely an ongoing partnership model where Neurodiversity Global acts as an external centre of excellence for client organisations.",
         notes: "This is potentially a key differentiator and revenue model. Needs full content extraction. Could map to a premium tier within /what-we-do.",
         newLocation: "/what-we-do",
       },
@@ -184,7 +184,7 @@ const knowledgeData: KnowledgeCategory[] = [
         oldUrl: "https://neurodiversityglobal.com/hr-guide-2025/",
         status: "needs-content",
         pageTitle: "The Neurodiversity Global HR Guide 2025",
-        extractedContent: "Annual HR guide — likely a downloadable or web-based guide for HR professionals on neurodiversity practice.",
+        extractedContent: "Annual HR guide, likely a downloadable or web-based guide for HR professionals on neurodiversity practice.",
         notes: "Lead generation asset. Should be prominently featured. Full content needed.",
       },
     ],
@@ -198,7 +198,7 @@ const knowledgeData: KnowledgeCategory[] = [
         oldUrl: "https://neurodiversityglobal.com/team/",
         status: "extracted",
         pageTitle: "Meet Our Neurodiversity Team: Experts in Inclusion Training",
-        extractedContent: "Mission statement extracted: 'At Neurodiversity Global, we believe that understanding and inclusion begin with learning. Our Workshops, Training, Courses and Consultancy are designed not just to educate but to inspire a new generation of Allies, Champions, Managers and Leaders who Stand Up, Speak Out, be Role Models and Advocates of Neurodiversity in every space—workplaces, schools, and communities. By investing in knowledge today, you are shaping the leaders of tomorrow.'",
+        extractedContent: "Mission statement extracted: 'At Neurodiversity Global, we believe that understanding and inclusion begin with learning. Our Workshops, Training, Courses and Consultancy are designed not just to educate but to inspire a new generation of Allies, Champions, Managers and Leaders who Stand Up, Speak Out, be Role Models and Advocates of Neurodiversity in every space, workplaces, schools, and communities. By investing in knowledge today, you are shaping the leaders of tomorrow.'",
         notes: "Team member names and bios not extracted. This content should feed into an About page and inform the tone of voice across the site.",
       },
       {
@@ -312,7 +312,7 @@ const KnowledgeBase = () => {
   return (
     <>
       <SEOHead
-        title="Knowledge Base — Content Migration"
+        title="Knowledge Base, Content Migration"
         description="Internal knowledge base for migrating content from the old Neurodiversity Global website."
         path="/knowledge-base"
       />

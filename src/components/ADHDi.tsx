@@ -134,7 +134,7 @@ const ADHDi = () => {
             <div className="flex items-center gap-2">
               <Sparkles size={18} className="text-accent" />
               <h2 className="font-display font-bold text-lg text-primary-foreground">
-                ADHDi — Ask Rich Anything
+                ADHDi, Ask Rich Anything
               </h2>
             </div>
             <p className="text-primary-foreground/60 text-xs mt-1.5 max-w-[34ch] leading-relaxed">
@@ -155,7 +155,7 @@ const ADHDi = () => {
           {messages.length === 0 && !isLoading && (
             <div className="space-y-4">
               <p className="text-sm text-muted-foreground">
-                Ask anything about neurodiversity — ADHD, autism, dyslexia, workplace adjustments, legal rights, or anything else.
+                Ask anything about neurodiversity, including ADHD, autism, dyslexia, workplace adjustments, legal rights, or anything else.
               </p>
               <div className="space-y-2">
                 <p className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-muted-foreground">Try asking</p>

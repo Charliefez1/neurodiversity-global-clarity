@@ -334,7 +334,7 @@ export const workshopCategories: WorkshopCategory[] = [
     workshops: [
       {
         id: "ask-away",
-        title: "Ask Away — Open Q&A",
+        title: "Ask Away, Open Q&A",
         duration: "90 minutes",
         ledBy: "Rich Ferriman",
         summary: "Open lived experience discussion, real questions answered. Rich Ferriman is AuDHD and dyslexic.",
@@ -352,7 +352,7 @@ export const workshopCategories: WorkshopCategory[] = [
       },
       {
         id: "ask-away-gen-z",
-        title: "Ask Away Gen Z — Open Q&A",
+        title: "Ask Away Gen Z, Open Q&A",
         duration: "90 minutes",
         ledBy: "Charlie Ferriman",
         summary: "Gen Z lived experience, expectations of work. Charlie Ferriman is the world's youngest accredited neurodiversity in work trainer, with ADHD.",

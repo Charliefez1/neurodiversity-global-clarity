@@ -30,7 +30,7 @@ interface Recommendations {
 type ConciergeState = "input" | "loading" | "results" | "clarify" | "email-form" | "email-sent";
 
 /**
- * Inline concierge input — renders directly in the hero.
+ * Inline concierge input, renders directly in the hero.
  * Results/clarify/email views open in a modal overlay.
  */
 const Concierge = () => {
@@ -106,7 +106,7 @@ const Concierge = () => {
         body: {
           firstName: firstName.trim(),
           email: email.trim(),
-          originalInput: conversationHistory.join(" — "),
+          originalInput: conversationHistory.join(" | "),
           recommendations,
         },
       });

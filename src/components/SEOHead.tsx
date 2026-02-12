@@ -12,7 +12,7 @@ interface SEOHeadProps {
  * SEO component that sets document title and meta tags.
  * Must be rendered on every page.
  *
- * Title format: "{Page Title} — Neurodiversity Global"
+ * Title format: "{Page Title} | Neurodiversity Global"
  * Titles should be under 60 characters.
  * Descriptions should be under 160 characters.
  */
@@ -23,7 +23,7 @@ const SEOHead = ({
   type = "website",
   noIndex = false,
 }: SEOHeadProps) => {
-  const fullTitle = `${title} — Neurodiversity Global`;
+  const fullTitle = `${title} | Neurodiversity Global`;
   const canonicalUrl = `https://www.neurodiversityglobal.com${path}`;
 
   useEffect(() => {

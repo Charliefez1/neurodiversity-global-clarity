@@ -11,7 +11,7 @@ const PullQuote = ({ quote, attribution }: PullQuoteProps) => {
       </p>
       {attribution && (
         <footer className="mt-3">
-          <cite className="text-sm text-muted-foreground not-italic font-body">— {attribution}</cite>
+          <cite className="text-sm text-muted-foreground not-italic font-body">{attribution}</cite>
         </footer>
       )}
     </blockquote>
