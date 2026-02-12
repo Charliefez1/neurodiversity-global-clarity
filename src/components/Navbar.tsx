@@ -56,14 +56,14 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
         <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
-        <div className="absolute top-full left-0 mt-2 w-48 bg-accent/85 backdrop-blur-md border border-accent/30 rounded-lg shadow-lg py-2 z-50">
+        <div className="absolute top-full left-0 mt-2 w-48 bg-accent/50 backdrop-blur-md border border-accent/20 rounded-lg shadow-lg py-2 z-50">
           {item.children!.map((child) => (
             <div key={child.label}>
               {child.href.startsWith("/") && !child.href.includes("#") ? (
                 <Link
                   to={child.href}
                   onClick={() => setOpen(false)}
-                  className="block px-4 py-2 text-sm font-bold text-accent-foreground hover:bg-accent-foreground/15 transition-colors"
+                  className="block px-4 py-2 text-sm font-bold text-foreground hover:bg-foreground/10 transition-colors"
                 >
                   {child.label}
                 </Link>
@@ -71,7 +71,7 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
                 <a
                   href={child.href}
                   onClick={() => setOpen(false)}
-                  className="block px-4 py-2 text-sm font-bold text-accent-foreground hover:bg-accent-foreground/15 transition-colors"
+                  className="block px-4 py-2 text-sm font-bold text-foreground hover:bg-foreground/10 transition-colors"
                 >
                   {child.label}
                 </a>
