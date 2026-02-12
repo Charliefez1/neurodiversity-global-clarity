@@ -1,26 +1,28 @@
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "@/components/LanguageSelector";
 
 interface NavItem {
-  label: string;
+  labelKey: string;
   href: string;
-  children?: { label: string; href: string }[];
+  children?: { labelKey: string; href: string }[];
 }
 
 const navLinks: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Who We Work With", href: "/who-we-work-with" },
-  { label: "What We Do", href: "/what-we-do" },
-  { label: "Workshops", href: "/workshops" },
+  { labelKey: "nav.home", href: "/" },
+  { labelKey: "nav.whoWeWorkWith", href: "/who-we-work-with" },
+  { labelKey: "nav.whatWeDo", href: "/what-we-do" },
+  { labelKey: "nav.workshops", href: "/workshops" },
   {
-    label: "About",
+    labelKey: "nav.about",
     href: "/#values",
     children: [
-      { label: "Industries", href: "/industries/financial-services" },
-      { label: "Evidence", href: "/#evidence" },
-      { label: "Knowledge Base", href: "/knowledge-base" },
-      { label: "Contact", href: "/#contact" },
+      { labelKey: "nav.industries", href: "/industries/financial-services" },
+      { labelKey: "nav.evidence", href: "/#evidence" },
+      { labelKey: "nav.knowledgeBase", href: "/knowledge-base" },
+      { labelKey: "nav.contact", href: "/#contact" },
     ],
   },
 ];
@@ -34,6 +36,7 @@ const NavLinkItem = ({ href, children, onClick }: { href: string; children: Reac
 };
 
 const DesktopDropdown = ({ item }: { item: NavItem }) => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLLIElement>(null);
 
@@ -52,20 +55,20 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
         className="inline-flex items-center gap-1 font-body font-bold text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded"
         aria-expanded={open}
       >
-        {item.label}
+        {t(item.labelKey)}
         <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
-        <div className="absolute top-full left-0 mt-2 w-48 bg-accent/50 backdrop-blur-md border border-accent/20 rounded-lg shadow-lg py-2 z-50">
+        <div className="absolute top-full start-0 mt-2 w-48 bg-accent/50 backdrop-blur-md border border-accent/20 rounded-lg shadow-lg py-2 z-50">
           {item.children!.map((child) => (
-            <div key={child.label}>
+            <div key={child.labelKey}>
               {child.href.startsWith("/") && !child.href.includes("#") ? (
                 <Link
                   to={child.href}
                   onClick={() => setOpen(false)}
                   className="block px-4 py-2 text-sm font-bold text-white hover:bg-white/15 transition-colors"
                 >
-                  {child.label}
+                  {t(child.labelKey)}
                 </Link>
               ) : (
                 <a
@@ -73,7 +76,7 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
                   onClick={() => setOpen(false)}
                   className="block px-4 py-2 text-sm font-bold text-white hover:bg-white/15 transition-colors"
                 >
-                  {child.label}
+                  {t(child.labelKey)}
                 </a>
               )}
             </div>
@@ -85,6 +88,7 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
 };
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
 
@@ -99,21 +103,24 @@ const Navbar = () => {
         <ul className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) =>
             link.children ? (
-              <DesktopDropdown key={link.label} item={link} />
+              <DesktopDropdown key={link.labelKey} item={link} />
             ) : (
-              <li key={link.label}>
-                <NavLinkItem href={link.href}>{link.label}</NavLinkItem>
+              <li key={link.labelKey}>
+                <NavLinkItem href={link.href}>{t(link.labelKey)}</NavLinkItem>
               </li>
             )
           )}
         </ul>
 
-        <Link
-          to="/#contact"
-          className="hidden lg:inline-flex items-center px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/20 hover:shadow-lg hover:shadow-accent/35 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          Book a call
-        </Link>
+        <div className="hidden lg:flex items-center gap-4">
+          <LanguageSelector />
+          <Link
+            to="/#contact"
+            className="inline-flex items-center px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/20 hover:shadow-lg hover:shadow-accent/35 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            {t("nav.bookACall")}
+          </Link>
+        </div>
 
         {/* Mobile toggle */}
         <button
@@ -132,26 +139,26 @@ const Navbar = () => {
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) =>
               link.children ? (
-                <li key={link.label}>
+                <li key={link.labelKey}>
                   <button
                     onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
                     className="font-body text-base text-foreground hover:text-accent transition-colors flex items-center gap-1"
                     aria-expanded={mobileAboutOpen}
                   >
-                    {link.label}
+                    {t(link.labelKey)}
                     <ChevronDown size={16} className={`transition-transform ${mobileAboutOpen ? "rotate-180" : ""}`} />
                   </button>
                   {mobileAboutOpen && (
-                    <ul className="ml-4 mt-2 space-y-2">
+                    <ul className="ms-4 mt-2 space-y-2">
                       {link.children!.map((child) => (
-                        <li key={child.label}>
+                        <li key={child.labelKey}>
                           {child.href.startsWith("/") && !child.href.includes("#") ? (
                             <Link
                               to={child.href}
                               onClick={() => setOpen(false)}
                               className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
                             >
-                              {child.label}
+                              {t(child.labelKey)}
                             </Link>
                           ) : (
                             <a
@@ -159,7 +166,7 @@ const Navbar = () => {
                               onClick={() => setOpen(false)}
                               className="font-body text-sm text-muted-foreground hover:text-accent transition-colors"
                             >
-                              {child.label}
+                              {t(child.labelKey)}
                             </a>
                           )}
                         </li>
@@ -168,14 +175,14 @@ const Navbar = () => {
                   )}
                 </li>
               ) : (
-                <li key={link.label}>
+                <li key={link.labelKey}>
                   {link.href.startsWith("/") && !link.href.includes("#") ? (
                     <Link
                       to={link.href}
                       onClick={() => setOpen(false)}
                       className="font-body text-base text-foreground hover:text-accent transition-colors"
                     >
-                      {link.label}
+                      {t(link.labelKey)}
                     </Link>
                   ) : (
                     <a
@@ -183,19 +190,22 @@ const Navbar = () => {
                       onClick={() => setOpen(false)}
                       className="font-body text-base text-foreground hover:text-accent transition-colors"
                     >
-                      {link.label}
+                      {t(link.labelKey)}
                     </a>
                   )}
                 </li>
               )
             )}
           </ul>
+          <div className="mt-4">
+            <LanguageSelector />
+          </div>
           <Link
             to="/#contact"
             onClick={() => setOpen(false)}
-            className="mt-6 inline-flex items-center px-5 py-2.5 rounded-md bg-accent text-accent-foreground font-display font-semibold text-sm"
+            className="mt-4 inline-flex items-center px-5 py-2.5 rounded-md bg-accent text-accent-foreground font-display font-semibold text-sm"
           >
-            Book a call
+            {t("nav.bookACall")}
           </Link>
         </div>
       )}

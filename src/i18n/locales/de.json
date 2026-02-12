@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "whoWeWorkWith": "Mit wem wir arbeiten",
+    "whatWeDo": "Was wir tun",
+    "workshops": "Workshops",
+    "about": "Über uns",
+    "industries": "Branchen",
+    "evidence": "Nachweise",
+    "knowledgeBase": "Wissensdatenbank",
+    "contact": "Kontakt",
+    "bookACall": "Gespräch buchen",
+    "language": "Sprache"
+  },
+  "hero": {
+    "badge": "Neurodiversität in der Arbeit. Schulungen, Workshops, Beratung",
+    "bookDiscovery": "Erstgespräch buchen",
+    "readTestimonials": "Referenzen lesen",
+    "contactUs": "Kontakt",
+    "askRichTitle": "Fragen Sie Rich.",
+    "askRichDesc": "Rich ist unser Mitbegründer und Experte für Neurodiversität am Arbeitsplatz. Auch wenn Sie keine Schulung suchen, stellen Sie Ihre Frage! Streng vertraulich.",
+    "askRichCta": "Rich fragen",
+    "accreditedSessions": "Akkreditierte Sitzungen",
+    "trainingCardDesc": "Von Experten geleitete, immer live durchgefuehrte Workshops - von 60-Minuten-Sensibilisierungssitzungen bis hin zu ganztaegigen strategischen Programmen.",
+    "browseCatalogue": "Schulungskatalog durchsuchen",
+    "peopleTrained": "30.000+ geschulte Personen · 750+ Organisationen",
+    "tellUsTitle": "Sagen Sie uns, warum Sie hier sind",
+    "tellUsDesc": "Beschreiben Sie, was Sie brauchen, und wir weisen Ihnen den Weg.",
+    "lookingForSupport": "Ich suche Unterstützung als",
+    "learnMore": "Mehr erfahren",
+    "messages": [
+      "Neurodiversitäts-Schulung, Strategie und Arbeitsplatzberatung.",
+      "Wir leisten die harte, menschliche Arbeit, um Neuroinklusion Realität werden zu lassen.",
+      "Neuroinklusion, die wirklich verändert, wie sich Arbeit anfühlt.",
+      "Das ist kein Bewusstseinstraining. Das ist Veränderung.",
+      "Neurodiversität bei der Arbeit. Echt. Menschlich. Effektiv.",
+      "Wo Inklusion aufhört, nur gut gemeint zu sein und anfängt zu wirken.",
+      "Wir machen die harte Arbeit, die die meisten Inklusionsprogramme vermeiden.",
+      "Gesehen werden. Wertgeschätzt werden. Unterstützt werden."
+    ],
+    "sublines": [
+      "In Großbritannien ansässige, neurodivergent geführte Beratung für akkreditierte Schulungen und strategische Neugestaltung.",
+      "Lebendige, erfahrungsbasierte Schulungen, die Verhalten verändern und Vertrauen aufbauen.",
+      "Mit Exzellent bewertet und einem Durchschnitt von 9,7 von 10.",
+      "Wir arbeiten mit Führungskräften und Teams zusammen, um Absicht in Handlung umzuwandeln.",
+      "Praxisnahe Sitzungen, die sich direkt in bessere Entscheidungen umsetzen.",
+      "Führungskräfte gehen mit Sprache, Selbstvertrauen und Klarheit, die sie sofort einsetzen können.",
+      "Wir schaffen Raum und Struktur für ehrliche Gespräche, die wirklich voranbringen.",
+      "Workshops zur Unterstützung neurodivergenter Menschen und ihrer Bezugspersonen."
+    ]
+  },
+  "stats": {
+    "years": "Jahre spezialisierter Erfahrung",
+    "orgs": "Unterstützte Organisationen",
+    "projects": "Durchgeführte Projekte",
+    "trained": "Geschulte Personen"
+  },
+  "pathways": {
+    "employers": "Arbeitgeber",
+    "employersSub": "Privat & Unternehmen",
+    "employersDesc": "Risiko reduzieren, Talente halten und Arbeitsplätze schaffen, an denen neurodivergente Mitarbeiter erfolgreich sind.",
+    "publicSector": "Öffentlicher Sektor",
+    "publicSectorSub": "Regierung & Gesundheitswesen",
+    "publicSectorDesc": "Gesetzliche Pflichten erfüllen, Dienste neu gestalten und Ergebnisse verbessern.",
+    "parents": "Eltern",
+    "parentsSub": "Familien & Betreuer",
+    "parentsDesc": "Systeme verstehen, Rechte kennen und effektiv für Ihr neurodivergentes Kind eintreten."
+  },
+  "training": {
+    "coreAwareness": "Grundlegende Sensibilisierung",
+    "champions": "Champions",
+    "managers": "Führungskräfte",
+    "leaders": "Leiter",
+    "executive": "Geschäftsführung",
+    "hr": "Personalwesen",
+    "ld": "L&E",
+    "industry": "Branche",
+    "strategyLeadership": "Strategie & Führung",
+    "keynotes": "Vorträge & Events"
+  },
+  "footer": {
+    "tagline": "In Großbritannien ansässige, neurodivergent geführte Beratung. Wir liefern keine Alibi-Inklusion. Wir gestalten Systeme neu.",
+    "services": "Leistungen",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "privacyPolicy": "Datenschutz",
+    "accessibilityStatement": "Barrierefreiheit",
+    "termsOfService": "Nutzungsbedingungen",
+    "manifesto": "Wir machen keine Show-Inklusion. Wir leisten die harte, menschliche Arbeit, um sie real zu machen.",
+    "copyright": "© {{year}} Neurodiversity Global. Alle Rechte vorbehalten.",
+    "designedWith": "Gestaltet mit Barrierefreiheit im Mittelpunkt."
+  },
+  "i18nNotice": "Einige Inhalte und Sprachen werden noch ausgerollt. Englisch UK ist die Referenzversion."
+}

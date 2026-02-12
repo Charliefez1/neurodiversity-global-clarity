@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Home",
+    "whoWeWorkWith": "Who We Work With",
+    "whatWeDo": "What We Do",
+    "workshops": "Workshops",
+    "about": "About",
+    "industries": "Industries",
+    "evidence": "Evidence",
+    "knowledgeBase": "Knowledge Base",
+    "contact": "Contact",
+    "bookACall": "Book a call",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Neurodiversity in work. Training, Workshops, Consultancy",
+    "bookDiscovery": "Book a discovery call",
+    "readTestimonials": "Read Testimonials",
+    "contactUs": "Contact Us",
+    "askRichTitle": "Ask Rich anything.",
+    "askRichDesc": "Rich is our co-founder and resident neurodiversity-in-work expert. Even if you're not looking for training but have a question about neurodiversity at work, ask! Our knowledge base is continually updated, but if you can't find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.",
+    "askRichCta": "Ask Rich Anything",
+    "accreditedSessions": "Accredited sessions",
+    "trainingCardDesc": "Expert-led, always 'live', workshops from 60-minute awareness sessions to full-day strategic programs tailored to your setting and industry.",
+    "browseCatalogue": "Browse training catalog",
+    "peopleTrained": "30,000+ people trained · 750+ organizations",
+    "tellUsTitle": "Tell us why you're here",
+    "tellUsDesc": "Describe what you need and we'll point you to the right training, service, or next step.",
+    "lookingForSupport": "I'm looking for support as",
+    "learnMore": "Learn more",
+    "messages": [
+      "Neurodiversity training, strategy, and workplace consultancy.",
+      "We do the hard, human work of making neuroinclusion real.",
+      "Neuroinclusion that actually changes how work feels.",
+      "This is not awareness training. This is change.",
+      "Neurodiversity at work. Real. Human. Effective.",
+      "Where inclusion stops being performative and starts working.",
+      "We do the hard work most inclusion programs avoid.",
+      "Be seen. Be valued. Be supported."
+    ],
+    "sublines": [
+      "US and UK-based, neurodivergent-led consultancy delivering accredited neurodiversity training, strategic redesign, and workforce capability building. Helping organizations improve retention, reduce risk, and unlock performance.",
+      "Live, engaging, lived experience training that changes behavior, builds trust, and keeps delivering long after the session ends.",
+      "Rated Excellent with a 9.7 out of 10 average because it is an experience that stays with people.",
+      "We work alongside leaders and teams to turn intention into action and conversations into lasting shift.",
+      "Practical sessions grounded in lived experience that translate directly into better decisions and better work.",
+      "Managers leave with language, confidence, and clarity they can use immediately.",
+      "We create the space and structure for honest conversations that actually move things forward.",
+      "Workshops designed to support neurodivergent people and the people carrying responsibility around them."
+    ]
+  },
+  "stats": {
+    "years": "Years of specialist delivery",
+    "orgs": "Organizations supported",
+    "projects": "Projects delivered",
+    "trained": "People trained"
+  },
+  "pathways": {
+    "employers": "Employers",
+    "employersSub": "Private & corporate",
+    "employersDesc": "Reduce risk, retain talent, and build workplaces where neurodivergent employees perform.",
+    "publicSector": "Public Sector",
+    "publicSectorSub": "Government & NHS",
+    "publicSectorDesc": "Meet legal duties, redesign services, and improve outcomes for neurodivergent citizens and staff.",
+    "parents": "Parents",
+    "parentsSub": "Families & carers",
+    "parentsDesc": "Navigate systems, understand rights, and advocate effectively for your neurodivergent child."
+  },
+  "training": {
+    "coreAwareness": "Core Awareness",
+    "champions": "Champions",
+    "managers": "Managers",
+    "leaders": "Leaders",
+    "executive": "Executive",
+    "hr": "HR",
+    "ld": "L&D",
+    "industry": "Industry",
+    "strategyLeadership": "Strategy & Leadership",
+    "keynotes": "Keynotes & Events"
+  },
+  "footer": {
+    "tagline": "UK-based, neurodivergent-led consultancy redefining neuroinclusion as business-critical infrastructure. We do not deliver tick-box inclusion. We redesign systems.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "accessibilityStatement": "Accessibility Statement",
+    "termsOfService": "Terms of Service",
+    "manifesto": "We do not do performative inclusion. We do the hard, human work of making it real. We are here to take the pain out of inclusion for everyone.",
+    "copyright": "© {{year}} Neurodiversity Global. All rights reserved.",
+    "designedWith": "Designed with accessibility at the center."
+  },
+  "i18nNotice": "Some content and languages are still being rolled out. English UK is the reference version."
+}

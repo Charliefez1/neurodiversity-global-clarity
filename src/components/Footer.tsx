@@ -1,45 +1,48 @@
 import { Link } from "react-router-dom";
-
-const footerLinks = {
-  services: [
-    { label: "Workshops", href: "/workshops" },
-    { label: "What We Do", href: "/what-we-do" },
-    { label: "Who We Work With", href: "/who-we-work-with" },
-    { label: "Industries", href: "/industries/financial-services" },
-  ],
-  company: [
-    { label: "About", href: "/#values" },
-    { label: "Evidence", href: "/#evidence" },
-    { label: "Contact", href: "/#contact" },
-  ],
-  legal: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Accessibility Statement", href: "#" },
-    { label: "Terms of Service", href: "#" },
-  ],
-};
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
+  const footerLinks = {
+    services: [
+      { label: t("nav.workshops"), href: "/workshops" },
+      { label: t("nav.whatWeDo"), href: "/what-we-do" },
+      { label: t("nav.whoWeWorkWith"), href: "/who-we-work-with" },
+      { label: t("nav.industries"), href: "/industries/financial-services" },
+    ],
+    company: [
+      { label: t("nav.about"), href: "/#values" },
+      { label: t("nav.evidence"), href: "/#evidence" },
+      { label: t("nav.contact"), href: "/#contact" },
+    ],
+    legal: [
+      { label: t("footer.privacyPolicy"), href: "#" },
+      { label: t("footer.accessibilityStatement"), href: "#" },
+      { label: t("footer.termsOfService"), href: "#" },
+    ],
+  };
+
   return (
     <footer className="bg-warm-stone text-foreground border-t border-border">
       <div className="mx-auto max-w-wide px-6 lg:px-10 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-             <p className="font-display font-extrabold text-base mb-3">
+            <p className="font-display font-extrabold text-base mb-3">
               Neurodiversity<span className="text-accent"> Global</span>
             </p>
             <p className="text-xs text-muted-foreground leading-relaxed max-w-xs">
-              UK-based, neurodivergent-led consultancy redefining neuroinclusion as business-critical infrastructure. We do not deliver tick-box inclusion. We redesign systems.
+              {t("footer.tagline")}
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <p className="font-display font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-4">Services</p>
+            <p className="font-display font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-4">{t("footer.services")}</p>
             <ul className="space-y-2.5">
               {footerLinks.services.map((l) => (
-                <li key={l.label}>
+                <li key={l.href}>
                   <Link to={l.href} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                     {l.label}
                   </Link>
@@ -50,10 +53,10 @@ const Footer = () => {
 
           {/* Company */}
           <div>
-            <p className="font-display font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-4">Company</p>
+            <p className="font-display font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-4">{t("footer.company")}</p>
             <ul className="space-y-2.5">
               {footerLinks.company.map((l) => (
-                <li key={l.label}>
+                <li key={l.href}>
                   <a href={l.href} className="text-xs text-muted-foreground hover:text-foreground transition-colors">
                     {l.label}
                   </a>
@@ -64,7 +67,7 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <p className="font-display font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-4">Legal</p>
+            <p className="font-display font-semibold text-xs uppercase tracking-widest text-muted-foreground mb-4">{t("footer.legal")}</p>
             <ul className="space-y-2.5">
               {footerLinks.legal.map((l) => (
                 <li key={l.label}>
@@ -80,13 +83,18 @@ const Footer = () => {
         {/* Manifesto line */}
         <div className="mt-12 pt-8 border-t border-border">
           <p className="text-xs text-muted-foreground leading-relaxed max-w-2xl italic">
-            "We do not do performative inclusion. We do the hard, human work of making it real. We are here to take the pain out of inclusion for everyone."
+            "{t("footer.manifesto")}"
           </p>
         </div>
 
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Neurodiversity Global. All rights reserved.</p>
-          <p className="text-xs text-muted-foreground">Designed with accessibility at the centre.</p>
+          <p className="text-xs text-muted-foreground">{t("footer.copyright", { year: new Date().getFullYear() })}</p>
+          <p className="text-xs text-muted-foreground">{t("footer.designedWith")}</p>
+        </div>
+
+        {/* i18n notice */}
+        <div className="mt-4 text-center">
+          <p className="text-xs text-muted-foreground/60 italic">{t("i18nNotice")}</p>
         </div>
       </div>
     </footer>
