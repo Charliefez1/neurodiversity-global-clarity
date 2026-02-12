@@ -129,31 +129,33 @@ const Concierge = () => {
     <>
       {/* ── Inline hero section ── */}
       <div className="space-y-5 relative z-10 bg-primary-foreground/[0.06] rounded-xl p-6 border border-primary-foreground/15">
-        <div>
-          <label
-            htmlFor="concierge-input"
-            className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-primary-foreground/50 block mb-2"
-          >
-            In your own words
-          </label>
-          <textarea
-            id="concierge-input"
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-            placeholder="Example: I need manager training for a logistics site. Performance issues are rising and disclosure is becoming more common."
-            rows={3}
-            className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/[0.06] px-4 py-3 text-xs text-primary-foreground placeholder:text-xs placeholder:text-primary-foreground/35 focus:outline-none focus:ring-2 focus:ring-accent resize-none leading-relaxed"
-          />
-        </div>
+        <div className="flex flex-col sm:flex-row gap-3 sm:items-end">
+          <div className="flex-1">
+            <label
+              htmlFor="concierge-input"
+              className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-primary-foreground/50 block mb-2"
+            >
+              In your own words
+            </label>
+            <textarea
+              id="concierge-input"
+              value={userInput}
+              onChange={(e) => setUserInput(e.target.value)}
+              placeholder="Example: I need manager training for a logistics site. Performance issues are rising and disclosure is becoming more common."
+              rows={3}
+              className="w-full rounded-lg border border-primary-foreground/15 bg-primary-foreground/[0.06] px-4 py-3 text-xs text-primary-foreground placeholder:text-xs placeholder:text-primary-foreground/35 focus:outline-none focus:ring-2 focus:ring-accent resize-none leading-relaxed"
+            />
+          </div>
 
-        <button
-          onClick={() => handleSubmit(userInput)}
-          disabled={!userInput.trim()}
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all disabled:opacity-60"
-        >
-          Get my recommendations
-          <ArrowRight size={18} aria-hidden="true" />
-        </button>
+          <button
+            onClick={() => handleSubmit(userInput)}
+            disabled={!userInput.trim()}
+            className="sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all disabled:opacity-60 shrink-0"
+          >
+            Get my recommendations
+            <ArrowRight size={18} aria-hidden="true" />
+          </button>
+        </div>
 
         <div>
           <p className="font-display font-semibold text-xs uppercase tracking-[0.12em] text-primary-foreground/40 mb-3">
