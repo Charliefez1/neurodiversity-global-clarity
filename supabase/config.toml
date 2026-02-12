@@ -20,3 +20,6 @@ verify_jwt = false
 
 [functions.ask-rich]
 verify_jwt = false
+
+[functions.seed-qa]
+verify_jwt = false
