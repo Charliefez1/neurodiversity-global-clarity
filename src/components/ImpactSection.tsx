@@ -123,7 +123,7 @@ const ImpactSection = () => {
               <span className="text-sm text-primary-foreground/50 font-body">may be neurodivergent</span>
             </div>
             <p className="text-sm text-primary-foreground/60 leading-relaxed max-w-[48ch]">
-              That is roughly 1 in 4 working adults. Most are undiagnosed or undisclosed. Your organisation already employs them.
+              That is 1 in 4 working adults. Many are undiagnosed or undisclosed. Most are masking. Your organisation is made up of a unique and diverse workforce, with neuroinclusion we make sure everyone is seen, is heard and is supported.
             </p>
             {/* Decorative ring */}
             <div className="absolute -right-2 -bottom-2 opacity-30">
