@@ -77,7 +77,7 @@ const HeroWorkshopSearch = () => {
           disabled={aiLoading || !query.trim()}
           className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-burnt-orange text-burnt-orange-foreground font-display font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-50 shadow-lg shadow-burnt-orange/20"
         >
-          {aiLoading ? <Loader2 size={16} className="animate-spin" /> : <Sparkles size={16} />}
+          {aiLoading ? <Loader2 size={16} className="animate-spin" /> : <Search size={16} />}
           Find
         </button>
         <button
