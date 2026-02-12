@@ -106,7 +106,7 @@ const Testimonials = () => (
               </div>
             </div>
             <div className="relative">
-              <Quote size={24} className="text-accent/30 absolute -top-1 -left-1" aria-hidden="true" />
+              <Quote size={20} className="text-accent/30 absolute -top-1 -left-1" aria-hidden="true" />
               <blockquote className="pl-8 text-base text-card-foreground leading-relaxed italic">
                 "{t.quote}"
               </blockquote>

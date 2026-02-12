@@ -122,7 +122,7 @@ const Navbar = () => {
           aria-expanded={open}
           aria-label="Toggle navigation menu"
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </nav>
 
