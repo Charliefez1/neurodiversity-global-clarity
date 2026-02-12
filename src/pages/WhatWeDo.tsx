@@ -11,6 +11,16 @@ import AccessibilityNote from "@/components/blocks/AccessibilityNote";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { breadcrumbSchema, serviceSchema } from "@/components/JsonLd";
+import { RegisterSections } from "@/contexts/PageSectionsContext";
+import { AlertTriangle, Package, ListOrdered, TrendingUp, CreditCard } from "lucide-react";
+
+const pageSections = [
+  { id: "why", label: "Why This Matters", icon: AlertTriangle },
+  { id: "included", label: "What's Included", icon: Package },
+  { id: "process", label: "How It Works", icon: ListOrdered },
+  { id: "outcomes", label: "Outcomes", icon: TrendingUp },
+  { id: "pricing", label: "Pricing", icon: CreditCard },
+];
 
 const WhatWeDoTemplate = () => {
   return (
@@ -29,6 +39,7 @@ const WhatWeDoTemplate = () => {
         "Accredited neurodiversity training programmes for managers, HR professionals and leaders.",
         "https://www.neurodiversityglobal.com/what-we-do"
       )} />
+      <RegisterSections sections={pageSections} />
       <Navbar />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "What We Do" }]} />
       <main>

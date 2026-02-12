@@ -10,7 +10,15 @@ import AccessibilityNote from "@/components/blocks/AccessibilityNote";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
-import { Users, GraduationCap, Headphones, Settings } from "lucide-react";
+import { Users, GraduationCap, Headphones, Settings, AlertTriangle, Award, TrendingUp, Phone } from "lucide-react";
+import { RegisterSections } from "@/contexts/PageSectionsContext";
+
+const pageSections = [
+  { id: "reality", label: "Your Reality", icon: AlertTriangle },
+  { id: "support", label: "How We Help", icon: GraduationCap },
+  { id: "outcomes", label: "Outcomes", icon: TrendingUp },
+  { id: "evidence", label: "Evidence", icon: Award },
+];
 
 const WhoWeWorkWithTemplate = () => {
   return (
@@ -24,6 +32,7 @@ const WhoWeWorkWithTemplate = () => {
         { name: "Home", url: "https://www.neurodiversityglobal.com/" },
         { name: "Who We Work With", url: "https://www.neurodiversityglobal.com/who-we-work-with" },
       ])} />
+      <RegisterSections sections={pageSections} />
       <Navbar />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Who We Work With" }]} />
       <main>

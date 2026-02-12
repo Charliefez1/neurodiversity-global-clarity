@@ -1,5 +1,6 @@
 import { BookOpen, LayoutList, Volume2, Sun, Moon, Type } from "lucide-react";
 import { useExperienceMode, type ExperienceMode } from "@/contexts/ExperienceModeContext";
+import { usePageSections } from "@/contexts/PageSectionsContext";
 import { useState, useEffect } from "react";
 
 const modes: { value: ExperienceMode; label: string; icon: typeof BookOpen }[] = [
@@ -10,6 +11,7 @@ const modes: { value: ExperienceMode; label: string; icon: typeof BookOpen }[] =
 
 const ExperienceSelector = () => {
   const { mode, setMode } = useExperienceMode();
+  const { sections } = usePageSections();
   const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
   const [textSize, setTextSize] = useState<"normal" | "large">("normal");
 
@@ -25,9 +27,34 @@ const ExperienceSelector = () => {
     document.documentElement.style.fontSize = textSize === "large" ? "112.5%" : "";
   }, [textSize]);
 
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="bg-primary text-primary-foreground/70 border-b border-primary-foreground/8">
       <div className="mx-auto max-w-wide px-6 lg:px-10 py-1.5 flex items-center justify-between gap-4 flex-wrap">
+        {/* Section jump icons */}
+        {sections.length > 0 && (
+          <div className="flex items-center gap-1">
+            <span className="text-[11px] font-display font-semibold uppercase tracking-[0.1em] text-primary-foreground/40 hidden sm:inline mr-1">
+              Jump to
+            </span>
+            {sections.map((s) => (
+              <button
+                key={s.id}
+                onClick={() => scrollTo(s.id)}
+                className="inline-flex items-center gap-1 px-2 py-1 rounded text-primary-foreground/50 hover:text-primary-foreground hover:bg-primary-foreground/10 transition-all"
+                title={s.label}
+                aria-label={`Jump to ${s.label}`}
+              >
+                <s.icon size={13} aria-hidden="true" />
+              </button>
+            ))}
+          </div>
+        )}
+
         {/* Experience mode */}
         <div className="flex items-center gap-2">
           <span className="text-[11px] font-display font-semibold uppercase tracking-[0.1em] text-primary-foreground/40 hidden sm:inline mr-1">
