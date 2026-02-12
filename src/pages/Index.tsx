@@ -7,6 +7,7 @@ import EvidenceSection from "@/components/EvidenceSection";
 import AccessibilitySection from "@/components/AccessibilitySection";
 import FinalCTA from "@/components/FinalCTA";
 import ResourcesSection from "@/components/ResourcesSection";
+import EmbedSection from "@/components/EmbedSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { organisationSchema } from "@/components/JsonLd";
@@ -28,6 +29,7 @@ const Index = () => {
       <EvidenceSection />
       <AccessibilitySection />
       <FinalCTA />
+      <EmbedSection />
       <ResourcesSection />
       <Footer />
     </main>
