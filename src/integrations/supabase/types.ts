@@ -14,33 +14,92 @@ export type Database = {
   }
   public: {
     Tables: {
+      qa_feedback: {
+        Row: {
+          ai_query: string | null
+          created_at: string
+          helpful: boolean
+          id: string
+          qa_item_id: string | null
+        }
+        Insert: {
+          ai_query?: string | null
+          created_at?: string
+          helpful: boolean
+          id?: string
+          qa_item_id?: string | null
+        }
+        Update: {
+          ai_query?: string | null
+          created_at?: string
+          helpful?: boolean
+          id?: string
+          qa_item_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "qa_feedback_qa_item_id_fkey"
+            columns: ["qa_item_id"]
+            isOneToOne: false
+            referencedRelation: "qa_items"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       qa_items: {
         Row: {
           answer: string
           created_at: string
+          fts: unknown
           id: string
           published: boolean
           question: string
+          slug: string | null
           tags: string[] | null
           updated_at: string
+          view_count: number
         }
         Insert: {
           answer: string
           created_at?: string
+          fts?: unknown
           id?: string
           published?: boolean
           question: string
+          slug?: string | null
           tags?: string[] | null
           updated_at?: string
+          view_count?: number
         }
         Update: {
           answer?: string
           created_at?: string
+          fts?: unknown
           id?: string
           published?: boolean
           question?: string
+          slug?: string | null
           tags?: string[] | null
           updated_at?: string
+          view_count?: number
+        }
+        Relationships: []
+      }
+      qa_query_log: {
+        Row: {
+          created_at: string
+          id: string
+          query: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          query: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          query?: string
         }
         Relationships: []
       }

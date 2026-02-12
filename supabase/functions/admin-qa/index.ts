@@ -12,6 +12,16 @@ function verifyPin(req: Request): boolean {
   return pin === Deno.env.get("ADMIN_PIN");
 }
 
+function generateSlug(question: string): string {
+  return question
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .slice(0, 80)
+    .replace(/-$/, "");
+}
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -47,9 +57,10 @@ serve(async (req) => {
 
       if (req.method === "POST") {
         const body = await req.json();
+        const slug = generateSlug(body.question);
         const { data, error } = await supabase
           .from("qa_items")
-          .insert({ question: body.question, answer: body.answer, tags: body.tags || [], published: body.published ?? true })
+          .insert({ question: body.question, answer: body.answer, tags: body.tags || [], published: body.published ?? true, slug })
           .select()
           .single();
         if (error) throw error;
@@ -60,9 +71,10 @@ serve(async (req) => {
 
       if (req.method === "PUT") {
         const body = await req.json();
+        const slug = generateSlug(body.question);
         const { data, error } = await supabase
           .from("qa_items")
-          .update({ question: body.question, answer: body.answer, tags: body.tags, published: body.published })
+          .update({ question: body.question, answer: body.answer, tags: body.tags, published: body.published, slug })
           .eq("id", body.id)
           .select()
           .single();

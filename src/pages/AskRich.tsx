@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { Send, Sparkles, Loader2, Tag, Lock } from "lucide-react";
+import { Send, Sparkles, Loader2, Tag, Lock, Search, ThumbsUp, ThumbsDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,7 +9,7 @@ import ReactMarkdown from "react-markdown";
 
 const ASK_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/ask-rich`;
 
-type QAItem = { id: string; question: string; answer: string; tags: string[] };
+type QAItem = { id: string; question: string; answer: string; tags: string[]; slug: string | null };
 
 const AskRich = () => {
   const [query, setQuery] = useState("");
@@ -17,9 +18,11 @@ const AskRich = () => {
   const [qaItems, setQaItems] = useState<QAItem[]>([]);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [allTags, setAllTags] = useState<string[]>([]);
+  const [searchText, setSearchText] = useState("");
+  const [feedbackSent, setFeedbackSent] = useState(false);
+  const [lastQuery, setLastQuery] = useState("");
 
   // Submission form
-  const [showSubmit, setShowSubmit] = useState(false);
   const [submitQ, setSubmitQ] = useState("");
   const [submitEmail, setSubmitEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -29,10 +32,14 @@ const AskRich = () => {
 
   useEffect(() => {
     const fetchQA = async () => {
-      const { data } = await supabase.from("qa_items").select("id, question, answer, tags").eq("published", true).order("created_at", { ascending: false });
+      const { data } = await supabase
+        .from("qa_items")
+        .select("id, question, answer, tags, slug")
+        .eq("published", true)
+        .order("created_at", { ascending: false });
       if (data) {
-        setQaItems(data);
-        const tags = [...new Set(data.flatMap((d: QAItem) => d.tags || []))].sort();
+        setQaItems(data as QAItem[]);
+        const tags = [...new Set(data.flatMap((d: any) => d.tags || []))].sort();
         setAllTags(tags);
       }
     };
@@ -44,6 +51,8 @@ const AskRich = () => {
     if (!trimmed || isStreaming) return;
     setAnswer("");
     setIsStreaming(true);
+    setFeedbackSent(false);
+    setLastQuery(trimmed);
 
     try {
       const resp = await fetch(ASK_URL, {
@@ -107,9 +116,30 @@ const AskRich = () => {
     setSubmitting(false);
   };
 
-  const filteredItems = selectedTag
-    ? qaItems.filter((q) => q.tags?.includes(selectedTag))
-    : qaItems;
+  const sendFeedback = async (helpful: boolean) => {
+    if (feedbackSent) return;
+    setFeedbackSent(true);
+    await supabase.from("qa_feedback").insert({
+      ai_query: lastQuery,
+      helpful,
+    });
+  };
+
+  // Filter items by tag and search text
+  const filteredItems = qaItems.filter((q) => {
+    if (selectedTag && !q.tags?.includes(selectedTag)) return false;
+    if (searchText.trim()) {
+      const s = searchText.toLowerCase();
+      return q.question.toLowerCase().includes(s) || q.answer.toLowerCase().includes(s);
+    }
+    return true;
+  });
+
+  // Tag counts
+  const tagCounts = qaItems.reduce<Record<string, number>>((acc, q) => {
+    (q.tags || []).forEach((t) => { acc[t] = (acc[t] || 0) + 1; });
+    return acc;
+  }, {});
 
   return (
     <main>
@@ -185,6 +215,30 @@ const AskRich = () => {
                     Thinking…
                   </div>
                 )}
+                {/* Feedback on AI answer */}
+                {!isStreaming && answer && (
+                  <div className="mt-6 pt-4 border-t border-border">
+                    <p className="text-xs text-muted-foreground mb-2">Was this helpful?</p>
+                    {feedbackSent ? (
+                      <p className="text-xs text-accent font-medium">Thanks for your feedback!</p>
+                    ) : (
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => sendFeedback(true)}
+                          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md border border-border text-xs text-foreground hover:bg-muted transition-colors"
+                        >
+                          <ThumbsUp size={12} /> Yes
+                        </button>
+                        <button
+                          onClick={() => sendFeedback(false)}
+                          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-md border border-border text-xs text-foreground hover:bg-muted transition-colors"
+                        >
+                          <ThumbsDown size={12} /> No
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -197,9 +251,21 @@ const AskRich = () => {
           <h2 className="font-display font-bold text-xl md:text-2xl text-foreground mb-2">
             Browse the knowledge base
           </h2>
-          <p className="text-muted-foreground text-sm mb-8">
+          <p className="text-muted-foreground text-sm mb-6">
             Questions and answers personally written by Rich Ferriman.
           </p>
+
+          {/* Keyword search */}
+          <div className="relative max-w-md mb-6">
+            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground/60" />
+            <input
+              type="text"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              placeholder="Search the knowledge base…"
+              className="w-full rounded-lg border border-border bg-card pl-9 pr-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-accent"
+            />
+          </div>
 
           {/* Tag filter */}
           {allTags.length > 0 && (
@@ -210,7 +276,7 @@ const AskRich = () => {
                   !selectedTag ? "bg-accent text-accent-foreground border-accent" : "border-border text-muted-foreground hover:bg-muted"
                 }`}
               >
-                All
+                All ({qaItems.length})
               </button>
               {allTags.map((tag) => (
                 <button
@@ -221,14 +287,16 @@ const AskRich = () => {
                   }`}
                 >
                   <Tag size={10} />
-                  {tag}
+                  {tag} ({tagCounts[tag] || 0})
                 </button>
               ))}
             </div>
           )}
 
           {filteredItems.length === 0 ? (
-            <p className="text-muted-foreground text-sm">No Q&A items yet. Check back soon, the knowledge base is being built.</p>
+            <p className="text-muted-foreground text-sm">
+              {searchText.trim() ? "No results found. Try different keywords." : "No Q&A items yet. Check back soon, the knowledge base is being built."}
+            </p>
           ) : (
             <div className="space-y-4">
               {filteredItems.map((item) => (
@@ -241,15 +309,25 @@ const AskRich = () => {
                     <div className="prose prose-sm max-w-none text-foreground leading-relaxed">
                       <ReactMarkdown>{item.answer}</ReactMarkdown>
                     </div>
-                    {item.tags?.length > 0 && (
-                      <div className="flex gap-1.5 mt-4">
-                        {item.tags.map((tag) => (
-                          <span key={tag} className="px-2 py-0.5 rounded text-[10px] bg-muted text-muted-foreground font-medium">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
+                    <div className="flex items-center justify-between mt-4">
+                      {item.tags?.length > 0 && (
+                        <div className="flex gap-1.5">
+                          {item.tags.map((tag) => (
+                            <span key={tag} className="px-2 py-0.5 rounded text-[10px] bg-muted text-muted-foreground font-medium">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      {item.slug && (
+                        <Link
+                          to={`/ask-rich/${item.slug}`}
+                          className="text-accent text-xs font-medium hover:underline shrink-0"
+                        >
+                          Share / Permalink →
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </details>
               ))}

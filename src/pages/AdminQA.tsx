@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Plus, Trash2, Edit2, Save, X, Tag, Loader2, Eye, EyeOff, MessageSquare, CheckCircle, Archive } from "lucide-react";
+import { Plus, Trash2, Edit2, Save, X, Tag, Loader2, Eye, EyeOff, MessageSquare, CheckCircle, Archive, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import SEOHead from "@/components/SEOHead";
+import ReactMarkdown from "react-markdown";
 
 const API_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/admin-qa`;
 
-type QAItem = { id: string; question: string; answer: string; tags: string[]; published: boolean; created_at: string };
+type QAItem = { id: string; question: string; answer: string; tags: string[]; published: boolean; created_at: string; slug: string | null };
 type Submission = { id: string; question: string; email: string | null; status: string; admin_notes: string | null; created_at: string };
 
 const AdminQA = () => {
@@ -22,6 +23,7 @@ const AdminQA = () => {
   const [editing, setEditing] = useState<string | null>(null);
   const [form, setForm] = useState({ question: "", answer: "", tags: "", published: true });
   const [showNew, setShowNew] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
 
   const headers = () => ({
     "Content-Type": "application/json",
@@ -95,6 +97,15 @@ const AdminQA = () => {
     setEditing(item.id);
     setForm({ question: item.question, answer: item.answer, tags: (item.tags || []).join(", "), published: item.published });
     setShowNew(false);
+    setShowPreview(false);
+  };
+
+  const convertToQA = (sub: Submission) => {
+    setTab("items");
+    setShowNew(true);
+    setEditing(null);
+    setForm({ question: sub.question, answer: "", tags: "", published: false });
+    setShowPreview(false);
   };
 
   if (!authenticated) {
@@ -160,7 +171,7 @@ const AdminQA = () => {
           {tab === "items" && (
             <div>
               <button
-                onClick={() => { setShowNew(true); setEditing(null); setForm({ question: "", answer: "", tags: "", published: true }); }}
+                onClick={() => { setShowNew(true); setEditing(null); setForm({ question: "", answer: "", tags: "", published: true }); setShowPreview(false); }}
                 className="mb-6 px-5 py-2.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm flex items-center gap-2"
               >
                 <Plus size={16} /> Add Q&A
@@ -174,13 +185,30 @@ const AdminQA = () => {
                     placeholder="Question"
                     className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
                   />
-                  <textarea
-                    value={form.answer}
-                    onChange={(e) => setForm({ ...form, answer: e.target.value })}
-                    placeholder="Answer (supports markdown)"
-                    rows={6}
-                    className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent resize-y"
-                  />
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <textarea
+                      value={form.answer}
+                      onChange={(e) => setForm({ ...form, answer: e.target.value })}
+                      placeholder="Answer (supports markdown)"
+                      rows={8}
+                      className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-accent resize-y"
+                    />
+                    {showPreview ? (
+                      <div className="rounded-lg border border-border bg-background px-4 py-3 overflow-y-auto max-h-[300px]">
+                        <p className="text-[10px] uppercase tracking-wider text-muted-foreground font-bold mb-2">Preview</p>
+                        <div className="prose prose-sm max-w-none text-foreground">
+                          <ReactMarkdown>{form.answer || "*Start typing to see preview…*"}</ReactMarkdown>
+                        </div>
+                      </div>
+                    ) : null}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setShowPreview(!showPreview)}
+                    className="text-xs text-accent hover:underline"
+                  >
+                    {showPreview ? "Hide preview" : "Show markdown preview"}
+                  </button>
                   <input
                     value={form.tags}
                     onChange={(e) => setForm({ ...form, tags: e.target.value })}
@@ -220,6 +248,9 @@ const AdminQA = () => {
                           ))}
                         </div>
                       )}
+                      {item.slug && (
+                        <p className="text-[10px] text-muted-foreground/60 mt-1.5">/ask-rich/{item.slug}</p>
+                      )}
                     </div>
                     <div className="flex gap-1.5 shrink-0">
                       <button onClick={() => startEdit(item)} className="p-2 rounded-lg hover:bg-muted transition-colors" title="Edit">
@@ -248,10 +279,17 @@ const AdminQA = () => {
                       {sub.email && <p className="text-xs text-muted-foreground mt-1">{sub.email}</p>}
                       <p className="text-xs text-muted-foreground mt-1">{new Date(sub.created_at).toLocaleDateString()}</p>
                     </div>
-                    <div className="flex gap-1.5 shrink-0">
+                    <div className="flex gap-1.5 shrink-0 items-center">
                       <span className={`px-2 py-0.5 rounded text-[10px] font-medium ${sub.status === "pending" ? "bg-yellow-100 text-yellow-800" : sub.status === "answered" ? "bg-green-100 text-green-800" : "bg-muted text-muted-foreground"}`}>
                         {sub.status}
                       </span>
+                      <button
+                        onClick={() => convertToQA(sub)}
+                        className="p-1.5 rounded-lg hover:bg-muted transition-colors"
+                        title="Convert to Q&A"
+                      >
+                        <ArrowRight size={14} className="text-accent" />
+                      </button>
                       {sub.status === "pending" && (
                         <>
                           <button onClick={() => updateSubmission(sub.id, "answered")} className="p-1.5 rounded-lg hover:bg-muted transition-colors" title="Mark answered">

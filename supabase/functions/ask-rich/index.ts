@@ -55,18 +55,50 @@ serve(async (req) => {
       );
     }
 
-    // Fetch published Q&A items for context
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL")!,
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    const { data: qaItems } = await supabase
-      .from("qa_items")
-      .select("question, answer, tags")
-      .eq("published", true);
+    // Log the query for analytics (fire-and-forget)
+    supabase.from("qa_query_log").insert({ query: question.trim() }).then(() => {});
 
-    const knowledgeBase = qaItems?.length
+    // Use full-text search to find the top 10 most relevant Q&A items
+    const searchQuery = question.trim().replace(/[^\w\s]/g, " ").split(/\s+/).filter(Boolean).join(" & ");
+    
+    let qaItems: any[] = [];
+    
+    if (searchQuery) {
+      const { data } = await supabase
+        .from("qa_items")
+        .select("question, answer, tags")
+        .eq("published", true)
+        .textSearch("fts", searchQuery, { type: "plain" })
+        .limit(10);
+      qaItems = data || [];
+    }
+
+    // If full-text search returned fewer than 3 results, also fetch recent items as fallback
+    if (qaItems.length < 3) {
+      const existingIds = new Set(qaItems.map((i: any) => i.question));
+      const { data: fallback } = await supabase
+        .from("qa_items")
+        .select("question, answer, tags")
+        .eq("published", true)
+        .order("created_at", { ascending: false })
+        .limit(10);
+      
+      if (fallback) {
+        for (const item of fallback) {
+          if (!existingIds.has(item.question) && qaItems.length < 10) {
+            qaItems.push(item);
+            existingIds.add(item.question);
+          }
+        }
+      }
+    }
+
+    const knowledgeBase = qaItems.length
       ? `\n\n## KNOWLEDGE BASE (Q&A written by Rich)\n${qaItems.map((item: any) =>
           `Q: ${item.question}\nA: ${item.answer}\nTags: ${(item.tags || []).join(", ")}`
         ).join("\n\n")}`
