@@ -1,6 +1,7 @@
 import { Quote } from "lucide-react";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
+import industryCoaching from "@/assets/industry-coaching.png";
 
 const testimonials = [
   {
@@ -32,18 +33,27 @@ const EvidenceSection = () => {
   return (
     <section id="evidence" className="bg-warm-stone py-20 lg:py-28" aria-labelledby="evidence-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
-        <div className="max-w-2xl mb-12">
-          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
-            Industry Solutions
-          </p>
-          <h2 id="evidence-heading" className="font-display font-bold text-lg md:text-xl leading-tight text-foreground">
-            Public sector, charity, blue light services, legal sector, big tech, engineering and manufacturing, software, facilities and construction
-          </h2>
-          {mode === "listen" && (
-            <div className="mt-4">
-              <SectionAudio sectionText={sectionAudioText} label="Listen to this section" />
-            </div>
-          )}
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
+          <div className="max-w-2xl">
+            <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
+              Industry Solutions
+            </p>
+            <h2 id="evidence-heading" className="font-display font-bold text-lg md:text-xl leading-tight text-foreground">
+              Public sector, charity, blue light services, legal sector, big tech, engineering and manufacturing, software, facilities and construction
+            </h2>
+            {mode === "listen" && (
+              <div className="mt-4">
+                <SectionAudio sectionText={sectionAudioText} label="Listen to this section" />
+              </div>
+            )}
+          </div>
+          <div className="flex items-center justify-center">
+            <img
+              src={industryCoaching}
+              alt="Coaching statistics showing 230 coaching hours, 117 people coached, and 9.8 out of 10 feedback score"
+              className="rounded-xl shadow-md w-full max-w-md"
+            />
+          </div>
         </div>
 
         {/* Logo placeholders */}
