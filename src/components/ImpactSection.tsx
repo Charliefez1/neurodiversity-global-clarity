@@ -111,23 +111,23 @@ const ImpactSection = () => {
         {/* ── Top headline cards ── */}
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {/* Workforce card */}
-          <div className="relative overflow-hidden rounded-2xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-6 lg:p-8">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 rounded-lg bg-accent/15 flex items-center justify-center">
-                <Users size={18} className="text-accent" />
+          <div className="relative overflow-hidden rounded-2xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5 lg:p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-8 h-8 rounded-lg bg-accent/15 flex items-center justify-center">
+                <Users size={16} className="text-accent" />
               </div>
               <p className="font-display font-bold text-xs uppercase tracking-[0.12em] text-primary-foreground/50">UK workforce</p>
             </div>
-            <div className="flex items-baseline gap-2 mb-2">
-              <span className="font-display font-extrabold text-4xl md:text-5xl text-accent leading-none">{workforce}%</span>
-              <span className="text-sm text-primary-foreground/50 font-body">may be neurodivergent</span>
+            <div className="flex items-baseline gap-2 mb-1.5">
+              <span className="font-display font-extrabold text-3xl md:text-4xl text-accent leading-none">{workforce}%</span>
+              <span className="text-xs text-primary-foreground/50 font-body">may be neurodivergent</span>
             </div>
-            <p className="text-sm text-primary-foreground/60 leading-relaxed max-w-[48ch]">
+            <p className="text-xs text-primary-foreground/60 leading-relaxed max-w-[72ch]">
               That is 1 in 4 working adults. Many are undiagnosed or undisclosed. Most are masking. Your organisation is made up of a unique and diverse workforce, with neuroinclusion we make sure everyone is seen, is heard and is supported.
             </p>
             {/* Decorative ring */}
             <div className="absolute -right-2 -bottom-2 opacity-30">
-              <Ring value={visible ? 25 : 0} max={100} size={120} stroke={8} />
+              <Ring value={visible ? 25 : 0} max={100} size={100} stroke={7} />
             </div>
           </div>
 
