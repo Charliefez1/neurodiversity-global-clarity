@@ -30,13 +30,13 @@ const LanguageSelector = () => {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center gap-1.5 font-body font-bold text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded px-2 py-1"
+        className="inline-flex items-center gap-1.5 font-body font-bold text-sm text-primary hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded px-2 py-1"
         aria-expanded={open}
         aria-haspopup="listbox"
         aria-label={t("nav.language")}
       >
         <Globe size={22} className="text-accent" aria-hidden="true" />
-        <span className="hidden sm:inline">{current.flag}</span>
+        <span className="hidden sm:inline text-sm">{current.flag}</span>
         <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
       </button>
 
