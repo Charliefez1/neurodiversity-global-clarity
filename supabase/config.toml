@@ -26,3 +26,6 @@ verify_jwt = false
 
 [functions.seed-qa-batch2]
 verify_jwt = false
+
+[functions.seed-qa-batch3]
+verify_jwt = false
