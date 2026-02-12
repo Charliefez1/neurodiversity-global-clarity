@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef } from "react";
-import { Search, Clock, User, Sparkles, Loader2 } from "lucide-react";
+import { Search, Clock, User, Sparkles, Loader2, GraduationCap } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -11,6 +11,12 @@ import { workshopCategories, allWorkshops, type Workshop } from "@/data/workshop
 import workshopHeroTeam from "@/assets/workshop-hero-team.png";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { RegisterSections } from "@/contexts/PageSectionsContext";
+
+const workshopSections = [
+  { id: "workshop-finder", label: "Workshop Finder", icon: Sparkles },
+  ...workshopCategories.map((cat) => ({ id: cat.id, label: cat.title, icon: GraduationCap })),
+];
 
 const WorkshopCard = ({ workshop }: { workshop: Workshop }) => {
   const [expanded, setExpanded] = useState(false);
@@ -137,6 +143,7 @@ const Workshops = () => {
         `${totalCount} accredited neurodiversity training workshops and sessions covering awareness, leadership, condition-specific understanding, and sector-specific delivery.`,
         "https://www.neurodiversityglobal.com/workshops"
       )} />
+      <RegisterSections sections={workshopSections} />
       <Navbar />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Workshops" }]} />
 
@@ -148,7 +155,7 @@ const Workshops = () => {
         />
 
         {/* Workshop Finder */}
-        <section className="bg-primary -mt-8">
+        <section id="workshop-finder" className="bg-primary -mt-8">
           <div className="mx-auto max-w-wide px-6 lg:px-10 py-10">
             <div className="max-w-2xl">
               <div className="flex items-center gap-2 mb-3">

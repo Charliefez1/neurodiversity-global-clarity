@@ -26,7 +26,7 @@ const navLinks: NavItem[] = [
 ];
 
 const NavLinkItem = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void; className?: string }) => {
-  const cls = "font-body text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded";
+  const cls = "font-body font-bold text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded";
   if (href.startsWith("/") && !href.includes("#")) {
     return <Link to={href} className={cls} onClick={onClick}>{children}</Link>;
   }
@@ -49,21 +49,21 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
     <li ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center gap-1 font-body text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded"
+        className="inline-flex items-center gap-1 font-body font-bold text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded"
         aria-expanded={open}
       >
         {item.label}
         <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
       {open && (
-        <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg py-2 z-50">
+        <div className="absolute top-full left-0 mt-2 w-48 bg-accent/85 backdrop-blur-md border border-accent/30 rounded-lg shadow-lg py-2 z-50">
           {item.children!.map((child) => (
             <div key={child.label}>
               {child.href.startsWith("/") && !child.href.includes("#") ? (
                 <Link
                   to={child.href}
                   onClick={() => setOpen(false)}
-                  className="block px-4 py-2 text-sm text-foreground hover:bg-muted transition-colors"
+                  className="block px-4 py-2 text-sm font-bold text-accent-foreground hover:bg-accent-foreground/15 transition-colors"
                 >
                   {child.label}
                 </Link>
@@ -71,7 +71,7 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
                 <a
                   href={child.href}
                   onClick={() => setOpen(false)}
-                  className="block px-4 py-2 text-sm text-foreground hover:bg-muted transition-colors"
+                  className="block px-4 py-2 text-sm font-bold text-accent-foreground hover:bg-accent-foreground/15 transition-colors"
                 >
                   {child.label}
                 </a>
