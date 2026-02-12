@@ -35,7 +35,7 @@ const LanguageSelector = () => {
         aria-haspopup="listbox"
         aria-label={t("nav.language")}
       >
-        <Globe size={16} aria-hidden="true" />
+        <Globe size={22} className="text-accent" aria-hidden="true" />
         <span className="hidden sm:inline">{current.flag}</span>
         <ChevronDown size={14} className={`transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true" />
       </button>
