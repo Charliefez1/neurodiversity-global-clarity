@@ -111,7 +111,7 @@ const ImpactSection = () => {
         {/* ── Top headline cards ── */}
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {/* Workforce card */}
-          <div className="relative overflow-hidden rounded-2xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5 lg:p-6">
+          <div className="relative overflow-hidden rounded-2xl border border-accent/40 bg-primary-foreground/[0.06] p-5 lg:p-6">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 rounded-lg bg-accent/15 flex items-center justify-center">
                 <Users size={16} className="text-accent" />
@@ -132,7 +132,7 @@ const ImpactSection = () => {
           </div>
 
           {/* Competitive advantage card */}
-          <div className="relative overflow-hidden rounded-2xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-6 lg:p-8">
+          <div className="relative overflow-hidden rounded-2xl border border-orange-400/40 bg-primary-foreground/[0.06] p-6 lg:p-8">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-9 h-9 rounded-lg bg-accent/15 flex items-center justify-center">
                 <BarChart3 size={18} className="text-accent" />
@@ -157,7 +157,7 @@ const ImpactSection = () => {
         {/* ── Metric grid ── */}
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
           {/* Productivity */}
-          <div className="rounded-2xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5 lg:col-span-1 flex flex-col justify-between">
+          <div className="rounded-2xl border border-sky-400/40 bg-primary-foreground/[0.06] p-5 lg:col-span-1 flex flex-col justify-between">
             <div className="flex items-center gap-2 mb-4">
               <TrendingUp size={16} className="text-accent" />
               <span className="text-[10px] font-display font-bold uppercase tracking-wider text-primary-foreground/40">Productivity</span>
@@ -172,7 +172,7 @@ const ImpactSection = () => {
           </div>
 
           {/* Turnover */}
-          <div className="rounded-2xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5 flex flex-col justify-between">
+          <div className="rounded-2xl border border-emerald-400/40 bg-primary-foreground/[0.06] p-5 flex flex-col justify-between">
             <div className="flex items-center gap-2 mb-4">
               <Users size={16} className="text-accent" />
               <span className="text-[10px] font-display font-bold uppercase tracking-wider text-primary-foreground/40">Retention</span>
@@ -182,7 +182,7 @@ const ImpactSection = () => {
           </div>
 
           {/* Speed */}
-          <div className="rounded-2xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5 flex flex-col justify-between">
+          <div className="rounded-2xl border border-violet-400/40 bg-primary-foreground/[0.06] p-5 flex flex-col justify-between">
             <div className="flex items-center gap-2 mb-4">
               <Zap size={16} className="text-accent" />
               <span className="text-[10px] font-display font-bold uppercase tracking-wider text-primary-foreground/40">Speed</span>
@@ -192,7 +192,7 @@ const ImpactSection = () => {
           </div>
 
           {/* Grievances */}
-          <div className="rounded-2xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5 flex flex-col justify-between">
+          <div className="rounded-2xl border border-rose-400/40 bg-primary-foreground/[0.06] p-5 flex flex-col justify-between">
             <div className="flex items-center gap-2 mb-4">
               <Shield size={16} className="text-accent" />
               <span className="text-[10px] font-display font-bold uppercase tracking-wider text-primary-foreground/40">Risk</span>
@@ -202,7 +202,7 @@ const ImpactSection = () => {
           </div>
 
           {/* Satisfaction */}
-          <div className="rounded-2xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5 flex flex-col justify-between">
+          <div className="rounded-2xl border border-amber-400/40 bg-primary-foreground/[0.06] p-5 flex flex-col justify-between">
             <div className="flex items-center gap-2 mb-4">
               <Award size={16} className="text-accent" />
               <span className="text-[10px] font-display font-bold uppercase tracking-wider text-primary-foreground/40">Relevance</span>
