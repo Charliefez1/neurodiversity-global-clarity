@@ -28,7 +28,7 @@ const navLinks: NavItem[] = [
 ];
 
 const NavLinkItem = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick?: () => void; className?: string }) => {
-  const cls = "font-body font-bold text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded";
+  const cls = "font-body font-bold text-sm text-primary hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded";
   if (href.startsWith("/") && !href.includes("#")) {
     return <Link to={href} className={cls} onClick={onClick}>{children}</Link>;
   }
@@ -52,7 +52,7 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
     <li ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="inline-flex items-center gap-1 font-body font-bold text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded"
+        className="inline-flex items-center gap-1 font-body font-bold text-sm text-primary hover:text-accent transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent rounded"
         aria-expanded={open}
       >
         {t(item.labelKey)}
