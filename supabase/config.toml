@@ -23,3 +23,6 @@ verify_jwt = false
 
 [functions.seed-qa]
 verify_jwt = false
+
+[functions.seed-qa-batch2]
+verify_jwt = false
