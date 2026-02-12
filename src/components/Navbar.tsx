@@ -63,7 +63,7 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
                 <Link
                   to={child.href}
                   onClick={() => setOpen(false)}
-                  className="block px-4 py-2 text-sm font-bold text-foreground hover:bg-foreground/10 transition-colors"
+                  className="block px-4 py-2 text-sm font-bold text-white hover:bg-white/15 transition-colors"
                 >
                   {child.label}
                 </Link>
@@ -71,7 +71,7 @@ const DesktopDropdown = ({ item }: { item: NavItem }) => {
                 <a
                   href={child.href}
                   onClick={() => setOpen(false)}
-                  className="block px-4 py-2 text-sm font-bold text-foreground hover:bg-foreground/10 transition-colors"
+                  className="block px-4 py-2 text-sm font-bold text-white hover:bg-white/15 transition-colors"
                 >
                   {child.label}
                 </a>
