@@ -241,7 +241,7 @@ const Concierge = () => {
 
 const LoadingView = () => (
   <div className="flex flex-col items-center justify-center py-16 gap-4">
-    <Loader2 size={28} className="text-accent animate-spin" />
+    <Loader2 size={20} className="text-accent animate-spin" />
     <p className="font-display font-semibold text-sm text-muted-foreground">Analysing your needs…</p>
     <p className="text-xs text-muted-foreground/60">Reasoning across the full Neurodiversity Global site.</p>
   </div>
@@ -455,7 +455,7 @@ const EmailFormView = ({
 
 const EmailSentView = ({ onReset, onClose }: { onReset: () => void; onClose: () => void }) => (
   <div className="flex flex-col items-center justify-center py-12 gap-4 text-center">
-    <CheckCircle2 size={36} className="text-accent" />
+    <CheckCircle2 size={20} className="text-accent" />
     <h3 className="font-display font-bold text-lg text-foreground">Sent!</h3>
     <p className="text-sm text-muted-foreground max-w-[28ch]">Check your inbox for your personalised recommendations.</p>
     <div className="flex gap-3 mt-2">

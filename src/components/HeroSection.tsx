@@ -288,7 +288,7 @@ const HeroSection = () => {
                className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
              >
                 <div className="flex items-center gap-3 mb-3">
-                  <p.icon size={22} className={`${p.title === "Parents" ? "text-red-500" : "text-accent"} shrink-0`} aria-hidden="true" />
+                  <p.icon size={20} className={`${p.title === "Parents" ? "text-red-500" : "text-accent"} shrink-0`} aria-hidden="true" />
                   <div>
                     <h2 className="font-display font-bold text-base leading-tight">{p.title}</h2>
                     <p className="text-xs opacity-50 mt-0.5">{p.subtitle}</p>

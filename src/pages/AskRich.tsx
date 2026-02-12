@@ -272,7 +272,7 @@ const AskRich = () => {
 
             {submitted ? (
               <div className="rounded-xl border border-accent/30 bg-accent/10 p-8">
-                <Sparkles size={24} className="text-accent mx-auto mb-3" />
+                <Sparkles size={20} className="text-accent mx-auto mb-3" />
                 <p className="font-display font-bold text-lg">Thank you!</p>
                 <p className="text-primary-foreground/70 text-sm mt-2">
                   Your question has been received. Rich or the team will review it and the answer will appear in the knowledge base.
