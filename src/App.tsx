@@ -24,6 +24,8 @@ import QADetail from "./pages/QADetail";
 import NeurodiversityTraining from "./pages/NeurodiversityTraining";
 import NeurodiversityConsultancy from "./pages/NeurodiversityConsultancy";
 import AdminQA from "./pages/AdminQA";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import ExperienceSelector from "./components/ExperienceSelector";
 
@@ -55,6 +57,8 @@ const AppContent = () => {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/ask-rich" element={<AskRich />} />
           <Route path="/ask-rich/:slug" element={<QADetail />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/admin" element={<AdminQA />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
