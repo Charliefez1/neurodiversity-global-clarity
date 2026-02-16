@@ -13,6 +13,9 @@ const Footer = () => {
       { label: t("nav.whoWeWorkWith"), href: "/who-we-work-with" },
       { label: t("nav.industries"), href: "/industries" },
       { label: "Blog", href: "/blog" },
+      { label: "Community Voices", href: "/community-questions" },
+      { label: "Data and Sources", href: "/sources" },
+      { label: "Feedback", href: "/feedback" },
     ],
     company: [
       { label: t("nav.about"), href: "/#values" },

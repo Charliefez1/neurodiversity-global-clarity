@@ -1,10 +1,11 @@
-import { BookOpen, LayoutList, Volume2, Sun, Moon, Type } from "lucide-react";
+import { BookOpen, LayoutList, Volume2, Sun, Moon, Type, Zap } from "lucide-react";
 import { useExperienceMode, type ExperienceMode } from "@/contexts/ExperienceModeContext";
 import { usePageSections } from "@/contexts/PageSectionsContext";
 import { useState, useEffect } from "react";
 
 const modes: { value: ExperienceMode; label: string; icon: typeof BookOpen }[] = [
   { value: "read", label: "Read", icon: BookOpen },
+  { value: "quick-read", label: "Quick Read", icon: Zap },
   { value: "scan", label: "Scan", icon: LayoutList },
   { value: "listen", label: "Listen", icon: Volume2 },
 ];
@@ -75,7 +76,7 @@ const ExperienceSelector = () => {
                 title={m.label}
               >
                 <m.icon size={12} aria-hidden="true" />
-                {m.label}
+                <span className="hidden sm:inline">{m.label}</span>
               </button>
             );
           })}

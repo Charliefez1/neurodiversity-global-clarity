@@ -11,6 +11,8 @@ import EmbedSection from "@/components/EmbedSection";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { organisationSchema } from "@/components/JsonLd";
+import NewsHeadlines from "@/components/NewsHeadlines";
+import AskQuestionCompact from "@/components/AskQuestionCompact";
 import { RegisterSections } from "@/contexts/PageSectionsContext";
 import { AlertTriangle, Settings, TrendingUp, Award, Heart, Phone, Sparkles, BookOpen } from "lucide-react";
 
@@ -36,6 +38,7 @@ const Index = () => {
       <JsonLd data={organisationSchema} />
       <RegisterSections sections={indexSections} />
       <Navbar />
+      <NewsHeadlines />
       <HeroSection />
       <ProblemSection />
       <ServicesSection />
@@ -45,6 +48,13 @@ const Index = () => {
       <FinalCTA />
       <EmbedSection />
       <ResourcesSection />
+      <section className="py-12 lg:py-16 bg-muted">
+        <div className="mx-auto max-w-wide px-6 lg:px-10">
+          <div className="max-w-2xl mx-auto">
+            <AskQuestionCompact />
+          </div>
+        </div>
+      </section>
       <Footer />
     </main>
   );
