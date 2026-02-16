@@ -5,6 +5,7 @@ import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import JsonLd, { faqSchema, breadcrumbSchema } from "@/components/JsonLd";
 import ReactMarkdown from "react-markdown";
 
 const ASK_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/ask-rich`;
@@ -148,6 +149,13 @@ const AskRich = () => {
         description="Ask Rich Ferriman, neurodiversity expert, anything about neurodiversity at work. Search our knowledge base or submit your own question."
         path="/ask-rich"
       />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://www.neurodiversityglobal.com/" },
+        { name: "Ask Rich Anything", url: "https://www.neurodiversityglobal.com/ask-rich" },
+      ])} />
+      {qaItems.length > 0 && (
+        <JsonLd data={faqSchema(qaItems.map((q) => ({ question: q.question, answer: q.answer })))} />
+      )}
       <Navbar />
 
       {/* Hero */}

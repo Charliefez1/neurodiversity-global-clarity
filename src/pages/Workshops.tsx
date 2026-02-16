@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
-import JsonLd, { breadcrumbSchema, serviceSchema } from "@/components/JsonLd";
+import JsonLd, { breadcrumbSchema, serviceSchema, courseListSchema } from "@/components/JsonLd";
 import PageHero from "@/components/templates/PageHero";
 import PageCTA from "@/components/templates/PageCTA";
 import { workshopCategories, allWorkshops, type Workshop } from "@/data/workshops";
@@ -142,6 +142,14 @@ const Workshops = () => {
         "Neurodiversity Workshops",
         `${totalCount} accredited neurodiversity training workshops and sessions covering awareness, leadership, condition-specific understanding, and sector-specific delivery.`,
         "https://www.neurodiversityglobal.com/workshops"
+      )} />
+      <JsonLd data={courseListSchema(
+        allWorkshops.map((w) => ({
+          name: w.title,
+          description: w.summary,
+          duration: w.duration,
+          instructor: w.ledBy,
+        }))
       )} />
       <RegisterSections sections={workshopSections} />
       <Navbar />

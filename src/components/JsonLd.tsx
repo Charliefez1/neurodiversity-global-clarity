@@ -3,8 +3,6 @@ import { useEffect } from "react";
 /**
  * JSON-LD structured data component.
  * Renders a <script type="application/ld+json"> in the document head.
- *
- * Supports: Organisation, Service, FAQPage, Article, BreadcrumbList
  */
 interface JsonLdProps {
   data: Record<string, unknown>;
@@ -74,6 +72,51 @@ export function faqSchema(items: Array<{ question: string; answer: string }>) {
         "@type": "Answer",
         text: item.answer,
       },
+    })),
+  };
+}
+
+export function courseSchema(course: {
+  name: string;
+  description: string;
+  duration: string;
+  instructor: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: course.name,
+    description: course.description,
+    provider: {
+      "@type": "Organization",
+      name: "Neurodiversity Global",
+      url: "https://www.neurodiversityglobal.com",
+    },
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: ["online", "onsite"],
+      duration: course.duration,
+      instructor: {
+        "@type": "Person",
+        name: course.instructor,
+      },
+    },
+  };
+}
+
+export function courseListSchema(courses: Array<{
+  name: string;
+  description: string;
+  duration: string;
+  instructor: string;
+}>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: courses.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: courseSchema(c),
     })),
   };
 }
