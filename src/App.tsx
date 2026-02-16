@@ -16,6 +16,8 @@ import Clients from "./pages/Clients";
 import Testimonials from "./pages/Testimonials";
 import AskRich from "./pages/AskRich";
 import QADetail from "./pages/QADetail";
+import NeurodiversityTraining from "./pages/NeurodiversityTraining";
+import NeurodiversityConsultancy from "./pages/NeurodiversityConsultancy";
 import AdminQA from "./pages/AdminQA";
 import NotFound from "./pages/NotFound";
 import ExperienceSelector from "./components/ExperienceSelector";
@@ -35,7 +37,9 @@ const AppContent = () => {
           <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
           <Route path="/workshops" element={<Workshops />} />
-          <Route path="/industries/financial-services" element={<IndustryTemplate />} />
+            <Route path="/industries/financial-services" element={<IndustryTemplate />} />
+            <Route path="/neurodiversity-training" element={<NeurodiversityTraining />} />
+            <Route path="/neurodiversity-consultancy" element={<NeurodiversityConsultancy />} />
           <Route path="/knowledge-base" element={<KnowledgeBase />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/testimonials" element={<Testimonials />} />
