@@ -19,6 +19,8 @@ const navLinks: NavItem[] = [
     labelKey: "nav.about",
     href: "/#values",
     children: [
+      { labelKey: "nav.training", href: "/neurodiversity-training" },
+      { labelKey: "nav.consultancy", href: "/neurodiversity-consultancy" },
       { labelKey: "nav.industries", href: "/industries/financial-services" },
       { labelKey: "nav.evidence", href: "/#evidence" },
       { labelKey: "nav.knowledgeBase", href: "/knowledge-base" },

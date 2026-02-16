@@ -10,7 +10,7 @@ const services = [
     title: "Training & Development",
     description: "Accredited programmes for managers, HR teams, and leaders. Designed to change practice, not just raise awareness. Over 50 workshops available.",
     summary: "50+ accredited workshops that change practice, not just awareness.",
-    href: "/workshops",
+    href: "/neurodiversity-training",
   },
   {
     icon: Users,
@@ -23,6 +23,7 @@ const services = [
     title: "Strategy & Organisational Change",
     description: "Policy review, systems redesign, and neurodiversity strategy embedded into how your organisation operates. From recruitment to exit.",
     summary: "Policy review, systems redesign, and embedded neurodiversity strategy.",
+    href: "/neurodiversity-consultancy",
   },
   {
     icon: Headphones,
