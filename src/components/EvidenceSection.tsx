@@ -1,4 +1,4 @@
-import { Quote, ArrowRight } from "lucide-react";
+import { Quote, ArrowRight, Heart, GraduationCap, Building2, Cpu, Landmark } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
@@ -9,26 +9,46 @@ const industries = [
     name: "Healthcare & NHS",
     description: "Clinical teams, burnout, disclosure, and masking in high-pressure settings.",
     href: "/industries/healthcare-nhs",
+    icon: Heart,
+    accentGradient: "from-rose-500/15 to-rose-600/5",
+    iconColor: "text-rose-500",
+    borderAccent: "hover:border-rose-400/40",
   },
   {
     name: "Education",
     description: "Universities, academic staff, student services, and governance.",
     href: "/industries/education",
+    icon: GraduationCap,
+    accentGradient: "from-amber-500/15 to-amber-600/5",
+    iconColor: "text-amber-500",
+    borderAccent: "hover:border-amber-400/40",
   },
   {
-    name: "Public Sector & Government",
+    name: "Public Sector",
     description: "Central and local government, regulators, and policy environments.",
     href: "/industries/public-sector",
+    icon: Building2,
+    accentGradient: "from-sky-500/15 to-sky-600/5",
+    iconColor: "text-sky-500",
+    borderAccent: "hover:border-sky-400/40",
   },
   {
     name: "Technology & Digital",
     description: "Tech companies, engineering teams, and high cognitive demand roles.",
     href: "/industries/technology",
+    icon: Cpu,
+    accentGradient: "from-violet-500/15 to-violet-600/5",
+    iconColor: "text-violet-500",
+    borderAccent: "hover:border-violet-400/40",
   },
   {
     name: "Financial Services",
     description: "High-regulation, high-pressure, risk-focused environments.",
     href: "/industries/financial-services",
+    icon: Landmark,
+    accentGradient: "from-emerald-500/15 to-emerald-600/5",
+    iconColor: "text-emerald-500",
+    borderAccent: "hover:border-emerald-400/40",
   },
 ];
 
@@ -59,7 +79,7 @@ const EvidenceSection = () => {
     <section id="evidence" className="bg-warm-stone py-20 lg:py-28" aria-labelledby="evidence-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         {/* Header with image */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
+        <div className="grid lg:grid-cols-2 gap-8 items-center mb-14">
           <div className="max-w-2xl">
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
               Industry Solutions
@@ -91,30 +111,41 @@ const EvidenceSection = () => {
             <Link
               key={ind.name}
               to={ind.href}
-              className="group rounded-lg border border-border bg-card p-6 hover:shadow-md hover:border-accent/30 transition-all"
+              className={`group relative rounded-xl border border-border bg-card overflow-hidden hover:shadow-lg transition-all duration-300 ${ind.borderAccent}`}
             >
-              <h3 className="font-display font-bold text-sm text-card-foreground group-hover:text-accent transition-colors mb-2">
-                {ind.name}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{ind.description}</p>
-              <p className="mt-3 text-xs font-display font-bold text-accent flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                View sector detail <ArrowRight size={12} />
-              </p>
+              {/* Gradient accent strip */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${ind.accentGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+              {/* Top accent bar */}
+              <div className={`h-1 bg-gradient-to-r ${ind.accentGradient} opacity-60`} />
+              <div className="relative p-6">
+                <div className={`w-11 h-11 rounded-lg bg-primary/[0.06] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <ind.icon size={20} className={`${ind.iconColor} transition-colors`} aria-hidden="true" />
+                </div>
+                <h3 className="font-display font-bold text-sm text-card-foreground group-hover:text-accent transition-colors mb-1.5">
+                  {ind.name}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{ind.description}</p>
+                <div className="mt-4 flex items-center gap-1.5 text-xs font-display font-bold text-accent translate-x-0 group-hover:translate-x-1 transition-transform duration-300">
+                  Explore sector <ArrowRight size={13} />
+                </div>
+              </div>
             </Link>
           ))}
           {/* "See all" card */}
           <Link
             to="/industries"
-            className="group rounded-lg border-2 border-dashed border-accent/30 bg-accent/5 p-6 flex flex-col items-center justify-center hover:bg-accent/10 hover:border-accent/50 transition-all"
+            className="group relative rounded-xl border-2 border-dashed border-accent/25 bg-accent/[0.04] overflow-hidden flex flex-col items-center justify-center p-6 hover:bg-accent/[0.08] hover:border-accent/50 transition-all duration-300"
           >
+            <div className="w-11 h-11 rounded-full bg-accent/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+              <ArrowRight size={18} className="text-accent" />
+            </div>
             <p className="font-display font-bold text-sm text-accent mb-1">See all industries</p>
-            <p className="text-xs text-muted-foreground text-center">Emergency services, engineering, manufacturing, retail, and more</p>
-            <ArrowRight size={16} className="text-accent mt-3" />
+            <p className="text-xs text-muted-foreground text-center leading-relaxed">Emergency services, engineering, manufacturing, retail & more</p>
           </Link>
         </div>
 
         {/* Divider */}
-        <div className="border-b border-border mb-14 pb-4" />
+        <div className="border-b border-border mb-14 mt-10" />
 
         {/* Testimonials */}
         {mode === "scan" ? (
