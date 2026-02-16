@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/templates/PageHero";
 import PageSection from "@/components/templates/PageSection";
 import PageCTA from "@/components/templates/PageCTA";
+import MultiCTABar from "@/components/MultiCTABar";
 import RiskCallout from "@/components/blocks/RiskCallout";
 import OutcomeBlock from "@/components/blocks/OutcomeBlock";
 import TestimonialBlock from "@/components/blocks/TestimonialBlock";
@@ -97,7 +98,7 @@ const IndustryTemplate = () => {
                 description: "Audit recruitment, onboarding, performance management, and reasonable adjustments against best practice.",
               },
             ].map((s) => (
-              <article key={s.title} className="rounded-lg bg-card border border-border p-6">
+              <article key={s.title} className="rounded-lg bg-card border border-border p-6 shadow-md">
                 <div className="w-9 h-9 rounded-md bg-accent/10 flex items-center justify-center mb-4">
                   <s.icon size={18} className="text-accent" aria-hidden="true" />
                 </div>
@@ -144,7 +145,7 @@ const IndustryTemplate = () => {
               author="Head of People"
               org="FTSE 250 Financial Services"
             />
-            <div className="rounded-lg border border-border bg-card p-6 flex flex-col justify-center">
+            <div className="rounded-lg border border-border bg-card p-6 flex flex-col justify-center shadow-md">
               <h3 className="font-display font-bold text-sm text-card-foreground mb-3">Delivery experience</h3>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -164,6 +165,8 @@ const IndustryTemplate = () => {
         </PageSection>
 
         {/* 6. CTA */}
+        <MultiCTABar />
+
         <PageCTA
           title="Ready to make neurodiversity work in financial services?"
           description="Book a discovery call. We'll discuss your specific challenges and recommend a practical next step."

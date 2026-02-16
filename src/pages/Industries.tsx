@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/templates/PageHero";
 import PageSection from "@/components/templates/PageSection";
 import PageCTA from "@/components/templates/PageCTA";
+import MultiCTABar from "@/components/MultiCTABar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { breadcrumbSchema, serviceSchema } from "@/components/JsonLd";
@@ -105,7 +106,7 @@ const specialistAreas: IndustryCard[] = [
 
 const IndustryCardComponent = ({ industry }: { industry: IndustryCard }) => {
   const content = (
-    <article className="rounded-lg border border-border bg-card p-6 flex flex-col h-full hover:shadow-md transition-shadow group">
+    <article className="rounded-lg border border-border bg-card p-6 flex flex-col h-full hover:shadow-lg shadow-md transition-shadow group">
       <h3 className="font-display font-bold text-sm text-card-foreground mb-2 group-hover:text-accent transition-colors">
         {industry.name}
       </h3>
@@ -197,6 +198,8 @@ const Industries = () => {
           industries={specialistAreas}
           variant="secondary"
         />
+
+        <MultiCTABar />
 
         <PageCTA
           title="Don't see your sector?"
