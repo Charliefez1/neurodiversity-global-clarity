@@ -1,13 +1,13 @@
 import adhdSystemImg from "@/assets/blog/adhd-system.jpg";
 import adhdMaskingImg from "@/assets/blog/adhd-masking.jpg";
-import adhdRegulationImg from "@/assets/blog/adhd-regulation.jpg";
-import factorNImg from "@/assets/blog/factor-n.jpg";
+import adhdRegulationImg from "@/assets/blog/adhd-regulation-new.png";
+import factorNImg from "@/assets/blog/factor-n-new.png";
 import dyslexiaDyscalculiaImg from "@/assets/blog/dyslexia-dyscalculia.jpg";
 import dyspraxiaImg from "@/assets/blog/dyspraxia.jpg";
 import coOccurringImg from "@/assets/blog/co-occurring.jpg";
-import deiDeadImg from "@/assets/blog/dei-dead.jpg";
-import gritQuicksandImg from "@/assets/blog/grit-quicksand.jpg";
-import outdatedSystemsImg from "@/assets/blog/outdated-systems.jpg";
+import deiDeadImg from "@/assets/blog/dei-dead-new.png";
+import gritQuicksandImg from "@/assets/blog/grit-quicksand-new.webp";
+import outdatedSystemsImg from "@/assets/blog/outdated-systems-new.png";
 
 export interface BlogPost {
   slug: string;
