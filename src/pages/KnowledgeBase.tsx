@@ -315,6 +315,7 @@ const KnowledgeBase = () => {
         title="Knowledge Base, Content Migration"
         description="Internal knowledge base for migrating content from the old Neurodiversity Global website."
         path="/knowledge-base"
+        noIndex
       />
       <Navbar />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Knowledge Base" }]} />
