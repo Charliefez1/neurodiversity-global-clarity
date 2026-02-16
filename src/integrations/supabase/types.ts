@@ -14,6 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
+      news_items: {
+        Row: {
+          created_at: string
+          discovered_at: string
+          id: string
+          published_at: string | null
+          source_domain: string | null
+          source_name: string
+          status: string
+          summary: string | null
+          title: string
+          topic: string
+          updated_at: string
+          url: string
+        }
+        Insert: {
+          created_at?: string
+          discovered_at?: string
+          id?: string
+          published_at?: string | null
+          source_domain?: string | null
+          source_name: string
+          status?: string
+          summary?: string | null
+          title: string
+          topic?: string
+          updated_at?: string
+          url: string
+        }
+        Update: {
+          created_at?: string
+          discovered_at?: string
+          id?: string
+          published_at?: string | null
+          source_domain?: string | null
+          source_name?: string
+          status?: string
+          summary?: string | null
+          title?: string
+          topic?: string
+          updated_at?: string
+          url?: string
+        }
+        Relationships: []
+      }
       qa_feedback: {
         Row: {
           ai_query: string | null
@@ -125,6 +170,63 @@ export type Database = {
           created_at?: string
           email?: string | null
           id?: string
+          question?: string
+          status?: string
+        }
+        Relationships: []
+      }
+      user_feedback: {
+        Row: {
+          admin_response: string | null
+          created_at: string
+          feedback: string
+          feedback_type: string
+          id: string
+          name: string | null
+          status: string
+        }
+        Insert: {
+          admin_response?: string | null
+          created_at?: string
+          feedback: string
+          feedback_type?: string
+          id?: string
+          name?: string | null
+          status?: string
+        }
+        Update: {
+          admin_response?: string | null
+          created_at?: string
+          feedback?: string
+          feedback_type?: string
+          id?: string
+          name?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
+      user_questions: {
+        Row: {
+          answer: string | null
+          created_at: string
+          id: string
+          page_submitted_from: string | null
+          question: string
+          status: string
+        }
+        Insert: {
+          answer?: string | null
+          created_at?: string
+          id?: string
+          page_submitted_from?: string | null
+          question: string
+          status?: string
+        }
+        Update: {
+          answer?: string | null
+          created_at?: string
+          id?: string
+          page_submitted_from?: string | null
           question?: string
           status?: string
         }
