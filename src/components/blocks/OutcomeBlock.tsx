@@ -7,7 +7,7 @@ interface OutcomeBlockProps {
 
 const OutcomeBlock = ({ title = "Expected outcomes", outcomes }: OutcomeBlockProps) => {
   return (
-    <div className="rounded-lg border border-accent/20 bg-accent/5 p-6 lg:p-7">
+    <div className="rounded-lg border border-accent/20 bg-accent/5 p-6 lg:p-7 shadow-md">
       <div className="flex items-center gap-2.5 mb-5">
         <TrendingUp size={18} className="text-accent shrink-0" aria-hidden="true" />
         <p className="font-display font-bold text-sm text-foreground">{title}</p>

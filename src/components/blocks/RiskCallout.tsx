@@ -7,7 +7,7 @@ interface RiskCalloutProps {
 
 const RiskCallout = ({ title = "Key risks", items }: RiskCalloutProps) => {
   return (
-    <div className="rounded-lg border-l-4 border-l-destructive bg-destructive/5 border border-destructive/15 p-6 lg:p-7">
+    <div className="rounded-lg border-l-4 border-l-destructive bg-destructive/5 border border-destructive/15 p-6 lg:p-7 shadow-md">
       <div className="flex items-center gap-2.5 mb-4">
         <AlertTriangle size={18} className="text-destructive shrink-0" aria-hidden="true" />
         <p className="font-display font-bold text-sm text-foreground">{title}</p>

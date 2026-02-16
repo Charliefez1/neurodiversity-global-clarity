@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/templates/PageHero";
 import PageSection from "@/components/templates/PageSection";
 import PageCTA from "@/components/templates/PageCTA";
+import MultiCTABar from "@/components/MultiCTABar";
 import RiskCallout from "@/components/blocks/RiskCallout";
 import OutcomeBlock from "@/components/blocks/OutcomeBlock";
 import TestimonialBlock from "@/components/blocks/TestimonialBlock";
@@ -44,7 +45,7 @@ const IndustryHealthcareNHS = () => {
 
         <PageSection id="challenges" badge="Sector challenges" title="Where healthcare organisations typically struggle" description="The NHS's strengths — resilience, dedication, pace — can become barriers when systems aren't designed for cognitive diversity.">
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="rounded-lg border border-border bg-card p-6">
+            <div className="rounded-lg border border-border bg-card p-6 shadow-md">
               <h3 className="font-display font-bold text-sm text-card-foreground mb-3">Systemic failure points</h3>
               <ul className="space-y-2">
                 {[
@@ -78,7 +79,7 @@ const IndustryHealthcareNHS = () => {
               { icon: Users, title: "Leadership and management", description: "Support for managers in making reasonable adjustments, having disclosure conversations, and leading neurodivergent teams." },
               { icon: Shield, title: "Systems and policy review", description: "Review of Occupational Health processes, HR policies, and workforce planning through a neuroinclusive lens." },
             ].map((s) => (
-              <article key={s.title} className="rounded-lg bg-card border border-border p-6">
+              <article key={s.title} className="rounded-lg bg-card border border-border p-6 shadow-md">
                 <div className="w-9 h-9 rounded-md bg-accent/10 flex items-center justify-center mb-4">
                   <s.icon size={18} className="text-accent" aria-hidden="true" />
                 </div>
@@ -111,7 +112,7 @@ const IndustryHealthcareNHS = () => {
               author="Director of Operations"
               org="NHS Trust"
             />
-            <div className="rounded-lg border border-border bg-card p-6 flex flex-col justify-center">
+            <div className="rounded-lg border border-border bg-card p-6 flex flex-col justify-center shadow-md">
               <h3 className="font-display font-bold text-sm text-card-foreground mb-3">Delivery experience</h3>
               <div className="grid grid-cols-2 gap-4">
                 {[
@@ -134,13 +135,15 @@ const IndustryHealthcareNHS = () => {
         <PageSection id="faq" badge="FAQs" title="Common questions about neurodiversity in healthcare">
           <div className="grid gap-4 max-w-2xl">
             {faqs.map((faq, i) => (
-              <div key={i} className="rounded-lg border border-border bg-card p-5">
+              <div key={i} className="rounded-lg border border-border bg-card p-5 shadow-md">
                 <h3 className="font-display font-bold text-sm text-card-foreground mb-2">{faq.question}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
         </PageSection>
+
+        <MultiCTABar />
 
         <PageCTA title="Ready to make neurodiversity work in healthcare?" description="Book a discovery call. We'll discuss your specific challenges and recommend a practical next step." />
       </main>
