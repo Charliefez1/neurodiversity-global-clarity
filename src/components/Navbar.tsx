@@ -24,6 +24,7 @@ const navLinks: NavItem[] = [
       { labelKey: "nav.industries", href: "/industries" },
       { labelKey: "nav.evidence", href: "/#evidence" },
       { labelKey: "nav.knowledgeBase", href: "/knowledge-base" },
+      { labelKey: "nav.blog", href: "/blog" },
       { labelKey: "nav.contact", href: "/#contact" },
     ],
   },
