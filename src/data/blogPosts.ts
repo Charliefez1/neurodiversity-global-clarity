@@ -1,4 +1,4 @@
-import adhdSystemImg from "@/assets/blog/adhd-system.jpg";
+import adhdSystemImg from "@/assets/blog/adhd-system-new.png";
 import adhdMaskingImg from "@/assets/blog/adhd-masking.jpg";
 import adhdRegulationImg from "@/assets/blog/adhd-regulation-new.png";
 import factorNImg from "@/assets/blog/factor-n-new.png";
