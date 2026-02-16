@@ -7,6 +7,8 @@ const Footer = () => {
   const footerLinks = {
     services: [
       { label: t("nav.workshops"), href: "/workshops" },
+      { label: "Neurodiversity Training", href: "/neurodiversity-training" },
+      { label: "Neurodiversity Consultancy", href: "/neurodiversity-consultancy" },
       { label: t("nav.whatWeDo"), href: "/what-we-do" },
       { label: t("nav.whoWeWorkWith"), href: "/who-we-work-with" },
       { label: t("nav.industries"), href: "/industries/financial-services" },
