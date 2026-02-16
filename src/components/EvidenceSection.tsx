@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
 import industryCoaching from "@/assets/industry-coaching.png";
+import portrait1 from "@/assets/testimonials/portrait-1.jpg";
+import portrait2 from "@/assets/testimonials/portrait-2.jpg";
+import portrait3 from "@/assets/testimonials/portrait-3.jpg";
 
 const industries = [
   {
@@ -57,16 +60,22 @@ const testimonials = [
     quote: "The impact on retention has been remarkable. Our leadership team now thinks about talent completely differently.",
     author: "Head of People",
     org: "FTSE 250 Financial Services",
+    portrait: portrait1,
+    accent: "from-emerald-500/20 to-emerald-600/5",
   },
   {
     quote: "This changed how we design services and how our teams work together, not just what they know about neurodiversity.",
     author: "Director of Operations",
     org: "NHS Trust",
+    portrait: portrait2,
+    accent: "from-rose-500/20 to-rose-600/5",
   },
   {
     quote: "They understand the difference between ticking a box and actually making things better for neurodivergent people.",
     author: "Chief People Officer",
     org: "Global Technology Company",
+    portrait: portrait3,
+    accent: "from-violet-500/20 to-violet-600/5",
   },
 ];
 
@@ -111,14 +120,12 @@ const EvidenceSection = () => {
             <Link
               key={ind.name}
               to={ind.href}
-              className={`group relative rounded-xl border border-border bg-card overflow-hidden hover:shadow-lg transition-all duration-300 ${ind.borderAccent}`}
+              className={`group relative rounded-xl border border-border bg-card overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 ${ind.borderAccent}`}
             >
-              {/* Gradient accent strip */}
               <div className={`absolute inset-0 bg-gradient-to-br ${ind.accentGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-              {/* Top accent bar */}
               <div className={`h-1 bg-gradient-to-r ${ind.accentGradient} opacity-60`} />
               <div className="relative p-6">
-                <div className={`w-11 h-11 rounded-lg bg-primary/[0.06] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="w-11 h-11 rounded-lg bg-primary/[0.06] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <ind.icon size={20} className={`${ind.iconColor} transition-colors`} aria-hidden="true" />
                 </div>
                 <h3 className="font-display font-bold text-sm text-card-foreground group-hover:text-accent transition-colors mb-1.5">
@@ -131,7 +138,6 @@ const EvidenceSection = () => {
               </div>
             </Link>
           ))}
-          {/* "See all" card */}
           <Link
             to="/industries"
             className="group relative rounded-xl border-2 border-dashed border-accent/25 bg-accent/[0.04] overflow-hidden flex flex-col items-center justify-center p-6 hover:bg-accent/[0.08] hover:border-accent/50 transition-all duration-300"
@@ -140,40 +146,53 @@ const EvidenceSection = () => {
               <ArrowRight size={18} className="text-accent" />
             </div>
             <p className="font-display font-bold text-sm text-accent mb-1">See all industries</p>
-            <p className="text-xs text-muted-foreground text-center leading-relaxed">Emergency services, engineering, manufacturing, retail & more</p>
+            <p className="text-xs text-muted-foreground text-center leading-relaxed">Emergency services, engineering, manufacturing, retail and more</p>
           </Link>
         </div>
 
         {/* Divider */}
         <div className="border-b border-border mb-14 mt-10" />
 
-        {/* Testimonials */}
-        {mode === "scan" ? (
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="rounded-lg bg-card border border-border p-5">
-                <p className="text-sm text-muted-foreground italic">"{t.quote}"</p>
-                <p className="text-xs text-muted-foreground/70 mt-2">{t.author}, {t.org}</p>
+        {/* Testimonials - reimagined with portraits */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <blockquote
+              key={i}
+              className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 bg-card border border-border"
+            >
+              {/* Faded portrait background */}
+              <div className="absolute inset-0 pointer-events-none">
+                <img
+                  src={t.portrait}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute right-0 bottom-0 h-full w-3/5 object-cover object-top opacity-[0.06] group-hover:opacity-[0.1] transition-opacity duration-700 scale-110 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-card via-card/95 to-card/50" />
               </div>
-            ))}
-          </div>
-        ) : (
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <blockquote
-                key={i}
-                className="rounded-lg bg-card border border-border p-7 flex flex-col"
-              >
-                <Quote size={20} className="text-accent mb-3 shrink-0" aria-hidden="true" />
-                <p className="text-sm leading-relaxed text-muted-foreground flex-1">{t.quote}</p>
-                <footer className="mt-5 pt-4 border-t border-border">
-                  <p className="font-display font-semibold text-sm text-foreground">{t.author}</p>
-                  <p className="text-xs text-muted-foreground/70 mt-0.5">{t.org}</p>
+
+              {/* Accent gradient strip */}
+              <div className={`h-1 bg-gradient-to-r ${t.accent}`} />
+
+              <div className="relative p-7 flex flex-col min-h-[220px]">
+                <div className="absolute top-0 left-0 w-1 h-full bg-accent/30 rounded-l-xl" />
+                <Quote size={24} className="text-accent/40 mb-3 shrink-0" aria-hidden="true" />
+                <p className="text-sm leading-relaxed text-muted-foreground flex-1 italic">"{t.quote}"</p>
+                <footer className="mt-5 pt-4 border-t border-border flex items-center gap-3">
+                  <img
+                    src={t.portrait}
+                    alt={t.author}
+                    className="w-9 h-9 rounded-full object-cover ring-2 ring-accent/20 shadow-sm"
+                  />
+                  <div>
+                    <p className="font-display font-semibold text-sm text-foreground">{t.author}</p>
+                    <p className="text-xs text-muted-foreground/70 mt-0.5">{t.org}</p>
+                  </div>
                 </footer>
-              </blockquote>
-            ))}
-          </div>
-        )}
+              </div>
+            </blockquote>
+          ))}
+        </div>
       </div>
     </section>
   );
