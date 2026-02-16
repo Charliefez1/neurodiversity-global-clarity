@@ -7,16 +7,6 @@ import SEOHead from "@/components/SEOHead";
 import MultiCTABar from "@/components/MultiCTABar";
 import { getBlogPost, getRelatedPosts } from "@/data/blogPosts";
 
-const accentMap: Record<string, { badge: string; blockquote: string; h2: string }> = {
-  rose: { badge: "bg-rose-100 text-rose-700", blockquote: "border-rose-400 bg-rose-50", h2: "text-rose-600" },
-  violet: { badge: "bg-violet-100 text-violet-700", blockquote: "border-violet-400 bg-violet-50", h2: "text-violet-600" },
-  amber: { badge: "bg-amber-100 text-amber-700", blockquote: "border-amber-400 bg-amber-50", h2: "text-amber-600" },
-  emerald: { badge: "bg-emerald-100 text-emerald-700", blockquote: "border-emerald-400 bg-emerald-50", h2: "text-emerald-600" },
-  sky: { badge: "bg-sky-100 text-sky-700", blockquote: "border-sky-400 bg-sky-50", h2: "text-sky-600" },
-  orange: { badge: "bg-orange-100 text-orange-700", blockquote: "border-orange-400 bg-orange-50", h2: "text-orange-600" },
-  teal: { badge: "bg-teal-100 text-teal-700", blockquote: "border-teal-400 bg-teal-50", h2: "text-teal-600" },
-};
-
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getBlogPost(slug) : undefined;
@@ -24,22 +14,27 @@ const BlogPost = () => {
 
   if (!post) return <Navigate to="/blog" replace />;
 
-  const accent = accentMap[post.accentColor] || accentMap.teal;
-
   return (
     <>
       <SEOHead title={post.metaTitle} description={post.metaDescription} path={`/blog/${post.slug}`} type="article" />
       <Navbar />
 
-      {/* Hero */}
-      <section className="bg-primary text-primary-foreground py-12 lg:py-20">
-        <div className="mx-auto max-w-wide px-6 lg:px-10">
+      {/* Hero with image */}
+      <section className="bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={post.image}
+            alt=""
+            className="w-full h-full object-cover opacity-[0.12]"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/90 to-primary/70" />
+        </div>
+        <div className="relative mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-20">
           <Link to="/blog" className="inline-flex items-center gap-2 text-xs text-primary-foreground/60 hover:text-accent transition-colors mb-6">
             <ArrowLeft size={14} /> Back to all articles
           </Link>
           <div className="flex flex-wrap items-center gap-3 mb-5">
-            <span className="text-3xl">{post.iconEmoji}</span>
-            <span className={`px-3 py-1 rounded-full text-xs font-display font-bold ${accent.badge}`}>
+            <span className="px-3 py-1 rounded-full text-xs font-display font-bold bg-accent/20 text-accent">
               {post.category}
             </span>
             <span className="text-xs text-primary-foreground/60 flex items-center gap-1">
@@ -59,7 +54,7 @@ const BlogPost = () => {
       </section>
 
       {/* Content */}
-      <article className="py-12 lg:py-16">
+      <article className="py-12 lg:py-16 bg-muted">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <div className="prose prose-lg max-w-none
             prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight
@@ -75,7 +70,7 @@ const BlogPost = () => {
             <ReactMarkdown
               components={{
                 blockquote: ({ children }) => (
-                  <blockquote className={`border-l-4 ${accent.blockquote} rounded-r-lg px-6 py-5 my-8 not-italic shadow-md`}>
+                  <blockquote className="border-l-4 border-accent bg-accent/5 rounded-r-lg px-6 py-5 my-8 not-italic shadow-md">
                     {children}
                   </blockquote>
                 ),
@@ -113,36 +108,41 @@ const BlogPost = () => {
 
       {/* Related Posts */}
       {related.length > 0 && (
-        <section className="py-12 lg:py-16 bg-secondary">
+        <section className="py-12 lg:py-16 bg-primary">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
-            <h2 className="font-display font-bold text-lg md:text-xl mb-8 text-foreground">
+            <h2 className="font-display font-bold text-lg md:text-xl mb-8 text-primary-foreground">
               Continue reading
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {related.map((rp) => {
-                const ra = accentMap[rp.accentColor] || accentMap.teal;
-                return (
-                  <Link
-                    key={rp.slug}
-                    to={`/blog/${rp.slug}`}
-                    className="group block rounded-xl border border-border bg-card shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
-                  >
-                    <div className={`h-1.5 ${ra.badge.split(" ")[0].replace("bg-", "bg-").replace("/100", "/400")}`} style={{ backgroundColor: `var(--${rp.accentColor}, currentColor)` }} />
-                    <div className="p-5">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="text-xl">{rp.iconEmoji}</span>
-                        <span className={`px-2 py-0.5 rounded-full text-xs font-display font-bold ${ra.badge}`}>{rp.category}</span>
-                      </div>
-                      <h3 className="font-display font-bold text-sm leading-snug text-foreground group-hover:text-accent transition-colors line-clamp-2">
-                        {rp.title}
-                      </h3>
-                      <div className="mt-3 flex items-center gap-1 text-xs text-accent font-display font-bold group-hover:gap-2 transition-all">
-                        Read <ArrowRight size={12} />
-                      </div>
+              {related.map((rp) => (
+                <Link
+                  key={rp.slug}
+                  to={`/blog/${rp.slug}`}
+                  className="group block rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 shadow-md hover:shadow-xl hover:bg-primary-foreground/10 transition-all duration-300 overflow-hidden"
+                >
+                  <div className="aspect-[16/9] overflow-hidden">
+                    <img
+                      src={rp.image}
+                      alt={rp.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="px-2 py-0.5 rounded-full text-xs font-display font-bold bg-accent/20 text-accent">
+                        {rp.category}
+                      </span>
                     </div>
-                  </Link>
-                );
-              })}
+                    <h3 className="font-display font-bold text-sm leading-snug text-primary-foreground group-hover:text-accent transition-colors line-clamp-2">
+                      {rp.title}
+                    </h3>
+                    <div className="mt-3 flex items-center gap-1 text-xs text-accent font-display font-bold group-hover:gap-2 transition-all">
+                      Read <ArrowRight size={12} />
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </section>

@@ -1,3 +1,11 @@
+import adhdSystemImg from "@/assets/blog/adhd-system.jpg";
+import adhdMaskingImg from "@/assets/blog/adhd-masking.jpg";
+import adhdRegulationImg from "@/assets/blog/adhd-regulation.jpg";
+import factorNImg from "@/assets/blog/factor-n.jpg";
+import dyslexiaDyscalculiaImg from "@/assets/blog/dyslexia-dyscalculia.jpg";
+import dyspraxiaImg from "@/assets/blog/dyspraxia.jpg";
+import coOccurringImg from "@/assets/blog/co-occurring.jpg";
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -8,7 +16,7 @@ export interface BlogPost {
   readTime: string;
   publishDate: string;
   accentColor: string;
-  iconEmoji: string;
+  image: string;
   content: string;
 }
 
@@ -22,8 +30,8 @@ export const blogPosts: BlogPost[] = [
     category: "ADHD",
     readTime: "12 min read",
     publishDate: "2026-02-10",
-    accentColor: "rose",
-    iconEmoji: "🏗️",
+    accentColor: "teal",
+    image: adhdSystemImg,
     content: `There is a conversation that happens in organisations every day. A talented employee is not meeting expectations. Their output is inconsistent. Their time management is unpredictable. They perform brilliantly in some situations and appear to disengage entirely in others. The conclusion drawn is usually the same: the problem is the individual.
 
 But in a significant proportion of these cases, the problem is not the individual. The problem is the system.
@@ -160,8 +168,8 @@ Contact us today to find out how we can help your organisation redesign the syst
     category: "ADHD",
     readTime: "11 min read",
     publishDate: "2026-02-08",
-    accentColor: "violet",
-    iconEmoji: "🎭",
+    accentColor: "navy",
+    image: adhdMaskingImg,
     content: `Many adults with ADHD in the workplace do not look like they are struggling. They appear competent, capable, and in control. They meet their deadlines, eventually. They perform well in high-stakes situations. They manage their teams, complete their projects, and show up every day.
 
 But what cannot be seen from the outside is the extraordinary effort required to maintain that appearance. Behind the competent exterior of many undiagnosed or unsupported adults with ADHD sits chronic exhaustion, persistent anxiety, and a deep, often unconscious cost to their health, identity, and sense of self. This phenomenon is called masking, and understanding it is essential for HR professionals and managers who want to support neurodivergent employees effectively, identify burnout risk before it becomes crisis, and build workplaces where people do not have to perform a version of themselves that is slowly destroying their wellbeing.
@@ -300,7 +308,7 @@ Contact us today to find out how we can help your organisation build a culture w
     readTime: "12 min read",
     publishDate: "2026-02-06",
     accentColor: "amber",
-    iconEmoji: "🧠",
+    image: adhdRegulationImg,
     content: `One of the most persistent and damaging myths about ADHD is that it is fundamentally a motivation problem, that individuals with ADHD simply need to try harder, care more, or apply greater willpower to perform consistently at work. This framing is not only inaccurate. It is actively harmful.
 
 ADHD, Attention Deficit Hyperactivity Disorder, is a neurodevelopmental condition that affects executive function: the brain's capacity to regulate attention, manage working memory, initiate tasks, control impulses, process time, and respond to reward. It is neurological in origin, lifelong in nature, and entirely unrelated to intelligence, effort, or character.
@@ -438,7 +446,7 @@ Contact us today to find out how we can help your organisation build a workplace
     readTime: "10 min read",
     publishDate: "2026-02-04",
     accentColor: "emerald",
-    iconEmoji: "🧩",
+    image: factorNImg,
     content: `For decades, neurodivergence has been understood through the lens of distinct, separate diagnoses: autism, ADHD, dyslexia, dyspraxia, each defined by its own clinical criteria. This diagnostic framework has been invaluable in building awareness and securing support for many individuals. But it tells an incomplete story.
 
 A landmark 2023 study from the University of Birmingham challenges this narrow, label-first approach. Rather than neatly bounded categories, neurodivergent traits frequently overlap, cluster, and exist on a spectrum with shared characteristics that transcend any single diagnostic box. Many people experience a constellation of neurodivergent traits that profoundly shape their daily lives, without ever receiving, or perhaps qualifying for, a formal diagnosis.
@@ -560,7 +568,7 @@ Contact us to find out how we can help your organisation move beyond labels and 
     readTime: "10 min read",
     publishDate: "2026-02-02",
     accentColor: "sky",
-    iconEmoji: "📖",
+    image: dyslexiaDyscalculiaImg,
     content: `Dyslexia and dyscalculia are among the most prevalent neurodivergent conditions in the working population, yet they remain among the most misunderstood. Too often, the difficulties associated with these conditions are mistakenly attributed to lack of effort, low intelligence, or poor attitude. This misattribution costs organisations talented employees, increases legal risk, and creates entirely avoidable barriers to performance.
 
 For HR professionals, understanding dyslexia and dyscalculia is both a legal obligation and a strategic opportunity. Employees with these conditions bring exceptional cognitive strengths, in creative thinking, communication, strategic reasoning, and resilience, that organisations with genuinely inclusive practices are uniquely positioned to benefit from.
@@ -693,7 +701,7 @@ Get in touch today to find out how we can help you build a truly neuroinclusive 
     readTime: "10 min read",
     publishDate: "2026-01-30",
     accentColor: "orange",
-    iconEmoji: "🤲",
+    image: dyspraxiaImg,
     content: `Dyspraxia, formally known as Developmental Coordination Disorder (DCD), is one of the most underdiagnosed and frequently misunderstood neurodivergent conditions in the workplace. Affecting an estimated 5 to 10 percent of the adult population, dyspraxia impacts movement, coordination, organisation, and executive function in ways that can significantly affect day-to-day working life. Yet dyspraxia is not a limitation of intelligence or capability. Employees with dyspraxia consistently demonstrate exceptional strengths in creative thinking, strategic problem-solving, and resilience, strengths that organisations with the right inclusive practices are well placed to harness. This guide is designed to give HR professionals a clear, practical understanding of dyspraxia in the workplace: what it looks like, why it matters, and the strategies that make the greatest difference.
 
 ## What is Dyspraxia (Developmental Coordination Disorder)?
@@ -820,7 +828,7 @@ Contact us today to find out how we can help you build a workplace where dysprax
     readTime: "10 min read",
     publishDate: "2026-01-28",
     accentColor: "teal",
-    iconEmoji: "🔗",
+    image: coOccurringImg,
     content: `When organisations talk about neurodiversity in the workplace, the conversation often centres on single diagnoses: ADHD, autism, or dyslexia in isolation. But this picture is incomplete. The reality for many neurodivergent employees is far more complex: they are navigating co-occurring conditions, overlapping neurodivergent profiles that interact with one another in ways that traditional workplace policies simply are not designed to accommodate.
 
 For HR professionals, understanding co-occurring conditions is not just a matter of legal compliance. It is an opportunity to build a genuinely inclusive culture where neurodivergent talent can thrive, innovate, and deliver lasting value to the organisation.
