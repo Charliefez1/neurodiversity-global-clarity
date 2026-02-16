@@ -111,7 +111,7 @@ const AdminQA = () => {
   if (!authenticated) {
     return (
       <main>
-        <SEOHead title="Admin | Neurodiversity Global" description="Admin area" path="/admin" />
+        <SEOHead title="Admin | Neurodiversity Global" description="Admin area" path="/admin" noIndex />
         <Navbar />
         <section className="bg-background min-h-screen flex items-center justify-center">
           <div className="max-w-sm w-full px-6">
@@ -144,7 +144,7 @@ const AdminQA = () => {
 
   return (
     <main>
-      <SEOHead title="Admin | Neurodiversity Global" description="Admin area" path="/admin" />
+      <SEOHead title="Admin | Neurodiversity Global" description="Admin area" path="/admin" noIndex />
       <Navbar />
 
       <section className="bg-background min-h-screen">
