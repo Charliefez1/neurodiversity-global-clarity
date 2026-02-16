@@ -1,7 +1,36 @@
-import { Quote } from "lucide-react";
+import { Quote, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
 import industryCoaching from "@/assets/industry-coaching.png";
+
+const industries = [
+  {
+    name: "Healthcare & NHS",
+    description: "Clinical teams, burnout, disclosure, and masking in high-pressure settings.",
+    href: "/industries/healthcare-nhs",
+  },
+  {
+    name: "Education",
+    description: "Universities, academic staff, student services, and governance.",
+    href: "/industries/education",
+  },
+  {
+    name: "Public Sector & Government",
+    description: "Central and local government, regulators, and policy environments.",
+    href: "/industries/public-sector",
+  },
+  {
+    name: "Technology & Digital",
+    description: "Tech companies, engineering teams, and high cognitive demand roles.",
+    href: "/industries/technology",
+  },
+  {
+    name: "Financial Services",
+    description: "High-regulation, high-pressure, risk-focused environments.",
+    href: "/industries/financial-services",
+  },
+];
 
 const testimonials = [
   {
@@ -21,11 +50,7 @@ const testimonials = [
   },
 ];
 
-const logos = [
-  "NHS", "Civil Service", "Deloitte", "Barclays", "KPMG", "Capita",
-];
-
-const sectionAudioText = "Evidence and trust. We're trusted by organisations including NHS, Civil Service, Deloitte, Barclays, KPMG, and Capita. Clients report remarkable impact on retention, changed service design, and genuine improvements for neurodivergent people, not just box-ticking.";
+const sectionAudioText = "Industry solutions. We deliver neurodiversity training and consultancy adapted to your sector, including healthcare, education, public sector, technology, and financial services. Clients report remarkable impact on retention, changed service design, and genuine improvements for neurodivergent people.";
 
 const EvidenceSection = () => {
   const { mode } = useExperienceMode();
@@ -33,14 +58,18 @@ const EvidenceSection = () => {
   return (
     <section id="evidence" className="bg-warm-stone py-20 lg:py-28" aria-labelledby="evidence-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
+        {/* Header with image */}
         <div className="grid lg:grid-cols-2 gap-8 items-center mb-12">
           <div className="max-w-2xl">
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
               Industry Solutions
             </p>
             <h2 id="evidence-heading" className="font-display font-bold text-lg md:text-xl leading-tight text-foreground">
-              Public sector, charity, blue light services, legal sector, big tech, engineering and manufacturing, software, facilities and construction
+              Neurodiversity expertise adapted to your sector
             </h2>
+            <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-[55ch]">
+              Every industry has its own pressures, language, and systems. We adapt our training, coaching, and consultancy to your context.
+            </p>
             {mode === "listen" && (
               <div className="mt-4">
                 <SectionAudio sectionText={sectionAudioText} label="Listen to this section" />
@@ -56,18 +85,36 @@ const EvidenceSection = () => {
           </div>
         </div>
 
-        {/* Logo placeholders */}
-        <div className="flex flex-wrap gap-4 mb-14 pb-10 border-b border-border" role="list" aria-label="Organisations we have worked with">
-          {logos.map((name) => (
-            <div
-              key={name}
-              role="listitem"
-              className="px-5 py-2.5 rounded border border-border text-xs font-display font-semibold text-muted-foreground tracking-wide uppercase"
+        {/* Industry cards grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+          {industries.map((ind) => (
+            <Link
+              key={ind.name}
+              to={ind.href}
+              className="group rounded-lg border border-border bg-card p-6 hover:shadow-md hover:border-accent/30 transition-all"
             >
-              {name}
-            </div>
+              <h3 className="font-display font-bold text-sm text-card-foreground group-hover:text-accent transition-colors mb-2">
+                {ind.name}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{ind.description}</p>
+              <p className="mt-3 text-xs font-display font-bold text-accent flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                View sector detail <ArrowRight size={12} />
+              </p>
+            </Link>
           ))}
+          {/* "See all" card */}
+          <Link
+            to="/industries"
+            className="group rounded-lg border-2 border-dashed border-accent/30 bg-accent/5 p-6 flex flex-col items-center justify-center hover:bg-accent/10 hover:border-accent/50 transition-all"
+          >
+            <p className="font-display font-bold text-sm text-accent mb-1">See all industries</p>
+            <p className="text-xs text-muted-foreground text-center">Emergency services, engineering, manufacturing, retail, and more</p>
+            <ArrowRight size={16} className="text-accent mt-3" />
+          </Link>
         </div>
+
+        {/* Divider */}
+        <div className="border-b border-border mb-14 pb-4" />
 
         {/* Testimonials */}
         {mode === "scan" ? (
