@@ -11,6 +11,11 @@ import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 import WhatWeDo from "./pages/WhatWeDo";
 import Workshops from "./pages/Workshops";
 import IndustryTemplate from "./pages/IndustryTemplate";
+import Industries from "./pages/Industries";
+import IndustryHealthcareNHS from "./pages/IndustryHealthcareNHS";
+import IndustryEducation from "./pages/IndustryEducation";
+import IndustryPublicSector from "./pages/IndustryPublicSector";
+import IndustryTechnology from "./pages/IndustryTechnology";
 import KnowledgeBase from "./pages/KnowledgeBase";
 import Clients from "./pages/Clients";
 import Testimonials from "./pages/Testimonials";
@@ -37,7 +42,12 @@ const AppContent = () => {
           <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
           <Route path="/workshops" element={<Workshops />} />
+            <Route path="/industries" element={<Industries />} />
             <Route path="/industries/financial-services" element={<IndustryTemplate />} />
+            <Route path="/industries/healthcare-nhs" element={<IndustryHealthcareNHS />} />
+            <Route path="/industries/education" element={<IndustryEducation />} />
+            <Route path="/industries/public-sector" element={<IndustryPublicSector />} />
+            <Route path="/industries/technology" element={<IndustryTechnology />} />
             <Route path="/neurodiversity-training" element={<NeurodiversityTraining />} />
             <Route path="/neurodiversity-consultancy" element={<NeurodiversityConsultancy />} />
           <Route path="/knowledge-base" element={<KnowledgeBase />} />
