@@ -5,6 +5,9 @@ import factorNImg from "@/assets/blog/factor-n.jpg";
 import dyslexiaDyscalculiaImg from "@/assets/blog/dyslexia-dyscalculia.jpg";
 import dyspraxiaImg from "@/assets/blog/dyspraxia.jpg";
 import coOccurringImg from "@/assets/blog/co-occurring.jpg";
+import deiDeadImg from "@/assets/blog/dei-dead.jpg";
+import gritQuicksandImg from "@/assets/blog/grit-quicksand.jpg";
+import outdatedSystemsImg from "@/assets/blog/outdated-systems.jpg";
 
 export interface BlogPost {
   slug: string;
@@ -951,6 +954,369 @@ Our neurodiversity training, workshops, and consultancy services are designed sp
 - Bespoke Neurodiversity Consultancy providing tailored strategy and implementation support for your specific organisational context
 
 Get in touch today to find out how we can help your organisation become a leader in neurodiversity inclusion.`,
+  },
+  {
+    slug: "is-dei-dead",
+    title: "Is DE&I Dead? Or Was the Way We Implemented It the Problem in the First Place?",
+    metaTitle: "Is DE&I Dead? The Case for Difference Intelligence | Neurodiversity Global",
+    metaDescription: "DE&I is not dead. It is evolving. Discover why inclusion must become strategic infrastructure, and how Difference Intelligence is reshaping the conversation.",
+    excerpt: "Diversity, Equity and Inclusion is not a 'nice to have'. It is business critical. But do we need to change the way we talk about it? Acknowledging that inclusion is the foundation of growth across the enterprise may be the starting point.",
+    category: "Inclusion",
+    readTime: "8 min read",
+    publishDate: "2025-06-29",
+    accentColor: "teal",
+    image: deiDeadImg,
+    content: `Diversity, Equity and Inclusion is not a 'nice to have'. It is business critical. But do we need to change the way we talk about it?
+
+Acknowledging that inclusion is the foundation of growth across the enterprise may be the starting point.
+
+But not everyone agrees.
+
+The decision to rescind DE&I programmes through Executive Orders 14151 and 14173, signed by President Donald Trump in January 2025, was framed as an effort to remove "ideologically driven" or "divisive" initiatives.
+
+But calling DE&I "divisive" ignores a basic truth: inequality already exists. Bias is already embedded in hiring, pay, progression and leadership. DE&I was not about giving unfair advantage. It was about recognising and addressing the unfairness that is already there.
+
+Removing these programmes does not create neutrality. It creates plausible deniability. It gives institutions 'permission' to stop asking difficult questions, and to retreat back into systems that reward sameness, silence, bias and the stigma of 'difference'.
+
+## The Pushback Against Inclusion
+
+Across the world, DE&I teams are being reduced, restructured or removed entirely. Is this because organisations are looking for "very special talent and a very special genius"? Does that imply they have not found it yet? Or simply not willing to look at what is right in front of them, because they did not go to the right school, they do not know the right people, they do not look like you, think like you, talk like you?
+
+I have sat on both sides of the table. As the manager, and as the neurodivergent employee. I can see both perspectives, and I will be honest, I have not always been easy in either role.
+
+This is not just about rights, or adjustments, or awareness days once a year. It is about the real-world tension playing out every day in offices, teams and leadership conversations. The sick days, the outbursts, the missed deadlines. The tribunals, the burnout, the frustration. Managers are overwhelmed. Colleagues are confused. And some neurodivergent people, like me, are trying to self-advocate without always having the language or tools to do it well.
+
+We are not here to sugar-coat it. We are here to name it, lower the pressure, and offer something practical; a way forward that gives everyone a voice, not just a label. Because inclusion has to work in the real world. That is the only kind that ever lasts.
+
+## A Two-Way Street
+
+My LinkedIn feed is full of posts about neurodiversity. All advocating. All positive. All well-meaning. But if we want to move forward, we have to be honest about something. This is a two-way street. And when you push too hard for change on behalf of a minority, without bringing people with you, you risk pushing the majority in the wrong direction.
+
+I hear it all the time from HR teams: "I have ADHD, what are you going to do about it?" That is not advocacy. That is demand. And if people feel pushed, told, or ordered to change, will they truly want to? If they feel embarrassed, fearful for their own jobs, or under pressure with no support, will they speak up and try to make inclusion work? No. They will quietly step back. They will leave. And resentment builds.
+
+Then the pushback starts. And when that pushback comes from those that 'lead', it becomes permission. That is what we are up against. That is why we need to speak differently, act differently, and lead differently.
+
+## DE&I 2.0: Difference Intelligence
+
+Is DE&I dead? Has inclusion just become something we say at the bottom of an advert to look the part? Do we mean it? Or do we not know what it actually means?
+
+This is why the language needs to change. This is why we need something deeper. This is why we need DE&I 2.0.
+
+We call it DQ: Difference Intelligence. A new leadership capability for a new world of work.
+
+**Definition:** Difference Intelligence is the ability to recognise, adapt to, and design with human difference; not as a challenge to be managed, but as a source of intelligence, value, and strategic advantage.
+
+- **Cognitive empathy:** not just emotional awareness, but understanding different thinking and processing styles
+- **Neuroinclusion fluency:** language, design, and communication that reduces friction for different brains
+- **Structural agility:** embedding flexibility into systems, workflows and roles
+- **Lived experience literacy:** the ability to listen to, interpret, and act on insights from people who experience the world differently
+
+### Why It Matters
+
+Because IQ gets things done. EQ gets teams through hard times. But DQ helps us build systems that work for people who were never at the table when those systems were designed.
+
+It is not about celebrating diversity. It is about operating with it; strategically, daily, and unapologetically.
+
+## The Reality on the Ground
+
+After training 20,000 people about neuroinclusion, one thing is clear; no one right now is actually winning. There is a huge amount of goodwill and a thirst to learn and understand from the HR community. But what is a 'reasonable adjustment' anyway? Is it a policy? A list of things? A special desk? Headphones?
+
+Securing budget for this type of thing is very low on the priority list. The world has changed. Business has changed. Technology has completely changed every aspect of our lives in just two years. The way we communicate, the speed we need to release the next version, our ability to pivot, to innovate, to stay ahead of what is next.
+
+This is not 'just' about awareness. It is about unlocking the untapped talent already inside your organisation and turning it into competitive advantage.
+
+> "Rich came into our board meeting and, honestly, expectations were low. I had persuaded the team to include a neurodiversity awareness session in our L&D programme, but it was not high on the agenda. After he left, we talked about it for the rest of the meeting. He shifted from a 'training topic' to a strategic priority for the CEO." Group HR Director, FTSE 100 Company
+
+## Inclusion as Critical Infrastructure
+
+At Neurodiversity Global, we are not trying to 'save' DE&I budgets. We are working with our clients to prove the positive impact of inclusion, all inclusion, as standard.
+
+We are building capability where it matters. In front-line staff. Back office teams. Line managers. In leadership. In operations. In culture. In delivery. On the building site. In the air. On the train. In the refuge. The school. Everywhere.
+
+Inclusion does not care. People do.
+
+Because it is not a separate initiative. It is critical infrastructure.
+
+Neuroinclusion positively affects retention, mental health, compliance, culture, risk, performance, innovation and delivery.
+
+If that is not strategic, what is?
+
+Supporting your people; giving them the language, tools and strategy they need cannot live and die by whether you can "get a bit of money from the budget" this quarter.
+
+It is bigger than that. And it always has been. DE&I is not dead. It is evolving.
+
+If you have a 'diversity' message on the bottom of your job advert, ask yourself: "do you actually mean it, or has it just become something we say".`,
+  },
+  {
+    slug: "grit-wont-save-children",
+    title: "You Cannot Build Grit on Quicksand",
+    metaTitle: "You Cannot Build Grit on Quicksand | Education and Neurodiversity",
+    metaDescription: "Why asking children to show more grit without fixing the systems around them is shifting the burden of responsibility. A neurodiversity perspective on education reform.",
+    excerpt: "There has been a lot of noise about 'grit' lately. About resilience. About pushing through. We do want children to be able to face life's challenges. But you cannot build grit on quicksand.",
+    category: "Education",
+    readTime: "10 min read",
+    publishDate: "2025-05-19",
+    accentColor: "amber",
+    image: gritQuicksandImg,
+    content: `There has been a lot of noise about 'grit' lately. About resilience. About pushing through. And I get it. We do want children to be able to face life's challenges. To develop strength and stay standing when things get hard.
+
+> But let us be honest. You cannot build grit on quicksand.
+
+This week, the UK Education Secretary gave a speech full of ambition. She spoke of her own powerful story of social mobility. It is credible and shows that ambition comes from a place of lived experience and a desire to fix what has gone so wrong with our education system. I truly believe in her sentiment and in her desire to make school a place for all, and to reverse the chronic absenteeism that the system now faces.
+
+There was talk of more teachers (6,500 of them, during a recruitment crisis), of reforming accountability, but the focus was on children needing to build resilience, their grit, to succeed. There is a lot I agree with. The sentiment and attitude of this government, I believe, come from the right place.
+
+But here is the thing. A broken system cannot be fixed by simply asking more of the children inside it. We are not building strength. We are shifting the burden of responsibility.
+
+## Why 'Grit' Has Become a Popular Word in Education
+
+In recent years, grit has been promoted in schools as a tool for improving outcomes, especially for children from disadvantaged backgrounds. The idea is that by teaching children to persevere, manage failure, and keep working hard, they will be more likely to succeed academically and in life.
+
+The word grit seems to appeal to policymakers and leaders because it feels like a low-cost, high-return solution. If we can instil grit, we can raise standards without always needing more resources.
+
+## The Reality Inside Schools
+
+The reality is overstretched, underfunded, and increasingly less psychologically safe.
+
+- More than 600 "stuck schools" have been rated "Requires Improvement" or "Inadequate" in multiple consecutive inspections
+- One in four teachers now leaves the profession within three years
+- There is a shortfall of 13,000 teachers in England
+- Up to 50% of Gen Z identify as neurodivergent or having additional learning needs, yet classroom structures remain focused on exam-driven learning styles
+- Persistent absenteeism is at record highs. More than 1.6 million pupils in England are now "persistently absent"
+
+> Yet the answer we are offering is: get back to school, work harder, try more. Show grit.
+
+## How Do You Build Grit?
+
+By building safety first. Grit grows when children know they will not be punished for failing, humiliated for struggling, or abandoned when things get hard.
+
+By offering emotional security. Children need to know they are accepted for who they are, not just for how well they perform. Encouragement, connection and emotional regulation all matter more than pressure.
+
+By modelling it. When adults demonstrate perseverance with compassion, not perfectionism, children begin to see what it looks like to keep going with kindness, not shame.
+
+By making failure safe. Mistakes must be treated as learning, not weakness. This is especially true for neurodivergent children, who often associate effort with fear of judgement.
+
+By respecting difference in pace, style and pathway. A child with ADHD might show grit just by sitting still for five minutes. A child recovering from trauma might show grit by trusting an adult again. It looks different for everyone.
+
+By removing unnecessary barriers. It is not fair to ask children to climb mountains while adults keep raising the height. If the system is not working for them, changing the system is part of the work.
+
+## The Voices We Need to Hear
+
+### "You're just being silly."
+
+I am not being silly. I am struggling. But now I know you will not take me seriously, so I will just pretend next time.
+
+### "Use your words."
+
+I cannot. My mouth will not work when my brain is on fire. My brain is full. Everything is too loud. I do not have words right now, I just need you to see that I am not okay.
+
+### "Everyone else can do it, why can't you?"
+
+Because I am not everyone else. I am already trying harder than you will ever know. Maybe I do not belong here at all.
+
+### "You're too sensitive."
+
+No, I feel things deeply. That is not a flaw. But if it makes me too much for you, I will stop showing you anything.
+
+### "Stop fidgeting and concentrate."
+
+This is how I concentrate. Moving helps me think. You want me still, more than you want me learning.
+
+### "If you just tried harder..."
+
+I am trying. Every minute. Every second. You just cannot see it, so you call me lazy. But I am exhausted.
+
+### "Calm down."
+
+You think I do not want to? My heart is racing, my skin hurts, the lights are too bright, the sounds too loud, and everything is hitting me at once. I am not choosing this. I am not being dramatic. I am overwhelmed. I am scared. And now, on top of it all, I feel like I am the problem.
+
+> Some children are being asked to build so much grit, they are turning to stone.
+
+## Children Today Live in a Different World
+
+Let us stop pretending this is just a matter of toughening up. The children in our classrooms are not growing up in the same world we did.
+
+In just the last 10 years:
+
+- Smartphone access has become near-universal for children aged 10+
+- Social media algorithms fuel anxiety, body image issues, and constant comparison
+- Online bullying and viral humiliation are part of everyday school life
+- Dopamine addiction is not a theory, it is a visible reality
+- Knife crime has risen. Children live with fear, loss and trauma
+- Covid took away years of structure, friendships and safe routine
+- Youth clubs and activities have disappeared from local communities
+- Mental health support is overstretched. Some children wait years for help
+- Poverty and instability are growing. Some face hunger and unsafe home lives
+- Class sizes have grown. Support staff have been cut
+
+And yet we say "resilience is what they need." Grit. That will solve the problem.
+
+No. What they need is safety first. Emotional safety. Physical safety. Psychological safety.
+
+## Absenteeism Is Not Apathy. It Is Often Survival.
+
+Persistent absenteeism is still being treated like defiance. Like a behavioural issue. But what if it is actually a cry for help?
+
+> I have spoken to young people who say: "What is the point? I am not going to get a job anyway." "I learn more on YouTube than in my lessons." "I am scared to go back. I am the one in that video."
+
+This is not a motivation crisis. It is a connection crisis.
+
+And instead of dismantling the reasons children are falling out of education; fear, shame, bullying, failure, mental health, poverty, pressure, humiliation; we tell them to try harder.
+
+We are not bringing them back in. We are pushing them further out.
+
+## What Needs to Change
+
+We need:
+
+- Smartphone-free schools by law. Social media is harming children more than we are willing to admit
+- Trauma-informed training for every teacher, not just SENCOs or behaviour leads
+- Proper mental health support in every school. Not just awareness posters or one-day campaigns
+- Real recognition that not every child has motivated parents, stable homes, or access to quiet, safe spaces
+- Diverse, equally valued pathways to success. Academic achievement should not be the only measure
+- Class sizes and staffing ratios that reflect the actual needs in the classroom
+- A complete rethink of what we mean by success, progress, and potential
+
+None of this is optional if we are serious about children's futures.
+
+## Final Thought
+
+If we really want to talk about raising standards, then maybe we stop with the grit of children.
+
+Maybe we start with the grit of the adults in charge.
+
+We need to look at the environments we expect children to grow within, and ask whether they support flight or merely survival.
+
+I do believe the direction of travel is hopeful. I do believe in the intent behind some of what is being said. And yes, I see it all through the lens of lived experience, my own, my children's, and the thousands of young people, parents, educators and professionals I work with every day.
+
+But if there is one message I would leave with every policymaker, every school leader, every parent reading this, it is this:
+
+Think differently. Ask what is missing, not just what is wrong. Remember that we are all neurodiverse. And never build a system for the majority that forgets the rest.
+
+Because difference is not the problem. It is the foundation we have ignored for too long.`,
+  },
+  {
+    slug: "real-diagnosis-outdated-systems",
+    title: "The Real Diagnosis: Outdated Systems in a Neurodivergent World",
+    metaTitle: "The Real Diagnosis: Outdated Systems in a Neurodivergent World",
+    metaDescription: "Are we diagnosing people or diagnosing the system? Why rising neurodivergent identification reveals a design crisis, not a diagnostic one.",
+    excerpt: "Are we seeing too many people diagnosed as neurodivergent, or are we finally acknowledging how outdated our environments have become? This is not a diagnostic crisis. It is a design crisis.",
+    category: "Strategy",
+    readTime: "12 min read",
+    publishDate: "2025-05-06",
+    accentColor: "navy",
+    image: outdatedSystemsImg,
+    content: `## Are We Diagnosing People or Diagnosing the System?
+
+Are we seeing too many people diagnosed as neurodivergent, or are we finally acknowledging how outdated our environments have become?
+
+This question, raised by Professor Francesca Happe of King's College London during her recent BBC Radio 4 interview and featured in The Independent, is timely. And important.
+
+She suggests we may have reached a point where traits once described as personality or eccentricity are increasingly being labelled as diagnosable conditions. That self-identification is rising, stigma is dropping, and people are re-evaluating their place in systems that were never designed with them in mind.
+
+She is not wrong. In fact, her voice is very welcome, especially now, as many of us begin to ask not "what is wrong with people?" but "what needs to change in the system?"
+
+It is a valuable conversation. One that opens the door for something deeper.
+
+What if this is not about overdiagnosis at all? What if what we are really seeing is the cost of asking modern minds to function in systems that have not kept up with the complexity of the world we have built?
+
+I think we are finally noticing what happens when the structure itself is out of date, and human behaviour starts to reveal the cracks.
+
+This is not a diagnostic crisis. It is a design crisis.
+
+## The Digital Brain and the Dopamine Jackpot
+
+Let us talk about the world we live in now.
+
+We are operating in a 24/7, always-on, hyperstimulated reality. Smartphones, social media, AI notifications, information overload; all of it floods our brains with novelty and reward loops. The science calls it a "dopamine jackpot." Quick hits. Endless scrolling. Alerts that never stop.
+
+And the brain, especially a developing brain, cannot tell the difference between genuine engagement and manufactured stimulation. It just knows it is firing. All the time.
+
+This constant bombardment does not just make us distracted, it mimics dopamine dysregulation. It produces behaviours that look and feel like neurodivergence, even if the cause is environmental, not neurological. And for people who already are neurodivergent, it amplifies everything. The noise gets louder. The edges get sharper.
+
+So yes, people are struggling. But the cause is not always internal. Sometimes it is the environment that is dysregulated.
+
+## Systems That No Longer Fit
+
+Let us be honest about the structures we are still working within:
+
+- Education systems designed in the 1800s
+- Workplaces built around presenteeism, eye contact, small talk, and forced conformity
+- Social structures that reward performance over process
+
+We expect all minds to operate the same way; under pressure, under scrutiny, under constant digital load; and then we wonder why people burn out, opt out, or lash out.
+
+A child who once would have thrived through movement, storytelling, hands-on learning and time outdoors is now labelled "disruptive" for not sitting still in a fluorescent-lit, rigid, test-driven classroom.
+
+An employee who once excelled in deep, quiet work now struggles to manage five inboxes, Slack pings, live meetings, hybrid expectations, and unrelenting change; and is put on a performance improvement plan.
+
+These are not always signs of personal challenge. They are indicators that the system is no longer fit for purpose.
+
+## So What Are We Actually Diagnosing?
+
+If our environments are becoming harder to navigate, more cognitively demanding, emotionally complex, and operationally rigid, then what exactly are we diagnosing?
+
+In many cases, the answer is not the individual. It is the mismatch between how a person's brain works and how systems currently function. Systems that were often designed for a different era, with different expectations and assumptions.
+
+Most people seeking a diagnosis are not looking for a label to excuse difficulties. They are looking for understanding, clarity, and fair access to the tools and conditions that others may already take for granted.
+
+This is where the distinction between equality and equity becomes crucial. Equality assumes everyone starts from the same place and needs the same support. Equity recognises that individuals begin with different circumstances and may require different forms of support to reach the same outcome.
+
+They are not broken. They are highlighting where the system is no longer working for everyone, and offering insight into how it could evolve to support a wider range of minds.
+
+## The Numbers Tell the Story
+
+- Only 30% of organisations have a clear neuroinclusion goal and strategy
+- Just 46% of managers feel capable and confident to support neurodivergent individuals in the workplace
+- Only 31% of autistic adults in the UK are employed, compared to 54.7% of disabled people overall
+- Half (49%) of neurodivergent adults have experienced discrimination during the hiring process
+- Approximately 51% of neurodivergent employees have taken time off work due to their neurodivergence, often citing insufficient workplace support
+
+## Redesign Is Not Optional Anymore
+
+Yes, we begin with awareness. Training sessions, open conversations, lunchtime webinars; they matter. They make the invisible visible. They help people connect the dots, often for the first time. But they are not the solution. They are the start of one.
+
+Real change happens in the design room.
+
+Organisations spend millions on solution architects, technical leads, and transformation projects. I have been in those rooms for thirty years. I have seen the slide decks, the strategy boards, the procurement cycles. And I can tell you: the blueprint is broken before the ink is dry.
+
+Because those rooms are too often closed. Decisions are made by a few, based on what has always worked for them. Not on how humans actually live, work, focus, regulate, or relate to one another. Not on what barriers people face. Not on what actually drives performance across a diverse workforce.
+
+Neuroinclusion is not a compliance add-on. It is not a bolt-on feature. It is a design principle. Or at least it should be.
+
+And yet, most design briefs never ask the right questions. They ask if a solution can scale. If it can automate. If it meets the budget and timeline. But rarely, if ever, do they ask:
+
+- Will this enable more people to work well?
+- Will this remove barriers, or build them in?
+- Will this work for different minds, different paces, different ways of processing?
+
+## A New Definition of "Normal"
+
+Professor Happe raised a critical point: when you include autism, ADHD, dyslexia, dyspraxia, and other developmental differences, we may now be at a stage where neurodivergent self-identification outweighs so-called neurotypicality.
+
+And that changes everything.
+
+Because if most people no longer fit the mould those systems were built around, then the problem is not at the margins. It is at the centre.
+
+"Normal" is not a neutral benchmark. It is a manufactured filter; one that was never designed to capture the full range of human minds. It was built to exclude difference, not include it.
+
+So we must stop trying to 'fix' people who do not fit that frame and start redesigning the frame itself. The era of designing for the average is over.
+
+## Final Thought
+
+If rising attrition, silent quitting, presenteeism, absenteeism, and workplace-related mental ill health are not seen as a direct threat to growth, profitability, and productivity; then we are not looking closely enough.
+
+Because they are.
+
+And if the only response is to publish a list of 'reasonable adjustments' in the HR handbook, we have already missed the point.
+
+This is not about making room at the edges. It is about redesigning the core.
+
+Neuroinclusion is not a nice-to-have, nor is it a specialist agenda. It is a strategic imperative. One that allows businesses to unlock productivity they did not know they were missing, to reduce costs they did not realise they were carrying, and to create cultures where people are not simply surviving the system, but shaping it.
+
+This is the shift we need. From reactive compliance to proactive design. From 'adjustments' to alignment. From pathologising difference to valuing it.
+
+Not because it is the right thing to do; but because it is the only way forward.`,
   },
 ];
 
