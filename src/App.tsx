@@ -26,8 +26,13 @@ import NeurodiversityConsultancy from "./pages/NeurodiversityConsultancy";
 import AdminQA from "./pages/AdminQA";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import CommunityQuestions from "./pages/CommunityQuestions";
+import Sources from "./pages/Sources";
+import Feedback from "./pages/Feedback";
 import NotFound from "./pages/NotFound";
 import ExperienceSelector from "./components/ExperienceSelector";
+import ScanModeBanner from "./components/ScanModeBanner";
+import ListenModePlayer from "./components/ListenModePlayer";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +44,8 @@ const AppContent = () => {
       <Sonner />
       <BrowserRouter>
         <ExperienceSelector />
+        <ScanModeBanner />
+        <ListenModePlayer />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
@@ -59,6 +66,9 @@ const AppContent = () => {
           <Route path="/ask-rich/:slug" element={<QADetail />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/community-questions" element={<CommunityQuestions />} />
+          <Route path="/sources" element={<Sources />} />
+          <Route path="/feedback" element={<Feedback />} />
           <Route path="/admin" element={<AdminQA />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

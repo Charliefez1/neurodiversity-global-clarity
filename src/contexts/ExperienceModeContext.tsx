@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, type ReactNode } from "react";
 
-export type ExperienceMode = "read" | "scan" | "listen";
+export type ExperienceMode = "read" | "quick-read" | "scan" | "listen";
 
 interface ExperienceModeContextType {
   mode: ExperienceMode;
