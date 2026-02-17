@@ -3,7 +3,7 @@ import adhdMaskingImg from "@/assets/blog/adhd-masking.jpg";
 import adhdRegulationImg from "@/assets/blog/adhd-regulation-new.png";
 import factorNImg from "@/assets/blog/factor-n-new.png";
 import dyslexiaDyscalculiaImg from "@/assets/blog/dyslexia-dyscalculia.jpg";
-import dyspraxiaImg from "@/assets/blog/dyspraxia.jpg";
+import dyspraxiaImg from "@/assets/blog/dyspraxia-new.jpg";
 import coOccurringImg from "@/assets/blog/co-occurring.jpg";
 import deiDeadImg from "@/assets/blog/dei-dead-new.png";
 import gritQuicksandImg from "@/assets/blog/grit-quicksand-new2.png";
