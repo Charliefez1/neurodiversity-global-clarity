@@ -106,62 +106,55 @@ const TestimonialRow = ({
   const divider = dark ? "bg-primary-foreground/15" : "bg-foreground/15";
 
   return (
-    <div
-      className={`grid lg:grid-cols-[1fr_1.1fr] gap-0 items-stretch ${
-        flip ? "lg:[direction:rtl]" : ""
-      }`}
-    >
-      {/* Portrait side */}
-      <div className="relative h-64 lg:h-auto min-h-[280px] overflow-hidden">
-        <img
-          src={t.portrait}
-          alt={t.company}
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-        <div
-          className={`absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r ${
-            flip ? "lg:bg-gradient-to-l" : ""
-          } from-transparent via-transparent to-primary/40`}
-        />
-        <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6 bg-primary/90 backdrop-blur-sm rounded-lg px-4 py-2.5 shadow-lg" style={{ direction: "ltr" }}>
-          <p className="font-display font-bold text-accent text-sm">{t.stat}</p>
+    <div className={`lg:flex ${flip ? "lg:flex-row-reverse" : ""} items-start gap-0`}>
+      {/* Image side — full 16:9 visible */}
+      <div className="lg:w-[55%] shrink-0">
+        <div className="relative">
+          <img
+            src={t.portrait}
+            alt={t.company}
+            className="w-full h-auto block"
+          />
+          <div className="absolute bottom-4 left-4 bg-primary/90 backdrop-blur-sm rounded-lg px-4 py-2.5 shadow-lg">
+            <p className="font-display font-bold text-accent text-sm">{t.stat}</p>
+          </div>
         </div>
       </div>
 
       {/* Content side */}
-      <div className="p-8 lg:p-12 xl:p-16 flex flex-col justify-center" style={{ direction: "ltr" }}>
-        <div className="flex items-center gap-4 mb-6">
+      <div className="p-6 lg:p-10 xl:p-12 flex flex-col justify-center flex-1 min-w-0">
+        <div className="flex items-center gap-3 mb-4">
           <img
             src={t.logo}
             alt={t.company}
-            className="h-12 lg:h-14 w-auto object-contain data-[company=smartest]:h-24 data-[company=smartest]:lg:h-28"
+            className="h-10 lg:h-12 w-auto object-contain data-[company=smartest]:h-20 data-[company=smartest]:lg:h-24"
             data-company={t.company === "Smartest Energy" ? "smartest" : undefined}
           />
-          <div className={`h-8 w-px ${divider}`} />
-          <p className={`font-display font-bold text-lg ${txt}/90`}>
+          <div className={`h-6 w-px ${divider}`} />
+          <p className={`font-display font-bold text-base ${txt}/90`}>
             {t.company}
           </p>
         </div>
 
         {t.intro && (
-          <p className={`text-sm lg:text-base ${txtMuted} leading-relaxed mb-5`}>
+          <p className={`text-xs lg:text-sm ${txtMuted} leading-relaxed mb-4`}>
             {t.intro}
           </p>
         )}
         <Quote
-          size={28}
-          className="text-accent/40 mb-4"
+          size={20}
+          className="text-accent/40 mb-2"
           aria-hidden="true"
         />
-        <blockquote className={`text-base lg:text-lg ${txtMuted} leading-relaxed italic mb-6`}>
+        <blockquote className={`text-sm lg:text-[15px] ${txtMuted} leading-relaxed italic mb-4`}>
           "{t.quote}"
         </blockquote>
 
         <div>
-          <p className={`font-display font-semibold text-sm ${txt}`}>
+          <p className={`font-display font-semibold text-xs ${txt}`}>
             {t.name}
           </p>
-          <p className={`text-xs ${txtSub}`}>{t.role}</p>
+          <p className={`text-[11px] ${txtSub}`}>{t.role}</p>
         </div>
       </div>
     </div>
