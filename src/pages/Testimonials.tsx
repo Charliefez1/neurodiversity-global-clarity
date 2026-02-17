@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import acasLogo from "@/assets/logos/acas.png";
 import nhsLogo from "@/assets/logos/nhs.png";
 import tpeLogo from "@/assets/logos/transpennine-express.png";
-import smartestLogo from "@/assets/logos/smartest-energy.png";
+import smartestLogo from "@/assets/logos/smartest-energy-full.png";
 import suezLogo from "@/assets/logos/suez.png";
 import agillioLogo from "@/assets/logos/agillio.png";
 import portrait1 from "@/assets/testimonials/portrait-1.jpg";

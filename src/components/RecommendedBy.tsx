@@ -1,7 +1,7 @@
 import { ArrowRight, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import nhsBtLogo from "@/assets/logos/nhs-bt.png";
-import smartestLogo from "@/assets/logos/smartest-energy.png";
+import smartestLogo from "@/assets/logos/smartest-energy-full.png";
 import smartestLogoSvg from "@/assets/logos/smartest-energy.svg";
 import suezLogo from "@/assets/logos/suez.png";
 import agillioLogo from "@/assets/logos/agillio.png";
