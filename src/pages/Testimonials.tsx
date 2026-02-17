@@ -185,6 +185,7 @@ const Testimonials = () => (
         alt=""
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover opacity-[0.12] pointer-events-none select-none"
+        style={{ maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)", WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)" }}
       />
       <div className="relative mx-auto max-w-wide px-6 lg:px-10 pt-16 pb-10 lg:pt-24 lg:pb-14">
         <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-4">
