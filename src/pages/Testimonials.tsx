@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { Quote, ArrowRight } from "lucide-react";
+import { Quote, ArrowRight, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 import acasLogo from "@/assets/logos/acas.png";
 import nhsLogo from "@/assets/logos/nhs.png";
@@ -169,8 +169,15 @@ const Testimonials = () => (
     <Navbar />
 
     {/* Hero */}
-    <section className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 pb-10 lg:pt-24 lg:pb-14">
+    <section className="bg-primary text-primary-foreground relative overflow-hidden">
+      {/* Decorative globe */}
+      <Globe
+        size={520}
+        strokeWidth={0.3}
+        className="absolute -right-20 top-1/2 -translate-y-1/2 text-primary-foreground/[0.04] pointer-events-none select-none"
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto max-w-wide px-6 lg:px-10 pt-16 pb-10 lg:pt-24 lg:pb-14">
         <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-4">
           What our clients say
         </p>
