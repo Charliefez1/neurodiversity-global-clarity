@@ -106,7 +106,7 @@ const TestimonialRow = ({
   const divider = dark ? "bg-primary-foreground/15" : "bg-foreground/15";
 
   return (
-    <div className={`lg:flex ${flip ? "lg:flex-row-reverse" : ""} items-start gap-0`}>
+    <div className={`lg:flex ${flip ? "lg:flex-row-reverse" : ""} items-center gap-0`}>
       {/* Image side — full 16:9 visible */}
       <div className="lg:w-[55%] shrink-0">
         <div className="relative">
