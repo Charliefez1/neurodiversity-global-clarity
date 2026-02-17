@@ -137,24 +137,24 @@ const TestimonialRow = ({
         </div>
 
         {t.intro && (
-          <p className={`text-xs lg:text-sm ${txtMuted} leading-relaxed mb-4`}>
+          <p className={`text-sm ${txtMuted} leading-relaxed mb-4`}>
             {t.intro}
           </p>
         )}
         <Quote
-          size={20}
-          className="text-accent/40 mb-2"
+          size={24}
+          className="text-accent/40 mb-3"
           aria-hidden="true"
         />
-        <blockquote className={`text-sm lg:text-[15px] ${txtMuted} leading-relaxed italic mb-4`}>
+        <blockquote className={`text-sm lg:text-base ${txtMuted} leading-relaxed italic mb-5`}>
           "{t.quote}"
         </blockquote>
 
         <div>
-          <p className={`font-display font-semibold text-xs ${txt}`}>
+          <p className={`font-display font-semibold text-sm ${txt}`}>
             {t.name}
           </p>
-          <p className={`text-[11px] ${txtSub}`}>{t.role}</p>
+          <p className={`text-xs ${txtSub}`}>{t.role}</p>
         </div>
       </div>
     </div>
