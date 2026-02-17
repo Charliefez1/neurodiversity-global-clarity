@@ -21,12 +21,14 @@ const testimonials = [
   {
     company: "ACAS",
     logo: acasLogo,
-    name: "Sarah Mitchell",
-    role: "Head of Inclusive Practice",
+    name: "Senior HR and Employee Relations Professional",
+    role: "ACAS Member",
+    intro:
+      "We have been so proud to be asked by ACAS to be part of their ongoing series of webinars about neurodiversity in the workplace. We have presented to hundreds of their members over the last two years and look forward to continuing this partnership long into the future.",
     quote:
-      "Neurodiversity Global transformed how we think about workplace adjustments. Their training gave our advisors the confidence and language to support employers navigating neurodiversity for the first time. The impact on our service quality has been measurable and immediate.",
+      "This was one of the most practical and grounded sessions on neurodiversity at work I have attended. It moved beyond awareness and focused on how environments, behaviours, and systems shape performance. The examples were clear, relevant, and immediately applicable to real workplace situations. As an ACAS member, I found the balance between lived experience, employment context, and practical action particularly valuable.",
     portrait: portrait1,
-    stat: "Measurable improvement in service quality",
+    stat: "Ongoing ACAS webinar partnership",
   },
   {
     company: "NHS",
@@ -141,6 +143,11 @@ const TestimonialRow = ({
           </p>
         </div>
 
+        {t.intro && (
+          <p className={`text-sm lg:text-base ${txtMuted} leading-relaxed mb-5`}>
+            {t.intro}
+          </p>
+        )}
         <Quote
           size={28}
           className="text-accent/40 mb-4"
