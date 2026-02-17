@@ -91,73 +91,80 @@ const logos = [
 const TestimonialRow = ({
   t,
   flip,
+  dark,
 }: {
   t: (typeof testimonials)[0];
   flip: boolean;
-}) => (
-  <div
-    className={`grid lg:grid-cols-[1fr_1.1fr] gap-0 items-stretch ${
-      flip ? "lg:[direction:rtl]" : ""
-    }`}
-  >
-    {/* Portrait side */}
-    <div className="relative h-64 lg:h-auto overflow-hidden">
-      <img
-        src={t.portrait}
-        alt={t.name}
-        className="absolute inset-0 w-full h-full object-cover object-top"
-      />
-      {/* Gradient into content */}
-      <div
-        className={`absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r ${
-          flip ? "lg:bg-gradient-to-l" : ""
-        } from-transparent via-transparent to-primary/40`}
-      />
-      {/* Stat badge */}
-      <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6 bg-primary/90 backdrop-blur-sm rounded-lg px-4 py-2.5 shadow-lg" style={{ direction: "ltr" }}>
-        <p className="font-display font-bold text-accent text-sm">{t.stat}</p>
-      </div>
-    </div>
+  dark: boolean;
+}) => {
+  const txt = dark ? "text-primary-foreground" : "text-foreground";
+  const txtMuted = dark ? "text-primary-foreground/80" : "text-foreground/75";
+  const txtSub = dark ? "text-primary-foreground/50" : "text-muted-foreground";
+  const divider = dark ? "bg-primary-foreground/15" : "bg-foreground/15";
 
-    {/* Content side */}
-    <div className="p-8 lg:p-12 xl:p-16 flex flex-col justify-center" style={{ direction: "ltr" }}>
-      <div className="flex items-center gap-4 mb-6">
-        <img
-          src={t.logo}
-          alt={t.company}
-          className="h-12 lg:h-14 w-auto object-contain"
-        />
-        <div className="h-8 w-px bg-primary-foreground/15" />
-        <p className="font-display font-bold text-lg text-primary-foreground/90">
-          {t.company}
-        </p>
-      </div>
-
-      <Quote
-        size={28}
-        className="text-accent/40 mb-4"
-        aria-hidden="true"
-      />
-      <blockquote className="text-base lg:text-lg text-primary-foreground/80 leading-relaxed italic mb-6">
-        "{t.quote}"
-      </blockquote>
-
-      <div className="flex items-center gap-3">
+  return (
+    <div
+      className={`grid lg:grid-cols-[1fr_1.1fr] gap-0 items-stretch ${
+        flip ? "lg:[direction:rtl]" : ""
+      }`}
+    >
+      {/* Portrait side */}
+      <div className="relative h-64 lg:h-auto overflow-hidden">
         <img
           src={t.portrait}
           alt={t.name}
-          className="w-10 h-10 rounded-full object-cover ring-2 ring-accent/30"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div>
-          <p className="font-display font-semibold text-sm text-primary-foreground">
-            {t.name}
+        <div
+          className={`absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r ${
+            flip ? "lg:bg-gradient-to-l" : ""
+          } from-transparent via-transparent to-primary/40`}
+        />
+        <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6 bg-primary/90 backdrop-blur-sm rounded-lg px-4 py-2.5 shadow-lg" style={{ direction: "ltr" }}>
+          <p className="font-display font-bold text-accent text-sm">{t.stat}</p>
+        </div>
+      </div>
+
+      {/* Content side */}
+      <div className="p-8 lg:p-12 xl:p-16 flex flex-col justify-center" style={{ direction: "ltr" }}>
+        <div className="flex items-center gap-4 mb-6">
+          <img
+            src={t.logo}
+            alt={t.company}
+            className="h-12 lg:h-14 w-auto object-contain"
+          />
+          <div className={`h-8 w-px ${divider}`} />
+          <p className={`font-display font-bold text-lg ${txt}/90`}>
+            {t.company}
           </p>
-          <p className="text-xs text-primary-foreground/50">{t.role}</p>
+        </div>
+
+        <Quote
+          size={28}
+          className="text-accent/40 mb-4"
+          aria-hidden="true"
+        />
+        <blockquote className={`text-base lg:text-lg ${txtMuted} leading-relaxed italic mb-6`}>
+          "{t.quote}"
+        </blockquote>
+
+        <div className="flex items-center gap-3">
+          <img
+            src={t.portrait}
+            alt={t.name}
+            className="w-10 h-10 rounded-full object-cover ring-2 ring-accent/30"
+          />
+          <div>
+            <p className={`font-display font-semibold text-sm ${txt}`}>
+              {t.name}
+            </p>
+            <p className={`text-xs ${txtSub}`}>{t.role}</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Testimonials = () => (
   <main>
@@ -216,6 +223,7 @@ const Testimonials = () => (
           <TestimonialRow
             t={t}
             flip={i % 2 !== 0}
+            dark={i % 2 === 0}
           />
         </div>
       </section>
