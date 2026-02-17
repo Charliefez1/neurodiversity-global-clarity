@@ -112,11 +112,11 @@ const TestimonialRow = ({
       }`}
     >
       {/* Portrait side */}
-      <div className="relative h-64 lg:h-auto overflow-hidden">
+      <div className="relative h-64 lg:h-auto min-h-[280px] overflow-hidden">
         <img
           src={t.portrait}
-          alt={t.name}
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          alt={t.company}
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div
           className={`absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r ${
