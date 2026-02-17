@@ -34,6 +34,7 @@ import NotFound from "./pages/NotFound";
 import ExperienceSelector from "./components/ExperienceSelector";
 import ScanModeBanner from "./components/ScanModeBanner";
 import ListenModePlayer from "./components/ListenModePlayer";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const AppContent = () => {
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <ExperienceSelector />
         <ScanModeBanner />
         <ListenModePlayer />
