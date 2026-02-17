@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import { Quote } from "lucide-react";
+import { Quote, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import acasLogo from "@/assets/logos/acas.png";
 import nhsLogo from "@/assets/logos/nhs.png";
 import tpeLogo from "@/assets/logos/transpennine-express.png";
@@ -24,9 +25,7 @@ const testimonials = [
     quote:
       "Neurodiversity Global transformed how we think about workplace adjustments. Their training gave our advisors the confidence and language to support employers navigating neurodiversity for the first time. The impact on our service quality has been measurable and immediate.",
     portrait: portrait1,
-    accent: "from-sky-500 to-sky-600",
-    accentBg: "from-sky-500/15 to-sky-600/5",
-    featured: true,
+    stat: "Measurable improvement in service quality",
   },
   {
     company: "NHS",
@@ -36,9 +35,7 @@ const testimonials = [
     quote:
       "We brought Neurodiversity Global in to redesign our recruitment processes across three trusts. Within six months, disclosure rates increased by 40% and our neurodivergent staff reported significantly higher confidence in requesting adjustments. This is infrastructure-level change.",
     portrait: portrait2,
-    accent: "from-rose-500 to-rose-600",
-    accentBg: "from-rose-500/15 to-rose-600/5",
-    featured: true,
+    stat: "40% increase in disclosure rates",
   },
   {
     company: "TransPennine Express",
@@ -48,9 +45,7 @@ const testimonials = [
     quote:
       "The neurodiversity champion programme was a turning point for us. We now have 25 trained champions embedded across operations, and our managers finally have a framework for supporting different thinking styles. Sickness absence in teams with champions dropped by 18%.",
     portrait: portrait3,
-    accent: "from-amber-500 to-amber-600",
-    accentBg: "from-amber-500/15 to-amber-600/5",
-    featured: false,
+    stat: "18% drop in sickness absence",
   },
   {
     company: "Smartest Energy",
@@ -60,9 +55,7 @@ const testimonials = [
     quote:
       "What sets Neurodiversity Global apart is their refusal to treat this as a tick-box exercise. They helped us build neurodiversity into our performance review process, our office design, and our leadership development. The ROI has been extraordinary, both in retention and in the quality of ideas reaching leadership.",
     portrait: portrait4,
-    accent: "from-emerald-500 to-emerald-600",
-    accentBg: "from-emerald-500/15 to-emerald-600/5",
-    featured: false,
+    stat: "Extraordinary ROI in retention",
   },
   {
     company: "Suez",
@@ -72,9 +65,7 @@ const testimonials = [
     quote:
       "Working with Neurodiversity Global helped us understand that our operational environments were unintentionally excluding neurodivergent colleagues. Their site-level training programme reached over 400 frontline managers, and we have seen a significant improvement in how adjustments are handled. Grievances related to disability dropped by 30% in the first year.",
     portrait: portrait5,
-    accent: "from-violet-500 to-violet-600",
-    accentBg: "from-violet-500/15 to-violet-600/5",
-    featured: true,
+    stat: "30% drop in disability grievances",
   },
   {
     company: "Agillio",
@@ -84,11 +75,89 @@ const testimonials = [
     quote:
       "As a growing business, we needed to get neurodiversity right from the start rather than retrofitting later. Neurodiversity Global helped us embed inclusive practices into our hiring, onboarding, and management frameworks. Our neurodivergent employees consistently rate us higher on belonging than the industry average.",
     portrait: portrait6,
-    accent: "from-orange-500 to-orange-600",
-    accentBg: "from-orange-500/15 to-orange-600/5",
-    featured: false,
+    stat: "Above-average belonging scores",
   },
 ];
+
+const logos = [
+  { name: "ACAS", logo: acasLogo },
+  { name: "NHS", logo: nhsLogo },
+  { name: "TransPennine Express", logo: tpeLogo },
+  { name: "Smartest Energy", logo: smartestLogo },
+  { name: "Suez", logo: suezLogo },
+  { name: "Agillio", logo: agillioLogo },
+];
+
+const TestimonialRow = ({
+  t,
+  flip,
+}: {
+  t: (typeof testimonials)[0];
+  flip: boolean;
+}) => (
+  <div
+    className={`grid lg:grid-cols-[1fr_1.1fr] gap-0 items-stretch ${
+      flip ? "lg:[direction:rtl]" : ""
+    }`}
+  >
+    {/* Portrait side */}
+    <div className="relative h-64 lg:h-auto overflow-hidden">
+      <img
+        src={t.portrait}
+        alt={t.name}
+        className="absolute inset-0 w-full h-full object-cover object-top"
+      />
+      {/* Gradient into content */}
+      <div
+        className={`absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r ${
+          flip ? "lg:bg-gradient-to-l" : ""
+        } from-transparent via-transparent to-primary/40`}
+      />
+      {/* Stat badge */}
+      <div className="absolute bottom-4 left-4 lg:bottom-6 lg:left-6 bg-primary/90 backdrop-blur-sm rounded-lg px-4 py-2.5 shadow-lg" style={{ direction: "ltr" }}>
+        <p className="font-display font-bold text-accent text-sm">{t.stat}</p>
+      </div>
+    </div>
+
+    {/* Content side */}
+    <div className="p-8 lg:p-12 xl:p-16 flex flex-col justify-center" style={{ direction: "ltr" }}>
+      <div className="flex items-center gap-4 mb-6">
+        <img
+          src={t.logo}
+          alt={t.company}
+          className="h-12 lg:h-14 w-auto object-contain"
+        />
+        <div className="h-8 w-px bg-primary-foreground/15" />
+        <p className="font-display font-bold text-lg text-primary-foreground/90">
+          {t.company}
+        </p>
+      </div>
+
+      <Quote
+        size={28}
+        className="text-accent/40 mb-4"
+        aria-hidden="true"
+      />
+      <blockquote className="text-base lg:text-lg text-primary-foreground/80 leading-relaxed italic mb-6">
+        "{t.quote}"
+      </blockquote>
+
+      <div className="flex items-center gap-3">
+        <img
+          src={t.portrait}
+          alt={t.name}
+          className="w-10 h-10 rounded-full object-cover ring-2 ring-accent/30"
+        />
+        <div>
+          <p className="font-display font-semibold text-sm text-primary-foreground">
+            {t.name}
+          </p>
+          <p className="text-xs text-primary-foreground/50">{t.role}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+);
 
 const Testimonials = () => (
   <main>
@@ -99,6 +168,7 @@ const Testimonials = () => (
     />
     <Navbar />
 
+    {/* Hero */}
     <section className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 pb-10 lg:pt-24 lg:pb-14">
         <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-4">
@@ -111,113 +181,54 @@ const Testimonials = () => (
           We are proud to serve clients across the globe. Each of the organisations you see here has made a deliberate decision to go further than generic, tick box neurodiversity in work training. They have chosen to lead rather than follow, recognising that inclusion, performance, and trust are inseparable. These organisations are not waiting for regulation, risk, or reputational pressure to act. They are setting the standard for what good looks like.
         </p>
       </div>
+
+      {/* Logo bar */}
+      <div className="border-t border-primary-foreground/10">
+        <div className="mx-auto max-w-wide px-6 lg:px-10 py-8">
+          <div className="flex flex-wrap items-center justify-start gap-10 lg:gap-16">
+            {logos.map((l) => (
+              <img
+                key={l.name}
+                src={l.logo}
+                alt={l.name}
+                className="h-10 lg:h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section className="bg-warm-stone py-14 lg:py-20">
-      <div className="mx-auto max-w-wide px-6 lg:px-10">
-        {/* Featured testimonials - large cards */}
-        <div className="grid lg:grid-cols-2 gap-8 mb-10">
-          {testimonials.filter(t => t.featured).map((t) => (
-            <article
-              key={t.company}
-              className="group relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 bg-card border border-border"
-            >
-              {/* Background portrait */}
-              <div className="absolute inset-0 pointer-events-none">
-                <img
-                  src={t.portrait}
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute right-0 top-0 h-full w-1/2 object-cover object-top opacity-[0.07] group-hover:opacity-[0.12] transition-opacity duration-700 scale-110 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-card via-card/95 to-card/50" />
-              </div>
-
-              {/* Accent strip */}
-              <div className={`h-1.5 bg-gradient-to-r ${t.accent}`} />
-
-              <div className="relative p-8 lg:p-10">
-                <div className="flex items-center gap-5 mb-6">
-                  <div className="flex items-center justify-center rounded-lg bg-background border border-border p-3 w-16 h-16 shrink-0 shadow-sm">
-                    <img src={t.logo} alt={t.company} className="h-10 w-auto object-contain" />
-                  </div>
-                  <div>
-                    <p className="font-display font-bold text-lg text-card-foreground">{t.company}</p>
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <Quote size={24} className="text-accent/30 mb-3" aria-hidden="true" />
-                  <blockquote className="text-base text-card-foreground/80 leading-relaxed italic">
-                    "{t.quote}"
-                  </blockquote>
-                </div>
-
-                <footer className="mt-6 pt-5 border-t border-border flex items-center gap-3">
-                  <img
-                    src={t.portrait}
-                    alt={t.name}
-                    className="w-11 h-11 rounded-full object-cover ring-2 ring-accent/25 shadow-sm"
-                  />
-                  <div>
-                    <p className="font-display font-semibold text-sm text-card-foreground">{t.name}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{t.role}</p>
-                  </div>
-                </footer>
-              </div>
-            </article>
-          ))}
+    {/* Testimonials — alternating editorial rows */}
+    {testimonials.map((t, i) => (
+      <section
+        key={t.company}
+        className={i % 2 === 0 ? "bg-primary text-primary-foreground" : "bg-warm-stone text-foreground"}
+      >
+        <div className="mx-auto max-w-wide">
+          <TestimonialRow
+            t={t}
+            flip={i % 2 !== 0}
+          />
         </div>
+      </section>
+    ))}
 
-        {/* Standard testimonials - three column */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.filter(t => !t.featured).map((t) => (
-            <article
-              key={t.company}
-              className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 bg-card border border-border"
-            >
-              {/* Background portrait */}
-              <div className="absolute inset-0 pointer-events-none">
-                <img
-                  src={t.portrait}
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute right-0 bottom-0 h-full w-3/5 object-cover object-top opacity-[0.05] group-hover:opacity-[0.09] transition-opacity duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-card via-card/95 to-card/60" />
-              </div>
-
-              {/* Accent strip */}
-              <div className={`h-1 bg-gradient-to-r ${t.accent}`} />
-
-              <div className="relative p-6 lg:p-7 flex flex-col min-h-[280px]">
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="flex items-center justify-center rounded-lg bg-background border border-border p-2 w-12 h-12 shrink-0 shadow-sm">
-                    <img src={t.logo} alt={t.company} className="h-8 w-auto object-contain" />
-                  </div>
-                  <p className="font-display font-bold text-sm text-card-foreground">{t.company}</p>
-                </div>
-
-                <Quote size={18} className="text-accent/30 mb-2 shrink-0" aria-hidden="true" />
-                <blockquote className="text-sm text-card-foreground/75 leading-relaxed italic flex-1">
-                  "{t.quote}"
-                </blockquote>
-
-                <footer className="mt-5 pt-4 border-t border-border flex items-center gap-3">
-                  <img
-                    src={t.portrait}
-                    alt={t.name}
-                    className="w-9 h-9 rounded-full object-cover ring-2 ring-accent/20 shadow-sm"
-                  />
-                  <div>
-                    <p className="font-display font-semibold text-sm text-card-foreground">{t.name}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{t.role}</p>
-                  </div>
-                </footer>
-              </div>
-            </article>
-          ))}
-        </div>
+    {/* CTA */}
+    <section className="bg-primary text-primary-foreground">
+      <div className="mx-auto max-w-wide px-6 lg:px-10 py-16 lg:py-20 text-center">
+        <h2 className="font-display font-extrabold text-3xl md:text-4xl tracking-tight mb-4">
+          Ready to join them?
+        </h2>
+        <p className="text-primary-foreground/70 max-w-[48ch] mx-auto mb-8">
+          Book a discovery call and find out how we can help your organisation lead on neuroinclusion.
+        </p>
+        <Link
+          to="/what-we-do"
+          className="inline-flex items-center gap-2 bg-accent text-accent-foreground font-display font-bold px-8 py-3.5 rounded-lg hover:gap-3 transition-all shadow-lg hover:shadow-xl"
+        >
+          Start a conversation <ArrowRight size={16} />
+        </Link>
       </div>
     </section>
 
