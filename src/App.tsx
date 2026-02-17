@@ -29,6 +29,7 @@ import BlogPost from "./pages/BlogPost";
 import CommunityQuestions from "./pages/CommunityQuestions";
 import Sources from "./pages/Sources";
 import Feedback from "./pages/Feedback";
+import Parents from "./pages/Parents";
 import NotFound from "./pages/NotFound";
 import ExperienceSelector from "./components/ExperienceSelector";
 import ScanModeBanner from "./components/ScanModeBanner";
@@ -69,6 +70,7 @@ const AppContent = () => {
           <Route path="/community-questions" element={<CommunityQuestions />} />
           <Route path="/sources" element={<Sources />} />
           <Route path="/feedback" element={<Feedback />} />
+          <Route path="/parents" element={<Parents />} />
           <Route path="/admin" element={<AdminQA />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

@@ -15,6 +15,7 @@ const navLinks: NavItem[] = [
   { labelKey: "nav.whoWeWorkWith", href: "/who-we-work-with" },
   { labelKey: "nav.whatWeDo", href: "/what-we-do" },
   { labelKey: "nav.workshops", href: "/workshops" },
+  { labelKey: "nav.parents", href: "/parents" },
   {
     labelKey: "nav.about",
     href: "/#values",
