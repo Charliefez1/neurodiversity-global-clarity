@@ -199,21 +199,6 @@ const Testimonials = () => (
         </p>
       </div>
 
-      {/* Logo bar */}
-      <div className="border-t border-primary-foreground/10">
-        <div className="mx-auto max-w-wide px-6 lg:px-10 py-8">
-          <div className="flex flex-wrap items-center justify-start gap-10 lg:gap-16">
-            {logos.map((l) => (
-              <img
-                key={l.name}
-                src={l.logo}
-                alt={l.name}
-                className="h-10 lg:h-12 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity"
-              />
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
 
     {/* Testimonials — alternating editorial rows */}
