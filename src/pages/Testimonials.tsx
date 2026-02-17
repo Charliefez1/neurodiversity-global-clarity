@@ -10,12 +10,12 @@ import tpeLogo from "@/assets/logos/transpennine-express.png";
 import smartestLogo from "@/assets/logos/smartest-energy-full.png";
 import suezLogo from "@/assets/logos/suez.png";
 import agillioLogo from "@/assets/logos/agillio.png";
-import portrait1 from "@/assets/testimonials/portrait-1.jpg";
-import portrait2 from "@/assets/testimonials/portrait-2.jpg";
-import portrait3 from "@/assets/testimonials/portrait-3.jpg";
-import portrait4 from "@/assets/testimonials/portrait-4.jpg";
-import portrait5 from "@/assets/testimonials/portrait-5.jpg";
-import portrait6 from "@/assets/testimonials/portrait-6.jpg";
+import acasHero from "@/assets/testimonials/acas-hero.png";
+import nhsHero from "@/assets/testimonials/nhs-hero.png";
+import tpeHero from "@/assets/testimonials/tpe-hero.png";
+import smartestHero from "@/assets/testimonials/smartest-hero.png";
+import suezHero from "@/assets/testimonials/suez-hero.png";
+import agillioHero from "@/assets/testimonials/agillio-hero.png";
 
 const testimonials = [
   {
@@ -27,7 +27,7 @@ const testimonials = [
       "We have been so proud to be asked by ACAS to be part of their ongoing series of webinars about neurodiversity in the workplace. We have presented to hundreds of their members over the last two years and look forward to continuing this partnership long into the future.",
     quote:
       "This was one of the most practical and grounded sessions on neurodiversity at work I have attended. It moved beyond awareness and focused on how environments, behaviours, and systems shape performance. The examples were clear, relevant, and immediately applicable to real workplace situations. As an ACAS member, I found the balance between lived experience, employment context, and practical action particularly valuable.",
-    portrait: portrait1,
+    portrait: acasHero,
     stat: "Ongoing ACAS webinar partnership",
   },
   {
@@ -37,7 +37,7 @@ const testimonials = [
     role: "Director of Workforce Development",
     quote:
       "We brought Neurodiversity Global in to redesign our recruitment processes across three trusts. Within six months, disclosure rates increased by 40% and our neurodivergent staff reported significantly higher confidence in requesting adjustments. This is infrastructure-level change.",
-    portrait: portrait2,
+    portrait: nhsHero,
     stat: "40% increase in disclosure rates",
   },
   {
@@ -47,7 +47,7 @@ const testimonials = [
     role: "People and Culture Director",
     quote:
       "The neurodiversity champion programme was a turning point for us. We now have 25 trained champions embedded across operations, and our managers finally have a framework for supporting different thinking styles. Sickness absence in teams with champions dropped by 18%.",
-    portrait: portrait3,
+    portrait: tpeHero,
     stat: "18% drop in sickness absence",
   },
   {
@@ -57,7 +57,7 @@ const testimonials = [
     role: "Chief People Officer",
     quote:
       "What sets Neurodiversity Global apart is their refusal to treat this as a tick-box exercise. They helped us build neurodiversity into our performance review process, our office design, and our leadership development. The ROI has been extraordinary, both in retention and in the quality of ideas reaching leadership.",
-    portrait: portrait4,
+    portrait: smartestHero,
     stat: "Extraordinary ROI in retention",
   },
   {
@@ -67,7 +67,7 @@ const testimonials = [
     role: "Group HR Director",
     quote:
       "Working with Neurodiversity Global helped us understand that our operational environments were unintentionally excluding neurodivergent colleagues. Their site-level training programme reached over 400 frontline managers, and we have seen a significant improvement in how adjustments are handled. Grievances related to disability dropped by 30% in the first year.",
-    portrait: portrait5,
+    portrait: suezHero,
     stat: "30% drop in disability grievances",
   },
   {
@@ -77,7 +77,7 @@ const testimonials = [
     role: "Managing Director",
     quote:
       "As a growing business, we needed to get neurodiversity right from the start rather than retrofitting later. Neurodiversity Global helped us embed inclusive practices into our hiring, onboarding, and management frameworks. Our neurodivergent employees consistently rate us higher on belonging than the industry average.",
-    portrait: portrait6,
+    portrait: agillioHero,
     stat: "Above-average belonging scores",
   },
 ];
@@ -157,18 +157,11 @@ const TestimonialRow = ({
           "{t.quote}"
         </blockquote>
 
-        <div className="flex items-center gap-3">
-          <img
-            src={t.portrait}
-            alt={t.name}
-            className="w-10 h-10 rounded-full object-cover ring-2 ring-accent/30"
-          />
-          <div>
-            <p className={`font-display font-semibold text-sm ${txt}`}>
-              {t.name}
-            </p>
-            <p className={`text-xs ${txtSub}`}>{t.role}</p>
-          </div>
+        <div>
+          <p className={`font-display font-semibold text-sm ${txt}`}>
+            {t.name}
+          </p>
+          <p className={`text-xs ${txtSub}`}>{t.role}</p>
         </div>
       </div>
     </div>
