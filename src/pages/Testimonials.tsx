@@ -107,8 +107,8 @@ const Testimonials = () => (
         <h1 className="font-display font-extrabold text-4xl md:text-5xl tracking-tight leading-[1.08]">
           Real results from real organisations.
         </h1>
-        <p className="mt-6 text-lg opacity-80 max-w-[52ch] leading-relaxed">
-          These organisations chose to treat neurodiversity as infrastructure. Here is what happened.
+        <p className="mt-6 text-lg opacity-80 max-w-[64ch] leading-relaxed">
+          We are proud to serve clients across the globe. Each of the organisations you see here has made a deliberate decision to go further than generic, tick box neurodiversity in work training. They have chosen to lead rather than follow, recognising that inclusion, performance, and trust are inseparable. These organisations are not waiting for regulation, risk, or reputational pressure to act. They are setting the standard for what good looks like.
         </p>
       </div>
     </section>
