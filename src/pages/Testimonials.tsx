@@ -132,7 +132,8 @@ const TestimonialRow = ({
           <img
             src={t.logo}
             alt={t.company}
-            className="h-12 lg:h-14 w-auto object-contain"
+            className="h-12 lg:h-14 w-auto object-contain data-[company=smartest]:h-24 data-[company=smartest]:lg:h-28"
+            data-company={t.company === "Smartest Energy" ? "smartest" : undefined}
           />
           <div className={`h-8 w-px ${divider}`} />
           <p className={`font-display font-bold text-lg ${txt}/90`}>
