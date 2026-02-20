@@ -7,6 +7,7 @@ import ADHDi from "@/components/ADHDi";
 import RecommendedBy from "@/components/RecommendedBy";
 import HeroWorkshopSearch from "@/components/HeroWorkshopSearch";
 import conciergeTeam from "@/assets/concierge-team.png";
+import TrustIndicators from "@/components/TrustIndicators";
 
 const pathwayKeys = [
   {
@@ -198,6 +199,9 @@ const HeroSection = () => {
               <p className="mt-4 text-xs opacity-40 text-center">
                 {t("hero.peopleTrained")}
               </p>
+              <div className="mt-4 pt-4 border-t border-primary-foreground/10">
+                <TrustIndicators />
+              </div>
             </div>
           </div>
         </div>
