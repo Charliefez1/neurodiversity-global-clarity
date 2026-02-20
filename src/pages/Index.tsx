@@ -7,7 +7,7 @@ import EvidenceSection from "@/components/EvidenceSection";
 import AccessibilitySection from "@/components/AccessibilitySection";
 import FinalCTA from "@/components/FinalCTA";
 import ResourcesSection from "@/components/ResourcesSection";
-import EmbedSection from "@/components/EmbedSection";
+
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { organisationSchema } from "@/components/JsonLd";
@@ -23,7 +23,7 @@ const indexSections = [
   { id: "evidence", label: "Evidence", icon: Award },
   { id: "values", label: "Values", icon: Heart },
   { id: "contact", label: "Contact", icon: Phone },
-  { id: "embed", label: "Explore", icon: Sparkles },
+  
   { id: "resources", label: "Resources", icon: BookOpen },
 ];
 
@@ -46,7 +46,7 @@ const Index = () => {
       <EvidenceSection />
       <AccessibilitySection />
       <FinalCTA />
-      <EmbedSection />
+      
       <ResourcesSection />
       <section className="py-12 lg:py-16 bg-muted">
         <div className="mx-auto max-w-wide px-6 lg:px-10">
