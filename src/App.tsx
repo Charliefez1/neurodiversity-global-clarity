@@ -28,6 +28,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import CommunityQuestions from "./pages/CommunityQuestions";
 import Sources from "./pages/Sources";
+import CaseStudies from "./pages/CaseStudies";
 import Feedback from "./pages/Feedback";
 import Parents from "./pages/Parents";
 import NotFound from "./pages/NotFound";
@@ -71,6 +72,7 @@ const AppContent = () => {
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/community-questions" element={<CommunityQuestions />} />
           <Route path="/sources" element={<Sources />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/parents" element={<Parents />} />
           <Route path="/admin" element={<AdminQA />} />
