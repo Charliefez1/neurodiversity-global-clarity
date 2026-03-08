@@ -125,7 +125,7 @@ const IndustryEducation = () => {
         <PageSection id="evidence" badge="Experience" title="Our work in education" variant="secondary">
           <div className="grid md:grid-cols-2 gap-6">
             <TestimonialBlock
-              quote="They helped us see that neurodiversity isn't just a student support issue — it's an institutional culture issue."
+              quote="They helped us see that neurodiversity isn't just a student support issue. It's an institutional culture issue."
               author="Pro Vice-Chancellor"
               org="UK University"
             />

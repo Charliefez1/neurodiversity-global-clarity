@@ -75,10 +75,10 @@ const ForEmployers = () => (
     heroImage={heroImg}
     heroImageAlt="Diverse workforce across industries"
     placeholders={[
-      "We've had a grievance involving a neurodivergent employee — what should we do?",
+      "We've had a grievance involving a neurodivergent employee. What should we do?",
       "How do I make our recruitment process more neuroinclusive?",
       "What training do our managers need on neurodiversity?",
-      "We want to set up a neurodiversity network — where do we start?",
+      "We want to set up a neurodiversity network. Where do we start?",
       "How do we handle reasonable adjustments without it becoming unmanageable?",
     ]}
   >

@@ -105,7 +105,7 @@ const IndustryTechnology = () => {
           <RelevantWorkshops
             workshopIds={["technology-sector", "tech-function", "awareness", "champions", "line-manager", "mental-health", "react", "exec-briefing"]}
             title="Technology-recommended sessions"
-            description="From engineering team workshops to executive briefings — all using language and scenarios from tech environments."
+            description="From engineering team workshops to executive briefings, all using language and scenarios from tech environments."
           />
         </PageSection>
 

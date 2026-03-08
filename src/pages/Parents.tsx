@@ -68,7 +68,7 @@ const Parents = () => {
           id="navigator"
           badge="Interactive tool"
           title="SEND Reform Navigator"
-          description="Plain-English answers about SEND reform. What we know, what's changing, and what hasn't. Use it directly below — no sign-up needed."
+          description="Plain-English answers about SEND reform. What we know, what's changing, and what hasn't. Use it directly below. No sign-up needed."
           variant="sand"
         >
           <div className="rounded-xl border border-border overflow-hidden shadow-lg bg-background">
