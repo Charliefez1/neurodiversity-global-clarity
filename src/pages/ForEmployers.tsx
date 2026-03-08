@@ -1,4 +1,5 @@
 import PathwayLanding from "@/components/templates/PathwayLanding";
+import heroImg from "@/assets/pathway-employers-hero.png";
 
 const ForEmployers = () => (
   <PathwayLanding
