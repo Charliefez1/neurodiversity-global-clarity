@@ -466,7 +466,7 @@ const slides: Slide[] = [
     bullets: [
       "Siblings have more responsibilities, more worries, and less parental attention than their peers (Sibs, UK)",
       "75% of parents reported their sibling child's mental health worsened during the pandemic",
-      "50% of siblings were providing more care during lockdown — children caring for children",
+      "50% of siblings were providing more care during lockdown. Children caring for children",
       "Siblings often do not raise their own difficulties to avoid adding to the family's load",
       "Problems that would be caught in another family go unnoticed",
       "Watch for: declining school performance, anger outbursts, social withdrawal",
