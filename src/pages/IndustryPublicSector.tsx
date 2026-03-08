@@ -72,7 +72,7 @@ const IndustryPublicSector = () => {
         <PageHero
           badge="Neurodiversity in public sector"
           title="Policy heavy. Risk aware. Slow to change."
-          description="Government departments and public bodies have the governance structures for neuroinclusion — but compliance culture, budget constraints, and hierarchy mean capability consistently lags behind policy."
+          description="Government departments and public bodies have the governance structures for neuroinclusion, but compliance culture, budget constraints, and hierarchy mean capability consistently lags behind policy."
         />
 
         <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points public sector can't ignore">
