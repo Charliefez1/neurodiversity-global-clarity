@@ -59,6 +59,36 @@ export type Database = {
         }
         Relationships: []
       }
+      presentation_signups: {
+        Row: {
+          company: string | null
+          created_at: string
+          email: string
+          id: string
+          name: string
+          presentation: string
+          use_context: string
+        }
+        Insert: {
+          company?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          presentation?: string
+          use_context?: string
+        }
+        Update: {
+          company?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          presentation?: string
+          use_context?: string
+        }
+        Relationships: []
+      }
       qa_feedback: {
         Row: {
           ai_query: string | null
