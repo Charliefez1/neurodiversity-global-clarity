@@ -91,7 +91,7 @@ const ProblemSection = () => {
               <h3 className="font-display font-bold text-sm text-primary-foreground mb-4 leading-snug">{p.title}</h3>
 
               {mode === "scan" ? (
-                <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
+                <p className="text-white/70 text-sm leading-relaxed">{p.summary}</p>
               ) : mode === "read" ? (
                 <ul className="space-y-2.5">
                   {p.points.map((point, i) => (
