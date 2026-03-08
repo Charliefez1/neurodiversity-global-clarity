@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, Building2, Landmark, Heart, GraduationCap, BookOpen, Users, Briefcase, Mic, Shield, Search, Sparkles, Loader2, Mail } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import Concierge from "@/components/Concierge";
@@ -16,24 +17,27 @@ const pathwayKeys = [
     titleKey: "pathways.employers",
     subtitleKey: "pathways.employersSub",
     descKey: "pathways.employersDesc",
-    href: "#services",
+    href: "/for-employers",
     accent: "text-accent",
+    isRoute: true,
   },
   {
     icon: Landmark,
     titleKey: "pathways.publicSector",
     subtitleKey: "pathways.publicSectorSub",
     descKey: "pathways.publicSectorDesc",
-    href: "#services",
+    href: "/for-public-sector",
     accent: "text-accent",
+    isRoute: true,
   },
   {
     icon: Heart,
     titleKey: "pathways.parents",
     subtitleKey: "pathways.parentsSub",
     descKey: "pathways.parentsDesc",
-    href: "#services",
+    href: "/for-parents",
     accent: "text-red-500",
+    isRoute: true,
   },
 ];
 
@@ -262,27 +266,27 @@ const HeroSection = () => {
           <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-8">
             {t("hero.lookingForSupport")}
           </p>
-          <div className="grid md:grid-cols-3 gap-5">
-            {pathwayKeys.map((p) => (
-              <a
-                key={p.titleKey}
-                href={p.href}
-                className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <p.icon size={20} className={`${p.accent} shrink-0`} aria-hidden="true" />
-                  <div>
-                    <h2 className="font-display font-bold text-base leading-tight">{t(p.titleKey)}</h2>
-                    <p className="text-xs opacity-50 mt-0.5">{t(p.subtitleKey)}</p>
-                  </div>
-                </div>
-                <p className="text-sm text-primary-foreground/75 leading-relaxed flex-1">{t(p.descKey)}</p>
-                <span className="mt-5 inline-flex items-center gap-1.5 text-accent text-sm font-semibold group-hover:gap-2.5 transition-all">
-                  {t("hero.learnMore")} <ArrowRight size={14} aria-hidden="true" />
-                </span>
-              </a>
-            ))}
-          </div>
+           <div className="grid md:grid-cols-3 gap-5">
+             {pathwayKeys.map((p) => (
+               <Link
+                 key={p.titleKey}
+                 to={p.href}
+                 className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+               >
+                 <div className="flex items-center gap-3 mb-3">
+                   <p.icon size={20} className={`${p.accent} shrink-0`} aria-hidden="true" />
+                   <div>
+                     <h2 className="font-display font-bold text-base leading-tight">{t(p.titleKey)}</h2>
+                     <p className="text-xs opacity-50 mt-0.5">{t(p.subtitleKey)}</p>
+                   </div>
+                 </div>
+                 <p className="text-sm text-primary-foreground/75 leading-relaxed flex-1">{t(p.descKey)}</p>
+                 <span className="mt-5 inline-flex items-center gap-1.5 text-accent text-sm font-semibold group-hover:gap-2.5 transition-all">
+                   {t("hero.learnMore")} <ArrowRight size={14} aria-hidden="true" />
+                 </span>
+               </Link>
+             ))}
+           </div>
         </div>
       </div>
     </section>
