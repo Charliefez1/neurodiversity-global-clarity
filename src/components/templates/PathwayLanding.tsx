@@ -224,7 +224,7 @@ const PathwayLanding = ({
         )}
 
         {/* ═══════════════════════════════════════════
-            IN YOUR OWN WORDS — conversational AI search
+            IN YOUR OWN WORDS: conversational AI search
             ═══════════════════════════════════════════ */}
         {!hideAskSection && (
         <section id="ask-section" className="bg-warm-stone py-16 lg:py-24">
