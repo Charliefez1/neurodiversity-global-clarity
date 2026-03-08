@@ -262,7 +262,7 @@ const slides: Slide[] = [
       "Dopamine is not a happiness chemical. It is a motivation and reward signal.",
       "For many neurodivergent people, the dopamine system does not deliver a steady, usable signal.",
       "The brain goes searching for stimulation to reach a level where it can function.",
-      "This is called dopamine searching — it is neurological, not a choice.",
+      "This is called dopamine searching. It is neurological, not a choice.",
       "In younger children: noise, movement, interrupting, refusing boring tasks.",
       "In adolescence: the same drive finds riskier outlets.",
       "The creativity, hyperfocus, and courage are the same system. You cannot separate them.",
