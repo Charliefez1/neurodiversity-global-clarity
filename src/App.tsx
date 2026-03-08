@@ -82,6 +82,7 @@ const AppContent = () => {
           <Route path="/for-employers" element={<ForEmployers />} />
           <Route path="/for-public-sector" element={<ForPublicSector />} />
           <Route path="/for-parents" element={<ForParents />} />
+          <Route path="/for-parents/presentation" element={<ParentPresentation />} />
           <Route path="/admin" element={<AdminQA />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
