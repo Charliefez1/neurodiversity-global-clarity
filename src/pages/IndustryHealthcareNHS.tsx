@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/templates/PageHero";
 import PageSection from "@/components/templates/PageSection";
 import PageCTA from "@/components/templates/PageCTA";
-import MultiCTABar from "@/components/MultiCTABar";
+
 import KeyIssuesGrid from "@/components/blocks/KeyIssuesGrid";
 import WhatIsBreaking from "@/components/blocks/WhatIsBreaking";
 import PositivesBlock from "@/components/blocks/PositivesBlock";
@@ -170,7 +170,7 @@ const IndustryHealthcareNHS = () => {
           </div>
         </PageSection>
 
-        <MultiCTABar />
+        
 
         <PageCTA title="Ready to make neurodiversity work in healthcare?" description="Book a discovery call. We'll discuss your specific challenges and recommend a practical next step." />
       </main>

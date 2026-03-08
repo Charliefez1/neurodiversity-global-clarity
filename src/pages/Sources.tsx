@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SourceCard from "@/components/SourceCard";
-import MultiCTABar from "@/components/MultiCTABar";
+
 import { Database, BookOpen, Scale, Microscope, Building2 } from "lucide-react";
 
 const sources = [
@@ -105,7 +105,7 @@ const Sources = () => {
         </div>
       </section>
 
-      <MultiCTABar />
+      
       <Footer />
     </main>
   );

@@ -3,7 +3,7 @@ import { ArrowRight, Clock, Calendar } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import MultiCTABar from "@/components/MultiCTABar";
+
 import NewsHeadlines from "@/components/NewsHeadlines";
 import { blogPosts } from "@/data/blogPosts";
 
@@ -123,7 +123,7 @@ const Blog = () => {
         </div>
       </section>
 
-      <MultiCTABar />
+      
       <Footer />
     </>
   );

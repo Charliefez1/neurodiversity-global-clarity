@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import MultiCTABar from "@/components/MultiCTABar";
+
 import { getBlogPost, getRelatedPosts } from "@/data/blogPosts";
 
 const BlogPost = () => {
@@ -104,7 +104,7 @@ const BlogPost = () => {
         </div>
       </article>
 
-      <MultiCTABar />
+      
 
       {/* Related Posts */}
       {related.length > 0 && (

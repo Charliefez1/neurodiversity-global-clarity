@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import AskQuestionCompact from "@/components/AskQuestionCompact";
-import MultiCTABar from "@/components/MultiCTABar";
+
 
 interface Question {
   id: string;
@@ -109,7 +109,7 @@ const CommunityQuestions = () => {
         </div>
       </section>
 
-      <MultiCTABar />
+      
       <Footer />
     </main>
   );

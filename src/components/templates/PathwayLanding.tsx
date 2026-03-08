@@ -4,7 +4,7 @@ import { Phone, Mail, MessageCircle, ArrowRight, Send, Loader2, Headset, Sparkle
 import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import MultiCTABar from "@/components/MultiCTABar";
+
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -447,7 +447,7 @@ const PathwayLanding = ({
           </div>
         </section>
 
-        <MultiCTABar />
+        
       </main>
       <Footer />
     </>
