@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
 import coachingDashboard from "@/assets/coaching-dashboard.png";
+import { NEURO_COLOURS } from "@/data/neuroColours";
 
 const services = [
   {
