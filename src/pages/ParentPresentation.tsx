@@ -400,7 +400,7 @@ const slides: Slide[] = [
     bgVariant: "light",
   },
 
-  // SECTION 5 — Family & Strain
+  // SECTION 5: Family & Strain
   {
     id: "s24",
     type: "section-title",
