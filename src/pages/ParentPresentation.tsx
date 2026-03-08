@@ -519,7 +519,7 @@ const slides: Slide[] = [
     id: "s32",
     type: "content",
     sectionIndex: 6,
-    title: "What you actually need — not what you are usually given",
+    title: "What you actually need, not what you are usually given",
     bullets: [
       "Validation that it is genuinely as hard as you think it is",
       "Someone who does not require you to justify why this is difficult",
