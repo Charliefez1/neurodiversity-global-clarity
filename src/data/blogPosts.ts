@@ -1323,7 +1323,7 @@ Not because it is the right thing to do; but because it is the only way forward.
   },
   {
     slug: "screens-dopamine-neurodivergent-children",
-    title: "Why Your Child Falls Apart When the Screen Goes Off — and What to Do About It",
+    title: "Why Your Child Falls Apart When the Screen Goes Off, and What to Do About It",
     metaTitle: "Screens and Dopamine: Why Neurodivergent Children Struggle | Parent Guide",
     metaDescription: "Understand the neuroscience behind screen meltdowns in neurodivergent children. Practical, evidence-based strategies for parents managing screens, dopamine, and regulation.",
     excerpt: "The meltdown after the phone comes away is not about the phone. It is about a nervous system that was already working at its limits, and has now lost the thing that was keeping it level.",
