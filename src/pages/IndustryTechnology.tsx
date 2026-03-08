@@ -17,7 +17,7 @@ import JsonLd, { breadcrumbSchema, serviceSchema, faqSchema } from "@/components
 import { Cpu, Zap, MessageSquare, BarChart3, Brain } from "lucide-react";
 
 const faqs = [
-  { question: "Why does tech need neurodiversity training?", answer: "Technology attracts a high proportion of neurodivergent talent — but fast-paced, open-plan, always-on cultures can undermine the very people who drive innovation." },
+  { question: "Why does tech need neurodiversity training?", answer: "Technology attracts a high proportion of neurodivergent talent, but fast-paced, open-plan, always-on cultures can undermine the very people who drive innovation." },
   { question: "Do you work with engineering and product teams?", answer: "Yes. We deliver training adapted to engineering, product, design, and data teams, using language and scenarios they recognise." },
   { question: "Can you help with neurodiverse hiring?", answer: "We review and adapt recruitment processes to remove barriers for neurodivergent candidates, from job descriptions to interview formats." },
   { question: "How do you address sprint culture burnout?", answer: "Hyperfocus is exploited and recovery is ignored. We help design cognitive sustainability into delivery models so performance is maintained without burning out your best people." },
