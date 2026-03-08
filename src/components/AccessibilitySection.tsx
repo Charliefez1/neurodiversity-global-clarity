@@ -1,6 +1,7 @@
 import { Accessibility, Eye, Heart, Shield } from "lucide-react";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
+import { NEURO_COLOURS } from "@/data/neuroColours";
 
 const values = [
   {
@@ -66,9 +67,11 @@ const AccessibilitySection = () => {
           </div>
 
           <div className="grid sm:grid-cols-3 gap-5 lg:gap-6 flex-1">
-            {values.map((v) => (
+            {values.map((v, idx) => (
               <div key={v.title} className="rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5">
-                <v.icon size={20} className="text-accent mb-3" aria-hidden="true" />
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center mb-3" style={{ backgroundColor: `${NEURO_COLOURS[idx]}`.replace(')', '/0.15)').replace('hsl', 'hsla') }}>
+                  <v.icon size={18} style={{ color: NEURO_COLOURS[idx] }} aria-hidden="true" />
+                </div>
                 <h3 className="font-display font-bold text-sm mb-1.5">{v.title}</h3>
                 <p className="opacity-75 text-sm leading-relaxed">{v.description}</p>
               </div>
