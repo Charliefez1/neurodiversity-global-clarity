@@ -455,7 +455,7 @@ const slides: Slide[] = [
       "Acknowledging the asymmetry rather than resenting it silently",
       "Peer support from other families in the same situation is consistently the highest-value form of support",
     ],
-    speakerNotes: "What does not help: generic self-care advice — you cannot meditate out of a broken system. Being told to prioritise your relationship when there is no bandwidth left. Professionals who treat the relationship as the problem. Couples counselling that does not account for the SEND system as the context.",
+    speakerNotes: "What does not help: generic self-care advice. You cannot meditate out of a broken system. Being told to prioritise your relationship when there is no bandwidth left. Professionals who treat the relationship as the problem. Couples counselling that does not account for the SEND system as the context.",
     bgVariant: "sand",
   },
   {
