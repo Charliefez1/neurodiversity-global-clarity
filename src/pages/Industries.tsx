@@ -68,7 +68,7 @@ const coreFocus: Industry[] = [
   {
     name: "Technology & Digital",
     tagline: "High cognitive demand. Low cognitive support.",
-    description: "Tech companies, engineering teams, data and innovation functions. Environments that attract neurodivergent talent — then fail to retain it.",
+    description: "Tech companies, engineering teams, data and innovation functions. Environments that attract neurodivergent talent, then fail to retain it.",
     icon: Cpu,
     href: "/industries/technology",
     challenges: ["Open-plan sensory overload", "Context-switching fatigue", "Imposter syndrome", "Unstructured onboarding"],
