@@ -225,8 +225,8 @@ const HeroSection = () => {
       <RecommendedBy />
 
       {/* Tell us why you're here + Workshop Finder */}
-      <div className="border-t border-primary-foreground/8">
-        <div className="mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-16">
+      <div>
+        <div className="mx-auto max-w-wide px-6 lg:px-10 border-t border-primary-foreground/8 py-12 lg:py-16">
           <div className="lg:flex lg:gap-14">
             <div className="lg:w-[340px] shrink-0 mb-8 lg:mb-0">
               <h2 className="font-display font-bold text-lg md:text-xl leading-tight">
