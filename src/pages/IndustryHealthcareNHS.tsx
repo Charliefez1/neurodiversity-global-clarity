@@ -76,7 +76,7 @@ const IndustryHealthcareNHS = () => {
         />
 
         {/* Key Issues 2026 */}
-        <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points healthcare can't ignore" description="The NHS's strengths — resilience, dedication, pace — become barriers when systems aren't designed for cognitive diversity.">
+        <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points healthcare can't ignore" description="The NHS's strengths, resilience, dedication, pace, become barriers when systems aren't designed for cognitive diversity.">
           <KeyIssuesGrid issues={keyIssues} />
         </PageSection>
 
