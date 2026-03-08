@@ -476,7 +476,7 @@ const slides: Slide[] = [
     bgVariant: "light",
   },
 
-  // SECTION 6 — What Parents Carry
+  // SECTION 6: What Parents Carry
   {
     id: "s29",
     type: "section-title",
