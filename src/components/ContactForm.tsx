@@ -91,7 +91,12 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
   }
 
   const isCompact = variant === "compact";
-  const inputClass = "w-full rounded-lg border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+  const inputClass = dark
+    ? "w-full rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground px-3 py-2 text-sm placeholder:text-primary-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+    : "w-full rounded-lg border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+  const labelClass = dark
+    ? "text-xs font-display font-bold uppercase tracking-widest text-primary-foreground/50 mb-1.5 block"
+    : "text-xs font-display font-bold uppercase tracking-widest text-muted-foreground mb-1.5 block";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
