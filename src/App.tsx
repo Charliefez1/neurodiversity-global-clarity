@@ -45,6 +45,7 @@ import ScrollToTop from "./components/ScrollToTop";
 // Portal pages
 import PortalLogin from "./pages/portal/Login";
 import PortalDashboard from "./pages/portal/Dashboard";
+import PortalRoute from "./components/portal/PortalRoute";
 import PortalBookSession from "./pages/portal/BookSession";
 import PortalMyBookings from "./pages/portal/MyBookings";
 import PortalLearningLibrary from "./pages/portal/LearningLibrary";
