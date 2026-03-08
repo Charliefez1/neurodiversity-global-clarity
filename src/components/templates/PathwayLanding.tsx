@@ -220,14 +220,14 @@ const PathwayLanding = ({
         </section>
 
         {/* ── Ask Rich ── */}
-        <section className="bg-warm-stone py-16 lg:py-24">
+        <section className="bg-primary py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
             <div className="max-w-2xl mx-auto text-center">
               <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Knowledge base</p>
-              <h2 className="font-display font-bold text-lg md:text-xl leading-tight text-foreground">
+              <h2 className="font-display font-bold text-lg md:text-xl leading-tight text-primary-foreground">
                 Ask Rich about neurodiversity
               </h2>
-              <p className="mt-3 text-muted-foreground text-base leading-relaxed">
+              <p className="mt-3 text-primary-foreground/75 text-base leading-relaxed">
                 Rich is our co-founder and neurodiversity-in-work expert with 20+ years of experience.
                 Ask any question — our knowledge base has 60+ expert answers, and if yours isn't there, submit it.
               </p>
