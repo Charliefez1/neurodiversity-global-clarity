@@ -29,6 +29,9 @@ interface PathwayLandingProps {
   whatsappNumber: string;
   /** Placeholder prompts for the search box */
   placeholders: string[];
+  /** Optional hero image — when provided, hero becomes a split layout */
+  heroImage?: string;
+  heroImageAlt?: string;
   /** Additional page content below the core sections */
   children?: ReactNode;
 }
