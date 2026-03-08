@@ -128,8 +128,8 @@ const PathwayLanding = ({
     },
     {
       icon: Mail,
-      label: "Send us a message",
-      description: "We'll reply within 24 hours",
+      label: "Contact us",
+      description: "Send us a message",
       href: "/feedback",
       colour: NEURO_COLOURS[2],
       isRoute: true,
