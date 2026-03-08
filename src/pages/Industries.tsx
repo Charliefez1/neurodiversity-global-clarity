@@ -258,7 +258,7 @@ const Industries = () => {
                   transition={{ delay: 0.35 }}
                   className="mt-6 text-base lg:text-lg leading-relaxed opacity-75 max-w-[50ch]"
                 >
-                  We don't sell generic inclusion. We adapt our training, coaching, and consultancy to your industry — its language, its risks, and its reality.
+                  We don't sell generic inclusion. We adapt our training, coaching, and consultancy to your industry: its language, its risks, and its reality.
                 </motion.p>
 
                 <motion.div
