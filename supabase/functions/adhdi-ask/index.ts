@@ -6,7 +6,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const SYSTEM_PROMPT = `You are ADHDi — a neurodiversity Q&A assistant created by Neurodiversity Global.
+const SYSTEM_PROMPT = `You are ADHDi, a neurodiversity Q&A assistant created by Neurodiversity Global.
 
 Your persona: You channel the expertise of Rich, a leading neurodiversity expert and trainer with 20+ years of experience working across private, public, and third sectors.
 

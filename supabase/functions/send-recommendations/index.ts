@@ -95,9 +95,9 @@ serve(async (req) => {
         <tr>
           <td style="background-color: #f9f8f6; padding: 24px 28px; border-top: 1px solid #e5e5e5;">
             <p style="color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px;">Contact us directly</p>
-            <p style="margin: 0 0 6px; font-size: 14px;"><strong>Rich Ferriman</strong> — <a href="mailto:rich@neurodiversityglobal.com" style="color: #2a9d8f; text-decoration: none;">rich@neurodiversityglobal.com</a></p>
-            <p style="margin: 0 0 6px; font-size: 14px;"><strong>Charlie Ferriman</strong> — <a href="mailto:charlie@neurodiversityglobal.com" style="color: #2a9d8f; text-decoration: none;">charlie@neurodiversityglobal.com</a></p>
-            <p style="margin: 12px 0 0; font-size: 13px; color: #999;">Neurodiversity Global — neurodiversityglobal.com</p>
+            <p style="margin: 0 0 6px; font-size: 14px;"><strong>Rich Ferriman</strong> | <a href="mailto:rich@neurodiversityglobal.com" style="color: #2a9d8f; text-decoration: none;">rich@neurodiversityglobal.com</a></p>
+            <p style="margin: 0 0 6px; font-size: 14px;"><strong>Charlie Ferriman</strong> | <a href="mailto:charlie@neurodiversityglobal.com" style="color: #2a9d8f; text-decoration: none;">charlie@neurodiversityglobal.com</a></p>
+            <p style="margin: 12px 0 0; font-size: 13px; color: #999;">Neurodiversity Global | neurodiversityglobal.com</p>
           </td>
         </tr>
       </table>

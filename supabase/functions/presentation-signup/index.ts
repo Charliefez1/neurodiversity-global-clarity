@@ -42,7 +42,7 @@ Presentation: ${presentation}
 Time: ${new Date().toISOString()}
     `.trim();
 
-    // Log for monitoring — in production you'd integrate a proper email service
+    // Log for monitoring. In production you'd integrate a proper email service
     console.log("Notification email body:", emailBody);
 
     return new Response(
