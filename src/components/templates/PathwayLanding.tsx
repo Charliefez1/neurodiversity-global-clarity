@@ -122,10 +122,11 @@ const PathwayLanding = ({
     },
     {
       icon: Mail,
-      label: "Email us",
-      description: "hello@neurodiversityglobal.com",
-      href: "mailto:hello@neurodiversityglobal.com",
+      label: "Send us a message",
+      description: "We'll reply within 24 hours",
+      href: "/feedback",
       colour: NEURO_COLOURS[2],
+      isRoute: true,
     },
     {
       icon: MessageCircle,
@@ -157,7 +158,7 @@ const PathwayLanding = ({
         <PageHero badge={badge} title={title} description={heroDescription} />
 
         {/* ── In your own words search ── */}
-        <section className="bg-background py-16 lg:py-24">
+        <section className="bg-warm-stone py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
             <div className="max-w-2xl mx-auto text-center mb-10">
               <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">In your own words</p>
@@ -219,14 +220,14 @@ const PathwayLanding = ({
         </section>
 
         {/* ── Ask Rich ── */}
-        <section className="bg-warm-stone py-16 lg:py-24">
+        <section className="bg-primary py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
             <div className="max-w-2xl mx-auto text-center">
               <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Knowledge base</p>
-              <h2 className="font-display font-bold text-lg md:text-xl leading-tight text-foreground">
+              <h2 className="font-display font-bold text-lg md:text-xl leading-tight text-primary-foreground">
                 Ask Rich about neurodiversity
               </h2>
-              <p className="mt-3 text-muted-foreground text-base leading-relaxed">
+              <p className="mt-3 text-primary-foreground/75 text-base leading-relaxed">
                 Rich is our co-founder and neurodiversity-in-work expert with 20+ years of experience.
                 Ask any question — our knowledge base has 60+ expert answers, and if yours isn't there, submit it.
               </p>
@@ -243,7 +244,7 @@ const PathwayLanding = ({
         </section>
 
         {/* ── Contact CTAs ── */}
-        <section className="bg-background py-16 lg:py-24">
+        <section className="bg-warm-stone py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
             <div className="max-w-2xl mx-auto text-center mb-10">
               <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Get in touch</p>
@@ -256,35 +257,62 @@ const PathwayLanding = ({
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              {ctaItems.map((cta) => (
-                <a
-                  key={cta.label}
-                  href={cta.href}
-                  target={cta.href.startsWith("http") ? "_blank" : undefined}
-                  rel={cta.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  onClick={cta.isTawk ? (e) => {
-                    e.preventDefault();
-                    // Tawk.to toggle
-                    if (typeof (window as any).Tawk_API !== "undefined") {
-                      (window as any).Tawk_API.toggle();
-                    }
-                  } : undefined}
-                  className="rounded-xl border-2 border-border bg-card p-5 flex items-center gap-4 hover:shadow-lg hover:scale-[1.02] transition-all group"
-                  style={{ borderLeftColor: cta.colour, borderLeftWidth: 4 }}
-                >
+              {ctaItems.map((cta) => {
+                const inner = (
                   <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: `${cta.colour}20`, color: cta.colour }}
+                    className="rounded-xl border-2 border-border bg-card p-5 flex items-center gap-4 hover:shadow-lg hover:scale-[1.02] transition-all group h-full"
+                    style={{ borderLeftColor: cta.colour, borderLeftWidth: 4 }}
                   >
-                    <cta.icon size={18} />
+                    <div
+                      className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                      style={{ backgroundColor: `${cta.colour}20`, color: cta.colour }}
+                    >
+                      <cta.icon size={18} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-display font-bold text-sm text-foreground leading-tight">{cta.label}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{cta.description}</p>
+                    </div>
+                    <ArrowRight size={14} className="shrink-0 text-muted-foreground group-hover:text-accent transition-colors" />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-display font-bold text-sm text-foreground leading-tight">{cta.label}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{cta.description}</p>
-                  </div>
-                  <ArrowRight size={14} className="shrink-0 text-muted-foreground group-hover:text-accent transition-colors" />
-                </a>
-              ))}
+                );
+
+                if (cta.isRoute) {
+                  return (
+                    <Link key={cta.label} to={cta.href} className="block">
+                      {inner}
+                    </Link>
+                  );
+                }
+
+                if (cta.isTawk) {
+                  return (
+                    <button
+                      key={cta.label}
+                      onClick={() => {
+                        if (typeof (window as any).Tawk_API !== "undefined") {
+                          (window as any).Tawk_API.toggle();
+                        }
+                      }}
+                      className="block text-left w-full"
+                    >
+                      {inner}
+                    </button>
+                  );
+                }
+
+                return (
+                  <a
+                    key={cta.label}
+                    href={cta.href}
+                    target={cta.href.startsWith("http") ? "_blank" : undefined}
+                    rel={cta.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="block"
+                  >
+                    {inner}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </section>
