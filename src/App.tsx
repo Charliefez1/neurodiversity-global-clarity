@@ -142,7 +142,9 @@ const App = () => (
     <TooltipProvider>
       <ExperienceModeProvider>
         <PageSectionsProvider>
-          <AppContent />
+          <PortalAuthProvider>
+            <AppContent />
+          </PortalAuthProvider>
         </PageSectionsProvider>
       </ExperienceModeProvider>
     </TooltipProvider>
