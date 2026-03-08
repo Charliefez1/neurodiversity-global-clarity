@@ -83,26 +83,26 @@ const ProblemSection = () => {
           {problems.map((p) => (
             <article
               key={p.title}
-              className="rounded-xl border border-white/10 bg-card/90 backdrop-blur-sm p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="rounded-xl border border-white/10 bg-primary p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
                 <p.icon size={20} className="text-accent" aria-hidden="true" />
               </div>
-              <h3 className="font-display font-bold text-sm text-card-foreground mb-4 leading-snug">{p.title}</h3>
+              <h3 className="font-display font-bold text-sm text-primary-foreground mb-4 leading-snug">{p.title}</h3>
 
               {mode === "scan" ? (
-                <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
+                <p className="text-white/70 text-sm leading-relaxed">{p.summary}</p>
               ) : mode === "read" ? (
                 <ul className="space-y-2.5">
                   {p.points.map((point, i) => (
-                    <li key={i} className="text-muted-foreground text-xs leading-relaxed flex gap-2">
+                    <li key={i} className="text-white/70 text-xs leading-relaxed flex gap-2">
                       <span className="text-accent mt-1.5 shrink-0 block w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true" />
                       {point}
                     </li>
                   ))}
                 </ul>
               ) : (
-                <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
+                <p className="text-white/70 text-sm leading-relaxed">{p.summary}</p>
               )}
             </article>
           ))}
