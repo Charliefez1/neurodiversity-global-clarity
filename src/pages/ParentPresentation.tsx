@@ -601,7 +601,7 @@ const slides: Slide[] = [
     id: "s37",
     type: "content",
     sectionIndex: 7,
-    title: "The 2026 SEND reforms — what parents need to know",
+    title: "The 2026 SEND reforms: what parents need to know",
     bullets: [
       "The white paper 'Every Child Achieving and Thriving' was published February 2026",
       "Consultation closes 18 May 2026 — this is your opportunity to influence what happens",
