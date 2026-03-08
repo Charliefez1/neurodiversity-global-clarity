@@ -345,7 +345,7 @@ const slides: Slide[] = [
       "The young person is not trying to die. They are trying to survive a moment that feels unsurvivable.",
       "Responding with panic, interrogation, or punishment teaches the child to hide it better next time",
       "The moment of disclosure requires calm, non-punitive, connection-first responses",
-      "Girls diagnosed late are specifically at elevated risk — downstream consequence of years of masking",
+      "Girls diagnosed late are specifically at elevated risk, a downstream consequence of years of masking",
     ],
     speakerNotes: "72 per cent of autistic adults in a UK study scored above the psychiatric cut-off for suicide risk (Cassidy et al.). This is not a minor issue. And it starts younger than most parents expect.",
     bgVariant: "light",
