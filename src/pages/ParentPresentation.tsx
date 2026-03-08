@@ -242,7 +242,7 @@ const slides: Slide[] = [
     bgVariant: "accent",
   },
 
-  // SECTION 3 — Dopamine & Risk
+  // SECTION 3: Dopamine & Risk
   {
     id: "s14",
     type: "section-title",
