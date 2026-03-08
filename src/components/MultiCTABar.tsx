@@ -35,10 +35,11 @@ const ctas = [
   },
   {
     id: "contact" as const,
-    label: "Email us directly",
-    description: "hello@neurodiversityglobal.com",
-    href: "mailto:hello@neurodiversityglobal.com",
+    label: "Contact us",
+    description: "Send us a message",
+    href: "/feedback",
     icon: Mail,
+    isRoute: true,
     style: "bg-card text-foreground border border-border shadow-md hover:shadow-lg hover:scale-[1.02]",
   },
 ];
