@@ -88,7 +88,7 @@ const ProblemSection = () => {
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
                 <p.icon size={20} className="text-accent" aria-hidden="true" />
               </div>
-              <h3 className="font-display font-bold text-sm text-card-foreground mb-4 leading-snug">{p.title}</h3>
+              <h3 className="font-display font-bold text-sm text-primary-foreground mb-4 leading-snug">{p.title}</h3>
 
               {mode === "scan" ? (
                 <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
