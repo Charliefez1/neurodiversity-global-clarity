@@ -172,7 +172,7 @@ const AskRich = () => {
               Your neurodiversity questions, answered by Rich.
             </h1>
             <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed max-w-[58ch]">
-              Rich is our co-founder and resident neurodiversity-in-work expert. Even if you're not looking for training but have a question about neurodiversity at work, ask! Our knowledge base is continually updated, but if you can't find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
+              Ask Rich anything. Rich is our co-founder and resident neurodiversity-in-work expert. Even if you are not looking for training but have a question about neurodiversity at work, ask! Our knowledge base is continually updated, but if you cannot find the answer you need, submit your question for Rich and Charlie to answer. Always strictly confidential.
             </p>
           </div>
         </div>
@@ -390,6 +390,24 @@ const AskRich = () => {
                 </button>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* AI Disclaimer */}
+      <section className="bg-muted border-t border-border">
+        <div className="mx-auto max-w-wide px-6 lg:px-10 py-10 lg:py-12">
+          <div className="max-w-2xl">
+            <h3 className="font-display font-bold text-sm uppercase tracking-[0.12em] text-muted-foreground mb-4">
+              How we use AI on this site
+            </h3>
+            <div className="space-y-3 text-sm text-muted-foreground/90 leading-relaxed">
+              <p>The AI on this site only works with content we have written, researched, and published here.</p>
+              <p>It does not search the internet. It does not pull in outside sources. It does not generate answers from general knowledge.</p>
+              <p>When it responds to you, it is drawing on our knowledge base. Nothing else.</p>
+              <p>That means the quality of what you get depends entirely on what we have built. If something is not in our content, the AI will not find it or make it up.</p>
+              <p>This is a deliberate choice. We wanted a tool grounded in what we actually know and stand behind, not one that picks up whatever happens to be online.</p>
+            </div>
           </div>
         </div>
       </section>
