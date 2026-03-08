@@ -92,7 +92,7 @@ const ServicesSection = () => {
 
         {/* Coaching platform teaser */}
         {mode !== "scan" && (
-          <div className="mt-14 rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/12 p-6 lg:p-8 flex flex-col md:flex-row items-center gap-8">
+          <div className="mt-14 rounded-xl bg-card border border-border p-6 lg:p-8 shadow-md flex flex-col md:flex-row items-center gap-8">
             <img
               src={coachingDashboard}
               alt="Coaching platform dashboard showing pending requests, analytics, and team insights"
