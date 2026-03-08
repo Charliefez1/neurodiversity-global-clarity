@@ -364,7 +364,7 @@ const PathwayLanding = ({
         </section>
 
         {/* ═══════════════════════════════════════════
-            GET IN TOUCH — contact CTAs
+            GET IN TOUCH: contact CTAs
             ═══════════════════════════════════════════ */}
         <section className="bg-warm-stone py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
