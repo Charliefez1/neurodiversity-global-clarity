@@ -172,146 +172,135 @@ const ForParents = () => (
     </PageSection>
 
     {/* ═══════════════════════════════════════════
-        RESOURCES FROM NEURODIVERSITY GLOBAL
+        THE SEND NAVIGATOR — 6-card feature grid
         ═══════════════════════════════════════════ */}
     <section className="bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
-        <div className="max-w-2xl mb-12">
-          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
-            Resources
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
+            ● What's inside
           </p>
           <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
-            Resources from{" "}
-            <span className="text-accent">Neurodiversity Global</span>
+            Everything you need in one place
           </h2>
-          <p className="mt-4 text-muted-foreground text-base leading-relaxed">
-            Practical guides, tools, and long reads created by our team — built from lived experience and designed for families.
-          </p>
         </div>
 
-        {/* Key resources — large feature cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {([
             {
-              title: "SEND Reform Navigator",
-              description: "Plain-English answers about SEND reform. What we know, what's changing, and what hasn't.",
+              icon: FileText,
+              badge: "SEND Reform Report",
+              badgeColor: "hsl(var(--accent))",
+              borderColor: "hsl(160,55%,48%)",
+              title: "Track every aspect of SEND reform",
+              desc: "Eight detailed sections covering what's confirmed, what's being discussed, and what hasn't changed.",
+              cta: "SEND Reform Report",
               href: "https://sendnavigator.neuro.support",
-              badge: "Interactive Tool",
-              image: sendNavigatorImg,
-              external: true,
             },
             {
-              title: "Are We Bad Parents?",
-              description: "One tired accusation. And the reality of parenting a neurodivergent child. An open letter that resonated with thousands.",
-              href: "https://awbp.neuro.support/",
-              badge: "Open Letter",
-              image: badParentsImg,
-              external: true,
+              icon: ShieldCheck,
+              badge: "EHCP Guide",
+              badgeColor: "hsl(220,70%,55%)",
+              borderColor: "hsl(220,70%,55%)",
+              title: "Understand your rights and the process",
+              desc: "A plain-English guide to Education, Health and Care Plans. What they are, how they work, and what to do when things go wrong.",
+              cta: "EHCP Guide",
+              href: "#",
             },
             {
-              title: "The Day We Gave Our Children Dopamine",
-              description: "Smartphones, dopamine, and what it means for neurodivergent young people.",
-              href: "https://smartphonefree.neurodiversityglobal.com/",
-              badge: "Long Read",
-              image: dopamineImg,
-              external: true,
+              icon: Heart,
+              badge: "This is me",
+              badgeColor: "hsl(40,90%,50%)",
+              borderColor: "hsl(40,90%,50%)",
+              title: "Build a profile to share with schools",
+              desc: "Create a professional, structured document about your child that you can share with schools and professionals.",
+              cta: "This is me",
+              href: "#",
             },
-          ]).map((resource, i) => (
-            <motion.a
-              key={resource.title}
-              href={resource.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              custom={i}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-40px" }}
-              variants={fadeUp}
-              className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden shadow-md hover:shadow-xl hover:border-accent/30 transition-all"
-            >
-              <div className="aspect-[16/10] overflow-hidden">
-                <img
-                  src={resource.image}
-                  alt={resource.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-1">
-                <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-3">
-                  {resource.badge}
-                </span>
-                <h3 className="font-display font-bold text-base leading-tight mb-2 text-foreground group-hover:text-accent transition-colors">
-                  {resource.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                  {resource.description}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1.5 text-accent text-sm font-display font-bold group-hover:gap-2.5 transition-all">
-                  Visit <ExternalLink size={14} aria-hidden="true" />
-                </span>
-              </div>
-            </motion.a>
-          ))}
-        </div>
+            {
+              icon: CheckCircle2,
+              badge: "What to do now",
+              badgeColor: "hsl(0,70%,55%)",
+              borderColor: "hsl(0,70%,55%)",
+              title: "Practical steps based on current law",
+              desc: "Clear, practical actions you can take right now based on what the law actually says today.",
+              cta: "What to do now",
+              href: "#",
+            },
+            {
+              icon: Users,
+              badge: "Ask Rich",
+              badgeColor: "hsl(260,50%,55%)",
+              borderColor: "hsl(260,50%,55%)",
+              title: "Get plain-English answers",
+              desc: "Ask any question about SEND reform and get a grounded, honest answer drawn from confirmed sources.",
+              cta: "Ask Rich",
+              href: "/ask-rich",
+            },
+            {
+              icon: Compass,
+              badge: "Sources & Evidence",
+              badgeColor: "hsl(160,55%,48%)",
+              borderColor: "hsl(160,55%,48%)",
+              title: "Every claim traced to its source",
+              desc: "Legislation, government research, DfE data, and expert reviews, all in one place so you can verify everything yourself.",
+              cta: "Sources & Evidence",
+              href: "/sources",
+            },
+          ] as const).map((card, i) => {
+            const isExternal = card.href.startsWith("http");
+            const Wrapper = isExternal ? "a" : Link;
+            const wrapperProps = isExternal
+              ? { href: card.href, target: "_blank" as const, rel: "noopener noreferrer" }
+              : { to: card.href };
 
-        {/* Parent blog posts */}
-        {(() => {
-          const parentBlogs = blogPosts.filter((p) => p.category === "Parents");
-          if (parentBlogs.length === 0) return null;
-          return (
-            <>
-              <div className="mb-8">
-                <h3 className="font-display font-bold text-lg text-foreground">
-                  From the blog
-                </h3>
-                <p className="text-sm text-muted-foreground mt-1">
-                  Practical, evidence-informed articles about the real challenges families face.
-                </p>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {parentBlogs.map((post, i) => (
-                  <motion.div
-                    key={post.slug}
-                    custom={i}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-40px" }}
-                    variants={fadeUp}
+            return (
+              <motion.div
+                key={card.title}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-40px" }}
+                variants={fadeUp}
+                className="rounded-2xl border border-border bg-card shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col"
+              >
+                {/* Colored top border */}
+                <div className="h-1" style={{ backgroundColor: card.borderColor }} />
+                <div className="p-6 flex flex-col flex-1">
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                    style={{ backgroundColor: `${card.borderColor}18`, color: card.borderColor }}
                   >
-                    <Link
-                      to={`/blog/${post.slug}`}
-                      className="group flex flex-col rounded-xl border border-border bg-card overflow-hidden hover:shadow-md hover:border-accent/30 transition-all h-full"
-                    >
-                      <div className="aspect-[16/10] overflow-hidden">
-                        <img
-                          src={post.image}
-                          alt={post.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="p-5 flex flex-col flex-1">
-                        <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-3">
-                          {post.category}
-                        </span>
-                        <h3 className="font-display font-bold text-sm leading-tight mb-2 text-card-foreground group-hover:text-accent transition-colors">
-                          {post.title}
-                        </h3>
-                        <p className="text-xs text-muted-foreground leading-relaxed flex-1 line-clamp-3">
-                          {post.excerpt}
-                        </p>
-                        <span className="mt-4 inline-flex items-center gap-1.5 text-accent text-xs font-semibold group-hover:gap-2.5 transition-all">
-                          Read more <ArrowRight size={14} aria-hidden="true" />
-                        </span>
-                      </div>
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </>
-          );
-        })()}
+                    <card.icon size={22} />
+                  </div>
+                  <p
+                    className="font-display font-bold text-xs uppercase tracking-[0.12em] mb-2"
+                    style={{ color: card.badgeColor }}
+                  >
+                    {card.badge}
+                  </p>
+                  <h3 className="font-display font-bold text-base leading-tight text-foreground mb-2">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5">
+                    {card.desc}
+                  </p>
+                  {/* @ts-ignore */}
+                  <Wrapper
+                    {...wrapperProps}
+                    className="inline-flex items-center gap-2 self-start px-5 py-2.5 rounded-lg font-display font-bold text-sm transition-all hover:scale-[1.02] shadow-sm"
+                    style={{
+                      backgroundColor: `${card.borderColor}15`,
+                      color: card.borderColor,
+                    }}
+                  >
+                    {card.cta} <ArrowRight size={14} />
+                  </Wrapper>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </div>
     </section>
 
@@ -532,6 +521,108 @@ const ForParents = () => (
             </motion.div>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* ═══════════════════════════════════════════
+        RESOURCES FROM NEURODIVERSITY GLOBAL
+        ═══════════════════════════════════════════ */}
+    <section className="bg-background py-20 lg:py-28">
+      <div className="mx-auto max-w-wide px-6 lg:px-10">
+        <div className="max-w-2xl mb-12">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
+            Resources
+          </p>
+          <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
+            Resources from{" "}
+            <span className="text-accent">Neurodiversity Global</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground text-base leading-relaxed">
+            Practical guides, tools, and long reads created by our team — built from lived experience and designed for families.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {([
+            {
+              title: "SEND Reform Navigator",
+              description: "Plain-English answers about SEND reform. What we know, what's changing, and what hasn't.",
+              href: "https://sendnavigator.neuro.support",
+              badge: "Interactive Tool",
+              image: sendNavigatorImg,
+              external: true,
+            },
+            {
+              title: "Are We Bad Parents?",
+              description: "One tired accusation. And the reality of parenting a neurodivergent child. An open letter that resonated with thousands.",
+              href: "https://awbp.neuro.support/",
+              badge: "Open Letter",
+              image: badParentsImg,
+              external: true,
+            },
+            {
+              title: "The Day We Gave Our Children Dopamine",
+              description: "Smartphones, dopamine, and what it means for neurodivergent young people.",
+              href: "https://smartphonefree.neurodiversityglobal.com/",
+              badge: "Long Read",
+              image: dopamineImg,
+              external: true,
+            },
+          ]).map((resource, i) => (
+            <motion.a
+              key={resource.title}
+              href={resource.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              custom={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-40px" }}
+              variants={fadeUp}
+              className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden shadow-md hover:shadow-xl hover:border-accent/30 transition-all"
+            >
+              <div className="aspect-[16/10] overflow-hidden">
+                <img src={resource.image} alt={resource.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-3">{resource.badge}</span>
+                <h3 className="font-display font-bold text-base leading-tight mb-2 text-foreground group-hover:text-accent transition-colors">{resource.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">{resource.description}</p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-accent text-sm font-display font-bold group-hover:gap-2.5 transition-all">Visit <ExternalLink size={14} aria-hidden="true" /></span>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+
+        {(() => {
+          const parentBlogs = blogPosts.filter((p) => p.category === "Parents");
+          if (parentBlogs.length === 0) return null;
+          return (
+            <>
+              <div className="mb-8">
+                <h3 className="font-display font-bold text-lg text-foreground">From the blog</h3>
+                <p className="text-sm text-muted-foreground mt-1">Practical, evidence-informed articles about the real challenges families face.</p>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {parentBlogs.map((post, i) => (
+                  <motion.div key={post.slug} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-40px" }} variants={fadeUp}>
+                    <Link to={`/blog/${post.slug}`} className="group flex flex-col rounded-xl border border-border bg-card overflow-hidden hover:shadow-md hover:border-accent/30 transition-all h-full">
+                      <div className="aspect-[16/10] overflow-hidden">
+                        <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                      </div>
+                      <div className="p-5 flex flex-col flex-1">
+                        <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-3">{post.category}</span>
+                        <h3 className="font-display font-bold text-sm leading-tight mb-2 text-card-foreground group-hover:text-accent transition-colors">{post.title}</h3>
+                        <p className="text-xs text-muted-foreground leading-relaxed flex-1 line-clamp-3">{post.excerpt}</p>
+                        <span className="mt-4 inline-flex items-center gap-1.5 text-accent text-xs font-semibold group-hover:gap-2.5 transition-all">Read more <ArrowRight size={14} aria-hidden="true" /></span>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </>
+          );
+        })()}
       </div>
     </section>
 
