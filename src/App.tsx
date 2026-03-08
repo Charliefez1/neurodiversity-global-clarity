@@ -45,6 +45,7 @@ import ScrollToTop from "./components/ScrollToTop";
 // Portal pages
 import PortalLogin from "./pages/portal/Login";
 import PortalDashboard from "./pages/portal/Dashboard";
+import PortalRoute from "./components/portal/PortalRoute";
 import PortalBookSession from "./pages/portal/BookSession";
 import PortalMyBookings from "./pages/portal/MyBookings";
 import PortalLearningLibrary from "./pages/portal/LearningLibrary";
@@ -110,25 +111,25 @@ const AppContent = () => {
           {/* Portal routes */}
           <Route path="/portal" element={<PortalLogin />} />
           <Route path="/portal/login" element={<PortalLogin />} />
-          <Route path="/portal/dashboard" element={<PortalDashboard />} />
-          <Route path="/portal/book-session" element={<PortalBookSession />} />
-          <Route path="/portal/my-bookings" element={<PortalMyBookings />} />
-          <Route path="/portal/learning-library" element={<PortalLearningLibrary />} />
-          <Route path="/portal/ask-ai" element={<PortalAskAI />} />
-          <Route path="/portal/certificates" element={<PortalCertificates />} />
-          <Route path="/portal/support" element={<PortalSupport />} />
-          <Route path="/portal/resources" element={<PortalResources />} />
-          <Route path="/portal/coaching" element={<PortalCoaching />} />
-          <Route path="/portal/cognassist" element={<PortalCognassist />} />
-          <Route path="/portal/programme-calendar" element={<PortalProgrammeCalendar />} />
+          <Route path="/portal/dashboard" element={<PortalRoute><PortalDashboard /></PortalRoute>} />
+          <Route path="/portal/book-session" element={<PortalRoute><PortalBookSession /></PortalRoute>} />
+          <Route path="/portal/my-bookings" element={<PortalRoute><PortalMyBookings /></PortalRoute>} />
+          <Route path="/portal/learning-library" element={<PortalRoute><PortalLearningLibrary /></PortalRoute>} />
+          <Route path="/portal/ask-ai" element={<PortalRoute><PortalAskAI /></PortalRoute>} />
+          <Route path="/portal/certificates" element={<PortalRoute><PortalCertificates /></PortalRoute>} />
+          <Route path="/portal/support" element={<PortalRoute><PortalSupport /></PortalRoute>} />
+          <Route path="/portal/resources" element={<PortalRoute><PortalResources /></PortalRoute>} />
+          <Route path="/portal/coaching" element={<PortalRoute><PortalCoaching /></PortalRoute>} />
+          <Route path="/portal/cognassist" element={<PortalRoute><PortalCognassist /></PortalRoute>} />
+          <Route path="/portal/programme-calendar" element={<PortalRoute><PortalProgrammeCalendar /></PortalRoute>} />
           {/* Portal admin routes */}
-          <Route path="/portal/admin" element={<PortalAdminDashboard />} />
-          <Route path="/portal/admin/sessions" element={<PortalSessionManager />} />
-          <Route path="/portal/admin/attendance" element={<PortalAttendance />} />
-          <Route path="/portal/admin/content" element={<PortalContentManager />} />
-          <Route path="/portal/admin/reporting" element={<PortalReporting />} />
-          <Route path="/portal/admin/coaching" element={<PortalCoachingAdmin />} />
-          <Route path="/portal/admin/cognassist" element={<PortalCognassistAdmin />} />
+          <Route path="/portal/admin" element={<PortalRoute><PortalAdminDashboard /></PortalRoute>} />
+          <Route path="/portal/admin/sessions" element={<PortalRoute><PortalSessionManager /></PortalRoute>} />
+          <Route path="/portal/admin/attendance" element={<PortalRoute><PortalAttendance /></PortalRoute>} />
+          <Route path="/portal/admin/content" element={<PortalRoute><PortalContentManager /></PortalRoute>} />
+          <Route path="/portal/admin/reporting" element={<PortalRoute><PortalReporting /></PortalRoute>} />
+          <Route path="/portal/admin/coaching" element={<PortalRoute><PortalCoachingAdmin /></PortalRoute>} />
+          <Route path="/portal/admin/cognassist" element={<PortalRoute><PortalCognassistAdmin /></PortalRoute>} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
