@@ -7,6 +7,7 @@ import ADHDi from "@/components/ADHDi";
 import RecommendedBy from "@/components/RecommendedBy";
 import HeroWorkshopSearch from "@/components/HeroWorkshopSearch";
 import conciergeTeam from "@/assets/concierge-team.png";
+import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 import TrustIndicators from "@/components/TrustIndicators";
 
 const pathwayKeys = [
