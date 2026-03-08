@@ -51,8 +51,20 @@ const workshopOutcomes = [
 const ForParents = () => (
   <PathwayLanding
     audience="parents"
-    heroImage={heroImg}
-    heroImageAlt="Diverse families and children together"
+    heroImage={sendNavigatorHeroImg}
+    heroImageAlt="The SEND Navigator — 6 key parent resources"
+    heroVariant="split"
+    hideAskSection
+    heroCTAs={
+      <a
+        href="#send-navigator"
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
+      >
+        <Compass size={16} />
+        Explore the SEND Navigator
+        <ArrowRight size={16} />
+      </a>
+    }
     badge="For Parents & Carers"
     title="Tools and resources built for families navigating neurodiversity"
     heroDescription="We've built a set of tools that have processed thousands of documents — government policy, research, SEND guidance, and more — so families can access practical advice, strategies, and resources in one place."
