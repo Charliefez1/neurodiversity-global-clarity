@@ -1,4 +1,5 @@
 import { TrendingUp, DollarSign, Building2, ThumbsUp } from "lucide-react";
+import { NEURO_COLOURS } from "@/data/neuroColours";
 
 const stats = [
   {
