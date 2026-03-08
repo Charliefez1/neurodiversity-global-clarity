@@ -93,7 +93,7 @@ const IndustryTechnology = () => {
         <PageSection id="positives" badge="The positives" title="Why tech should invest in cognitive sustainability">
           <PositivesBlock
             items={[
-              { title: "Neurodivergent cognition aligns with complex problem solving", description: "Systems architecture, AI modelling, cybersecurity pattern detection — these are neurodivergent strengths." },
+              { title: "Neurodivergent cognition aligns with complex problem solving", description: "Systems architecture, AI modelling, cybersecurity pattern detection. These are neurodivergent strengths." },
               { title: "Flexibility is culturally possible", description: "Remote, asynchronous, output-based work models already exist. The infrastructure is there." },
               { title: "Appetite for innovation", description: "Digital sector is more open to cognitive diversity framing than any other sector." },
             ]}
