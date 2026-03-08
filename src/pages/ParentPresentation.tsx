@@ -1081,7 +1081,7 @@ const ParentPresentation = () => {
   return (
     <>
       <SEOHead
-        title="Understanding Your Neurodivergent Child — Parent Presentation"
+        title="Understanding Your Neurodivergent Child: Parent Presentation"
         description="A comprehensive, evidence-based presentation for parents and carers of neurodivergent children. Covering the nervous system, school, dopamine, risk, family strain, and practical strategies."
         path="/for-parents/presentation"
       />
