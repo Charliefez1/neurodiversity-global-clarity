@@ -276,7 +276,7 @@ const slides: Slide[] = [
     sectionIndex: 3,
     title: "Puberty: the crisis point no one prepares you for",
     bullets: [
-      "Hormonal changes directly affect dopamine regulation — this is not incidental",
+      "Hormonal changes directly affect dopamine regulation. This is not incidental",
       "Oestrogen fluctuations in girls specifically affect dopamine pathways",
       "Executive function demands increase sharply at secondary school",
       "Strategies that worked in Year 5 collapse under Year 8 conditions",
