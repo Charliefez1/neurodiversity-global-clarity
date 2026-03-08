@@ -802,9 +802,9 @@ const SlideCard = ({
 const STORAGE_KEY = "ndg_presentation_access";
 
 const useContextOptions = [
-  { value: "home", label: "Home — for my family" },
-  { value: "school", label: "School — to share with staff or parents" },
-  { value: "work", label: "Work — professional development" },
+  { value: "home", label: "Home: for my family" },
+  { value: "school", label: "School: to share with staff or parents" },
+  { value: "work", label: "Work: professional development" },
   { value: "other", label: "Other" },
 ];
 
