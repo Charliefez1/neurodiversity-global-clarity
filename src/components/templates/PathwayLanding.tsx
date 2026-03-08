@@ -50,6 +50,9 @@ const PathwayLanding = ({
   placeholders,
   heroImage,
   heroImageAlt,
+  heroVariant = "background",
+  heroCTAs,
+  hideAskSection = false,
   children,
 }: PathwayLandingProps) => {
   const [query, setQuery] = useState("");
