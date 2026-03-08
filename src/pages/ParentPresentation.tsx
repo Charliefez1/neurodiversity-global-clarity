@@ -553,7 +553,7 @@ const slides: Slide[] = [
       "Routine as safety: visual timetables, now/next boards",
       "Countdown timers — 5 minutes warning, not 1",
       "Low demand mornings: reduce decisions before school",
-      "Decompression time built in after school — non-negotiable",
+      "Decompression time built in after school, non-negotiable",
       "Calm corner at home with sensory tools",
       "Movement before demands — not after",
       "Connection before correction after a difficult episode",
