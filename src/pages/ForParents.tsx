@@ -232,7 +232,7 @@ const ForParents = () => (
               badgeColor: "hsl(260,50%,55%)",
               borderColor: "hsl(260,50%,55%)",
               title: "Get plain-English answers",
-              desc: "Ask any question about SEND reform and get a grounded, honest answer drawn from confirmed sources.",
+              desc: "A knowledge base built from thousands of processed documents. Ask a question and get a grounded answer drawn from confirmed sources.",
               cta: "Ask Rich",
               href: "/ask-rich",
             },
