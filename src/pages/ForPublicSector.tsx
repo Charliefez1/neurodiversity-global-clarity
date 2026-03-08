@@ -1,4 +1,5 @@
 import PathwayLanding from "@/components/templates/PathwayLanding";
+import heroImg from "@/assets/pathway-public-sector-hero.png";
 
 const ForPublicSector = () => (
   <PathwayLanding
@@ -12,6 +13,8 @@ const ForPublicSector = () => (
     breadcrumbPath="/for-public-sector"
     persona="Charlie"
     whatsappNumber="447000000000"
+    heroImage={heroImg}
+    heroImageAlt="Public sector and emergency services professionals"
     placeholders={[
       "How do we meet our Equality Act duties around neurodiversity?",
       "What neurodiversity training is available for NHS staff?",
