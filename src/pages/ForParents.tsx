@@ -1,8 +1,11 @@
 import PathwayLanding from "@/components/templates/PathwayLanding";
+import heroImg from "@/assets/pathway-parents-hero.png";
 
 const ForParents = () => (
   <PathwayLanding
     audience="parents"
+    heroImage={heroImg}
+    heroImageAlt="Diverse families and children together"
     badge="For Parents & Carers"
     title="You're not failing. The system wasn't built for your child."
     heroDescription="Navigate SEND systems, understand your rights, and get practical support from people who genuinely understand what you're going through."
