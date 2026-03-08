@@ -51,15 +51,7 @@ const RecommendedBy = () => (
       </p>
       <div className="group relative rounded-xl border border-primary-foreground/12 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500">
         {/* Background portrait */}
-        <div className="absolute inset-0 pointer-events-none">
-          <img
-            src={portrait4}
-            alt=""
-            aria-hidden="true"
-            className="absolute right-0 top-0 h-full w-2/5 object-cover opacity-[0.06] group-hover:opacity-[0.1] transition-opacity duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/98 to-primary/70" />
-        </div>
+        <div className="absolute inset-0 bg-primary rounded-xl" />
 
         <div className="relative p-6 lg:p-8 lg:flex lg:items-start lg:gap-10">
           <div className="shrink-0 mb-5 lg:mb-0">
