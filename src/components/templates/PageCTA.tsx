@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, Phone } from "lucide-react";
 
 interface PageCTAProps {
@@ -13,10 +14,12 @@ const PageCTA = ({
   title = "Ready to take the next step?",
   description = "Book a free discovery call. We'll listen, understand your context, and recommend next steps with no obligation.",
   primaryLabel = "Book a discovery call",
-  primaryHref = "mailto:hello@neurodiversityglobal.com",
-  secondaryLabel = "Email us directly",
-  secondaryHref = "mailto:hello@neurodiversityglobal.com",
+  primaryHref = "/feedback",
+  secondaryLabel = "Send us a message",
+  secondaryHref = "/feedback",
 }: PageCTAProps) => {
+  const isInternal = (href: string) => href.startsWith("/");
+
   return (
     <section className="bg-primary text-primary-foreground py-16 lg:py-24">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
@@ -26,21 +29,41 @@ const PageCTA = ({
           </h2>
           <p className="mt-4 opacity-75 text-base leading-relaxed">{description}</p>
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href={primaryHref}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              <Phone size={18} aria-hidden="true" />
-              {primaryLabel}
-              <ArrowRight size={16} aria-hidden="true" />
-            </a>
-            {secondaryLabel && (
-              <a
-                href={secondaryHref}
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/25 text-primary-foreground font-display font-bold text-sm hover:bg-primary-foreground/10 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            {isInternal(primaryHref) ? (
+              <Link
+                to={primaryHref}
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                {secondaryLabel}
+                <Phone size={18} aria-hidden="true" />
+                {primaryLabel}
+                <ArrowRight size={16} aria-hidden="true" />
+              </Link>
+            ) : (
+              <a
+                href={primaryHref}
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              >
+                <Phone size={18} aria-hidden="true" />
+                {primaryLabel}
+                <ArrowRight size={16} aria-hidden="true" />
               </a>
+            )}
+            {secondaryLabel && (
+              isInternal(secondaryHref) ? (
+                <Link
+                  to={secondaryHref}
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/25 text-primary-foreground font-display font-bold text-sm hover:bg-primary-foreground/10 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  {secondaryLabel}
+                </Link>
+              ) : (
+                <a
+                  href={secondaryHref}
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/25 text-primary-foreground font-display font-bold text-sm hover:bg-primary-foreground/10 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
+                  {secondaryLabel}
+                </a>
+              )
             )}
           </div>
         </div>
