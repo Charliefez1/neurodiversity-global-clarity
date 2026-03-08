@@ -51,8 +51,8 @@ const workshopOutcomes = [
 const ForParents = () => (
   <PathwayLanding
     audience="parents"
-    heroImage={sendNavigatorHeroImg}
-    heroImageAlt="The SEND Navigator — 6 key parent resources"
+    heroImage={heroImg}
+    heroImageAlt="Children dressed as astronauts, firefighters, and police officers — representing the futures neurodivergent children deserve"
     heroVariant="split"
     hideAskSection
     heroCTAs={
