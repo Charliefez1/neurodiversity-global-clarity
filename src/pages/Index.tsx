@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import NeuroFrameworkSection from "@/components/NeuroFrameworkSection";
 import ProblemSection from "@/components/ProblemSection";
+import challengeBg from "@/assets/challenge-bg.png";
 import StatsBar from "@/components/StatsBar";
 import ServicesSection from "@/components/ServicesSection";
 import ImpactSection from "@/components/ImpactSection";
@@ -43,8 +44,16 @@ const Index = () => {
       <NewsHeadlines />
       <HeroSection />
       <NeuroFrameworkSection />
-      <ProblemSection />
-      <StatsBar />
+      <div
+        className="relative bg-cover bg-top bg-no-repeat"
+        style={{ backgroundImage: `url(${challengeBg})` }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10">
+          <ProblemSection />
+          <StatsBar />
+        </div>
+      </div>
       <ServicesSection />
       <ImpactSection />
       <EvidenceSection />

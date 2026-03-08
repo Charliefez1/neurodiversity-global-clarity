@@ -33,7 +33,7 @@ const stats = [
 
 const StatsBar = () => {
   return (
-    <section className="bg-primary py-16 lg:py-20">
+    <section className="relative py-16 lg:py-20">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {stats.map((stat) => (

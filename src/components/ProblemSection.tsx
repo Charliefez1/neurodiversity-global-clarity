@@ -45,11 +45,9 @@ const ProblemSection = () => {
   return (
     <section
       id="problem"
-      className="relative bg-cover bg-top bg-no-repeat py-20 lg:py-28"
-      style={{ backgroundImage: `url(${challengeBg})` }}
+      className="relative py-20 lg:py-28"
       aria-labelledby="problem-heading"
     >
-      <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 mx-auto max-w-wide px-6 lg:px-10">
         <div className="mb-16 max-w-4xl">
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
