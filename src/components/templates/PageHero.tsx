@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 
 interface PageHeroProps {
   badge: string;
@@ -23,6 +24,12 @@ const PageHero = ({ badge, title, description, children }: PageHeroProps) => {
           </p>
         )}
         {children}
+        <img
+          src={ndgLogo}
+          alt="Neurodiversity Global"
+          className="mt-8 h-10 md:h-12 w-auto opacity-80"
+          loading="lazy"
+        />
       </div>
     </section>
   );

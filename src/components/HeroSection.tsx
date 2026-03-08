@@ -87,6 +87,12 @@ const HeroSection = () => {
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
               {t("hero.badge")}
             </p>
+            <img
+              src={ndgLogo}
+              alt="Neurodiversity Global"
+              className="h-10 md:h-12 w-auto opacity-80 mb-6"
+              loading="lazy"
+            />
             <div className="min-h-[220px] md:min-h-[200px] lg:min-h-[240px]">
               <h1
                 id="hero-heading"
