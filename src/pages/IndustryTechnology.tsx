@@ -72,7 +72,7 @@ const IndustryTechnology = () => {
         <PageHero
           badge="Neurodiversity in technology"
           title="High cognitive demand. Low cognitive support."
-          description="Technology companies rely on cognitive diversity for innovation — but extreme cognitive load, sprint culture burnout, and communication mismatch drive neurodivergent talent out."
+          description="Technology companies rely on cognitive diversity for innovation, but extreme cognitive load, sprint culture burnout, and communication mismatch drive neurodivergent talent out."
         />
 
         <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points tech can't ignore">
