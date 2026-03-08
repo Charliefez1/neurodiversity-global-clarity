@@ -51,8 +51,7 @@ const ProblemSection = () => {
     >
       <div className="absolute inset-0 bg-black/60" />
       <div className="relative z-10 mx-auto max-w-wide px-6 lg:px-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center mb-16">
-          <div className="max-w-2xl">
+        <div className="mb-16 max-w-4xl">
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
               The challenge
             </p>
@@ -69,14 +68,6 @@ const ProblemSection = () => {
                 <SectionAudio sectionText={sectionAudioText} label="Listen to this section" />
               </div>
             )}
-          </div>
-          <div className="flex items-center justify-center">
-            <img
-              src={challengeStats}
-              alt="Training statistics dashboard showing neurodiversity workshop engagement and a team video call"
-              className="rounded-xl shadow-md w-full max-w-md"
-            />
-          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
