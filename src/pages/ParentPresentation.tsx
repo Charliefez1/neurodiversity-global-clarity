@@ -590,7 +590,7 @@ const slides: Slide[] = [
       "Ask for everything in writing",
       "Use the word 'provision' not 'support'. It is a legal term",
       "Request meetings rather than waiting for annual reviews",
-      "Schools must respond to need, not diagnosis — the Code of Practice requires assess, plan, do, review",
+      "Schools must respond to need, not diagnosis. The Code of Practice requires assess, plan, do, review",
       "Reasonable adjustments under the Equality Act apply from point of need",
       "Ask: can you show me the provision plan while we wait for assessment?",
     ],
