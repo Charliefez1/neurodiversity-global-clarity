@@ -82,7 +82,7 @@ const secondaryIndustries: { name: string; icon: React.ElementType; href?: strin
   { name: "Financial & Professional Services", icon: Landmark, href: "/industries/financial-services", description: "High-regulation, high-pressure, risk-focused roles." },
   { name: "Engineering & Infrastructure", icon: Factory, description: "Safety-critical roles and structured systems." },
   { name: "Corporate & Enterprise", icon: BarChart3, description: "Cross-functional leadership, HR, and transformation." },
-  { name: "Emergency Services", icon: Flame, description: "Fire, police, ambulance — high-intensity, structured environments." },
+  { name: "Emergency Services", icon: Flame, description: "Fire, police, ambulance. High-intensity, structured environments." },
   { name: "Rail & Transport", icon: Train, description: "Operators, control rooms, frontline roles." },
   { name: "Sales & Commercial", icon: ShoppingBag, description: "Performance pressure, emotional regulation, rejection sensitivity." },
   { name: "Call & Contact Centres", icon: Headphones, description: "Sensory load, scripted communication, high attrition." },
