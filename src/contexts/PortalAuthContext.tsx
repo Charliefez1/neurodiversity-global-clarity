@@ -38,6 +38,9 @@ interface PortalAuthContextType {
 
 const PortalAuthContext = createContext<PortalAuthContextType | undefined>(undefined);
 
+// Helper to query tables that may not yet exist in the generated types
+const db = supabase as any;
+
 export function PortalAuthProvider({ children }: { children: ReactNode }) {
   const [authUser, setAuthUser] = useState<User | null>(null);
   const [user, setUser] = useState<Profile | null>(null);
@@ -59,28 +62,25 @@ export function PortalAuthProvider({ children }: { children: ReactNode }) {
             setTimeout(async () => {
               try {
                 const [{ data: profileData }, { data: roleData }] = await Promise.all([
-                  supabase
-                    .from('profiles')
-                    .select('*')
-                    .eq('user_id', session.user.id)
-                    .single(),
-                  supabase
-                    .from('user_roles')
-                    .select('role')
-                    .eq('user_id', session.user.id)
-                    .eq('role', 'admin')
-                    .maybeSingle(),
+                  db.from('profiles').select('*').eq('user_id', session.user.id).single(),
+                  db.from('user_roles').select('role').eq('user_id', session.user.id).eq('role', 'admin').maybeSingle(),
                 ]);
 
                 if (profileData) {
-                  const profile = {
-                    ...profileData,
+                  const profile: Profile = {
+                    id: profileData.id,
+                    user_id: profileData.user_id,
+                    name: profileData.name,
+                    email: profileData.email,
+                    role_group: profileData.role_group || '',
+                    enrolment_date: profileData.enrolment_date || new Date().toISOString(),
                     completed_stages: (profileData.completed_stages || []) as SessionType[],
+                    client_id: profileData.client_id || null,
                   };
                   setUser(profile);
 
                   if (profileData.client_id) {
-                    const { data: clientData } = await supabase
+                    const { data: clientData } = await db
                       .from('clients')
                       .select('*')
                       .eq('id', profileData.client_id)
@@ -137,7 +137,7 @@ export function PortalAuthProvider({ children }: { children: ReactNode }) {
   const checkAllowedDomain = async (email: string): Promise<boolean> => {
     const domain = email.split('@')[1];
     if (domain === 'neurodiversityglobal.com') return true;
-    const { data } = await supabase
+    const { data } = await db
       .from('clients')
       .select('id')
       .contains('allowed_domains', [domain])
@@ -153,16 +153,13 @@ export function PortalAuthProvider({ children }: { children: ReactNode }) {
     const { error } = await supabase.auth.signUp({
       email,
       password,
-      options: {
-        data: { name },
-        emailRedirectTo: window.location.origin,
-      },
+      options: { data: { name }, emailRedirectTo: window.location.origin },
     });
     if (error) return { error: error.message };
 
     supabase.functions.invoke('notify-new-signup', {
       body: { name, email },
-    }).catch(err => console.warn('[Notify] Failed to send signup notification:', err));
+    }).catch(err => console.warn('[Notify] Failed:', err));
 
     return { error: null };
   };
@@ -192,7 +189,7 @@ export function PortalAuthProvider({ children }: { children: ReactNode }) {
       id: 'dev-user',
       user_id: 'dev-user',
       name: 'Dev User',
-      email: 'dev@tpexpress.co.uk',
+      email: 'dev@neurodiversityglobal.com',
       role_group: 'admin',
       enrolment_date: new Date().toISOString(),
       completed_stages: [],
