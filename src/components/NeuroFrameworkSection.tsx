@@ -228,8 +228,8 @@ const NeuroFrameworkSection = () => {
           <h2 id="neuro-heading" className="font-display font-bold text-lg md:text-xl leading-tight text-foreground">
             The NEURO Framework
           </h2>
-          <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-[55ch]">
-            A structured, five-phase approach to embedding neuroinclusion into how your organisation operates.
+          <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-[60ch]">
+            With Neurodiversity Global, you are able to engage us for one session or a whole project of Neuroinclusion. When we are engaged for a project we follow our NEURO framework, a structured, five-phase approach to embedding neuroinclusion into how your organisation operates.
           </p>
         </div>
 
