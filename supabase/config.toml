@@ -32,3 +32,33 @@ verify_jwt = false
 
 [functions.news-tracker]
 verify_jwt = false
+
+[functions.availability-engine]
+verify_jwt = false
+
+[functions.google-auth-callback]
+verify_jwt = false
+
+[functions.google-calendar]
+verify_jwt = false
+
+[functions.google-gmail]
+verify_jwt = false
+
+[functions.google-maps]
+verify_jwt = false
+
+[functions.microsoft-teams]
+verify_jwt = false
+
+[functions.ndg-chat]
+verify_jwt = false
+
+[functions.notify-new-signup]
+verify_jwt = false
+
+[functions.presentation-signup]
+verify_jwt = false
+
+[functions.pathway-ask]
+verify_jwt = false
