@@ -92,8 +92,8 @@ const ForParents = () => (
               />
             </div>
             <div className="absolute -bottom-6 -right-4 lg:-right-8 rounded-xl bg-card border border-border shadow-lg p-5 max-w-[200px]">
-              <p className="font-display font-bold text-sm text-foreground">Understanding first</p>
-              <p className="text-xs text-muted-foreground mt-1 leading-snug">The goal is not to label children. The goal is understanding what sits beneath behaviour.</p>
+              <p className="font-display font-bold text-sm text-foreground">Built from evidence</p>
+              <p className="text-xs text-muted-foreground mt-1 leading-snug">Thousands of documents processed into practical, accessible resources for families.</p>
             </div>
           </motion.div>
 
