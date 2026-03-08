@@ -857,7 +857,7 @@ const SignupGate = ({ onAccess }: { onAccess: () => void }) => {
   return (
     <>
       <SEOHead
-        title="Understanding Your Neurodivergent Child — Parent Presentation"
+        title="Understanding Your Neurodivergent Child: Parent Presentation"
         description="A comprehensive, evidence-based presentation for parents and carers of neurodivergent children."
         path="/for-parents/presentation"
       />
