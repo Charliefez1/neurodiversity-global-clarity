@@ -417,7 +417,7 @@ const slides: Slide[] = [
     sectionIndex: 5,
     title: "The people who do not believe",
     bullets: [
-      "Grandparents grew up in a system that had no framework for neurodivergence — naughty, spoilt, weak, lazy",
+      "Grandparents grew up in a system that had no framework for neurodivergence: naughty, spoilt, weak, lazy",
       "The grandparent who says 'he was fine with me' is often right. The child was masking. That is the problem.",
       "Many grandparents are themselves unidentified neurodivergent adults",
       "The parent fighting for their child is implicitly saying the grandparent missed something — that is painful to hear",
