@@ -588,7 +588,7 @@ const slides: Slide[] = [
       "Keep a written log: dates, observations, communications, incidents",
       "Follow up every verbal conversation with an email the same day",
       "Ask for everything in writing",
-      "Use the word 'provision' not 'support' — it is a legal term",
+      "Use the word 'provision' not 'support'. It is a legal term",
       "Request meetings rather than waiting for annual reviews",
       "Schools must respond to need, not diagnosis — the Code of Practice requires assess, plan, do, review",
       "Reasonable adjustments under the Equality Act apply from point of need",
