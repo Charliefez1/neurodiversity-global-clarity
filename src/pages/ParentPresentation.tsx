@@ -873,7 +873,7 @@ const SignupGate = ({ onAccess }: { onAccess: () => void }) => {
         <section className="bg-primary text-primary-foreground min-h-[80vh] flex items-center">
           <div className="mx-auto max-w-wide px-6 lg:px-10 py-20 lg:py-28">
             <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-              {/* Left — info */}
+              {/* Left: info */}
               <div>
                 <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
                   Free resource
