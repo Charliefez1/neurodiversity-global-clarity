@@ -312,7 +312,7 @@ const slides: Slide[] = [
     title: "Smartphones and the neurodivergent brain",
     bullets: [
       "Every notification, swipe, and new piece of content produces a small dopamine response",
-      "Smartphones are designed around unpredictability — the brain learns to check, then check again",
+      "Smartphones are designed around unpredictability. The brain learns to check, then check again",
       "For neurodivergent children with dopamine regulation differences, highly stimulating technology is harder to disengage from",
       "This is not weakness. It is the same system being targeted by design.",
       "Abrupt removal causes dysregulation — replace, do not just remove",
