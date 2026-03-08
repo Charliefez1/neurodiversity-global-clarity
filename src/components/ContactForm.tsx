@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, CheckCircle, Mail, Phone, MessageCircle } from "lucide-react";
+import { Send, CheckCircle, Mail, Phone, MessageCircle, Calendar } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 import { NEURO_COLOURS } from "@/data/neuroColours";
@@ -9,6 +9,7 @@ const contactSchema = z.object({
   email: z.string().trim().email("Please enter a valid email").max(255),
   organisation: z.string().trim().max(200).optional(),
   contact_method: z.enum(["email", "phone", "whatsapp", "other"]),
+  service_interest: z.enum(["workshops", "consultancy", "coaching", "keynotes", "other"]),
   message: z.string().trim().min(10, "Please write at least 10 characters").max(3000),
 });
 
@@ -18,12 +19,17 @@ const contactMethods = [
   { value: "whatsapp" as const, label: "WhatsApp", icon: MessageCircle },
 ] as const;
 
+const serviceOptions = [
+  { value: "workshops" as const, label: "Workshops" },
+  { value: "consultancy" as const, label: "Consultancy" },
+  { value: "coaching" as const, label: "Coaching" },
+  { value: "keynotes" as const, label: "Keynotes" },
+  { value: "other" as const, label: "Other" },
+] as const;
+
 interface ContactFormProps {
-  /** Optional page identifier for tracking */
   pageSource?: string;
-  /** Compact variant for footer */
   variant?: "default" | "compact";
-  /** Dark mode for use on dark backgrounds (e.g. footer) */
   dark?: boolean;
 }
 
@@ -32,6 +38,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
   const [email, setEmail] = useState("");
   const [organisation, setOrganisation] = useState("");
   const [contactMethod, setContactMethod] = useState<"email" | "phone" | "whatsapp" | "other">("email");
+  const [serviceInterest, setServiceInterest] = useState<"workshops" | "consultancy" | "coaching" | "keynotes" | "other">("workshops");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
@@ -45,6 +52,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
       email,
       organisation: organisation || undefined,
       contact_method: contactMethod,
+      service_interest: serviceInterest,
       message,
     });
 
@@ -60,7 +68,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
       email: result.data.email,
       organisation: result.data.organisation || null,
       contact_method: result.data.contact_method,
-      message: result.data.message,
+      message: `[${result.data.service_interest}] ${result.data.message}`,
       page_source: pageSource || null,
     });
 
@@ -76,6 +84,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
     setOrganisation("");
     setMessage("");
     setContactMethod("email");
+    setServiceInterest("workshops");
   };
 
   if (status === "sent") {
@@ -91,21 +100,21 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
   }
 
   const isCompact = variant === "compact";
+
   const inputClass = dark
-    ? "w-full rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground px-3 py-2 text-sm placeholder:text-primary-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-    : "w-full rounded-lg border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+    ? "w-full rounded-lg border border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground px-3.5 py-2.5 text-sm placeholder:text-primary-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors"
+    : "w-full rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent transition-colors";
+
   const labelClass = dark
-    ? "text-xs font-display font-bold uppercase tracking-widest text-primary-foreground/50 mb-1.5 block"
-    : "text-xs font-display font-bold uppercase tracking-widest text-muted-foreground mb-1.5 block";
+    ? "text-xs font-display font-semibold text-primary-foreground/50 mb-1.5 block"
+    : "text-xs font-display font-semibold text-muted-foreground mb-1.5 block";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      {/* Name + Email row */}
+      {/* Name + Email */}
       <div className={`grid ${isCompact ? "grid-cols-1" : "sm:grid-cols-2"} gap-3`}>
         <div>
-          <label className={labelClass}>
-            Name *
-          </label>
+          <label className={labelClass}>Name *</label>
           <input
             type="text"
             value={name}
@@ -118,9 +127,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
           />
         </div>
         <div>
-          <label className={labelClass}>
-            Email *
-          </label>
+          <label className={labelClass}>Email *</label>
           <input
             type="email"
             value={email}
@@ -137,9 +144,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
       {/* Organisation */}
       {!isCompact && (
         <div>
-          <label className={labelClass}>
-            Organisation (optional)
-          </label>
+          <label className={labelClass}>Organisation (optional)</label>
           <input
             type="text"
             value={organisation}
@@ -152,11 +157,54 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
         </div>
       )}
 
-      {/* Contact method: radio buttons */}
+      {/* How can we help? */}
       <div>
         <label className={dark
-          ? "text-xs font-display font-bold uppercase tracking-widest text-primary-foreground/50 mb-2 block"
-          : "text-xs font-display font-bold uppercase tracking-widest text-muted-foreground mb-2 block"
+          ? "text-xs font-display font-semibold text-primary-foreground/50 mb-2 block"
+          : "text-xs font-display font-semibold text-muted-foreground mb-2 block"
+        }>
+          How can we help?
+        </label>
+        <div className="flex flex-wrap gap-2">
+          {serviceOptions.map((option, i) => {
+            const isActive = serviceInterest === option.value;
+            const accentColour = NEURO_COLOURS[i % NEURO_COLOURS.length];
+            return (
+              <label
+                key={option.value}
+                className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-display font-semibold cursor-pointer transition-all ${
+                  isActive
+                    ? "shadow-sm scale-[1.02]"
+                    : dark
+                      ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground/60 hover:border-accent/30"
+                      : "border-border bg-card text-muted-foreground hover:border-accent/30"
+                }`}
+                style={
+                  isActive
+                    ? { borderColor: accentColour, backgroundColor: `${accentColour}15`, color: accentColour }
+                    : undefined
+                }
+              >
+                <input
+                  type="radio"
+                  name="service_interest"
+                  value={option.value}
+                  checked={isActive}
+                  onChange={() => setServiceInterest(option.value)}
+                  className="sr-only"
+                />
+                {option.label}
+              </label>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Preferred contact method */}
+      <div>
+        <label className={dark
+          ? "text-xs font-display font-semibold text-primary-foreground/50 mb-2 block"
+          : "text-xs font-display font-semibold text-muted-foreground mb-2 block"
         }>
           How would you like us to get in touch?
         </label>
@@ -167,9 +215,9 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
             return (
               <label
                 key={method.value}
-                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border text-sm font-display font-semibold cursor-pointer transition-all ${
+                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full border text-xs font-display font-semibold cursor-pointer transition-all ${
                   isActive
-                    ? "shadow-md scale-[1.02]"
+                    ? "shadow-sm scale-[1.02]"
                     : dark
                       ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground/60 hover:border-accent/30"
                       : "border-border bg-card text-muted-foreground hover:border-accent/30"
@@ -188,7 +236,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
                   onChange={() => setContactMethod(method.value)}
                   className="sr-only"
                 />
-                <method.icon size={14} />
+                <method.icon size={13} />
                 {method.label}
               </label>
             );
@@ -198,9 +246,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
 
       {/* Message */}
       <div>
-        <label className={labelClass}>
-          Message *
-        </label>
+        <label className={labelClass}>Message *</label>
         <textarea
           value={message}
           onChange={(e) => setMessage(e.target.value)}
@@ -218,7 +264,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/25 hover:shadow-lg hover:scale-[1.02] transition-all disabled:opacity-50"
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/25 hover:shadow-lg hover:scale-[1.02] transition-all disabled:opacity-50"
       >
         <Send size={14} />
         {status === "sending" ? "Sending..." : "Send message"}

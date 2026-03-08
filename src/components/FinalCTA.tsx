@@ -1,4 +1,4 @@
-import coachingDashboard from "@/assets/coaching-dashboard.png";
+import { Calendar, ExternalLink } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
 const FinalCTA = () => {
@@ -26,12 +26,25 @@ const FinalCTA = () => {
               </ol>
             </div>
 
-            <div className="mt-6">
-              <img
-                src={coachingDashboard}
-                alt="Coaching statistics: 230 coaching hours, 117 people coached, 9.8 out of 10 feedback score, rated excellent on Trustpilot"
-                className="rounded-xl shadow-md w-full max-w-sm"
-              />
+            {/* Calendar booking */}
+            <div className="mt-6 p-5 rounded-lg border border-accent/20 bg-accent/5 max-w-sm">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-9 h-9 rounded-lg bg-accent/15 flex items-center justify-center">
+                  <Calendar size={18} className="text-accent" />
+                </div>
+                <div>
+                  <p className="font-display font-semibold text-sm text-foreground">Book a discovery call</p>
+                  <p className="text-xs text-muted-foreground">Choose a time that works for you</p>
+                </div>
+              </div>
+              <a
+                href="#"
+                className="mt-3 inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-accent-foreground font-display font-bold text-xs shadow-md shadow-accent/25 hover:shadow-lg hover:scale-[1.02] transition-all"
+              >
+                <Calendar size={13} />
+                Open calendar
+                <ExternalLink size={11} />
+              </a>
             </div>
           </div>
 
