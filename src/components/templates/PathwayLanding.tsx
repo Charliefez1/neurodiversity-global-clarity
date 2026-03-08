@@ -170,7 +170,7 @@ const PathwayLanding = ({
             </div>
           </section>
         ) : (
-          /* Background hero — original layout */
+          /* Background hero: original layout */
           <section className="relative bg-primary text-primary-foreground overflow-hidden">
           {heroImage && (
             <img
