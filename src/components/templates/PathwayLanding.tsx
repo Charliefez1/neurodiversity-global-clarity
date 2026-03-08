@@ -337,6 +337,7 @@ const PathwayLanding = ({
                   desc: "30 mins, no obligation",
                   href: "mailto:hello@neurodiversityglobal.com?subject=Discovery%20call%20request",
                   accent: "hsl(220,70%,55%)",
+                  isRoute: false, isTawk: false, external: false,
                 },
                 {
                   icon: Mail,
@@ -344,7 +345,7 @@ const PathwayLanding = ({
                   desc: "We'll reply within 24 hours",
                   href: "/feedback",
                   accent: "hsl(155,60%,42%)",
-                  isRoute: true,
+                  isRoute: true, isTawk: false, external: false,
                 },
                 {
                   icon: MessageCircle,
@@ -352,7 +353,7 @@ const PathwayLanding = ({
                   desc: "Chat with the team",
                   href: `https://wa.me/${whatsappNumber}`,
                   accent: "hsl(270,55%,55%)",
-                  external: true,
+                  isRoute: false, isTawk: false, external: true,
                 },
                 {
                   icon: Headset,
@@ -360,9 +361,9 @@ const PathwayLanding = ({
                   desc: "See if we're online",
                   href: "#tawk",
                   accent: "hsl(40,90%,50%)",
-                  isTawk: true,
+                  isRoute: false, isTawk: true, external: false,
                 },
-              ] as const).map((cta) => {
+              ]).map((cta) => {
                 const card = (
                   <div className="rounded-xl bg-card border border-border p-5 flex items-center gap-4 shadow-md hover:shadow-lg hover:scale-[1.01] transition-all h-full group">
                     <div
