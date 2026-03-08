@@ -7,6 +7,7 @@ import ADHDi from "@/components/ADHDi";
 import RecommendedBy from "@/components/RecommendedBy";
 import HeroWorkshopSearch from "@/components/HeroWorkshopSearch";
 import conciergeTeam from "@/assets/concierge-team.png";
+import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 import TrustIndicators from "@/components/TrustIndicators";
 
 const pathwayKeys = [
@@ -86,6 +87,12 @@ const HeroSection = () => {
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
               {t("hero.badge")}
             </p>
+            <img
+              src={ndgLogo}
+              alt="Neurodiversity Global"
+              className="h-10 md:h-12 w-auto opacity-80 mb-6"
+              loading="lazy"
+            />
             <div className="min-h-[220px] md:min-h-[200px] lg:min-h-[240px]">
               <h1
                 id="hero-heading"

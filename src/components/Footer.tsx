@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -35,9 +36,12 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <p className="font-display font-extrabold text-base mb-3">
-              Neurodiversity<span className="text-accent"> Global</span>
-            </p>
+            <img
+              src={ndgLogo}
+              alt="Neurodiversity Global"
+              className="h-10 md:h-12 w-auto mb-4"
+              loading="lazy"
+            />
             <p className="text-xs text-primary-foreground/70 leading-relaxed max-w-xs">
               {t("footer.tagline")}
             </p>
