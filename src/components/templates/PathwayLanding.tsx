@@ -134,7 +134,7 @@ const PathwayLanding = ({
             HERO: full-bleed image with gradient overlay
             ═══════════════════════════════════════════ */}
         {heroVariant === "split" ? (
-          /* Split hero — text left, image right */
+          /* Split hero: text left, image right */
           <section className="bg-primary text-primary-foreground">
             <div className="mx-auto max-w-wide px-6 lg:px-10 py-20 lg:py-32">
               <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
