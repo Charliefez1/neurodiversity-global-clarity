@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen, Brain, Heart, Eye, Lightbulb, School, Users, Compass, FileText, CalendarCheck, RefreshCw, CheckCircle2, HelpCircle, Home, Ear, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, BookOpen, Brain, Heart, Eye, Lightbulb, School, Users, Compass, FileText, CalendarCheck, RefreshCw, CheckCircle2, HelpCircle, Home, Ear, Sparkles, ShieldCheck, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import PathwayLanding from "@/components/templates/PathwayLanding";
 import PageSection from "@/components/templates/PageSection";
@@ -9,6 +9,10 @@ import PullQuote from "@/components/blocks/PullQuote";
 import heroImg from "@/assets/pathway-parents-hero.png";
 import understandingImg from "@/assets/pathway/parents-understanding.jpg";
 import schoolImg from "@/assets/pathway/parents-school.jpg";
+import sendNavigatorImg from "@/assets/resources/send-navigator.png";
+import badParentsImg from "@/assets/resources/are-we-bad-parents.png";
+import dopamineImg from "@/assets/resources/dopamine-on-demand.png";
+import { blogPosts } from "@/data/blogPosts";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -166,6 +170,150 @@ const ForParents = () => (
         ))}
       </div>
     </PageSection>
+
+    {/* ═══════════════════════════════════════════
+        RESOURCES FROM NEURODIVERSITY GLOBAL
+        ═══════════════════════════════════════════ */}
+    <section className="bg-background py-20 lg:py-28">
+      <div className="mx-auto max-w-wide px-6 lg:px-10">
+        <div className="max-w-2xl mb-12">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
+            Resources
+          </p>
+          <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
+            Resources from{" "}
+            <span className="text-accent">Neurodiversity Global</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground text-base leading-relaxed">
+            Practical guides, tools, and long reads created by our team — built from lived experience and designed for families.
+          </p>
+        </div>
+
+        {/* Key resources — large feature cards */}
+        <div className="grid md:grid-cols-3 gap-6 mb-12">
+          {([
+            {
+              title: "SEND Reform Navigator",
+              description: "Plain-English answers about SEND reform. What we know, what's changing, and what hasn't.",
+              href: "https://sendnavigator.neuro.support",
+              badge: "Interactive Tool",
+              image: sendNavigatorImg,
+              external: true,
+            },
+            {
+              title: "Are We Bad Parents?",
+              description: "One tired accusation. And the reality of parenting a neurodivergent child. An open letter that resonated with thousands.",
+              href: "https://awbp.neuro.support/",
+              badge: "Open Letter",
+              image: badParentsImg,
+              external: true,
+            },
+            {
+              title: "The Day We Gave Our Children Dopamine",
+              description: "Smartphones, dopamine, and what it means for neurodivergent young people.",
+              href: "https://smartphonefree.neurodiversityglobal.com/",
+              badge: "Long Read",
+              image: dopamineImg,
+              external: true,
+            },
+          ]).map((resource, i) => (
+            <motion.a
+              key={resource.title}
+              href={resource.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              custom={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-40px" }}
+              variants={fadeUp}
+              className="group flex flex-col rounded-2xl border border-border bg-card overflow-hidden shadow-md hover:shadow-xl hover:border-accent/30 transition-all"
+            >
+              <div className="aspect-[16/10] overflow-hidden">
+                <img
+                  src={resource.image}
+                  alt={resource.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-1">
+                <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-3">
+                  {resource.badge}
+                </span>
+                <h3 className="font-display font-bold text-base leading-tight mb-2 text-foreground group-hover:text-accent transition-colors">
+                  {resource.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                  {resource.description}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-accent text-sm font-display font-bold group-hover:gap-2.5 transition-all">
+                  Visit <ExternalLink size={14} aria-hidden="true" />
+                </span>
+              </div>
+            </motion.a>
+          ))}
+        </div>
+
+        {/* Parent blog posts */}
+        {(() => {
+          const parentBlogs = blogPosts.filter((p) => p.category === "Parents");
+          if (parentBlogs.length === 0) return null;
+          return (
+            <>
+              <div className="mb-8">
+                <h3 className="font-display font-bold text-lg text-foreground">
+                  From the blog
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Practical, evidence-informed articles about the real challenges families face.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {parentBlogs.map((post, i) => (
+                  <motion.div
+                    key={post.slug}
+                    custom={i}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-40px" }}
+                    variants={fadeUp}
+                  >
+                    <Link
+                      to={`/blog/${post.slug}`}
+                      className="group flex flex-col rounded-xl border border-border bg-card overflow-hidden hover:shadow-md hover:border-accent/30 transition-all h-full"
+                    >
+                      <div className="aspect-[16/10] overflow-hidden">
+                        <img
+                          src={post.image}
+                          alt={post.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="p-5 flex flex-col flex-1">
+                        <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-3">
+                          {post.category}
+                        </span>
+                        <h3 className="font-display font-bold text-sm leading-tight mb-2 text-card-foreground group-hover:text-accent transition-colors">
+                          {post.title}
+                        </h3>
+                        <p className="text-xs text-muted-foreground leading-relaxed flex-1 line-clamp-3">
+                          {post.excerpt}
+                        </p>
+                        <span className="mt-4 inline-flex items-center gap-1.5 text-accent text-xs font-semibold group-hover:gap-2.5 transition-all">
+                          Read more <ArrowRight size={14} aria-hidden="true" />
+                        </span>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </>
+          );
+        })()}
+      </div>
+    </section>
 
     {/* ═══════════════════════════════════════════
         UNDERSTANDING SCHOOL — image + text
