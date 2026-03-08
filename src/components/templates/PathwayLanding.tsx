@@ -48,6 +48,8 @@ const PathwayLanding = ({
   persona,
   whatsappNumber,
   placeholders,
+  heroImage,
+  heroImageAlt,
   children,
 }: PathwayLandingProps) => {
   const [query, setQuery] = useState("");
