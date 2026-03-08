@@ -49,7 +49,7 @@ const ServicesSection = () => {
             Four areas of expertise. One clear purpose.
           </h2>
           {mode === "read" && (
-            <p className="mt-4 opacity-75 text-sm leading-relaxed max-w-[55ch]">
+            <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-[55ch]">
               We work across the full scope of neurodiversity in organisations, from individual coaching to system-level change. From depots to boardrooms, we meet people where they are and build systems that scale.
             </p>
           )}
