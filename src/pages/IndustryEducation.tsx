@@ -18,7 +18,7 @@ import { TrendingUp, Eye, BatteryWarning, ClipboardCheck, Users } from "lucide-r
 
 const faqs = [
   { question: "Do you work with universities?", answer: "Yes. We work with universities and higher education institutions, supporting academic staff, professional services teams, student-facing services, and leadership governance." },
-  { question: "How is neurodiversity training different for education?", answer: "Education environments have unique dynamics — academic freedom, student-staff relationships, assessment design, and institutional culture all need a neurodiversity lens." },
+  { question: "How is neurodiversity training different for education?", answer: "Education environments have unique dynamics: academic freedom, student-staff relationships, assessment design, and institutional culture all need a neurodiversity lens." },
   { question: "Can you support SEND and disability services?", answer: "We work alongside existing SEND and disability services to ensure neurodiversity is embedded across the whole institution, not siloed in support teams." },
   { question: "Do you address gender bias in identification?", answer: "Yes. Girls and high-masking pupils continue to be missed. Our training addresses gender bias in ADHD and autism identification specifically." },
 ];
