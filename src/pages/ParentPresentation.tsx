@@ -208,7 +208,7 @@ const slides: Slide[] = [
       "Masking is the suppression of natural behaviour to fit in. It is effortful, constant, and invisible to adults.",
       "Children rehearse scripts, copy peers, suppress stims, and perform normality.",
       "The school sees a child coping. The parent sees a child in crisis. Both are right.",
-      "What parents see at 4pm is restraint collapse — the child finally being safe enough to fall apart.",
+      "What parents see at 4pm is restraint collapse, the child finally being safe enough to fall apart.",
       "Higher masking is consistently associated with worse mental health: more anxiety, more depression, more exhaustion.",
       "Masking is independently associated with suicidal ideation in adolescents (Cassidy et al., UCL).",
       "Girls mask more effectively. They are identified later. The damage accumulates longer.",
