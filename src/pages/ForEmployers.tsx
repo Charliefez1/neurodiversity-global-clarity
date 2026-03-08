@@ -13,6 +13,8 @@ const ForEmployers = () => (
     breadcrumbPath="/for-employers"
     persona="Charlie"
     whatsappNumber="447000000000"
+    heroImage={heroImg}
+    heroImageAlt="Diverse workforce across industries"
     placeholders={[
       "We've had a grievance involving a neurodivergent employee — what should we do?",
       "How do I make our recruitment process more neuroinclusive?",
