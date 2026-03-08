@@ -132,8 +132,7 @@ const ForParents = () => (
               to="/ask-rich"
               className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/25 hover:shadow-lg hover:scale-[1.02] transition-all"
             >
-              <Sparkles size={16} />
-              Ask Rich about your child
+              Try our knowledge base
               <ArrowRight size={16} />
             </Link>
           </motion.div>
