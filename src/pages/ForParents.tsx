@@ -53,10 +53,10 @@ const ForParents = () => (
     heroImage={heroImg}
     heroImageAlt="Diverse families and children together"
     badge="For Parents & Carers"
-    title="Understanding neurodivergent children and the systems around them"
-    heroDescription="Many parents realise something about their child long before anyone else does. We help you understand your child and navigate the systems around them."
-    seoTitle="Neurodiversity Support for Parents & Carers | Neurodiversity Global"
-    seoDescription="Expert guidance for parents and carers of neurodivergent children. Navigate SEND systems, understand rights, and get practical, compassionate support."
+    title="Tools and resources built for families navigating neurodiversity"
+    heroDescription="We've built a set of tools that have processed thousands of documents — government policy, research, SEND guidance, and more — so families can access practical advice, strategies, and resources in one place."
+    seoTitle="Neurodiversity Tools & Resources for Parents & Carers | Neurodiversity Global"
+    seoDescription="Free tools and resources for parents and carers of neurodivergent children. Access SEND guidance, practical strategies, and evidence-based resources built from thousands of documents."
     breadcrumbLabel="For Parents"
     breadcrumbPath="/for-parents"
     persona="Rich"
@@ -92,8 +92,8 @@ const ForParents = () => (
               />
             </div>
             <div className="absolute -bottom-6 -right-4 lg:-right-8 rounded-xl bg-card border border-border shadow-lg p-5 max-w-[200px]">
-              <p className="font-display font-bold text-sm text-foreground">Understanding first</p>
-              <p className="text-xs text-muted-foreground mt-1 leading-snug">The goal is not to label children. The goal is understanding what sits beneath behaviour.</p>
+              <p className="font-display font-bold text-sm text-foreground">Built from evidence</p>
+              <p className="text-xs text-muted-foreground mt-1 leading-snug">Thousands of documents processed into practical, accessible resources for families.</p>
             </div>
           </motion.div>
 
@@ -105,14 +105,14 @@ const ForParents = () => (
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
           >
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
-              Understanding your child
+              Understanding neurodivergence
             </p>
             <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
-              What is actually happening{" "}
-              <span className="text-accent">for my child?</span>
+              Tools to help you{" "}
+              <span className="text-accent">make sense of it all</span>
             </h2>
             <p className="mt-5 text-base text-muted-foreground leading-relaxed">
-              Before meetings, assessments, or paperwork, most parents want to understand one thing. Neurodivergent children often experience the world in ways that are not always obvious to others.
+              Before meetings, assessments, or paperwork, most parents want to understand what's going on. Our tools draw on thousands of processed documents — research, policy, and real-world guidance — to help you find the information that matters.
             </p>
 
             <div className="mt-6 space-y-3">
@@ -132,8 +132,7 @@ const ForParents = () => (
               to="/ask-rich"
               className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/25 hover:shadow-lg hover:scale-[1.02] transition-all"
             >
-              <Sparkles size={16} />
-              Ask Rich about your child
+              Try our knowledge base
               <ArrowRight size={16} />
             </Link>
           </motion.div>
@@ -146,8 +145,8 @@ const ForParents = () => (
         ═══════════════════════════════════════════ */}
     <PageSection
       id="areas"
-      badge="What we help parents understand"
-      title="The reality of neurodivergence in everyday life"
+      badge="Topics our tools cover"
+      title="The areas families ask about most"
       variant="sand"
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -233,7 +232,7 @@ const ForParents = () => (
               badgeColor: "hsl(260,50%,55%)",
               borderColor: "hsl(260,50%,55%)",
               title: "Get plain-English answers",
-              desc: "Ask any question about SEND reform and get a grounded, honest answer drawn from confirmed sources.",
+              desc: "A knowledge base built from thousands of processed documents. Ask a question and get a grounded answer drawn from confirmed sources.",
               cta: "Ask Rich",
               href: "/ask-rich",
             },
@@ -468,7 +467,7 @@ const ForParents = () => (
         />
       </div>
 
-      <PullQuote quote="Many parents tell us that simply understanding their child more clearly changes how they support them." />
+      <PullQuote quote="These sessions give families a starting point — not a diagnosis, not a prescription, just practical understanding they can use at home." />
     </PageSection>
 
     {/* ═══════════════════════════════════════════
