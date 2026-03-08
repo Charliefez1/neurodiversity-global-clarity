@@ -18,7 +18,7 @@ const PageCTA = ({
         {/* Header */}
         <div className="text-center mb-10">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
-            Contact us
+            Get in touch
           </p>
           <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-3">
             {title}
