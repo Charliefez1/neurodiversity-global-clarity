@@ -97,7 +97,7 @@ const IndustryEducation = () => {
               { title: "Strong appetite for inclusion done well", description: "Many schools want systemic change, not surface compliance." },
               { title: "Neurodivergent educators often innovate", description: "Creative curriculum design and alternative engagement models often come from staff who think differently." },
             ]}
-            opportunity="Support staff neurodivergence alongside pupil support — not as an afterthought."
+            opportunity="Support staff neurodivergence alongside pupil support, not as an afterthought."
           />
         </PageSection>
 
