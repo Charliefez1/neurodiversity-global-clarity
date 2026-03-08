@@ -105,7 +105,7 @@ const Sources = () => {
         </div>
       </section>
 
-      <MultiCTABar />
+      
       <Footer />
     </main>
   );

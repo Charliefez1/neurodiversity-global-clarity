@@ -464,7 +464,7 @@ const Industries = () => {
           </div>
         </section>
 
-        <MultiCTABar />
+        
 
         {/* ── Final CTA ── */}
         <section className="bg-primary text-primary-foreground py-20 lg:py-28">

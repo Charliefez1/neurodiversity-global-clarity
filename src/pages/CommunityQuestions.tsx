@@ -109,7 +109,7 @@ const CommunityQuestions = () => {
         </div>
       </section>
 
-      <MultiCTABar />
+      
       <Footer />
     </main>
   );

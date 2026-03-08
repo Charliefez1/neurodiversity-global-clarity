@@ -123,7 +123,7 @@ const Blog = () => {
         </div>
       </section>
 
-      <MultiCTABar />
+      
       <Footer />
     </>
   );

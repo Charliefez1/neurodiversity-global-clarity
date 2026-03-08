@@ -447,7 +447,7 @@ const PathwayLanding = ({
           </div>
         </section>
 
-        <MultiCTABar />
+        
       </main>
       <Footer />
     </>

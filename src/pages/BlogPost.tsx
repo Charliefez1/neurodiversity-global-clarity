@@ -104,7 +104,7 @@ const BlogPost = () => {
         </div>
       </article>
 
-      <MultiCTABar />
+      
 
       {/* Related Posts */}
       {related.length > 0 && (

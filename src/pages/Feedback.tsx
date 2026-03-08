@@ -237,7 +237,7 @@ const Feedback = () => {
         </div>
       </section>
 
-      <MultiCTABar />
+      
       <Footer />
     </main>
   );
