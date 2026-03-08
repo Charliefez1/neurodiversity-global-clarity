@@ -72,7 +72,7 @@ const IndustryEducation = () => {
         <PageHero
           badge="Neurodiversity in education"
           title="Teaching inclusion while struggling with it internally"
-          description="Education institutions support neurodivergent learners — but overlook neurodivergent staff, absorb rising SEND demand without training, and treat inclusion as burden rather than design."
+          description="Education institutions support neurodivergent learners, but overlook neurodivergent staff, absorb rising SEND demand without training, and treat inclusion as burden rather than design."
         />
 
         <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points education can't ignore">
