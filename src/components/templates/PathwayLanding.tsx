@@ -296,7 +296,7 @@ const PathwayLanding = ({
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto items-stretch">
               {ctaItems.map((cta) => {
                 const inner = (
                   <div
