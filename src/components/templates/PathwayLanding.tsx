@@ -27,6 +27,12 @@ interface PathwayLandingProps {
   placeholders: string[];
   heroImage?: string;
   heroImageAlt?: string;
+  /** When true, hero uses split layout with image on right instead of background overlay */
+  heroVariant?: "background" | "split";
+  /** Custom hero CTA buttons — overrides default buttons */
+  heroCTAs?: ReactNode;
+  /** Hide the "In your own words" AI search section */
+  hideAskSection?: boolean;
   children?: ReactNode;
 }
 
