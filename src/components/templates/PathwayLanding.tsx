@@ -329,7 +329,7 @@ const PathwayLanding = ({
                   Got a question about neurodiversity at work?
                 </h2>
                 <p className="mt-4 text-primary-foreground/70 text-base leading-relaxed max-w-[48ch]">
-                  Rich is our co-founder with 20+ years of neurodiversity expertise. Our knowledge base has 60+ expert answers — and if yours isn't there, submit it and Rich will answer personally.
+                  Rich is our co-founder with 20+ years of neurodiversity expertise. Our knowledge base has 60+ expert answers, and if yours isn't there, submit it and Rich will answer personally.
                 </p>
                 <Link
                   to="/ask-rich"
