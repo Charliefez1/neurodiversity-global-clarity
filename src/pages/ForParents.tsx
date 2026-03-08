@@ -145,8 +145,8 @@ const ForParents = () => (
         ═══════════════════════════════════════════ */}
     <PageSection
       id="areas"
-      badge="What we help parents understand"
-      title="The reality of neurodivergence in everyday life"
+      badge="Topics our tools cover"
+      title="The areas families ask about most"
       variant="sand"
     >
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
