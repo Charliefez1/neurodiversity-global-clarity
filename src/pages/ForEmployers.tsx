@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Shield, Brain, Target, Briefcase, TrendingUp, CheckCircle2, Building2, Cpu, Landmark, HeartPulse, Train, Scale } from "lucide-react";
+import { ArrowRight, Users, Shield, Brain, Target, Briefcase, TrendingUp, CheckCircle2, Building2, Cpu, Landmark, HeartPulse, Train, Scale, Sparkles, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import PathwayLanding from "@/components/templates/PathwayLanding";
 import PageSection from "@/components/templates/PageSection";
@@ -8,6 +8,8 @@ import WhatIsBreaking from "@/components/blocks/WhatIsBreaking";
 import OutcomeBlock from "@/components/blocks/OutcomeBlock";
 import PullQuote from "@/components/blocks/PullQuote";
 import heroImg from "@/assets/pathway-employers-hero.png";
+import teamworkImg from "@/assets/pathway/employers-teamwork.jpg";
+import journeyImg from "@/assets/pathway/employers-journey.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -21,24 +23,28 @@ const fadeUp = {
 const journeyStages = [
   {
     stage: "Aware",
+    number: "01",
     icon: Users,
     color: "hsl(var(--accent))",
     summary: "Build shared understanding and remove stigma across teams.",
   },
   {
     stage: "Champions",
+    number: "02",
     icon: Shield,
     color: "hsl(155, 60%, 42%)",
     summary: "Develop internal advocates who strengthen everyday inclusion.",
   },
   {
     stage: "Managers",
+    number: "03",
     icon: Brain,
     color: "hsl(270, 55%, 55%)",
     summary: "Equip managers with practical tools for supporting neurodivergent colleagues.",
   },
   {
     stage: "Leaders",
+    number: "04",
     icon: Target,
     color: "hsl(20, 100%, 55%)",
     summary: "Embed neuroinclusion into culture, policy, and strategy at senior level.",
@@ -77,69 +83,131 @@ const ForEmployers = () => (
     ]}
   >
     {/* ═══════════════════════════════════════════
-        NEUROINCLUSION THAT IMPROVES PERFORMANCE
+        NEUROINCLUSION THAT IMPROVES PERFORMANCE — image + text split
         ═══════════════════════════════════════════ */}
-    <PageSection
-      id="performance"
-      badge="The reality"
-      title="Neuroinclusion that improves performance"
-      description="Most organisations already employ neurodivergent people. The question is whether your workplace enables them to succeed."
-      variant="default"
-    >
-      <div className="grid lg:grid-cols-2 gap-8 items-start">
-        <div className="space-y-5">
-          <p className="text-base text-muted-foreground leading-relaxed">
-            Neurodiversity Global works with organisations that want to move beyond awareness and build workplaces where neurodivergent employees can contribute fully, managers feel confident, and teams operate with clarity.
-          </p>
-          <p className="font-display font-bold text-foreground">
-            We focus on the reality of work. Not theory.
-          </p>
-        </div>
-        <div className="rounded-xl border border-accent/20 bg-accent/[0.04] p-6">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center">
-              <Scale size={20} className="text-accent" />
+    <section className="bg-background py-20 lg:py-28">
+      <div className="mx-auto max-w-wide px-6 lg:px-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image side */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="relative"
+          >
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <img
+                src={teamworkImg}
+                alt="Diverse team collaborating in a modern workplace"
+                className="w-full h-[400px] lg:h-[480px] object-cover"
+                loading="lazy"
+              />
             </div>
-            <p className="font-display font-bold text-sm text-foreground">The gap we close</p>
-          </div>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Many organisations have invested in neurodiversity awareness. Yet managers still feel unsure, HR teams see situations escalate, and talented people quietly leave organisations that were trying to support them.
-          </p>
-          <p className="text-sm text-muted-foreground leading-relaxed mt-3">
-            Often the difficulty is not intent. It is that workplaces were never designed with different thinking styles in mind.
-          </p>
+            {/* Floating stat card */}
+            <div className="absolute -bottom-6 -right-4 lg:-right-8 rounded-xl bg-card border border-border shadow-lg p-5 max-w-[200px]">
+              <p className="font-display font-extrabold text-3xl text-accent">30,000+</p>
+              <p className="text-xs text-muted-foreground mt-1 leading-snug">people trained across hundreds of organisations</p>
+            </div>
+          </motion.div>
+
+          {/* Text side */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+          >
+            <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
+              The reality
+            </p>
+            <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
+              Neuroinclusion that improves{" "}
+              <span className="text-accent">performance</span>
+            </h2>
+            <p className="mt-5 text-base text-muted-foreground leading-relaxed">
+              Most organisations already employ neurodivergent people. The question is whether your workplace enables them to succeed.
+            </p>
+            <p className="mt-4 text-base text-muted-foreground leading-relaxed">
+              Neurodiversity Global works with organisations that want to move beyond awareness and build workplaces where neurodivergent employees can contribute fully, managers feel confident, and teams operate with clarity.
+            </p>
+            <div className="mt-6 rounded-xl bg-accent/[0.06] border border-accent/15 p-5">
+              <p className="font-display font-bold text-base text-foreground">
+                We focus on the reality of work. Not theory.
+              </p>
+              <p className="text-sm text-muted-foreground mt-1">
+                Leadership behaviour, communication, psychological safety, and everyday working practices.
+              </p>
+            </div>
+            <Link
+              to="/feedback"
+              className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/25 hover:shadow-lg hover:scale-[1.02] transition-all"
+            >
+              <Sparkles size={16} />
+              Start a conversation
+              <ArrowRight size={16} />
+            </Link>
+          </motion.div>
         </div>
       </div>
-    </PageSection>
+    </section>
 
     {/* ═══════════════════════════════════════════
-        THE CHALLENGE
+        THE CHALLENGE — dramatic full-width
         ═══════════════════════════════════════════ */}
     <PageSection
       id="challenge"
       badge="The challenge"
       title="When expectations, communication, and environments are unclear"
-      description="Most organisations do not lack commitment. They lack practical capability."
+      description="Many organisations have invested in neurodiversity awareness. Yet leaders still tell us the same things."
       variant="sand"
     >
-      <WhatIsBreaking
-        title="What organisations experience without neuroinclusion infrastructure"
-        items={[
-          "Avoidable attrition of talented neurodivergent employees",
-          "Rising HR casework and grievances that could have been prevented",
-          "Stressed managers who want to help but lack tools and confidence",
-          "Disengaged employees struggling in environments not designed for them",
-          "Unnecessary performance concerns driven by misunderstanding, not ability",
-        ]}
-      />
+      <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 items-start">
+        <div className="space-y-5">
+          <div className="space-y-3">
+            {[
+              "Managers want to do the right thing but feel unsure how.",
+              "HR teams see situations escalate that could have been resolved earlier.",
+              "Talented people quietly leave organisations that were trying to support them.",
+            ].map((line, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="flex items-start gap-3 rounded-lg bg-card border border-border p-4 shadow-sm"
+              >
+                <span className="w-2 h-2 rounded-full bg-destructive mt-2 shrink-0" />
+                <p className="text-sm text-muted-foreground leading-relaxed">{line}</p>
+              </motion.div>
+            ))}
+          </div>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Often the difficulty is not intent. It is that workplaces were never designed with different thinking styles in mind.
+          </p>
+        </div>
+
+        <WhatIsBreaking
+          title="What organisations experience without practical capability"
+          items={[
+            "Avoidable attrition of talented neurodivergent employees",
+            "Rising HR casework and grievances that could have been prevented",
+            "Stressed managers who want to help but lack tools and confidence",
+            "Disengaged employees struggling in environments not designed for them",
+            "Unnecessary performance concerns driven by misunderstanding, not ability",
+          ]}
+        />
+      </div>
 
       <PullQuote
-        quote="Managers want to do the right thing but feel unsure how. HR teams see situations escalate that could have been resolved earlier. Talented people quietly leave."
+        quote="Most organisations do not lack commitment. They lack practical capability."
       />
     </PageSection>
 
     {/* ═══════════════════════════════════════════
-        WHAT WE DO
+        WHAT WE DO — text + outcomes side by side
         ═══════════════════════════════════════════ */}
     <PageSection
       id="what-we-do"
@@ -148,7 +216,7 @@ const ForEmployers = () => (
       description="We help organisations build environments where neurodivergent people can perform at their best."
       variant="default"
     >
-      <div className="grid lg:grid-cols-2 gap-8 items-start">
+      <div className="grid lg:grid-cols-2 gap-10 items-start">
         <div className="space-y-5">
           <p className="text-base text-muted-foreground leading-relaxed">
             Our work focuses on leadership behaviour, communication, psychological safety, and everyday working practices.
@@ -156,6 +224,12 @@ const ForEmployers = () => (
           <p className="text-base text-muted-foreground leading-relaxed">
             This is not about labels or awareness campaigns. It is about creating workplaces where different ways of thinking can operate effectively.
           </p>
+          <div className="rounded-xl bg-accent/[0.06] border border-accent/15 p-5 flex items-start gap-4">
+            <CheckCircle2 size={22} className="text-accent shrink-0 mt-0.5" />
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              <span className="font-display font-bold text-foreground">Inclusive organisations consistently report stronger innovation and productivity outcomes.</span>
+            </p>
+          </div>
         </div>
         <OutcomeBlock
           title="What organisations commonly see"
@@ -168,109 +242,126 @@ const ForEmployers = () => (
           ]}
         />
       </div>
-
-      <div className="mt-8 rounded-xl bg-accent/[0.06] border border-accent/15 p-6 flex items-start gap-4">
-        <CheckCircle2 size={22} className="text-accent shrink-0 mt-0.5" />
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          <span className="font-display font-bold text-foreground">Inclusive organisations consistently report stronger innovation and productivity outcomes.</span>
-          {" "}Neuroinclusion is not just the right thing to do. It is a business advantage.
-        </p>
-      </div>
     </PageSection>
 
     {/* ═══════════════════════════════════════════
-        HOW WE WORK — Journey stages
+        HOW WE WORK — Journey stages with image
         ═══════════════════════════════════════════ */}
-    <PageSection
-      id="how-we-work"
-      badge="How we work"
-      title="Programmes for every stage of the neuroinclusion journey"
-      description="Our programmes support organisations from first awareness through to strategic leadership embedding."
-      variant="dark"
-    >
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {journeyStages.map((s, i) => (
-          <motion.div
-            key={s.stage}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-40px" }}
-            variants={fadeUp}
-            className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-6 hover:bg-primary-foreground/[0.1] hover:border-primary-foreground/20 transition-all group"
-          >
-            <div
-              className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
-              style={{ backgroundColor: `${s.color}20`, color: s.color }}
-            >
-              <s.icon size={24} />
+    <section className="bg-primary text-primary-foreground py-20 lg:py-28">
+      <div className="mx-auto max-w-wide px-6 lg:px-10">
+        <div className="grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
+          {/* Left content */}
+          <div>
+            <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
+              How we work
+            </p>
+            <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight">
+              Programmes for every stage of the{" "}
+              <span className="text-accent">neuroinclusion journey</span>
+            </h2>
+            <p className="mt-4 text-primary-foreground/70 text-base leading-relaxed max-w-[50ch]">
+              Our programmes support organisations from first awareness through to strategic leadership embedding.
+            </p>
+
+            <div className="mt-8 space-y-4">
+              {journeyStages.map((s, i) => (
+                <motion.div
+                  key={s.stage}
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-40px" }}
+                  variants={fadeUp}
+                  className="flex items-start gap-4 rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-5 hover:bg-primary-foreground/[0.1] transition-all group"
+                >
+                  <div
+                    className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: `${s.color}20`, color: s.color }}
+                  >
+                    <span className="font-display font-extrabold text-sm">{s.number}</span>
+                  </div>
+                  <div>
+                    <h3 className="font-display font-bold text-base text-primary-foreground">{s.stage}</h3>
+                    <p className="text-sm text-primary-foreground/60 leading-relaxed mt-1">{s.summary}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-            <h3 className="font-display font-bold text-base text-primary-foreground mb-2">
-              {s.stage}
-            </h3>
-            <p className="text-sm text-primary-foreground/70 leading-relaxed">
-              {s.summary}
-            </p>
-          </motion.div>
-        ))}
-      </div>
 
-      <div className="mt-8 rounded-xl bg-accent/15 border border-accent/25 p-6 text-center">
-        <p className="font-display font-bold text-sm text-primary-foreground">
-          These programmes form part of the NEURO Value Creation Cycle
-        </p>
-        <p className="text-sm text-primary-foreground/60 mt-1">
-          A structured approach to measurable neuroinclusion.
-        </p>
+            <div className="mt-8 rounded-xl bg-accent/15 border border-accent/25 p-5 text-center">
+              <p className="font-display font-bold text-sm text-primary-foreground">
+                Part of the NEURO Value Creation Cycle
+              </p>
+              <p className="text-xs text-primary-foreground/50 mt-1">A structured approach to measurable neuroinclusion.</p>
+            </div>
+          </div>
+
+          {/* Right image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="relative hidden lg:block"
+          >
+            <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src={journeyImg}
+                alt="Stages of organisational growth"
+                className="w-full h-[560px] object-cover"
+                loading="lazy"
+              />
+            </div>
+          </motion.div>
+        </div>
       </div>
-    </PageSection>
+    </section>
 
     {/* ═══════════════════════════════════════════
-        WHY ORGANISATIONS WORK WITH US
+        WHY US — dramatic stats + founders
         ═══════════════════════════════════════════ */}
-    <PageSection
-      id="why-us"
-      badge="Why us"
-      title="A neurodivergent-led consultancy. No hand-offs. No generic training."
-      description="Neurodiversity Global is founded by Rich and Charlie Ferriman. Our work combines lived experience with decades of leadership experience inside complex organisations."
-      variant="sand"
-    >
-      <div className="grid lg:grid-cols-3 gap-5">
-        {[
-          {
-            stat: "30,000+",
-            label: "People trained across hundreds of organisations",
-          },
-          {
-            stat: "Direct",
-            label: "Clients work directly with the founders",
-          },
-          {
-            stat: "Decades",
-            label: "Of leadership experience inside complex organisations",
-          },
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-40px" }}
-            variants={fadeUp}
-            className="rounded-xl border border-border bg-card p-6 shadow-md hover:shadow-lg transition-shadow text-center"
-          >
-            <p className="font-display font-extrabold text-2xl md:text-3xl text-accent mb-2">
-              {item.stat}
-            </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {item.label}
-            </p>
-          </motion.div>
-        ))}
-      </div>
+    <section className="bg-warm-stone py-20 lg:py-28">
+      <div className="mx-auto max-w-wide px-6 lg:px-10">
+        <div className="max-w-2xl mb-12">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
+            Why us
+          </p>
+          <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
+            A neurodivergent-led consultancy.
+            <br />
+            <span className="text-accent">No hand-offs. No generic training.</span>
+          </h2>
+          <p className="mt-4 text-muted-foreground text-base leading-relaxed">
+            Neurodiversity Global is founded by Rich and Charlie Ferriman. Our work combines lived experience with decades of leadership experience inside complex organisations.
+          </p>
+        </div>
 
-      <PullQuote quote="Just practical guidance grounded in real organisational environments. No hand-offs. No generic training." />
-    </PageSection>
+        <div className="grid sm:grid-cols-3 gap-5 mb-10">
+          {[
+            { stat: "30,000+", label: "People trained across hundreds of organisations" },
+            { stat: "Direct access", label: "Clients work directly with the founders" },
+            { stat: "Decades", label: "Of leadership experience inside complex organisations" },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              custom={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-40px" }}
+              variants={fadeUp}
+              className="rounded-2xl border border-border bg-card p-8 shadow-md hover:shadow-lg transition-shadow text-center"
+            >
+              <p className="font-display font-extrabold text-3xl md:text-4xl text-accent mb-3">
+                {item.stat}
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.label}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <PullQuote quote="Just practical guidance grounded in real organisational environments. No hand-offs. No generic training." />
+      </div>
+    </section>
 
     {/* ═══════════════════════════════════════════
         WHO WE SUPPORT — Sectors
@@ -291,10 +382,10 @@ const ForEmployers = () => (
             whileInView="visible"
             viewport={{ once: true, margin: "-40px" }}
             variants={fadeUp}
-            className="rounded-xl border border-border bg-card p-5 shadow-sm hover:shadow-md hover:border-accent/30 transition-all text-center group"
+            className="rounded-2xl border border-border bg-card p-6 shadow-sm hover:shadow-md hover:border-accent/30 transition-all text-center group"
           >
-            <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/20 transition-colors">
-              <sector.icon size={20} className="text-accent" />
+            <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-accent/20 transition-colors">
+              <sector.icon size={22} className="text-accent" />
             </div>
             <p className="font-display font-bold text-xs text-foreground leading-tight">
               {sector.label}
