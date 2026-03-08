@@ -55,7 +55,7 @@ const IndustryEducation = () => {
   return (
     <>
       <SEOHead
-        title="Neurodiversity in Education — 2026 Challenges"
+        title="Neurodiversity in Education: 2026 Challenges"
         description="Neurodiversity training and consultancy for schools, universities, and education institutions. Address SEND demand, staff neurodivergence, and inclusive systems."
         path="/industries/education"
       />
