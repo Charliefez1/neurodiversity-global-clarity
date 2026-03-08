@@ -2,6 +2,7 @@ import { Quote, ArrowRight, Heart, GraduationCap, Building2, Cpu, Landmark } fro
 import { Link } from "react-router-dom";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
+import { NEURO_COLOURS } from "@/data/neuroColours";
 import portrait1 from "@/assets/testimonials/portrait-1.jpg";
 import portrait2 from "@/assets/testimonials/portrait-2.jpg";
 import portrait3 from "@/assets/testimonials/portrait-3.jpg";
