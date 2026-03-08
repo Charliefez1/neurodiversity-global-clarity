@@ -48,7 +48,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-6">
-            <ContactForm pageSource="footer" variant="compact" />
+            <ContactForm pageSource="footer" variant="compact" dark />
           </div>
         </div>
       </div>

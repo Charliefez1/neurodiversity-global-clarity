@@ -103,7 +103,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
       {/* Name + Email row */}
       <div className={`grid ${isCompact ? "grid-cols-1" : "sm:grid-cols-2"} gap-3`}>
         <div>
-          <label className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground mb-1.5 block">
+          <label className={labelClass}>
             Name *
           </label>
           <input
@@ -118,7 +118,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
           />
         </div>
         <div>
-          <label className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground mb-1.5 block">
+          <label className={labelClass}>
             Email *
           </label>
           <input
@@ -137,7 +137,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
       {/* Organisation */}
       {!isCompact && (
         <div>
-          <label className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground mb-1.5 block">
+          <label className={labelClass}>
             Organisation (optional)
           </label>
           <input
@@ -154,7 +154,10 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
 
       {/* Contact method — radio buttons */}
       <div>
-        <label className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground mb-2 block">
+        <label className={dark
+          ? "text-xs font-display font-bold uppercase tracking-widest text-primary-foreground/50 mb-2 block"
+          : "text-xs font-display font-bold uppercase tracking-widest text-muted-foreground mb-2 block"
+        }>
           How would you like us to get in touch?
         </label>
         <div className="flex flex-wrap gap-2">
@@ -167,7 +170,9 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
                 className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border text-sm font-display font-semibold cursor-pointer transition-all ${
                   isActive
                     ? "shadow-md scale-[1.02]"
-                    : "border-border bg-card text-muted-foreground hover:border-accent/30"
+                    : dark
+                      ? "border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground/60 hover:border-accent/30"
+                      : "border-border bg-card text-muted-foreground hover:border-accent/30"
                 }`}
                 style={
                   isActive
@@ -193,7 +198,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
 
       {/* Message */}
       <div>
-        <label className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground mb-1.5 block">
+        <label className={labelClass}>
           Message *
         </label>
         <textarea
