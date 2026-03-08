@@ -122,10 +122,11 @@ const PathwayLanding = ({
     },
     {
       icon: Mail,
-      label: "Email us",
-      description: "hello@neurodiversityglobal.com",
-      href: "mailto:hello@neurodiversityglobal.com",
+      label: "Send us a message",
+      description: "We'll reply within 24 hours",
+      href: "/feedback",
       colour: NEURO_COLOURS[2],
+      isRoute: true,
     },
     {
       icon: MessageCircle,
