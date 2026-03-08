@@ -77,11 +77,6 @@ const RecommendedBy = () => (
               </p>
             </div>
             <div className="flex items-center gap-3 mt-4 lg:ml-[30px]">
-              <img
-                src={portrait4}
-                alt="Smartest Energy representative"
-                className="w-8 h-8 rounded-full object-cover ring-2 ring-accent/20"
-              />
               <p className="text-xs text-primary-foreground/50">
                 Smartest Energy · Energy sector
               </p>
