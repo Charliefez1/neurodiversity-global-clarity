@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/templates/PageHero";
 import PageSection from "@/components/templates/PageSection";
 import PageCTA from "@/components/templates/PageCTA";
-import MultiCTABar from "@/components/MultiCTABar";
+
 import KeyIssuesGrid from "@/components/blocks/KeyIssuesGrid";
 import WhatIsBreaking from "@/components/blocks/WhatIsBreaking";
 import PositivesBlock from "@/components/blocks/PositivesBlock";
