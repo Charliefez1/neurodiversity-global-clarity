@@ -523,7 +523,7 @@ const slides: Slide[] = [
     bullets: [
       "Validation that it is genuinely as hard as you think it is",
       "Someone who does not require you to justify why this is difficult",
-      "Practical information — what you are entitled to, what language to use, what to ask for",
+      "Practical information: what you are entitled to, what language to use, what to ask for",
       "Permission to disengage from battles that are not worth the cost",
       "A peer group of people who already understand without explanation",
       "Recognition that the system is failing your child, not that you are failing them",
