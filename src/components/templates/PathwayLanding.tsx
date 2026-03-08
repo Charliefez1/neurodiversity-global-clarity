@@ -158,7 +158,7 @@ const PathwayLanding = ({
         <PageHero badge={badge} title={title} description={heroDescription} />
 
         {/* ── In your own words search ── */}
-        <section className="bg-background py-16 lg:py-24">
+        <section className="bg-warm-stone py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
             <div className="max-w-2xl mx-auto text-center mb-10">
               <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">In your own words</p>
