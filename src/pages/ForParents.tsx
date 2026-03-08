@@ -641,11 +641,7 @@ const ForParents = () => (
         ═══════════════════════════════════════════ */}
     <PageCTA
       title="Work with us"
-      description="If you are a school, organisation, or community group supporting parents of neurodivergent children, we would be happy to work with you. Our sessions help families better understand neurodivergence, their child, and the environments around them."
-      primaryLabel="Get in touch"
-      primaryHref="/feedback"
-      secondaryLabel="Send us a message"
-      secondaryHref="/feedback"
+      description="If you are a school, organisation, or community group supporting parents of neurodivergent children, we would be happy to work with you."
     />
   </PathwayLanding>
 );
