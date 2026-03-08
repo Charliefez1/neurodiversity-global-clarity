@@ -131,7 +131,7 @@ const PathwayLanding = ({
 
       <main>
         {/* ═══════════════════════════════════════════
-            HERO — full-bleed image with gradient overlay
+            HERO: full-bleed image with gradient overlay
             ═══════════════════════════════════════════ */}
         {heroVariant === "split" ? (
           /* Split hero — text left, image right */
