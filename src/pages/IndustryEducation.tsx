@@ -162,7 +162,7 @@ const IndustryEducation = () => {
           </div>
         </PageSection>
 
-        <MultiCTABar />
+        
         <PageCTA title="Ready to make neurodiversity work in education?" description="Book a discovery call. We'll discuss your specific challenges and recommend a practical next step." />
       </main>
       <Footer />

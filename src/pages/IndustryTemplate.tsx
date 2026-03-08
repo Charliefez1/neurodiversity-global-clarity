@@ -165,7 +165,7 @@ const IndustryTemplate = () => {
         </PageSection>
 
         {/* 6. CTA */}
-        <MultiCTABar />
+        
 
         <PageCTA
           title="Ready to make neurodiversity work in financial services?"
