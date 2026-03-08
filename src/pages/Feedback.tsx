@@ -5,7 +5,7 @@ import { z } from "zod";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import MultiCTABar from "@/components/MultiCTABar";
+
 
 const feedbackSchema = z.object({
   feedback: z.string().trim().min(10, "Please write at least 10 characters").max(5000, "Maximum 5000 characters"),
