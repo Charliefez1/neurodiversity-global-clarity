@@ -55,8 +55,8 @@
     --burnt-orange-foreground: 0 0% 100%;
     --warm-stone: 40 5% 88%;
 
-    font-family: 'Roboto', system-ui, sans-serif;
-    font-size: 17px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
   }
 
   .dark {
@@ -91,12 +91,54 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-family: 'Cooper Hewitt', system-ui, sans-serif;
     line-height: 1.2;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 700;
   }
 
   h2 {
+    font-size: 1.875rem; /* 30px */
+    font-weight: 700;
     line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: 1rem; /* 16px */
+    font-weight: 600;
+  }
+
+  @screen md {
+    h1 {
+      font-size: 3rem; /* 48px */
+    }
+    h2 {
+      font-size: 2.25rem; /* 36px */
+    }
+    h3 {
+      font-size: 1.875rem; /* 30px */
+    }
+    h4 {
+      font-size: 1.5rem; /* 24px */
+    }
   }
 }
