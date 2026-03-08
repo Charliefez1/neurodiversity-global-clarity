@@ -144,8 +144,8 @@ const slides: Slide[] = [
     sectionIndex: 1,
     title: "The cognitive battery",
     stats: [
-      { value: "5%", label: "cognitive energy spent on posture and compliance — neurotypical peer" },
-      { value: "80%", label: "cognitive energy spent just staying in the chair — neurodivergent child" },
+      { value: "5%", label: "cognitive energy spent on posture and compliance: neurotypical peer" },
+      { value: "80%", label: "cognitive energy spent just staying in the chair: neurodivergent child" },
       { value: "20%", label: "remaining capacity for actual learning" },
     ],
     speakerNotes: "Sitting still and looking at the teacher is not a baseline for learning. For a neurodivergent child with ADHD, autism, or dyspraxia, up to 80 per cent of the cognitive battery goes on staying in that chair. Nothing left for learning. This is why your child comes home exhausted having apparently 'done nothing' all day.",
