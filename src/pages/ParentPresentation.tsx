@@ -604,8 +604,8 @@ const slides: Slide[] = [
     title: "The 2026 SEND reforms: what parents need to know",
     bullets: [
       "The white paper 'Every Child Achieving and Thriving' was published February 2026",
-      "Consultation closes 18 May 2026 — this is your opportunity to influence what happens",
-      "ISPs (Individual Support Plans) replace SEN support for most children — not EHCPs",
+      "Consultation closes 18 May 2026. This is your opportunity to influence what happens",
+      "ISPs (Individual Support Plans) replace SEN support for most children, not EHCPs",
       "ISP complaints go to the school complaints process, not tribunal. This is a rights reduction.",
       "Children with EHCPs in Year 3 and above keep them until 16. Year 2 and below reassessed at Year 7.",
       "Every child with a special school place in 2029 keeps it if they want it.",

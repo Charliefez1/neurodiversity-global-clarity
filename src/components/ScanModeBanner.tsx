@@ -12,7 +12,7 @@ const ScanModeBanner = () => {
         <div className="flex items-center gap-2">
           <LayoutList size={14} className="text-accent" />
           <span className="text-xs font-display font-semibold text-accent">
-            Quick Read mode — showing headings and key points only
+            Quick Read mode: showing headings and key points only
           </span>
         </div>
         <button
