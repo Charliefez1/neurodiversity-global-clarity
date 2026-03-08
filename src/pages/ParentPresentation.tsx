@@ -323,7 +323,7 @@ const slides: Slide[] = [
     bgVariant: "light",
   },
 
-  // SECTION 4 — Difficult Truth
+  // SECTION 4: Difficult Truth
   {
     id: "s19",
     type: "section-title",
