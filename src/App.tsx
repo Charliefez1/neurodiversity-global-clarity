@@ -34,6 +34,7 @@ import Parents from "./pages/Parents";
 import ForEmployers from "./pages/ForEmployers";
 import ForPublicSector from "./pages/ForPublicSector";
 import ForParents from "./pages/ForParents";
+import ParentPresentation from "./pages/ParentPresentation";
 import NotFound from "./pages/NotFound";
 import ExperienceSelector from "./components/ExperienceSelector";
 import ScanModeBanner from "./components/ScanModeBanner";
