@@ -533,7 +533,7 @@ const slides: Slide[] = [
     bgVariant: "light",
   },
 
-  // SECTION 7 — What Actually Helps
+  // SECTION 7: What Actually Helps
   {
     id: "s33",
     type: "section-title",
