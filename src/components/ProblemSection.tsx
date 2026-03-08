@@ -2,6 +2,7 @@ import { AlertTriangle, TrendingDown, Lightbulb } from "lucide-react";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
 import challengeStats from "@/assets/challenge-stats.png";
+import challengeBg from "@/assets/challenge-bg.png";
 
 const problems = [
   {
@@ -42,18 +43,24 @@ const ProblemSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section id="problem" className="bg-warm-stone py-20 lg:py-28" aria-labelledby="problem-heading">
-      <div className="mx-auto max-w-wide px-6 lg:px-10">
+    <section
+      id="problem"
+      className="relative bg-cover bg-top bg-no-repeat py-20 lg:py-28"
+      style={{ backgroundImage: `url(${challengeBg})` }}
+      aria-labelledby="problem-heading"
+    >
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="relative z-10 mx-auto max-w-wide px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center mb-16">
           <div className="max-w-2xl">
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
               The challenge
             </p>
-            <h2 id="problem-heading" className="font-display font-bold text-lg md:text-xl text-foreground leading-tight">
+            <h2 id="problem-heading" className="font-display font-bold text-lg md:text-xl text-white leading-tight">
               Most organisations treat neurodiversity as a training issue. We treat it as infrastructure.
             </h2>
             {mode === "read" && (
-              <p className="mt-4 text-muted-foreground text-sm leading-relaxed max-w-[55ch]">
+              <p className="mt-4 text-white/70 text-sm leading-relaxed max-w-[55ch]">
                 That means inclusion is designed into operations, tied to performance and risk, owned by leadership, and measured, reviewed, and improved over time.
               </p>
             )}
@@ -76,7 +83,7 @@ const ProblemSection = () => {
           {problems.map((p) => (
             <article
               key={p.title}
-              className="rounded-xl border border-border bg-card p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="rounded-xl border border-white/10 bg-card/90 backdrop-blur-sm p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
                 <p.icon size={20} className="text-accent" aria-hidden="true" />
