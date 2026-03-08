@@ -102,7 +102,7 @@ const ServicesSection = () => {
             <div className="flex-1">
               <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-2">Coming soon</p>
               <h3 className="font-display font-bold text-sm mb-2">Digital Coaching Platform</h3>
-              <p className="opacity-75 text-xs leading-relaxed">
+              <p className="text-muted-foreground text-xs leading-relaxed">
                 Our integrated coaching solution connects neurodivergent employees with specialist support: tracked, measured, and designed to scale across your organisation.
               </p>
             </div>
