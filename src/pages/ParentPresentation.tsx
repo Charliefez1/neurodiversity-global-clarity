@@ -1072,7 +1072,11 @@ const ParentPresentation = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [hasAccess]);
+
+  if (!hasAccess) {
+    return <SignupGate onAccess={() => setHasAccess(true)} />;
+  }
 
   return (
     <>
