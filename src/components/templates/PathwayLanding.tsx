@@ -340,7 +340,7 @@ const PathwayLanding = ({
                   <ArrowRight size={16} />
                 </Link>
               </div>
-              {/* Right side — example topics */}
+              {/* Right side: example topics */}
               <div className="grid grid-cols-2 gap-3">
                 {[
                   "Reasonable adjustments",
