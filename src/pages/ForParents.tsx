@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen, Brain, Heart, Eye, Lightbulb, School, Users, Compass, FileText, CalendarCheck, RefreshCw, CheckCircle2, HelpCircle, Home, Ear, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, BookOpen, Brain, Heart, Eye, Lightbulb, School, Users, Compass, FileText, CalendarCheck, RefreshCw, CheckCircle2, HelpCircle, Home, Ear, Sparkles, ShieldCheck, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 import PathwayLanding from "@/components/templates/PathwayLanding";
 import PageSection from "@/components/templates/PageSection";
@@ -9,6 +9,10 @@ import PullQuote from "@/components/blocks/PullQuote";
 import heroImg from "@/assets/pathway-parents-hero.png";
 import understandingImg from "@/assets/pathway/parents-understanding.jpg";
 import schoolImg from "@/assets/pathway/parents-school.jpg";
+import sendNavigatorImg from "@/assets/resources/send-navigator.png";
+import badParentsImg from "@/assets/resources/are-we-bad-parents.png";
+import dopamineImg from "@/assets/resources/dopamine-on-demand.png";
+import { blogPosts } from "@/data/blogPosts";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
