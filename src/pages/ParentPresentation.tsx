@@ -503,7 +503,7 @@ const slides: Slide[] = [
     bullets: [
       "Am I the problem? Shame arrives before anything else",
       "Is this my fault genetically? Many parents are themselves unidentified",
-      "Will they be OK? — the question underneath every other question",
+      "Will they be OK? The question underneath every other question",
       "My child is in pain and I cannot fix it",
       "No one believes me — school sees coping, I see crisis. Both are true.",
       "The fighting is destroying me — and I cannot stop fighting",
