@@ -368,7 +368,7 @@ const slides: Slide[] = [
     id: "s22",
     type: "content",
     sectionIndex: 4,
-    title: "The pathway — and where it can be interrupted",
+    title: "The pathway, and where it can be interrupted",
     bullets: [
       "Child is neurodivergent. Needs are unmet. School environment causes chronic stress.",
       "Child masks to survive. Masking exhausts them. Identity erodes.",
