@@ -226,6 +226,7 @@ const PathwayLanding = ({
         {/* ═══════════════════════════════════════════
             IN YOUR OWN WORDS — conversational AI search
             ═══════════════════════════════════════════ */}
+        {!hideAskSection && (
         <section id="ask-section" className="bg-warm-stone py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
             <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-16 items-start">
@@ -310,6 +311,9 @@ const PathwayLanding = ({
             </div>
           </div>
         </section>
+        )}
+
+        {children}
 
         {/* ═══════════════════════════════════════════
             ASK RICH — knowledge base on navy
@@ -358,8 +362,6 @@ const PathwayLanding = ({
             </div>
           </div>
         </section>
-
-        {children}
 
         {/* ═══════════════════════════════════════════
             GET IN TOUCH — contact CTAs
