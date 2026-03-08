@@ -97,7 +97,7 @@ const testimonials = [
     portrait: portrait1,
   },
   {
-    quote: "This changed how we design services — not just what we know about neurodiversity.",
+    quote: "This changed how we design services, not just what we know about neurodiversity.",
     author: "Director of Operations",
     org: "NHS Trust",
     portrait: portrait2,
