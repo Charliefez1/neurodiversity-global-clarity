@@ -1,4 +1,5 @@
 import { TrendingUp } from "lucide-react";
+import { NEURO_COLOURS } from "@/data/neuroColours";
 
 interface OutcomeBlockProps {
   title?: string;
@@ -15,6 +16,11 @@ const OutcomeBlock = ({ title = "Expected outcomes", outcomes }: OutcomeBlockPro
       <div className="space-y-4">
         {outcomes.map((o, i) => (
           <div key={i} className="flex items-start gap-4">
+            <span
+              className="block w-2 h-2 rounded-full mt-1.5 shrink-0"
+              style={{ backgroundColor: NEURO_COLOURS[i % NEURO_COLOURS.length] }}
+              aria-hidden="true"
+            />
             {o.metric && (
               <p className="font-display font-extrabold text-2xl text-accent shrink-0 min-w-[3rem] leading-none mt-0.5">
                 {o.metric}

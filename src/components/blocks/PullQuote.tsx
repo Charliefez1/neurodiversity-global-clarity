@@ -1,14 +1,22 @@
 import { Quote } from "lucide-react";
+import { NEURO_COLOURS } from "@/data/neuroColours";
 
 interface PullQuoteProps {
   quote: string;
   attribution?: string;
   portraitSrc?: string;
+  /** Index for rotating accent colour. Defaults to 0. */
+  accentIndex?: number;
 }
 
-const PullQuote = ({ quote, attribution, portraitSrc }: PullQuoteProps) => {
+const PullQuote = ({ quote, attribution, portraitSrc, accentIndex = 0 }: PullQuoteProps) => {
+  const accentColour = NEURO_COLOURS[accentIndex % NEURO_COLOURS.length];
+
   return (
-    <blockquote className="group relative my-10 rounded-xl bg-primary overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500">
+    <blockquote
+      className="group relative my-10 rounded-xl bg-primary overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border-l-4"
+      style={{ borderLeftColor: accentColour }}
+    >
       {/* Background portrait */}
       {portraitSrc && (
         <div className="absolute inset-0 pointer-events-none">
@@ -23,7 +31,7 @@ const PullQuote = ({ quote, attribution, portraitSrc }: PullQuoteProps) => {
       )}
 
       <div className="relative p-8 lg:p-10 flex items-start gap-5">
-        <Quote size={32} className="text-accent/50 shrink-0 mt-1" aria-hidden="true" />
+        <Quote size={32} style={{ color: `${accentColour}80` }} className="shrink-0 mt-1" aria-hidden="true" />
         <div>
           <p className="font-display font-semibold text-lg md:text-xl text-primary-foreground leading-snug italic">
             "{quote}"
