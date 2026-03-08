@@ -70,7 +70,7 @@ const ServicesSection = () => {
                   </div>
                   <div>
                     <h3 className="font-display font-bold text-sm mb-1.5">{s.title}</h3>
-                    <p className="opacity-75 text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       {mode === "scan" ? s.summary : s.description}
                     </p>
                   </div>
