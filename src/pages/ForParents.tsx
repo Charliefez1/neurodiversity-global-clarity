@@ -7,6 +7,7 @@ import PageCTA from "@/components/templates/PageCTA";
 import OutcomeBlock from "@/components/blocks/OutcomeBlock";
 import PullQuote from "@/components/blocks/PullQuote";
 import heroImg from "@/assets/pathway-parents-hero.png";
+import sendNavigatorHeroImg from "@/assets/send-navigator-hero.png";
 import understandingImg from "@/assets/pathway/parents-understanding.jpg";
 import schoolImg from "@/assets/pathway/parents-school.jpg";
 import sendNavigatorImg from "@/assets/resources/send-navigator.png";
@@ -50,8 +51,20 @@ const workshopOutcomes = [
 const ForParents = () => (
   <PathwayLanding
     audience="parents"
-    heroImage={heroImg}
-    heroImageAlt="Diverse families and children together"
+    heroImage={sendNavigatorHeroImg}
+    heroImageAlt="The SEND Navigator — 6 key parent resources"
+    heroVariant="split"
+    hideAskSection
+    heroCTAs={
+      <a
+        href="#send-navigator"
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
+      >
+        <Compass size={16} />
+        Explore the SEND Navigator
+        <ArrowRight size={16} />
+      </a>
+    }
     badge="For Parents & Carers"
     title="Tools and resources built for families navigating neurodiversity"
     heroDescription="We've built a set of tools that have processed thousands of documents — government policy, research, SEND guidance, and more — so families can access practical advice, strategies, and resources in one place."
@@ -140,44 +153,17 @@ const ForParents = () => (
       </div>
     </section>
 
-    {/* ═══════════════════════════════════════════
-        AREAS WE COVER — icon grid
-        ═══════════════════════════════════════════ */}
-    <PageSection
-      id="areas"
-      badge="Topics our tools cover"
-      title="The areas families ask about most"
-      variant="sand"
-    >
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {understandingAreas.map((area, i) => (
-          <motion.div
-            key={area.label}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-40px" }}
-            variants={fadeUp}
-            className="rounded-2xl border border-border bg-card p-6 shadow-md hover:shadow-lg transition-shadow group"
-          >
-            <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-              <area.icon size={22} className="text-accent" />
-            </div>
-            <h3 className="font-display font-bold text-sm text-foreground">{area.label}</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed mt-1">{area.desc}</p>
-          </motion.div>
-        ))}
-      </div>
-    </PageSection>
+
+
 
     {/* ═══════════════════════════════════════════
         THE SEND NAVIGATOR — 6-card feature grid
         ═══════════════════════════════════════════ */}
-    <section className="bg-background py-20 lg:py-28">
+    <section id="send-navigator" className="bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
-            ● What's inside
+            ● The SEND Navigator
           </p>
           <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
             Everything you need in one place

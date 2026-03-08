@@ -27,6 +27,12 @@ interface PathwayLandingProps {
   placeholders: string[];
   heroImage?: string;
   heroImageAlt?: string;
+  /** When true, hero uses split layout with image on right instead of background overlay */
+  heroVariant?: "background" | "split";
+  /** Custom hero CTA buttons — overrides default buttons */
+  heroCTAs?: ReactNode;
+  /** Hide the "In your own words" AI search section */
+  hideAskSection?: boolean;
   children?: ReactNode;
 }
 
@@ -44,6 +50,9 @@ const PathwayLanding = ({
   placeholders,
   heroImage,
   heroImageAlt,
+  heroVariant = "background",
+  heroCTAs,
+  hideAskSection = false,
   children,
 }: PathwayLandingProps) => {
   const [query, setQuery] = useState("");
@@ -124,7 +133,45 @@ const PathwayLanding = ({
         {/* ═══════════════════════════════════════════
             HERO — full-bleed image with gradient overlay
             ═══════════════════════════════════════════ */}
-        <section className="relative bg-primary text-primary-foreground overflow-hidden">
+        {heroVariant === "split" ? (
+          /* Split hero — text left, image right */
+          <section className="bg-primary text-primary-foreground">
+            <div className="mx-auto max-w-wide px-6 lg:px-10 py-20 lg:py-32">
+              <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div>
+                  <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-5">
+                    {badge}
+                  </p>
+                  <h1 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl tracking-tight leading-[1.08]">
+                    {title}
+                  </h1>
+                  <p className="mt-6 text-base md:text-lg leading-relaxed text-primary-foreground/80 max-w-[50ch]">
+                    {heroDescription}
+                  </p>
+                  {heroCTAs && <div className="mt-8 flex flex-wrap gap-3">{heroCTAs}</div>}
+                  <img
+                    src={ndgLogo}
+                    alt="Neurodiversity Global"
+                    className="mt-10 h-10 md:h-12 w-auto opacity-60"
+                    loading="lazy"
+                  />
+                </div>
+                {heroImage && (
+                  <div className="rounded-2xl overflow-hidden shadow-2xl">
+                    <img
+                      src={heroImage}
+                      alt={heroImageAlt || ""}
+                      className="w-full h-auto object-cover"
+                      loading="eager"
+                    />
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        ) : (
+          /* Background hero — original layout */
+          <section className="relative bg-primary text-primary-foreground overflow-hidden">
           {heroImage && (
             <img
               src={heroImage}
@@ -133,9 +180,7 @@ const PathwayLanding = ({
               loading="eager"
             />
           )}
-          {/* Gradient overlay — heavy on left for text legibility, fading to reveal image on right */}
           <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/40" />
-
           <div className="relative mx-auto max-w-wide px-6 lg:px-10 py-20 lg:py-32">
             <div className="max-w-2xl">
               <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-5">
@@ -147,8 +192,9 @@ const PathwayLanding = ({
               <p className="mt-6 text-base md:text-lg leading-relaxed text-primary-foreground/80 max-w-[50ch]">
                 {heroDescription}
               </p>
-
-              {/* Inline quick actions */}
+              {heroCTAs ? (
+                <div className="mt-8 flex flex-wrap gap-3">{heroCTAs}</div>
+              ) : (
               <div className="mt-8 flex flex-wrap gap-3">
                 <a
                   href="#ask-section"
@@ -165,7 +211,7 @@ const PathwayLanding = ({
                   Ask Rich anything
                 </Link>
               </div>
-
+              )}
               <img
                 src={ndgLogo}
                 alt="Neurodiversity Global"
@@ -175,10 +221,12 @@ const PathwayLanding = ({
             </div>
           </div>
         </section>
+        )}
 
         {/* ═══════════════════════════════════════════
             IN YOUR OWN WORDS — conversational AI search
             ═══════════════════════════════════════════ */}
+        {!hideAskSection && (
         <section id="ask-section" className="bg-warm-stone py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
             <div className="grid lg:grid-cols-[1fr_1.4fr] gap-12 lg:gap-16 items-start">
@@ -263,6 +311,9 @@ const PathwayLanding = ({
             </div>
           </div>
         </section>
+        )}
+
+        {children}
 
         {/* ═══════════════════════════════════════════
             ASK RICH — knowledge base on navy
@@ -311,8 +362,6 @@ const PathwayLanding = ({
             </div>
           </div>
         </section>
-
-        {children}
 
         {/* ═══════════════════════════════════════════
             GET IN TOUCH — contact CTAs
