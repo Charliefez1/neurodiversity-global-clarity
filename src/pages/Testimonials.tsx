@@ -107,7 +107,7 @@ const TestimonialRow = ({
 
   return (
     <div className={`lg:flex ${flip ? "lg:flex-row-reverse" : ""} items-center gap-0`}>
-      {/* Image side — full 16:9 visible */}
+      {/* Image side: full 16:9 visible */}
       <div className="lg:w-[55%] shrink-0">
         <div className="relative">
           <img
@@ -194,7 +194,7 @@ const Testimonials = () => (
 
     </section>
 
-    {/* Testimonials — alternating editorial rows */}
+    {/* Testimonials: alternating editorial rows */}
     {testimonials.map((t, i) => (
       <section
         key={t.company}

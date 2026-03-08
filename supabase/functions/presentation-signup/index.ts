@@ -24,7 +24,7 @@ serve(async (req) => {
     }
 
     // Use Lovable AI to compose and send the notification
-    // For now, we just log it and return success — the DB insert is the record
+    // For now, we just log it and return success. The DB insert is the record
     console.log(
       `Presentation signup: ${name} (${email}), company: ${company || "N/A"}, context: ${use_context}, presentation: ${presentation}`
     );
@@ -42,7 +42,7 @@ Presentation: ${presentation}
 Time: ${new Date().toISOString()}
     `.trim();
 
-    // Log for monitoring — in production you'd integrate a proper email service
+    // Log for monitoring. In production you'd integrate a proper email service
     console.log("Notification email body:", emailBody);
 
     return new Response(

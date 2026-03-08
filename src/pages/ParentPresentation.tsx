@@ -69,13 +69,13 @@ const sections = [
 
 /* ─── All 38 Slides ─── */
 const slides: Slide[] = [
-  // SECTION 0 — Introduction
+  // SECTION 0: Introduction
   {
     id: "s1",
     type: "section-title",
     sectionIndex: 0,
     title: "Understanding Your Neurodivergent Child",
-    subtitle: "A presentation for parents and carers — built from our two-hour workshop delivered to families across the UK",
+    subtitle: "A presentation for parents and carers, built from our two-hour workshop delivered to families across the UK",
     speakerNotes: "This presentation is based on a live workshop delivered by Rich Ferriman of Neurodiversity Global. It is designed for parents to take away and revisit, share with family members, or use to explain what they are dealing with to people who may not yet understand. It is direct. It is evidence-based. It does not soften things that need to be said clearly.",
     bgVariant: "dark",
     image: heroImg,
@@ -90,13 +90,13 @@ const slides: Slide[] = [
       "You are not here because you are failing. You are here because you care.",
       "We cover: the nervous system, school, dopamine, the dark side, family, and what actually helps.",
       "This is the presentation we give in our live sessions. We have made it available so parents have their own version to take away.",
-      "Share it with partners, grandparents, teachers — anyone who needs to understand.",
+      "Share it with partners, grandparents, teachers. Anyone who needs to understand.",
     ],
     speakerNotes: "Set the tone: this is not a lecture. This is direct, honest, and built from both clinical evidence and lived experience. Many parents have said they wish they had something to show their families. This is that thing.",
     bgVariant: "light",
   },
 
-  // SECTION 1 — What Is Going On
+  // SECTION 1: What Is Going On
   {
     id: "s3",
     type: "section-title",
@@ -144,8 +144,8 @@ const slides: Slide[] = [
     sectionIndex: 1,
     title: "The cognitive battery",
     stats: [
-      { value: "5%", label: "cognitive energy spent on posture and compliance — neurotypical peer" },
-      { value: "80%", label: "cognitive energy spent just staying in the chair — neurodivergent child" },
+      { value: "5%", label: "cognitive energy spent on posture and compliance: neurotypical peer" },
+      { value: "80%", label: "cognitive energy spent just staying in the chair: neurodivergent child" },
       { value: "20%", label: "remaining capacity for actual learning" },
     ],
     speakerNotes: "Sitting still and looking at the teacher is not a baseline for learning. For a neurodivergent child with ADHD, autism, or dyspraxia, up to 80 per cent of the cognitive battery goes on staying in that chair. Nothing left for learning. This is why your child comes home exhausted having apparently 'done nothing' all day.",
@@ -170,11 +170,11 @@ const slides: Slide[] = [
       "Shutdown = protective collapse",
       "Avoidance = the only available tool",
     ],
-    speakerNotes: "Every behaviour has a function. The question is never 'why won't they just…' — it is 'what is making this impossible right now?' What is the sensory load? What demands have already built up today? Has the child eaten, slept, had any decompression time? What happened at school today? Is this a new environment or transition? When did I last connect without asking anything of them?",
+    speakerNotes: "Every behaviour has a function. The question is never 'why won't they just…' It is 'what is making this impossible right now?' What is the sensory load? What demands have already built up today? Has the child eaten, slept, had any decompression time? What happened at school today? Is this a new environment or transition? When did I last connect without asking anything of them?",
     bgVariant: "light",
   },
 
-  // SECTION 2 — School & Masking
+  // SECTION 2: School & Masking
   {
     id: "s9",
     type: "section-title",
@@ -208,7 +208,7 @@ const slides: Slide[] = [
       "Masking is the suppression of natural behaviour to fit in. It is effortful, constant, and invisible to adults.",
       "Children rehearse scripts, copy peers, suppress stims, and perform normality.",
       "The school sees a child coping. The parent sees a child in crisis. Both are right.",
-      "What parents see at 4pm is restraint collapse — the child finally being safe enough to fall apart.",
+      "What parents see at 4pm is restraint collapse, the child finally being safe enough to fall apart.",
       "Higher masking is consistently associated with worse mental health: more anxiety, more depression, more exhaustion.",
       "Masking is independently associated with suicidal ideation in adolescents (Cassidy et al., UCL).",
       "Girls mask more effectively. They are identified later. The damage accumulates longer.",
@@ -237,12 +237,12 @@ const slides: Slide[] = [
     id: "s13",
     type: "quote",
     sectionIndex: 2,
-    quote: "Neuroaffirming practice is not special treatment. It is accessibility. If a child needs glasses to see the board, we do not call it a perk. If a child needs to pace, chew, or wear headphones to process a sentence — that is their glasses.",
+    quote: "Neuroaffirming practice is not special treatment. It is accessibility. If a child needs glasses to see the board, we do not call it a perk. If a child needs to pace, chew, or wear headphones to process a sentence, that is their glasses.",
     speakerNotes: "This analogy works in school meetings. It reframes accommodations as accessibility rather than favouritism. Use it.",
     bgVariant: "accent",
   },
 
-  // SECTION 3 — Dopamine & Risk
+  // SECTION 3: Dopamine & Risk
   {
     id: "s14",
     type: "section-title",
@@ -262,7 +262,7 @@ const slides: Slide[] = [
       "Dopamine is not a happiness chemical. It is a motivation and reward signal.",
       "For many neurodivergent people, the dopamine system does not deliver a steady, usable signal.",
       "The brain goes searching for stimulation to reach a level where it can function.",
-      "This is called dopamine searching — it is neurological, not a choice.",
+      "This is called dopamine searching. It is neurological, not a choice.",
       "In younger children: noise, movement, interrupting, refusing boring tasks.",
       "In adolescence: the same drive finds riskier outlets.",
       "The creativity, hyperfocus, and courage are the same system. You cannot separate them.",
@@ -276,12 +276,12 @@ const slides: Slide[] = [
     sectionIndex: 3,
     title: "Puberty: the crisis point no one prepares you for",
     bullets: [
-      "Hormonal changes directly affect dopamine regulation — this is not incidental",
+      "Hormonal changes directly affect dopamine regulation. This is not incidental",
       "Oestrogen fluctuations in girls specifically affect dopamine pathways",
       "Executive function demands increase sharply at secondary school",
       "Strategies that worked in Year 5 collapse under Year 8 conditions",
       "Autistic young people may experience puberty earlier than the general population",
-      "For girls: many are first flagged for mental health support during puberty — not because it started then, but because coping strategies collapsed",
+      "For girls: many are first flagged for mental health support during puberty, not because it started then, but because coping strategies collapsed",
       "The cliff edge at secondary transition is real and well documented",
     ],
     speakerNotes: "Parents of primary-age children need to hear this so they can prepare. Parents of secondary-age children need to hear this so they understand what happened. The child did not suddenly get worse. The demands got higher and the regulation system got disrupted.",
@@ -312,10 +312,10 @@ const slides: Slide[] = [
     title: "Smartphones and the neurodivergent brain",
     bullets: [
       "Every notification, swipe, and new piece of content produces a small dopamine response",
-      "Smartphones are designed around unpredictability — the brain learns to check, then check again",
+      "Smartphones are designed around unpredictability. The brain learns to check, then check again",
       "For neurodivergent children with dopamine regulation differences, highly stimulating technology is harder to disengage from",
       "This is not weakness. It is the same system being targeted by design.",
-      "Abrupt removal causes dysregulation — replace, do not just remove",
+      "Abrupt removal causes dysregulation. Replace, do not just remove",
       "Five-minute warnings. Gradual transitions. Replace with an alternative source of regulation.",
       "Screens are also connection tools for isolated children. Do not treat them as only a risk.",
     ],
@@ -323,7 +323,7 @@ const slides: Slide[] = [
     bgVariant: "light",
   },
 
-  // SECTION 4 — Difficult Truth
+  // SECTION 4: Difficult Truth
   {
     id: "s19",
     type: "section-title",
@@ -345,7 +345,7 @@ const slides: Slide[] = [
       "The young person is not trying to die. They are trying to survive a moment that feels unsurvivable.",
       "Responding with panic, interrogation, or punishment teaches the child to hide it better next time",
       "The moment of disclosure requires calm, non-punitive, connection-first responses",
-      "Girls diagnosed late are specifically at elevated risk — downstream consequence of years of masking",
+      "Girls diagnosed late are specifically at elevated risk, a downstream consequence of years of masking",
     ],
     speakerNotes: "72 per cent of autistic adults in a UK study scored above the psychiatric cut-off for suicide risk (Cassidy et al.). This is not a minor issue. And it starts younger than most parents expect.",
     bgVariant: "light",
@@ -356,7 +356,7 @@ const slides: Slide[] = [
     sectionIndex: 4,
     title: "Suicide risk in neurodivergent young people",
     stats: [
-      { value: "9×", label: "higher risk — autistic people compared to general population" },
+      { value: "9×", label: "higher risk: autistic people compared to general population" },
       { value: "20%", label: "of autistic children and teenagers report suicidal ideation in the past year" },
       { value: "10%", label: "of autistic adolescents report suicide attempts" },
       { value: "66%", label: "of autistic adults at a UK diagnostic clinic reported suicidal ideation (Cassidy, Lancet Psychiatry)" },
@@ -368,7 +368,7 @@ const slides: Slide[] = [
     id: "s22",
     type: "content",
     sectionIndex: 4,
-    title: "The pathway — and where it can be interrupted",
+    title: "The pathway, and where it can be interrupted",
     bullets: [
       "Child is neurodivergent. Needs are unmet. School environment causes chronic stress.",
       "Child masks to survive. Masking exhausts them. Identity erodes.",
@@ -393,14 +393,14 @@ const slides: Slide[] = [
       "Mate crime: someone pretending to be a friend to exploit a young person starved of genuine connection",
       "Difficulty reading others' intentions combined with a desperate need for belonging creates specific vulnerability",
       "Sexual health education for neurodivergent young people in the UK is inadequate",
-      "Safety conversations need to be explicit, direct, and repeated — not euphemistic",
+      "Safety conversations need to be explicit, direct, and repeated, not euphemistic",
       "Teach the difference between someone who wants connection and someone who wants to exploit it",
     ],
     speakerNotes: "This is hard to hear. It is harder to ignore. The research is clear: neurodivergent young people are at elevated risk. They need safety education that accounts for how they process social information.",
     bgVariant: "light",
   },
 
-  // SECTION 5 — Family & Strain
+  // SECTION 5: Family & Strain
   {
     id: "s24",
     type: "section-title",
@@ -417,10 +417,10 @@ const slides: Slide[] = [
     sectionIndex: 5,
     title: "The people who do not believe",
     bullets: [
-      "Grandparents grew up in a system that had no framework for neurodivergence — naughty, spoilt, weak, lazy",
+      "Grandparents grew up in a system that had no framework for neurodivergence: naughty, spoilt, weak, lazy",
       "The grandparent who says 'he was fine with me' is often right. The child was masking. That is the problem.",
       "Many grandparents are themselves unidentified neurodivergent adults",
-      "The parent fighting for their child is implicitly saying the grandparent missed something — that is painful to hear",
+      "The parent fighting for their child is implicitly saying the grandparent missed something. That is painful to hear",
       "Defensiveness that looks like disbelief is often self-protection",
       "The goal is not to win the argument. It is to reduce the additional load of managing that relationship.",
       "The glasses line works here too. Accessibility is not the same as making excuses.",
@@ -448,14 +448,14 @@ const slides: Slide[] = [
     sectionIndex: 5,
     title: "What keeps relationships intact under this pressure",
     bullets: [
-      "Shared framework — two people who understand the same things about their child's nervous system",
+      "Shared framework: two people who understand the same things about their child's nervous system",
       "Common direction, even when tactics differ",
       "Strategic disengagement from battles that are not worth the cost",
       "Validation that does not immediately pivot to solutions",
       "Acknowledging the asymmetry rather than resenting it silently",
       "Peer support from other families in the same situation is consistently the highest-value form of support",
     ],
-    speakerNotes: "What does not help: generic self-care advice — you cannot meditate out of a broken system. Being told to prioritise your relationship when there is no bandwidth left. Professionals who treat the relationship as the problem. Couples counselling that does not account for the SEND system as the context.",
+    speakerNotes: "What does not help: generic self-care advice. You cannot meditate out of a broken system. Being told to prioritise your relationship when there is no bandwidth left. Professionals who treat the relationship as the problem. Couples counselling that does not account for the SEND system as the context.",
     bgVariant: "sand",
   },
   {
@@ -466,7 +466,7 @@ const slides: Slide[] = [
     bullets: [
       "Siblings have more responsibilities, more worries, and less parental attention than their peers (Sibs, UK)",
       "75% of parents reported their sibling child's mental health worsened during the pandemic",
-      "50% of siblings were providing more care during lockdown — children caring for children",
+      "50% of siblings were providing more care during lockdown. Children caring for children",
       "Siblings often do not raise their own difficulties to avoid adding to the family's load",
       "Problems that would be caught in another family go unnoticed",
       "Watch for: declining school performance, anger outbursts, social withdrawal",
@@ -476,7 +476,7 @@ const slides: Slide[] = [
     bgVariant: "light",
   },
 
-  // SECTION 6 — What Parents Carry
+  // SECTION 6: What Parents Carry
   {
     id: "s29",
     type: "section-title",
@@ -501,12 +501,12 @@ const slides: Slide[] = [
     sectionIndex: 6,
     title: "What parents actually worry about at 3am",
     bullets: [
-      "Am I the problem? — shame arrives before anything else",
-      "Is this my fault genetically? — many parents are themselves unidentified",
-      "Will they be OK? — the question underneath every other question",
+      "Am I the problem? Shame arrives before anything else",
+      "Is this my fault genetically? Many parents are themselves unidentified",
+      "Will they be OK? The question underneath every other question",
       "My child is in pain and I cannot fix it",
-      "No one believes me — school sees coping, I see crisis. Both are true.",
-      "The fighting is destroying me — and I cannot stop fighting",
+      "No one believes me. School sees coping, I see crisis. Both are true.",
+      "The fighting is destroying me, and I cannot stop fighting",
       "My relationship is not surviving this",
       "My other children are paying for this",
       "Secondary school terrifies me",
@@ -519,21 +519,21 @@ const slides: Slide[] = [
     id: "s32",
     type: "content",
     sectionIndex: 6,
-    title: "What you actually need — not what you are usually given",
+    title: "What you actually need, not what you are usually given",
     bullets: [
       "Validation that it is genuinely as hard as you think it is",
       "Someone who does not require you to justify why this is difficult",
-      "Practical information — what you are entitled to, what language to use, what to ask for",
+      "Practical information: what you are entitled to, what language to use, what to ask for",
       "Permission to disengage from battles that are not worth the cost",
       "A peer group of people who already understand without explanation",
       "Recognition that the system is failing your child, not that you are failing them",
-      "Honest information about risk — not reassurance that removes your ability to prepare",
+      "Honest information about risk, not reassurance that removes your ability to prepare",
     ],
     speakerNotes: "This is the bridge to the final section. Having named the problems, we now move to what actually works.",
     bgVariant: "light",
   },
 
-  // SECTION 7 — What Actually Helps
+  // SECTION 7: What Actually Helps
   {
     id: "s33",
     type: "section-title",
@@ -550,14 +550,14 @@ const slides: Slide[] = [
     sectionIndex: 7,
     title: "Tools that work: regulation and daily life",
     bullets: [
-      "Routine as safety — visual timetables, now/next boards",
-      "Countdown timers — 5 minutes warning, not 1",
-      "Low demand mornings — reduce decisions before school",
-      "Decompression time built in after school — non-negotiable",
+      "Routine as safety: visual timetables, now/next boards",
+      "Countdown timers. Five minutes warning, not one",
+      "Low demand mornings: reduce decisions before school",
+      "Decompression time built in after school, non-negotiable",
       "Calm corner at home with sensory tools",
-      "Movement before demands — not after",
+      "Movement before demands, not after",
       "Connection before correction after a difficult episode",
-      "Repair after rupture — every time",
+      "Repair after rupture. Every time",
     ],
     speakerNotes: "These are not complex interventions. They are structural changes to daily life that reduce the load on the nervous system. They work because they address the root cause: dysregulation.",
     bgVariant: "sand",
@@ -585,12 +585,12 @@ const slides: Slide[] = [
     sectionIndex: 7,
     title: "Navigating school: what to do and what to say",
     bullets: [
-      "Keep a written log — dates, observations, communications, incidents",
+      "Keep a written log: dates, observations, communications, incidents",
       "Follow up every verbal conversation with an email the same day",
       "Ask for everything in writing",
-      "Use the word 'provision' not 'support' — it is a legal term",
+      "Use the word 'provision' not 'support'. It is a legal term",
       "Request meetings rather than waiting for annual reviews",
-      "Schools must respond to need, not diagnosis — the Code of Practice requires assess, plan, do, review",
+      "Schools must respond to need, not diagnosis. The Code of Practice requires assess, plan, do, review",
       "Reasonable adjustments under the Equality Act apply from point of need",
       "Ask: can you show me the provision plan while we wait for assessment?",
     ],
@@ -601,11 +601,11 @@ const slides: Slide[] = [
     id: "s37",
     type: "content",
     sectionIndex: 7,
-    title: "The 2026 SEND reforms — what parents need to know",
+    title: "The 2026 SEND reforms: what parents need to know",
     bullets: [
       "The white paper 'Every Child Achieving and Thriving' was published February 2026",
-      "Consultation closes 18 May 2026 — this is your opportunity to influence what happens",
-      "ISPs (Individual Support Plans) replace SEN support for most children — not EHCPs",
+      "Consultation closes 18 May 2026. This is your opportunity to influence what happens",
+      "ISPs (Individual Support Plans) replace SEN support for most children, not EHCPs",
       "ISP complaints go to the school complaints process, not tribunal. This is a rights reduction.",
       "Children with EHCPs in Year 3 and above keep them until 16. Year 2 and below reassessed at Year 7.",
       "Every child with a special school place in 2029 keeps it if they want it.",
@@ -706,7 +706,7 @@ const SlideCard = ({
               </blockquote>
               {slide.quoteAttribution && (
                 <p className={`mt-6 text-sm ${isDark ? "text-primary-foreground/50" : "text-muted-foreground"}`}>
-                  — {slide.quoteAttribution}
+                   {slide.quoteAttribution}
                 </p>
               )}
             </div>
@@ -802,9 +802,9 @@ const SlideCard = ({
 const STORAGE_KEY = "ndg_presentation_access";
 
 const useContextOptions = [
-  { value: "home", label: "Home — for my family" },
-  { value: "school", label: "School — to share with staff or parents" },
-  { value: "work", label: "Work — professional development" },
+  { value: "home", label: "Home: for my family" },
+  { value: "school", label: "School: to share with staff or parents" },
+  { value: "work", label: "Work: professional development" },
   { value: "other", label: "Other" },
 ];
 
@@ -857,7 +857,7 @@ const SignupGate = ({ onAccess }: { onAccess: () => void }) => {
   return (
     <>
       <SEOHead
-        title="Understanding Your Neurodivergent Child — Parent Presentation"
+        title="Understanding Your Neurodivergent Child: Parent Presentation"
         description="A comprehensive, evidence-based presentation for parents and carers of neurodivergent children."
         path="/for-parents/presentation"
       />
@@ -873,7 +873,7 @@ const SignupGate = ({ onAccess }: { onAccess: () => void }) => {
         <section className="bg-primary text-primary-foreground min-h-[80vh] flex items-center">
           <div className="mx-auto max-w-wide px-6 lg:px-10 py-20 lg:py-28">
             <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
-              {/* Left — info */}
+              {/* Left: info */}
               <div>
                 <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
                   Free resource
@@ -904,7 +904,7 @@ const SignupGate = ({ onAccess }: { onAccess: () => void }) => {
                 />
               </div>
 
-              {/* Right — form */}
+              {/* Right: form */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1081,7 +1081,7 @@ const ParentPresentation = () => {
   return (
     <>
       <SEOHead
-        title="Understanding Your Neurodivergent Child — Parent Presentation"
+        title="Understanding Your Neurodivergent Child: Parent Presentation"
         description="A comprehensive, evidence-based presentation for parents and carers of neurodivergent children. Covering the nervous system, school, dopamine, risk, family strain, and practical strategies."
         path="/for-parents/presentation"
       />
@@ -1112,7 +1112,7 @@ const ParentPresentation = () => {
               Understanding Your Neurodivergent Child
             </h1>
             <p className="mt-5 text-base leading-relaxed text-primary-foreground/75 max-w-[60ch]">
-              This is the presentation we give in our live two-hour workshop for parents and carers. We have made it available here so families have their own version to take away, revisit, and share with partners, grandparents, teachers — anyone who needs to understand.
+              This is the presentation we give in our live two-hour workshop for parents and carers. We have made it available here so families have their own version to take away, revisit, and share with partners, grandparents, teachers. Anyone who needs to understand.
             </p>
             <p className="mt-3 text-sm text-primary-foreground/50 max-w-[60ch]">
               Every slide has speaker notes you can expand for additional context, evidence, and guidance. Use this at your own pace.

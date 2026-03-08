@@ -55,7 +55,7 @@ const IndustryHealthcareNHS = () => {
   return (
     <>
       <SEOHead
-        title="Neurodiversity in Healthcare & NHS — 2026 Challenges"
+        title="Neurodiversity in Healthcare & NHS: 2026 Challenges"
         description="Neurodiversity training and consultancy for NHS Trusts and healthcare organisations. Tackle burnout, masking in clinical roles, and tribunal risk with sector-adapted programmes."
         path="/industries/healthcare-nhs"
       />
@@ -76,7 +76,7 @@ const IndustryHealthcareNHS = () => {
         />
 
         {/* Key Issues 2026 */}
-        <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points healthcare can't ignore" description="The NHS's strengths — resilience, dedication, pace — become barriers when systems aren't designed for cognitive diversity.">
+        <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points healthcare can't ignore" description="The NHS's strengths, resilience, dedication, pace, become barriers when systems aren't designed for cognitive diversity.">
           <KeyIssuesGrid issues={keyIssues} />
         </PageSection>
 
@@ -110,7 +110,7 @@ const IndustryHealthcareNHS = () => {
           <RelevantWorkshops
             workshopIds={["nhs", "awareness", "champions", "line-manager", "mental-health", "disclosure", "hr-training", "exec-briefing"]}
             title="Healthcare-recommended sessions"
-            description="From 60-minute awareness to full-day strategic programmes — all adapted to your clinical and non-clinical context."
+            description="From 60-minute awareness to full-day strategic programmes, all adapted to your clinical and non-clinical context."
           />
         </PageSection>
 

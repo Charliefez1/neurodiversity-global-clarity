@@ -17,7 +17,7 @@ import JsonLd, { breadcrumbSchema, serviceSchema, faqSchema } from "@/components
 import { Cpu, Zap, MessageSquare, BarChart3, Brain } from "lucide-react";
 
 const faqs = [
-  { question: "Why does tech need neurodiversity training?", answer: "Technology attracts a high proportion of neurodivergent talent — but fast-paced, open-plan, always-on cultures can undermine the very people who drive innovation." },
+  { question: "Why does tech need neurodiversity training?", answer: "Technology attracts a high proportion of neurodivergent talent, but fast-paced, open-plan, always-on cultures can undermine the very people who drive innovation." },
   { question: "Do you work with engineering and product teams?", answer: "Yes. We deliver training adapted to engineering, product, design, and data teams, using language and scenarios they recognise." },
   { question: "Can you help with neurodiverse hiring?", answer: "We review and adapt recruitment processes to remove barriers for neurodivergent candidates, from job descriptions to interview formats." },
   { question: "How do you address sprint culture burnout?", answer: "Hyperfocus is exploited and recovery is ignored. We help design cognitive sustainability into delivery models so performance is maintained without burning out your best people." },
@@ -55,7 +55,7 @@ const IndustryTechnology = () => {
   return (
     <>
       <SEOHead
-        title="Neurodiversity in Technology & Digital — 2026 Challenges"
+        title="Neurodiversity in Technology & Digital: 2026 Challenges"
         description="Neurodiversity training and consultancy for tech companies. Retain neurodivergent talent, design cognitive sustainability into delivery, and build inclusive engineering cultures."
         path="/industries/technology"
       />
@@ -72,7 +72,7 @@ const IndustryTechnology = () => {
         <PageHero
           badge="Neurodiversity in technology"
           title="High cognitive demand. Low cognitive support."
-          description="Technology companies rely on cognitive diversity for innovation — but extreme cognitive load, sprint culture burnout, and communication mismatch drive neurodivergent talent out."
+          description="Technology companies rely on cognitive diversity for innovation, but extreme cognitive load, sprint culture burnout, and communication mismatch drive neurodivergent talent out."
         />
 
         <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points tech can't ignore">
@@ -93,7 +93,7 @@ const IndustryTechnology = () => {
         <PageSection id="positives" badge="The positives" title="Why tech should invest in cognitive sustainability">
           <PositivesBlock
             items={[
-              { title: "Neurodivergent cognition aligns with complex problem solving", description: "Systems architecture, AI modelling, cybersecurity pattern detection — these are neurodivergent strengths." },
+              { title: "Neurodivergent cognition aligns with complex problem solving", description: "Systems architecture, AI modelling, cybersecurity pattern detection. These are neurodivergent strengths." },
               { title: "Flexibility is culturally possible", description: "Remote, asynchronous, output-based work models already exist. The infrastructure is there." },
               { title: "Appetite for innovation", description: "Digital sector is more open to cognitive diversity framing than any other sector." },
             ]}
@@ -105,7 +105,7 @@ const IndustryTechnology = () => {
           <RelevantWorkshops
             workshopIds={["technology-sector", "tech-function", "awareness", "champions", "line-manager", "mental-health", "react", "exec-briefing"]}
             title="Technology-recommended sessions"
-            description="From engineering team workshops to executive briefings — all using language and scenarios from tech environments."
+            description="From engineering team workshops to executive briefings, all using language and scenarios from tech environments."
           />
         </PageSection>
 

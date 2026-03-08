@@ -68,7 +68,7 @@ const coreFocus: Industry[] = [
   {
     name: "Technology & Digital",
     tagline: "High cognitive demand. Low cognitive support.",
-    description: "Tech companies, engineering teams, data and innovation functions. Environments that attract neurodivergent talent — then fail to retain it.",
+    description: "Tech companies, engineering teams, data and innovation functions. Environments that attract neurodivergent talent, then fail to retain it.",
     icon: Cpu,
     href: "/industries/technology",
     challenges: ["Open-plan sensory overload", "Context-switching fatigue", "Imposter syndrome", "Unstructured onboarding"],
@@ -82,7 +82,7 @@ const secondaryIndustries: { name: string; icon: React.ElementType; href?: strin
   { name: "Financial & Professional Services", icon: Landmark, href: "/industries/financial-services", description: "High-regulation, high-pressure, risk-focused roles." },
   { name: "Engineering & Infrastructure", icon: Factory, description: "Safety-critical roles and structured systems." },
   { name: "Corporate & Enterprise", icon: BarChart3, description: "Cross-functional leadership, HR, and transformation." },
-  { name: "Emergency Services", icon: Flame, description: "Fire, police, ambulance — high-intensity, structured environments." },
+  { name: "Emergency Services", icon: Flame, description: "Fire, police, ambulance. High-intensity, structured environments." },
   { name: "Rail & Transport", icon: Train, description: "Operators, control rooms, frontline roles." },
   { name: "Sales & Commercial", icon: ShoppingBag, description: "Performance pressure, emotional regulation, rejection sensitivity." },
   { name: "Call & Contact Centres", icon: Headphones, description: "Sensory load, scripted communication, high attrition." },
@@ -97,7 +97,7 @@ const testimonials = [
     portrait: portrait1,
   },
   {
-    quote: "This changed how we design services — not just what we know about neurodiversity.",
+    quote: "This changed how we design services, not just what we know about neurodiversity.",
     author: "Director of Operations",
     org: "NHS Trust",
     portrait: portrait2,
@@ -258,7 +258,7 @@ const Industries = () => {
                   transition={{ delay: 0.35 }}
                   className="mt-6 text-base lg:text-lg leading-relaxed opacity-75 max-w-[50ch]"
                 >
-                  We don't sell generic inclusion. We adapt our training, coaching, and consultancy to your industry — its language, its risks, and its reality.
+                  We don't sell generic inclusion. We adapt our training, coaching, and consultancy to your industry: its language, its risks, and its reality.
                 </motion.p>
 
                 <motion.div
@@ -400,7 +400,7 @@ const Industries = () => {
                   We work across every sector
                 </h2>
                 <p className="text-base opacity-70 leading-relaxed mb-6">
-                  Our approach adapts. The same rigour, lived experience, and evidence base — applied to your industry's specific challenges.
+                  Our approach adapts. The same rigour, lived experience, and evidence base, applied to your industry's specific challenges.
                 </p>
                 <img
                   src={industryCoaching}

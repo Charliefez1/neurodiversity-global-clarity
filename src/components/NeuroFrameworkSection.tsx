@@ -105,7 +105,7 @@ const DesktopPhaseCard = ({
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.15 + 0.4, duration: 0.5 }}
     >
-      {/* Letter circle — positioned on the path */}
+      {/* Letter circle: positioned on the path */}
       <div
         className={`w-10 h-10 rounded-full ${phase.color} ring-4 ${phase.ring} flex items-center justify-center text-white font-display font-bold text-sm shadow-lg z-10 ${isBottom ? "-mt-5 mb-3 order-first" : "-mb-5 mt-3 order-last"}`}
       >

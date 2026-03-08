@@ -18,7 +18,7 @@ import { TrendingUp, Eye, BatteryWarning, ClipboardCheck, Users } from "lucide-r
 
 const faqs = [
   { question: "Do you work with universities?", answer: "Yes. We work with universities and higher education institutions, supporting academic staff, professional services teams, student-facing services, and leadership governance." },
-  { question: "How is neurodiversity training different for education?", answer: "Education environments have unique dynamics — academic freedom, student-staff relationships, assessment design, and institutional culture all need a neurodiversity lens." },
+  { question: "How is neurodiversity training different for education?", answer: "Education environments have unique dynamics: academic freedom, student-staff relationships, assessment design, and institutional culture all need a neurodiversity lens." },
   { question: "Can you support SEND and disability services?", answer: "We work alongside existing SEND and disability services to ensure neurodiversity is embedded across the whole institution, not siloed in support teams." },
   { question: "Do you address gender bias in identification?", answer: "Yes. Girls and high-masking pupils continue to be missed. Our training addresses gender bias in ADHD and autism identification specifically." },
 ];
@@ -55,7 +55,7 @@ const IndustryEducation = () => {
   return (
     <>
       <SEOHead
-        title="Neurodiversity in Education — 2026 Challenges"
+        title="Neurodiversity in Education: 2026 Challenges"
         description="Neurodiversity training and consultancy for schools, universities, and education institutions. Address SEND demand, staff neurodivergence, and inclusive systems."
         path="/industries/education"
       />
@@ -72,7 +72,7 @@ const IndustryEducation = () => {
         <PageHero
           badge="Neurodiversity in education"
           title="Teaching inclusion while struggling with it internally"
-          description="Education institutions support neurodivergent learners — but overlook neurodivergent staff, absorb rising SEND demand without training, and treat inclusion as burden rather than design."
+          description="Education institutions support neurodivergent learners, but overlook neurodivergent staff, absorb rising SEND demand without training, and treat inclusion as burden rather than design."
         />
 
         <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points education can't ignore">
@@ -97,7 +97,7 @@ const IndustryEducation = () => {
               { title: "Strong appetite for inclusion done well", description: "Many schools want systemic change, not surface compliance." },
               { title: "Neurodivergent educators often innovate", description: "Creative curriculum design and alternative engagement models often come from staff who think differently." },
             ]}
-            opportunity="Support staff neurodivergence alongside pupil support — not as an afterthought."
+            opportunity="Support staff neurodivergence alongside pupil support, not as an afterthought."
           />
         </PageSection>
 
@@ -125,7 +125,7 @@ const IndustryEducation = () => {
         <PageSection id="evidence" badge="Experience" title="Our work in education" variant="secondary">
           <div className="grid md:grid-cols-2 gap-6">
             <TestimonialBlock
-              quote="They helped us see that neurodiversity isn't just a student support issue — it's an institutional culture issue."
+              quote="They helped us see that neurodiversity isn't just a student support issue. It's an institutional culture issue."
               author="Pro Vice-Chancellor"
               org="UK University"
             />

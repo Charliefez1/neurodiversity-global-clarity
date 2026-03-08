@@ -55,7 +55,7 @@ const IndustryPublicSector = () => {
   return (
     <>
       <SEOHead
-        title="Neurodiversity in Public Sector & Government — 2026 Challenges"
+        title="Neurodiversity in Public Sector & Government: 2026 Challenges"
         description="Neurodiversity training and consultancy for central and local government. Move from compliance to capability with sector-adapted programmes."
         path="/industries/public-sector"
       />
@@ -72,7 +72,7 @@ const IndustryPublicSector = () => {
         <PageHero
           badge="Neurodiversity in public sector"
           title="Policy heavy. Risk aware. Slow to change."
-          description="Government departments and public bodies have the governance structures for neuroinclusion — but compliance culture, budget constraints, and hierarchy mean capability consistently lags behind policy."
+          description="Government departments and public bodies have the governance structures for neuroinclusion, but compliance culture, budget constraints, and hierarchy mean capability consistently lags behind policy."
         />
 
         <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points public sector can't ignore">
@@ -105,7 +105,7 @@ const IndustryPublicSector = () => {
           <RelevantWorkshops
             workshopIds={["awareness", "champions", "line-manager", "manager-dev", "hr-training", "exec-briefing", "disclosure", "performance"]}
             title="Public sector-recommended sessions"
-            description="From manager capability workshops to board-level strategy — adapted to your governance and operating environment."
+            description="From manager capability workshops to board-level strategy, adapted to your governance and operating environment."
           />
         </PageSection>
 

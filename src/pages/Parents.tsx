@@ -45,7 +45,7 @@ const Parents = () => {
   return (
     <>
       <SEOHead
-        title="For Parents — SEND Navigator & Neurodiversity Resources"
+        title="For Parents: SEND Navigator & Neurodiversity Resources"
         description="Free tools and resources for parents of neurodivergent children. Use the SEND Navigator, read practical guides, and get support from people who understand."
         path="/parents"
       />
@@ -60,7 +60,7 @@ const Parents = () => {
         <PageHero
           badge="For parents"
           title="Tools and resources built for families navigating neurodiversity"
-          description="We're parents too. Everything here is built from lived experience — designed to give you clarity, confidence, and something practical you can actually use."
+          description="We're parents too. Everything here is built from lived experience, designed to give you clarity, confidence, and something practical you can actually use."
         />
 
         {/* SEND Navigator embed */}
@@ -68,7 +68,7 @@ const Parents = () => {
           id="navigator"
           badge="Interactive tool"
           title="SEND Reform Navigator"
-          description="Plain-English answers about SEND reform. What we know, what's changing, and what hasn't. Use it directly below — no sign-up needed."
+          description="Plain-English answers about SEND reform. What we know, what's changing, and what hasn't. Use it directly below. No sign-up needed."
           variant="sand"
         >
           <div className="rounded-xl border border-border overflow-hidden shadow-lg bg-background">

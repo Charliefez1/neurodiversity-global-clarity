@@ -29,7 +29,7 @@ interface PathwayLandingProps {
   heroImageAlt?: string;
   /** When true, hero uses split layout with image on right instead of background overlay */
   heroVariant?: "background" | "split";
-  /** Custom hero CTA buttons — overrides default buttons */
+  /** Custom hero CTA buttons: overrides default buttons */
   heroCTAs?: ReactNode;
   /** Hide the "In your own words" AI search section */
   hideAskSection?: boolean;
@@ -131,10 +131,10 @@ const PathwayLanding = ({
 
       <main>
         {/* ═══════════════════════════════════════════
-            HERO — full-bleed image with gradient overlay
+            HERO: full-bleed image with gradient overlay
             ═══════════════════════════════════════════ */}
         {heroVariant === "split" ? (
-          /* Split hero — text left, image right */
+          /* Split hero: text left, image right */
           <section className="bg-primary text-primary-foreground">
             <div className="mx-auto max-w-wide px-6 lg:px-10 py-20 lg:py-32">
               <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -170,7 +170,7 @@ const PathwayLanding = ({
             </div>
           </section>
         ) : (
-          /* Background hero — original layout */
+          /* Background hero: original layout */
           <section className="relative bg-primary text-primary-foreground overflow-hidden">
           {heroImage && (
             <img
@@ -224,7 +224,7 @@ const PathwayLanding = ({
         )}
 
         {/* ═══════════════════════════════════════════
-            IN YOUR OWN WORDS — conversational AI search
+            IN YOUR OWN WORDS: conversational AI search
             ═══════════════════════════════════════════ */}
         {!hideAskSection && (
         <section id="ask-section" className="bg-warm-stone py-16 lg:py-24">
@@ -254,7 +254,7 @@ const PathwayLanding = ({
                 </div>
               </div>
 
-              {/* Right — search + answer */}
+              {/* Right: search + answer */}
               <div>
                 <div className="rounded-2xl border border-border bg-card p-6 shadow-md">
                   <textarea
@@ -302,7 +302,7 @@ const PathwayLanding = ({
                     )}
                     {!isStreaming && answer && (
                       <p className="mt-5 pt-4 border-t border-border text-xs text-muted-foreground">
-                        This is AI-generated guidance from our team's expertise — not medical or legal advice.
+                        This is AI-generated guidance from our team's expertise. Not medical or legal advice.
                       </p>
                     )}
                   </div>
@@ -316,7 +316,7 @@ const PathwayLanding = ({
         {children}
 
         {/* ═══════════════════════════════════════════
-            ASK RICH — knowledge base on navy
+            ASK RICH: knowledge base on navy
             ═══════════════════════════════════════════ */}
         <section className="bg-primary py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
@@ -329,7 +329,7 @@ const PathwayLanding = ({
                   Got a question about neurodiversity at work?
                 </h2>
                 <p className="mt-4 text-primary-foreground/70 text-base leading-relaxed max-w-[48ch]">
-                  Rich is our co-founder with 20+ years of neurodiversity expertise. Our knowledge base has 60+ expert answers — and if yours isn't there, submit it and Rich will answer personally.
+                  Rich is our co-founder with 20+ years of neurodiversity expertise. Our knowledge base has 60+ expert answers, and if yours isn't there, submit it and Rich will answer personally.
                 </p>
                 <Link
                   to="/ask-rich"
@@ -340,7 +340,7 @@ const PathwayLanding = ({
                   <ArrowRight size={16} />
                 </Link>
               </div>
-              {/* Right side — example topics */}
+              {/* Right side: example topics */}
               <div className="grid grid-cols-2 gap-3">
                 {[
                   "Reasonable adjustments",
@@ -364,7 +364,7 @@ const PathwayLanding = ({
         </section>
 
         {/* ═══════════════════════════════════════════
-            GET IN TOUCH — contact CTAs
+            GET IN TOUCH: contact CTAs
             ═══════════════════════════════════════════ */}
         <section className="bg-warm-stone py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
