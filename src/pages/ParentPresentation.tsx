@@ -315,7 +315,7 @@ const slides: Slide[] = [
       "Smartphones are designed around unpredictability. The brain learns to check, then check again",
       "For neurodivergent children with dopamine regulation differences, highly stimulating technology is harder to disengage from",
       "This is not weakness. It is the same system being targeted by design.",
-      "Abrupt removal causes dysregulation — replace, do not just remove",
+      "Abrupt removal causes dysregulation. Replace, do not just remove",
       "Five-minute warnings. Gradual transitions. Replace with an alternative source of regulation.",
       "Screens are also connection tools for isolated children. Do not treat them as only a risk.",
     ],
