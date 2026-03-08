@@ -17,7 +17,7 @@ const isInternal = (href: string) => href.startsWith("/");
 
 const PageCTA = ({
   title = "Start a conversation",
-  description = "We'd love to hear from you. Whether it's a question, a project, or just a conversation — reach out and we'll get back to you.",
+  description = "We'd love to hear from you. Whether it's a question, a project, or just a conversation, reach out and we'll get back to you.",
   primaryLabel,
   primaryHref,
   secondaryLabel,
