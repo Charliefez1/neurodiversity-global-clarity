@@ -23,6 +23,8 @@ interface ContactFormProps {
   pageSource?: string;
   /** Compact variant for footer */
   variant?: "default" | "compact";
+  /** Dark mode for use on dark backgrounds (e.g. footer) */
+  dark?: boolean;
 }
 
 const ContactForm = ({ pageSource, variant = "default" }: ContactFormProps) => {
