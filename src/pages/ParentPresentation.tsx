@@ -555,7 +555,7 @@ const slides: Slide[] = [
       "Low demand mornings: reduce decisions before school",
       "Decompression time built in after school, non-negotiable",
       "Calm corner at home with sensory tools",
-      "Movement before demands — not after",
+      "Movement before demands, not after",
       "Connection before correction after a difficult episode",
       "Repair after rupture — every time",
     ],
