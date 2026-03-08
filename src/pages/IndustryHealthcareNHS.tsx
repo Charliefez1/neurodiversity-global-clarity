@@ -55,7 +55,7 @@ const IndustryHealthcareNHS = () => {
   return (
     <>
       <SEOHead
-        title="Neurodiversity in Healthcare & NHS — 2026 Challenges"
+        title="Neurodiversity in Healthcare & NHS: 2026 Challenges"
         description="Neurodiversity training and consultancy for NHS Trusts and healthcare organisations. Tackle burnout, masking in clinical roles, and tribunal risk with sector-adapted programmes."
         path="/industries/healthcare-nhs"
       />
