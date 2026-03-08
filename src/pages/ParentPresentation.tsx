@@ -90,7 +90,7 @@ const slides: Slide[] = [
       "You are not here because you are failing. You are here because you care.",
       "We cover: the nervous system, school, dopamine, the dark side, family, and what actually helps.",
       "This is the presentation we give in our live sessions. We have made it available so parents have their own version to take away.",
-      "Share it with partners, grandparents, teachers — anyone who needs to understand.",
+      "Share it with partners, grandparents, teachers. Anyone who needs to understand.",
     ],
     speakerNotes: "Set the tone: this is not a lecture. This is direct, honest, and built from both clinical evidence and lived experience. Many parents have said they wish they had something to show their families. This is that thing.",
     bgVariant: "light",
