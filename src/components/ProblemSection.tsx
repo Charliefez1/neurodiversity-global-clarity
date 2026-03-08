@@ -74,7 +74,7 @@ const ProblemSection = () => {
           {problems.map((p) => (
             <article
               key={p.title}
-              className="rounded-xl border border-white/10 bg-primary p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="rounded-xl border border-white/15 bg-white/10 backdrop-blur-md p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
                 <p.icon size={20} className="text-accent" aria-hidden="true" />
