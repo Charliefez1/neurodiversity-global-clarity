@@ -28,7 +28,7 @@ const PageCTA = ({
     <section className="bg-warm-stone py-16 lg:py-24">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 items-start">
-          {/* Left — text and optional buttons */}
+          {/* Left: text and optional buttons */}
           <div>
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
               Contact us
