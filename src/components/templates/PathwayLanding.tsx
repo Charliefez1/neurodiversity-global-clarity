@@ -160,7 +160,41 @@ const PathwayLanding = ({
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: breadcrumbLabel }]} />
 
       <main>
-        <PageHero badge={badge} title={title} description={heroDescription} />
+        {heroImage ? (
+          <section className="bg-primary text-primary-foreground">
+            <div className="mx-auto max-w-wide px-6 lg:px-10">
+              <div className="grid lg:grid-cols-2 gap-0 items-stretch min-h-[420px]">
+                <div className="py-16 lg:py-24 lg:pr-12 flex flex-col justify-center">
+                  <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
+                    {badge}
+                  </p>
+                  <h1 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight leading-[1.1] max-w-xl">
+                    {title}
+                  </h1>
+                  <p className="mt-5 text-sm md:text-base leading-relaxed opacity-80 max-w-[52ch]">
+                    {heroDescription}
+                  </p>
+                  <img
+                    src={ndgLogo}
+                    alt="Neurodiversity Global"
+                    className="mt-8 h-10 md:h-12 w-auto opacity-80"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="hidden lg:block relative overflow-hidden rounded-bl-[2rem]">
+                  <img
+                    src={heroImage}
+                    alt={heroImageAlt || ""}
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : (
+          <PageHero badge={badge} title={title} description={heroDescription} />
+        )}
 
         {/* ── In your own words search ── */}
         <section className="bg-warm-stone py-16 lg:py-24">
