@@ -102,7 +102,7 @@ const ProblemSection = () => {
                   ))}
                 </ul>
               ) : (
-                <p className="text-muted-foreground text-sm leading-relaxed">{p.summary}</p>
+                <p className="text-white/70 text-sm leading-relaxed">{p.summary}</p>
               )}
             </article>
           ))}
