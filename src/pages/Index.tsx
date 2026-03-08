@@ -57,7 +57,15 @@ const Index = () => {
       </div>
       <ServicesSection />
       <ImpactSection />
-      <EvidenceSection />
+      <div
+        className="relative bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${industryBg})` }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10">
+          <EvidenceSection />
+        </div>
+      </div>
       <AccessibilitySection />
       <FinalCTA />
       
