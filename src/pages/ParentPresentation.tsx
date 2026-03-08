@@ -237,7 +237,7 @@ const slides: Slide[] = [
     id: "s13",
     type: "quote",
     sectionIndex: 2,
-    quote: "Neuroaffirming practice is not special treatment. It is accessibility. If a child needs glasses to see the board, we do not call it a perk. If a child needs to pace, chew, or wear headphones to process a sentence — that is their glasses.",
+    quote: "Neuroaffirming practice is not special treatment. It is accessibility. If a child needs glasses to see the board, we do not call it a perk. If a child needs to pace, chew, or wear headphones to process a sentence, that is their glasses.",
     speakerNotes: "This analogy works in school meetings. It reframes accommodations as accessibility rather than favouritism. Use it.",
     bgVariant: "accent",
   },
