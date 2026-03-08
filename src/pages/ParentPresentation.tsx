@@ -1112,7 +1112,7 @@ const ParentPresentation = () => {
               Understanding Your Neurodivergent Child
             </h1>
             <p className="mt-5 text-base leading-relaxed text-primary-foreground/75 max-w-[60ch]">
-              This is the presentation we give in our live two-hour workshop for parents and carers. We have made it available here so families have their own version to take away, revisit, and share with partners, grandparents, teachers — anyone who needs to understand.
+              This is the presentation we give in our live two-hour workshop for parents and carers. We have made it available here so families have their own version to take away, revisit, and share with partners, grandparents, teachers. Anyone who needs to understand.
             </p>
             <p className="mt-3 text-sm text-primary-foreground/50 max-w-[60ch]">
               Every slide has speaker notes you can expand for additional context, evidence, and guidance. Use this at your own pace.
