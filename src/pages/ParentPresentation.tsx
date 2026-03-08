@@ -706,7 +706,7 @@ const SlideCard = ({
               </blockquote>
               {slide.quoteAttribution && (
                 <p className={`mt-6 text-sm ${isDark ? "text-primary-foreground/50" : "text-muted-foreground"}`}>
-                  — {slide.quoteAttribution}
+
                 </p>
               )}
             </div>
