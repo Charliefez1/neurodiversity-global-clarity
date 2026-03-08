@@ -454,6 +454,31 @@ const ForParents = () => (
       </div>
 
       <PullQuote quote="These sessions give families a starting point — not a diagnosis, not a prescription, just practical understanding they can use at home." />
+
+      {/* Link to full presentation */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="mt-10 rounded-2xl border border-accent/20 bg-accent/[0.04] p-8 flex flex-col sm:flex-row items-start sm:items-center gap-6"
+      >
+        <div className="flex-1">
+          <p className="font-display font-bold text-base text-foreground mb-1">
+            Take the presentation home
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            This is the presentation we give in our live sessions. We have made it available so parents have their own version to revisit, share with family members, or use to explain what they are dealing with.
+          </p>
+        </div>
+        <Link
+          to="/for-parents/presentation"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/25 hover:shadow-lg hover:scale-[1.02] transition-all shrink-0"
+        >
+          View presentation
+          <ArrowRight size={16} />
+        </Link>
+      </motion.div>
     </PageSection>
 
     {/* ═══════════════════════════════════════════
