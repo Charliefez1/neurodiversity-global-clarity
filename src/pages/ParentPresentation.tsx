@@ -502,7 +502,7 @@ const slides: Slide[] = [
     title: "What parents actually worry about at 3am",
     bullets: [
       "Am I the problem? Shame arrives before anything else",
-      "Is this my fault genetically? — many parents are themselves unidentified",
+      "Is this my fault genetically? Many parents are themselves unidentified",
       "Will they be OK? — the question underneath every other question",
       "My child is in pain and I cannot fix it",
       "No one believes me — school sees coping, I see crisis. Both are true.",
