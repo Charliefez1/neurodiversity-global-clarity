@@ -75,7 +75,7 @@ const slides: Slide[] = [
     type: "section-title",
     sectionIndex: 0,
     title: "Understanding Your Neurodivergent Child",
-    subtitle: "A presentation for parents and carers — built from our two-hour workshop delivered to families across the UK",
+    subtitle: "A presentation for parents and carers, built from our two-hour workshop delivered to families across the UK",
     speakerNotes: "This presentation is based on a live workshop delivered by Rich Ferriman of Neurodiversity Global. It is designed for parents to take away and revisit, share with family members, or use to explain what they are dealing with to people who may not yet understand. It is direct. It is evidence-based. It does not soften things that need to be said clearly.",
     bgVariant: "dark",
     image: heroImg,
