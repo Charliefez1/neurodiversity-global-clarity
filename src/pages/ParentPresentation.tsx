@@ -356,7 +356,7 @@ const slides: Slide[] = [
     sectionIndex: 4,
     title: "Suicide risk in neurodivergent young people",
     stats: [
-      { value: "9×", label: "higher risk — autistic people compared to general population" },
+      { value: "9×", label: "higher risk: autistic people compared to general population" },
       { value: "20%", label: "of autistic children and teenagers report suicidal ideation in the past year" },
       { value: "10%", label: "of autistic adolescents report suicide attempts" },
       { value: "66%", label: "of autistic adults at a UK diagnostic clinic reported suicidal ideation (Cassidy, Lancet Psychiatry)" },
