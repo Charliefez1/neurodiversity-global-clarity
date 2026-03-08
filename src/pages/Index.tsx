@@ -44,6 +44,7 @@ const Index = () => {
       <Navbar />
       <NewsHeadlines />
       <HeroSection />
+      <ServicesSection />
       <NeuroFrameworkSection />
       <div
         className="relative bg-cover bg-top bg-no-repeat"
@@ -55,7 +56,6 @@ const Index = () => {
           <StatsBar />
         </div>
       </div>
-      <ServicesSection />
       <ImpactSection />
       <div
         className="relative bg-cover bg-center bg-no-repeat"

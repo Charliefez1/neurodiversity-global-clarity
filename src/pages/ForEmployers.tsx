@@ -400,11 +400,7 @@ const ForEmployers = () => (
         ═══════════════════════════════════════════ */}
     <PageCTA
       title="Start the conversation"
-      description="If your organisation wants to improve leadership capability, retain neurodivergent talent, and create workplaces where people can succeed, we would be happy to talk. Speak with our founders to explore how neuroinclusion can strengthen your organisation."
-      primaryLabel="Book a discovery call"
-      primaryHref="/feedback"
-      secondaryLabel="Send us a message"
-      secondaryHref="/feedback"
+      description="If your organisation wants to improve leadership capability, retain neurodivergent talent, and create workplaces where people can succeed, we would be happy to talk."
     />
   </PathwayLanding>
 );

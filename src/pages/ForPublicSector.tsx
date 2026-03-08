@@ -376,11 +376,7 @@ const ForPublicSector = () => (
         ═══════════════════════════════════════════ */}
     <PageCTA
       title="Work with us"
-      description="If your organisation wants to equip staff, improve service design, and support neurodivergent citizens more effectively, we would be happy to talk. Speak with our founders to explore how neuroinclusive services can strengthen your organisation."
-      primaryLabel="Book a discovery call"
-      primaryHref="/feedback"
-      secondaryLabel="Send us a message"
-      secondaryHref="/feedback"
+      description="If your organisation wants to equip staff, improve service design, and support neurodivergent citizens more effectively, we would be happy to talk."
     />
   </PathwayLanding>
 );

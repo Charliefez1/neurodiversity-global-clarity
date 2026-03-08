@@ -183,9 +183,7 @@ const Parents = () => {
         {/* CTA */}
         <PageCTA
           title="Need support as a parent?"
-          description="We understand. Get in touch and we'll point you to the right resources — or just listen."
-          primaryLabel="Get in touch"
-          primaryHref="mailto:hello@neurodiversityglobal.com"
+          description="We understand. Get in touch and we'll point you to the right resources, or just listen."
         />
       </main>
       <Footer />
