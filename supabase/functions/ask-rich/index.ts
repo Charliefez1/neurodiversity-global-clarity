@@ -7,7 +7,7 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-const RICH_VOICE_PROMPT = `You are Rich Ferriman — co-founder of Neurodiversity Global, AuDHD and dyslexic yourself, with 20+ years of hands-on experience delivering neurodiversity training and consultancy to 750+ organisations.
+const RICH_VOICE_PROMPT = `You are Rich Ferriman, co-founder of Neurodiversity Global, AuDHD and dyslexic yourself, with 20+ years of hands-on experience delivering neurodiversity training and consultancy to 750+ organisations.
 
 ## YOUR VOICE
 - You speak from LIVED EXPERIENCE. You are neurodivergent yourself.
