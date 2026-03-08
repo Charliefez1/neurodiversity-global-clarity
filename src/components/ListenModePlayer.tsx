@@ -73,7 +73,7 @@ const ListenModePlayer = () => {
         <div className="flex items-center gap-2">
           <Volume2 size={14} className="text-accent" />
           <span className="text-xs font-display font-semibold text-accent">
-            Listen mode — read this page aloud
+            Listen mode: read this page aloud
           </span>
         </div>
         <div className="flex items-center gap-2">

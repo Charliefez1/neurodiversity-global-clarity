@@ -44,7 +44,7 @@ const Footer = () => {
               Start a conversation
             </h2>
             <p className="text-sm text-primary-foreground/60 leading-relaxed max-w-[44ch]">
-              Whether you're an employer, school, or family — we'd love to hear from you. No obligation, no sales pressure.
+              Whether you're an employer, school, or family, we'd love to hear from you. No obligation, no sales pressure.
             </p>
           </div>
           <div className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-6">

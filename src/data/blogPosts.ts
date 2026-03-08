@@ -1626,7 +1626,7 @@ Contact us to find out more, because understanding what is actually happening is
   },
   {
     slug: "system-failing-neurodivergent-children",
-    title: "The System Is Failing Neurodivergent Children — and What Parents Can Do While It Catches Up",
+    title: "The System Is Failing Neurodivergent Children, and What Parents Can Do While It Catches Up",
     metaTitle: "The System Is Failing Neurodivergent Children | Parent Guide",
     metaDescription: "An honest look at NHS waiting lists, EHCP failures, and inadequate school support for neurodivergent children. Practical strategies for parents navigating a broken system.",
     excerpt: "The families navigating this are not failing the system. The system is failing them. And the parents trying to change that, quietly, persistently, often without any recognition, are doing some of the most important work there is.",

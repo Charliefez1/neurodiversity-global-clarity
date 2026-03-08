@@ -65,7 +65,7 @@ const PageCTA = ({
             )}
           </div>
 
-          {/* Right — contact form */}
+          {/* Right: contact form */}
           <div className="rounded-xl border border-border bg-card p-6 shadow-md">
             <ContactForm pageSource={pageSource} />
           </div>

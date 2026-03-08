@@ -152,7 +152,7 @@ const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactF
         </div>
       )}
 
-      {/* Contact method — radio buttons */}
+      {/* Contact method: radio buttons */}
       <div>
         <label className={dark
           ? "text-xs font-display font-bold uppercase tracking-widest text-primary-foreground/50 mb-2 block"
