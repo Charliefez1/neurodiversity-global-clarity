@@ -19,6 +19,10 @@ import {
   Sun,
   FileText,
   BookOpen,
+  Loader2,
+  User,
+  Mail,
+  Building2,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -26,6 +30,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
 import ndgLogo from "@/assets/logos/neurodiversity-global.png";
+import { supabase } from "@/integrations/supabase/client";
 
 import heroImg from "@/assets/presentation/hero-parent-child.jpg";
 import nervousImg from "@/assets/presentation/nervous-system.jpg";
