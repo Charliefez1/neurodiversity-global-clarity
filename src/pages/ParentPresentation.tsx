@@ -527,7 +527,7 @@ const slides: Slide[] = [
       "Permission to disengage from battles that are not worth the cost",
       "A peer group of people who already understand without explanation",
       "Recognition that the system is failing your child, not that you are failing them",
-      "Honest information about risk — not reassurance that removes your ability to prepare",
+      "Honest information about risk, not reassurance that removes your ability to prepare",
     ],
     speakerNotes: "This is the bridge to the final section. Having named the problems, we now move to what actually works.",
     bgVariant: "light",
