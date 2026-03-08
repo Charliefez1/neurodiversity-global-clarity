@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import NeuroFrameworkSection from "@/components/NeuroFrameworkSection";
 import ProblemSection from "@/components/ProblemSection";
 import challengeBg from "@/assets/challenge-bg.png";
+import industryBg from "@/assets/industry-bg.png";
 import StatsBar from "@/components/StatsBar";
 import ServicesSection from "@/components/ServicesSection";
 import ImpactSection from "@/components/ImpactSection";
@@ -56,7 +57,15 @@ const Index = () => {
       </div>
       <ServicesSection />
       <ImpactSection />
-      <EvidenceSection />
+      <div
+        className="relative bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${industryBg})` }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10">
+          <EvidenceSection />
+        </div>
+      </div>
       <AccessibilitySection />
       <FinalCTA />
       
