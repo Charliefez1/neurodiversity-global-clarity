@@ -170,7 +170,7 @@ const slides: Slide[] = [
       "Shutdown = protective collapse",
       "Avoidance = the only available tool",
     ],
-    speakerNotes: "Every behaviour has a function. The question is never 'why won't they just…' — it is 'what is making this impossible right now?' What is the sensory load? What demands have already built up today? Has the child eaten, slept, had any decompression time? What happened at school today? Is this a new environment or transition? When did I last connect without asking anything of them?",
+    speakerNotes: "Every behaviour has a function. The question is never 'why won't they just…' It is 'what is making this impossible right now?' What is the sensory load? What demands have already built up today? Has the child eaten, slept, had any decompression time? What happened at school today? Is this a new environment or transition? When did I last connect without asking anything of them?",
     bgVariant: "light",
   },
 
