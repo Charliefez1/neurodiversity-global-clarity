@@ -467,7 +467,7 @@ const ForParents = () => (
         />
       </div>
 
-      <PullQuote quote="Many parents tell us that simply understanding their child more clearly changes how they support them." />
+      <PullQuote quote="These sessions give families a starting point — not a diagnosis, not a prescription, just practical understanding they can use at home." />
     </PageSection>
 
     {/* ═══════════════════════════════════════════
