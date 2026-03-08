@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import MultiCTABar from "@/components/MultiCTABar";
+
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { breadcrumbSchema, serviceSchema } from "@/components/JsonLd";
