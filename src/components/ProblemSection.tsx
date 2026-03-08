@@ -45,7 +45,7 @@ const ProblemSection = () => {
   return (
     <section
       id="problem"
-      className="relative py-20 lg:py-28"
+      className="relative py-20 lg:py-28 pb-10 lg:pb-12"
       aria-labelledby="problem-heading"
     >
       <div className="relative z-10 mx-auto max-w-wide px-6 lg:px-10">
