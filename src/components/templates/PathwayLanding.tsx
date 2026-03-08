@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/templates/PageHero";
+import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 import MultiCTABar from "@/components/MultiCTABar";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
