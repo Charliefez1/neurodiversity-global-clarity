@@ -174,7 +174,7 @@ const slides: Slide[] = [
     bgVariant: "light",
   },
 
-  // SECTION 2 — School & Masking
+  // SECTION 2: School & Masking
   {
     id: "s9",
     type: "section-title",
