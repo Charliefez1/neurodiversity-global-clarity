@@ -27,7 +27,7 @@ interface ContactFormProps {
   dark?: boolean;
 }
 
-const ContactForm = ({ pageSource, variant = "default" }: ContactFormProps) => {
+const ContactForm = ({ pageSource, variant = "default", dark = false }: ContactFormProps) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [organisation, setOrganisation] = useState("");
