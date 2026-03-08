@@ -798,11 +798,251 @@ const SlideCard = ({
   );
 };
 
+/* ─── Signup Gate ─── */
+const STORAGE_KEY = "ndg_presentation_access";
+
+const useContextOptions = [
+  { value: "home", label: "Home — for my family" },
+  { value: "school", label: "School — to share with staff or parents" },
+  { value: "work", label: "Work — professional development" },
+  { value: "other", label: "Other" },
+];
+
+const SignupGate = ({ onAccess }: { onAccess: () => void }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [useContext, setUseContext] = useState("home");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name.trim() || !email.trim()) return;
+    setError("");
+    setIsSubmitting(true);
+
+    try {
+      const { error: dbError } = await supabase
+        .from("presentation_signups")
+        .insert({
+          name: name.trim(),
+          email: email.trim(),
+          company: company.trim() || null,
+          use_context: useContext,
+          presentation: "parents",
+        });
+
+      if (dbError) throw dbError;
+
+      // Fire-and-forget notification
+      supabase.functions.invoke("presentation-signup", {
+        body: {
+          name: name.trim(),
+          email: email.trim(),
+          company: company.trim(),
+          use_context: useContext,
+          presentation: "parents",
+        },
+      }).catch(() => {});
+
+      sessionStorage.setItem(STORAGE_KEY, "true");
+      onAccess();
+    } catch {
+      setError("Something went wrong. Please try again.");
+    }
+    setIsSubmitting(false);
+  };
+
+  return (
+    <>
+      <SEOHead
+        title="Understanding Your Neurodivergent Child — Parent Presentation"
+        description="A comprehensive, evidence-based presentation for parents and carers of neurodivergent children."
+        path="/for-parents/presentation"
+      />
+      <Navbar />
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "For Parents", href: "/for-parents" },
+          { label: "Presentation" },
+        ]}
+      />
+      <main>
+        <section className="bg-primary text-primary-foreground min-h-[80vh] flex items-center">
+          <div className="mx-auto max-w-wide px-6 lg:px-10 py-20 lg:py-28">
+            <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+              {/* Left — info */}
+              <div>
+                <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
+                  Free resource
+                </p>
+                <h1 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight leading-[1.08]">
+                  Understanding Your Neurodivergent Child
+                </h1>
+                <p className="mt-5 text-base leading-relaxed text-primary-foreground/75 max-w-[50ch]">
+                  This is the presentation we give in our live two-hour workshop. We have made it available so parents have their own version to take away, revisit, and share with family members, teachers, or anyone who needs to understand.
+                </p>
+                <div className="mt-6 space-y-3">
+                  {[
+                    "38 evidence-based slides with speaker notes",
+                    "Covers the nervous system, school, dopamine, risk, family, and practical tools",
+                    "Share it with anyone who needs to understand",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <span className="w-2 h-2 rounded-full bg-accent mt-2 shrink-0" />
+                      <p className="text-sm text-primary-foreground/70">{item}</p>
+                    </div>
+                  ))}
+                </div>
+                <img
+                  src={ndgLogo}
+                  alt="Neurodiversity Global"
+                  className="mt-8 h-10 w-auto opacity-50"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Right — form */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <form
+                  onSubmit={handleSubmit}
+                  className="rounded-2xl bg-primary-foreground/[0.06] border border-primary-foreground/12 p-8 space-y-5"
+                >
+                  <div>
+                    <p className="font-display font-bold text-lg text-primary-foreground mb-1">
+                      Access the presentation
+                    </p>
+                    <p className="text-sm text-primary-foreground/50">
+                      Fill in your details below to view the full presentation.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-xs font-display font-bold text-primary-foreground/60 mb-1.5">
+                        Your name *
+                      </label>
+                      <div className="relative">
+                        <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-primary-foreground/30" />
+                        <input
+                          type="text"
+                          required
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                          placeholder="Full name"
+                          className="w-full pl-10 pr-4 py-3 rounded-lg bg-primary-foreground/[0.06] border border-primary-foreground/12 text-primary-foreground placeholder:text-primary-foreground/25 text-sm focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/20 transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-display font-bold text-primary-foreground/60 mb-1.5">
+                        Email address *
+                      </label>
+                      <div className="relative">
+                        <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-primary-foreground/30" />
+                        <input
+                          type="email"
+                          required
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder="you@example.com"
+                          className="w-full pl-10 pr-4 py-3 rounded-lg bg-primary-foreground/[0.06] border border-primary-foreground/12 text-primary-foreground placeholder:text-primary-foreground/25 text-sm focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/20 transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-display font-bold text-primary-foreground/60 mb-1.5">
+                        Organisation / school (optional)
+                      </label>
+                      <div className="relative">
+                        <Building2 size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-primary-foreground/30" />
+                        <input
+                          type="text"
+                          value={company}
+                          onChange={(e) => setCompany(e.target.value)}
+                          placeholder="Company or school name"
+                          className="w-full pl-10 pr-4 py-3 rounded-lg bg-primary-foreground/[0.06] border border-primary-foreground/12 text-primary-foreground placeholder:text-primary-foreground/25 text-sm focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/20 transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-display font-bold text-primary-foreground/60 mb-1.5">
+                        How will you use this? *
+                      </label>
+                      <div className="grid grid-cols-2 gap-2">
+                        {useContextOptions.map((opt) => (
+                          <button
+                            key={opt.value}
+                            type="button"
+                            onClick={() => setUseContext(opt.value)}
+                            className={`rounded-lg px-4 py-2.5 text-sm font-display font-medium border transition-all text-left ${
+                              useContext === opt.value
+                                ? "bg-accent/20 border-accent/40 text-accent"
+                                : "bg-primary-foreground/[0.04] border-primary-foreground/10 text-primary-foreground/60 hover:bg-primary-foreground/10"
+                            }`}
+                          >
+                            {opt.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {error && (
+                    <p className="text-sm text-red-400">{error}</p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting || !name.trim() || !email.trim()}
+                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:scale-[1.01] transition-all disabled:opacity-50 disabled:pointer-events-none"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 size={16} className="animate-spin" />
+                        Signing up…
+                      </>
+                    ) : (
+                      <>
+                        View presentation
+                        <ArrowRight size={16} />
+                      </>
+                    )}
+                  </button>
+
+                  <p className="text-xs text-primary-foreground/30 text-center">
+                    Your details are stored securely. We won't spam you.
+                  </p>
+                </form>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
 /* ─── Page Component ─── */
 const ParentPresentation = () => {
+  const [hasAccess, setHasAccess] = useState(() => sessionStorage.getItem(STORAGE_KEY) === "true");
   const [openNotes, setOpenNotes] = useState<Record<string, boolean>>({});
   const [showNav, setShowNav] = useState(false);
   const [activeSection, setActiveSection] = useState(0);
+
+  if (!hasAccess) {
+    return <SignupGate onAccess={() => setHasAccess(true)} />;
+  }
 
   const toggleNotes = (id: string) =>
     setOpenNotes((prev) => ({ ...prev, [id]: !prev[id] }));
