@@ -281,7 +281,7 @@ const slides: Slide[] = [
       "Executive function demands increase sharply at secondary school",
       "Strategies that worked in Year 5 collapse under Year 8 conditions",
       "Autistic young people may experience puberty earlier than the general population",
-      "For girls: many are first flagged for mental health support during puberty — not because it started then, but because coping strategies collapsed",
+      "For girls: many are first flagged for mental health support during puberty, not because it started then, but because coping strategies collapsed",
       "The cliff edge at secondary transition is real and well documented",
     ],
     speakerNotes: "Parents of primary-age children need to hear this so they can prepare. Parents of secondary-age children need to hear this so they understand what happened. The child did not suddenly get worse. The demands got higher and the regulation system got disrupted.",
