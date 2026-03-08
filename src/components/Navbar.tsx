@@ -122,6 +122,12 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-4">
           <LanguageSelector />
           <Link
+            to="/portal"
+            className="inline-flex items-center px-5 py-2.5 rounded-lg border border-accent text-accent font-display font-bold text-sm hover:bg-accent/10 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          >
+            Client Portal
+          </Link>
+          <Link
             to="/#contact"
             className="inline-flex items-center px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/20 hover:shadow-lg hover:shadow-accent/35 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
