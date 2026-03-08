@@ -55,7 +55,7 @@ const IndustryPublicSector = () => {
   return (
     <>
       <SEOHead
-        title="Neurodiversity in Public Sector & Government — 2026 Challenges"
+        title="Neurodiversity in Public Sector & Government: 2026 Challenges"
         description="Neurodiversity training and consultancy for central and local government. Move from compliance to capability with sector-adapted programmes."
         path="/industries/public-sector"
       />
