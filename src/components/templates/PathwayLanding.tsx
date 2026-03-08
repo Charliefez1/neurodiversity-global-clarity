@@ -128,8 +128,8 @@ const PathwayLanding = ({
     },
     {
       icon: Mail,
-      label: "Send us a message",
-      description: "We'll reply within 24 hours",
+      label: "Contact us",
+      description: "Send us a message",
       href: "/feedback",
       colour: NEURO_COLOURS[2],
       isRoute: true,
@@ -296,7 +296,7 @@ const PathwayLanding = ({
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto items-stretch">
               {ctaItems.map((cta) => {
                 const inner = (
                   <div

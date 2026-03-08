@@ -35,10 +35,11 @@ const ctas = [
   },
   {
     id: "contact" as const,
-    label: "Email us directly",
-    description: "hello@neurodiversityglobal.com",
-    href: "mailto:hello@neurodiversityglobal.com",
+    label: "Contact us",
+    description: "Send us a message",
+    href: "/feedback",
     icon: Mail,
+    isRoute: true,
     style: "bg-card text-foreground border border-border shadow-md hover:shadow-lg hover:scale-[1.02]",
   },
 ];
@@ -50,11 +51,11 @@ const MultiCTABar = ({ variant = "light", show }: MultiCTABarProps) => {
   return (
     <section className={`${bgClass} py-12 lg:py-16`}>
       <div className="mx-auto max-w-wide px-6 lg:px-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
           {visibleCTAs.map((cta) => {
             const inner = (
               <div
-                className={`rounded-xl px-6 py-5 flex items-center gap-4 font-display font-bold text-sm transition-all duration-200 min-h-[80px] ${cta.style}`}
+                className={`rounded-xl px-6 py-5 flex items-center gap-4 font-display font-bold text-sm transition-all duration-200 h-full min-h-[80px] ${cta.style}`}
               >
                 <div className="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center shrink-0">
                   <cta.icon size={18} aria-hidden="true" />
