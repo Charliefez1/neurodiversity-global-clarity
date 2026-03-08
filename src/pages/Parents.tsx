@@ -60,7 +60,7 @@ const Parents = () => {
         <PageHero
           badge="For parents"
           title="Tools and resources built for families navigating neurodiversity"
-          description="We're parents too. Everything here is built from lived experience — designed to give you clarity, confidence, and something practical you can actually use."
+          description="We're parents too. Everything here is built from lived experience, designed to give you clarity, confidence, and something practical you can actually use."
         />
 
         {/* SEND Navigator embed */}
