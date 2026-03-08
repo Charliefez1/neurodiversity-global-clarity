@@ -33,13 +33,13 @@ const stats = [
 
 const StatsBar = () => {
   return (
-    <section className="relative py-16 lg:py-20">
+    <section className="relative pt-0 pb-20 lg:pb-28">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-xl border border-white/10 bg-white/5 p-6 shadow-sm hover:shadow-md transition-shadow text-center"
+              className="rounded-xl border border-white/15 bg-white/10 backdrop-blur-md p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mx-auto mb-4">
                 <stat.icon size={20} className="text-accent" aria-hidden="true" />
