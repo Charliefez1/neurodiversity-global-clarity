@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Cooper Hewitt"', 'system-ui', 'sans-serif'],
-        body: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        body: ['"Roboto"', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
