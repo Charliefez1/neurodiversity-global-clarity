@@ -250,7 +250,7 @@ const HeroSection = () => {
       </div>
 
       {/* Pathway cards */}
-      <div>
+      <div id="pathways">
         <div className="mx-auto max-w-wide px-6 lg:px-10 border-t border-primary-foreground/8 py-12 lg:py-14">
           <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-8">
             {t("hero.lookingForSupport")}
