@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import NeuroFrameworkSection from "@/components/NeuroFrameworkSection";
 import ProblemSection from "@/components/ProblemSection";
+import challengeBg from "@/assets/challenge-bg.png";
 import StatsBar from "@/components/StatsBar";
 import ServicesSection from "@/components/ServicesSection";
 import ImpactSection from "@/components/ImpactSection";
