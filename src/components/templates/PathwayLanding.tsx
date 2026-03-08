@@ -257,35 +257,62 @@ const PathwayLanding = ({
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-              {ctaItems.map((cta) => (
-                <a
-                  key={cta.label}
-                  href={cta.href}
-                  target={cta.href.startsWith("http") ? "_blank" : undefined}
-                  rel={cta.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  onClick={cta.isTawk ? (e) => {
-                    e.preventDefault();
-                    // Tawk.to toggle
-                    if (typeof (window as any).Tawk_API !== "undefined") {
-                      (window as any).Tawk_API.toggle();
-                    }
-                  } : undefined}
-                  className="rounded-xl border-2 border-border bg-card p-5 flex items-center gap-4 hover:shadow-lg hover:scale-[1.02] transition-all group"
-                  style={{ borderLeftColor: cta.colour, borderLeftWidth: 4 }}
-                >
+              {ctaItems.map((cta) => {
+                const inner = (
                   <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: `${cta.colour}20`, color: cta.colour }}
+                    className="rounded-xl border-2 border-border bg-card p-5 flex items-center gap-4 hover:shadow-lg hover:scale-[1.02] transition-all group h-full"
+                    style={{ borderLeftColor: cta.colour, borderLeftWidth: 4 }}
                   >
-                    <cta.icon size={18} />
+                    <div
+                      className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
+                      style={{ backgroundColor: `${cta.colour}20`, color: cta.colour }}
+                    >
+                      <cta.icon size={18} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="font-display font-bold text-sm text-foreground leading-tight">{cta.label}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{cta.description}</p>
+                    </div>
+                    <ArrowRight size={14} className="shrink-0 text-muted-foreground group-hover:text-accent transition-colors" />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-display font-bold text-sm text-foreground leading-tight">{cta.label}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{cta.description}</p>
-                  </div>
-                  <ArrowRight size={14} className="shrink-0 text-muted-foreground group-hover:text-accent transition-colors" />
-                </a>
-              ))}
+                );
+
+                if (cta.isRoute) {
+                  return (
+                    <Link key={cta.label} to={cta.href} className="block">
+                      {inner}
+                    </Link>
+                  );
+                }
+
+                if (cta.isTawk) {
+                  return (
+                    <button
+                      key={cta.label}
+                      onClick={() => {
+                        if (typeof (window as any).Tawk_API !== "undefined") {
+                          (window as any).Tawk_API.toggle();
+                        }
+                      }}
+                      className="block text-left w-full"
+                    >
+                      {inner}
+                    </button>
+                  );
+                }
+
+                return (
+                  <a
+                    key={cta.label}
+                    href={cta.href}
+                    target={cta.href.startsWith("http") ? "_blank" : undefined}
+                    rel={cta.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="block"
+                  >
+                    {inner}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </section>
