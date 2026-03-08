@@ -1040,10 +1040,6 @@ const ParentPresentation = () => {
   const [showNav, setShowNav] = useState(false);
   const [activeSection, setActiveSection] = useState(0);
 
-  if (!hasAccess) {
-    return <SignupGate onAccess={() => setHasAccess(true)} />;
-  }
-
   const toggleNotes = (id: string) =>
     setOpenNotes((prev) => ({ ...prev, [id]: !prev[id] }));
 
@@ -1056,6 +1052,7 @@ const ParentPresentation = () => {
 
   // Track active section on scroll
   useEffect(() => {
+    if (!hasAccess) return;
     const sectionSlides = slides.filter((s) => s.type === "section-title");
     const observer = new IntersectionObserver(
       (entries) => {
