@@ -312,6 +312,8 @@ const PathwayLanding = ({
           </div>
         </section>
 
+        {children}
+
         {/* ═══════════════════════════════════════════
             GET IN TOUCH — contact CTAs
             ═══════════════════════════════════════════ */}
@@ -396,7 +398,6 @@ const PathwayLanding = ({
           </div>
         </section>
 
-        {children}
         <MultiCTABar />
       </main>
       <Footer />
