@@ -148,7 +148,7 @@ const PathwayLanding = ({
 
   return (
     <>
-      <SEOHead title={seoTitle} description={seoDescription} />
+      <SEOHead title={seoTitle} description={seoDescription} path={breadcrumbPath} />
       <JsonLd data={breadcrumbSchema([{ name: "Home", url: "/" }, { name: breadcrumbLabel, url: breadcrumbPath }])} />
       <Navbar />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: breadcrumbLabel }]} />
