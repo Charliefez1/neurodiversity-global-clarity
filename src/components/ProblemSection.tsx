@@ -70,13 +70,13 @@ const ProblemSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {problems.map((p) => (
+          {problems.map((p, idx) => (
             <article
               key={p.title}
               className="rounded-xl border border-white/15 bg-white/10 backdrop-blur-md p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
-                <p.icon size={20} className="text-accent" aria-hidden="true" />
+              <div className="w-10 h-10 rounded-md flex items-center justify-center mb-5" style={{ backgroundColor: `${NEURO_COLOURS[idx]}/20`.replace(')', '/0.2)').replace('hsl', 'hsla') }}>
+                <p.icon size={20} style={{ color: NEURO_COLOURS[idx] }} aria-hidden="true" />
               </div>
               <h3 className="font-display font-bold text-sm text-primary-foreground mb-4 leading-snug">{p.title}</h3>
 

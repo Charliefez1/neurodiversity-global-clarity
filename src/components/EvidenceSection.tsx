@@ -89,11 +89,12 @@ const EvidenceSection = () => {
 
         {/* Industry cards grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-          {industries.map((ind) => (
+          {industries.map((ind, idx) => (
             <Link
               key={ind.name}
               to={ind.href}
-              className="group rounded-xl border border-white/15 bg-white/10 backdrop-blur-md p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="group rounded-xl border border-white/15 border-l-4 bg-white/10 backdrop-blur-md p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+              style={{ borderLeftColor: NEURO_COLOURS[idx % NEURO_COLOURS.length] }}
             >
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
                 <ind.icon size={20} className="text-accent" aria-hidden="true" />
