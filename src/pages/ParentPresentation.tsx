@@ -69,7 +69,7 @@ const sections = [
 
 /* ─── All 38 Slides ─── */
 const slides: Slide[] = [
-  // SECTION 0 — Introduction
+  // SECTION 0: Introduction
   {
     id: "s1",
     type: "section-title",
