@@ -302,7 +302,7 @@ const PathwayLanding = ({
                     )}
                     {!isStreaming && answer && (
                       <p className="mt-5 pt-4 border-t border-border text-xs text-muted-foreground">
-                        This is AI-generated guidance from our team's expertise — not medical or legal advice.
+                        This is AI-generated guidance from our team's expertise. Not medical or legal advice.
                       </p>
                     )}
                   </div>
