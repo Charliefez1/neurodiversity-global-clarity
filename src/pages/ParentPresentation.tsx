@@ -557,7 +557,7 @@ const slides: Slide[] = [
       "Calm corner at home with sensory tools",
       "Movement before demands, not after",
       "Connection before correction after a difficult episode",
-      "Repair after rupture — every time",
+      "Repair after rupture. Every time",
     ],
     speakerNotes: "These are not complex interventions. They are structural changes to daily life that reduce the load on the nervous system. They work because they address the root cause: dysregulation.",
     bgVariant: "sand",
