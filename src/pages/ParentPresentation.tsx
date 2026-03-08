@@ -551,7 +551,7 @@ const slides: Slide[] = [
     title: "Tools that work: regulation and daily life",
     bullets: [
       "Routine as safety: visual timetables, now/next boards",
-      "Countdown timers — 5 minutes warning, not 1",
+      "Countdown timers. Five minutes warning, not one",
       "Low demand mornings: reduce decisions before school",
       "Decompression time built in after school, non-negotiable",
       "Calm corner at home with sensory tools",
