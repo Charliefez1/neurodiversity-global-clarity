@@ -194,7 +194,7 @@ const Testimonials = () => (
 
     </section>
 
-    {/* Testimonials — alternating editorial rows */}
+    {/* Testimonials: alternating editorial rows */}
     {testimonials.map((t, i) => (
       <section
         key={t.company}

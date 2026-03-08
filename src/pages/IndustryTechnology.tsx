@@ -55,7 +55,7 @@ const IndustryTechnology = () => {
   return (
     <>
       <SEOHead
-        title="Neurodiversity in Technology & Digital — 2026 Challenges"
+        title="Neurodiversity in Technology & Digital: 2026 Challenges"
         description="Neurodiversity training and consultancy for tech companies. Retain neurodivergent talent, design cognitive sustainability into delivery, and build inclusive engineering cultures."
         path="/industries/technology"
       />

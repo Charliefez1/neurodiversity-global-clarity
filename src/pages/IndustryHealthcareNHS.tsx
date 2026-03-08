@@ -110,7 +110,7 @@ const IndustryHealthcareNHS = () => {
           <RelevantWorkshops
             workshopIds={["nhs", "awareness", "champions", "line-manager", "mental-health", "disclosure", "hr-training", "exec-briefing"]}
             title="Healthcare-recommended sessions"
-            description="From 60-minute awareness to full-day strategic programmes — all adapted to your clinical and non-clinical context."
+            description="From 60-minute awareness to full-day strategic programmes, all adapted to your clinical and non-clinical context."
           />
         </PageSection>
 

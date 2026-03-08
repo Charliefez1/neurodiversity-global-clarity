@@ -105,7 +105,7 @@ const IndustryPublicSector = () => {
           <RelevantWorkshops
             workshopIds={["awareness", "champions", "line-manager", "manager-dev", "hr-training", "exec-briefing", "disclosure", "performance"]}
             title="Public sector-recommended sessions"
-            description="From manager capability workshops to board-level strategy — adapted to your governance and operating environment."
+            description="From manager capability workshops to board-level strategy, adapted to your governance and operating environment."
           />
         </PageSection>
 

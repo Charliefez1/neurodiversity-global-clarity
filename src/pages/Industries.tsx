@@ -400,7 +400,7 @@ const Industries = () => {
                   We work across every sector
                 </h2>
                 <p className="text-base opacity-70 leading-relaxed mb-6">
-                  Our approach adapts. The same rigour, lived experience, and evidence base — applied to your industry's specific challenges.
+                  Our approach adapts. The same rigour, lived experience, and evidence base, applied to your industry's specific challenges.
                 </p>
                 <img
                   src={industryCoaching}
