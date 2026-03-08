@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Phone } from "lucide-react";
+import ContactForm from "@/components/ContactForm";
 
 interface PageCTAProps {
   title?: string;
@@ -8,63 +9,65 @@ interface PageCTAProps {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  /** Page identifier for contact form tracking */
+  pageSource?: string;
 }
 
-const PageCTA = ({
-  title = "Ready to take the next step?",
-  description = "Book a free discovery call. We'll listen, understand your context, and recommend next steps with no obligation.",
-  primaryLabel = "Book a discovery call",
-  primaryHref = "/feedback",
-  secondaryLabel = "Send us a message",
-  secondaryHref = "/feedback",
-}: PageCTAProps) => {
-  const isInternal = (href: string) => href.startsWith("/");
+const isInternal = (href: string) => href.startsWith("/");
 
+const PageCTA = ({
+  title = "Start a conversation",
+  description = "We'd love to hear from you. Whether it's a question, a project, or just a conversation — reach out and we'll get back to you.",
+  primaryLabel,
+  primaryHref,
+  secondaryLabel,
+  secondaryHref,
+  pageSource,
+}: PageCTAProps) => {
   return (
-    <section className="bg-primary text-primary-foreground py-16 lg:py-24">
+    <section className="bg-warm-stone py-16 lg:py-24">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
-        <div className="max-w-xl mx-auto text-center">
-          <h2 className="font-display font-bold text-lg md:text-xl leading-tight">
-            {title}
-          </h2>
-          <p className="mt-4 opacity-75 text-base leading-relaxed">{description}</p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            {isInternal(primaryHref) ? (
-              <Link
-                to={primaryHref}
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                <Phone size={18} aria-hidden="true" />
-                {primaryLabel}
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-            ) : (
-              <a
-                href={primaryHref}
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-              >
-                <Phone size={18} aria-hidden="true" />
-                {primaryLabel}
-                <ArrowRight size={16} aria-hidden="true" />
-              </a>
+        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 items-start">
+          {/* Left — text and optional buttons */}
+          <div>
+            <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
+              Contact us
+            </p>
+            <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-3">
+              {title}
+            </h2>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-[48ch]">
+              {description}
+            </p>
+
+            {primaryLabel && primaryHref && (
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                {isInternal(primaryHref) ? (
+                  <Link
+                    to={primaryHref}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/25 hover:shadow-lg hover:scale-[1.02] transition-all"
+                  >
+                    <Phone size={16} />
+                    {primaryLabel}
+                    <ArrowRight size={14} />
+                  </Link>
+                ) : (
+                  <a
+                    href={primaryHref}
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-md shadow-accent/25 hover:shadow-lg hover:scale-[1.02] transition-all"
+                  >
+                    <Phone size={16} />
+                    {primaryLabel}
+                    <ArrowRight size={14} />
+                  </a>
+                )}
+              </div>
             )}
-            {secondaryLabel && (
-              isInternal(secondaryHref) ? (
-                <Link
-                  to={secondaryHref}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/25 text-primary-foreground font-display font-bold text-sm hover:bg-primary-foreground/10 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                >
-                  {secondaryLabel}
-                </Link>
-              ) : (
-                <a
-                  href={secondaryHref}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/25 text-primary-foreground font-display font-bold text-sm hover:bg-primary-foreground/10 transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-                >
-                  {secondaryLabel}
-                </a>
-              )
-            )}
+          </div>
+
+          {/* Right — contact form */}
+          <div className="rounded-xl border border-border bg-card p-6 shadow-md">
+            <ContactForm pageSource={pageSource} />
           </div>
         </div>
       </div>
