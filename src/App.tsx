@@ -107,6 +107,28 @@ const AppContent = () => {
           <Route path="/for-parents" element={<ForParents />} />
           <Route path="/for-parents/presentation" element={<ParentPresentation />} />
           <Route path="/admin" element={<AdminQA />} />
+          {/* Portal routes */}
+          <Route path="/portal" element={<PortalLogin />} />
+          <Route path="/portal/login" element={<PortalLogin />} />
+          <Route path="/portal/dashboard" element={<PortalDashboard />} />
+          <Route path="/portal/book-session" element={<PortalBookSession />} />
+          <Route path="/portal/my-bookings" element={<PortalMyBookings />} />
+          <Route path="/portal/learning-library" element={<PortalLearningLibrary />} />
+          <Route path="/portal/ask-ai" element={<PortalAskAI />} />
+          <Route path="/portal/certificates" element={<PortalCertificates />} />
+          <Route path="/portal/support" element={<PortalSupport />} />
+          <Route path="/portal/resources" element={<PortalResources />} />
+          <Route path="/portal/coaching" element={<PortalCoaching />} />
+          <Route path="/portal/cognassist" element={<PortalCognassist />} />
+          <Route path="/portal/programme-calendar" element={<PortalProgrammeCalendar />} />
+          {/* Portal admin routes */}
+          <Route path="/portal/admin" element={<PortalAdminDashboard />} />
+          <Route path="/portal/admin/sessions" element={<PortalSessionManager />} />
+          <Route path="/portal/admin/attendance" element={<PortalAttendance />} />
+          <Route path="/portal/admin/content" element={<PortalContentManager />} />
+          <Route path="/portal/admin/reporting" element={<PortalReporting />} />
+          <Route path="/portal/admin/coaching" element={<PortalCoachingAdmin />} />
+          <Route path="/portal/admin/cognassist" element={<PortalCognassistAdmin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
