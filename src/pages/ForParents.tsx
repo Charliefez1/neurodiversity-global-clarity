@@ -159,11 +159,11 @@ const ForParents = () => (
     {/* ═══════════════════════════════════════════
         THE SEND NAVIGATOR — 6-card feature grid
         ═══════════════════════════════════════════ */}
-    <section className="bg-background py-20 lg:py-28">
+    <section id="send-navigator" className="bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
-            ● What's inside
+            ● The SEND Navigator
           </p>
           <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
             Everything you need in one place
