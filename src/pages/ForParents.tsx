@@ -105,14 +105,14 @@ const ForParents = () => (
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
           >
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
-              Understanding your child
+              Understanding neurodivergence
             </p>
             <h2 className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
-              What is actually happening{" "}
-              <span className="text-accent">for my child?</span>
+              Tools to help you{" "}
+              <span className="text-accent">make sense of it all</span>
             </h2>
             <p className="mt-5 text-base text-muted-foreground leading-relaxed">
-              Before meetings, assessments, or paperwork, most parents want to understand one thing. Neurodivergent children often experience the world in ways that are not always obvious to others.
+              Before meetings, assessments, or paperwork, most parents want to understand what's going on. Our tools draw on thousands of processed documents — research, policy, and real-world guidance — to help you find the information that matters.
             </p>
 
             <div className="mt-6 space-y-3">
