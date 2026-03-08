@@ -24,7 +24,7 @@ serve(async (req) => {
     }
 
     // Use Lovable AI to compose and send the notification
-    // For now, we just log it and return success — the DB insert is the record
+    // For now, we just log it and return success. The DB insert is the record
     console.log(
       `Presentation signup: ${name} (${email}), company: ${company || "N/A"}, context: ${use_context}, presentation: ${presentation}`
     );
