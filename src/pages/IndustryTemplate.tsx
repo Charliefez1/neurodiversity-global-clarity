@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import PageHero from "@/components/templates/PageHero";
 import PageSection from "@/components/templates/PageSection";
 import PageCTA from "@/components/templates/PageCTA";
-import MultiCTABar from "@/components/MultiCTABar";
+
 import RiskCallout from "@/components/blocks/RiskCallout";
 import OutcomeBlock from "@/components/blocks/OutcomeBlock";
 import TestimonialBlock from "@/components/blocks/TestimonialBlock";
