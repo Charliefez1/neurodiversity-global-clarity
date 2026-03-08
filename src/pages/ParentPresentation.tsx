@@ -393,7 +393,7 @@ const slides: Slide[] = [
       "Mate crime: someone pretending to be a friend to exploit a young person starved of genuine connection",
       "Difficulty reading others' intentions combined with a desperate need for belonging creates specific vulnerability",
       "Sexual health education for neurodivergent young people in the UK is inadequate",
-      "Safety conversations need to be explicit, direct, and repeated — not euphemistic",
+      "Safety conversations need to be explicit, direct, and repeated, not euphemistic",
       "Teach the difference between someone who wants connection and someone who wants to exploit it",
     ],
     speakerNotes: "This is hard to hear. It is harder to ignore. The research is clear: neurodivergent young people are at elevated risk. They need safety education that accounts for how they process social information.",
