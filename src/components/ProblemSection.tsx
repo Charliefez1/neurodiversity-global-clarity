@@ -95,7 +95,7 @@ const ProblemSection = () => {
               ) : mode === "read" ? (
                 <ul className="space-y-2.5">
                   {p.points.map((point, i) => (
-                    <li key={i} className="text-muted-foreground text-xs leading-relaxed flex gap-2">
+                    <li key={i} className="text-white/70 text-xs leading-relaxed flex gap-2">
                       <span className="text-accent mt-1.5 shrink-0 block w-1.5 h-1.5 rounded-full bg-accent" aria-hidden="true" />
                       {point}
                     </li>
