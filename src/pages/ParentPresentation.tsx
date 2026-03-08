@@ -585,7 +585,7 @@ const slides: Slide[] = [
     sectionIndex: 7,
     title: "Navigating school: what to do and what to say",
     bullets: [
-      "Keep a written log — dates, observations, communications, incidents",
+      "Keep a written log: dates, observations, communications, incidents",
       "Follow up every verbal conversation with an email the same day",
       "Ask for everything in writing",
       "Use the word 'provision' not 'support' — it is a legal term",
