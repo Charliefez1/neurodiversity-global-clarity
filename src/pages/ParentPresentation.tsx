@@ -96,7 +96,7 @@ const slides: Slide[] = [
     bgVariant: "light",
   },
 
-  // SECTION 1 — What Is Going On
+  // SECTION 1: What Is Going On
   {
     id: "s3",
     type: "section-title",
