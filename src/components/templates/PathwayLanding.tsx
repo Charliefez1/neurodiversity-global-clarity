@@ -316,7 +316,7 @@ const PathwayLanding = ({
         {children}
 
         {/* ═══════════════════════════════════════════
-            ASK RICH — knowledge base on navy
+            ASK RICH: knowledge base on navy
             ═══════════════════════════════════════════ */}
         <section className="bg-primary py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
