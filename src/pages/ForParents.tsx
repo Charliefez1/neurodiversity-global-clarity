@@ -153,35 +153,8 @@ const ForParents = () => (
       </div>
     </section>
 
-    {/* ═══════════════════════════════════════════
-        AREAS WE COVER — icon grid
-        ═══════════════════════════════════════════ */}
-    <PageSection
-      id="areas"
-      badge="Topics our tools cover"
-      title="The areas families ask about most"
-      variant="sand"
-    >
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {understandingAreas.map((area, i) => (
-          <motion.div
-            key={area.label}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-40px" }}
-            variants={fadeUp}
-            className="rounded-2xl border border-border bg-card p-6 shadow-md hover:shadow-lg transition-shadow group"
-          >
-            <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-              <area.icon size={22} className="text-accent" />
-            </div>
-            <h3 className="font-display font-bold text-sm text-foreground">{area.label}</h3>
-            <p className="text-xs text-muted-foreground leading-relaxed mt-1">{area.desc}</p>
-          </motion.div>
-        ))}
-      </div>
-    </PageSection>
+
+
 
     {/* ═══════════════════════════════════════════
         THE SEND NAVIGATOR — 6-card feature grid
