@@ -6,7 +6,7 @@ import PageSection from "@/components/templates/PageSection";
 import PageCTA from "@/components/templates/PageCTA";
 import OutcomeBlock from "@/components/blocks/OutcomeBlock";
 import PullQuote from "@/components/blocks/PullQuote";
-import heroImg from "@/assets/pathway-parents-hero.png";
+import heroImg from "@/assets/pathway-parents-hero-new.png";
 import sendNavigatorHeroImg from "@/assets/send-navigator-hero.png";
 import understandingImg from "@/assets/pathway/parents-understanding.jpg";
 import schoolImg from "@/assets/pathway/parents-school.jpg";
