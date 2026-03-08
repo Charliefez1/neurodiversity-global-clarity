@@ -47,7 +47,7 @@ const RecommendedBy = () => (
     {/* Featured Client - reimagined */}
     <div className="mx-auto max-w-wide px-6 lg:px-10 pb-10 lg:pb-14">
       <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-6">
-        Featured client
+        March 26' Featured client
       </p>
       <div className="group relative rounded-xl border border-primary-foreground/12 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500">
         {/* Background portrait */}
