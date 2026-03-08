@@ -448,7 +448,7 @@ const slides: Slide[] = [
     sectionIndex: 5,
     title: "What keeps relationships intact under this pressure",
     bullets: [
-      "Shared framework — two people who understand the same things about their child's nervous system",
+      "Shared framework: two people who understand the same things about their child's nervous system",
       "Common direction, even when tactics differ",
       "Strategic disengagement from battles that are not worth the cost",
       "Validation that does not immediately pivot to solutions",
