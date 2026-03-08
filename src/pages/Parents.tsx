@@ -45,7 +45,7 @@ const Parents = () => {
   return (
     <>
       <SEOHead
-        title="For Parents — SEND Navigator & Neurodiversity Resources"
+        title="For Parents: SEND Navigator & Neurodiversity Resources"
         description="Free tools and resources for parents of neurodivergent children. Use the SEND Navigator, read practical guides, and get support from people who understand."
         path="/parents"
       />
