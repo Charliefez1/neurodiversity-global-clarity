@@ -172,7 +172,7 @@ const AskRich = () => {
               Your neurodiversity questions, answered by Rich.
             </h1>
             <p className="mt-6 text-lg text-primary-foreground/80 leading-relaxed max-w-[58ch]">
-              Rich is our co-founder and resident neurodiversity-in-work expert. Even if you're not looking for training but have a question about neurodiversity at work, ask! Our knowledge base is continually updated, but if you can't find the answer you need, submit your question for Rich and the team to answer. Always strictly confidential.
+              Ask Rich anything. Rich is our co-founder and resident neurodiversity-in-work expert. Even if you are not looking for training but have a question about neurodiversity at work, ask! Our knowledge base is continually updated, but if you cannot find the answer you need, submit your question for Rich and Charlie to answer. Always strictly confidential.
             </p>
           </div>
         </div>
