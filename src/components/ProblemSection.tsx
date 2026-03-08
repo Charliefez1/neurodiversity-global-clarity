@@ -3,6 +3,7 @@ import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
 import challengeStats from "@/assets/challenge-stats.png";
 import challengeBg from "@/assets/challenge-bg.png";
+import { NEURO_COLOURS } from "@/data/neuroColours";
 
 const problems = [
   {
