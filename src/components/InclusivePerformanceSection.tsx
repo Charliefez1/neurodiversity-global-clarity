@@ -90,8 +90,8 @@ const narrativeStages: NarrativeStage[] = [
       "The organisations that get this right do not just reduce risk. They retain people others lose. They unlock talent others cannot see. They build teams that think differently, solve problems faster, and stay longer. That is what we help you build.",
     activeZones: [0, 1, 2, 3, 4, 5],
     newZone: null,
-    callout: "This is what we help you build.",
-    calloutZone: 3, // peak zone
+    callout: "Teams with neurodivergent professionals up to 30% more productive.",
+    calloutZone: 3,
   },
 ];
 
