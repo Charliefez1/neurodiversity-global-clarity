@@ -36,7 +36,7 @@ const narrativeStages: NarrativeStage[] = [
       "One in five of your workforce is neurodivergent. Many are in the wrong role, at the wrong level, doing work that uses a fraction of what they can do. Capability is present. The organisation cannot see it. That is not a talent shortage. That is a design problem.",
     activeZones: [0],
     newZone: 0,
-    callout: "Talent invisible to the organisation",
+    callout: "1 in 5 of your workforce. Capability unseen.",
     calloutZone: 0,
   },
   {
@@ -45,7 +45,7 @@ const narrativeStages: NarrativeStage[] = [
       "Most organisations stop here. A training day. An awareness week. A policy that sits in a drawer. Awareness without action does not reduce attrition. It does not reduce stress. It does not unlock performance. It tells people you know the problem exists.",
     activeZones: [0, 1],
     newZone: 1,
-    callout: "Foundation only. Not performance.",
+    callout: "Only 38% feel their organisation gives meaningful support.",
     calloutZone: 1,
   },
   {
@@ -54,7 +54,7 @@ const narrativeStages: NarrativeStage[] = [
       "Most HR teams operate here. One person asks. One adjustment is made. The system stays the same. It helps that individual. It does not help the next person. The entire burden falls on the person who already has the least capacity to carry it. This is not inclusion. It is case management.",
     activeZones: [0, 1, 2],
     newZone: 2,
-    callout: "Helps one person. System unchanged.",
+    callout: "One person helped. Everyone else unchanged.",
     calloutZone: 2,
   },
   {
@@ -63,7 +63,7 @@ const narrativeStages: NarrativeStage[] = [
       "Performance becomes sustainable here. Clarity. Predictability. Communication that works for the full range of thinking styles. Masking drops. Energy is freed up for actual work. Strengths that were invisible become visible and usable. Attrition falls. Engagement rises. Output improves. Not because you made exceptions for some people. Because you built a system that works for everyone.",
     activeZones: [0, 1, 2, 3],
     newZone: 3,
-    callout: "Retention up. Masking down. Output sustained.",
+    callout: "63% wellbeing improvement reported by neuroinclusive employers.",
     calloutZone: 3,
   },
   {
@@ -72,7 +72,7 @@ const narrativeStages: NarrativeStage[] = [
       "The cost starts showing up in your data here. Sickness absence rises. Engagement scores drop. Your best people go quiet. Neurodivergent employees are twice as likely to reach burnout. The reason is not their condition. It is an environment that keeps demanding more than it gives back. The strain is real. It stays invisible until it is not.",
     activeZones: [0, 1, 2, 3, 4],
     newZone: 4,
-    callout: "Absence rising. Cost building silently.",
+    callout: "39% plan to leave within 12 months if not included.",
     calloutZone: 4,
   },
   {
@@ -81,7 +81,7 @@ const narrativeStages: NarrativeStage[] = [
       "Burnout is not a personal failure. It is the predictable end point of a system that did not adapt. The cost to UK employers averages £2,646 per person per year in lost productivity and absence. Neurodiversity related employment tribunals have risen 164% in four years. By the time you are managing burnout, you have already lost.",
     activeZones: [0, 1, 2, 3, 4, 5],
     newZone: 5,
-    callout: "£2,646 per person. Tribunals up 164%.",
+    callout: "Neurodivergent employees twice as likely to burn out. Tribunals up 164% in 4 years.",
     calloutZone: 5,
   },
   {
@@ -90,8 +90,8 @@ const narrativeStages: NarrativeStage[] = [
       "The organisations that get this right do not just reduce risk. They retain people others lose. They unlock talent others cannot see. They build teams that think differently, solve problems faster, and stay longer. That is what we help you build.",
     activeZones: [0, 1, 2, 3, 4, 5],
     newZone: null,
-    callout: "This is what we help you build.",
-    calloutZone: 3, // peak zone
+    callout: "Teams with neurodivergent professionals up to 30% more productive.",
+    calloutZone: 3,
   },
 ];
 
