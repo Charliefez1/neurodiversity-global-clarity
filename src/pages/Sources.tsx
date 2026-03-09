@@ -3,9 +3,22 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SourceCard from "@/components/SourceCard";
 
-import { Database, BookOpen, Scale, Microscope, Building2 } from "lucide-react";
+import { Database, BookOpen, Scale, Microscope, Building2, Baby } from "lucide-react";
 
 const sources = [
+  {
+    category: "Children & Young People",
+    items: [
+      { title: "NHS Digital: Mental Health of Children and Young People", domain: "digital.nhs.uk", url: "https://digital.nhs.uk/data-and-information/publications/statistical/mental-health-of-children-and-young-people-in-england", description: "National survey data on the prevalence of mental health conditions in children and young people in England." },
+      { title: "National Autistic Society: Autism and Mental Health", domain: "autism.org.uk", url: "https://www.autism.org.uk/advice-and-guidance/topics/mental-health", description: "Evidence and guidance on the mental health outcomes of autistic children and adults, including suicide risk data." },
+      { title: "UCL: Masking and Camouflaging in Autism", domain: "ucl.ac.uk", url: "https://www.ucl.ac.uk/pals/research/clinical-educational-and-health-psychology", description: "Research on the costs of masking in autistic children and the association with mental health difficulties." },
+      { title: "Children's Commissioner: Waiting Lists and SEND", domain: "childrenscommissioner.gov.uk", url: "https://www.childrenscommissioner.gov.uk/", description: "Reports on children waiting years for assessments, school nurses, and SEND support across England." },
+      { title: "Contact: Counting the Costs (Parent Carer Research)", domain: "contact.org.uk", url: "https://contact.org.uk/about-us/research/", description: "Large-scale research on the financial, emotional, and health impact on parents raising disabled and neurodivergent children." },
+      { title: "UK Government: Keeping Children Safe in Education", domain: "gov.uk", url: "https://www.gov.uk/government/publications/keeping-children-safe-in-education--2", description: "Statutory safeguarding guidance identifying neurodivergent children as at heightened risk of criminal exploitation and grooming." },
+      { title: "Youth Justice Board: SEN in the Justice System", domain: "gov.uk", url: "https://www.gov.uk/government/organisations/youth-justice-board-for-england-and-wales", description: "Data showing eighty percent of children cautioned or sentenced have special educational needs." },
+      { title: "LGSCO: SEND Tribunal Appeals Data", domain: "lgo.org.uk", url: "https://www.lgo.org.uk/", description: "Data on local authority SEND tribunal appeal outcomes, including the ninety-nine percent loss rate at full hearing." },
+    ],
+  },
   {
     category: "Research",
     items: [
@@ -42,6 +55,7 @@ const sources = [
 ];
 
 const categoryIcons: Record<string, typeof Database> = {
+  "Children & Young People": Baby,
   Research: Microscope,
   "Legislation and Policy": Scale,
   Organisations: Building2,
