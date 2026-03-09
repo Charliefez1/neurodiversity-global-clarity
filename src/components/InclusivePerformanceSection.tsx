@@ -82,7 +82,7 @@ const SIGMA = 110;
 const AMPLITUDE = 260;
 const BASE_Y = H - 20;
 const LABEL_NAVY = "#1B2B6B";
-const LABEL_Y_OFFSET = 50; // how far above curve top the label sits
+const FIXED_LABEL_Y = -30; // all labels at the same fixed Y coordinate above chart
 
 function gauss(x: number) {
   return AMPLITUDE * Math.exp(-0.5 * ((x - PEAK) / SIGMA) ** 2);
