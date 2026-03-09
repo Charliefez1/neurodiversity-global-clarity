@@ -7,26 +7,29 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
+      { label: t("nav.whatWeDo"), href: "/what-we-do" },
       { label: t("nav.workshops"), href: "/workshops" },
+      { label: t("nav.industries"), href: "/industries" },
       { label: "Neurodiversity Training", href: "/neurodiversity-training" },
       { label: "Neurodiversity Consultancy", href: "/neurodiversity-consultancy" },
-      { label: t("nav.whatWeDo"), href: "/what-we-do" },
-      { label: t("nav.whoWeWorkWith"), href: "/who-we-work-with" },
-      { label: t("nav.industries"), href: "/industries" },
+      { label: "For Employers", href: "/for-employers" },
+      { label: "For Public Sector", href: "/for-public-sector" },
+      { label: "For Parents", href: "/for-parents" },
+    ],
+    company: [
+      { label: t("nav.about"), href: "/about" },
+      { label: "Team", href: "/about/team" },
       { label: "Blog", href: "/blog" },
       { label: "Community Voices", href: "/community-questions" },
       { label: "Data and Sources", href: "/sources" },
       { label: "Feedback", href: "/feedback" },
-    ],
-    company: [
-      { label: t("nav.about"), href: "/#values" },
-      { label: t("nav.evidence"), href: "/#evidence" },
       { label: t("nav.contact"), href: "/#contact" },
     ],
     legal: [
-      { label: t("footer.privacyPolicy"), href: "#" },
-      { label: t("footer.accessibilityStatement"), href: "#" },
-      { label: t("footer.termsOfService"), href: "#" },
+      { label: t("footer.privacyPolicy"), href: "/privacy-policy" },
+      { label: t("footer.accessibilityStatement"), href: "/accessibility-statement" },
+      { label: t("footer.termsOfService"), href: "/terms-of-service" },
+      { label: t("footer.cookiePolicy"), href: "/cookie-policy" },
     ],
   };
 
@@ -81,9 +84,9 @@ const Footer = () => {
             <ul className="space-y-2.5">
               {footerLinks.legal.map((l) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-xs text-primary-foreground/70 hover:text-primary-foreground transition-colors">
+                  <Link to={l.href} className="text-xs text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

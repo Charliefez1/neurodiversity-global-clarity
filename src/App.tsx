@@ -8,8 +8,13 @@ import { PageSectionsProvider } from "@/contexts/PageSectionsContext";
 import { PortalAuthProvider } from "@/contexts/PortalAuthContext";
 import useLanguageDirection from "@/hooks/useLanguageDirection";
 import Index from "./pages/Index";
-import WhoWeWorkWith from "./pages/WhoWeWorkWith";
 import WhatWeDo from "./pages/WhatWeDo";
+import About from "./pages/About";
+import AboutTeam from "./pages/AboutTeam";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import AccessibilityStatement from "./pages/AccessibilityStatement";
+import CookiePolicy from "./pages/CookiePolicy";
 import Workshops from "./pages/Workshops";
 import IndustryTemplate from "./pages/IndustryTemplate";
 import Industries from "./pages/Industries";
@@ -31,7 +36,7 @@ import CommunityQuestions from "./pages/CommunityQuestions";
 import Sources from "./pages/Sources";
 import CaseStudies from "./pages/CaseStudies";
 import Feedback from "./pages/Feedback";
-import Parents from "./pages/Parents";
+
 import ForEmployers from "./pages/ForEmployers";
 import ForPublicSector from "./pages/ForPublicSector";
 import ForParents from "./pages/ForParents";
@@ -80,8 +85,13 @@ const AppContent = () => {
         <ListenModePlayer />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/about/team" element={<AboutTeam />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/accessibility-statement" element={<AccessibilityStatement />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/workshops" element={<Workshops />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/industries/financial-services" element={<IndustryTemplate />} />
@@ -102,7 +112,7 @@ const AppContent = () => {
           <Route path="/sources" element={<Sources />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/feedback" element={<Feedback />} />
-          <Route path="/parents" element={<Parents />} />
+          
           <Route path="/for-employers" element={<ForEmployers />} />
           <Route path="/for-public-sector" element={<ForPublicSector />} />
           <Route path="/for-parents" element={<ForParents />} />

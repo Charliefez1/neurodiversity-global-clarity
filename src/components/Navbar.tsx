@@ -12,19 +12,18 @@ interface NavItem {
 
 const navLinks: NavItem[] = [
   { labelKey: "nav.home", href: "/" },
-  { labelKey: "nav.whoWeWorkWith", href: "/who-we-work-with" },
   { labelKey: "nav.whatWeDo", href: "/what-we-do" },
   { labelKey: "nav.workshops", href: "/workshops" },
-  { labelKey: "nav.parents", href: "/parents" },
+  { labelKey: "nav.industries", href: "/industries" },
+  { labelKey: "nav.parents", href: "/for-parents" },
   {
     labelKey: "nav.about",
-    href: "/#values",
+    href: "/about",
     children: [
+      { labelKey: "nav.aboutUs", href: "/about" },
+      { labelKey: "nav.team", href: "/about/team" },
       { labelKey: "nav.training", href: "/neurodiversity-training" },
       { labelKey: "nav.consultancy", href: "/neurodiversity-consultancy" },
-      { labelKey: "nav.industries", href: "/industries" },
-      { labelKey: "nav.evidence", href: "/#evidence" },
-      { labelKey: "nav.knowledgeBase", href: "/knowledge-base" },
       { labelKey: "nav.blog", href: "/blog" },
       { labelKey: "nav.community", href: "/community-questions" },
       { labelKey: "nav.sources", href: "/sources" },
