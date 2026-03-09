@@ -75,22 +75,19 @@ const stages: Stage[] = [
 
 /* ── Bell‑curve geometry ───────────────────────────────────── */
 
-// We split the bell curve into 6 visible zones (stage 7 = "all lit").
-// Each zone is a slice of x-range mapped onto a Gaussian.
-// x from 0→600, peak at 300, σ ≈ 110.
-
 const W = 600;
 const H = 300;
 const PEAK = 300;
 const SIGMA = 110;
 const AMPLITUDE = 260;
-const BASE_Y = H - 20; // bottom baseline
+const BASE_Y = H - 20;
+const LABEL_NAVY = "#1B2B6B";
+const LABEL_Y_OFFSET = 50; // how far above curve top the label sits
 
 function gauss(x: number) {
   return AMPLITUDE * Math.exp(-0.5 * ((x - PEAK) / SIGMA) ** 2);
 }
 
-// Zone x-boundaries (6 zones for stages 0-5)
 const zoneEdges = [0, 100, 180, 260, 340, 420, 540, 600];
 
 function buildZonePath(zoneIndex: number): string {
@@ -110,12 +107,18 @@ function zoneMidX(zoneIndex: number) {
   return (zoneEdges[zoneIndex] + zoneEdges[zoneIndex + 1]) / 2;
 }
 
-function zoneMidY(zoneIndex: number) {
-  const mx = zoneMidX(zoneIndex);
-  return BASE_Y - gauss(mx);
+/** Highest point of the curve within this zone */
+function zoneTopY(zoneIndex: number) {
+  const x0 = zoneEdges[zoneIndex];
+  const x1 = zoneEdges[zoneIndex + 1];
+  let minY = BASE_Y;
+  for (let x = x0; x <= x1; x += 2) {
+    const y = BASE_Y - gauss(x);
+    if (y < minY) minY = y;
+  }
+  return minY;
 }
 
-/* Full curve outline for axis reference */
 function fullCurvePath(): string {
   let d = `M 0 ${BASE_Y}`;
   for (let x = 0; x <= W; x += 2) {
@@ -128,19 +131,18 @@ function fullCurvePath(): string {
 /* ── Component ─────────────────────────────────────────────── */
 
 const InclusivePerformanceSection = () => {
-  // -1 = intro (nothing active), 0-6 = stage index
   const [activeStage, setActiveStage] = useState(-1);
 
   const advance = useCallback(() => {
     setActiveStage((prev) => {
-      if (prev >= 6) return -1; // reset
+      if (prev >= 6) return -1;
       return prev + 1;
     });
   }, []);
 
   const isIntro = activeStage === -1;
   const isFinal = activeStage === 6;
-  const showCallout = activeStage >= 2; // visible from stage 3 (index 2) onwards
+  const showCallout = activeStage >= 2;
 
   const currentStage = activeStage >= 0 ? stages[activeStage] : null;
 
@@ -157,13 +159,16 @@ const InclusivePerformanceSection = () => {
 
         {/* ── Chart ──────────────────────────────────────── */}
         <div className="relative w-full">
-          {/* Y-axis label */}
-          <span className="absolute -left-2 top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[11px] text-foreground/50 font-display font-semibold tracking-wide whitespace-nowrap select-none">
+          {/* Y-axis label — rotated, positioned left of chart with gap */}
+          <span
+            className="absolute top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[11px] font-display font-semibold tracking-wide whitespace-nowrap select-none"
+            style={{ left: "-28px", color: LABEL_NAVY, opacity: 0.6 }}
+          >
             Performance Capacity
           </span>
 
           <svg
-            viewBox={`-40 -10 ${W + 60} ${H + 40}`}
+            viewBox={`-50 -60 ${W + 70} ${H + 70}`}
             className="w-full h-auto"
             aria-label="Inclusive Performance bell curve"
             role="img"
@@ -179,6 +184,11 @@ const InclusivePerformanceSection = () => {
             {[0, 1, 2, 3, 4, 5].map((zi) => {
               const isActive = activeStage >= zi;
               const color = isActive ? stages[zi].colorHex : "currentColor";
+              const showLabel = (isActive && activeStage <= 5 && activeStage === zi) || isFinal;
+              const topY = zoneTopY(zi);
+              const midX = zoneMidX(zi);
+              const labelY = topY - LABEL_Y_OFFSET;
+
               return (
                 <g key={zi}>
                   <path
@@ -190,87 +200,58 @@ const InclusivePerformanceSection = () => {
                       transition: "fill 0.4s ease, opacity 0.4s ease",
                     }}
                   />
-                  {/* Zone label */}
-                  {isActive && activeStage <= 5 && activeStage === zi && (
-                    <g
-                      style={{
-                        opacity: 1,
-                        animation: "fadeInLabel 0.3s ease-out",
-                      }}
-                    >
+                  {/* Label above curve with tick line */}
+                  {showLabel && (
+                    <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
+                      {/* Tick line from label down to curve top */}
+                      <line
+                        x1={midX}
+                        y1={topY - 4}
+                        x2={midX}
+                        y2={labelY + 14}
+                        stroke={LABEL_NAVY}
+                        strokeWidth="1"
+                        opacity="0.35"
+                      />
+                      {/* Main label */}
                       <text
-                        x={zoneMidX(zi)}
-                        y={Math.max(zoneMidY(zi) - 18, 16)}
+                        x={midX}
+                        y={labelY}
                         textAnchor="middle"
                         className="font-display font-bold"
-                        fill={stages[zi].colorHex}
-                        fontSize="11"
+                        fill={LABEL_NAVY}
+                        fontSize={isFinal ? "10" : "11"}
                         letterSpacing="0.06em"
                       >
                         {stages[zi].label}
                       </text>
-                      {stages[zi].subLabel && (
+                      {/* Sub-label */}
+                      {stages[zi].subLabel && !isFinal && (
                         <text
-                          x={zoneMidX(zi)}
-                          y={Math.max(zoneMidY(zi) - 5, 30)}
+                          x={midX}
+                          y={labelY + 13}
                           textAnchor="middle"
-                          fill={stages[zi].colorHex}
+                          fill={LABEL_NAVY}
                           fontSize="8"
-                          opacity="0.75"
+                          opacity="0.6"
                         >
                           {stages[zi].subLabel}
                         </text>
                       )}
                     </g>
                   )}
-                  {/* Keep labels visible on final stage */}
-                  {isFinal && (
-                    <g>
-                      <text
-                        x={zoneMidX(zi)}
-                        y={Math.max(zoneMidY(zi) - 18, 16)}
-                        textAnchor="middle"
-                        className="font-display font-bold"
-                        fill={stages[zi].colorHex}
-                        fontSize="10"
-                        letterSpacing="0.06em"
-                      >
-                        {stages[zi].label}
-                      </text>
-                    </g>
-                  )}
                 </g>
               );
             })}
 
-            {/* Peak arrow on final stage */}
-            {isFinal && (
-              <g style={{ animation: "fadeInLabel 0.4s ease-out" }}>
-                <line
-                  x1={PEAK}
-                  y1={BASE_Y - AMPLITUDE - 8}
-                  x2={PEAK}
-                  y2={BASE_Y - AMPLITUDE + 20}
-                  stroke="#22c55e"
-                  strokeWidth="2"
-                  markerEnd="url(#arrowhead)"
-                />
-                <defs>
-                  <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="4" refY="3" orient="auto">
-                    <polygon points="0 0, 8 3, 0 6" fill="#22c55e" />
-                  </marker>
-                </defs>
-              </g>
-            )}
-
-            {/* X-axis label */}
+            {/* X-axis label — centred, with 24px gap below baseline */}
             <text
               x={W / 2}
-              y={BASE_Y + 30}
+              y={BASE_Y + 40}
               textAnchor="middle"
               className="font-display"
-              fill="currentColor"
-              opacity="0.4"
+              fill={LABEL_NAVY}
+              opacity="0.45"
               fontSize="11"
             >
               Environmental Demand and Psychological Safety
