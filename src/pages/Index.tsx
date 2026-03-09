@@ -45,6 +45,7 @@ const Index = () => {
       <Navbar />
       <NewsHeadlines />
       <HeroSection />
+      <FloatingContactButton />
       <ServicesSection />
       <div
         className="relative bg-cover bg-top bg-no-repeat"
