@@ -5,15 +5,15 @@ import {
 } from "lucide-react";
 
 const sections = [
-  { id: "services", label: "What we deliver", icon: Briefcase },
-  { id: "problem", label: "The challenge", icon: AlertTriangle },
-  { id: "impact", label: "Impact & outcomes", icon: TrendingUp },
-  { id: "evidence", label: "Evidence base", icon: Award },
-  { id: "neuro-framework", label: "The framework", icon: Brain },
-  { id: "inclusive-performance", label: "The model", icon: BarChart3 },
-  { id: "values", label: "Accessibility", icon: Heart },
-  { id: "resources", label: "Resources", icon: BookOpen },
-  { id: "contact", label: "Get in touch", icon: HelpCircle },
+  { id: "services", label: "What we deliver", icon: Briefcase, accent: "border-blue-500/40 hover:bg-blue-500/5" },
+  { id: "problem", label: "The challenge", icon: AlertTriangle, accent: "border-red-500/40 hover:bg-red-500/5" },
+  { id: "impact", label: "Impact & outcomes", icon: TrendingUp, accent: "border-green-500/40 hover:bg-green-500/5" },
+  { id: "evidence", label: "Evidence base", icon: Award, accent: "border-purple-500/40 hover:bg-purple-500/5" },
+  { id: "neuro-framework", label: "The framework", icon: Brain, accent: "border-amber-500/40 hover:bg-amber-500/5" },
+  { id: "inclusive-performance", label: "The model", icon: BarChart3, accent: "border-blue-500/40 hover:bg-blue-500/5" },
+  { id: "values", label: "Accessibility", icon: Heart, accent: "border-red-500/40 hover:bg-red-500/5" },
+  { id: "resources", label: "Resources", icon: BookOpen, accent: "border-green-500/40 hover:bg-green-500/5" },
+  { id: "contact", label: "Get in touch", icon: HelpCircle, accent: "border-purple-500/40 hover:bg-purple-500/5" },
 ];
 
 const PageContents = () => {
