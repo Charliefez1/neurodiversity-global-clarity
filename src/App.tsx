@@ -85,8 +85,13 @@ const AppContent = () => {
         <ListenModePlayer />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/who-we-work-with" element={<WhoWeWorkWith />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/about/team" element={<AboutTeam />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/accessibility-statement" element={<AccessibilityStatement />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/workshops" element={<Workshops />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/industries/financial-services" element={<IndustryTemplate />} />
