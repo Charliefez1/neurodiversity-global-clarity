@@ -3,9 +3,61 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import SourceCard from "@/components/SourceCard";
 
-import { Database, BookOpen, Scale, Microscope, Building2, Baby } from "lucide-react";
+import { Database, BookOpen, Scale, Microscope, Building2, Baby, Briefcase, FileText, Stethoscope, Globe, Wrench } from "lucide-react";
 
 const sources = [
+  {
+    category: "Core Evidence & Research Reports",
+    items: [
+      { title: "Neurodiversity at Work 2024 (NiB & Birkbeck)", domain: "neurodiversityinbusiness.org", url: "https://neurodiversityinbusiness.org/", description: "Large UK sample with rich data on strengths, wellbeing, co-occurrence, and employer practices." },
+      { title: "Neurodiversity at Work 2023 (NiB)", domain: "neurodiversityinbusiness.org", url: "https://neurodiversityinbusiness.org/", description: "Benchmark survey of 990 neurodivergent workers and employers on workplace experience." },
+      { title: "IES: Neurodiversity, Jobsearch and Work (2024)", domain: "employment-studies.co.uk", url: "https://www.employment-studies.co.uk/", description: "Evidence review on barriers, good practice, and employment programmes for neurodivergent people." },
+      { title: "Alludo: Neurodiversity at Work Global Survey", domain: "alludo.com", url: "https://www.alludo.com/", description: "International data on strengths and challenges as experienced by neurodivergent employees." },
+    ],
+  },
+  {
+    category: "UK Guidance: Employers, HR & Policy",
+    items: [
+      { title: "ACAS: Making Your Organisation Neuroinclusive", domain: "acas.org.uk", url: "https://www.acas.org.uk/neurodiversity", description: "Practical UK guidance on recruitment, training, policies, and culture for neuroinclusion." },
+      { title: "ACAS: Adjustments for Neurodiversity", domain: "acas.org.uk", url: "https://www.acas.org.uk/reasonable-adjustments", description: "Examples of reasonable adjustments. Clarifies that diagnosis is not always required." },
+      { title: "Withers: ACAS Advice on Employing Neurodiverse Staff", domain: "withersworldwide.com", url: "https://www.withersworldwide.com/", description: "Overview of ACAS guidance with Equality Act framing and benefits of inclusion." },
+      { title: "Menzies Law: ACAS Guidance Analysis", domain: "menzies.co.uk", url: "https://www.menzies.co.uk/", description: "Analysis of ACAS neurodiversity guidance, legal risk reduction, and key inclusion benefits." },
+    ],
+  },
+  {
+    category: "CIPD & Professional HR Bodies",
+    items: [
+      { title: "CIPD: Neuroinclusion at Work Report 2024", domain: "cipd.org", url: "https://www.cipd.org/uk/knowledge/reports/neurodiversity-work/", description: "Survey of employers covering culture, awareness, and recommended principles for neuroinclusion." },
+      { title: "Morgan LaRoche: CIPD Neuroinclusion Summary", domain: "morganlaroche.com", url: "https://www.morganlaroche.com/", description: "Summary of CIPD's guide covering definitions, language, culture, recruitment, and manager capability." },
+      { title: "CEFM: CIPD Seven Key Principles", domain: "cefm.co.uk", url: "https://www.cefm.co.uk/", description: "Clear outline of CIPD's seven key principles and what a neuroinclusive organisation looks like." },
+      { title: "UK Employment Hub: From Awareness to Action", domain: "ukemploymenthub.com", url: "https://www.ukemploymenthub.com/", description: "Practical application of CIPD principles, especially flexible working and culture." },
+    ],
+  },
+  {
+    category: "Sector-Specific UK Examples",
+    items: [
+      { title: "NHS Employers: Embracing Neurodiversity", domain: "nhsemployers.org", url: "https://www.nhsemployers.org/", description: "Health passports, ongoing conversations, recruitment, and inclusive working practices in the NHS." },
+      { title: "GMB Union: Thinking Differently at Work Toolkit", domain: "gmb.org.uk", url: "https://www.gmb.org.uk/", description: "Union-oriented toolkit with model policy, recruitment, and adjustment advice." },
+    ],
+  },
+  {
+    category: "International & Business Case",
+    items: [
+      { title: "Harvard Business Review: Neurodiversity as a Competitive Advantage", domain: "hbr.org", url: "https://hbr.org/2017/05/neurodiversity-as-a-competitive-advantage", description: "Case studies from SAP, HPE, and Microsoft. The landmark business case for neurodiversity programmes." },
+      { title: "ILO Global Business and Disability Network", domain: "ilo.org", url: "https://www.ilo.org/global/topics/disability-and-work/lang--en/index.htm", description: "Global policy framing and reasonable adjustments for neurominorities." },
+      { title: "RGA: Beyond Accommodation", domain: "rgare.com", url: "https://www.rgare.com/", description: "Advancing neurodiversity as a competitive advantage in insurance and financial services." },
+      { title: "Deloitte: The Value of Diversity", domain: "deloitte.com", url: "https://www2.deloitte.com/", description: "Research on how diversity of thought drives innovation and business performance." },
+      { title: "McKinsey: Diversity Wins", domain: "mckinsey.com", url: "https://www.mckinsey.com/featured-insights/diversity-and-inclusion", description: "Evidence that diverse teams outperform their peers across key business metrics." },
+    ],
+  },
+  {
+    category: "Practical Implementation & Adjustments",
+    items: [
+      { title: "ACAS: Understanding Neurodiversity at Work", domain: "acas.org.uk", url: "https://www.acas.org.uk/neurodiversity", description: "Disability status under the Equality Act, managing performance, conduct, and capability." },
+      { title: "Backhouse Jones: Employer Briefing on Neurodiversity", domain: "backhouse-jones.co.uk", url: "https://www.backhouse-jones.co.uk/", description: "Plain-English employer briefing on legal duties and inclusive practice." },
+      { title: "Alludo: Strengths, Challenges, and What Needs to Change", domain: "alludo.com", url: "https://www.alludo.com/", description: "What needs to change in workplace practice based on neurodivergent employee feedback." },
+    ],
+  },
   {
     category: "Children & Young People",
     items: [
@@ -17,15 +69,6 @@ const sources = [
       { title: "UK Government: Keeping Children Safe in Education", domain: "gov.uk", url: "https://www.gov.uk/government/publications/keeping-children-safe-in-education--2", description: "Statutory safeguarding guidance identifying neurodivergent children as at heightened risk of criminal exploitation and grooming." },
       { title: "Youth Justice Board: SEN in the Justice System", domain: "gov.uk", url: "https://www.gov.uk/government/organisations/youth-justice-board-for-england-and-wales", description: "Data showing eighty percent of children cautioned or sentenced have special educational needs." },
       { title: "LGSCO: SEND Tribunal Appeals Data", domain: "lgo.org.uk", url: "https://www.lgo.org.uk/", description: "Data on local authority SEND tribunal appeal outcomes, including the ninety-nine percent loss rate at full hearing." },
-    ],
-  },
-  {
-    category: "Research",
-    items: [
-      { title: "CIPD: Neurodiversity at Work", domain: "cipd.org", url: "https://www.cipd.org/uk/knowledge/reports/neurodiversity-work/", description: "Guide to creating neuroinclusive workplaces, covering recruitment, management, and reasonable adjustments." },
-      { title: "Birkbeck: Centre for Neurodiversity Research", domain: "bbk.ac.uk", url: "https://www.bbk.ac.uk/research/centres/neurodiversity", description: "Academic research centre focused on neurodiversity across the lifespan." },
-      { title: "ACAS: Neurodiversity in the Workplace", domain: "acas.org.uk", url: "https://www.acas.org.uk/neurodiversity", description: "Practical guidance for employers on supporting neurodivergent staff." },
-      { title: "Harvard Business Review: Neurodiversity as a Competitive Advantage", domain: "hbr.org", url: "https://hbr.org/2017/05/neurodiversity-as-a-competitive-advantage", description: "Landmark article on how organisations benefit from neurodivergent talent." },
     ],
   },
   {
@@ -45,21 +88,18 @@ const sources = [
       { title: "Dyspraxia Foundation", domain: "dyspraxiafoundation.org.uk", url: "https://dyspraxiafoundation.org.uk/", description: "Charity raising awareness of dyspraxia/DCD and supporting affected individuals." },
     ],
   },
-  {
-    category: "Business Case",
-    items: [
-      { title: "Deloitte: The Value of Diversity", domain: "deloitte.com", url: "https://www2.deloitte.com/", description: "Research on how diversity of thought drives innovation and business performance." },
-      { title: "McKinsey: Diversity Wins", domain: "mckinsey.com", url: "https://www.mckinsey.com/featured-insights/diversity-and-inclusion", description: "Evidence that diverse teams outperform their peers across key business metrics." },
-    ],
-  },
 ];
 
 const categoryIcons: Record<string, typeof Database> = {
+  "Core Evidence & Research Reports": Microscope,
+  "UK Guidance: Employers, HR & Policy": FileText,
+  "CIPD & Professional HR Bodies": Briefcase,
+  "Sector-Specific UK Examples": Stethoscope,
+  "International & Business Case": Globe,
+  "Practical Implementation & Adjustments": Wrench,
   "Children & Young People": Baby,
-  Research: Microscope,
   "Legislation and Policy": Scale,
   Organisations: Building2,
-  "Business Case": BookOpen,
 };
 
 const Sources = () => {
