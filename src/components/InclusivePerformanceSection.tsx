@@ -54,7 +54,7 @@ const narrativeStages: NarrativeStage[] = [
       "Most HR teams operate here. One person asks. One adjustment is made. The system stays the same. It helps that individual. It does not help the next person. The entire burden falls on the person who already has the least capacity to carry it. This is not inclusion. It is case management.",
     activeZones: [0, 1, 2],
     newZone: 2,
-    callout: "Helps one person. System unchanged.",
+    callout: "One person helped. Everyone else unchanged.",
     calloutZone: 2,
   },
   {
