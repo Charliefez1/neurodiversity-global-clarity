@@ -207,30 +207,43 @@ const InclusivePerformanceSection = () => {
                   />
                   {showLabel && (
                     <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
+                      {/* Tick line — stops at curve surface */}
                       <line
                         x1={midX}
                         y1={topY - 2}
                         x2={midX}
-                        y2={FIXED_LABEL_Y + 14}
-                        stroke="#999"
+                        y2={FIXED_LABEL_Y + 22}
+                        stroke="#bbb"
                         strokeWidth="1"
-                        opacity="0.4"
+                        opacity="0.5"
                       />
+                      {/* Pill background */}
+                      <rect
+                        x={midX - (zone.label.length * 3.5 + 12)}
+                        y={FIXED_LABEL_Y - 10}
+                        width={zone.label.length * 7 + 24}
+                        height={zone.subLabel ? 30 : 20}
+                        rx="4"
+                        fill="white"
+                        stroke="#ddd"
+                        strokeWidth="0.5"
+                      />
+                      {/* Label text */}
                       <text
                         x={midX}
-                        y={FIXED_LABEL_Y}
+                        y={FIXED_LABEL_Y + 4}
                         textAnchor="middle"
                         className="font-display font-bold"
                         fill={LABEL_NAVY}
-                        fontSize={isFinal ? "10" : "11"}
+                        fontSize="10"
                         letterSpacing="0.06em"
                       >
                         {zone.label}
                       </text>
-                      {zone.subLabel && !isFinal && (
+                      {zone.subLabel && (
                         <text
                           x={midX}
-                          y={FIXED_LABEL_Y + 13}
+                          y={FIXED_LABEL_Y + 16}
                           textAnchor="middle"
                           fill={LABEL_NAVY}
                           fontSize="8"
