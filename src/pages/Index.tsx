@@ -21,7 +21,7 @@ import JsonLd, { organisationSchema } from "@/components/JsonLd";
 import NewsHeadlines from "@/components/NewsHeadlines";
 import AskQuestionCompact from "@/components/AskQuestionCompact";
 import { RegisterSections } from "@/contexts/PageSectionsContext";
-import { AlertTriangle, Settings, TrendingUp, Award, Heart, Phone, Sparkles, BookOpen } from "lucide-react";
+import { AlertTriangle, Settings, TrendingUp, Award, Heart, Phone, Sparkles, BookOpen, ArrowRight } from "lucide-react";
 
 const indexSections = [
   { id: "problem", label: "The Challenge", icon: AlertTriangle },
