@@ -32,26 +32,6 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground border-t border-primary-foreground/10">
-      {/* Contact form section */}
-      <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 pb-12 border-b border-primary-foreground/10">
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-10 items-start">
-          <div>
-            <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
-              Get in touch
-            </p>
-            <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-primary-foreground mb-3">
-              Start a conversation
-            </h2>
-            <p className="text-sm text-primary-foreground/60 leading-relaxed max-w-[44ch]">
-              Whether you're an employer, school, or family, we'd love to hear from you. No obligation, no sales pressure.
-            </p>
-          </div>
-          <div className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-6">
-            <ContactForm pageSource="footer" variant="compact" dark />
-          </div>
-        </div>
-      </div>
-
       <div className="mx-auto max-w-wide px-6 lg:px-10 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}

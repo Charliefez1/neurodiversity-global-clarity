@@ -8,7 +8,7 @@ const FinalCTA = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           <div>
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
-              Contact us
+              Get in touch
             </p>
             <h2 id="cta-heading" className="font-display font-bold text-lg md:text-xl leading-tight">
               Start a conversation
