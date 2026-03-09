@@ -10,37 +10,46 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { breadcrumbSchema, serviceSchema } from "@/components/JsonLd";
+import PageCTA from "@/components/templates/PageCTA";
+import PullQuote from "@/components/blocks/PullQuote";
 import { NEURO_COLOURS } from "@/data/neuroColours";
+import emergencyImg from "@/assets/industries/emergency-services.png";
+import diverseImg from "@/assets/industries/diverse-workforce.png";
+import nhsImg from "@/assets/industries/nhs-team.png";
+import frontlineImg from "@/assets/industries/frontline-workers.png";
 
-/* ─── All sectors — no hierarchy ─── */
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({
+    opacity: 1, y: 0,
+    transition: { delay: i * 0.08, duration: 0.5, ease: "easeOut" as const },
+  }),
+};
 
 interface Sector {
   name: string;
   tagline: string;
   icon: React.ElementType;
   href?: string;
-  color: string;
 }
 
 const sectors: Sector[] = [
-  { name: "Healthcare & NHS", tagline: "Clinical teams, burnout, disclosure, masking in high-pressure settings.", icon: Heart, href: "/industries/healthcare-nhs", color: "text-rose-500" },
-  { name: "Education", tagline: "Universities, academic staff, student services, and governance.", icon: GraduationCap, href: "/industries/education", color: "text-amber-500" },
-  { name: "Public Sector & Government", tagline: "Central and local government, regulators, and policy environments.", icon: Building2, href: "/industries/public-sector", color: "text-sky-500" },
-  { name: "Technology & Digital", tagline: "Engineering teams, product orgs, and high cognitive demand roles.", icon: Cpu, href: "/industries/technology", color: "text-violet-500" },
-  { name: "Financial & Professional Services", tagline: "High-regulation, high-pressure, risk-focused environments.", icon: Landmark, href: "/industries/financial-services", color: "text-emerald-500" },
-  { name: "Engineering & Infrastructure", tagline: "Safety-critical roles, structured systems, and frontline teams.", icon: Factory, color: "text-orange-500" },
-  { name: "Corporate & Enterprise", tagline: "Cross-functional leadership, HR, and organisational transformation.", icon: BarChart3, color: "text-indigo-500" },
-  { name: "Charity & Third Sector", tagline: "Non-profits, social enterprises, and mission-driven organisations.", icon: HandHeart, color: "text-pink-500" },
-  { name: "Legal", tagline: "Law firms, regulatory bodies, and high-detail analytical roles.", icon: Gavel, color: "text-teal-500" },
-  { name: "Emergency Services", tagline: "Fire, police, ambulance. High-intensity, structured environments.", icon: Flame, color: "text-red-500" },
-  { name: "Rail & Transport", tagline: "Operators, control rooms, frontline and safety-critical roles.", icon: Train, color: "text-cyan-500" },
-  { name: "Sales & Commercial", tagline: "Performance pressure, emotional regulation, rejection sensitivity.", icon: ShoppingBag, color: "text-lime-500" },
-  { name: "Call & Contact Centres", tagline: "Sensory load, scripted communication, high attrition.", icon: Headphones, color: "text-fuchsia-500" },
-  { name: "Defence & National Infrastructure", tagline: "Security-conscious, structured leadership and governance.", icon: Shield, color: "text-slate-400" },
-  { name: "Retail & Hospitality", tagline: "Customer-facing roles, shift patterns, and sensory environments.", icon: Scale, color: "text-yellow-500" },
+  { name: "Healthcare & NHS", tagline: "Clinical teams, burnout, disclosure, masking in high-pressure settings.", icon: Heart, href: "/industries/healthcare-nhs" },
+  { name: "Education", tagline: "Universities, academic staff, student services, and governance.", icon: GraduationCap, href: "/industries/education" },
+  { name: "Public Sector & Government", tagline: "Central and local government, regulators, and policy environments.", icon: Building2, href: "/industries/public-sector" },
+  { name: "Technology & Digital", tagline: "Engineering teams, product orgs, and high cognitive demand roles.", icon: Cpu, href: "/industries/technology" },
+  { name: "Financial & Professional Services", tagline: "High-regulation, high-pressure, risk-focused environments.", icon: Landmark, href: "/industries/financial-services" },
+  { name: "Engineering & Infrastructure", tagline: "Safety-critical roles, structured systems, and frontline teams.", icon: Factory },
+  { name: "Corporate & Enterprise", tagline: "Cross-functional leadership, HR, and organisational transformation.", icon: BarChart3 },
+  { name: "Charity & Third Sector", tagline: "Non-profits, social enterprises, and mission-driven organisations.", icon: HandHeart },
+  { name: "Legal", tagline: "Law firms, regulatory bodies, and high-detail analytical roles.", icon: Gavel },
+  { name: "Emergency Services", tagline: "Fire, police, ambulance. High-intensity, structured environments.", icon: Flame },
+  { name: "Rail & Transport", tagline: "Operators, control rooms, frontline and safety-critical roles.", icon: Train },
+  { name: "Sales & Commercial", tagline: "Performance pressure, emotional regulation, rejection sensitivity.", icon: ShoppingBag },
+  { name: "Call & Contact Centres", tagline: "Sensory load, scripted communication, high attrition.", icon: Headphones },
+  { name: "Defence & National Infrastructure", tagline: "Security-conscious, structured leadership and governance.", icon: Shield },
+  { name: "Retail & Hospitality", tagline: "Customer-facing roles, shift patterns, and sensory environments.", icon: Scale },
 ];
-
-/* ─── Page ─── */
 
 const Industries = () => {
   return (
@@ -63,136 +72,165 @@ const Industries = () => {
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Industries" }]} />
 
       <main>
-        {/* ── Hero ── */}
-        <section className="relative bg-primary text-primary-foreground overflow-hidden">
-          <div className="absolute inset-0 opacity-[0.03]" style={{
-            backgroundImage: "linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)",
-            backgroundSize: "60px 60px"
-          }} />
+        {/* ═══════════ HERO — image + text split ═══════════ */}
+        <section className="bg-primary py-20 lg:py-28">
+          <div className="mx-auto max-w-wide px-6 lg:px-10">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+              >
+                <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-accent mb-4">
+                  Industry solutions
+                </p>
+                <h1 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl leading-tight text-primary-foreground">
+                  We adapt to your sector.{" "}
+                  <span className="text-accent">Not the other way around.</span>
+                </h1>
+                <p className="mt-5 text-base text-primary-foreground/75 leading-relaxed max-w-[55ch]">
+                  Every industry has its own pressures, language, and systems. We deliver neurodiversity training, coaching, and consultancy shaped around your context. Not a generic programme with your logo on it.
+                </p>
 
-          <div className="relative mx-auto max-w-wide px-6 lg:px-10 py-20 lg:py-28">
-            <div className="max-w-3xl">
-              <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="font-display font-bold text-sm uppercase tracking-[0.2em] text-accent mb-5"
-              >
-                Industry solutions
-              </motion.p>
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="font-display font-bold text-3xl md:text-4xl lg:text-[2.8rem] tracking-tight leading-[1.08]"
-              >
-                We adapt to your sector.
-                <span className="block text-accent mt-1">Not the other way around.</span>
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35 }}
-                className="mt-6 text-base lg:text-lg leading-relaxed opacity-75 max-w-[55ch]"
-              >
-                Every industry has its own pressures, language, and systems. We deliver neurodiversity training, coaching, and consultancy shaped around your context — not a generic programme with your logo on it.
-              </motion.p>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <Link
+                    to="/#contact"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/25 hover:shadow-xl hover:scale-[1.02] transition-all"
+                  >
+                    Book a discovery call <ArrowRight size={16} />
+                  </Link>
+                  <a
+                    href="#sectors"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-primary-foreground/25 text-primary-foreground font-display font-semibold text-sm hover:bg-primary-foreground/10 transition-all"
+                  >
+                    Browse sectors
+                  </a>
+                </div>
+
+                {/* Stats */}
+                <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  {[
+                    { value: "750+", label: "Organisations supported" },
+                    { value: "30", label: "Countries reached" },
+                    { value: "9.7/10", label: "Average session rating" },
+                    { value: "50+", label: "Accredited workshops" },
+                  ].map((stat, i) => (
+                    <motion.div
+                      key={stat.label}
+                      custom={i}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={fadeUp}
+                      className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-3 text-center"
+                    >
+                      <p className="font-display font-bold text-lg text-accent">{stat.value}</p>
+                      <p className="text-xs text-primary-foreground/60 mt-0.5">{stat.label}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="mt-8 flex flex-wrap gap-4"
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+                className="relative"
               >
-                <a
-                  href="mailto:hello@neurodiversityglobal.com"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
-                >
-                  Book a discovery call <ArrowRight size={16} />
-                </a>
-                <a
-                  href="#sectors"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border-2 border-primary-foreground/20 font-display font-bold text-sm hover:bg-primary-foreground/10 transition-all"
-                >
-                  Browse sectors
-                </a>
+                <div className="rounded-2xl overflow-hidden shadow-xl">
+                  <img
+                    src={emergencyImg}
+                    alt="Emergency services professionals representing diverse industries"
+                    className="w-full h-[400px] lg:h-[520px] object-cover object-top"
+                    loading="eager"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -left-4 lg:-left-8 rounded-xl bg-card border border-border shadow-lg p-5 max-w-[220px]">
+                  <p className="font-display font-bold text-2xl text-accent">15</p>
+                  <p className="text-xs text-muted-foreground mt-1 leading-snug">industry sectors with tailored delivery.</p>
+                </div>
               </motion.div>
             </div>
-
-            {/* Stats row */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4"
-            >
-              {[
-                { value: "750+", label: "Organisations supported" },
-                { value: "30", label: "Countries reached" },
-                { value: "9.7/10", label: "Average session rating" },
-                { value: "50+", label: "Accredited workshops" },
-              ].map((stat) => (
-                <div
-                  key={stat.label}
-                  className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-5 text-center"
-                >
-                  <p className="font-display font-extrabold text-xl text-accent">{stat.value}</p>
-                  <p className="text-xs opacity-60 mt-1 font-display">{stat.label}</p>
-                </div>
-              ))}
-            </motion.div>
           </div>
         </section>
 
-        {/* ── Sector Grid — all equal ── */}
-        <section id="sectors" className="bg-background py-20 lg:py-28">
+        {/* ═══════════ IMAGE STRIP — diverse workforce ═══════════ */}
+        <section className="relative">
+          <img
+            src={diverseImg}
+            alt="Diverse workforce across industries"
+            className="w-full h-[280px] lg:h-[360px] object-cover object-top"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-wide px-6 lg:px-10 pb-8 lg:pb-12">
+            <p className="font-display font-bold text-xl md:text-2xl text-white leading-tight max-w-[44ch]">
+              Neuroinclusion does not stop at the uniform. It sees the person underneath.
+            </p>
+            <p className="text-sm text-white/70 mt-2">Be seen. Be understood. Be valued.</p>
+          </div>
+        </section>
+
+        {/* ═══════════ SECTOR GRID ═══════════ */}
+        <section id="sectors" className="bg-warm-stone py-20 lg:py-28">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
-            <div className="max-w-2xl mb-14">
-              <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Sectors we work across</p>
-              <h2 className="font-display font-bold text-lg md:text-xl leading-tight text-foreground">
-                From the NHS to startups. Government to hospitality.
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="max-w-2xl mb-14"
+            >
+              <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-accent mb-3">Sectors we work across</p>
+              <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground">
+                From the NHS to startups. Government to <span className="text-accent">hospitality</span>.
               </h2>
-              <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-[55ch]">
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-[55ch]">
                 Same rigour. Same lived experience. Completely different delivery for your context. Click through to explore sector-specific challenges and solutions.
               </p>
-            </div>
+            </motion.div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {sectors.map((sector, i) => {
-                const borderColor = NEURO_COLOURS[i % NEURO_COLOURS.length];
+                const colour = NEURO_COLOURS[i % NEURO_COLOURS.length];
                 const card = (
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    custom={i}
+                    initial="hidden"
+                    whileInView="visible"
                     viewport={{ once: true, margin: "-30px" }}
-                    transition={{ delay: i * 0.04, duration: 0.4 }}
-                    className="group relative rounded-xl border border-border border-l-4 bg-card p-6 shadow-sm hover:shadow-lg hover:border-accent/40 transition-all duration-300 h-full flex flex-col"
-                    style={{ borderLeftColor: borderColor }}
+                    variants={fadeUp}
+                    className="group rounded-2xl border border-border bg-card overflow-hidden shadow-sm hover:shadow-lg transition-all h-full flex flex-col"
                   >
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center group-hover:bg-accent/10 transition-colors">
-                        <sector.icon size={20} className={sector.color} />
+                    <div className="h-1" style={{ backgroundColor: colour }} />
+                    <div className="p-6 flex flex-col flex-1">
+                      <div className="flex items-start justify-between mb-4">
+                        <div
+                          className="w-11 h-11 rounded-xl flex items-center justify-center"
+                          style={{ backgroundColor: `${colour}18`, color: colour }}
+                        >
+                          <sector.icon size={20} />
+                        </div>
+                        {sector.href && (
+                          <ArrowRight size={16} className="text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                        )}
                       </div>
-                      {sector.href && (
-                        <ArrowRight size={16} className="text-muted-foreground opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                      <h3 className="font-display font-bold text-sm text-card-foreground group-hover:text-accent transition-colors mb-2">
+                        {sector.name}
+                      </h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                        {sector.tagline}
+                      </p>
+                      {sector.href ? (
+                        <p className="mt-4 text-xs font-display font-bold text-accent flex items-center gap-1">
+                          Explore sector <ArrowRight size={12} />
+                        </p>
+                      ) : (
+                        <p className="mt-4 text-xs text-muted-foreground/60 italic">Sector page coming soon</p>
                       )}
                     </div>
-                    <h3 className="font-display font-bold text-sm text-card-foreground group-hover:text-accent transition-colors mb-2">
-                      {sector.name}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                      {sector.tagline}
-                    </p>
-                    {sector.href && (
-                      <p className="mt-4 text-xs font-display font-bold text-accent flex items-center gap-1 translate-x-0 group-hover:translate-x-1 transition-transform duration-300">
-                        Explore sector <ArrowRight size={12} />
-                      </p>
-                    )}
-                    {!sector.href && (
-                      <p className="mt-4 text-xs text-muted-foreground/60 italic">
-                        Sector page coming soon
-                      </p>
-                    )}
                   </motion.div>
                 );
 
@@ -205,48 +243,104 @@ const Industries = () => {
           </div>
         </section>
 
-        {/* ── Approach strip ── */}
-        <section className="bg-accent text-accent-foreground py-14 lg:py-16">
+        {/* ═══════════ NHS IMAGE + APPROACH ═══════════ */}
+        <section className="bg-primary py-20 lg:py-28">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              {[
-                { icon: Users, title: "Lived experience first", description: "Our team is neurodivergent. We don't teach from textbooks." },
-                { icon: CheckCircle2, title: "Sector-adapted", description: "Same evidence base, completely different delivery for your context." },
-                { icon: BarChart3, title: "Measured outcomes", description: "We track impact, not just attendance. 9.7/10 average rating." },
-              ].map((item) => (
-                <div key={item.title} className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-white/15 flex items-center justify-center mb-4">
-                    <item.icon size={22} />
-                  </div>
-                  <h3 className="font-display font-bold text-sm mb-1.5">{item.title}</h3>
-                  <p className="text-sm opacity-80 leading-relaxed max-w-[30ch]">{item.description}</p>
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="relative"
+              >
+                <div className="rounded-2xl overflow-hidden shadow-xl">
+                  <img
+                    src={nhsImg}
+                    alt="NHS Blood and Transplant team members"
+                    className="w-full h-[400px] lg:h-[480px] object-cover object-top"
+                    loading="lazy"
+                  />
                 </div>
-              ))}
+                <div className="absolute -bottom-6 -right-4 lg:-right-8 rounded-xl bg-card border border-border shadow-lg p-5 max-w-[200px]">
+                  <p className="font-display font-bold text-2xl text-accent">30+</p>
+                  <p className="text-xs text-muted-foreground mt-1 leading-snug">NHS Trusts and healthcare organisations supported.</p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
+              >
+                <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-accent mb-4">
+                  Our approach
+                </p>
+                <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-primary-foreground">
+                  Same evidence base. Completely different{" "}
+                  <span className="text-accent">delivery</span>.
+                </h2>
+                <p className="mt-5 text-base text-primary-foreground/75 leading-relaxed">
+                  We do not deliver a generic programme with your logo on it. Every engagement is shaped around your sector's pressures, language, and reality.
+                </p>
+
+                <div className="mt-8 space-y-4">
+                  {[
+                    { icon: Users, title: "Lived experience first", desc: "Our team is neurodivergent. We do not teach from textbooks." },
+                    { icon: CheckCircle2, title: "Sector-adapted", desc: "Same evidence base. Completely different delivery for your context." },
+                    { icon: BarChart3, title: "Measured outcomes", desc: "We track impact, not just attendance. 9.7/10 average rating." },
+                  ].map((item, i) => (
+                    <motion.div
+                      key={item.title}
+                      custom={i}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={fadeUp}
+                      className="flex gap-4 items-start rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-5"
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-accent/15 flex items-center justify-center shrink-0">
+                        <item.icon size={18} className="text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="font-display font-bold text-sm text-primary-foreground">{item.title}</h3>
+                        <p className="text-sm text-primary-foreground/65 mt-0.5">{item.desc}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
-        {/* ── CTA ── */}
-        <section className="bg-primary text-primary-foreground py-20 lg:py-28">
-          <div className="mx-auto max-w-wide px-6 lg:px-10">
-            <div className="max-w-xl mx-auto text-center">
-              <h2 className="font-display font-bold text-xl md:text-2xl leading-tight">
-                Don't see your sector?
-              </h2>
-              <p className="mt-4 opacity-75 text-base leading-relaxed">
-                We work across every industry. Book a discovery call and we'll show you how our approach adapts to your context.
-              </p>
-              <div className="mt-8">
-                <a
-                  href="mailto:hello@neurodiversityglobal.com"
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
-                >
-                  Book a discovery call <ArrowRight size={16} />
-                </a>
-              </div>
-            </div>
+        <PullQuote
+          quote="We adapt to your sector. Not the other way around."
+          accentIndex={1}
+        />
+
+        {/* ═══════════ FRONTLINE IMAGE ═══════════ */}
+        <section className="relative">
+          <img
+            src={frontlineImg}
+            alt="Frontline workers across sectors"
+            className="w-full h-[280px] lg:h-[360px] object-cover object-top"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 mx-auto max-w-wide px-6 lg:px-10 pb-8 lg:pb-12">
+            <p className="font-display font-bold text-xl md:text-2xl text-white leading-tight max-w-[44ch]">
+              Because neuroinclusion does not stop at uniform. It sees the person underneath.
+            </p>
           </div>
         </section>
+
+        {/* ═══════════ DON'T SEE YOUR SECTOR ═══════════ */}
+        <PageCTA
+          title="Don't see your sector?"
+          description="We work across every industry. Book a discovery call and we will show you how our approach adapts to your context."
+        />
       </main>
       <Footer />
     </>
