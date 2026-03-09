@@ -4,8 +4,9 @@ import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-
+import PageCTA from "@/components/templates/PageCTA";
 import { getBlogPost, getRelatedPosts } from "@/data/blogPosts";
+import { NEURO_COLOURS } from "@/data/neuroColours";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -22,39 +23,25 @@ const BlogPost = () => {
       {/* Hero with image */}
       <section className="bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src={post.image}
-            alt=""
-            className="w-full h-full object-cover opacity-[0.12]"
-          />
+          <img src={post.image} alt="" className="w-full h-full object-cover opacity-[0.12]" />
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/90 to-primary/70" />
         </div>
-        <div className="relative mx-auto max-w-wide px-6 lg:px-10 py-12 lg:py-20">
+        <div className="relative mx-auto max-w-wide px-6 lg:px-10 py-16 lg:py-24">
           <Link to="/blog" className="inline-flex items-center gap-2 text-xs text-primary-foreground/60 hover:text-accent transition-colors mb-6">
             <ArrowLeft size={14} /> Back to all articles
           </Link>
           <div className="flex flex-wrap items-center gap-3 mb-5">
-            <span className="px-3 py-1 rounded-full text-xs font-display font-bold bg-accent/20 text-accent">
-              {post.category}
-            </span>
-            <span className="text-xs text-primary-foreground/60 flex items-center gap-1">
-              <Clock size={12} /> {post.readTime}
-            </span>
-            <span className="text-xs text-primary-foreground/60 flex items-center gap-1">
-              <Calendar size={12} /> {new Date(post.publishDate).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}
-            </span>
+            <span className="px-3 py-1 rounded-full text-xs font-display font-bold bg-accent/20 text-accent">{post.category}</span>
+            <span className="text-xs text-primary-foreground/60 flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
+            <span className="text-xs text-primary-foreground/60 flex items-center gap-1"><Calendar size={12} /> {new Date(post.publishDate).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
           </div>
-          <h1 className="font-display font-bold text-2xl md:text-3xl lg:text-[2.5rem] tracking-tight leading-[1.1] max-w-4xl">
-            {post.title}
-          </h1>
-          <p className="mt-5 text-sm md:text-base leading-relaxed opacity-70 max-w-[62ch]">
-            {post.excerpt}
-          </p>
+          <h1 className="font-display font-bold text-2xl md:text-3xl lg:text-[2.5rem] tracking-tight leading-[1.1] max-w-4xl">{post.title}</h1>
+          <p className="mt-5 text-sm md:text-base leading-relaxed opacity-70 max-w-[62ch]">{post.excerpt}</p>
         </div>
       </section>
 
       {/* Content */}
-      <article className="py-12 lg:py-16 bg-muted">
+      <article className="py-16 lg:py-24 bg-warm-stone">
         <div className="mx-auto max-w-3xl px-6 lg:px-10">
           <div className="prose prose-lg max-w-none
             prose-headings:font-display prose-headings:font-bold prose-headings:tracking-tight
@@ -70,19 +57,13 @@ const BlogPost = () => {
             <ReactMarkdown
               components={{
                 blockquote: ({ children }) => (
-                  <blockquote className="border-l-4 border-accent bg-accent/5 rounded-r-lg px-6 py-5 my-8 not-italic shadow-md">
-                    {children}
-                  </blockquote>
+                  <blockquote className="border-l-4 border-accent bg-accent/5 rounded-r-lg px-6 py-5 my-8 not-italic shadow-md">{children}</blockquote>
                 ),
                 h2: ({ children }) => (
-                  <h2 className="font-display font-bold text-xl md:text-2xl mt-12 mb-5 text-foreground border-b border-border pb-3">
-                    {children}
-                  </h2>
+                  <h2 className="font-display font-bold text-xl md:text-2xl mt-12 mb-5 text-foreground border-b border-border pb-3">{children}</h2>
                 ),
                 h3: ({ children }) => (
-                  <h3 className="font-display font-bold text-base md:text-lg mt-8 mb-3 text-foreground">
-                    {children}
-                  </h3>
+                  <h3 className="font-display font-bold text-base md:text-lg mt-8 mb-3 text-foreground">{children}</h3>
                 ),
                 p: ({ children }) => (
                   <p className="text-muted-foreground text-sm leading-[1.8] mb-5">{children}</p>
@@ -104,42 +85,25 @@ const BlogPost = () => {
         </div>
       </article>
 
-      
-
       {/* Related Posts */}
       {related.length > 0 && (
-        <section className="py-12 lg:py-16 bg-primary">
+        <section className="py-20 lg:py-28 bg-primary">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
-            <h2 className="font-display font-bold text-lg md:text-xl mb-8 text-primary-foreground">
-              Continue reading
-            </h2>
+            <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Keep reading</p>
+            <h2 className="font-display font-bold text-xl md:text-2xl mb-10 text-primary-foreground">Continue reading</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {related.map((rp) => (
-                <Link
-                  key={rp.slug}
-                  to={`/blog/${rp.slug}`}
-                  className="group block rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 shadow-md hover:shadow-xl hover:bg-primary-foreground/10 transition-all duration-300 overflow-hidden"
+              {related.map((rp, i) => (
+                <Link key={rp.slug} to={`/blog/${rp.slug}`}
+                  className="group block rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.06] shadow-md hover:shadow-xl hover:bg-primary-foreground/[0.1] transition-all duration-300 overflow-hidden"
                 >
+                  <div className="h-1" style={{ backgroundColor: NEURO_COLOURS[i % NEURO_COLOURS.length] }} />
                   <div className="aspect-[16/9] overflow-hidden">
-                    <img
-                      src={rp.image}
-                      alt={rp.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
-                      loading="lazy"
-                    />
+                    <img src={rp.image} alt={rp.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" loading="lazy" />
                   </div>
                   <div className="p-5">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="px-2 py-0.5 rounded-full text-xs font-display font-bold bg-accent/20 text-accent">
-                        {rp.category}
-                      </span>
-                    </div>
-                    <h3 className="font-display font-bold text-sm leading-snug text-primary-foreground group-hover:text-accent transition-colors line-clamp-2">
-                      {rp.title}
-                    </h3>
-                    <div className="mt-3 flex items-center gap-1 text-xs text-accent font-display font-bold group-hover:gap-2 transition-all">
-                      Read <ArrowRight size={12} />
-                    </div>
+                    <span className="px-2 py-0.5 rounded-full text-xs font-display font-bold bg-accent/20 text-accent">{rp.category}</span>
+                    <h3 className="mt-3 font-display font-bold text-sm leading-snug text-primary-foreground group-hover:text-accent transition-colors line-clamp-2">{rp.title}</h3>
+                    <div className="mt-3 flex items-center gap-1 text-xs text-accent font-display font-bold group-hover:gap-2 transition-all">Read <ArrowRight size={12} /></div>
                   </div>
                 </Link>
               ))}
@@ -148,6 +112,7 @@ const BlogPost = () => {
         </section>
       )}
 
+      <PageCTA title="Want to explore more?" description="Browse our full blog or get in touch to discuss how we can support your organisation." />
       <Footer />
     </>
   );
