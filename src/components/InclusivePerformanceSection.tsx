@@ -1,75 +1,81 @@
 import { useState, useCallback } from "react";
 import { ArrowRight, RotateCcw } from "lucide-react";
 
-/* ── Stage data ─────────────────────────────────────────────── */
+/* ── Zone data (visual positions on curve, left to right) ──── */
 
-interface Stage {
+interface Zone {
   label: string;
   subLabel?: string;
-  heading: string;
-  description: string;
-  color: string;        // tailwind-safe fill for active
-  colorHex: string;     // raw hex for SVG
+  colorHex: string;
 }
 
-const stages: Stage[] = [
+const zones: Zone[] = [
+  { label: "UNDERLOAD", colorHex: "#ef4444" },
+  { label: "AWARENESS", colorHex: "#f59e0b" },
+  { label: "INDIVIDUAL ADJUSTMENTS", subLabel: "Without system change", colorHex: "#84cc16" },
+  { label: "CULTURE AND FIT", subLabel: "System change for all", colorHex: "#22c55e" },
+  { label: "OVERSTRETCH", colorHex: "#f97316" },
+  { label: "BURNOUT", colorHex: "#ef4444" },
+];
+
+/* ── Narrative stages (click-through order) ────────────────── */
+
+interface NarrativeStage {
+  heading: string;
+  description: string;
+  activeZones: number[]; // which zone indices are lit
+  newZone: number | null; // which zone just activated (for label display)
+}
+
+const narrativeStages: NarrativeStage[] = [
   {
-    label: "UNDERLOAD",
     heading: "Underload",
     description:
-      "Capability is there. The role just does not use it. Strengths go unnoticed. The work is too small for the person. Low demand, low performance, high untapped potential.",
-    color: "text-red-500",
-    colorHex: "#ef4444",
+      "One in five of your workforce is neurodivergent. Many of them are in the wrong role, at the wrong level, doing work that uses a fraction of what they can do. Capability is present. The organisation just cannot see it. That is not a talent shortage. That is a design problem.",
+    activeZones: [0],
+    newZone: 0,
   },
   {
-    label: "AWARENESS",
     heading: "Awareness",
     description:
-      "Understanding begins. People feel seen and heard. Psychological safety starts to build. This is the foundation. Not the destination.",
-    color: "text-amber-500",
-    colorHex: "#f59e0b",
+      "Most organisations stop here. A training day. An awareness week. A policy that sits in a drawer. Awareness without action does not reduce attrition. It does not reduce stress. It does not unlock performance. It just tells people you know the problem exists.",
+    activeZones: [0, 1],
+    newZone: 1,
   },
   {
-    label: "INDIVIDUAL ADJUSTMENTS",
-    subLabel: "Without system change",
     heading: "Individual Adjustments",
     description:
-      "Support improves, but only for the person who asked. The system stays the same. Performance rises briefly but remains fragile. This is not inclusion. It is firefighting.",
-    color: "text-lime-500",
-    colorHex: "#84cc16",
+      "This is where most HR teams operate. One person asks. One adjustment is made. The system stays the same. It helps that individual. It does not help the next person, or the one after. And it puts the entire burden on the person who already has the least capacity to carry it. This is not inclusion. It is case management.",
+    activeZones: [0, 1, 2],
+    newZone: 2,
   },
   {
-    label: "CULTURE AND FIT",
-    subLabel: "System change for all",
-    heading: "Culture and Fit",
-    description:
-      "Fit, safety, clarity, and healthy challenge. Strengths are used. Masking drops. Energy becomes sustainable. This is the neuroinclusive performance zone.",
-    color: "text-green-500",
-    colorHex: "#22c55e",
-  },
-  {
-    label: "OVERSTRETCH",
     heading: "Overstretch",
     description:
-      "The system stops flexing. Demand rises faster than support. High effort hides the growing strain. Performance looks steady. The cost is invisible until it is not.",
-    color: "text-amber-500",
-    colorHex: "#f97316",
+      "This is where the cost starts showing up in your data. Sickness absence rises. Engagement scores drop. Your best people go quiet. Neurodivergent employees are twice as likely to reach burnout. The reason is not their condition. It is an environment that keeps demanding more than it gives back. The strain is real. It is just invisible until it is not.",
+    activeZones: [0, 1, 2, 4],
+    newZone: 4,
   },
   {
-    label: "BURNOUT",
     heading: "Burnout",
     description:
-      "Overload and misfit. The nervous system is overwhelmed. Performance falls sharply. Burnout is not a personal failure. It is the predictable result of an environment that did not adapt.",
-    color: "text-red-500",
-    colorHex: "#ef4444",
+      "Burnout is not a personal failure. It is the predictable end point of a system that did not adapt. The cost to UK employers averages £2,646 per person per year in lost productivity and absence. Neurodiversity-related employment tribunals have risen 164% in four years. By the time you are managing burnout, you have already lost.",
+    activeZones: [0, 1, 2, 4, 5],
+    newZone: 5,
   },
   {
-    label: "",
+    heading: "Culture and Fit",
+    description:
+      "This is where performance becomes sustainable. Clarity. Predictability. Communication that works for the full range of thinking styles. Masking drops. Energy is freed up for actual work. Strengths that were invisible become visible and usable. Attrition falls. Engagement rises. Output improves. Not because you made exceptions for some people. Because you built a system that works for everyone.",
+    activeZones: [0, 1, 2, 3, 4, 5],
+    newZone: 3,
+  },
+  {
     heading: "That is Neuroinclusive Performance",
     description:
-      "If adjustments only help one person, they are not inclusion. They are firefighting. Inclusion is when the system flexes so no one has to ask in the first place. Clarity, predictability, communication, leadership behaviours, and workload patterns built for the full spectrum of thinking styles.",
-    color: "text-accent",
-    colorHex: "#22c55e",
+      "The organisations that get this right do not just reduce risk. They retain people others lose. They unlock talent others cannot see. They build teams that think differently, solve problems faster, and stay longer. That is what we help you build.",
+    activeZones: [0, 1, 2, 3, 4, 5],
+    newZone: null,
   },
 ];
 
@@ -82,7 +88,7 @@ const SIGMA = 110;
 const AMPLITUDE = 260;
 const BASE_Y = H - 20;
 const LABEL_NAVY = "#1B2B6B";
-const FIXED_LABEL_Y = -30; // all labels at the same fixed Y coordinate above chart
+const FIXED_LABEL_Y = -30;
 
 function gauss(x: number) {
   return AMPLITUDE * Math.exp(-0.5 * ((x - PEAK) / SIGMA) ** 2);
@@ -107,7 +113,6 @@ function zoneMidX(zoneIndex: number) {
   return (zoneEdges[zoneIndex] + zoneEdges[zoneIndex + 1]) / 2;
 }
 
-/** Highest point of the curve within this zone */
 function zoneTopY(zoneIndex: number) {
   const x0 = zoneEdges[zoneIndex];
   const x1 = zoneEdges[zoneIndex + 1];
@@ -144,7 +149,10 @@ const InclusivePerformanceSection = () => {
   const isFinal = activeStage === 6;
   const showCallout = activeStage >= 2;
 
-  const currentStage = activeStage >= 0 ? stages[activeStage] : null;
+  const currentNarrative = activeStage >= 0 ? narrativeStages[activeStage] : null;
+  const activeZoneSet = currentNarrative
+    ? new Set(currentNarrative.activeZones)
+    : new Set<number>();
 
   return (
     <section className="py-16 lg:py-24 bg-background" id="inclusive-performance">
@@ -159,7 +167,6 @@ const InclusivePerformanceSection = () => {
 
         {/* ── Chart ──────────────────────────────────────── */}
         <div className="relative w-full">
-          {/* Y-axis label — rotated, positioned left of chart with gap */}
           <span
             className="absolute top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[11px] font-display font-semibold tracking-wide whitespace-nowrap select-none"
             style={{ left: "-36px", color: LABEL_NAVY, opacity: 0.6 }}
@@ -173,18 +180,17 @@ const InclusivePerformanceSection = () => {
             aria-label="Inclusive Performance bell curve"
             role="img"
           >
-            {/* Axis lines */}
             <line x1="0" y1={BASE_Y} x2={W} y2={BASE_Y} stroke="currentColor" className="text-foreground/15" strokeWidth="1" />
             <line x1="0" y1={BASE_Y} x2="0" y2="10" stroke="currentColor" className="text-foreground/15" strokeWidth="1" />
 
-            {/* Full curve outline (subtle) */}
             <path d={fullCurvePath()} fill="none" stroke="currentColor" className="text-foreground/10" strokeWidth="1.5" />
 
             {/* Zone fills */}
-            {[0, 1, 2, 3, 4, 5].map((zi) => {
-              const isActive = activeStage >= zi;
-              const color = isActive ? stages[zi].colorHex : "currentColor";
-              const showLabel = (isActive && activeStage <= 5 && activeStage === zi) || isFinal;
+            {zones.map((zone, zi) => {
+              const isActive = activeZoneSet.has(zi);
+              const color = isActive ? zone.colorHex : "currentColor";
+              const showLabel =
+                (currentNarrative?.newZone === zi && activeStage <= 5) || isFinal;
               const topY = zoneTopY(zi);
               const midX = zoneMidX(zi);
 
@@ -199,10 +205,8 @@ const InclusivePerformanceSection = () => {
                       transition: "fill 0.4s ease, opacity 0.4s ease",
                     }}
                   />
-                  {/* Label above curve with tick line */}
                   {showLabel && (
                     <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
-                      {/* Tick line from label down to curve top — stops at curve surface */}
                       <line
                         x1={midX}
                         y1={topY - 2}
@@ -212,7 +216,6 @@ const InclusivePerformanceSection = () => {
                         strokeWidth="1"
                         opacity="0.4"
                       />
-                      {/* Main label — fixed Y for all */}
                       <text
                         x={midX}
                         y={FIXED_LABEL_Y}
@@ -222,10 +225,9 @@ const InclusivePerformanceSection = () => {
                         fontSize={isFinal ? "10" : "11"}
                         letterSpacing="0.06em"
                       >
-                        {stages[zi].label}
+                        {zone.label}
                       </text>
-                      {/* Sub-label */}
-                      {stages[zi].subLabel && !isFinal && (
+                      {zone.subLabel && !isFinal && (
                         <text
                           x={midX}
                           y={FIXED_LABEL_Y + 13}
@@ -234,7 +236,7 @@ const InclusivePerformanceSection = () => {
                           fontSize="8"
                           opacity="0.6"
                         >
-                          {stages[zi].subLabel}
+                          {zone.subLabel}
                         </text>
                       )}
                     </g>
@@ -243,7 +245,6 @@ const InclusivePerformanceSection = () => {
               );
             })}
 
-            {/* X-axis label — centred beneath baseline */}
             <text
               x={W / 2}
               y={BASE_Y + 45}
@@ -272,10 +273,10 @@ const InclusivePerformanceSection = () => {
             ) : (
               <>
                 <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3">
-                  {currentStage!.heading}
+                  {currentNarrative!.heading}
                 </h3>
                 <p className="text-sm md:text-base text-foreground/75 leading-relaxed max-w-[60ch]">
-                  {currentStage!.description}
+                  {currentNarrative!.description}
                 </p>
               </>
             )}
@@ -311,7 +312,6 @@ const InclusivePerformanceSection = () => {
             )}
           </button>
 
-          {/* Stage counter */}
           {!isIntro && (
             <span className="text-xs text-foreground/40 font-display font-semibold">
               Stage {activeStage + 1} of 7
@@ -320,7 +320,6 @@ const InclusivePerformanceSection = () => {
         </div>
       </div>
 
-      {/* Inline keyframes for SVG label fade */}
       <style>{`
         @keyframes fadeInLabel {
           from { opacity: 0; transform: translateY(4px); }
