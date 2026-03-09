@@ -33,7 +33,7 @@ const PageContents = () => {
             <button
               key={s.id}
               onClick={() => scrollTo(s.id)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-display font-medium text-foreground/70 bg-background border border-border/50 hover:border-accent/40 hover:text-accent transition-colors"
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-display font-medium text-foreground/70 bg-background border-l-2 border ${s.accent} hover:text-foreground transition-colors`}
             >
               <s.icon size={12} className="shrink-0" />
               {s.label}
