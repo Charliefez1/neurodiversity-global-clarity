@@ -82,7 +82,7 @@ const SIGMA = 110;
 const AMPLITUDE = 260;
 const BASE_Y = H - 20;
 const LABEL_NAVY = "#1B2B6B";
-const LABEL_Y_OFFSET = 50; // how far above curve top the label sits
+const FIXED_LABEL_Y = -30; // all labels at the same fixed Y coordinate above chart
 
 function gauss(x: number) {
   return AMPLITUDE * Math.exp(-0.5 * ((x - PEAK) / SIGMA) ** 2);
@@ -162,13 +162,13 @@ const InclusivePerformanceSection = () => {
           {/* Y-axis label — rotated, positioned left of chart with gap */}
           <span
             className="absolute top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[11px] font-display font-semibold tracking-wide whitespace-nowrap select-none"
-            style={{ left: "-28px", color: LABEL_NAVY, opacity: 0.6 }}
+            style={{ left: "-36px", color: LABEL_NAVY, opacity: 0.6 }}
           >
             Performance Capacity
           </span>
 
           <svg
-            viewBox={`-50 -60 ${W + 70} ${H + 70}`}
+            viewBox={`-60 -50 ${W + 80} ${H + 80}`}
             className="w-full h-auto"
             aria-label="Inclusive Performance bell curve"
             role="img"
@@ -187,7 +187,6 @@ const InclusivePerformanceSection = () => {
               const showLabel = (isActive && activeStage <= 5 && activeStage === zi) || isFinal;
               const topY = zoneTopY(zi);
               const midX = zoneMidX(zi);
-              const labelY = topY - LABEL_Y_OFFSET;
 
               return (
                 <g key={zi}>
@@ -203,20 +202,20 @@ const InclusivePerformanceSection = () => {
                   {/* Label above curve with tick line */}
                   {showLabel && (
                     <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
-                      {/* Tick line from label down to curve top */}
+                      {/* Tick line from label down to curve top — stops at curve surface */}
                       <line
                         x1={midX}
-                        y1={topY - 4}
+                        y1={topY - 2}
                         x2={midX}
-                        y2={labelY + 14}
-                        stroke={LABEL_NAVY}
+                        y2={FIXED_LABEL_Y + 14}
+                        stroke="#999"
                         strokeWidth="1"
-                        opacity="0.35"
+                        opacity="0.4"
                       />
-                      {/* Main label */}
+                      {/* Main label — fixed Y for all */}
                       <text
                         x={midX}
-                        y={labelY}
+                        y={FIXED_LABEL_Y}
                         textAnchor="middle"
                         className="font-display font-bold"
                         fill={LABEL_NAVY}
@@ -229,7 +228,7 @@ const InclusivePerformanceSection = () => {
                       {stages[zi].subLabel && !isFinal && (
                         <text
                           x={midX}
-                          y={labelY + 13}
+                          y={FIXED_LABEL_Y + 13}
                           textAnchor="middle"
                           fill={LABEL_NAVY}
                           fontSize="8"
@@ -244,10 +243,10 @@ const InclusivePerformanceSection = () => {
               );
             })}
 
-            {/* X-axis label — centred, with 24px gap below baseline */}
+            {/* X-axis label — centred beneath baseline */}
             <text
               x={W / 2}
-              y={BASE_Y + 40}
+              y={BASE_Y + 45}
               textAnchor="middle"
               className="font-display"
               fill={LABEL_NAVY}
