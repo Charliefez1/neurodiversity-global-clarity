@@ -9,7 +9,7 @@ import JsonLd, { breadcrumbSchema, serviceSchema, courseListSchema } from "@/com
 import PageCTA from "@/components/templates/PageCTA";
 import PullQuote from "@/components/blocks/PullQuote";
 import { workshopCategories, allWorkshops, type Workshop } from "@/data/workshops";
-import workshopHeroImg from "@/assets/workshop-hero-team.png";
+import workshopHeroImg from "@/assets/industries/diverse-professions-hero.png";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { RegisterSections } from "@/contexts/PageSectionsContext";

@@ -16,8 +16,8 @@ import {
   AlertTriangle, BookOpen, Users, TrendingUp, GraduationCap,
   ArrowRight, Shield, Briefcase, Brain, MessageSquare, Settings,
 } from "lucide-react";
-import workshopImg from "@/assets/workshop-hero-team.png";
-import diverseImg from "@/assets/industries/diverse-workforce.png";
+import workshopImg from "@/assets/industries/diverse-professions-hero.png";
+import diverseImg from "@/assets/industries/community-workers.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
