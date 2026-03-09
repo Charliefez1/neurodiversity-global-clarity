@@ -11,6 +11,7 @@ import EvidenceSection from "@/components/EvidenceSection";
 import AccessibilitySection from "@/components/AccessibilitySection";
 import FinalCTA from "@/components/FinalCTA";
 import ResourcesSection from "@/components/ResourcesSection";
+import FloatingContactButton from "@/components/FloatingContactButton";
 
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -44,6 +45,7 @@ const Index = () => {
       <Navbar />
       <NewsHeadlines />
       <HeroSection />
+      <FloatingContactButton />
       <ServicesSection />
       <div
         className="relative bg-cover bg-top bg-no-repeat"
