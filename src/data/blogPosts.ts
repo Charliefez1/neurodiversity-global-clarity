@@ -14,6 +14,12 @@ import systemFailingImg from "@/assets/blog/system-failing.png";
 import workplaceBreaksNdImg from "@/assets/blog/workplace-breaks-nd.jpg";
 import ndExplainedOrgsImg from "@/assets/blog/nd-explained-orgs.jpg";
 import adhdWorkplaceLeadersImg from "@/assets/blog/adhd-workplace-leaders.jpg";
+import cognitiveBatteryImg from "@/assets/blog/cognitive-battery-classroom.jpg";
+import maskingMentalHealthImg from "@/assets/blog/masking-mental-health.jpg";
+import dopamineRiskImg from "@/assets/blog/dopamine-risk-adolescence.jpg";
+import parentCarerBurnoutImg from "@/assets/blog/parent-carer-burnout.jpg";
+import lateDiagnosisImg from "@/assets/blog/late-diagnosis-impact.jpg";
+import darkSideParentImg from "@/assets/blog/dark-side-parent-workshop.jpg";
 
 export interface BlogPost {
   slug: string;
