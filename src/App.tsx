@@ -36,7 +36,7 @@ import CommunityQuestions from "./pages/CommunityQuestions";
 import Sources from "./pages/Sources";
 import CaseStudies from "./pages/CaseStudies";
 import Feedback from "./pages/Feedback";
-import Parents from "./pages/Parents";
+
 import ForEmployers from "./pages/ForEmployers";
 import ForPublicSector from "./pages/ForPublicSector";
 import ForParents from "./pages/ForParents";
