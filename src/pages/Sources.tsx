@@ -55,6 +55,7 @@ const sources = [
 ];
 
 const categoryIcons: Record<string, typeof Database> = {
+  "Children & Young People": Baby,
   Research: Microscope,
   "Legislation and Policy": Scale,
   Organisations: Building2,
