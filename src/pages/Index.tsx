@@ -47,6 +47,7 @@ const Index = () => {
       <Navbar />
       <NewsHeadlines />
       <HeroSection />
+      <PageContents />
       <FloatingContactButton />
       <ServicesSection />
       <div
