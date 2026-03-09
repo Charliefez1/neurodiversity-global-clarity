@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 
 import NewsHeadlines from "@/components/NewsHeadlines";
+import BlogSearch from "@/components/BlogSearch";
 import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
