@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Clock, Calendar } from "lucide-react";
+import { ArrowRight, Clock, Calendar, FileText } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -54,9 +54,10 @@ const Blog = () => {
               </div>
               <div className="p-8 lg:p-12 flex flex-col justify-center">
                 <div className="flex flex-wrap items-center gap-3 mb-5">
-                  <span className="px-3 py-1 rounded-full text-xs font-display font-bold bg-accent/10 text-accent">
-                    {featured.category}
-                  </span>
+                    <span className={`px-3 py-1 rounded-full text-xs font-display font-bold ${featured.category === "White Paper" ? "bg-primary/10 text-primary" : "bg-accent/10 text-accent"}`}>
+                      {featured.category === "White Paper" && <FileText size={11} className="inline mr-1 -mt-0.5" />}
+                      {featured.category}
+                    </span>
                   <span className="text-xs text-muted-foreground flex items-center gap-1">
                     <Clock size={12} /> {featured.readTime}
                   </span>
@@ -99,7 +100,8 @@ const Blog = () => {
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-2.5 py-0.5 rounded-full text-xs font-display font-bold bg-accent/10 text-accent">
+                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-display font-bold ${post.category === "White Paper" ? "bg-primary/10 text-primary" : "bg-accent/10 text-accent"}`}>
+                      {post.category === "White Paper" && <FileText size={10} className="inline mr-1 -mt-0.5" />}
                       {post.category}
                     </span>
                   </div>
