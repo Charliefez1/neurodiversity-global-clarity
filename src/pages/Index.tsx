@@ -72,7 +72,31 @@ const Index = () => {
       </div>
       <NeuroFrameworkSection />
       <InclusivePerformanceSection />
-      <AccessibilitySection />
+
+      {/* Ask Rich Anything — compact CTA */}
+      <section className="bg-primary py-14 lg:py-18">
+        <div className="mx-auto max-w-wide px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-12">
+            <div className="max-w-xl">
+              <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-accent mb-3">Ask Rich Anything</p>
+              <h2 className="font-display font-bold text-xl md:text-2xl text-primary-foreground leading-tight">
+                Got a question about neurodiversity at work?
+              </h2>
+              <p className="mt-3 text-sm text-primary-foreground/70 leading-relaxed">
+                Search our knowledge base or ask Rich directly. Answers written personally by our co-founder. Always confidential.
+              </p>
+            </div>
+            <a
+              href="/ask-rich"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all shrink-0"
+            >
+              Ask Rich
+              <ArrowRight size={16} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <FinalCTA />
       
       <ResourcesSection />
