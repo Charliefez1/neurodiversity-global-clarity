@@ -72,7 +72,7 @@ const narrativeStages: NarrativeStage[] = [
       "The cost starts showing up in your data here. Sickness absence rises. Engagement scores drop. Your best people go quiet. Neurodivergent employees are twice as likely to reach burnout. The reason is not their condition. It is an environment that keeps demanding more than it gives back. The strain is real. It stays invisible until it is not.",
     activeZones: [0, 1, 2, 3, 4],
     newZone: 4,
-    callout: "Absence rising. Cost building silently.",
+    callout: "39% plan to leave within 12 months if not included.",
     calloutZone: 4,
   },
   {
