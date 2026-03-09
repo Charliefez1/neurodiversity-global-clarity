@@ -1,56 +1,42 @@
-import { Quote } from "lucide-react";
 import { NEURO_COLOURS } from "@/data/neuroColours";
 
 interface PullQuoteProps {
   quote: string;
   attribution?: string;
   portraitSrc?: string;
-  /** Index for rotating accent colour. Defaults to 0. */
   accentIndex?: number;
 }
 
-const PullQuote = ({ quote, attribution, portraitSrc, accentIndex = 0 }: PullQuoteProps) => {
-  const accentColour = NEURO_COLOURS[accentIndex % NEURO_COLOURS.length];
+const PullQuote = ({ quote, attribution, accentIndex = 0 }: PullQuoteProps) => {
+  const colour = NEURO_COLOURS[accentIndex % NEURO_COLOURS.length];
 
   return (
-    <blockquote
-      className="group relative my-10 rounded-xl bg-primary overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border-l-4"
-      style={{ borderLeftColor: accentColour }}
-    >
-      {/* Background portrait */}
-      {portraitSrc && (
-        <div className="absolute inset-0 pointer-events-none">
-          <img
-            src={portraitSrc}
-            alt=""
-            aria-hidden="true"
-            className="absolute right-0 top-0 h-full w-2/5 object-cover opacity-[0.08] group-hover:opacity-[0.14] transition-opacity duration-700"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/70" />
-        </div>
-      )}
+    <section className="bg-warm-stone py-16 lg:py-20">
+      <div className="mx-auto max-w-3xl px-6 lg:px-10 text-center">
+        {/* Decorative line */}
+        <div className="mx-auto mb-8 h-1 w-16 rounded-full" style={{ backgroundColor: colour }} />
 
-      <div className="relative p-8 lg:p-10 flex items-start gap-5">
-        <Quote size={32} style={{ color: `${accentColour}80` }} className="shrink-0 mt-1" aria-hidden="true" />
-        <div>
-          <p className="font-display font-semibold text-lg md:text-xl text-primary-foreground leading-snug italic">
+        <blockquote>
+          <p className="font-display font-bold text-xl md:text-2xl lg:text-3xl leading-[1.35] text-foreground tracking-tight">
             "{quote}"
           </p>
-          {attribution && (
-            <footer className="mt-4 flex items-center gap-3">
-              {portraitSrc && (
-                <img
-                  src={portraitSrc}
-                  alt={attribution}
-                  className="w-9 h-9 rounded-full object-cover ring-2 ring-accent/30"
-                />
-              )}
-              <cite className="text-sm text-primary-foreground/60 not-italic font-body">{attribution}</cite>
-            </footer>
-          )}
-        </div>
+        </blockquote>
+
+        {attribution && (
+          <footer className="mt-6">
+            <div className="inline-flex items-center gap-2">
+              <span className="block h-px w-6" style={{ backgroundColor: colour }} />
+              <cite className="text-sm text-muted-foreground not-italic font-body font-medium tracking-wide uppercase">
+                {attribution}
+              </cite>
+            </div>
+          </footer>
+        )}
+
+        {/* Decorative line */}
+        <div className="mx-auto mt-8 h-1 w-16 rounded-full" style={{ backgroundColor: colour }} />
       </div>
-    </blockquote>
+    </section>
   );
 };
 
