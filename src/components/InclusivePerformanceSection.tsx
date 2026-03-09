@@ -190,7 +190,7 @@ const InclusivePerformanceSection = () => {
               const isActive = activeZoneSet.has(zi);
               const color = isActive ? zone.colorHex : "currentColor";
               const showLabel =
-                (currentNarrative?.newZone === zi && activeStage <= 5) || isFinal;
+                currentNarrative?.newZone === zi && activeStage <= 5;
               const topY = zoneTopY(zi);
               const midX = zoneMidX(zi);
 
