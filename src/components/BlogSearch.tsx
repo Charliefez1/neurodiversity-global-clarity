@@ -56,7 +56,7 @@ const BlogSearch = () => {
         <div className="relative flex-1">
           <Search
             size={16}
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-primary-foreground/40"
           />
           <input
             type="text"
@@ -64,7 +64,7 @@ const BlogSearch = () => {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="What would you like to learn about? e.g. ADHD adjustments, manager training..."
-            className="w-full rounded-xl border border-border bg-card pl-11 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all"
+            className="w-full rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 pl-11 pr-4 py-3 text-sm text-primary-foreground placeholder:text-primary-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent/40 focus:border-accent transition-all"
           />
         </div>
         <button
