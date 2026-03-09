@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import NeuroFrameworkSection from "@/components/NeuroFrameworkSection";
+import InclusivePerformanceSection from "@/components/InclusivePerformanceSection";
 import ProblemSection from "@/components/ProblemSection";
 import challengeBg from "@/assets/challenge-bg.png";
 import industryBg from "@/assets/industry-bg.png";
@@ -68,6 +69,7 @@ const Index = () => {
         </div>
       </div>
       <NeuroFrameworkSection />
+      <InclusivePerformanceSection />
       <AccessibilitySection />
       <FinalCTA />
       
