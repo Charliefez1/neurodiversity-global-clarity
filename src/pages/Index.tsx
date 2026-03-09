@@ -69,6 +69,7 @@ const Index = () => {
         </div>
       </div>
       <NeuroFrameworkSection />
+      <InclusivePerformanceSection />
       <AccessibilitySection />
       <FinalCTA />
       
