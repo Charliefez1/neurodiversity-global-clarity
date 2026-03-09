@@ -12,7 +12,10 @@
     "consultancy": "Neurodiversity Consultancy",
     "contact": "Contact",
     "bookACall": "Book a call",
-    "language": "Language"
+    "language": "Language",
+    "parents": "Parents",
+    "aboutUs": "About Us",
+    "team": "Meet the Team"
   },
   "hero": {
     "badge": "Neurodiversity in work. Training, Workshops, Consultancy",
