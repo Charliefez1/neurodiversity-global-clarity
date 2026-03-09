@@ -59,13 +59,40 @@ const problemCards = [
   { text: "Generic diversity training where neurodiversity appears as one small module", icon: BookOpen },
 ];
 
-const differenceAreas = [
-  { title: "Leadership behaviour", icon: Users, colour: NEURO_COLOURS[0] },
-  { title: "Communication structures", icon: Settings, colour: NEURO_COLOURS[1] },
-  { title: "Team dynamics", icon: Briefcase, colour: NEURO_COLOURS[2] },
-  { title: "Recruitment processes", icon: Target, colour: NEURO_COLOURS[3] },
-  { title: "Performance expectations", icon: TrendingUp, colour: NEURO_COLOURS[4] },
-  { title: "Workplace environments", icon: Wrench, colour: NEURO_COLOURS[0] },
+const approachPillars = [
+  {
+    title: "Diagnose the system, not the person",
+    description: "We audit how your organisation communicates, manages, and measures performance — identifying where neurodivergent talent is being lost to design, not deficit.",
+    icon: Target,
+    colour: NEURO_COLOURS[0],
+  },
+  {
+    title: "Train for behaviour change, not just awareness",
+    description: "Every session is facilitator-led, interactive, and grounded in real workplace scenarios. We do not lecture. We equip people with tools they use the next day.",
+    icon: GraduationCap,
+    colour: NEURO_COLOURS[1],
+  },
+  {
+    title: "Redesign structures that create friction",
+    description: "Recruitment processes, meeting formats, performance reviews, communication norms — we work with you to redesign the systems that silently exclude.",
+    icon: Settings,
+    colour: NEURO_COLOURS[2],
+  },
+  {
+    title: "Embed, measure, and sustain",
+    description: "Change that disappears after a workshop is not change. We build internal capability, track outcomes, and ensure neuroinclusion becomes part of how you operate.",
+    icon: TrendingUp,
+    colour: NEURO_COLOURS[3],
+  },
+];
+
+const whatWeChange = [
+  { label: "Leadership behaviour", icon: Users, colour: NEURO_COLOURS[0] },
+  { label: "Communication structures", icon: Settings, colour: NEURO_COLOURS[1] },
+  { label: "Team dynamics", icon: Briefcase, colour: NEURO_COLOURS[2] },
+  { label: "Recruitment processes", icon: Target, colour: NEURO_COLOURS[3] },
+  { label: "Performance management", icon: TrendingUp, colour: NEURO_COLOURS[4] },
+  { label: "Workplace environments", icon: Wrench, colour: NEURO_COLOURS[0] },
 ];
 
 const trainingProgrammes = [
@@ -204,7 +231,7 @@ const WhatWeDo = () => {
           accentIndex={0}
         />
 
-        {/* ═══════════ WHAT MAKES US DIFFERENT — card grid ═══════════ */}
+        {/* ═══════════ OUR APPROACH — expanded pillars ═══════════ */}
         <section id="difference" className="bg-warm-stone py-20 lg:py-28" aria-labelledby="difference-heading">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
             <div className="max-w-2xl mb-14">
@@ -212,18 +239,20 @@ const WhatWeDo = () => {
                 Our approach
               </p>
               <h2 id="difference-heading" className="font-display font-bold text-2xl md:text-3xl leading-tight text-foreground">
-                We work at the level where{" "}
-                <span className="text-accent">real change happens</span>
+                Most organisations treat neurodiversity as a{" "}
+                <span className="text-accent">training issue</span>. We treat it as{" "}
+                <span className="text-accent">infrastructure</span>.
               </h2>
               <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-                The problem is not the individual. The problem is how organisations are designed. We help organisations redesign how work operates so different ways of thinking become an advantage.
+                The problem is not the individual. The problem is how organisations are designed. We help you redesign how work operates so different ways of thinking become an advantage, not a friction point.
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {differenceAreas.map((item, i) => (
+            {/* Four pillars — numbered cards */}
+            <div className="grid md:grid-cols-2 gap-6 mb-14">
+              {approachPillars.map((pillar, i) => (
                 <motion.article
-                  key={item.title}
+                  key={pillar.title}
                   custom={i}
                   initial="hidden"
                   whileInView="visible"
@@ -231,25 +260,64 @@ const WhatWeDo = () => {
                   variants={fadeUp}
                   className="rounded-2xl bg-card border border-border shadow-md hover:shadow-lg transition-shadow overflow-hidden flex flex-col"
                 >
-                  <div className="h-1" style={{ backgroundColor: item.colour }} />
-                  <div className="p-6 flex gap-4 items-start">
-                    <div
-                      className="w-11 h-11 shrink-0 rounded-xl flex items-center justify-center"
-                      style={{ backgroundColor: `${item.colour}18`, color: item.colour }}
-                    >
-                      <item.icon size={20} />
+                  <div className="h-1" style={{ backgroundColor: pillar.colour }} />
+                  <div className="p-6">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div
+                        className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center"
+                        style={{ backgroundColor: `${pillar.colour}18`, color: pillar.colour }}
+                      >
+                        <pillar.icon size={22} />
+                      </div>
+                      <div>
+                        <span className="font-display font-bold text-xs uppercase tracking-wider" style={{ color: pillar.colour }}>
+                          Step {i + 1}
+                        </span>
+                        <h3 className="font-display font-bold text-base text-card-foreground leading-snug">{pillar.title}</h3>
+                      </div>
                     </div>
-                    <h3 className="font-display font-bold text-sm text-card-foreground mt-2.5">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{pillar.description}</p>
                   </div>
                 </motion.article>
               ))}
             </div>
 
-            <div className="mt-10 rounded-xl border border-accent/20 bg-accent/5 p-6 max-w-xl">
+            {/* What we change — compact chip grid */}
+            <div>
+              <h3 className="font-display font-bold text-base text-foreground mb-5">What we change</h3>
+              <div className="flex flex-wrap gap-3">
+                {whatWeChange.map((item, i) => (
+                  <motion.div
+                    key={item.label}
+                    custom={i}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-40px" }}
+                    variants={fadeUp}
+                    className="inline-flex items-center gap-2.5 rounded-full bg-card border border-border px-4 py-2.5 shadow-sm hover:shadow-md transition-shadow"
+                  >
+                    <item.icon size={14} style={{ color: item.colour }} />
+                    <span className="text-sm font-display font-bold text-card-foreground">{item.label}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Manifesto callout */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-10 rounded-xl border border-accent/20 bg-accent/5 p-6 max-w-xl"
+            >
               <p className="font-display font-bold text-base text-foreground">
                 Inclusion is not a campaign. It is infrastructure.
               </p>
-            </div>
+              <p className="text-sm text-muted-foreground mt-1">
+                That is not a tagline. It is how we design every engagement.
+              </p>
+            </motion.div>
           </div>
         </section>
 
