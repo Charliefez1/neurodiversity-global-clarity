@@ -151,24 +151,50 @@ function fullCurvePath(): string {
 
 /* ── Component ─────────────────────────────────────────────── */
 
-const InclusivePerformanceSection = () => {
-  const [activeStage, setActiveStage] = useState(-1);
+const AUTO_PLAY_MS = 5000;
 
-  const advance = useCallback(() => {
-    setActiveStage((prev) => {
-      if (prev >= 6) return -1;
-      return prev + 1;
-    });
+const InclusivePerformanceSection = () => {
+  const [activeStage, setActiveStage] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const clearTimer = useCallback(() => {
+    if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
   }, []);
 
-  const isIntro = activeStage === -1;
+  const advance = useCallback(() => {
+    setActiveStage((prev) => (prev >= 6 ? 0 : prev + 1));
+  }, []);
+
+  const goBack = useCallback(() => {
+    setActiveStage((prev) => (prev <= 0 ? 6 : prev - 1));
+  }, []);
+
+  // Auto-play timer
+  useEffect(() => {
+    clearTimer();
+    if (isPlaying) {
+      timerRef.current = setInterval(advance, AUTO_PLAY_MS);
+    }
+    return clearTimer;
+  }, [isPlaying, advance, clearTimer]);
+
+  // Reset timer on manual navigation
+  const handleNext = useCallback(() => {
+    advance();
+    if (isPlaying) { clearTimer(); timerRef.current = setInterval(advance, AUTO_PLAY_MS); }
+  }, [advance, isPlaying, clearTimer]);
+
+  const handlePrev = useCallback(() => {
+    goBack();
+    if (isPlaying) { clearTimer(); timerRef.current = setInterval(advance, AUTO_PLAY_MS); }
+  }, [goBack, advance, isPlaying, clearTimer]);
+
   const isFinal = activeStage === 6;
   const showCallout = activeStage >= 2;
 
-  const currentNarrative = activeStage >= 0 ? narrativeStages[activeStage] : null;
-  const activeZoneSet = currentNarrative
-    ? new Set(currentNarrative.activeZones)
-    : new Set<number>();
+  const currentNarrative = narrativeStages[activeStage];
+  const activeZoneSet = new Set(currentNarrative.activeZones);
 
   return (
     <section className="py-16 lg:py-24 bg-background" id="inclusive-performance">
@@ -184,7 +210,7 @@ const InclusivePerformanceSection = () => {
           Most organisations are somewhere on this curve right now.
         </p>
         <p className="text-sm text-foreground/80 mb-8">
-          Click through to see where performance is being lost and where it can be recovered.
+          Watch the stages unfold, or use the controls to explore at your own pace.
         </p>
 
         {/* ── Chart ──────────────────────────────────────── */}
@@ -281,7 +307,7 @@ const InclusivePerformanceSection = () => {
             })}
 
             {/* Floating callout panel on chart */}
-            {activeStage >= 0 && currentNarrative && (() => {
+            {currentNarrative && (() => {
               const cZone = currentNarrative.calloutZone;
               const cMidX = zoneMidX(cZone);
               const cTopY = zoneTopY(cZone);
@@ -348,20 +374,12 @@ const InclusivePerformanceSection = () => {
             className="animate-fade-in"
             style={{ animationDuration: "0.2s" }}
           >
-            {isIntro ? (
-              <p className="text-sm text-foreground/60 leading-relaxed">
-                Click <strong>Next</strong> to explore the model.
-              </p>
-            ) : (
-              <>
-                <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3">
-                  {currentNarrative!.heading}
-                </h3>
-                <p className="text-sm md:text-base text-foreground/75 leading-relaxed max-w-[60ch]">
-                  {currentNarrative!.description}
-                </p>
-              </>
-            )}
+            <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3">
+              {currentNarrative.heading}
+            </h3>
+            <p className="text-sm md:text-base text-foreground/75 leading-relaxed max-w-[60ch]">
+              {currentNarrative.description}
+            </p>
           </div>
         </div>
 
@@ -376,29 +394,49 @@ const InclusivePerformanceSection = () => {
         </div>
 
         {/* ── Navigation ────────────────────────────────── */}
-        <div className="mt-8 flex items-center gap-6">
+        <div className="mt-8 flex items-center gap-3">
+          {/* Back */}
           <button
-            onClick={advance}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:scale-[1.02] transition-all"
+            onClick={handlePrev}
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+            aria-label="Previous stage"
           >
-            {isFinal ? (
-              <>
-                <RotateCcw size={15} aria-hidden="true" />
-                Start again
-              </>
-            ) : (
-              <>
-                Next
-                <ArrowRight size={15} aria-hidden="true" />
-              </>
-            )}
+            <ArrowLeft size={16} />
           </button>
 
-          {!isIntro && (
-            <span className="text-xs text-foreground/40 font-display font-semibold">
-              Stage {activeStage + 1} of 7
-            </span>
-          )}
+          {/* Play/Pause */}
+          <button
+            onClick={() => setIsPlaying((p) => !p)}
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+            aria-label={isPlaying ? "Pause auto-play" : "Resume auto-play"}
+          >
+            {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+          </button>
+
+          {/* Forward */}
+          <button
+            onClick={handleNext}
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+            aria-label="Next stage"
+          >
+            <ArrowRight size={16} />
+          </button>
+
+          {/* Progress dots */}
+          <div className="flex gap-1.5 ml-3">
+            {narrativeStages.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => { setActiveStage(i); if (isPlaying) { clearTimer(); timerRef.current = setInterval(advance, AUTO_PLAY_MS); } }}
+                className={`h-1.5 rounded-full transition-all duration-300 ${i === activeStage ? "w-6 bg-accent" : "w-2 bg-foreground/15 hover:bg-foreground/25"}`}
+                aria-label={`Go to stage ${i + 1}`}
+              />
+            ))}
+          </div>
+
+          <span className="text-xs text-foreground/40 font-display font-semibold ml-auto">
+            Stage {activeStage + 1} of 7
+          </span>
         </div>
       </div>
 
