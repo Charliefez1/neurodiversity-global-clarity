@@ -23,52 +23,66 @@ const zones: Zone[] = [
 interface NarrativeStage {
   heading: string;
   description: string;
-  activeZones: number[]; // which zone indices are lit
-  newZone: number | null; // which zone just activated (for label display)
+  activeZones: number[];
+  newZone: number | null;
+  callout: string;
+  calloutZone: number; // which zone the callout floats over
 }
 
 const narrativeStages: NarrativeStage[] = [
   {
     heading: "Underload",
     description:
-      "One in five of your workforce is neurodivergent. Many of them are in the wrong role, at the wrong level, doing work that uses a fraction of what they can do. Capability is present. The organisation just cannot see it. That is not a talent shortage. That is a design problem.",
+      "One in five of your workforce is neurodivergent. Many are in the wrong role, at the wrong level, doing work that uses a fraction of what they can do. Capability is present. The organisation cannot see it. That is not a talent shortage. That is a design problem.",
     activeZones: [0],
     newZone: 0,
+    callout: "Talent invisible to the organisation",
+    calloutZone: 0,
   },
   {
     heading: "Awareness",
     description:
-      "Most organisations stop here. A training day. An awareness week. A policy that sits in a drawer. Awareness without action does not reduce attrition. It does not reduce stress. It does not unlock performance. It just tells people you know the problem exists.",
+      "Most organisations stop here. A training day. An awareness week. A policy that sits in a drawer. Awareness without action does not reduce attrition. It does not reduce stress. It does not unlock performance. It tells people you know the problem exists.",
     activeZones: [0, 1],
     newZone: 1,
+    callout: "Foundation only. Not performance.",
+    calloutZone: 1,
   },
   {
     heading: "Individual Adjustments",
     description:
-      "This is where most HR teams operate. One person asks. One adjustment is made. The system stays the same. It helps that individual. It does not help the next person, or the one after. And it puts the entire burden on the person who already has the least capacity to carry it. This is not inclusion. It is case management.",
+      "Most HR teams operate here. One person asks. One adjustment is made. The system stays the same. It helps that individual. It does not help the next person. The entire burden falls on the person who already has the least capacity to carry it. This is not inclusion. It is case management.",
     activeZones: [0, 1, 2],
     newZone: 2,
-  },
-  {
-    heading: "Overstretch",
-    description:
-      "This is where the cost starts showing up in your data. Sickness absence rises. Engagement scores drop. Your best people go quiet. Neurodivergent employees are twice as likely to reach burnout. The reason is not their condition. It is an environment that keeps demanding more than it gives back. The strain is real. It is just invisible until it is not.",
-    activeZones: [0, 1, 2, 4],
-    newZone: 4,
-  },
-  {
-    heading: "Burnout",
-    description:
-      "Burnout is not a personal failure. It is the predictable end point of a system that did not adapt. The cost to UK employers averages £2,646 per person per year in lost productivity and absence. Neurodiversity-related employment tribunals have risen 164% in four years. By the time you are managing burnout, you have already lost.",
-    activeZones: [0, 1, 2, 4, 5],
-    newZone: 5,
+    callout: "Helps one person. System unchanged.",
+    calloutZone: 2,
   },
   {
     heading: "Culture and Fit",
     description:
-      "This is where performance becomes sustainable. Clarity. Predictability. Communication that works for the full range of thinking styles. Masking drops. Energy is freed up for actual work. Strengths that were invisible become visible and usable. Attrition falls. Engagement rises. Output improves. Not because you made exceptions for some people. Because you built a system that works for everyone.",
-    activeZones: [0, 1, 2, 3, 4, 5],
+      "Performance becomes sustainable here. Clarity. Predictability. Communication that works for the full range of thinking styles. Masking drops. Energy is freed up for actual work. Strengths that were invisible become visible and usable. Attrition falls. Engagement rises. Output improves. Not because you made exceptions for some people. Because you built a system that works for everyone.",
+    activeZones: [0, 1, 2, 3],
     newZone: 3,
+    callout: "Retention up. Masking down. Output sustained.",
+    calloutZone: 3,
+  },
+  {
+    heading: "Overstretch",
+    description:
+      "The cost starts showing up in your data here. Sickness absence rises. Engagement scores drop. Your best people go quiet. Neurodivergent employees are twice as likely to reach burnout. The reason is not their condition. It is an environment that keeps demanding more than it gives back. The strain is real. It stays invisible until it is not.",
+    activeZones: [0, 1, 2, 3, 4],
+    newZone: 4,
+    callout: "Absence rising. Cost building silently.",
+    calloutZone: 4,
+  },
+  {
+    heading: "Burnout",
+    description:
+      "Burnout is not a personal failure. It is the predictable end point of a system that did not adapt. The cost to UK employers averages £2,646 per person per year in lost productivity and absence. Neurodiversity related employment tribunals have risen 164% in four years. By the time you are managing burnout, you have already lost.",
+    activeZones: [0, 1, 2, 3, 4, 5],
+    newZone: 5,
+    callout: "£2,646 per person. Tribunals up 164%.",
+    calloutZone: 5,
   },
   {
     heading: "That is Neuroinclusive Performance",
@@ -76,10 +90,12 @@ const narrativeStages: NarrativeStage[] = [
       "The organisations that get this right do not just reduce risk. They retain people others lose. They unlock talent others cannot see. They build teams that think differently, solve problems faster, and stay longer. That is what we help you build.",
     activeZones: [0, 1, 2, 3, 4, 5],
     newZone: null,
+    callout: "This is what we help you build.",
+    calloutZone: 3, // peak zone
   },
 ];
 
-/* ── Bell‑curve geometry ───────────────────────────────────── */
+/* ── Bell-curve geometry ───────────────────────────────────── */
 
 const W = 600;
 const H = 300;
@@ -168,7 +184,7 @@ const InclusivePerformanceSection = () => {
           Most organisations are somewhere on this curve right now.
         </p>
         <p className="text-sm text-foreground/80 mb-8">
-          Click through to see where performance is being lost — and where it can be recovered.
+          Click through to see where performance is being lost and where it can be recovered.
         </p>
 
         {/* ── Chart ──────────────────────────────────────── */}
@@ -213,7 +229,7 @@ const InclusivePerformanceSection = () => {
                   />
                   {showLabel && (
                     <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
-                      {/* Tick line — stops at curve surface */}
+                      {/* Tick line */}
                       <line
                         x1={midX}
                         y1={topY - 2}
@@ -263,6 +279,53 @@ const InclusivePerformanceSection = () => {
                 </g>
               );
             })}
+
+            {/* Floating callout panel on chart */}
+            {activeStage >= 0 && currentNarrative && (() => {
+              const cZone = currentNarrative.calloutZone;
+              const cMidX = zoneMidX(cZone);
+              const cTopY = zoneTopY(cZone);
+              const cMidY = (cTopY + BASE_Y) / 2;
+              const calloutText = currentNarrative.callout;
+              const pillW = Math.max(calloutText.length * 5.5 + 24, 120);
+              const pillH = 22;
+
+              return (
+                <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
+                  {/* Shadow rect */}
+                  <rect
+                    x={cMidX - pillW / 2 + 1}
+                    y={cMidY - pillH / 2 + 1}
+                    width={pillW}
+                    height={pillH}
+                    rx="4"
+                    fill="rgba(0,0,0,0.08)"
+                  />
+                  {/* Pill background */}
+                  <rect
+                    x={cMidX - pillW / 2}
+                    y={cMidY - pillH / 2}
+                    width={pillW}
+                    height={pillH}
+                    rx="4"
+                    fill="white"
+                    stroke="#e0e0e0"
+                    strokeWidth="0.5"
+                  />
+                  {/* Callout text */}
+                  <text
+                    x={cMidX}
+                    y={cMidY + 4}
+                    textAnchor="middle"
+                    className="font-display font-bold"
+                    fill={LABEL_NAVY}
+                    fontSize="11"
+                  >
+                    {calloutText}
+                  </text>
+                </g>
+              );
+            })()}
 
             <text
               x={W / 2}
