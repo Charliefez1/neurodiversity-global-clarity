@@ -161,9 +161,15 @@ const InclusivePerformanceSection = () => {
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
           The model
         </p>
-        <h2 className="font-display font-bold text-2xl md:text-3xl tracking-tight leading-[1.1] mb-10 max-w-2xl">
+        <h2 className="font-display font-bold text-2xl md:text-3xl tracking-tight leading-[1.1] mb-4 max-w-2xl">
           Inclusive Performance
         </h2>
+        <p className="text-base font-display font-semibold text-foreground mb-1">
+          Most organisations are somewhere on this curve right now.
+        </p>
+        <p className="text-sm text-foreground/80 mb-8">
+          Click through to see where performance is being lost — and where it can be recovered.
+        </p>
 
         {/* ── Chart ──────────────────────────────────────── */}
         <div className="relative w-full">
@@ -190,7 +196,7 @@ const InclusivePerformanceSection = () => {
               const isActive = activeZoneSet.has(zi);
               const color = isActive ? zone.colorHex : "currentColor";
               const showLabel =
-                (currentNarrative?.newZone === zi && activeStage <= 5) || isFinal;
+                currentNarrative?.newZone === zi && activeStage <= 5;
               const topY = zoneTopY(zi);
               const midX = zoneMidX(zi);
 
@@ -207,30 +213,43 @@ const InclusivePerformanceSection = () => {
                   />
                   {showLabel && (
                     <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
+                      {/* Tick line — stops at curve surface */}
                       <line
                         x1={midX}
                         y1={topY - 2}
                         x2={midX}
-                        y2={FIXED_LABEL_Y + 14}
-                        stroke="#999"
+                        y2={FIXED_LABEL_Y + 22}
+                        stroke="#bbb"
                         strokeWidth="1"
-                        opacity="0.4"
+                        opacity="0.5"
                       />
+                      {/* Pill background */}
+                      <rect
+                        x={midX - (zone.label.length * 3.5 + 12)}
+                        y={FIXED_LABEL_Y - 10}
+                        width={zone.label.length * 7 + 24}
+                        height={zone.subLabel ? 30 : 20}
+                        rx="4"
+                        fill="white"
+                        stroke="#ddd"
+                        strokeWidth="0.5"
+                      />
+                      {/* Label text */}
                       <text
                         x={midX}
-                        y={FIXED_LABEL_Y}
+                        y={FIXED_LABEL_Y + 4}
                         textAnchor="middle"
                         className="font-display font-bold"
                         fill={LABEL_NAVY}
-                        fontSize={isFinal ? "10" : "11"}
+                        fontSize="10"
                         letterSpacing="0.06em"
                       >
                         {zone.label}
                       </text>
-                      {zone.subLabel && !isFinal && (
+                      {zone.subLabel && (
                         <text
                           x={midX}
-                          y={FIXED_LABEL_Y + 13}
+                          y={FIXED_LABEL_Y + 16}
                           textAnchor="middle"
                           fill={LABEL_NAVY}
                           fontSize="8"
