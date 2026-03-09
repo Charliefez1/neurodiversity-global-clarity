@@ -2317,6 +2317,266 @@ Understanding ADHD is therefore not about lowering expectations.
 
 It is about creating conditions where people can meet those expectations successfully.`,
   },
+  {
+    slug: "neurodivergent-children-cognitive-battery-classroom",
+    title: "Your Child Is Not Being Difficult. Their Brain Is Running on Empty.",
+    metaTitle: "Why Neurodivergent Children Struggle at School | Cognitive Battery Explained",
+    metaDescription: "Why neurodivergent children with ADHD, autism and dyspraxia struggle at school and fall apart at home. The cognitive battery explained for parents.",
+    excerpt: "For a neurodivergent child, sitting still and looking at the teacher can consume up to eighty per cent of their available cognitive resource. The body is working so hard on compliance that there is almost nothing left for learning.",
+    category: "Children & Young People",
+    readTime: "8 min read",
+    publishDate: "2026-03-09",
+    accentColor: "amber",
+    image: cognitiveBatteryImg,
+    content: `A parent told me recently that her son's school had described him as "switched off." Not engaging. Not trying. She knew that was not true. What she did not have was the language to explain why. Here it is.
+
+For a child without additional needs, sitting still and looking at the teacher uses roughly five per cent of their cognitive capacity. It is automatic. Background noise. They can think about the lesson because holding their body in that position costs almost nothing.
+
+For a neurodivergent child, one with ADHD, autism, dyspraxia, or a combination, the same task can consume up to eighty per cent of their available cognitive resource. Staying in the chair. Not fidgeting. Not humming. Looking like they are paying attention. The body is working so hard on compliance that there is almost nothing left for learning.
+
+This is not laziness. It is not attitude. It is a brain doing what brains do when the environment demands something it was not built to provide easily.
+
+The implications are significant.
+
+First, the child who appears disengaged is often the most engaged child in the room. The movement is the listening. The humming is the processing. The looking away is the focus. What adults read as non-compliance is frequently the child's only available strategy for staying present at all.
+
+Second, when that child gets home, they have nothing left. The restraint collapse that parents see at four o'clock, the meltdown, the shutdown, the explosion over something small, is not evidence of a problem at home. It is the direct consequence of six hours of enormous effort that nobody at school saw or recognised.
+
+This matters for how we talk to children at the end of the school day. It matters for homework expectations. It matters for how we structure the hour after school. A neurodivergent child who has spent the day performing normality needs decompression before anything else. Not more demands. Not an interrogation about what happened. Space. Low stimulus. Time to come back to themselves.
+
+Third, and most importantly, the children who are not yet identified are living this every day without any adjustment, any accommodation, or any recognition that what they are doing is hard. They are labelled dreamers, disruptive, or lazy. They are accumulating a picture of themselves as someone who cannot manage what everyone else finds simple. That picture does not wash off easily.
+
+One in five children in England has identified special educational needs. The NHS has 236,000 children on autism waiting lists. Another 549,000 waiting for ADHD assessment. Many of those children are in classrooms right now, burning through their cognitive battery on compliance, with nothing left for the education they are supposed to be receiving.
+
+Neuroaffirming practice is not special treatment. It is accessibility. If a child needs glasses to see the board, we do not describe that as giving them an advantage. The child who needs to pace, or wear headphones, or chew something to process a sentence is doing the same thing. They are using the tool that allows them to access the same outcome as everyone else.
+
+The question is not whether we can afford to make that adjustment. The question is what it costs when we do not.
+
+If you are a parent reading this, and something in it has landed, here is the most useful thing you can do today. When your child comes through the door this afternoon, do not ask how school was. Do not hand them anything to do. Give them twenty minutes of nothing. Let them decompress. Whatever you need from them after that will be infinitely more possible once they have had space to refill.
+
+They are not being difficult. They are exhausted. There is a difference.`,
+  },
+  {
+    slug: "neurodivergent-children-masking-mental-health",
+    title: "Masking Is Not Coping. It Is Debt.",
+    metaTitle: "Masking in Neurodivergent Children | Mental Health Impact",
+    metaDescription: "Masking in neurodivergent children with autism and ADHD. What it is, what it costs, and why the child who seems fine at school is often in crisis at home.",
+    excerpt: "A father described his daughter as two different children. At school, quiet, compliant, high-achieving. At home, in pieces. What she was doing has a name. Masking. And the cost is significant.",
+    category: "Children & Young People",
+    readTime: "9 min read",
+    publishDate: "2026-03-08",
+    accentColor: "rose",
+    image: maskingMentalHealthImg,
+    content: `A father described his daughter to me as "two different children." At school, quiet, compliant, high-achieving. At home, in pieces.
+
+The school could not understand why there was a problem. They had never seen one. His daughter had made sure of that.
+
+What she was doing has a name. Masking. The suppression of natural neurodivergent behaviour to fit into an environment that was not designed for her. She had spent years watching other children, learning the scripts, copying the body language, performing the version of herself that the school could accept. She was very good at it. She was also paying a price that nobody could see.
+
+Masking is extremely common in neurodivergent children, particularly in autistic girls. Research from UCL found that children describe it as stressful, confusing, and tiring. It often becomes automatic early in life. Children learn to hide before they even have language for what they are hiding from.
+
+The cost accumulates silently.
+
+Higher levels of masking are consistently associated with worse mental health. More anxiety. More depression. More exhaustion. And in research that every parent of a neurodivergent teenager needs to know: masking is independently associated with suicidal ideation. The pathway is not complicated. A child masks to survive. The masking exhausts them. They lose track of who they actually are. They feel trapped. That is the psychological state most strongly linked to crisis.
+
+This is not theoretical. Seventy-two per cent of autistic adults in a UK study scored above the psychiatric cut-off for suicide risk. Twenty per cent of autistic children and teenagers report suicidal ideation in the past year. One in ten reports an attempt. The equivalent figures in the general adolescent population are five per cent and one per cent.
+
+These outcomes are not caused by being neurodivergent. They are caused by years of being asked to perform a version of yourself that is not you.
+
+There is a specific question parents ask that I want to address directly, because I hear it often. Should I teach my child coping strategies that help them manage in environments that are not designed for them?
+
+The honest answer is: some, yes. We do not live in a world that has been rebuilt for neurodivergent people. Children need tools. But there is a difference between a genuine coping strategy, something that reduces load, builds capacity, and protects the child, and a masking strategy, which is something that hides the child's real experience while the cost accumulates underneath.
+
+Compliance strategies. Sitting still techniques. Learning to suppress a stim. These are masking. They borrow from tomorrow to pay for today.
+
+What helps instead is reducing the need to mask in the first place. A home that does not require performance after school. One trusted adult who sees the real child and does not require them to pretend. Explicit permission to be themselves in at least one space.
+
+And where school is concerned, the legal position is clear. Schools are required to make reasonable adjustments under the Equality Act. They must respond to need, not just to diagnosis. A child does not have to wait years on a waiting list before a school has a legal obligation to notice that they are struggling.
+
+The father whose daughter was two different children told me she had recently been diagnosed at thirteen. The psychiatrist who assessed her said she had been masking since at least the age of five. Eight years of debt. Eight years of borrowing from her own wellbeing to pay for the appearance of being fine.
+
+She is not fine. She is very tired. And she deserves environments that do not cost her this much.
+
+If your child is holding it together at school and falling apart at home, they are not making a choice. They are showing you where they are safe enough to stop performing. That is not a parenting failure. That is evidence that home is the safer place. Keep it that way.`,
+  },
+  {
+    slug: "adhd-dopamine-risk-adolescence-neurodivergent",
+    title: "Dopamine Is Not the Problem. The Environment Is.",
+    metaTitle: "ADHD Dopamine and Risk-Taking in Adolescence | What Parents Need to Know",
+    metaDescription: "ADHD dopamine dysregulation and risk-taking in adolescence. What neurodivergent young people are actually seeking and what parents need to know to keep them safe.",
+    excerpt: "For many neurodivergent people, particularly those with ADHD, the dopamine system does not work in a steady, reliable way. So the brain searches. It goes looking for stimulation to reach the level where it can function.",
+    category: "Children & Young People",
+    readTime: "10 min read",
+    publishDate: "2026-03-07",
+    accentColor: "indigo",
+    image: dopamineRiskImg,
+    content: `Let us start with a drug. One that every person on the planet uses. One that is also the mechanism social media and gaming companies use to keep children scrolling for hours.
+
+The drug is dopamine.
+
+Dopamine is not a happiness chemical. It is a motivation and reward signal. It tells the brain what to pay attention to, what to repeat, what to pursue. When it works in a steady, reliable way, you can start tasks, sustain them, and finish them without thinking much about it.
+
+For many neurodivergent people, particularly those with ADHD, the dopamine system does not work this way. The brain does not get a steady signal. So it searches. It goes looking for stimulation to reach the level where it can function. This is called dopamine searching, and it is not a character flaw. It is a neurological reality.
+
+In younger children, dopamine searching looks like noise, movement, constant talking, refusing boring tasks, bouncing between extremes. It can look like chaos. In adolescence, the same drive finds different outlets. Riskier ones.
+
+Speed. Physical danger. Intense relationships. Cannabis and alcohol. Gambling. Gaming to exhaustion. Sexual risk-taking. Confrontation. Anything that produces a fast, strong dopamine hit fills the gap that nothing ordinary can fill.
+
+I want to be clear about what this means and what it does not mean.
+
+It does not mean neurodivergent young people are destined for risky behaviour. It does not mean their character is weak or their values are absent. It means they are operating with a neurological system that is constantly seeking the level of stimulation it needs to function, and that adolescence opens up access to a range of powerful stimuli that were not available in childhood.
+
+What it means for parents is that the standard disciplinary response, punishment without understanding, almost always makes things worse. Punishment increases shame. Shame increases the pressure that produces the behaviour in the first place. The cycle continues.
+
+Understanding the mechanism is the starting point for addressing the risk.
+
+The same dopamine architecture that produces the risk-seeking also produces creativity, courage, hyperfocus, and the willingness to attempt things other people would not. You cannot remove one without diminishing the other. The goal is not to suppress the drive. It is to understand it and provide better outlets for it.
+
+Smartphones and digital environments deserve a specific mention here. Every notification, every swipe, every piece of new content creates a small dopamine response. Not because something meaningful has happened but because something might. That unpredictability is by design. The companies that built these platforms understand exactly what they are optimising for. For a neurodivergent child whose dopamine regulation already works differently, highly stimulating, reward-driven technology is harder to disengage from than it is for their peers. This is not weakness. It is the intersection of a designed system and a neurological difference.
+
+The answer is not abrupt removal. That causes dysregulation. The answer is gradual transition, replacement rather than removal, and honest conversation about what screens are doing rather than treating them purely as a threat.
+
+Puberty adds another layer. Hormonal changes directly affect dopamine regulation. For girls with ADHD, oestrogen fluctuations specifically affect the dopamine system, often making symptoms that were manageable in primary school acute at secondary. Many girls are first identified as having a problem during puberty, not because something new started then, but because the coping strategies they had built collapsed under the additional load.
+
+This is worth knowing before it happens. The cliff edge at secondary school transition is real and well documented. The strategies that worked in Year 5 do not automatically scale to Year 8.
+
+A parent told me recently that they had spent two years being told their teenager's escalating behaviour was attitude. Normal adolescent rebellion. Just a phase. It was not a phase. It was a neurodivergent nervous system entering adolescence without a framework, without support, and without anyone around them who understood what was happening.
+
+They are doing better now. Not because the dopamine system changed. Because finally someone explained it.`,
+  },
+  {
+    slug: "parent-carer-burnout-neurodivergent-children-support",
+    title: "No One Told Me It Would Be This Hard. No One Told Me I Was Not Alone.",
+    metaTitle: "Parent Carer Burnout | Raising Neurodivergent Children",
+    metaDescription: "The real impact of raising a neurodivergent child on parents and families. Statistics on parent carer burnout, relationship breakdown, and what actually helps.",
+    excerpt: "Fifty-four per cent of parents of neurodivergent children have been treated by a GP for depression, anxiety, or stress. Sixty-two per cent have given up work or reduced hours. These are not figures from a small campaign survey.",
+    category: "Children & Young People",
+    readTime: "9 min read",
+    publishDate: "2026-03-06",
+    accentColor: "emerald",
+    image: parentCarerBurnoutImg,
+    content: `A parent came to a session I ran recently. She had two children, both in assessment processes. She had reduced her hours at work to manage the appointments, the school meetings, the crises. She had not told her manager the full picture because she was not sure how it would be received.
+
+She sat in the room and said, very quietly: I did not know other people were living this.
+
+That sentence. That is the one that tells me why this work matters.
+
+Because here is what the data actually shows about parents of neurodivergent children in the UK.
+
+Fifty-four per cent have been treated by a GP for depression, anxiety, or stress. Twenty-eight per cent show probable clinical depression. Sixty-two per cent have given up work or reduced hours, losing an average of 21,174 pounds per year. Half have gone into debt in the last year to pay for basics. Forty-three per cent have gone without heating. Thirty-two per cent have gone without food. Forty per cent have experienced relationship breakdown since their child's diagnosis.
+
+These are not figures from a small campaign survey. They are from large-scale research with thousands of families. They describe a population in crisis. A population that is, largely, invisible.
+
+What makes it harder is that the systems supposed to help are often experienced as adversarial. Families describe fighting for every assessment, every plan, every piece of support. Local authorities spend over 200 million pounds a year defending tribunal appeals, and lose ninety-nine per cent of the cases that reach a full hearing. That is not a system making occasional errors. That is a system that routinely makes decisions it knows to be indefensible, and spends public money defending them.
+
+The parent doing all of this is also, usually, trying to hold down a job, maintain a relationship, be present for other children, and function as a person. The load is not evenly distributed. Mothers and primary carers carry the information, the advocacy, the emotional labour, and the daily management. Fathers are less likely to be offered support and more likely to disengage quietly. That asymmetry damages relationships not because either person is wrong but because the system defaults to one parent and effectively excludes the other.
+
+And then there are the questions nobody asks out loud. The ones that live at three in the morning.
+
+Am I the problem? Is this my fault? Will they be OK? My child is in pain and I cannot fix it. The fighting is destroying me. My relationship is not surviving this. My other children are paying for this. I am scared of what my child might do to themselves. These are not dramatic fears. They are the ordinary night-time thoughts of parents who are carrying something enormous with very little support.
+
+What actually helps is rarely what is offered.
+
+Generic self-care advice does not help. You cannot meditate out of a broken system. Suggesting that a parent who has not slept properly in three years should try yoga is not a useful intervention.
+
+What helps is being in a room, or a group, or a conversation, where you do not have to explain from the beginning. Where the reality of your experience is already understood. Where someone else says yes, that happened to us too, and here is what we did.
+
+Peer support from other parents in the same situation is consistently identified as the highest-value form of support available to this population. Not because other parents have better advice than professionals. Because they do not require you to justify why this is hard. You are simply already understood.
+
+This is what is missing. Not more leaflets. Not more waiting lists. Not more professionals who treat parents as problems to be managed alongside their children. Community. Mutual recognition. Honest information without false reassurance.
+
+The parent who did not know other people were living this left that session with something she had not had before. Not a solution. Not a plan. The knowledge that she was not alone.`,
+  },
+  {
+    slug: "late-diagnosis-neurodivergence-children-adults-impact",
+    title: "The Diagnosis Came Late. The Damage Came First.",
+    metaTitle: "Late Diagnosis of Neurodivergence | Impact on Children and Adults",
+    metaDescription: "The impact of late diagnosis of autism and ADHD in children and adults. What delayed identification costs in mental health, relationships, and life outcomes.",
+    excerpt: "The NHS autism assessment waiting list stands at 236,225 open referrals. In some parts of the country, children wait three to eight years for an assessment. These are not waiting lists. They are years of a child's life spent without understanding.",
+    category: "Children & Young People",
+    readTime: "10 min read",
+    publishDate: "2026-03-05",
+    accentColor: "sky",
+    image: lateDiagnosisImg,
+    content: `A woman shared something in a session I ran recently. When her son was five years old, a psychologist wrote in a report that he was above average intelligence but would likely struggle in adolescence, possibly falling into negative behaviours. Someone in her family used that report to blame her. Said his difficulties were just like his mother.
+
+He is twelve now. He plays piano at a music school. He has won regional competitions. He reads voraciously. He is thriving.
+
+What changed was not him. What changed was the environment around him, shaped by a mother who refused to accept the first framing and found a better one.
+
+That story contains several things that are true simultaneously. Children can thrive when someone around them sees them clearly. Early labels, carelessly applied, cause harm. And the systems that are supposed to identify and support neurodivergent children are failing at both scale and speed.
+
+The NHS autism assessment waiting list stands at 236,225 open referrals. In some parts of the country, children wait three to eight years for an assessment. Another 549,000 people are waiting for ADHD assessment. The children's commissioner has reported children waiting an average of two and a half years to see a school nurse.
+
+These are not waiting lists. They are years of a child's life spent without understanding, without appropriate support, and without a framework that explains to them why they experience the world differently from their peers.
+
+What happens in those years matters enormously.
+
+A child who spends their primary school years being told they are lazy, or naughty, or not trying hard enough, is not just failing to receive support. They are receiving a consistent message about who they are. That message becomes internalised.
+
+Children who were never identified or supported describe in research a lifetime of shame, negative self-concept, and low self-esteem. The diagnosis, when it eventually arrives, can bring relief. But it arrives decades too late to prevent the damage.
+
+Late-diagnosed autistic women described in UCL research losing their sense of identity through years of masking. Women with ADHD diagnosed in adulthood describe decades of being told they were lazy, careless, and not trying hard enough. One in four autistic adults received at least one psychiatric diagnosis before their autism was identified that they now consider a misdiagnosis. One in three autistic women.
+
+The misdiagnosis is not a minor inconvenience. When an autistic young woman is labelled with borderline personality disorder, she is then viewed as manipulative rather than as a person in distress. She is treated accordingly. The treatment may cause harm. The correct support is never delivered.
+
+And then there is the intergenerational pattern.
+
+Many parents discover their own neurodivergence through their child's diagnostic journey. They sit in an assessment and recognise every item on the checklist. Adult ADHD diagnosis rates increased twenty to fifty fold between 2000 and 2023. The parents being diagnosed now in their thirties and forties are the children the system failed twenty or thirty years ago.
+
+This matters because it is not just a personal story. It is a structural pattern. Parents who were missed raise children who are missed, in a system that has not fundamentally changed. The shame from a previous generation gets transmitted before anyone has a name for it.
+
+A diagnosis does not fix this. But it changes it. Understanding yourself, understanding why you work the way you do, understanding that the difficulties you experienced were not character flaws but neurological differences, that matters. It changes how you parent. It changes what you can offer a child who has the same profile you had, but now has a parent who finally understands.
+
+One question that comes up often is whether seeking a diagnosis is worth it. Worth the waiting. Worth the cost, if going private. Worth the emotional upheaval of having your entire history reframed.
+
+The honest answer is that it depends on what you do with it. A diagnosis on its own changes nothing. What changes things is the understanding that follows. The framework. The permission to stop measuring yourself against a standard that was never designed for you.
+
+For most people who pursue it, the answer is yes. Worth it. Not because the label itself has magic, but because understanding has value. And because children who are understood earlier have better outcomes. Consistently. Across the evidence.
+
+The system is not going to fix itself quickly. The waiting lists will not shrink overnight. But within what is possible today, knowing what you are dealing with is the beginning of every useful response.`,
+  },
+  {
+    slug: "neurodivergent-children-self-harm-suicide-risk-exploitation",
+    title: "The Dark Side Nobody Talks About in Parent Workshops",
+    metaTitle: "Self-Harm, Suicide Risk and Exploitation in Neurodivergent Children",
+    metaDescription: "Self-harm, suicide risk and exploitation in neurodivergent children with autism and ADHD. What the evidence shows and what parents need to know to keep their children safe.",
+    excerpt: "Most workshops for parents of neurodivergent children cover behaviour strategies, school systems, and diagnosis processes. This covers the things parents actually lie awake thinking about. Because the research shows outcomes that are significantly worse than the general population.",
+    category: "Children & Young People",
+    readTime: "11 min read",
+    publishDate: "2026-03-04",
+    accentColor: "slate",
+    image: darkSideParentImg,
+    content: `Most workshops for parents of neurodivergent children cover behaviour strategies, school systems, and diagnosis processes. I am going to cover something different. I am going to cover the things parents actually lie awake thinking about. Because the research on neurodivergent children and young people shows outcomes that are significantly worse than the general population across a range of serious measures. Parents deserve to know this. Not to be frightened, but to be prepared. Frightened parents cannot act. Informed parents can.
+
+Self-harm first, because it is the most misunderstood. Self-harm in neurodivergent young people is significantly more common than in the general adolescent population. It frequently presents not as a mental health crisis but as a regulation strategy. Physical pain releases endorphins. For a nervous system that is overloaded and has no other available tool, that brief regulation is functional. The young person is not trying to die. They are trying to survive a moment that feels unsurvivable.
+
+This changes what the right response looks like. Panic, interrogation, and immediate restriction are the natural parental responses. They are also the responses most likely to teach the child to hide it better next time. When a young person discloses self-harm, the most important thing is to stay calm, stay close, and not make the moment of disclosure the worst moment of the experience. That is what keeps the conversation open. And the conversation being open is what makes every subsequent intervention possible.
+
+Girls who are diagnosed late are at specific elevated risk. Depression, self-harm, and anxiety in late-diagnosed autistic females are documented in the research as downstream consequences of years of masking, feeling misunderstood, and having no framework for their own experience.
+
+On suicide, the statistics are unambiguous and they need to be stated plainly. Autistic people are up to nine times more likely to die by suicide than the general population. Twenty per cent of autistic children and teenagers report suicidal ideation in the past year. Ten per cent report attempts. The general adolescent population figures are five per cent and one per cent respectively.
+
+These outcomes are not caused by being neurodivergent. They are caused by what neurodivergent children are asked to do, to mask, to comply, to fit, for years, without support, in environments that cause them harm. The pathway runs: mask to survive, exhaust yourself, lose yourself, feel trapped, consider ending it. Every point on that pathway is an intervention point. The earliest interventions have the most impact.
+
+On exploitation, the information parents need is also not widely shared. UK Government statutory guidance explicitly identifies neurodivergent children as at heightened risk of criminal exploitation and grooming. This is not campaigning language. It is government safeguarding guidance. Neurodivergent young people are less likely to have been taught about consent or healthy relationships, making them more susceptible to approaches that exploit the desire for connection.
+
+Autistic females are over twice as likely to have consented to an unwanted sexual event. The vulnerability here is not naivety in the simple sense. It is a cluster of factors: difficulty reading others' intentions, social hunger after years of isolation, a history of having their own judgement overridden, and active exploitation of the need for belonging.
+
+The specific form of exploitation most associated with this population is what the National Autistic Society calls mate crime: someone presents as a friend to a young person who is starved of genuine social connection. The exploitation follows.
+
+What parents need from this section is not a list of warning signs, though those have value. What they need is the willingness to have explicit, direct, and repeated conversations with their child about what safe connection actually feels like, as opposed to what it looks like. About the difference between someone who wants to know them and someone who wants to use them.
+
+And finally, the criminal justice system.
+
+Eighty per cent of children cautioned or sentenced in the youth justice system have special educational needs. The pathway from unmet need to school exclusion to exploitation to custody is documented and well evidenced. It is not inevitable. But it is predictable, and it is preventable when intervention comes earlier.
+
+What all of this has in common is the same upstream driver. A child whose needs were not met early enough, who has been managing an impossible load for years, who has reached the point where that load breaks something.
+
+None of these outcomes are sealed. A child who is understood earlier, whose environment is adjusted even partially, who has one adult who genuinely sees them, that child has dramatically better outcomes. The evidence on this is consistent and clear.
+
+This is hard information. You needed it anyway.`,
+  },
 ];
 
 export const getBlogPost = (slug: string): BlogPost | undefined =>
