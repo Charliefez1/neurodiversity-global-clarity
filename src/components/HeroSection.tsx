@@ -175,21 +175,6 @@ const HeroSection = () => {
               </a>
             </div>
 
-            {/* Ask Rich explainer + CTA */}
-            <div className="mt-6 rounded-lg border border-primary-foreground/10 bg-primary-foreground/[0.04] p-5">
-              <p className="text-sm text-primary-foreground/80 leading-relaxed">
-                <strong className="text-[hsl(20,100%,55%)] font-display font-bold">{t("hero.askRichTitle")}</strong>{" "}
-                {t("hero.askRichDesc")}
-              </p>
-              <a
-                href="/ask-rich"
-                className="mt-4 inline-flex items-center gap-2.5 px-8 py-3.5 rounded-lg bg-[hsl(20,100%,55%)] text-white font-display font-bold text-sm shadow-lg shadow-[hsl(20,100%,55%)]/30 hover:shadow-xl hover:shadow-[hsl(20,100%,55%)]/45 hover:scale-[1.02] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[hsl(20,100%,55%)]"
-              >
-                <Sparkles size={16} aria-hidden="true" />
-                {t("hero.askRichCta")}
-                <ArrowRight size={16} aria-hidden="true" />
-              </a>
-            </div>
           </div>
 
           {/* Training Card */}
