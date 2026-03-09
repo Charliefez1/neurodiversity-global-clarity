@@ -17,7 +17,7 @@ const stages: Stage[] = [
     label: "UNDERLOAD",
     heading: "Underload",
     description:
-      "Capability is there. The role just does not use it. Strengths go unnoticed. The work is too small for the person. Low demand, low performance, high untapped potential.",
+      "One in five of your workforce is neurodivergent. Many of them are in the wrong role, at the wrong level, doing work that uses a fraction of what they can do. Capability is present. The organisation just cannot see it. That is not a talent shortage. That is a design problem.",
     color: "text-red-500",
     colorHex: "#ef4444",
   },
@@ -25,7 +25,7 @@ const stages: Stage[] = [
     label: "AWARENESS",
     heading: "Awareness",
     description:
-      "Understanding begins. People feel seen and heard. Psychological safety starts to build. This is the foundation. Not the destination.",
+      "Most organisations stop here. A training day. An awareness week. A policy that sits in a drawer. Awareness without action does not reduce attrition. It does not reduce stress. It does not unlock performance. It just tells people you know the problem exists.",
     color: "text-amber-500",
     colorHex: "#f59e0b",
   },
@@ -34,24 +34,15 @@ const stages: Stage[] = [
     subLabel: "Without system change",
     heading: "Individual Adjustments",
     description:
-      "Support improves, but only for the person who asked. The system stays the same. Performance rises briefly but remains fragile. This is not inclusion. It is firefighting.",
+      "This is where most HR teams operate. One person asks. One adjustment is made. The system stays the same. It helps that individual. It does not help the next person, or the one after. And it puts the entire burden on the person who already has the least capacity to carry it. This is not inclusion. It is case management.",
     color: "text-lime-500",
     colorHex: "#84cc16",
-  },
-  {
-    label: "CULTURE AND FIT",
-    subLabel: "System change for all",
-    heading: "Culture and Fit",
-    description:
-      "Fit, safety, clarity, and healthy challenge. Strengths are used. Masking drops. Energy becomes sustainable. This is the neuroinclusive performance zone.",
-    color: "text-green-500",
-    colorHex: "#22c55e",
   },
   {
     label: "OVERSTRETCH",
     heading: "Overstretch",
     description:
-      "The system stops flexing. Demand rises faster than support. High effort hides the growing strain. Performance looks steady. The cost is invisible until it is not.",
+      "This is where the cost starts showing up in your data. Sickness absence rises. Engagement scores drop. Your best people go quiet. Neurodivergent employees are twice as likely to reach burnout. The reason is not their condition. It is an environment that keeps demanding more than it gives back. The strain is real. It is just invisible until it is not.",
     color: "text-amber-500",
     colorHex: "#f97316",
   },
@@ -59,15 +50,24 @@ const stages: Stage[] = [
     label: "BURNOUT",
     heading: "Burnout",
     description:
-      "Overload and misfit. The nervous system is overwhelmed. Performance falls sharply. Burnout is not a personal failure. It is the predictable result of an environment that did not adapt.",
+      "Burnout is not a personal failure. It is the predictable end point of a system that did not adapt. The cost to UK employers averages £2,646 per person per year in lost productivity and absence. Neurodiversity-related employment tribunals have risen 164% in four years. By the time you are managing burnout, you have already lost.",
     color: "text-red-500",
     colorHex: "#ef4444",
+  },
+  {
+    label: "CULTURE AND FIT",
+    subLabel: "System change for all",
+    heading: "Culture and Fit",
+    description:
+      "This is where performance becomes sustainable. Clarity. Predictability. Communication that works for the full range of thinking styles. Masking drops. Energy is freed up for actual work. Strengths that were invisible become visible and usable. Attrition falls. Engagement rises. Output improves. Not because you made exceptions for some people. Because you built a system that works for everyone.",
+    color: "text-green-500",
+    colorHex: "#22c55e",
   },
   {
     label: "",
     heading: "That is Neuroinclusive Performance",
     description:
-      "If adjustments only help one person, they are not inclusion. They are firefighting. Inclusion is when the system flexes so no one has to ask in the first place. Clarity, predictability, communication, leadership behaviours, and workload patterns built for the full spectrum of thinking styles.",
+      "The organisations that get this right do not just reduce risk. They retain people others lose. They unlock talent others cannot see. They build teams that think differently, solve problems faster, and stay longer. That is what we help you build.",
     color: "text-accent",
     colorHex: "#22c55e",
   },
