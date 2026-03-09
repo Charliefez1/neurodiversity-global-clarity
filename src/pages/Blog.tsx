@@ -54,9 +54,10 @@ const Blog = () => {
               </div>
               <div className="p-8 lg:p-12 flex flex-col justify-center">
                 <div className="flex flex-wrap items-center gap-3 mb-5">
-                  <span className="px-3 py-1 rounded-full text-xs font-display font-bold bg-accent/10 text-accent">
-                    {featured.category}
-                  </span>
+                    <span className={`px-3 py-1 rounded-full text-xs font-display font-bold ${featured.category === "White Paper" ? "bg-primary/10 text-primary" : "bg-accent/10 text-accent"}`}>
+                      {featured.category === "White Paper" && <FileText size={11} className="inline mr-1 -mt-0.5" />}
+                      {featured.category}
+                    </span>
                   <span className="text-xs text-muted-foreground flex items-center gap-1">
                     <Clock size={12} /> {featured.readTime}
                   </span>
