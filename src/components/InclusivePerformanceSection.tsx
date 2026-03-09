@@ -36,7 +36,7 @@ const narrativeStages: NarrativeStage[] = [
       "One in five of your workforce is neurodivergent. Many are in the wrong role, at the wrong level, doing work that uses a fraction of what they can do. Capability is present. The organisation cannot see it. That is not a talent shortage. That is a design problem.",
     activeZones: [0],
     newZone: 0,
-    callout: "Talent invisible to the organisation",
+    callout: "1 in 5 of your workforce. Capability unseen.",
     calloutZone: 0,
   },
   {
