@@ -1,5 +1,5 @@
-import { useState, useCallback } from "react";
-import { ArrowRight, RotateCcw } from "lucide-react";
+import { useState, useCallback, useEffect, useRef } from "react";
+import { ArrowRight, ArrowLeft, RotateCcw, Pause, Play } from "lucide-react";
 
 /* ── Zone data (visual positions on curve, left to right) ──── */
 
