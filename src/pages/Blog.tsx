@@ -100,7 +100,8 @@ const Blog = () => {
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="px-2.5 py-0.5 rounded-full text-xs font-display font-bold bg-accent/10 text-accent">
+                    <span className={`px-2.5 py-0.5 rounded-full text-xs font-display font-bold ${post.category === "White Paper" ? "bg-primary/10 text-primary" : "bg-accent/10 text-accent"}`}>
+                      {post.category === "White Paper" && <FileText size={10} className="inline mr-1 -mt-0.5" />}
                       {post.category}
                     </span>
                   </div>
