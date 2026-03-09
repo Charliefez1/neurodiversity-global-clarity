@@ -59,13 +59,40 @@ const problemCards = [
   { text: "Generic diversity training where neurodiversity appears as one small module", icon: BookOpen },
 ];
 
-const differenceAreas = [
-  { title: "Leadership behaviour", icon: Users, colour: NEURO_COLOURS[0] },
-  { title: "Communication structures", icon: Settings, colour: NEURO_COLOURS[1] },
-  { title: "Team dynamics", icon: Briefcase, colour: NEURO_COLOURS[2] },
-  { title: "Recruitment processes", icon: Target, colour: NEURO_COLOURS[3] },
-  { title: "Performance expectations", icon: TrendingUp, colour: NEURO_COLOURS[4] },
-  { title: "Workplace environments", icon: Wrench, colour: NEURO_COLOURS[0] },
+const approachPillars = [
+  {
+    title: "Diagnose the system, not the person",
+    description: "We audit how your organisation communicates, manages, and measures performance — identifying where neurodivergent talent is being lost to design, not deficit.",
+    icon: Target,
+    colour: NEURO_COLOURS[0],
+  },
+  {
+    title: "Train for behaviour change, not just awareness",
+    description: "Every session is facilitator-led, interactive, and grounded in real workplace scenarios. We do not lecture. We equip people with tools they use the next day.",
+    icon: GraduationCap,
+    colour: NEURO_COLOURS[1],
+  },
+  {
+    title: "Redesign structures that create friction",
+    description: "Recruitment processes, meeting formats, performance reviews, communication norms — we work with you to redesign the systems that silently exclude.",
+    icon: Settings,
+    colour: NEURO_COLOURS[2],
+  },
+  {
+    title: "Embed, measure, and sustain",
+    description: "Change that disappears after a workshop is not change. We build internal capability, track outcomes, and ensure neuroinclusion becomes part of how you operate.",
+    icon: TrendingUp,
+    colour: NEURO_COLOURS[3],
+  },
+];
+
+const whatWeChange = [
+  { label: "Leadership behaviour", icon: Users, colour: NEURO_COLOURS[0] },
+  { label: "Communication structures", icon: Settings, colour: NEURO_COLOURS[1] },
+  { label: "Team dynamics", icon: Briefcase, colour: NEURO_COLOURS[2] },
+  { label: "Recruitment processes", icon: Target, colour: NEURO_COLOURS[3] },
+  { label: "Performance management", icon: TrendingUp, colour: NEURO_COLOURS[4] },
+  { label: "Workplace environments", icon: Wrench, colour: NEURO_COLOURS[0] },
 ];
 
 const trainingProgrammes = [
