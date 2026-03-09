@@ -112,7 +112,7 @@ const AppContent = () => {
           <Route path="/sources" element={<Sources />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/feedback" element={<Feedback />} />
-          <Route path="/parents" element={<Parents />} />
+          
           <Route path="/for-employers" element={<ForEmployers />} />
           <Route path="/for-public-sector" element={<ForPublicSector />} />
           <Route path="/for-parents" element={<ForParents />} />
