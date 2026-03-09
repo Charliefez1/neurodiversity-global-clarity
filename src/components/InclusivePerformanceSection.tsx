@@ -45,7 +45,7 @@ const narrativeStages: NarrativeStage[] = [
       "Most organisations stop here. A training day. An awareness week. A policy that sits in a drawer. Awareness without action does not reduce attrition. It does not reduce stress. It does not unlock performance. It tells people you know the problem exists.",
     activeZones: [0, 1],
     newZone: 1,
-    callout: "Foundation only. Not performance.",
+    callout: "Only 38% feel their organisation gives meaningful support.",
     calloutZone: 1,
   },
   {
