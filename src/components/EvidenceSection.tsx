@@ -43,19 +43,19 @@ const testimonials = [
     quote: "The impact on retention has been remarkable. Our leadership team now thinks about talent completely differently.",
     author: "Head of People",
     org: "FTSE 250 Financial Services",
-    portrait: portrait1,
+    stat: { value: "23%", label: "reduction in turnover" },
   },
   {
     quote: "This changed how we design services and how our teams work together, not just what they know about neurodiversity.",
     author: "Director of Operations",
     org: "NHS Trust",
-    portrait: portrait2,
+    stat: { value: "40%", label: "increase in disclosure" },
   },
   {
     quote: "They understand the difference between ticking a box and actually making things better for neurodivergent people.",
     author: "Chief People Officer",
     org: "Global Technology Company",
-    portrait: portrait3,
+    stat: { value: "92%", label: "would recommend" },
   },
 ];
 
