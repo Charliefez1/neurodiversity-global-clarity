@@ -62,3 +62,6 @@ verify_jwt = false
 
 [functions.pathway-ask]
 verify_jwt = false
+
+[functions.blog-search]
+verify_jwt = false

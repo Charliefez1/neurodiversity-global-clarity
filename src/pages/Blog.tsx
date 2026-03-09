@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 
 import NewsHeadlines from "@/components/NewsHeadlines";
+import BlogSearch from "@/components/BlogSearch";
 import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
@@ -33,6 +34,9 @@ const Blog = () => {
           <p className="mt-5 text-sm md:text-base leading-relaxed opacity-80 max-w-[58ch]">
             Evidence-informed articles for HR professionals, managers, and neurodivergent individuals navigating work, inclusion, and performance.
           </p>
+          <div className="mt-8 max-w-3xl">
+            <BlogSearch />
+          </div>
         </div>
       </section>
 
