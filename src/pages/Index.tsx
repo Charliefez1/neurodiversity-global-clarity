@@ -45,7 +45,6 @@ const Index = () => {
       <NewsHeadlines />
       <HeroSection />
       <ServicesSection />
-      <NeuroFrameworkSection />
       <div
         className="relative bg-cover bg-top bg-no-repeat"
         style={{ backgroundImage: `url(${challengeBg})` }}
@@ -66,6 +65,7 @@ const Index = () => {
           <EvidenceSection />
         </div>
       </div>
+      <NeuroFrameworkSection />
       <AccessibilitySection />
       <FinalCTA />
       
