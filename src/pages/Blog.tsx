@@ -33,8 +33,6 @@ const Blog = () => {
           </h1>
           <p className="mt-5 text-sm md:text-base leading-relaxed opacity-80 max-w-[58ch]">
             Evidence-informed articles for HR professionals, managers, and neurodivergent individuals navigating work, inclusion, and performance.
-          <p className="mt-5 text-sm md:text-base leading-relaxed opacity-80 max-w-[58ch]">
-            Evidence-informed articles for HR professionals, managers, and neurodivergent individuals navigating work, inclusion, and performance.
           </p>
           <div className="mt-8 max-w-3xl">
             <BlogSearch />
