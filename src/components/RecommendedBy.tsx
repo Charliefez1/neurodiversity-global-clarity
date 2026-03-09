@@ -1,4 +1,4 @@
-import { ArrowRight, Quote } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import nhsBtLogo from "@/assets/logos/nhs-bt.png";
 import smartestLogo from "@/assets/logos/smartest-energy-full.png";
@@ -8,7 +8,7 @@ import agillioLogo from "@/assets/logos/agillio.png";
 import acasLogo from "@/assets/logos/acas.png";
 import kyndrylLogo from "@/assets/logos/kyndryl.png";
 import fareshareLogo from "@/assets/logos/fareshare.png";
-import portrait4 from "@/assets/testimonials/portrait-4.jpg";
+import { NEURO_COLOURS } from "@/data/neuroColours";
 
 const partners = [
   { name: "NHS Blood and Transplant", logo: nhsBtLogo },
@@ -44,42 +44,56 @@ const RecommendedBy = () => (
       </Link>
     </div>
 
-    {/* Featured Client - reimagined */}
+    {/* Featured Client — editorial style */}
     <div className="mx-auto max-w-wide px-6 lg:px-10 pb-10 lg:pb-14">
       <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-6">
         March 26' Featured client
       </p>
-      <div className="group relative rounded-xl border border-primary-foreground/12 overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500">
-        {/* Background portrait */}
-        <div className="absolute inset-0 bg-primary rounded-xl" />
+      <div className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.06] overflow-hidden">
+        {/* NEURO accent bar */}
+        <div className="h-1" style={{ backgroundColor: NEURO_COLOURS[4] }} />
 
-        <div className="relative p-6 lg:p-8 lg:flex lg:items-start lg:gap-10">
-          <div className="shrink-0 mb-5 lg:mb-0">
+        <div className="p-7 lg:p-10">
+          <div className="flex items-center gap-4 mb-6">
             <img
               src={smartestLogoSvg}
               alt="Smartest Energy"
-              className="h-8 w-auto object-contain brightness-0 invert opacity-80"
+              className="h-7 w-auto object-contain brightness-0 invert opacity-70"
             />
+            <div className="w-px h-6 bg-primary-foreground/15" />
+            <span className="text-xs text-primary-foreground/50 font-display font-bold">Energy sector</span>
           </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex gap-3 mb-3">
-              <Quote size={18} className="text-accent shrink-0 mt-0.5" aria-hidden="true" />
-              <p className="text-sm text-primary-foreground/85 leading-relaxed italic">
-                "Neurodiversity Global delivered training that genuinely shifted how our managers think about performance and support. The sessions were practical, engaging, and led by people who truly understand the workplace challenges. It has had a lasting impact on our culture."
-              </p>
-            </div>
-            <div className="flex items-center gap-3 mt-4 lg:ml-[30px]">
-              <p className="text-xs text-primary-foreground/50">
-                Smartest Energy · Energy sector
-              </p>
-            </div>
-            <Link
-              to="/testimonials"
-              className="inline-flex items-center gap-2 text-accent font-display font-semibold text-xs mt-4 lg:ml-[30px] hover:gap-3 transition-all"
+
+          {/* Oversized quote mark */}
+          <span
+            className="font-display font-black text-[4.5rem] leading-none block select-none pointer-events-none -mb-6"
+            style={{ color: `${NEURO_COLOURS[4]}20` }}
+            aria-hidden="true"
+          >"</span>
+
+          <p className="text-base lg:text-lg text-primary-foreground/85 leading-[1.7] italic max-w-3xl">
+            Neurodiversity Global delivered training that genuinely shifted how our managers think about performance and support. The sessions were practical, engaging, and led by people who truly understand the workplace challenges. It has had a lasting impact on our culture.
+          </p>
+
+          <div className="mt-6 flex items-center gap-4">
+            <div
+              className="w-10 h-10 rounded-full flex items-center justify-center shadow-sm"
+              style={{ backgroundColor: `${NEURO_COLOURS[4]}20`, color: NEURO_COLOURS[4] }}
             >
-              Read the full story <ArrowRight size={13} aria-hidden="true" />
-            </Link>
+              <span className="font-display font-extrabold text-sm">S</span>
+            </div>
+            <div>
+              <p className="font-display font-bold text-sm text-primary-foreground">Smartest Energy</p>
+              <p className="text-xs text-primary-foreground/50">Energy sector</p>
+            </div>
           </div>
+
+          <Link
+            to="/testimonials"
+            className="inline-flex items-center gap-2 text-accent font-display font-semibold text-xs mt-6 hover:gap-3 transition-all"
+          >
+            Read the full story <ArrowRight size={13} aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </div>

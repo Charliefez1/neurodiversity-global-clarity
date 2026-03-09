@@ -1,11 +1,9 @@
-import { Quote, ArrowRight, Heart, GraduationCap, Building2, Cpu, Landmark } from "lucide-react";
+import { ArrowRight, Heart, GraduationCap, Building2, Cpu, Landmark } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 import { NEURO_COLOURS } from "@/data/neuroColours";
-import portrait1 from "@/assets/testimonials/portrait-1.jpg";
-import portrait2 from "@/assets/testimonials/portrait-2.jpg";
-import portrait3 from "@/assets/testimonials/portrait-3.jpg";
 
 const industries = [
   {
@@ -45,19 +43,19 @@ const testimonials = [
     quote: "The impact on retention has been remarkable. Our leadership team now thinks about talent completely differently.",
     author: "Head of People",
     org: "FTSE 250 Financial Services",
-    portrait: portrait1,
+    stat: { value: "23%", label: "reduction in turnover" },
   },
   {
     quote: "This changed how we design services and how our teams work together, not just what they know about neurodiversity.",
     author: "Director of Operations",
     org: "NHS Trust",
-    portrait: portrait2,
+    stat: { value: "40%", label: "increase in disclosure" },
   },
   {
     quote: "They understand the difference between ticking a box and actually making things better for neurodivergent people.",
     author: "Chief People Officer",
     org: "Global Technology Company",
-    portrait: portrait3,
+    stat: { value: "92%", label: "would recommend" },
   },
 ];
 
@@ -123,31 +121,8 @@ const EvidenceSection = () => {
         {/* Divider */}
         <div className="border-b border-white/10 mb-14 mt-10" />
 
-        {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((t, i) => (
-            <blockquote
-              key={i}
-              className="group rounded-xl border border-white/15 bg-white/10 backdrop-blur-md overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
-            >
-              <div className="p-7 flex flex-col min-h-[220px]">
-                <Quote size={24} className="text-accent/40 mb-3 shrink-0" aria-hidden="true" />
-                <p className="text-sm leading-relaxed text-white/80 flex-1 italic">"{t.quote}"</p>
-                <footer className="mt-5 pt-4 border-t border-white/10 flex items-center gap-3">
-                  <img
-                    src={t.portrait}
-                    alt={t.author}
-                    className="w-9 h-9 rounded-full object-cover ring-2 ring-accent/20 shadow-sm"
-                  />
-                  <div>
-                    <p className="font-display font-semibold text-sm text-white">{t.author}</p>
-                    <p className="text-xs text-white/50 mt-0.5">{t.org}</p>
-                  </div>
-                </footer>
-              </div>
-            </blockquote>
-          ))}
-        </div>
+        {/* Testimonials — carousel */}
+        <TestimonialCarousel testimonials={testimonials} variant="dark" />
       </div>
     </section>
   );
