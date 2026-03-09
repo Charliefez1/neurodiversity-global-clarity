@@ -114,17 +114,40 @@ const HeroSection = () => {
             </div>
 
             {/* Dot indicators */}
-            <div className="flex gap-2 mt-6" role="tablist" aria-label="Hero messages">
-              {messages.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => { setIsVisible(false); setTimeout(() => { setCurrentIndex(i); setIsVisible(true); }, 400); }}
-                  className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-accent w-6' : 'bg-primary-foreground/25 hover:bg-primary-foreground/40'}`}
-                  aria-label={`Message ${i + 1}`}
-                  aria-selected={i === currentIndex}
-                  role="tab"
-                />
-              ))}
+            <div className="flex items-center gap-6 mt-6">
+              <div className="flex gap-2" role="tablist" aria-label="Hero messages">
+                {messages.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => { setIsVisible(false); setTimeout(() => { setCurrentIndex(i); setIsVisible(true); }, 400); }}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-accent w-6' : 'bg-primary-foreground/25 hover:bg-primary-foreground/40'}`}
+                    aria-label={`Message ${i + 1}`}
+                    aria-selected={i === currentIndex}
+                    role="tab"
+                  />
+                ))}
+              </div>
+
+              {/* Rating badge */}
+              <div className="flex items-center gap-3 rounded-lg border border-accent/20 bg-accent/[0.06] px-4 py-2">
+                <div className="flex flex-col items-center leading-none">
+                  <span className="font-display font-extrabold text-2xl text-accent">9.7</span>
+                  <span className="text-[10px] text-primary-foreground/50 mt-0.5">/10</span>
+                </div>
+                <div className="h-8 w-px bg-primary-foreground/10" />
+                <div>
+                  <div className="flex gap-0.5 mb-1">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} viewBox="0 0 20 20" className="w-3.5 h-3.5 text-accent fill-current">
+                        <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.28l-4.77 2.43.91-5.32L2.27 6.62l5.34-.78L10 1z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-[11px] text-primary-foreground/60 leading-tight font-medium">
+                    Rated <span className="text-accent font-bold">Excellent</span>
+                  </p>
+                </div>
+              </div>
             </div>
 
             {/* Discovery CTA */}
