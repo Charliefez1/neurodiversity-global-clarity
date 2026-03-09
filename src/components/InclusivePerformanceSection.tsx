@@ -161,12 +161,18 @@ const InclusivePerformanceSection = () => {
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
           The model
         </p>
+        <h2 className="font-display font-bold text-2xl md:text-3xl tracking-tight leading-[1.1] mb-4 max-w-2xl">
+          Inclusive Performance
+        </h2>
         <p className="text-base font-display font-semibold text-foreground mb-1">
           Most organisations are somewhere on this curve right now.
         </p>
-        <p className="text-sm text-foreground/80 mb-6">
+        <p className="text-sm text-foreground/80 mb-8">
           Click through to see where performance is being lost — and where it can be recovered.
         </p>
+
+        {/* ── Chart ──────────────────────────────────────── */}
+        <div className="relative w-full">
           <span
             className="absolute top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[11px] font-display font-semibold tracking-wide whitespace-nowrap select-none"
             style={{ left: "-36px", color: LABEL_NAVY, opacity: 0.6 }}
