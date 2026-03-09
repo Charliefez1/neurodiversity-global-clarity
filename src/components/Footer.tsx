@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ndgLogo from "@/assets/logos/neurodiversity-global.png";
-import ContactForm from "@/components/ContactForm";
 
 const Footer = () => {
   const { t } = useTranslation();
