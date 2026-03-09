@@ -63,7 +63,7 @@ const narrativeStages: NarrativeStage[] = [
       "Performance becomes sustainable here. Clarity. Predictability. Communication that works for the full range of thinking styles. Masking drops. Energy is freed up for actual work. Strengths that were invisible become visible and usable. Attrition falls. Engagement rises. Output improves. Not because you made exceptions for some people. Because you built a system that works for everyone.",
     activeZones: [0, 1, 2, 3],
     newZone: 3,
-    callout: "Retention up. Masking down. Output sustained.",
+    callout: "63% wellbeing improvement reported by neuroinclusive employers.",
     calloutZone: 3,
   },
   {
