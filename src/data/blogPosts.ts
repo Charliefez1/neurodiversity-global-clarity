@@ -11,6 +11,9 @@ import outdatedSystemsImg from "@/assets/blog/outdated-systems-new.png";
 import screensDopamineImg from "@/assets/blog/screens-dopamine.png";
 import afterschoolMeltdownImg from "@/assets/blog/afterschool-meltdown.png";
 import systemFailingImg from "@/assets/blog/system-failing.png";
+import workplaceBreaksNdImg from "@/assets/blog/workplace-breaks-nd.jpg";
+import ndExplainedOrgsImg from "@/assets/blog/nd-explained-orgs.jpg";
+import adhdWorkplaceLeadersImg from "@/assets/blog/adhd-workplace-leaders.jpg";
 
 export interface BlogPost {
   slug: string;
