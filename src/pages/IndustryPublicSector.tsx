@@ -1,9 +1,8 @@
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import PageHero from "@/components/templates/PageHero";
-import PageSection from "@/components/templates/PageSection";
 import PageCTA from "@/components/templates/PageCTA";
-
+import PullQuote from "@/components/blocks/PullQuote";
 import KeyIssuesGrid from "@/components/blocks/KeyIssuesGrid";
 import WhatIsBreaking from "@/components/blocks/WhatIsBreaking";
 import PositivesBlock from "@/components/blocks/PositivesBlock";
@@ -15,6 +14,13 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { breadcrumbSchema, serviceSchema, faqSchema } from "@/components/JsonLd";
 import { Scale, MessageSquare, Wallet, Users, FileCheck } from "lucide-react";
+import { NEURO_COLOURS } from "@/data/neuroColours";
+import frontlineImg from "@/assets/industries/frontline-workers.png";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" as const } }),
+};
 
 const faqs = [
   { question: "Do you work with central government departments?", answer: "Yes. We've delivered training and consultancy across central government departments, arms-length bodies, and regulators." },
@@ -24,145 +30,114 @@ const faqs = [
 ];
 
 const keyIssues = [
-  {
-    title: "Compliance-driven culture",
-    description: "Inclusion is often framed as a legal requirement rather than a performance enabler. This limits its impact.",
-    icon: FileCheck,
-  },
-  {
-    title: "Performance management under scrutiny",
-    description: "Capability procedures are increasingly challenged under the Equality Act 2010 when neurodivergence isn't considered.",
-    icon: Scale,
-  },
-  {
-    title: "Decision-making hierarchy",
-    description: "Neurodivergent communication styles can be misread as confrontational or rigid in hierarchical structures.",
-    icon: MessageSquare,
-  },
-  {
-    title: "Budget constraints",
-    description: "Inclusion is seen as a cost centre rather than a risk reduction tool. The financial case isn't being made.",
-    icon: Wallet,
-  },
-  {
-    title: "Recruitment bottlenecks",
-    description: "Neurodivergent applicants are disproportionately screened out by traditional interview models.",
-    icon: Users,
-  },
+  { title: "Compliance-driven culture", description: "Inclusion is often framed as a legal requirement rather than a performance enabler. This limits its impact.", icon: FileCheck },
+  { title: "Performance management under scrutiny", description: "Capability procedures are increasingly challenged under the Equality Act 2010 when neurodivergence isn't considered.", icon: Scale },
+  { title: "Decision-making hierarchy", description: "Neurodivergent communication styles can be misread as confrontational or rigid in hierarchical structures.", icon: MessageSquare },
+  { title: "Budget constraints", description: "Inclusion is seen as a cost centre rather than a risk reduction tool. The financial case isn't being made.", icon: Wallet },
+  { title: "Recruitment bottlenecks", description: "Neurodivergent applicants are disproportionately screened out by traditional interview models.", icon: Users },
 ];
 
 const IndustryPublicSector = () => {
   return (
     <>
-      <SEOHead
-        title="Neurodiversity in Public Sector & Government: 2026 Challenges"
-        description="Neurodiversity training and consultancy for central and local government. Move from compliance to capability with sector-adapted programmes."
-        path="/industries/public-sector"
-      />
-      <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://www.neurodiversityglobal.com/" },
-        { name: "Industries", url: "https://www.neurodiversityglobal.com/industries" },
-        { name: "Public Sector & Government", url: "https://www.neurodiversityglobal.com/industries/public-sector" },
-      ])} />
+      <SEOHead title="Neurodiversity in Public Sector & Government: 2026 Challenges" description="Neurodiversity training and consultancy for central and local government." path="/industries/public-sector" />
+      <JsonLd data={breadcrumbSchema([{ name: "Home", url: "https://www.neurodiversityglobal.com/" }, { name: "Industries", url: "https://www.neurodiversityglobal.com/industries" }, { name: "Public Sector & Government", url: "https://www.neurodiversityglobal.com/industries/public-sector" }])} />
       <JsonLd data={serviceSchema("Neurodiversity in Public Sector & Government", "Neurodiversity training and consultancy for central government, local authorities, and public sector organisations.", "https://www.neurodiversityglobal.com/industries/public-sector")} />
       <JsonLd data={faqSchema(faqs)} />
       <Navbar />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industries" }, { label: "Public Sector & Government" }]} />
       <main>
-        <PageHero
-          badge="Neurodiversity in public sector"
-          title="Policy heavy. Risk aware. Slow to change."
-          description="Government departments and public bodies have the governance structures for neuroinclusion, but compliance culture, budget constraints, and hierarchy mean capability consistently lags behind policy."
-        />
+        <section className="bg-primary text-primary-foreground py-20 lg:py-28">
+          <div className="mx-auto max-w-wide px-6 lg:px-10">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
+                <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">Neurodiversity in public sector</p>
+                <h1 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight leading-[1.1]">Policy heavy. Risk aware. Slow to change.</h1>
+                <p className="mt-5 text-sm md:text-base leading-relaxed opacity-80 max-w-[58ch]">Government departments and public bodies have the governance structures for neuroinclusion, but compliance culture, budget constraints, and hierarchy mean capability consistently lags behind policy.</p>
+              </motion.div>
+              <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }} className="relative">
+                <div className="rounded-2xl overflow-hidden shadow-xl"><img src={frontlineImg} alt="Public sector professionals" className="w-full h-[340px] lg:h-[400px] object-cover" loading="lazy" /></div>
+                <div className="absolute -bottom-6 -left-4 lg:-left-8 rounded-xl bg-card border border-border shadow-lg p-5 max-w-[200px]">
+                  <p className="font-display font-bold text-2xl text-accent">40+</p>
+                  <p className="text-xs text-muted-foreground mt-1 leading-snug">Public sector clients</p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
-        <PageSection id="challenges" badge="Key issues in 2026" title="The pressure points public sector can't ignore">
+        <section className="bg-warm-stone py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Key issues in 2026</p>
+          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-10">The pressure points public sector can't ignore</h2>
           <KeyIssuesGrid issues={keyIssues} />
-        </PageSection>
+        </div></section>
 
-        <PageSection id="breaking" title="What is breaking right now" variant="secondary">
-          <WhatIsBreaking
-            items={[
-              "High grievance volumes related to unrecognised neurodivergence",
-              "Long-term absence linked to masking and stress",
-              "Internal culture fatigue from performative inclusion",
-              "Talent loss to private sector with better neuroinclusive practices",
-            ]}
-          />
-        </PageSection>
+        <section className="bg-primary py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10">
+          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-primary-foreground mb-8">What is breaking right now</h2>
+          <WhatIsBreaking items={["High grievance volumes related to unrecognised neurodivergence", "Long-term absence linked to masking and stress", "Internal culture fatigue from performative inclusion", "Talent loss to private sector with better neuroinclusive practices"]} />
+        </div></section>
 
-        <PageSection id="positives" badge="The positives" title="Why public sector can lead on this">
-          <PositivesBlock
-            items={[
-              { title: "Clear governance structures", description: "Policy frameworks can embed neuroinclusion at scale once aligned." },
-              { title: "Strong ethical mandate", description: "Public service ethos aligns well with fairness-based inclusion." },
-              { title: "Structured career pathways", description: "Opportunity to redesign progression routes with cognitive diversity in mind." },
-            ]}
-            opportunity="Shift from policy language to practical manager capability."
-          />
-        </PageSection>
+        <PullQuote quote="The governance structures exist. It's the capability that's missing." accentIndex={4} />
 
-        <PageSection id="workshops" badge="Your starting point" title="Workshops built for public sector" variant="secondary" description="Sessions adapted to Civil Service structures, procurement contexts, and policy-heavy environments.">
-          <RelevantWorkshops
-            workshopIds={["awareness", "champions", "line-manager", "manager-dev", "hr-training", "exec-briefing", "disclosure", "performance"]}
-            title="Public sector-recommended sessions"
-            description="From manager capability workshops to board-level strategy, adapted to your governance and operating environment."
-          />
-        </PageSection>
+        <section className="bg-warm-stone py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">The positives</p>
+          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-10">Why public sector can lead on this</h2>
+          <PositivesBlock items={[
+            { title: "Clear governance structures", description: "Policy frameworks can embed neuroinclusion at scale once aligned." },
+            { title: "Strong ethical mandate", description: "Public service ethos aligns well with fairness-based inclusion." },
+            { title: "Structured career pathways", description: "Opportunity to redesign progression routes with cognitive diversity in mind." },
+          ]} opportunity="Shift from policy language to practical manager capability." />
+        </div></section>
 
-        <PageSection id="outcomes" badge="Outcomes" title="What public sector clients see">
-          <OutcomeBlock
-            title="Public sector outcomes"
-            outcomes={[
-              { label: "Stronger PSED compliance positioning on neurodiversity." },
-              { label: "Improved staff retention and reduced grievance risk." },
-              { label: "More confident managers making better reasonable adjustment decisions." },
-              { label: "Policy frameworks that account for cognitive diversity." },
-              { label: "Recruitment processes that attract wider talent pools." },
-            ]}
-          />
-        </PageSection>
+        <section className="bg-primary py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Your starting point</p>
+          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-primary-foreground mb-10">Workshops built for public sector</h2>
+          <RelevantWorkshops workshopIds={["awareness", "champions", "line-manager", "manager-dev", "hr-training", "exec-briefing", "disclosure", "performance"]} title="Public sector-recommended sessions" description="From manager capability workshops to board-level strategy, adapted to your governance and operating environment." />
+        </div></section>
 
-        <PageSection id="evidence" badge="Experience" title="Our work in public sector" variant="secondary">
+        <section className="bg-warm-stone py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Outcomes</p>
+          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-10">What public sector clients see</h2>
+          <OutcomeBlock title="Public sector outcomes" outcomes={[
+            { label: "Stronger PSED compliance positioning on neurodiversity." },
+            { label: "Improved staff retention and reduced grievance risk." },
+            { label: "More confident managers making better reasonable adjustment decisions." },
+            { label: "Policy frameworks that account for cognitive diversity." },
+            { label: "Recruitment processes that attract wider talent pools." },
+          ]} />
+        </div></section>
+
+        <section className="bg-primary py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Experience</p>
+          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-primary-foreground mb-10">Our work in public sector</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <TestimonialBlock
-              quote="They understand the difference between ticking a box and actually making things better for neurodivergent people."
-              author="Chief People Officer"
-              org="Government Department"
-            />
-            <div className="rounded-xl border border-border bg-card p-6 flex flex-col justify-center shadow-md">
-              <h3 className="font-display font-bold text-sm text-card-foreground mb-4">Delivery experience</h3>
+            <TestimonialBlock quote="They understand the difference between ticking a box and actually making things better for neurodivergent people." author="Chief People Officer" org="Government Department" />
+            <div className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.06] p-6 flex flex-col justify-center">
+              <h3 className="font-display font-bold text-sm text-primary-foreground mb-4">Delivery experience</h3>
               <div className="grid grid-cols-2 gap-5">
-                {[
-                  { value: "40+", label: "Public sector clients" },
-                  { value: "4,000+", label: "Staff trained" },
-                  { value: "Central & local", label: "Government coverage" },
-                  { value: "15+", label: "Years of experience" },
-                ].map((stat) => (
-                  <div key={stat.label}>
-                    <p className="font-display font-extrabold text-xl text-accent">{stat.value}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{stat.label}</p>
-                  </div>
+                {[{ value: "40+", label: "Public sector clients" }, { value: "4,000+", label: "Staff trained" }, { value: "Central & local", label: "Government coverage" }, { value: "15+", label: "Years of experience" }].map((stat) => (
+                  <div key={stat.label}><p className="font-display font-extrabold text-xl text-accent">{stat.value}</p><p className="text-xs text-primary-foreground/60 mt-0.5">{stat.label}</p></div>
                 ))}
               </div>
             </div>
           </div>
-          <div className="mt-8">
-            <AccessibilityNote text="All materials are designed for cognitive accessibility and adapted to public sector delivery contexts." />
-          </div>
-        </PageSection>
+          <div className="mt-8"><AccessibilityNote text="All materials are designed for cognitive accessibility and adapted to public sector delivery contexts." /></div>
+        </div></section>
 
-        <PageSection id="faq" badge="FAQs" title="Common questions about neurodiversity in public sector">
+        <section className="bg-warm-stone py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10">
+          <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">FAQs</p>
+          <h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-10">Common questions about neurodiversity in public sector</h2>
           <div className="grid gap-4 max-w-2xl">
             {faqs.map((faq, i) => (
-              <div key={i} className="rounded-xl border border-border bg-card p-5 shadow-sm">
+              <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="rounded-2xl border border-border bg-card p-6 shadow-sm overflow-hidden">
+                <div className="h-1 -mx-6 -mt-6 mb-5" style={{ backgroundColor: NEURO_COLOURS[i % NEURO_COLOURS.length] }} />
                 <h3 className="font-display font-bold text-sm text-card-foreground mb-2">{faq.question}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </PageSection>
+        </div></section>
 
-        
         <PageCTA title="Ready to make neurodiversity work in the public sector?" description="Book a discovery call. We'll discuss your specific challenges and recommend a practical next step." />
       </main>
       <Footer />

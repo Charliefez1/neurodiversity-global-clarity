@@ -1,4 +1,4 @@
-import { ArrowRight, TrendingUp, Users, Target, CheckCircle2, Building2, Quote } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Target, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -6,6 +6,18 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { breadcrumbSchema } from "@/components/JsonLd";
+import PullQuote from "@/components/blocks/PullQuote";
+import PageCTA from "@/components/templates/PageCTA";
+import { NEURO_COLOURS } from "@/data/neuroColours";
+import diverseImg from "@/assets/industries/diverse-workforce.png";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({
+    opacity: 1, y: 0,
+    transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" as const },
+  }),
+};
 
 const caseStudies = [
   {
@@ -106,241 +118,202 @@ const CaseStudies = () => {
       />
       <JsonLd data={breadcrumbSchema([{ name: "Case Studies", url: "/case-studies" }])} />
       <Navbar />
-      <Breadcrumbs items={[{ label: "Case Studies" }]} />
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Case Studies" }]} />
 
       <main>
-        {/* Hero */}
-        <section className="bg-primary text-primary-foreground py-16 lg:py-24">
+        {/* Hero — split with image */}
+        <section className="bg-primary text-primary-foreground py-20 lg:py-28">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
-            <div className="grid lg:grid-cols-2 gap-10 items-center">
-              <div>
-                <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">
-                  Case Studies
-                </p>
-                <h1 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight leading-[1.1] max-w-3xl">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7 }}
+              >
+                <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">Case Studies</p>
+                <h1 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight leading-[1.1]">
                   Proof that neuroinclusion works
                 </h1>
                 <p className="mt-5 text-sm md:text-base leading-relaxed opacity-80 max-w-[58ch]">
                   Real organisations, real outcomes. See how we've helped companies reduce turnover, improve engagement, and build confident, inclusive teams.
                 </p>
-              </div>
-              {featuredCase && (
-                <div className="rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-display font-bold text-accent uppercase tracking-wider">Featured</span>
-                    <span className="text-xs opacity-60">•</span>
-                    <span className="text-xs opacity-60">{featuredCase.industry}</span>
-                  </div>
-                  <p className="font-display font-bold text-sm">{featuredCase.client}</p>
-                  <div className="mt-3 flex items-baseline gap-2">
-                    <span className="font-display font-bold text-xl text-accent">
-                      {featuredCase.outcomes[0].metric}
-                    </span>
-                    <p className="text-xs opacity-75">{featuredCase.outcomes[0].label}</p>
-                  </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.15 }}
+                className="relative"
+              >
+                <div className="rounded-2xl overflow-hidden shadow-xl">
+                  <img src={diverseImg} alt="Diverse team collaborating" className="w-full h-[340px] lg:h-[400px] object-cover" loading="lazy" />
                 </div>
-              )}
+                {featuredCase && (
+                  <div className="absolute -bottom-6 -left-4 lg:-left-8 rounded-xl bg-card border border-border shadow-lg p-5 max-w-[220px]">
+                    <p className="font-display font-bold text-2xl text-accent">{featuredCase.outcomes[0].metric}</p>
+                    <p className="text-xs text-muted-foreground mt-1 leading-snug">{featuredCase.outcomes[0].label}</p>
+                  </div>
+                )}
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Featured Case Study */}
-        {caseStudies
-          .filter((cs) => cs.featured)
-          .map((caseStudy) => (
-            <section key={caseStudy.slug} className="bg-warm-stone py-16 lg:py-24">
-              <div className="mx-auto max-w-wide px-6 lg:px-10">
-                <div className="flex items-center gap-3 mb-8">
-                  <span className="font-display font-bold text-xs uppercase tracking-[0.15em] text-accent">
-                    Featured Case Study
-                  </span>
-                  <span className="text-xs text-muted-foreground">{caseStudy.industry}</span>
-                </div>
-                <div className="grid lg:grid-cols-2 gap-10">
-                  {/* Left: narrative */}
-                  <div>
-                    <h2 className="font-display font-bold text-lg text-foreground">{caseStudy.client}</h2>
-                    <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
-                      <Building2 size={14} aria-hidden="true" />
-                      <span>{caseStudy.size}</span>
-                      <span>•</span>
-                      <span>{caseStudy.location}</span>
-                    </div>
-                    <div className="mt-6">
-                      <h3 className="font-display font-semibold text-sm text-foreground mb-2">The Challenge</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{caseStudy.challenge}</p>
-                    </div>
-                    <div className="mt-6">
-                      <h3 className="font-display font-semibold text-sm text-foreground mb-2">Services Delivered</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {caseStudy.services.map((service) => (
-                          <span
-                            key={service}
-                            className="px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-display font-semibold"
-                          >
-                            {service}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    {caseStudy.testimonial && (
-                      <blockquote className="mt-8 border-l-2 border-accent pl-4">
-                        <p className="text-sm text-muted-foreground italic leading-relaxed">
-                          "{caseStudy.testimonial.quote}"
-                        </p>
-                        <footer className="mt-3 flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-accent/15 flex items-center justify-center">
-                            <span className="text-xs font-bold text-accent">
-                              {caseStudy.testimonial.author.charAt(0)}
-                            </span>
-                          </div>
-                          <div>
-                            <p className="text-xs font-display font-semibold text-foreground">
-                              {caseStudy.testimonial.author}
-                            </p>
-                            <p className="text-xs text-muted-foreground">{caseStudy.testimonial.role}</p>
-                          </div>
-                        </footer>
-                      </blockquote>
-                    )}
+        {caseStudies.filter((cs) => cs.featured).map((caseStudy) => (
+          <section key={caseStudy.slug} className="bg-warm-stone py-20 lg:py-28">
+            <div className="mx-auto max-w-wide px-6 lg:px-10">
+              <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Featured Case Study</p>
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+                <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <h2 className="font-display font-bold text-xl md:text-2xl text-foreground">{caseStudy.client}</h2>
+                  <div className="flex items-center gap-2 mt-2 text-xs text-muted-foreground">
+                    <Building2 size={14} aria-hidden="true" />
+                    <span>{caseStudy.size}</span>
+                    <span>•</span>
+                    <span>{caseStudy.location}</span>
                   </div>
-
-                  {/* Right: outcomes */}
-                  <div>
-                    <h3 className="font-display font-semibold text-sm text-foreground mb-5">The Outcomes</h3>
-                    <div className="space-y-4">
-                      {caseStudy.outcomes.map((outcome, i) => (
-                        <motion.div
-                          key={i}
-                          className="rounded-xl border border-border bg-card p-5 shadow-sm"
-                          initial={{ opacity: 0, x: 20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: i * 0.1 }}
-                        >
-                          <div className="flex items-start gap-4">
-                            <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center shrink-0">
-                              <outcome.icon size={20} className="text-accent" aria-hidden="true" />
-                            </div>
-                            <div>
-                              <p className="font-display font-bold text-xl text-foreground">{outcome.metric}</p>
-                              <p className="text-sm text-muted-foreground leading-relaxed">{outcome.label}</p>
-                            </div>
-                          </div>
-                        </motion.div>
+                  <div className="mt-6">
+                    <h3 className="font-display font-semibold text-sm text-foreground mb-2">The Challenge</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{caseStudy.challenge}</p>
+                  </div>
+                  <div className="mt-6">
+                    <h3 className="font-display font-semibold text-sm text-foreground mb-2">Services Delivered</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {caseStudy.services.map((service) => (
+                        <span key={service} className="px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-display font-semibold">{service}</span>
                       ))}
                     </div>
-                    <p className="mt-6 text-xs text-muted-foreground italic">
-                      Data source: NDG client impact data, measured over 12-month engagement period (2024)
-                    </p>
                   </div>
+                  {caseStudy.testimonial && (
+                    <blockquote className="mt-8 border-l-4 border-accent pl-4 rounded-r-lg bg-card p-5">
+                      <p className="text-sm text-muted-foreground italic leading-relaxed">"{caseStudy.testimonial.quote}"</p>
+                      <footer className="mt-3 flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-full bg-accent/15 flex items-center justify-center">
+                          <span className="text-xs font-bold text-accent">{caseStudy.testimonial.author.charAt(0)}</span>
+                        </div>
+                        <div>
+                          <p className="text-xs font-display font-semibold text-foreground">{caseStudy.testimonial.author}</p>
+                          <p className="text-xs text-muted-foreground">{caseStudy.testimonial.role}</p>
+                        </div>
+                      </footer>
+                    </blockquote>
+                  )}
+                </motion.div>
+
+                <div className="space-y-4">
+                  <h3 className="font-display font-semibold text-sm text-foreground mb-2">The Outcomes</h3>
+                  {caseStudy.outcomes.map((outcome, i) => (
+                    <motion.div
+                      key={i}
+                      custom={i}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true }}
+                      variants={fadeUp}
+                      className="rounded-2xl border border-border bg-card p-6 shadow-md overflow-hidden"
+                    >
+                      <div className="h-1 -mx-6 -mt-6 mb-5" style={{ backgroundColor: NEURO_COLOURS[i % NEURO_COLOURS.length] }} />
+                      <div className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: `${NEURO_COLOURS[i % NEURO_COLOURS.length]}18`, color: NEURO_COLOURS[i % NEURO_COLOURS.length] }}>
+                          <outcome.icon size={20} aria-hidden="true" />
+                        </div>
+                        <div>
+                          <p className="font-display font-bold text-xl text-foreground">{outcome.metric}</p>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{outcome.label}</p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
               </div>
-            </section>
-          ))}
-
-        {/* Other Case Studies Grid */}
-        <section className="bg-background py-16 lg:py-24">
-          <div className="mx-auto max-w-wide px-6 lg:px-10">
-            <h2 className="font-display font-bold text-lg text-foreground mb-10">More Case Studies</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {caseStudies
-                .filter((cs) => !cs.featured)
-                .map((caseStudy) => (
-                  <article
-                    key={caseStudy.slug}
-                    className="rounded-xl border border-border bg-card p-7 shadow-sm hover:shadow-md transition-shadow"
-                  >
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xs font-display font-bold text-accent">{caseStudy.industry}</span>
-                      <span className="text-xs text-muted-foreground">{caseStudy.size}</span>
-                    </div>
-                    <h3 className="font-display font-bold text-sm text-card-foreground mb-2">{caseStudy.client}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">{caseStudy.challenge}</p>
-                    <div className="space-y-3 mb-5">
-                      {caseStudy.outcomes.slice(0, 2).map((outcome, i) => (
-                        <div key={i} className="flex items-start gap-3">
-                          <div className="w-8 h-8 rounded-md bg-accent/10 flex items-center justify-center shrink-0">
-                            <outcome.icon size={16} className="text-accent" aria-hidden="true" />
-                          </div>
-                          <div>
-                            <span className="font-display font-bold text-sm text-foreground">{outcome.metric}</span>
-                            <span className="text-xs text-muted-foreground ml-1.5">{outcome.label}</span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    {caseStudy.testimonial && (
-                      <div className="border-t border-border pt-4">
-                        <p className="text-xs text-muted-foreground italic leading-relaxed">
-                          "{caseStudy.testimonial.quote.slice(0, 120)}..."
-                        </p>
-                        <p className="text-xs text-muted-foreground/70 mt-1.5">
-                          {caseStudy.testimonial.author}, {caseStudy.testimonial.role}
-                        </p>
-                      </div>
-                    )}
-                  </article>
-                ))}
             </div>
-          </div>
-        </section>
+          </section>
+        ))}
 
-        {/* Industry Evidence */}
-        <section className="bg-warm-stone py-16 lg:py-24">
+        <PullQuote quote="The question is no longer whether neuroinclusion works. The question is how quickly you can implement it." accentIndex={2} />
+
+        {/* Other Case Studies */}
+        <section className="bg-primary py-20 lg:py-28">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
-            <h2 className="font-display font-bold text-lg text-foreground mb-10">Industry Evidence</h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {industryEvidence.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-xl border border-border bg-card p-7 shadow-sm"
+            <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">More results</p>
+            <h2 className="font-display font-bold text-xl md:text-2xl mb-10 text-primary-foreground">More Case Studies</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {caseStudies.filter((cs) => !cs.featured).map((caseStudy, idx) => (
+                <motion.article
+                  key={caseStudy.slug}
+                  custom={idx}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.1] transition-all overflow-hidden"
                 >
-                  <p className="font-display font-bold text-xl text-foreground">{item.value}</p>
-                  <p className="font-display font-semibold text-sm text-foreground mt-1">{item.label}</p>
-                  <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{item.desc}</p>
-                  <a
-                    href={item.source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-3 text-xs text-accent hover:underline"
-                  >
-                    Source: {item.sourceLabel}
-                  </a>
-                </div>
+                  <div className="h-1 -mx-7 -mt-7 mb-6" style={{ backgroundColor: NEURO_COLOURS[idx % NEURO_COLOURS.length] }} />
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs font-display font-bold text-accent">{caseStudy.industry}</span>
+                    <span className="text-xs text-primary-foreground/50">{caseStudy.size}</span>
+                  </div>
+                  <h3 className="font-display font-bold text-sm text-primary-foreground mb-2">{caseStudy.client}</h3>
+                  <p className="text-sm text-primary-foreground/65 leading-relaxed mb-5">{caseStudy.challenge}</p>
+                  <div className="space-y-3 mb-5">
+                    {caseStudy.outcomes.slice(0, 2).map((outcome, i) => (
+                      <div key={i} className="flex items-start gap-3">
+                        <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0" style={{ backgroundColor: `${NEURO_COLOURS[i % NEURO_COLOURS.length]}25`, color: NEURO_COLOURS[i % NEURO_COLOURS.length] }}>
+                          <outcome.icon size={16} aria-hidden="true" />
+                        </div>
+                        <div>
+                          <span className="font-display font-bold text-sm text-primary-foreground">{outcome.metric}</span>
+                          <span className="text-xs text-primary-foreground/60 ml-1.5">{outcome.label}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  {caseStudy.testimonial && (
+                    <div className="border-t border-primary-foreground/10 pt-4">
+                      <p className="text-xs text-primary-foreground/50 italic leading-relaxed">"{caseStudy.testimonial.quote.slice(0, 120)}..."</p>
+                      <p className="text-xs text-primary-foreground/40 mt-1.5">{caseStudy.testimonial.author}, {caseStudy.testimonial.role}</p>
+                    </div>
+                  )}
+                </motion.article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="bg-primary text-primary-foreground py-16 lg:py-24">
-          <div className="mx-auto max-w-wide px-6 lg:px-10 text-center">
-            <h2 className="font-display font-bold text-lg md:text-xl leading-tight">
-              Ready to create your own success story?
-            </h2>
-            <p className="mt-4 opacity-75 text-base leading-relaxed max-w-[50ch] mx-auto">
-              Book a discovery call to discuss how we can help you achieve similar outcomes.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href="mailto:hello@neurodiversityglobal.com"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
-              >
-                Book a Discovery Call
-                <ArrowRight size={16} aria-hidden="true" />
-              </a>
-              <Link
-                to="/what-we-do"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg border-2 border-primary-foreground/25 text-primary-foreground font-display font-bold text-sm hover:bg-primary-foreground/10 transition-all"
-              >
-                View Our Services
-              </Link>
+        {/* Industry Evidence */}
+        <section className="bg-warm-stone py-20 lg:py-28">
+          <div className="mx-auto max-w-wide px-6 lg:px-10">
+            <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Independent evidence</p>
+            <h2 className="font-display font-bold text-xl md:text-2xl text-foreground mb-10">Industry Evidence</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {industryEvidence.map((item, i) => (
+                <motion.div
+                  key={item.label}
+                  custom={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="rounded-2xl border border-border bg-card p-7 shadow-md overflow-hidden"
+                >
+                  <div className="h-1 -mx-7 -mt-7 mb-6" style={{ backgroundColor: NEURO_COLOURS[i % NEURO_COLOURS.length] }} />
+                  <p className="font-display font-bold text-2xl text-foreground">{item.value}</p>
+                  <p className="font-display font-semibold text-sm text-foreground mt-1">{item.label}</p>
+                  <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{item.desc}</p>
+                  <a href={item.source} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 text-xs text-accent hover:underline">
+                    Source: {item.sourceLabel}
+                  </a>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
-      </main>
 
+        <PageCTA title="Ready to create your own success story?" description="Book a discovery call to discuss how we can help you achieve similar outcomes." />
+      </main>
       <Footer />
     </>
   );
