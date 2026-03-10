@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
 import PageCTA from "@/components/templates/PageCTA";
 import { getBlogPost, getRelatedPosts } from "@/data/blogPosts";
 import { NEURO_COLOURS } from "@/data/neuroColours";
