@@ -36,6 +36,11 @@ import inclusiveMeetingsImg from "@/assets/blog/inclusive-meeting-frameworks.jpg
 import adjustmentGuidanceImg from "@/assets/blog/workplace-adjustment-guidance.jpg";
 import benchmarkingSafetyImg from "@/assets/blog/benchmarking-psychological-safety.jpg";
 import roleDesignGuidesImg from "@/assets/blog/role-design-conversation-guides.jpg";
+import supportNdEmployeesImg from "@/assets/blog/support-neurodivergent-employees.jpg";
+import adjustmentsAdhdAutismImg from "@/assets/blog/adjustments-adhd-autism.jpg";
+import whatIsNdWorkplaceImg from "@/assets/blog/what-is-neurodiversity-workplace.jpg";
+import managersSupportNdImg from "@/assets/blog/managers-support-neurodivergent.jpg";
+import ndProductivityImg from "@/assets/blog/neurodiversity-productivity.jpg";
 
 export interface BlogPost {
   slug: string;
