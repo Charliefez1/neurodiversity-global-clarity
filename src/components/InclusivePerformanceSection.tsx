@@ -355,12 +355,11 @@ const InclusivePerformanceSection = () => {
 
             <text
               x={W / 2}
-              y={BASE_Y + 45}
+              y={BASE_Y + 48}
               textAnchor="middle"
-              className="font-display"
-              fill={LABEL_NAVY}
-              opacity="0.45"
-              fontSize="11"
+              className="font-display font-bold"
+              fill="white"
+              fontSize="14"
             >
               Environmental Demand and Psychological Safety
             </text>
