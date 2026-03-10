@@ -48,6 +48,7 @@ const Index = () => {
       <Navbar />
       <NewsHeadlines />
       <HeroSection />
+      <TrainingCatalogueBanner />
       <PageContents />
       <FloatingContactButton />
       {/* Ask Rich Anything — compact CTA */}
