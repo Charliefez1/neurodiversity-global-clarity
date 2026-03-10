@@ -12,15 +12,17 @@ import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 import TrustIndicators from "@/components/TrustIndicators";
 
 import heroWorkshop from "@/assets/hero/team-workshop.jpg";
-import heroDashboard from "@/assets/hero/analytics-dashboard.jpg";
 import heroSpeaker from "@/assets/hero/consultant-speaking.jpg";
-import heroHands from "@/assets/hero/hands-collaborating.jpg";
+import portrait1 from "@/assets/testimonials/portrait-1.jpg";
+import portrait2 from "@/assets/testimonials/portrait-2.jpg";
+import portrait3 from "@/assets/testimonials/portrait-3.jpg";
+import portrait4 from "@/assets/testimonials/portrait-4.jpg";
 
 const collageImages = [
   { src: heroWorkshop, alt: "Diverse team in a collaborative workshop", offsetClass: "translate-y-4" },
-  { src: heroDashboard, alt: "Analytics dashboard on a desk", offsetClass: "-translate-y-2" },
+  { src: portrait1, alt: "Neurodiversity champion smiling", offsetClass: "-translate-y-2" },
   { src: heroSpeaker, alt: "Consultant speaking to a group", offsetClass: "-translate-y-2" },
-  { src: heroHands, alt: "Hands collaborating over materials", offsetClass: "translate-y-4" },
+  { src: portrait3, alt: "Professional in a coaching session", offsetClass: "translate-y-4" },
 ];
 
 const pathwayKeys = [
