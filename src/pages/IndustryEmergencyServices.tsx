@@ -1,0 +1,61 @@
+import { motion } from "framer-motion";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import PageCTA from "@/components/templates/PageCTA";
+import PullQuote from "@/components/blocks/PullQuote";
+import KeyIssuesGrid from "@/components/blocks/KeyIssuesGrid";
+import WhatIsBreaking from "@/components/blocks/WhatIsBreaking";
+import PositivesBlock from "@/components/blocks/PositivesBlock";
+import OutcomeBlock from "@/components/blocks/OutcomeBlock";
+import RelevantWorkshops from "@/components/blocks/RelevantWorkshops";
+import TestimonialBlock from "@/components/blocks/TestimonialBlock";
+import AccessibilityNote from "@/components/blocks/AccessibilityNote";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import SEOHead from "@/components/SEOHead";
+import JsonLd, { breadcrumbSchema, serviceSchema, faqSchema } from "@/components/JsonLd";
+import { Flame, Shield, Moon, Ear, AlertTriangle } from "lucide-react";
+import { NEURO_COLOURS } from "@/data/neuroColours";
+import ndEmergencyImg from "@/assets/blog/neurodiversity-emergency.jpg";
+
+const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" as const } }) };
+
+const faqs = [
+  { question: "How do you deliver training to shift-based operational teams?", answer: "We deliver in short, modular formats that work across rotating shifts. We design delivery around your operational calendar." },
+  { question: "How do we handle disclosure when operational fitness is a requirement?", answer: "We train managers to separate disclosure from fitness assessment, to focus on functional adjustments, and to avoid assumptions about operational capacity from a diagnosis." },
+  { question: "We are dealing with a specific disciplinary case. Can you help?", answer: "We provide consultancy support alongside case management. We help your team understand the neurodiversity context and identify where processes may need adjustment." },
+  { question: "Is there guidance for police forces on College of Policing standards?", answer: "Yes. We map neuroinclusion to College of Policing competency frameworks and help forces align with the Equality Act and occupational health requirements." },
+];
+
+const keyIssues = [
+  { title: "Hierarchical culture and disclosure risk", description: "Disclosing neurodivergence is perceived as a threat to operational credibility. Masking is universal, expected, and exhausting.", icon: Shield },
+  { title: "Shift patterns and sleep disruption", description: "Rotating shifts compound executive function challenges. ADHD symptoms intensify. Performance is misread as conduct issues.", icon: Moon },
+  { title: "Sensory intensity in operational environments", description: "Blue light, sirens, trauma scenes create extreme sensory demand. Sustained exposure without recovery creates cumulative cognitive load.", icon: Ear },
+  { title: "Disciplinary before adjustment", description: "Neurodivergent behaviour is frequently processed as conduct. Capability processes begin before anyone considers adjustment.", icon: AlertTriangle },
+  { title: "Debrief culture and communication norms", description: "Post-incident debriefs rely on verbal communication and social conformity. Neurodivergent staff are misread as disengaged.", icon: Flame },
+];
+
+const IndustryEmergencyServices = () => (
+  <>
+    <SEOHead title="Neurodiversity in Emergency Services" description="Neurodiversity training for fire, police, and ambulance services." path="/industries/emergency-services" />
+    <JsonLd data={breadcrumbSchema([{ name: "Home", url: "https://www.neurodiversityglobal.com/" }, { name: "Industries", url: "https://www.neurodiversityglobal.com/industries" }, { name: "Emergency Services", url: "https://www.neurodiversityglobal.com/industries/emergency-services" }])} />
+    <JsonLd data={serviceSchema("Neurodiversity in Emergency Services", "Neurodiversity training for fire, police, and ambulance services.", "https://www.neurodiversityglobal.com/industries/emergency-services")} />
+    <JsonLd data={faqSchema(faqs)} />
+    <Navbar />
+    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Industries", href: "/industries" }, { label: "Emergency Services" }]} />
+    <main>
+      <section className="bg-primary text-primary-foreground py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10"><div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"><motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}><p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-4">Neurodiversity in emergency services</p><h1 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl tracking-tight leading-[1.1]">Where cognitive strength saves lives and rigid systems lose people</h1><p className="mt-5 text-sm md:text-base leading-relaxed opacity-80 max-w-[58ch]">Fire, police, and ambulance services contain high concentrations of neurodivergent professionals. Rigid systems are losing the people who perform best under pressure.</p></motion.div><motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.15 }} className="relative"><div className="rounded-2xl overflow-hidden shadow-xl"><img src={ndEmergencyImg} alt="Emergency services team" className="w-full h-[340px] lg:h-[400px] object-cover" loading="lazy" /></div><div className="absolute -bottom-6 -right-4 lg:-right-8 rounded-xl bg-card border border-border shadow-lg p-5 max-w-[200px]"><p className="font-display font-bold text-2xl text-accent">20+</p><p className="text-xs text-muted-foreground mt-1 leading-snug">Blue light organisations supported</p></div></motion.div></div></div></section>
+      <section className="bg-warm-stone py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10"><p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Key issues in 2026</p><h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-10">Pressure points emergency services cannot ignore</h2><KeyIssuesGrid issues={keyIssues} /></div></section>
+      <section className="bg-primary py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10"><h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-primary-foreground mb-8">What is breaking right now</h2><WhatIsBreaking items={["Experienced operational staff leaving due to unmanaged cognitive load", "Disciplinary processes initiated without reasonable adjustment consideration", "Mental health absence rising among neurodivergent officers and paramedics", "Fitness for duty processes used without neurodiversity awareness"]} /></div></section>
+      <PullQuote quote="The people most likely to mask are also the people most relied upon in a crisis." accentIndex={4} />
+      <section className="bg-warm-stone py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10"><p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">The positives</p><h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-10">Why emergency services should lead</h2><PositivesBlock items={[{ title: "Crisis decision-making is a neurodivergent strength", description: "Many perform exceptionally under acute pressure, focusing intensely and processing multiple threat signals." }, { title: "Pattern recognition saves lives", description: "Experienced neurodivergent staff identify threat patterns others miss." }, { title: "Procedural rigour aligns with neurodivergent processing", description: "Clear protocols and defined procedures are enabling, not restrictive." }, { title: "Peer support culture is already strong", description: "Neuroinclusion extends existing mental health infrastructure to cognitive diversity." }]} opportunity="Move from neurodivergence as a conduct risk to cognitive diversity as an operational asset." /></div></section>
+      <section className="bg-primary py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10"><p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Your starting point</p><h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-primary-foreground mb-10">Workshops built for emergency services</h2><RelevantWorkshops workshopIds={["awareness", "champions", "line-manager", "mental-health", "disclosure", "hr-training", "exec-briefing"]} title="Emergency services sessions" description="Adapted for shift-based delivery, rank structure awareness, and operational environments." /></div></section>
+      <section className="bg-warm-stone py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10"><p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Outcomes</p><h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-10">What emergency services clients see</h2><OutcomeBlock title="Emergency services outcomes" outcomes={[{ metric: "51%", label: "of neurodivergent employees have taken time off due to their neurodivergence." }, { label: "Reduction in staff entering disciplinary processes." }, { label: "Improved disclosure rates as psychological safety increases." }, { label: "Fewer fitness for duty referrals resolved with adjustment conversations." }, { label: "Stronger retention of experienced operational staff." }]} /></div></section>
+      <section className="bg-primary py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10"><p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">Experience</p><h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-primary-foreground mb-10">Our work in emergency services</h2><div className="grid md:grid-cols-2 gap-6"><TestimonialBlock quote="This changed our approach to conduct and capability. We now ask about adjustments before we initiate processes." author="Head of People" org="Emergency Services Organisation" /><div className="rounded-2xl border border-primary-foreground/10 bg-primary-foreground/[0.06] p-6 flex flex-col justify-center"><h3 className="font-display font-bold text-sm text-primary-foreground mb-4">Delivery experience</h3><div className="grid grid-cols-2 gap-5">{[{ value: "20+", label: "Blue light organisations" }, { value: "1,500+", label: "Operational staff trained" }, { value: "15+", label: "Years in sector" }, { value: "UK-wide", label: "Urban and rural" }].map((s) => (<div key={s.label}><p className="font-display font-extrabold text-xl text-accent">{s.value}</p><p className="text-xs text-primary-foreground/60 mt-0.5">{s.label}</p></div>))}</div></div></div><div className="mt-8"><AccessibilityNote text="All materials are designed for cognitive accessibility." /></div></div></section>
+      <section className="bg-warm-stone py-20 lg:py-28"><div className="mx-auto max-w-wide px-6 lg:px-10"><p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">FAQs</p><h2 className="font-display font-bold text-xl md:text-2xl leading-tight text-foreground mb-10">Common questions</h2><div className="grid gap-4 max-w-2xl">{faqs.map((faq, i) => (<motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="rounded-2xl border border-border bg-card p-6 shadow-sm overflow-hidden"><div className="h-1 -mx-6 -mt-6 mb-5" style={{ backgroundColor: NEURO_COLOURS[i % NEURO_COLOURS.length] }} /><h3 className="font-display font-bold text-sm text-card-foreground mb-2">{faq.question}</h3><p className="text-sm text-muted-foreground leading-relaxed">{faq.answer}</p></motion.div>))}</div></div></section>
+      <PageCTA title="Ready to make neurodiversity work in emergency services?" description="Book a discovery call." />
+    </main>
+    <Footer />
+  </>
+);
+
+export default IndustryEmergencyServices;
