@@ -50,6 +50,17 @@ const Index = () => {
         path="/"
       />
       <JsonLd data={organisationSchema} />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "Neurodiversity Global",
+        url: "https://www.neurodiversityglobal.com",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://www.neurodiversityglobal.com/ask-rich?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      }} />
       <RegisterSections sections={indexSections} />
       <Navbar />
 
