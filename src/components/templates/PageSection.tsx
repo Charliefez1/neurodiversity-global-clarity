@@ -40,7 +40,7 @@ const PageSection = ({ id, badge, title, description, variant = "default", child
   return (
     <section id={id} className={`${bgMap[variant]} py-12 lg:py-16`} aria-labelledby={id ? `${id}-heading` : undefined}>
       <div className="mx-auto max-w-wide px-6 lg:px-10">
-        <div className="max-w-2xl mb-12">
+        <div className="max-w-2xl mb-8">
           {badge && (
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
               {badge}

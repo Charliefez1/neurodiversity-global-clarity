@@ -21,7 +21,7 @@ const TrainingCatalogueBanner = () => {
   return (
     <section className="bg-warm-stone py-10 lg:py-14">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
-        <div className="rounded-xl border border-border bg-card p-7 lg:p-10 shadow-sm">
+        <div className="rounded-xl border border-border bg-card p-5 lg:p-7 shadow-sm">
           <div className="lg:flex lg:gap-10">
             {/* Left column */}
             <div className="lg:w-[280px] shrink-0 mb-8 lg:mb-0">

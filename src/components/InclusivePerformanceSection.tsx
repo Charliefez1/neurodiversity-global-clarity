@@ -197,7 +197,7 @@ const InclusivePerformanceSection = () => {
   const activeZoneSet = new Set(currentNarrative.activeZones);
 
   return (
-    <section className="py-16 lg:py-24 bg-primary text-primary-foreground" id="inclusive-performance">
+    <section className="py-12 lg:py-16 bg-primary text-primary-foreground" id="inclusive-performance">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         {/* Section header */}
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">

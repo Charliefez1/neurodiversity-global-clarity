@@ -39,7 +39,7 @@ const clients = [
 ];
 
 const FeaturedClient = () => (
-  <section className="bg-primary text-primary-foreground py-10 lg:py-12">
+  <section className="bg-primary text-primary-foreground py-8 lg:py-10">
     <div className="mx-auto max-w-wide px-6 lg:px-10">
       <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-5">
         Featured clients

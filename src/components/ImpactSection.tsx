@@ -133,7 +133,7 @@ const ImpactSection = () => {
           </div>
 
           {/* Competitive advantage card */}
-          <div className="relative overflow-hidden rounded-2xl border border-orange-400/40 bg-primary-foreground/[0.06] p-5 lg:p-6">
+          <div className="relative overflow-hidden rounded-2xl border border-orange-400/40 bg-primary-foreground/[0.06] p-4 lg:p-5">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 rounded-lg bg-orange-400/15 flex items-center justify-center">
                 <BarChart3 size={16} className="text-orange-400" />
