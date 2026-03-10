@@ -86,7 +86,7 @@ const EvidenceSection = () => {
         </div>
 
         {/* Industry cards grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
           {industries.map((ind, idx) => (
             <Link
               key={ind.name}
