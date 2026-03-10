@@ -197,7 +197,7 @@ const InclusivePerformanceSection = () => {
   const activeZoneSet = new Set(currentNarrative.activeZones);
 
   return (
-    <section className="py-16 lg:py-24 bg-background" id="inclusive-performance">
+    <section className="py-16 lg:py-24 bg-primary text-primary-foreground" id="inclusive-performance">
       <div className="mx-auto max-w-[960px] px-6">
         {/* Section header */}
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
@@ -206,10 +206,10 @@ const InclusivePerformanceSection = () => {
         <h2 className="font-display font-bold text-2xl md:text-3xl tracking-tight leading-[1.1] mb-4 max-w-2xl">
           Inclusive Performance
         </h2>
-        <p className="text-base font-display font-semibold text-foreground mb-1">
+        <p className="text-base font-display font-semibold text-primary-foreground mb-1">
           Most organisations are somewhere on this curve right now.
         </p>
-        <p className="text-sm text-foreground/80 mb-8">
+        <p className="text-sm text-primary-foreground/80 mb-8">
           Watch the stages unfold, or use the controls to explore at your own pace.
         </p>
 
