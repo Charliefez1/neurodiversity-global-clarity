@@ -64,7 +64,7 @@ const ServicesSection = () => {
         <div className="grid sm:grid-cols-2 gap-5">
           {services.map((s) => {
             const content = (
-              <article className="rounded-xl bg-card border border-border border-l-4 p-7 lg:p-8 h-full shadow-md hover:shadow-lg transition-shadow" style={{ borderLeftColor: NEURO_COLOURS[services.indexOf(s) % NEURO_COLOURS.length] }}>
+              <article className="rounded-xl bg-card border border-border border-l-4 p-5 lg:p-6 h-full shadow-md hover:shadow-lg transition-shadow" style={{ borderLeftColor: NEURO_COLOURS[services.indexOf(s) % NEURO_COLOURS.length] }}>
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 shrink-0 rounded-md bg-accent/15 flex items-center justify-center mt-0.5">
                     <s.icon size={20} className="text-accent" aria-hidden="true" />
