@@ -86,12 +86,12 @@ const EvidenceSection = () => {
         </div>
 
         {/* Industry cards grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
           {industries.map((ind, idx) => (
             <Link
               key={ind.name}
               to={ind.href}
-              className="group rounded-xl border border-white/15 border-l-4 bg-white/10 backdrop-blur-md p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="group rounded-xl border border-white/15 border-l-4 bg-white/10 backdrop-blur-md p-5 lg:p-6 shadow-sm hover:shadow-md transition-shadow"
               style={{ borderLeftColor: NEURO_COLOURS[idx % NEURO_COLOURS.length] }}
             >
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
@@ -108,7 +108,7 @@ const EvidenceSection = () => {
           ))}
           <Link
             to="/industries"
-            className="group rounded-xl border-2 border-dashed border-white/20 bg-white/5 backdrop-blur-md flex flex-col items-center justify-center p-7 lg:p-8 hover:bg-white/10 hover:border-white/30 transition-all duration-300"
+            className="group rounded-xl border-2 border-dashed border-white/20 bg-white/5 backdrop-blur-md flex flex-col items-center justify-center p-5 lg:p-6 hover:bg-white/10 hover:border-white/30 transition-all duration-300"
           >
             <div className="w-11 h-11 rounded-full bg-accent/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
               <ArrowRight size={18} className="text-accent" />
@@ -119,7 +119,7 @@ const EvidenceSection = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-b border-white/10 mb-14 mt-10" />
+        <div className="border-b border-white/10 mb-10 mt-8" />
 
         {/* Testimonials — carousel */}
         <TestimonialCarousel testimonials={testimonials} variant="dark" />

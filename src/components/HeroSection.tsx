@@ -185,7 +185,7 @@ const HeroSection = () => {
                   key={i}
                   src={img.src}
                   alt={img.alt}
-                  className={`rounded-xl shadow-md w-full h-40 object-cover ${img.offsetClass}`}
+                  className={`rounded-xl shadow-md w-full h-48 object-cover ${img.offsetClass}`}
                   loading="lazy"
                 />
               ))}
@@ -225,7 +225,7 @@ const HeroSection = () => {
                 <img
                   src={conciergeTeam}
                   alt="Our concierge team ready to help"
-                  className="mt-6 w-full max-w-[280px] object-contain"
+                  className="mt-6 w-full max-w-[200px] object-contain"
                 />
               </div>
               <div className="flex-1 min-w-0 space-y-8">
@@ -247,7 +247,7 @@ const HeroSection = () => {
                  <Link
                    key={p.titleKey}
                    to={p.href}
-                   className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                   className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                  >
                    <div className="flex items-center gap-3 mb-3">
                      <p.icon size={20} className={`${p.accent} shrink-0`} aria-hidden="true" />

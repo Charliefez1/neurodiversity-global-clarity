@@ -203,7 +203,7 @@ const InclusivePerformanceSection = () => {
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
           The model
         </p>
-        <h2 className="font-display font-bold text-2xl md:text-3xl tracking-tight leading-[1.1] mb-4 max-w-2xl">
+        <h2 className="font-display font-bold text-lg md:text-xl tracking-tight leading-[1.1] mb-4 max-w-2xl">
           Inclusive Performance
         </h2>
         <p className="text-base font-display font-semibold text-primary-foreground mb-1">
@@ -367,7 +367,7 @@ const InclusivePerformanceSection = () => {
         </div>
 
         {/* ── Text panel ────────────────────────────────── */}
-        <div className="mt-8 min-h-[140px]">
+        <div className="mt-6 min-h-[100px]">
           <div
             key={activeStage}
             className="animate-fade-in"
@@ -393,7 +393,7 @@ const InclusivePerformanceSection = () => {
         </div>
 
         {/* ── Navigation ────────────────────────────────── */}
-        <div className="mt-8 flex items-center gap-3">
+        <div className="mt-6 flex items-center gap-3">
           {/* Back */}
           <button
             onClick={handlePrev}
