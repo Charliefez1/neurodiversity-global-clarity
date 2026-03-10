@@ -20,6 +20,16 @@ import dopamineRiskImg from "@/assets/blog/dopamine-risk-adolescence.jpg";
 import parentCarerBurnoutImg from "@/assets/blog/parent-carer-burnout.jpg";
 import lateDiagnosisImg from "@/assets/blog/late-diagnosis-impact.jpg";
 import darkSideParentImg from "@/assets/blog/dark-side-parent-workshop.jpg";
+import ndEngineeringImg from "@/assets/blog/neurodiversity-engineering.jpg";
+import ndCorporateImg from "@/assets/blog/neurodiversity-corporate.jpg";
+import ndCharityImg from "@/assets/blog/neurodiversity-charity.jpg";
+import ndLegalImg from "@/assets/blog/neurodiversity-legal.jpg";
+import ndEmergencyImg from "@/assets/blog/neurodiversity-emergency.jpg";
+import ndRailImg from "@/assets/blog/neurodiversity-rail.jpg";
+import ndSalesImg from "@/assets/blog/neurodiversity-sales.jpg";
+import ndContactCentreImg from "@/assets/blog/neurodiversity-contact-centre.jpg";
+import ndDefenceImg from "@/assets/blog/neurodiversity-defence.jpg";
+import ndRetailImg from "@/assets/blog/neurodiversity-retail.jpg";
 
 export interface BlogPost {
   slug: string;
@@ -2576,6 +2586,520 @@ What all of this has in common is the same upstream driver. A child whose needs 
 None of these outcomes are sealed. A child who is understood earlier, whose environment is adjusted even partially, who has one adult who genuinely sees them, that child has dramatically better outcomes. The evidence on this is consistent and clear.
 
 This is hard information. You needed it anyway.`,
+  },
+  {
+    slug: "neurodiversity-engineering-infrastructure",
+    title: "Neurodiversity in Engineering and Infrastructure: Where Precision Meets Cognitive Difference",
+    metaTitle: "Neurodiversity in Engineering & Infrastructure | White Paper",
+    metaDescription: "Engineering environments combine high technical demand with rigid processes. Learn how neuroinclusion unlocks performance in safety-critical settings.",
+    excerpt: "Engineering and infrastructure environments combine high technical demand with rigid processes, shift patterns, and safety-critical stakes. Neurodivergent engineers often perform at the highest level. They also face the highest cost when systems are not designed around cognitive diversity.",
+    category: "White Papers",
+    readTime: "14 min read",
+    publishDate: "2026-03-10",
+    accentColor: "orange",
+    image: ndEngineeringImg,
+    content: `Engineering and infrastructure environments combine high technical demand with rigid processes, shift patterns, and safety-critical stakes. Neurodivergent engineers, technicians, and project managers often perform at the highest level in these settings. They also face the highest cost when systems are not designed around cognitive diversity.
+
+## Key Issues in 2026
+
+Engineering's strengths, rigour, systems thinking, technical depth, become barriers when process design ignores cognitive variation.
+
+### Sensory load in operational environments
+
+Plant rooms, construction sites, control rooms, and open-plan engineering offices create high sensory demand. Noise, fluorescent lighting, and constant interruption increase cognitive load disproportionately for neurodivergent staff. Performance drops. Errors increase.
+
+### Communication gaps in technical handovers
+
+Shift handovers, technical briefings, and project updates often rely on verbal communication and assumed shared context. Neurodivergent engineers who process differently, or who need written confirmation, are routinely disadvantaged without anyone recognising the system failure.
+
+### Rigid assessment and promotion criteria
+
+Competency frameworks in engineering often measure communication style over technical output. Neurodivergent engineers with exceptional technical capability are frequently overlooked for progression because they do not present in expected ways.
+
+### Safety culture and disclosure risk
+
+In safety-critical environments, disclosure of neurodivergence carries stigma around fitness for role. This suppresses disclosure, removes support, and creates hidden risk. The person most likely to mask is also the person carrying the highest cognitive load.
+
+### Project management demand and executive function
+
+Large infrastructure projects demand complex coordination, shifting deadlines, and simultaneous workstreams. Without structured support, neurodivergent project leads carry a disproportionate cognitive burden managing both the work and the environment.
+
+## What Is Breaking Right Now
+
+Senior engineers are leaving due to unmanaged sensory overload. Capability processes are being initiated without adjustment conversations. Neurodivergent apprentices are dropping out in the first year. Verbal-only handover systems are creating errors and exclusion.
+
+## Why Engineering Should Lead on Neuroinclusion
+
+Systems thinking is a neurodivergent strength. Many autistic and ADHD engineers see system-level patterns and failure points that others miss. This is a direct asset in infrastructure design and safety analysis.
+
+Hyperfocus drives technical depth. Neurodivergent engineers frequently develop exceptional specialist expertise. In precision engineering, this is exactly what complex projects require.
+
+Pattern recognition supports fault finding. Identifying anomalies in complex systems is a documented strength in many neurodivergent cognitive profiles. Engineering environments benefit directly from this capability.
+
+Diversity of processing reduces groupthink. Teams that include different cognitive styles make fewer systematic errors in risk assessment and project planning.
+
+## The Opportunity
+
+Move from safety-culture stigma around disclosure to proactive cognitive inclusion built into project design and team management.
+
+## Outcomes
+
+Organisations with active neuroinclusion programmes report a 35% reduction in unexplained absence among neurodivergent engineers. Disclosure rates improve as teams build psychological safety. Fewer capability escalations occur as adjustments are made earlier. Retention of specialist technical talent strengthens. Safety incidents linked to communication and cognitive overload reduce.`,
+  },
+  {
+    slug: "neurodiversity-corporate-enterprise",
+    title: "Neurodiversity in Corporate and Enterprise: Where High Performance and Invisible Struggle Sit Side by Side",
+    metaTitle: "Neurodiversity in Corporate & Enterprise | White Paper",
+    metaDescription: "Large corporate environments contain high concentrations of neurodivergent talent and the most entrenched systems for managing people. The gap is a design problem.",
+    excerpt: "Large corporate and enterprise environments contain some of the highest concentrations of neurodivergent talent in the workforce. They also contain some of the most entrenched systems for managing people in ways that were never designed for cognitive diversity.",
+    category: "White Papers",
+    readTime: "14 min read",
+    publishDate: "2026-03-10",
+    accentColor: "blue",
+    image: ndCorporateImg,
+    content: `Large corporate and enterprise environments contain some of the highest concentrations of neurodivergent talent in the workforce. They also contain some of the most entrenched systems for managing people in ways that were never designed for cognitive diversity. The gap between potential and performance in these organisations is not a talent problem. It is a design problem.
+
+## Key Issues in 2026
+
+Corporate environments are built around standardisation. That is their operational strength. It is also the primary barrier to neuroinclusive performance.
+
+### Meeting culture and processing speed
+
+Back-to-back meetings, verbal-first decision making, and an expectation of instant response disadvantage neurodivergent leaders and individual contributors who process more deeply and need time to think before speaking. Good thinking goes unheard because the format does not accommodate it.
+
+### Performance management built for linear output
+
+Corporate performance frameworks typically measure consistency, communication style, and stakeholder management. They undervalue spiky cognitive profiles. Neurodivergent employees who deliver exceptional work in focused bursts are regularly rated as underperforming against criteria that measure behaviour rather than output.
+
+### Unwritten rules and political navigation
+
+Large organisations run on informal norms that are rarely made explicit. For autistic employees and others who process social information differently, this creates a constant tax on cognitive capacity that has nothing to do with the job itself.
+
+### Disclosure at senior level
+
+Senior leaders who are neurodivergent almost never disclose. The personal and professional risk is perceived as too high. This removes role models, suppresses culture change, and means neuroinclusion is seen as something done for junior employees rather than systemic.
+
+### Transformation and change fatigue
+
+Enterprise environments run continuous change programmes. Uncertainty, shifting priorities, and constant restructuring create particular pressure for neurodivergent employees who depend on clarity and predictability to perform at their best.
+
+## What Is Breaking Right Now
+
+Neurodivergent leaders are burning out silently at director and VP level. High-potential employees are exiting after poor performance reviews. Informal complaints are rising as managers lack tools to respond well. DEI programmes are running in parallel with no connection to line management practice.
+
+## Why Corporate Should Lead on Neuroinclusion
+
+Neurodivergent leaders drive innovation. Research consistently shows neurodivergent professionals in leadership roles bring disruptive thinking and pattern recognition that homogeneous leadership teams lack.
+
+Authentic inclusion improves retention across the whole workforce. When an organisation builds systems that work for neurodivergent employees, every employee benefits.
+
+Legal and reputational risk is significant and manageable. Neurodiversity-related tribunal claims have risen 164% in four years.
+
+Scale creates leverage. In large organisations, changing one system reaches hundreds of people. The return on investment in enterprise neuroinclusion is proportionally higher.
+
+## The Opportunity
+
+Move from neurodiversity as a HR compliance function to neuroinclusion as a performance and leadership strategy embedded at enterprise scale.
+
+## Outcomes
+
+39% of neurodivergent employees plan to leave within 12 months if they do not feel included. Organisations see measurable reduction in attrition, improved disclosure rates at senior levels, more consistent reasonable adjustments across divisions, and reduced tribunal and grievance exposure.`,
+  },
+  {
+    slug: "neurodiversity-charity-third-sector",
+    title: "Neurodiversity in Charity and the Third Sector: Where Mission-Driven Work Meets Unsupported People",
+    metaTitle: "Neurodiversity in Charity & Third Sector | White Paper",
+    metaDescription: "The third sector employs a disproportionately high number of neurodivergent people. High commitment is masking high risk. Here is what needs to change.",
+    excerpt: "The third sector employs a disproportionately high number of neurodivergent people, often drawn by purpose-driven work, autonomy, and values alignment. It also operates with constrained resources, stretched teams, and leadership that frequently lacks the tools to support cognitive diversity.",
+    category: "White Papers",
+    readTime: "13 min read",
+    publishDate: "2026-03-10",
+    accentColor: "emerald",
+    image: ndCharityImg,
+    content: `The third sector employs a disproportionately high number of neurodivergent people, often drawn by purpose-driven work, autonomy, and values alignment. It also operates with constrained resources, stretched teams, and leadership that frequently lacks the tools to support cognitive diversity. The result is high commitment masking high risk.
+
+## Key Issues in 2026
+
+Mission-driven environments create conditions where people overextend for the cause. For neurodivergent staff, this dynamic is particularly dangerous.
+
+### Resource scarcity and cognitive overload
+
+Small teams with wide remits create constant context-switching. For neurodivergent employees, managing multiple unrelated workstreams without adequate structure is one of the fastest routes to burnout. The sector normalises overload as commitment.
+
+### Emotional labour and regulation demands
+
+Many third sector roles involve direct work with vulnerable people, trauma exposure, and high emotional demand. For neurodivergent staff who also navigate their own regulation needs, the cumulative load is significant and rarely acknowledged.
+
+### Flat structures with unclear expectations
+
+Charities often use flat organisational structures as a values choice. For neurodivergent employees who need explicit role clarity, reporting lines, and defined expectations, ambiguity in structure is a performance barrier, not an empowering feature.
+
+### Underfunded HR and people infrastructure
+
+Many charities lack dedicated HR teams or employment law expertise. This means neurodivergent employees who need adjustments are navigating informal processes. Managers are making decisions without adequate support, creating legal exposure the organisation does not realise it carries.
+
+## What Is Breaking Right Now
+
+Experienced staff are leaving due to unmanaged burnout and lack of support. Informal complaints are increasing as HR capacity is stretched. Neurodivergent staff are carrying disproportionate workload without recognition. Governance and trustee boards are unaware of neurodiversity risk.
+
+## Why the Third Sector Should Lead
+
+Mission alignment drives exceptional performance. When neurodivergent employees are in roles aligned to their values and strengths, the output is exceptional. Creativity and systems thinking support service design. Authentic inclusion strengthens donor and funder relationships. Infrastructure exists to build on.
+
+## The Opportunity
+
+Move from mission as a substitute for structure to mission supported by systems that sustain the people doing the work.
+
+## Outcomes
+
+63% of employees in neuroinclusive organisations report higher wellbeing outcomes. Organisations see reduced burnout and unplanned absence, stronger manager confidence, improved funder reporting, and better retention of experienced specialist staff.`,
+  },
+  {
+    slug: "neurodiversity-legal-profession",
+    title: "Neurodiversity in Legal: Where Analytical Brilliance Operates Under Unsustainable Pressure",
+    metaTitle: "Neurodiversity in the Legal Profession | White Paper",
+    metaDescription: "The legal profession has one of the highest concentrations of neurodivergent talent. It also has some of the most entrenched cultures of masking and overwork.",
+    excerpt: "The legal profession has one of the highest concentrations of neurodivergent talent of any knowledge-based sector. It also has some of the most entrenched cultures of masking, perfectionism, and overwork. The combination produces exceptional lawyers who are burning out.",
+    category: "White Papers",
+    readTime: "14 min read",
+    publishDate: "2026-03-10",
+    accentColor: "indigo",
+    image: ndLegalImg,
+    content: `The legal profession has one of the highest concentrations of neurodivergent talent of any knowledge-based sector. It also has some of the most entrenched cultures of masking, perfectionism, and overwork. The combination produces exceptional lawyers who are burning out at rates the profession is only beginning to acknowledge.
+
+## Key Issues in 2026
+
+Law selects for analytical depth, pattern recognition, and attention to detail. These are neurodivergent strengths. Law also selects for social conformity and unstated communication norms. This is where the system breaks.
+
+### Perfectionism and masking in high-stakes work
+
+Legal work demands precision. For many neurodivergent lawyers, perfectionism is not a strength. It is a coping mechanism that consumes significantly more cognitive resource than the output suggests. The work looks excellent. The cost is invisible until it becomes a crisis.
+
+### Client-facing performance demands
+
+Legal roles require sustained social performance. Meetings, hearings, negotiations, and networking events create high social and sensory demand. Neurodivergent solicitors and barristers frequently spend as much energy managing the environment as they do on the substantive legal work.
+
+### Billing and time-recording systems
+
+Time recording creates a particular burden for lawyers with ADHD or time-blindness. Reconstructing time from memory, tracking non-linear working patterns, and meeting billable hour targets creates disproportionate administrative stress.
+
+### Partnership culture and unwritten career rules
+
+Progression in law is heavily influenced by informal sponsorship, visibility, and social capital. Neurodivergent lawyers who do exceptional substantive work but navigate unwritten rules differently are routinely overlooked for partnership.
+
+## What Is Breaking Right Now
+
+Senior associates and partners are burning out and leaving the profession entirely. Neurodivergent trainees and NQs are struggling without structured support. Firms are facing SRA scrutiny and tribunal risk around disability discrimination.
+
+## Why Legal Should Lead
+
+Neurodivergent lawyers are frequently exceptional at complex analysis. Attention to detail is a professional asset. Creative legal argument comes from different thinking. The profession already has strong equality frameworks.
+
+## The Opportunity
+
+Move from a profession that selects for neurodivergent talent and then burns it out, to one that designs its systems to retain and develop it.
+
+## Outcomes
+
+164% increase in neurodiversity-related employment tribunals in the UK over the last four years. Law firms are not exempt. Organisations see improved retention, reduced complaints, more consistent adjustments, and stronger SRA compliance.`,
+  },
+  {
+    slug: "neurodiversity-emergency-services",
+    title: "Neurodiversity in Emergency Services: Where Cognitive Strength Saves Lives and Rigid Systems Lose People",
+    metaTitle: "Neurodiversity in Emergency Services | White Paper",
+    metaDescription: "Fire, police, and ambulance services contain high concentrations of neurodivergent professionals. Rigid systems are losing the people who perform best under pressure.",
+    excerpt: "Fire, police, and ambulance services contain high concentrations of neurodivergent professionals drawn to purpose, action, and problem-solving under pressure. They also operate within hierarchical, conformity-driven structures that were not designed for cognitive diversity.",
+    category: "White Papers",
+    readTime: "14 min read",
+    publishDate: "2026-03-10",
+    accentColor: "red",
+    image: ndEmergencyImg,
+    content: `Fire, police, and ambulance services contain high concentrations of neurodivergent professionals drawn to purpose, action, and problem-solving under pressure. They also operate within hierarchical, conformity-driven structures that were not designed for cognitive diversity. The result is exceptional operational performance alongside systemic burnout and disproportionate disciplinary risk.
+
+## Key Issues in 2026
+
+Emergency services environments are built around rapid decision-making, team coordination, and compliance with protocol. These same environments create particular pressure for neurodivergent staff when systems are inflexible.
+
+### Hierarchical culture and disclosure risk
+
+Emergency services operate on rank and command structures. Disclosing neurodivergence is perceived as a threat to operational credibility and career progression. Masking is universal, expected, and exhausting.
+
+### Shift patterns and sleep disruption
+
+Rotating shift patterns create particular difficulty for neurodivergent staff. Sleep disruption compounds executive function challenges. ADHD symptoms intensify. Regulation becomes harder. Performance deteriorates in ways that are misread as conduct issues.
+
+### Sensory intensity in operational environments
+
+Blue light, sirens, trauma scenes, and unpredictable environments create extreme sensory demand. For neurodivergent staff with sensory processing differences, sustained operational exposure without structured recovery creates cumulative cognitive load.
+
+### Disciplinary processes applied before adjustment conversations
+
+Neurodivergent behaviour in emergency services is frequently processed as a conduct issue. Capability and disciplinary processes begin before anyone asks whether an adjustment might change the outcome.
+
+## What Is Breaking Right Now
+
+Experienced operational staff are leaving due to unmanaged sensory and cognitive load. Disciplinary processes are being initiated without reasonable adjustment consideration. Mental health absence is rising among neurodivergent officers and paramedics.
+
+## Why Emergency Services Should Lead
+
+Crisis decision-making is a neurodivergent strength. Pattern recognition saves lives. Procedural rigour aligns with neurodivergent processing. Peer support culture is already strong.
+
+## The Opportunity
+
+Move from neurodivergence as a conduct risk to cognitive diversity as an operational asset, supported by managers trained to distinguish difference from deficiency.
+
+## Outcomes
+
+51% of neurodivergent employees have taken time off work due to their neurodivergence. In emergency services, absence is an operational risk. Organisations see reduction in disciplinary processes, improved disclosure rates, fewer fitness for duty referrals, and stronger retention.`,
+  },
+  {
+    slug: "neurodiversity-rail-transport",
+    title: "Neurodiversity in Rail and Transport: Where Safety-Critical Systems Meet Human Cognitive Variation",
+    metaTitle: "Neurodiversity in Rail & Transport | White Paper",
+    metaDescription: "Rail and transport operations depend on consistent performance in high-consequence environments. Cognitive diversity is present across all roles. The question is whether systems support it.",
+    excerpt: "Rail and transport operations depend on consistent, accurate performance in high-consequence environments. They also employ a large and diverse workforce across control rooms, frontline operations, engineering, and customer services. The question is not whether your workforce includes cognitive diversity. It is whether your systems support it.",
+    category: "White Papers",
+    readTime: "14 min read",
+    publishDate: "2026-03-10",
+    accentColor: "sky",
+    image: ndRailImg,
+    content: `Rail and transport operations depend on consistent, accurate performance in high-consequence environments. They also employ a large and diverse workforce across control rooms, frontline operations, engineering, and customer services. Neurodivergent staff are present across all of these roles. The question is not whether your workforce includes cognitive diversity. It is whether your systems are designed to support it.
+
+## Key Issues in 2026
+
+Transport operations are built on reliability and protocol. When people management systems are less structured than operational systems, neurodivergent staff carry the gap.
+
+### Control room cognitive demand
+
+Signalling, traffic management, and control room environments require sustained attention, rapid information processing, and simultaneous monitoring of multiple systems. These are environments where neurodivergent staff can perform at an exceptional level. They are also environments where unmanaged sensory load and fatigue create serious risk.
+
+### Shift patterns and fatigue management
+
+Rotating shifts across 24-hour operations create particular difficulty for neurodivergent staff. The interaction between shift-related fatigue and executive function challenges creates cumulative performance risk that standard fatigue management frameworks do not account for.
+
+### Customer-facing roles and social demand
+
+Station staff, train managers, and customer service roles carry significant social and communication demand. Managing passenger behaviour, complaints, and unpredictable interactions adds cognitive load that is rarely factored into workload design.
+
+### Safety-critical assessment and disclosure
+
+As in other safety-critical sectors, disclosure of neurodivergence carries perceived fitness-for-role risk. This suppresses disclosure, removes access to support, and creates hidden vulnerability.
+
+## What Is Breaking Right Now
+
+Experienced drivers and operational staff are exiting due to unsupported cognitive load. Non-technical skills assessments are creating disproportionate disadvantage. Absence linked to sensory overload and shift fatigue is going unrecognised.
+
+## Why Rail Should Lead
+
+Attention to detail is an operational asset. Pattern recognition supports anomaly detection. Strong regulatory framework provides a foundation. Diverse cognitive teams make better safety decisions.
+
+## The Opportunity
+
+Move from safety culture that suppresses disclosure to safety culture that recognises cognitive diversity as a source of operational strength.
+
+## Outcomes
+
+Teams that include neurodivergent professionals are up to 30% more productive in some roles. Organisations see improved disclosure rates, more consistent adjustments across depots, reduced sickness absence, and stronger Equality Act compliance.`,
+  },
+  {
+    slug: "neurodiversity-sales-commercial",
+    title: "Neurodiversity in Sales and Commercial: Where Performance Pressure Meets Emotional Regulation Demand",
+    metaTitle: "Neurodiversity in Sales & Commercial | White Paper",
+    metaDescription: "Sales environments attract neurodivergent talent in significant numbers. Without support, the same traits that drive success create high burnout risk.",
+    excerpt: "Sales environments attract neurodivergent talent in significant numbers. The autonomy, pace, variety, and tangible feedback of commercial roles align with many neurodivergent cognitive profiles. They also demand consistent emotional regulation and tolerance of rejection in ways that create high burnout risk.",
+    category: "White Papers",
+    readTime: "14 min read",
+    publishDate: "2026-03-10",
+    accentColor: "amber",
+    image: ndSalesImg,
+    content: `Sales environments attract neurodivergent talent in significant numbers. The autonomy, pace, variety, and tangible feedback of commercial roles align with many neurodivergent cognitive profiles. They also demand consistent emotional regulation, social performance, and tolerance of rejection in ways that, without support, create high burnout risk.
+
+## Key Issues in 2026
+
+Sales culture celebrates resilience. What it rarely examines is the cognitive cost of sustained performance in environments built for a narrow range of working styles.
+
+### Rejection sensitivity and emotional dysregulation
+
+Rejection sensitive dysphoria is common in ADHD profiles. In a role built on receiving rejection daily, the emotional impact is significantly higher than most sales managers recognise. Performance dips are frequently misread as motivation issues rather than physiological responses to repeated rejection.
+
+### CRM compliance and administrative burden
+
+Sales roles require consistent data entry, pipeline management, and activity logging. For neurodivergent salespeople with executive function challenges or time-blindness, CRM compliance is disproportionately demanding and frequently creates performance management issues unrelated to actual sales capability.
+
+### Meeting cadence and performance review culture
+
+Weekly pipeline reviews, daily standups, and real-time performance dashboards create constant public scrutiny. For neurodivergent staff who experience performance anxiety, this cadence is a sustained stressor rather than a motivation tool.
+
+### Variable income and uncertainty
+
+Commission-based structures create income unpredictability that is particularly destabilising for neurodivergent employees who need financial certainty to maintain focus and regulate effectively.
+
+## What Is Breaking Right Now
+
+High-performing sales staff are leaving due to burnout after sustained pressure. Neurodivergent salespeople are being placed on performance improvement plans for CRM non-compliance. Rejection sensitivity is being misread as attitude or motivation problems.
+
+## Why Sales Should Lead
+
+Hyperfocus drives exceptional client knowledge. Pattern recognition supports opportunity identification. Authenticity builds client trust. High energy and creativity in pitch environments is a direct asset.
+
+## The Opportunity
+
+Move from managing neurodivergent salespeople out of the team to designing commercial environments where cognitive diversity drives revenue.
+
+## Outcomes
+
+Companies with neurodiverse workforces report 28% higher average revenue. Organisations see improved retention, fewer PIPs linked to administrative non-compliance, better understanding of rejection sensitivity, and stronger commercial output.`,
+  },
+  {
+    slug: "neurodiversity-call-contact-centres",
+    title: "Neurodiversity in Call and Contact Centres: Where Sensory Load, Scripted Communication, and High Attrition Meet",
+    metaTitle: "Neurodiversity in Contact Centres | White Paper",
+    metaDescription: "Contact centres have some of the highest neurodivergent representation and highest attrition rates. The combination is not coincidental.",
+    excerpt: "Contact centres have some of the highest neurodivergent representation of any workplace environment, and some of the highest attrition rates. The combination is not coincidental. Many neurodivergent people are drawn to the structure. The environment then systematically overwhelms them.",
+    category: "White Papers",
+    readTime: "14 min read",
+    publishDate: "2026-03-10",
+    accentColor: "cyan",
+    image: ndContactCentreImg,
+    content: `Contact centres have some of the highest neurodivergent representation of any workplace environment, and some of the highest attrition rates. The combination is not coincidental. Many neurodivergent people are drawn to the structure, clear role definition, and task focus of contact centre work. The environment then systematically overwhelms them.
+
+## Key Issues in 2026
+
+Contact centre environments are designed for throughput. The systems that maximise call handling also create the conditions for disproportionate neurodivergent burnout.
+
+### Open-plan sensory environments
+
+Large open-plan floors with constant noise, competing conversations, and bright lighting create sustained sensory overload. For neurodivergent agents, particularly those with auditory processing differences, this environment consumes cognitive capacity that should be directed at customers.
+
+### Scripted communication and rigid process
+
+Call scripts and mandatory process flows create compliance demand that conflicts with the natural communication styles of many neurodivergent agents. The effort required to adhere to a script while simultaneously processing customer information and emotional content is significantly higher than it appears.
+
+### Real-time monitoring and performance pressure
+
+Average handling time, call quality scores, and real-time performance dashboards create constant surveillance that is acutely dysregulating for neurodivergent staff.
+
+### Shift patterns and scheduling inflexibility
+
+Contact centres rely on scheduled coverage. The inflexibility of shift allocation creates particular difficulty for neurodivergent agents who perform best in predictable patterns.
+
+## What Is Breaking Right Now
+
+Attrition is running at 30 to 40% annually with neurodivergent staff disproportionately represented in exits. Performance improvement plans are being applied for handling time rather than quality. New agent dropout in the first 90 days is at disproportionately high rates.
+
+## Why Contact Centres Should Lead
+
+Neurodivergent agents often show exceptional empathy. Hyperfocus supports complex query resolution. Pattern recognition improves fraud and escalation detection. Retention ROI is immediate and measurable.
+
+## The Opportunity
+
+Move from designing for throughput at the expense of people to designing environments where cognitive diversity reduces attrition and improves customer outcomes.
+
+## Outcomes
+
+40% of neurodivergent employees report being impacted most days at work. In contact centres, neuroinclusion creates measurable reduction in attrition, improved first-contact resolution, reduced absence managed as conduct, and stronger Equality Act compliance.`,
+  },
+  {
+    slug: "neurodiversity-defence-national-infrastructure",
+    title: "Neurodiversity in Defence and National Infrastructure: Where Security-Conscious Culture Meets Unacknowledged Cognitive Diversity",
+    metaTitle: "Neurodiversity in Defence & National Infrastructure | White Paper",
+    metaDescription: "Defence environments contain high concentrations of neurodivergent professionals in technical and analytical roles. Security culture inadvertently suppresses the talent it relies on.",
+    excerpt: "Defence and national infrastructure environments contain high concentrations of neurodivergent professionals, particularly in technical, analytical, and intelligence roles. They also operate within cultures of conformity that make disclosure and support access particularly difficult.",
+    category: "White Papers",
+    readTime: "14 min read",
+    publishDate: "2026-03-10",
+    accentColor: "slate",
+    image: ndDefenceImg,
+    content: `Defence and national infrastructure environments contain high concentrations of neurodivergent professionals, particularly in technical, analytical, and intelligence roles. They also operate within cultures of conformity, security clearance sensitivity, and hierarchical governance that make disclosure and support access particularly difficult. The result is a workforce carrying significant cognitive diversity with almost no systemic recognition of it.
+
+## Key Issues in 2026
+
+Defence environments prioritise operational security and conformity. These values, applied without nuance to people management, create specific and avoidable risk.
+
+### Security clearance and disclosure risk
+
+Many defence personnel believe that disclosing neurodivergence will affect their security clearance or operational status. This belief is often unfounded but is almost never corrected by the organisation. The result is widespread masking and no access to support.
+
+### Analytical demand and cognitive load in intelligence roles
+
+Intelligence analysis, signals processing, and technical roles create sustained high cognitive demand. Neurodivergent analysts, many of whom are exceptionally capable in deep focus work, are carrying this load without recognition or structural support.
+
+### Hierarchical culture and rank-based communication
+
+Defence communication norms are shaped by rank, formality, and deference to authority. Neurodivergent personnel who communicate directly or question procedures can be misread as insubordinate.
+
+### Transition and career change pressure
+
+Defence personnel transitioning to civilian roles often find that their neurodivergent traits, which were assets in a structured military environment, become barriers in corporate settings.
+
+## What Is Breaking Right Now
+
+Highly capable analysts and technical specialists are leaving due to unacknowledged burnout. Neurodivergent veterans are leaving the service without support. Disclosure is suppressed by security clearance anxiety. Capability processes are being initiated without adjustment conversations.
+
+## Why Defence Should Lead
+
+Analytical and pattern recognition capability is a direct operational asset. Procedural rigour aligns with neurodivergent processing. Technical depth supports complex problem-solving. The sector already understands security-conscious confidentiality.
+
+## The Opportunity
+
+Move from security culture that inadvertently suppresses neurodivergent talent to an operational culture that recognises cognitive diversity as a strategic capability.
+
+## Outcomes
+
+20% of the workforce is estimated to be neurodivergent. In defence, where analytical and technical roles are concentrated, the proportion is significantly higher. Organisations see improved disclosure rates, stronger retention, reduced capability processes, and better transition support.`,
+  },
+  {
+    slug: "neurodiversity-retail-hospitality",
+    title: "Neurodiversity in Retail and Hospitality: Where Customer-Facing Demand Meets Shift-Based Cognitive Load",
+    metaTitle: "Neurodiversity in Retail & Hospitality | White Paper",
+    metaDescription: "Retail and hospitality employ more neurodivergent people than almost any other sector. High sensory environments and unpredictable shifts create disproportionate burnout.",
+    excerpt: "Retail and hospitality employ more neurodivergent people than almost any other sector, often in entry-level and customer-facing roles that were never designed with cognitive diversity in mind. The sector loses exceptional people because it has not learned to see them.",
+    category: "White Papers",
+    readTime: "14 min read",
+    publishDate: "2026-03-10",
+    accentColor: "rose",
+    image: ndRetailImg,
+    content: `Retail and hospitality employ more neurodivergent people than almost any other sector, often in entry-level and customer-facing roles that were never designed with cognitive diversity in mind. High sensory environments, unpredictable shift patterns, and social demand combine to create disproportionate burnout and attrition. The sector loses exceptional people because it has not learned to see them.
+
+## Key Issues in 2026
+
+Retail and hospitality environments are designed for customer experience. They are rarely designed for the cognitive needs of the people delivering it.
+
+### Sensory environment intensity
+
+Bright lighting, background music, crowds, unpredictable noise, and constant movement create sustained sensory overload for neurodivergent staff. The cognitive cost is significant and almost entirely invisible to management.
+
+### Unpredictable shift patterns and routine disruption
+
+Last-minute shift changes, seasonal hours variation, and cover requests create particular difficulty for neurodivergent staff who rely on predictability to regulate and perform. Many leave not because they cannot do the job but because the scheduling system makes the job unsustainable.
+
+### Customer-facing social demand
+
+Sustained interaction with a high volume of diverse customers requires continuous social processing, emotional regulation, and communication flexibility. For neurodivergent staff, this demand is cumulative across a shift.
+
+### High task variety and context-switching
+
+Stock management, customer service, till operation, cleaning, and team communication often run simultaneously. For neurodivergent staff with executive function challenges, constant context-switching is significantly more demanding than any single task.
+
+### Management practice and informal culture
+
+Front-line managers frequently lack formal HR training. Neurodivergent behaviour is often managed informally, inconsistently, or punitively.
+
+## What Is Breaking Right Now
+
+Seasonal neurodivergent staff are not being retained due to unsupported onboarding. Attendance management processes are applied without sensory or scheduling adjustment. Customer complaints about staff behaviour are linked to unrecognised neurodivergent traits. High attrition among neurodivergent staff in the first three months.
+
+## Why Retail and Hospitality Should Lead
+
+Attention to detail improves customer experience. Genuine interest in customers builds loyalty. Process adherence in food safety and compliance is strong. High prevalence means immediate impact.
+
+## The Opportunity
+
+Move from high attrition accepted as structural to neuroinclusion as a retention strategy that directly reduces recruitment cost.
+
+## Outcomes
+
+Teams with neurodivergent professionals are up to 30% more productive in some roles. Organisations see measurable reduction in attrition in the first six months, improved onboarding completion rates, reduced attendance cases, and stronger front-line manager confidence.`,
   },
 ];
 
