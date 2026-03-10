@@ -367,7 +367,7 @@ const InclusivePerformanceSection = () => {
         </div>
 
         {/* ── Text panel ────────────────────────────────── */}
-        <div className="mt-8 min-h-[140px]">
+        <div className="mt-6 min-h-[100px]">
           <div
             key={activeStage}
             className="animate-fade-in"
