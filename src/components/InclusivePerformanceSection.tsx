@@ -388,7 +388,7 @@ const InclusivePerformanceSection = () => {
           className="mt-6 transition-opacity duration-300"
           style={{ opacity: showCallout ? 1 : 0, pointerEvents: showCallout ? "auto" : "none" }}
         >
-          <p className="text-sm italic text-foreground/60 border-l-2 border-accent pl-4 max-w-[52ch]">
+          <p className="text-sm italic text-primary-foreground/60 border-l-2 border-accent pl-4 max-w-[52ch]">
             The goal is not to manage neurodivergent people better. It is to build systems that work for everyone.
           </p>
         </div>
