@@ -17,10 +17,9 @@ import keynoteSpeaking from "@/assets/hero/keynote-speaking.jpg";
 import umbrellaEvent from "@/assets/hero/umbrella-event.jpg";
 
 const collageImages = [
-  { src: teamGroupSelfie, alt: "Neurodiversity Global team group selfie", offsetClass: "translate-y-4" },
-  { src: keynoteSpeaking, alt: "Keynote presentation at Heritage Railway Association", offsetClass: "-translate-y-2" },
-  { src: teamConference, alt: "Team members at a neurodiversity conference", offsetClass: "-translate-y-2" },
-  { src: umbrellaEvent, alt: "Colourful ADHD Foundation umbrella display event", offsetClass: "translate-y-4" },
+  { src: teamGroupSelfie, alt: "Neurodiversity Global team group selfie" },
+  { src: keynoteSpeaking, alt: "Keynote presentation at Heritage Railway Association" },
+  { src: umbrellaEvent, alt: "Colourful ADHD Foundation umbrella display event" },
 ];
 
 const pathwayKeys = [
