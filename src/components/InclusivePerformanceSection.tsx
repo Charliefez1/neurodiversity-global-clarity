@@ -398,7 +398,7 @@ const InclusivePerformanceSection = () => {
           {/* Back */}
           <button
             onClick={handlePrev}
-            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground/70 transition-colors"
             aria-label="Previous stage"
           >
             <ArrowLeft size={16} />
@@ -407,7 +407,7 @@ const InclusivePerformanceSection = () => {
           {/* Play/Pause */}
           <button
             onClick={() => setIsPlaying((p) => !p)}
-            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground/70 transition-colors"
             aria-label={isPlaying ? "Pause auto-play" : "Resume auto-play"}
           >
             {isPlaying ? <Pause size={16} /> : <Play size={16} />}
@@ -416,7 +416,7 @@ const InclusivePerformanceSection = () => {
           {/* Forward */}
           <button
             onClick={handleNext}
-            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground/70 transition-colors"
             aria-label="Next stage"
           >
             <ArrowRight size={16} />
