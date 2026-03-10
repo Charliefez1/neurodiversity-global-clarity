@@ -1,21 +1,24 @@
 
-## Add Image Next to "The Challenge" Title
 
-### What will change
-The uploaded image (showing training stats and a Teams call) will be placed alongside the "The challenge" section header in the ProblemSection, creating a side-by-side layout on desktop.
+## Fix: Build Error in index.html
 
-### Implementation
+The build is failing because the `<noscript>` block is inside `<head>` and contains HTML body elements (`<h1>`, `<p>`, `<ul>`, etc.). The HTML spec only allows `<link>`, `<style>`, and `<meta>` inside `<noscript>` when it's in the `<head>`.
 
-1. **Copy the uploaded image** into `src/assets/challenge-stats.png`
+### Change
 
-2. **Update `src/components/ProblemSection.tsx`**:
-   - Import the image as an ES6 module
-   - Change the header area (currently `max-w-2xl mb-16`) from a single-column layout to a two-column grid on larger screens (`grid lg:grid-cols-2 gap-8 items-center mb-16`)
-   - Left column: keep the existing badge, h2 title, description text, and audio player
-   - Right column: display the image with `rounded-xl` styling, appropriate alt text, and responsive sizing
-   - On mobile, the image will stack below the title text
+Move the `<noscript>` block from `<head>` into `<body>` (just before `<div id="root">`). This is valid HTML and still serves the same purpose for non-JS crawlers.
 
-### Visual result
-- Desktop: title/text on the left, image on the right, side by side
-- Mobile: title/text on top, image below
-- The three problem cards underneath remain unchanged
+```text
+<body>
+  <noscript>
+    <style>...</style>
+    <h1>Neurodiversity Global</h1>
+    ... (existing content) ...
+  </noscript>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+```
+
+Single file change, single line move. Build will pass immediately.
+
