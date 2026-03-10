@@ -65,10 +65,10 @@ const EvidenceSection = () => {
   const { mode } = useExperienceMode();
 
   return (
-    <section id="evidence" className="relative py-20 lg:py-28" aria-labelledby="evidence-heading">
+    <section id="evidence" className="relative py-12 lg:py-16" aria-labelledby="evidence-heading">
       <div className="relative z-10 mx-auto max-w-wide px-6 lg:px-10">
         {/* Header */}
-        <div className="mb-16 max-w-4xl">
+        <div className="mb-10 max-w-4xl">
           <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
             Industry Solutions
           </p>

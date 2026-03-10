@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 
 const FinalCTA = () => {
   return (
-    <section id="contact" className="bg-warm-stone py-16 lg:py-20" aria-labelledby="cta-heading">
+    <section id="contact" className="bg-warm-stone py-12 lg:py-16" aria-labelledby="cta-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

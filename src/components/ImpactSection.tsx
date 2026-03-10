@@ -85,11 +85,11 @@ const ImpactSection = () => {
   const outperform = useCountUp(42, 1200, visible);
 
   return (
-    <section ref={ref} id="impact" className="bg-primary text-primary-foreground py-20 lg:py-28" aria-labelledby="impact-heading">
+    <section ref={ref} id="impact" className="bg-primary text-primary-foreground py-12 lg:py-16" aria-labelledby="impact-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
 
         {/* Header row */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/30 bg-accent/10 mb-4">
               <Activity size={14} className="text-accent" />
@@ -112,7 +112,7 @@ const ImpactSection = () => {
         {/* ── Top headline cards ── */}
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {/* Workforce card */}
-          <div className="relative overflow-hidden rounded-2xl border border-accent/40 bg-primary-foreground/[0.06] p-5 lg:p-6">
+          <div className="relative overflow-hidden rounded-2xl border border-accent/40 bg-primary-foreground/[0.06] p-4 lg:p-5">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 rounded-lg bg-accent/15 flex items-center justify-center">
                 <Users size={16} className="text-accent" />
@@ -133,7 +133,7 @@ const ImpactSection = () => {
           </div>
 
           {/* Competitive advantage card */}
-          <div className="relative overflow-hidden rounded-2xl border border-orange-400/40 bg-primary-foreground/[0.06] p-5 lg:p-6">
+          <div className="relative overflow-hidden rounded-2xl border border-orange-400/40 bg-primary-foreground/[0.06] p-4 lg:p-5">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 rounded-lg bg-orange-400/15 flex items-center justify-center">
                 <BarChart3 size={16} className="text-orange-400" />

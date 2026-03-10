@@ -97,7 +97,7 @@ const HeroSection = () => {
   return (
     <section className="bg-background text-foreground" aria-labelledby="hero-heading">
       {/* Main hero: two-column */}
-      <div className="mx-auto max-w-wide px-6 lg:px-10 pt-16 lg:pt-24 pb-12 lg:pb-16">
+      <div className="mx-auto max-w-wide px-6 lg:px-10 pt-12 lg:pt-16 pb-8 lg:pb-12">
         <div className="lg:flex lg:items-center lg:gap-14">
           {/* Left column */}
           <div className="max-w-2xl lg:flex-1">

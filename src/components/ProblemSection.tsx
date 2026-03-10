@@ -46,11 +46,11 @@ const ProblemSection = () => {
   return (
     <section
       id="problem"
-      className="relative py-20 lg:py-28 pb-10 lg:pb-12"
+      className="relative py-12 lg:py-16 pb-8 lg:pb-10"
       aria-labelledby="problem-heading"
     >
       <div className="relative z-10 mx-auto max-w-wide px-6 lg:px-10">
-        <div className="mb-16 max-w-4xl">
+        <div className="mb-10 max-w-4xl">
             <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
               The challenge
             </p>

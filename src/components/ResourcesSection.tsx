@@ -39,7 +39,7 @@ const resources = [
 ];
 
 const ResourcesSection = () => (
-  <section id="resources" className="bg-primary text-primary-foreground py-16 lg:py-20">
+  <section id="resources" className="bg-primary text-primary-foreground py-12 lg:py-16">
     <div className="mx-auto max-w-wide px-6 lg:px-10">
       <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-accent mb-3">
         Resources

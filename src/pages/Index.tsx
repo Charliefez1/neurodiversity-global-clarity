@@ -53,7 +53,7 @@ const Index = () => {
       <PageContents />
       <FloatingContactButton />
       {/* Ask Rich Anything — compact CTA */}
-      <section className="bg-primary py-14 lg:py-18">
+      <section className="bg-primary py-10 lg:py-12">
         <div className="mx-auto max-w-wide px-6 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-12">
             <div className="max-w-xl">
