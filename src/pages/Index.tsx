@@ -97,6 +97,7 @@ const Index = () => {
           <EvidenceSection />
         </div>
       </div>
+      <FeaturedClient />
       <NeuroFrameworkSection />
       <InclusivePerformanceSection />
 
