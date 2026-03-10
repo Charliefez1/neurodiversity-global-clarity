@@ -66,8 +66,8 @@ const ResourcesSection = () => (
               <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-3">
                 {resource.badge}
               </span>
-              <h3 className="font-display font-bold text-sm leading-tight mb-2">{resource.title}</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed flex-1">{resource.description}</p>
+              <h3 className="font-display font-bold text-sm leading-tight mb-2 text-primary-foreground">{resource.title}</h3>
+              <p className="text-xs text-primary-foreground/60 leading-relaxed flex-1">{resource.description}</p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-accent text-xs font-semibold group-hover:gap-2.5 transition-all">
                 {resource.external ? "Visit" : "Explore"} <ArrowRight size={14} aria-hidden="true" />
               </span>

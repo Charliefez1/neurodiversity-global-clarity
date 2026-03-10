@@ -1,5 +1,6 @@
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
+import AskQuestionCompact from "@/components/AskQuestionCompact";
 import { TrendingUp, Users, Shield, Zap, Award, BarChart3, PieChart, Activity } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 

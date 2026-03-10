@@ -98,19 +98,11 @@ const Index = () => {
         </div>
       </div>
       <FeaturedClient />
-      <NeuroFrameworkSection />
       <InclusivePerformanceSection />
 
       <FinalCTA />
       
       <ResourcesSection />
-      <section className="py-12 lg:py-16 bg-muted">
-        <div className="mx-auto max-w-wide px-6 lg:px-10">
-          <div className="max-w-2xl mx-auto">
-            <AskQuestionCompact />
-          </div>
-        </div>
-      </section>
       <Footer />
     </main>
   );
