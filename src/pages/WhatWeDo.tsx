@@ -13,6 +13,12 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { NEURO_COLOURS } from "@/data/neuroColours";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   AlertTriangle,
   Target,
   GraduationCap,
@@ -27,6 +33,11 @@ import {
   Zap,
   Lightbulb,
   BarChart3,
+  MessageSquare,
+  LayoutGrid,
+  Compass,
+  Activity,
+  HeartHandshake,
 } from "lucide-react";
 import systemsImg from "@/assets/what-we-do-systems.jpg";
 import workshopImg from "@/assets/workshop-team-activity.jpg";
