@@ -1,13 +1,32 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowLeft, Clock, Calendar, ArrowRight } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, ArrowRight, Linkedin } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
-import PageCTA from "@/components/templates/PageCTA";
 import { getBlogPost, getRelatedPosts } from "@/data/blogPosts";
 import { NEURO_COLOURS } from "@/data/neuroColours";
+
+const MID_ARTICLE_CTAS: Record<string, string> = {
+  Workplace:
+    "Many of the organisations we work with are exploring this right now. If this is something your team is beginning to look at, you are welcome to [start a conversation with us](/#contact).",
+  Parents:
+    "If this resonates with your experience as a parent, you are welcome to [get in touch with us](/#contact). We are parents too, and we understand.",
+  "Children & Young People":
+    "If you are supporting a young person and this feels familiar, you are welcome to [reach out to us](/#contact). We have been there.",
+  "White Paper":
+    "Organisations across every sector are asking these questions. If yours is one of them, you are welcome to [start a conversation with us](/#contact).",
+};
+
+const splitContentForCTA = (content: string, category: string) => {
+  const paragraphs = content.split("\n\n");
+  const mid = Math.floor(paragraphs.length / 2);
+  const cta = MID_ARTICLE_CTAS[category] || MID_ARTICLE_CTAS["Workplace"];
+  const before = paragraphs.slice(0, mid).join("\n\n");
+  const after = paragraphs.slice(mid).join("\n\n");
+  return `${before}\n\n> ${cta}\n\n${after}`;
+};
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -15,6 +34,20 @@ const BlogPost = () => {
   const related = slug ? getRelatedPosts(slug) : [];
 
   if (!post) return <Navigate to="/blog" replace />;
+
+  const enrichedContent = splitContentForCTA(post.content, post.category);
+
+  const faqJsonLd = post.faqItems && post.faqItems.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faqItems.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }
+    : null;
 
   return (
     <>
@@ -25,10 +58,14 @@ const BlogPost = () => {
         headline: post.title,
         description: post.metaDescription,
         datePublished: post.publishDate,
-        author: { "@type": "Person", name: "Rich Daly" },
+        author: [
+          { "@type": "Person", name: "Richard Ferriman", url: "https://www.linkedin.com/in/richardferriman/" },
+          { "@type": "Person", name: "Charlie Ferriman", url: "https://www.linkedin.com/in/charlieferriman/" },
+        ],
         publisher: { "@type": "Organization", name: "Neurodiversity Global", url: "https://www.neurodiversityglobal.com" },
         mainEntityOfPage: `https://www.neurodiversityglobal.com/blog/${post.slug}`,
       }} />
+      {faqJsonLd && <JsonLd data={faqJsonLd} />}
       <Navbar />
 
       {/* Hero with image */}
@@ -88,10 +125,71 @@ const BlogPost = () => {
                 strong: ({ children }) => (
                   <strong className="text-foreground font-bold">{children}</strong>
                 ),
+                a: ({ href, children }) => (
+                  <Link to={href || "#"} className="text-accent no-underline hover:underline">{children}</Link>
+                ),
               }}
             >
-              {post.content}
+              {enrichedContent}
             </ReactMarkdown>
+          </div>
+
+          {/* Questions leaders often ask */}
+          {post.faqItems && post.faqItems.length > 0 && (
+            <div className="mt-16 pt-10 border-t border-border">
+              <h2 className="font-display font-bold text-xl md:text-2xl text-foreground mb-8">Questions leaders often ask</h2>
+              <div className="space-y-6">
+                {post.faqItems.map((faq, i) => (
+                  <div key={i} className="bg-card rounded-xl border border-border p-6 shadow-sm">
+                    <h3 className="font-display font-bold text-sm md:text-base text-foreground mb-3">{faq.question}</h3>
+                    <p className="text-sm text-muted-foreground leading-[1.8]">{faq.answer}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Reflective closing + Discovery CTA */}
+          <div className="mt-16 pt-10 border-t border-border">
+            <p className="text-sm text-muted-foreground leading-[1.8] mb-5">
+              Organisations everywhere are beginning to recognise that traditional approaches do not work for everyone. Understanding how people think, communicate, and perform is becoming an essential capability rather than an optional inclusion topic.
+            </p>
+            <p className="text-sm text-muted-foreground leading-[1.8] mb-8">
+              If your organisation is beginning to explore these questions, you are welcome to start a conversation with us.
+            </p>
+            <div className="inline-flex items-center gap-2 text-sm font-display font-bold text-accent">
+              <Link to="/#contact" className="hover:underline">Book a discovery conversation</Link>
+              <ArrowRight size={14} />
+            </div>
+          </div>
+
+          {/* Author section */}
+          <div className="mt-16 pt-10 border-t border-border">
+            <h2 className="font-display font-bold text-xl md:text-2xl text-foreground mb-8">About the authors</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card rounded-xl border border-border p-6 shadow-sm">
+                <h3 className="font-display font-bold text-base text-foreground mb-2">Richard Ferriman</h3>
+                <p className="text-xs text-muted-foreground leading-[1.8] mb-4">
+                  Richard Ferriman is the co-founder of Neurodiversity Global. He is an autistic leader, speaker, and strategist with more than thirty years of leadership experience. He has led over one thousand projects globally and now works with organisations to redesign systems so neurodivergent people can succeed.
+                </p>
+                <a href="https://www.linkedin.com/in/richardferriman/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-accent font-display font-semibold hover:underline">
+                  <Linkedin size={14} /> LinkedIn
+                </a>
+              </div>
+              <div className="bg-card rounded-xl border border-border p-6 shadow-sm">
+                <h3 className="font-display font-bold text-base text-foreground mb-2">Charlie Ferriman</h3>
+                <p className="text-xs text-muted-foreground leading-[1.8] mb-4">
+                  Charlie Ferriman is a Gen Z entrepreneur, ADHD advocate, and co-founder of Neurodiversity Global. As a qualified trainer and youth mentor, he works with organisations, universities, and communities to help the next generation navigate work, education, and entrepreneurship.
+                </p>
+                <a href="https://www.linkedin.com/in/charlieferriman/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-accent font-display font-semibold hover:underline">
+                  <Linkedin size={14} /> LinkedIn
+                </a>
+              </div>
+            </div>
+            <p className="mt-6 text-sm text-muted-foreground leading-[1.8]">
+              If you would like to explore these ideas in your organisation, you can{" "}
+              <Link to="/#contact" className="text-accent hover:underline">book a conversation with us here</Link>.
+            </p>
           </div>
         </div>
       </article>
@@ -123,7 +221,6 @@ const BlogPost = () => {
         </section>
       )}
 
-      <PageCTA title="Want to explore more?" description="Browse our full blog or get in touch to discuss how we can support your organisation." />
       <Footer />
     </>
   );
