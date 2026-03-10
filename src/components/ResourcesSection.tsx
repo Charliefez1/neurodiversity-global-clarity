@@ -53,7 +53,7 @@ const ResourcesSection = () => (
             key={resource.title}
             href={resource.href}
             {...(resource.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="group flex flex-col rounded-xl border border-border bg-background/60 overflow-hidden hover:bg-background hover:border-border transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="group flex flex-col rounded-xl border border-primary-foreground/10 bg-primary-foreground/[0.06] overflow-hidden hover:bg-primary-foreground/[0.1] transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <div className="aspect-[16/10] overflow-hidden">
               <img
