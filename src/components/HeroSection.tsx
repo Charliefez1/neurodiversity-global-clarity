@@ -11,18 +11,16 @@ import conciergeTeam from "@/assets/concierge-team.png";
 import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 import TrustIndicators from "@/components/TrustIndicators";
 
-import heroWorkshop from "@/assets/hero/team-workshop.jpg";
-import heroSpeaker from "@/assets/hero/consultant-speaking.jpg";
-import portrait1 from "@/assets/testimonials/portrait-1.jpg";
-import portrait2 from "@/assets/testimonials/portrait-2.jpg";
-import portrait3 from "@/assets/testimonials/portrait-3.jpg";
-import portrait4 from "@/assets/testimonials/portrait-4.jpg";
+import diverseWorkforce from "@/assets/industries/diverse-workforce.png";
+import mixedProfessions from "@/assets/industries/mixed-professions.png";
+import workshopTeam from "@/assets/workshop-hero-team.png";
+import communityWorkers from "@/assets/industries/community-workers.png";
 
 const collageImages = [
-  { src: heroWorkshop, alt: "Diverse team in a collaborative workshop", offsetClass: "translate-y-4" },
-  { src: portrait1, alt: "Neurodiversity champion smiling", offsetClass: "-translate-y-2" },
-  { src: heroSpeaker, alt: "Consultant speaking to a group", offsetClass: "-translate-y-2" },
-  { src: portrait3, alt: "Professional in a coaching session", offsetClass: "translate-y-4" },
+  { src: diverseWorkforce, alt: "Diverse workforce collaborating together", offsetClass: "translate-y-4" },
+  { src: mixedProfessions, alt: "Professionals from mixed disciplines", offsetClass: "-translate-y-2" },
+  { src: workshopTeam, alt: "Team engaged in a neurodiversity workshop", offsetClass: "-translate-y-2" },
+  { src: communityWorkers, alt: "Community workers supporting inclusion", offsetClass: "translate-y-4" },
 ];
 
 const pathwayKeys = [
