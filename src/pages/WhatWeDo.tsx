@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 import systemsImg from "@/assets/what-we-do-systems.jpg";
 import workshopImg from "@/assets/workshop-team-activity.jpg";
-import dashboardImg from "@/assets/coaching-dashboard.png";
+import dashboardImg from "@/assets/inclusive-performance-curve.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
