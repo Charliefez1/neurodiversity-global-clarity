@@ -81,7 +81,11 @@ const Blog = () => {
 
   return (
     <>
-      <SEOHead title="Blog | Neurodiversity Global" description="Expert articles on neurodiversity in the workplace and for children and young people." path="/blog" />
+      <SEOHead title="Neurodiversity Blog | Expert Articles" description="Evidence-informed articles on neurodiversity in the workplace and for children and young people. Practical guidance for HR, managers, and parents." path="/blog" />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://www.neurodiversityglobal.com/" },
+        { name: "Blog", url: "https://www.neurodiversityglobal.com/blog" },
+      ])} />
       <Navbar />
       <NewsHeadlines />
 
