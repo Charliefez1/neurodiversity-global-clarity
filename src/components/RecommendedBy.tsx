@@ -23,7 +23,7 @@ const partners = [
 const RecommendedBy = () => (
   <div>
     <div className="mx-auto max-w-wide px-6 lg:px-10 py-10 lg:py-14">
-      <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-8">
+      <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-8">
         Recommended by
       </p>
       <div className="flex flex-wrap items-center gap-10 lg:gap-14 mb-8">

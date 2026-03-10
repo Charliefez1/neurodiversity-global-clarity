@@ -57,7 +57,7 @@ const Index = () => {
         <div className="mx-auto max-w-wide px-6 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-12">
             <div className="max-w-xl">
-              <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-burnt-orange mb-3">Ask Rich Anything</p>
+              <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-accent mb-3">Ask Rich Anything</p>
               <h2 className="font-display font-bold text-xl md:text-2xl text-primary-foreground leading-tight">
                 Got a question about neurodiversity at work?
               </h2>
