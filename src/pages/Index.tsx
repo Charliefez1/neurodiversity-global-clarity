@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import TrainingCatalogueBanner from "@/components/TrainingCatalogueBanner";
 import PageContents from "@/components/PageContents";
 import NeuroFrameworkSection from "@/components/NeuroFrameworkSection";
 import InclusivePerformanceSection from "@/components/InclusivePerformanceSection";
