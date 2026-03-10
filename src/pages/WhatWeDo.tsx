@@ -41,7 +41,7 @@ import {
 } from "lucide-react";
 import systemsImg from "@/assets/what-we-do-systems.jpg";
 import workshopImg from "@/assets/workshop-team-activity.jpg";
-import dashboardImg from "@/assets/inclusive-performance-curve.png";
+import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
