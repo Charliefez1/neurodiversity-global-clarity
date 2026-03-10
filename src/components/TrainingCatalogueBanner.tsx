@@ -54,17 +54,18 @@ const TrainingCatalogueBanner = () => {
                 ))}
               </div>
 
-              <a
-                href="/workshops"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
-              >
-                {t("hero.browseCatalogue")}
-                <ArrowRight size={16} aria-hidden="true" />
-              </a>
-
-              <p className="mt-4 text-xs text-muted-foreground">
-                {t("hero.peopleTrained")}
-              </p>
+              <div className="flex flex-wrap items-center gap-4">
+                <a
+                  href="/workshops"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-accent text-accent-foreground font-display font-bold text-sm shadow-lg shadow-accent/30 hover:shadow-xl hover:shadow-accent/45 hover:scale-[1.02] transition-all"
+                >
+                  {t("hero.browseCatalogue")}
+                  <ArrowRight size={16} aria-hidden="true" />
+                </a>
+                <p className="text-xs text-muted-foreground">
+                  30,000+ people trained · 750+ organisations
+                </p>
+              </div>
             </div>
           </div>
 
