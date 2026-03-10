@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import JsonLd from "@/components/JsonLd";
 import { getBlogPost, getRelatedPosts } from "@/data/blogPosts";
+import { blogFaqs } from "@/data/blogFaqs";
 import { NEURO_COLOURS } from "@/data/neuroColours";
 
 const MID_ARTICLE_CTAS: Record<string, string> = {
