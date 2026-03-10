@@ -228,10 +228,10 @@ const InclusivePerformanceSection = () => {
             aria-label="Inclusive Performance bell curve"
             role="img"
           >
-            <line x1="0" y1={BASE_Y} x2={W} y2={BASE_Y} stroke="currentColor" className="text-foreground/15" strokeWidth="1" />
-            <line x1="0" y1={BASE_Y} x2="0" y2="10" stroke="currentColor" className="text-foreground/15" strokeWidth="1" />
+            <line x1="0" y1={BASE_Y} x2={W} y2={BASE_Y} stroke="currentColor" className="text-primary-foreground/15" strokeWidth="1" />
+            <line x1="0" y1={BASE_Y} x2="0" y2="10" stroke="currentColor" className="text-primary-foreground/15" strokeWidth="1" />
 
-            <path d={fullCurvePath()} fill="none" stroke="currentColor" className="text-foreground/10" strokeWidth="1.5" />
+            <path d={fullCurvePath()} fill="none" stroke="currentColor" className="text-primary-foreground/10" strokeWidth="1.5" />
 
             {/* Zone fills */}
             {zones.map((zone, zi) => {
