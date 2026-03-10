@@ -49,6 +49,7 @@ export interface BlogPost {
   accentColor: string;
   image: string;
   content: string;
+  faqItems?: { question: string; answer: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
