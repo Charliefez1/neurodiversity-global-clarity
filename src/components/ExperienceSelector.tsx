@@ -15,16 +15,19 @@ const modes: { value: ExperienceMode; label: string; icon: typeof BookOpen }[] =
 const ExperienceSelector = () => {
   const { mode, setMode } = useExperienceMode();
   const { sections } = usePageSections();
-  const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
+  const [theme, setTheme] = useState<ThemeMode>(() => {
+    if (document.documentElement.classList.contains("dark")) return "dark";
+    if (document.documentElement.classList.contains("light")) return "light";
+    return "standard";
+  });
   const [textSize, setTextSize] = useState<"normal" | "large">("normal");
 
   useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+    document.documentElement.classList.remove("dark", "light");
+    if (theme !== "standard") {
+      document.documentElement.classList.add(theme);
     }
-  }, [dark]);
+  }, [theme]);
 
   useEffect(() => {
     document.documentElement.style.fontSize = textSize === "large" ? "112.5%" : "";
