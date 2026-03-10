@@ -19,7 +19,7 @@ const TrainingCatalogueBanner = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-warm-stone py-14 lg:py-20">
+    <section className="bg-warm-stone py-10 lg:py-14">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="rounded-xl border border-border bg-card p-7 lg:p-10 shadow-sm">
           <div className="lg:flex lg:gap-10">
