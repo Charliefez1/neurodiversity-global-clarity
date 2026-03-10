@@ -41,7 +41,7 @@ const clients = [
 const FeaturedClient = () => (
   <section className="bg-primary text-primary-foreground py-10 lg:py-12">
     <div className="mx-auto max-w-wide px-6 lg:px-10">
-      <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-5">
+      <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-5">
         Featured clients
       </p>
       <div className="grid md:grid-cols-3 gap-4">
