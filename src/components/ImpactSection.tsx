@@ -89,7 +89,7 @@ const ImpactSection = () => {
       <div className="mx-auto max-w-wide px-6 lg:px-10">
 
         {/* Header row */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-8">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/30 bg-accent/10 mb-4">
               <Activity size={14} className="text-accent" />
