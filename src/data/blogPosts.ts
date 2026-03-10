@@ -3107,6 +3107,687 @@ Move from high attrition accepted as structural to neuroinclusion as a retention
 
 Teams with neurodivergent professionals are up to 30% more productive in some roles. Organisations see measurable reduction in attrition in the first six months, improved onboarding completion rates, reduced attendance cases, and stronger front-line manager confidence.`,
   },
+  {
+    slug: "strengths-and-challenges-mapping",
+    title: "Strengths and Challenges Mapping: Why Understanding How Someone Works Matters More Than the Label They Carry",
+    metaTitle: "Strengths and Challenges Mapping | Neurodiversity Global",
+    metaDescription: "Why understanding how someone works matters more than the label they carry. A practical framework for managers and organisations.",
+    excerpt: "For most of my career I was evaluated on the things I struggled with. Not in a cruel way. Just in the quiet, everyday way workplaces do it. Strengths and challenges mapping changes that conversation entirely.",
+    category: "Workplace",
+    readTime: "7 min read",
+    publishDate: "2026-01-14",
+    accentColor: "#6366f1",
+    image: strengthsMappingImg,
+    content: `For most of my career I was evaluated on the things I struggled with.
+
+Not in a cruel way. Just in the quiet, everyday way workplaces do it.
+
+- You talk too much.
+- You move too quickly.
+- You are a bit chaotic.
+- You need more structure.
+
+Then every so often the other side would appear.
+
+- You solved that problem faster than anyone else.
+- You spotted something everyone else missed.
+- You managed to build something from nothing.
+
+The strange thing is that both of those things were true at the same time.
+
+And that is the problem with how most organisations think about performance. We tend to look at behaviour first. We rarely stop and ask how someone's brain actually works.
+
+## The assumption most workplaces make
+
+Modern workplaces are still built around a fairly narrow idea of how work should happen.
+
+- Pay attention in meetings.
+- Take clear notes.
+- Follow the process.
+- Communicate in a certain way.
+
+None of these expectations are unreasonable. The difficulty is that they quietly assume everyone processes information in the same way.
+
+They do not.
+
+- Some people think visually.
+- Some people process slowly but very deeply.
+- Some people can hold large amounts of information in their heads but struggle with written instructions.
+- Others thrive in chaos but find rigid systems incredibly difficult.
+
+When organisations only measure people against one working style, they miss a huge amount of capability that is sitting right in front of them.
+
+I know this because I lived it for years.
+
+At one point in my career I was running a hundred million dollar business unit. At the same time I was constantly being told I needed to be more structured, more organised, more like everyone else.
+
+It never quite made sense.
+
+## The conversation that rarely happens
+
+What almost never happens in organisations is a simple, honest conversation about how someone actually works.
+
+Not a diagnosis conversation. Not an HR process. Just a conversation.
+
+- How do you process information best?
+- What environments help you concentrate?
+- What situations make work harder than it needs to be?
+- Where do you perform at your absolute best?
+
+Instead we usually jump straight to performance management. Deadlines. Communication issues. Organisation.
+
+All important things, but they are often symptoms rather than causes.
+
+Sometimes the problem is not capability. The problem is that the work has been designed in a way that creates friction for the person doing it.
+
+## What strengths and challenges mapping really is
+
+Despite the name, it is not complicated.
+
+At its core it is a structured conversation that helps managers and employees understand how someone operates day to day.
+
+Not in theory. In reality.
+
+It looks at things like how someone processes instructions, how they manage focus and energy, what environments help them think clearly, and where their strengths genuinely sit.
+
+That last part matters.
+
+Because when organisations start these conversations, they often discover strengths that were never visible before.
+
+The person who struggles in meetings may produce outstanding analysis when given time to work independently.
+
+The employee who appears disorganised may be extremely effective when information is presented visually rather than verbally.
+
+These are not major interventions. They are small adjustments that remove unnecessary friction from the work itself.
+
+## Why this matters more than people realise
+
+Every organisation already employs neurodivergent people.
+
+Most of them are doing what I did for years.
+
+They adapt. They mask. They work harder than necessary just to keep up with systems that were never designed for how their brains operate.
+
+That effort is exhausting. It also hides talent.
+
+When organisations start to understand how people work, something shifts.
+
+Managers stop guessing. Employees stop trying to pretend they are someone else. Teams begin to organise work in ways that actually make sense.
+
+And when that happens, performance improves.
+
+Not because expectations are lowered, but because people finally have the conditions they need to do their best work.
+
+## The hidden talent inside most organisations
+
+I often talk about what I call the hidden twenty percent inside organisations.
+
+Not hidden because people are invisible. Hidden because their strengths are rarely identified properly.
+
+Strengths and challenges mapping helps bring that talent into the open. It changes the conversation from what someone cannot do to how they can contribute most effectively.
+
+Once teams start thinking this way, something interesting happens.
+
+Work becomes easier. Communication improves. People start to feel like they belong.
+
+And when that happens, organisations discover that the talent they were looking for was already there all along.
+
+*This article links to our [Strengths and Challenges Mapping](/what-we-do#tools) practical tool. Explore all eight tools on our What We Do page.*`,
+  },
+  {
+    slug: "communication-tools-for-managers",
+    title: "Communication Tools for Managers: Why So Many Workplace Problems Start with Unclear Communication",
+    metaTitle: "Communication Tools for Managers | Neurodiversity Global",
+    metaDescription: "Why so many workplace problems start with unclear communication and the practical tools that fix it immediately.",
+    excerpt: "A large number of workplace problems begin with communication that was never clear in the first place. Small changes in how information is shared can dramatically reduce misunderstandings across a team.",
+    category: "Workplace",
+    readTime: "6 min read",
+    publishDate: "2026-01-28",
+    accentColor: "#f59e0b",
+    image: commToolsManagersImg,
+    content: `When something goes wrong at work, we tend to assume the issue is performance.
+
+- Someone missed a deadline.
+- Someone misunderstood a task.
+- Someone did something differently from what the manager expected.
+
+The natural response is to look at the individual.
+
+- Why did they not understand?
+- Why did they not follow the process?
+- Why did they not ask?
+
+But after thirty years in organisations, and after working with thousands of managers, I have come to a different conclusion.
+
+A large number of workplace problems begin with communication that was never clear in the first place.
+
+## The problem we rarely talk about
+
+In many workplaces communication is fast, informal, and often quite vague.
+
+A manager might say something like:
+
+- Can you take a look at this when you get a moment.
+
+Or:
+
+- Let us get something together for the client meeting next week.
+
+Everyone nods. Everyone appears to understand. The meeting ends.
+
+The difficulty is that every person in that room may have interpreted that instruction differently.
+
+- One person thinks the task is urgent.
+- Another thinks it can wait a few days.
+- Someone else assumes someone else is doing it.
+
+For many people this ambiguity is manageable. They make a judgement and move forward.
+
+For others it creates a huge amount of uncertainty.
+
+## Why this matters for neurodivergent employees
+
+If you are autistic, have ADHD, or process information in a different way, unclear communication can create real barriers.
+
+Many neurodivergent people rely on clarity and structure in order to perform well.
+
+Not because they are less capable, but because their brains process information differently.
+
+A vague instruction can trigger a whole chain of questions.
+
+- What exactly is expected?
+- How detailed should this be?
+- When is it actually due?
+- What does success look like?
+
+Some people will ask those questions. Many will not. They simply try to interpret the situation and hope they have understood correctly.
+
+When they guess wrong, it often looks like a performance problem.
+
+In reality the instruction itself may not have been clear enough.
+
+## The pressure this creates for managers
+
+Managers often feel frustrated when these misunderstandings happen.
+
+They believe they explained the task clearly. From their perspective they probably did.
+
+The challenge is that communication is not just about what we say. It is about what the other person hears and how they interpret it.
+
+In fast moving environments managers rarely have time to think about that difference.
+
+So they repeat the same communication patterns again and again, often without realising the confusion they create.
+
+## Small changes that make a big difference
+
+The encouraging part is that improving communication does not require complex training or new systems.
+
+It usually starts with small adjustments in how information is shared.
+
+For example, being clearer about priorities. Explaining the outcome you are looking for rather than just the task itself. Confirming key instructions in writing so there is no ambiguity later.
+
+Simple things.
+
+Yet these changes can dramatically reduce misunderstandings across a team.
+
+They also help people who process information differently to work with much greater confidence.
+
+## Why this benefits everyone
+
+One of the biggest myths around neuroinclusion is that changes only help neurodivergent employees.
+
+In reality clearer communication improves performance for everyone.
+
+- Teams spend less time correcting mistakes.
+- People are more confident about what they are working on.
+- Managers spend less time dealing with avoidable problems.
+
+Work simply flows more smoothly.
+
+## A shift in how we think about management
+
+Good managers already know how important communication is.
+
+What many have never been shown is how small differences in language, structure, and expectations can completely change how instructions are understood.
+
+Once managers begin to see communication through that lens, something interesting happens.
+
+They realise that many of the challenges they thought were about capability were actually about clarity.
+
+And when clarity improves, performance usually follows very quickly.
+
+*This article links to our [Communication Tools for Managers](/what-we-do#tools) practical tool. Explore all eight tools on our What We Do page.*`,
+  },
+  {
+    slug: "inclusive-meeting-frameworks",
+    title: "Inclusive Meeting Frameworks: Why Meetings Work Well for Some People and Terribly for Others",
+    metaTitle: "Inclusive Meeting Frameworks | Neurodiversity Global",
+    metaDescription: "Why meetings favour one style of thinking and what simple structural changes can transform participation and decision making.",
+    excerpt: "Meetings tend to reward people who can think and respond quickly in the moment. For others it is very different. Inclusive meeting frameworks introduce simple changes that transform participation.",
+    category: "Workplace",
+    readTime: "5 min read",
+    publishDate: "2026-02-04",
+    accentColor: "#10b981",
+    image: inclusiveMeetingsImg,
+    content: `Most workplaces run on meetings.
+
+- Project meetings.
+- Team meetings.
+- Strategy meetings.
+- Quick catch ups that somehow become an hour long.
+
+We rarely question the structure of these meetings. They have simply become part of how work happens.
+
+Yet for many people meetings are one of the most difficult parts of the working day.
+
+Not because they are unwilling to participate, but because meetings often favour one particular style of thinking and communication.
+
+## The hidden rules of meetings
+
+Meetings tend to reward people who can think and respond quickly in the moment.
+
+Someone raises an idea. Another person builds on it. Someone challenges it. The conversation moves on.
+
+For people who process information quickly out loud this environment works well. They think while they speak and contribute naturally.
+
+For others it is very different.
+
+Some people need time to process information before responding. Others prefer to reflect before forming an opinion. Some people are still processing the first topic while the room has already moved on to the third.
+
+None of these ways of thinking are wrong. They are simply different.
+
+But the structure of many meetings means those voices are rarely heard.
+
+## The impact this has on teams
+
+When meetings favour one style of communication, teams lose valuable insight.
+
+Quieter voices stay quiet. More reflective thinkers hold back. People begin to feel their contributions are not welcome or useful.
+
+Over time this changes behaviour.
+
+Some employees stop contributing entirely. Others begin masking or forcing themselves to participate in ways that feel uncomfortable and unnatural.
+
+Either way the organisation loses perspective and ideas.
+
+## What an inclusive meeting framework looks like
+
+Inclusive meetings are not about making meetings slower or more complicated.
+
+They are about creating conditions where different styles of thinking can contribute.
+
+Sometimes that means sharing information in advance so people have time to process it.
+
+Sometimes it means allowing space for written input rather than relying entirely on verbal discussion.
+
+Sometimes it means being clearer about the purpose of the meeting in the first place.
+
+These are simple structural changes. Yet they can completely change who participates and how confident people feel contributing.
+
+## Why it improves decision making
+
+When teams hear from a wider range of perspectives, decisions improve.
+
+- Risks are spotted earlier.
+- Ideas are developed more fully.
+- Different viewpoints are considered before moving forward.
+
+Inclusive meetings are not just about participation. They are about improving the quality of thinking inside an organisation.
+
+And that is where their real value sits.
+
+*This article links to our [Inclusive Meeting Frameworks](/what-we-do#tools) practical tool. Explore all eight tools on our What We Do page.*`,
+  },
+  {
+    slug: "workplace-adjustment-guidance",
+    title: "Workplace Adjustment Guidance: Why Adjustments Are Often Misunderstood",
+    metaTitle: "Workplace Adjustment Guidance | Neurodiversity Global",
+    metaDescription: "Why workplace adjustments are simpler than most people think and how good guidance helps managers support neurodivergent employees with confidence.",
+    excerpt: "When people hear the phrase workplace adjustments, they often imagine something complicated. In reality most adjustments are much simpler than that. They are practical changes that remove unnecessary barriers.",
+    category: "Workplace",
+    readTime: "5 min read",
+    publishDate: "2026-02-18",
+    accentColor: "#8b5cf6",
+    image: adjustmentGuidanceImg,
+    content: `When people hear the phrase workplace adjustments, they often imagine something complicated.
+
+- Formal assessments.
+- Special equipment.
+- Long processes involving HR.
+
+In reality most adjustments are much simpler than that.
+
+They are practical changes that remove unnecessary barriers so someone can perform at their best.
+
+The challenge is that many organisations still approach adjustments in a reactive way.
+
+Someone struggles. A problem emerges. Then a conversation begins.
+
+By that point the employee may already feel frustrated or unsupported.
+
+## The problem with waiting for difficulty
+
+Many neurodivergent employees spend years adapting quietly to workplace systems that do not suit how they work.
+
+- They push through distractions.
+- They manage sensory overload.
+- They work harder to organise information or structure tasks.
+
+From the outside everything may look fine.
+
+But underneath there can be a significant amount of effort simply to keep up with systems that were never designed for them.
+
+When adjustments finally enter the conversation, they are often framed as solving a problem.
+
+That framing misses the bigger opportunity.
+
+## What adjustments really do
+
+At their best, adjustments are about improving the conditions in which someone works.
+
+They might involve how information is shared, how tasks are structured, or how the working environment is organised.
+
+Often the changes are small.
+
+- Clearer written instructions.
+- More predictable routines.
+- Quiet space for focused work.
+- Flexibility in how tasks are approached.
+
+None of these things lower standards. They simply allow people to perform without unnecessary friction.
+
+## Why good guidance matters
+
+Managers frequently want to support employees but feel uncertain about what is appropriate.
+
+They worry about saying the wrong thing or offering something that feels unfair to others.
+
+Clear guidance helps managers approach these conversations with confidence.
+
+It explains what adjustments are, how they can be explored collaboratively, and how small changes can unlock much better performance.
+
+When managers understand this properly, the conversation shifts.
+
+Adjustments stop being seen as exceptions and start being seen as part of good management.
+
+*This article links to our [Workplace Adjustment Guidance](/what-we-do#tools) practical tool. Explore all eight tools on our What We Do page.*`,
+  },
+  {
+    slug: "benchmarking-and-psychological-safety",
+    title: "Organisational Benchmarking and Psychological Safety: Why Most Organisations Think They Are Further Ahead Than They Are",
+    metaTitle: "Benchmarking and Psychological Safety | Neurodiversity Global",
+    metaDescription: "Why awareness alone does not change how organisations operate, and how benchmarking and psychological safety mapping reveal the real picture.",
+    excerpt: "Many organisations genuinely want to be inclusive. Yet when you look more closely at how work actually happens, the environment may still create barriers. Benchmarking provides a clearer picture.",
+    category: "Workplace",
+    readTime: "7 min read",
+    publishDate: "2026-02-27",
+    accentColor: "#ec4899",
+    image: benchmarkingSafetyImg,
+    content: `When organisations talk about neuroinclusion, the conversation often begins with training.
+
+A workshop is delivered. People learn about different neurotypes. Awareness improves.
+
+This is an important first step.
+
+But awareness alone does not change how organisations operate.
+
+## The gap between intention and reality
+
+Many organisations genuinely want to be inclusive.
+
+- Leaders express support.
+- Policies reference diversity.
+- Employees are encouraged to speak openly.
+
+Yet when you look more closely at how work actually happens, the environment may still create barriers.
+
+- Recruitment processes favour a narrow communication style.
+- Performance management assumes one way of working.
+- Managers lack practical tools to support different thinking styles.
+
+None of this happens intentionally. It is simply the result of systems that were designed long before neurodiversity entered the conversation.
+
+## Why benchmarking helps
+
+Organisational benchmarking provides a clearer picture of where an organisation really sits.
+
+It looks across areas such as leadership, management practices, recruitment processes, communication patterns, and workplace design.
+
+The goal is not to criticise organisations. It is to help them understand where progress is already happening and where gaps remain.
+
+Often the results are surprising.
+
+Some organisations discover strong foundations they had not recognised. Others realise that awareness has not yet translated into practical change.
+
+## Turning insight into action
+
+Once organisations understand their current position, they can make more informed decisions about where to focus their efforts.
+
+Rather than trying to change everything at once, they can prioritise the areas that will have the greatest impact on employees and performance.
+
+This makes neuroinclusion a practical organisational strategy rather than a theoretical aspiration.
+
+---
+
+## Why the team environment shapes performance more than we realise
+
+When people talk about workplace performance, the focus often falls on individual capability.
+
+- How skilled someone is.
+- How motivated they are.
+- How well they manage their workload.
+
+All of these things matter.
+
+But there is another factor that influences performance just as strongly. The environment people are working in.
+
+## What psychological safety actually means
+
+Psychological safety is often described as the ability to speak openly without fear of negative consequences.
+
+In simple terms it means people feel safe to ask questions, share ideas, admit mistakes, and challenge assumptions.
+
+In environments where psychological safety is strong, teams learn quickly and solve problems collaboratively.
+
+In environments where it is weak, people become cautious.
+
+- They hold back ideas.
+- They avoid asking questions.
+- They try not to draw attention to difficulties.
+
+For neurodivergent employees this dynamic can be even more significant.
+
+Many already feel pressure to fit into workplace norms that may not reflect how they naturally communicate or process information.
+
+## Why mapping the team environment matters
+
+Leaders often assume they understand how safe their teams feel.
+
+The reality can be very different.
+
+Some teams operate with high levels of trust and openness. Others function with a quieter culture where people are careful about what they say.
+
+Mapping the team environment helps organisations understand these differences.
+
+It explores how communication works within the team, how feedback is handled, how comfortable people feel raising concerns, and how openly different perspectives are welcomed.
+
+## What organisations often discover
+
+When teams begin to explore these questions, patterns often emerge.
+
+Some environments reward confidence and speed while quieter voices struggle to contribute.
+
+Some teams move quickly but rarely pause to reflect on mistakes or lessons learned.
+
+Others have strong trust but lack clarity around expectations and priorities.
+
+Understanding these dynamics helps leaders shape environments where different thinking styles can contribute safely and effectively.
+
+And when people feel safe to contribute fully, teams tend to perform far better than anyone expected.
+
+*This article links to our [Organisational Benchmarking](/what-we-do#tools) and [Psychological Safety Mapping](/what-we-do#tools) practical tools. Explore all eight tools on our What We Do page.*`,
+  },
+  {
+    slug: "role-design-and-manager-conversation-guides",
+    title: "Role and Task Design: Why Many Workplace Problems Are Not Capability Problems",
+    metaTitle: "Role Design and Manager Conversation Guides | Neurodiversity Global",
+    metaDescription: "Why many workplace difficulties are design issues not capability issues, and how structured conversation guides help managers start the right conversations.",
+    excerpt: "When someone struggles at work, the first assumption is usually about the individual. But after working with organisations for decades I have seen something else far more often. The job itself has been designed in a way that makes success unnecessarily difficult.",
+    category: "Workplace",
+    readTime: "8 min read",
+    publishDate: "2026-03-06",
+    accentColor: "#0ea5e9",
+    image: roleDesignGuidesImg,
+    content: `When someone struggles at work, the first assumption is usually about the individual.
+
+- Maybe they need more training.
+- Maybe they need better organisation.
+- Maybe they are just not suited to the role.
+
+Sometimes that is true.
+
+But after working with organisations for decades I have seen something else far more often.
+
+The job itself has been designed in a way that makes success unnecessarily difficult.
+
+Tasks are scattered across too many systems. Priorities change constantly. Instructions arrive through different channels. The role slowly becomes a collection of disconnected responsibilities rather than a clear piece of work someone can own.
+
+When that happens, even very capable people begin to struggle.
+
+## How roles quietly become complicated
+
+Most jobs are not designed carefully from the start. They evolve.
+
+- A new responsibility appears.
+- Another task is added to someone's workload.
+- A process changes and the role adapts around it.
+
+Over time the shape of the role drifts away from its original purpose.
+
+The person doing the job ends up managing competing priorities, unclear expectations, and work that requires completely different ways of thinking.
+
+Some people can navigate that complexity quite easily. Others find it draining and confusing.
+
+It is not about intelligence or motivation. It is about how the work itself interacts with the way someone thinks.
+
+## Why this matters for neurodivergent employees
+
+Many neurodivergent people are exceptionally good at certain types of work.
+
+- Deep focus.
+- Creative problem solving.
+- Pattern recognition.
+- Complex analysis.
+
+But these strengths can easily be buried inside roles that demand constant task switching, unclear priorities, or a high level of unstructured communication.
+
+When that happens the conversation often shifts towards performance management.
+
+Deadlines are missed. Work becomes inconsistent. Managers begin to worry.
+
+Yet the real issue may not be capability. It may be that the role has never been designed with clarity or focus.
+
+## Looking at work through a different lens
+
+A role and task design framework encourages organisations to step back and ask some simple but important questions.
+
+- What is the real purpose of this role?
+- Which tasks genuinely require deep focus and which require collaboration?
+- Where are unnecessary interruptions or competing priorities appearing?
+- Are we asking one person to operate in several completely different working styles throughout the day?
+
+These questions often reveal problems that have nothing to do with the person doing the job.
+
+They reveal design issues.
+
+## When work is designed well
+
+When roles are structured more intentionally, several things start to improve.
+
+- People understand their priorities more clearly.
+- Managers spend less time resolving confusion.
+- Strengths across the team are used more effectively.
+
+Most importantly, employees are able to focus on the work that matters rather than constantly navigating unnecessary complexity.
+
+That change can transform performance across a team.
+
+And it often begins with something very simple. Looking at the design of work itself.
+
+---
+
+## Why managers often know something is wrong but do not know how to start the conversation
+
+Most managers care about their teams.
+
+They want people to succeed. They want to help when someone is struggling. They want their team to feel supported and able to perform well.
+
+Yet many managers hesitate when something clearly needs to be discussed.
+
+Not because they do not care. Because they are unsure how to begin.
+
+## The conversations managers worry about
+
+Managers frequently recognise when something is not quite right.
+
+- Someone seems overwhelmed.
+- Communication between two colleagues has become strained.
+- An employee is clearly capable but their performance is inconsistent.
+
+The manager knows a conversation would help.
+
+But several concerns quickly appear.
+
+- What if I say the wrong thing?
+- What if I make the situation worse?
+- What if the employee feels criticised or exposed?
+
+Without clear guidance many managers delay the conversation or avoid it entirely.
+
+Unfortunately the longer a situation continues, the harder it becomes to resolve.
+
+## Why structure helps
+
+Conversations about performance, support, and working styles can feel unpredictable.
+
+Managers worry they will open a difficult discussion without knowing where it will lead.
+
+Structured conversation guides provide a starting point.
+
+They help managers approach discussions with curiosity rather than judgement. They give language that keeps the conversation practical and focused on work rather than personal assumptions.
+
+Most importantly they create space for employees to explain their experience.
+
+Often the insight that follows is far more useful than anything a manager might have guessed.
+
+## Shifting the tone of workplace conversations
+
+When managers have the confidence to start these discussions early, problems are usually easier to resolve.
+
+- Employees feel heard rather than criticised.
+- Misunderstandings are clarified quickly.
+- Practical solutions emerge before situations escalate.
+
+In many cases the employee already knows what would help. They simply have not had the opportunity to explain it.
+
+## The difference a conversation can make
+
+One of the most powerful things a manager can say is also one of the simplest.
+
+*Help me understand how this is working for you.*
+
+That question changes the tone of the entire conversation.
+
+Instead of assuming what the problem might be, the manager opens the door for insight.
+
+And once people begin to talk honestly about how they work, solutions often appear far more quickly than expected.
+
+Good management is not about having all the answers.
+
+Sometimes it begins with asking the right question.
+
+*This article links to our [Role and Task Design Framework](/what-we-do#tools) and [Manager Conversation Guides](/what-we-do#tools) practical tools. Explore all eight tools on our What We Do page.*`,
+  },
 ];
 
 export const getBlogPost = (slug: string): BlogPost | undefined =>
