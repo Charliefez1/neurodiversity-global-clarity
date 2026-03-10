@@ -434,7 +434,7 @@ const InclusivePerformanceSection = () => {
             ))}
           </div>
 
-          <span className="text-xs text-foreground/40 font-display font-semibold ml-auto">
+          <span className="text-xs text-primary-foreground/40 font-display font-semibold ml-auto">
             Stage {activeStage + 1} of 7
           </span>
         </div>
