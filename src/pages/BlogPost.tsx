@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowLeft, Clock, Calendar, ArrowRight, Linkedin } from "lucide-react";
+import { ArrowLeft, Clock, Calendar, ArrowRight, Linkedin, User } from "lucide-react";
+import { breadcrumbSchema } from "@/components/JsonLd";
 import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
