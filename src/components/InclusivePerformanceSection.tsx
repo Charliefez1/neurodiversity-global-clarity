@@ -377,7 +377,7 @@ const InclusivePerformanceSection = () => {
             <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3">
               {currentNarrative.heading}
             </h3>
-            <p className="text-sm md:text-base text-foreground/75 leading-relaxed max-w-[60ch]">
+            <p className="text-sm md:text-base text-primary-foreground/75 leading-relaxed max-w-[60ch]">
               {currentNarrative.description}
             </p>
           </div>
