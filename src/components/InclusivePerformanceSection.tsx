@@ -216,8 +216,8 @@ const InclusivePerformanceSection = () => {
         {/* ── Chart ──────────────────────────────────────── */}
         <div className="relative w-full">
           <span
-            className="absolute top-1/2 -translate-y-1/2 -rotate-90 origin-center text-[11px] font-display font-semibold tracking-wide whitespace-nowrap select-none"
-            style={{ left: "-36px", color: LABEL_NAVY, opacity: 0.6 }}
+            className="absolute top-1/2 -translate-y-1/2 -rotate-90 origin-center text-sm font-display font-bold tracking-wide whitespace-nowrap select-none text-primary-foreground"
+            style={{ left: "-44px" }}
           >
             Performance Capacity
           </span>
