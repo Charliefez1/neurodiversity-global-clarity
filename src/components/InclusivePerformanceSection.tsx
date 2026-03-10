@@ -203,7 +203,7 @@ const InclusivePerformanceSection = () => {
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
           The model
         </p>
-        <h2 className="font-display font-bold text-lg md:text-xl tracking-tight leading-[1.1] mb-4 max-w-2xl">
+        <h2 className="font-display font-bold text-lg md:text-xl tracking-tight leading-[1.1] mb-4">
           Inclusive Performance
         </h2>
         <p className="text-base font-display font-semibold text-primary-foreground mb-1">
@@ -213,188 +213,185 @@ const InclusivePerformanceSection = () => {
           Watch the stages unfold, or use the controls to explore at your own pace.
         </p>
 
-        {/* ── Chart (constrained width) ──────────────────── */}
-        <div className="relative w-full max-w-[960px]">
-          <span
-            className="absolute top-1/2 -translate-y-1/2 -rotate-90 origin-center text-sm font-display font-bold tracking-wide whitespace-nowrap select-none text-primary-foreground"
-            style={{ left: "-44px" }}
-          >
-            Performance Capacity
-          </span>
+        {/* ── Two-column layout: chart + narrative ─────── */}
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
 
-          <svg
-            viewBox={`-60 -50 ${W + 80} ${H + 80}`}
-            className="w-full h-auto"
-            aria-label="Inclusive Performance bell curve"
-            role="img"
-          >
-            <line x1="0" y1={BASE_Y} x2={W} y2={BASE_Y} stroke="currentColor" className="text-primary-foreground/15" strokeWidth="1" />
-            <line x1="0" y1={BASE_Y} x2="0" y2="10" stroke="currentColor" className="text-primary-foreground/15" strokeWidth="1" />
+          {/* Left: Chart */}
+          <div className="relative w-full lg:w-[58%] flex-shrink-0">
+            <span
+              className="absolute top-1/2 -translate-y-1/2 -rotate-90 origin-center text-sm font-display font-bold tracking-wide whitespace-nowrap select-none text-primary-foreground"
+              style={{ left: "-44px" }}
+            >
+              Performance Capacity
+            </span>
 
-            <path d={fullCurvePath()} fill="none" stroke="currentColor" className="text-primary-foreground/10" strokeWidth="1.5" />
+            <svg
+              viewBox={`-60 -50 ${W + 80} ${H + 80}`}
+              className="w-full h-auto"
+              aria-label="Inclusive Performance bell curve"
+              role="img"
+            >
+              <line x1="0" y1={BASE_Y} x2={W} y2={BASE_Y} stroke="currentColor" className="text-primary-foreground/15" strokeWidth="1" />
+              <line x1="0" y1={BASE_Y} x2="0" y2="10" stroke="currentColor" className="text-primary-foreground/15" strokeWidth="1" />
 
-            {/* Zone fills */}
-            {zones.map((zone, zi) => {
-              const isActive = activeZoneSet.has(zi);
-              const color = isActive ? zone.colorHex : "currentColor";
-              const showLabel =
-                currentNarrative?.newZone === zi && activeStage <= 5;
-              const topY = zoneTopY(zi);
-              const midX = zoneMidX(zi);
+              <path d={fullCurvePath()} fill="none" stroke="currentColor" className="text-primary-foreground/10" strokeWidth="1.5" />
 
-              return (
-                <g key={zi}>
-                  <path
-                    d={buildZonePath(zi)}
-                    fill={color}
-                    className={isActive ? "" : "text-foreground/[0.04]"}
-                    style={{
-                      opacity: isActive ? 0.7 : 1,
-                      transition: "fill 0.4s ease, opacity 0.4s ease",
-                    }}
-                  />
-                  {showLabel && (
-                    <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
-                      {/* Tick line */}
-                      <line
-                        x1={midX}
-                        y1={topY - 2}
-                        x2={midX}
-                        y2={FIXED_LABEL_Y + 22}
-                        stroke="#bbb"
-                        strokeWidth="1"
-                        opacity="0.5"
-                      />
-                      {/* Pill background */}
-                      <rect
-                        x={midX - (zone.label.length * 3.5 + 12)}
-                        y={FIXED_LABEL_Y - 10}
-                        width={zone.label.length * 7 + 24}
-                        height={zone.subLabel ? 30 : 20}
-                        rx="4"
-                        fill="white"
-                        stroke="#ddd"
-                        strokeWidth="0.5"
-                      />
-                      {/* Label text */}
-                      <text
-                        x={midX}
-                        y={FIXED_LABEL_Y + 4}
-                        textAnchor="middle"
-                        className="font-display font-bold"
-                        fill={LABEL_NAVY}
-                        fontSize="10"
-                        letterSpacing="0.06em"
-                      >
-                        {zone.label}
-                      </text>
-                      {zone.subLabel && (
+              {/* Zone fills */}
+              {zones.map((zone, zi) => {
+                const isActive = activeZoneSet.has(zi);
+                const color = isActive ? zone.colorHex : "currentColor";
+                const showLabel =
+                  currentNarrative?.newZone === zi && activeStage <= 5;
+                const topY = zoneTopY(zi);
+                const midX = zoneMidX(zi);
+
+                return (
+                  <g key={zi}>
+                    <path
+                      d={buildZonePath(zi)}
+                      fill={color}
+                      className={isActive ? "" : "text-foreground/[0.04]"}
+                      style={{
+                        opacity: isActive ? 0.7 : 1,
+                        transition: "fill 0.4s ease, opacity 0.4s ease",
+                      }}
+                    />
+                    {showLabel && (
+                      <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
+                        <line
+                          x1={midX}
+                          y1={topY - 2}
+                          x2={midX}
+                          y2={FIXED_LABEL_Y + 22}
+                          stroke="#bbb"
+                          strokeWidth="1"
+                          opacity="0.5"
+                        />
+                        <rect
+                          x={midX - (zone.label.length * 3.5 + 12)}
+                          y={FIXED_LABEL_Y - 10}
+                          width={zone.label.length * 7 + 24}
+                          height={zone.subLabel ? 30 : 20}
+                          rx="4"
+                          fill="white"
+                          stroke="#ddd"
+                          strokeWidth="0.5"
+                        />
                         <text
                           x={midX}
-                          y={FIXED_LABEL_Y + 16}
+                          y={FIXED_LABEL_Y + 4}
                           textAnchor="middle"
+                          className="font-display font-bold"
                           fill={LABEL_NAVY}
-                          fontSize="8"
-                          opacity="0.6"
+                          fontSize="10"
+                          letterSpacing="0.06em"
                         >
-                          {zone.subLabel}
+                          {zone.label}
                         </text>
-                      )}
-                    </g>
-                  )}
-                </g>
-              );
-            })}
+                        {zone.subLabel && (
+                          <text
+                            x={midX}
+                            y={FIXED_LABEL_Y + 16}
+                            textAnchor="middle"
+                            fill={LABEL_NAVY}
+                            fontSize="8"
+                            opacity="0.6"
+                          >
+                            {zone.subLabel}
+                          </text>
+                        )}
+                      </g>
+                    )}
+                  </g>
+                );
+              })}
 
-            {/* Floating callout panel on chart */}
-            {currentNarrative && (() => {
-              const cZone = currentNarrative.calloutZone;
-              const cMidX = zoneMidX(cZone);
-              const cTopY = zoneTopY(cZone);
-              const cMidY = (cTopY + BASE_Y) / 2;
-              const calloutText = currentNarrative.callout;
-              const pillW = Math.max(calloutText.length * 5.5 + 24, 120);
-              const pillH = 22;
+              {/* Floating callout panel on chart */}
+              {currentNarrative && (() => {
+                const cZone = currentNarrative.calloutZone;
+                const cMidX = zoneMidX(cZone);
+                const cTopY = zoneTopY(cZone);
+                const cMidY = (cTopY + BASE_Y) / 2;
+                const calloutText = currentNarrative.callout;
+                const pillW = Math.max(calloutText.length * 5.5 + 24, 120);
+                const pillH = 22;
 
-              return (
-                <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
-                  {/* Shadow rect */}
-                  <rect
-                    x={cMidX - pillW / 2 + 1}
-                    y={cMidY - pillH / 2 + 1}
-                    width={pillW}
-                    height={pillH}
-                    rx="4"
-                    fill="rgba(0,0,0,0.08)"
-                  />
-                  {/* Pill background */}
-                  <rect
-                    x={cMidX - pillW / 2}
-                    y={cMidY - pillH / 2}
-                    width={pillW}
-                    height={pillH}
-                    rx="4"
-                    fill="white"
-                    stroke="#e0e0e0"
-                    strokeWidth="0.5"
-                  />
-                  {/* Callout text */}
-                  <text
-                    x={cMidX}
-                    y={cMidY + 4}
-                    textAnchor="middle"
-                    className="font-display font-bold"
-                    fill={LABEL_NAVY}
-                    fontSize="11"
-                  >
-                    {calloutText}
-                  </text>
-                </g>
-              );
-            })()}
+                return (
+                  <g style={{ animation: "fadeInLabel 0.3s ease-out" }}>
+                    <rect
+                      x={cMidX - pillW / 2 + 1}
+                      y={cMidY - pillH / 2 + 1}
+                      width={pillW}
+                      height={pillH}
+                      rx="4"
+                      fill="rgba(0,0,0,0.08)"
+                    />
+                    <rect
+                      x={cMidX - pillW / 2}
+                      y={cMidY - pillH / 2}
+                      width={pillW}
+                      height={pillH}
+                      rx="4"
+                      fill="white"
+                      stroke="#e0e0e0"
+                      strokeWidth="0.5"
+                    />
+                    <text
+                      x={cMidX}
+                      y={cMidY + 4}
+                      textAnchor="middle"
+                      className="font-display font-bold"
+                      fill={LABEL_NAVY}
+                      fontSize="11"
+                    >
+                      {calloutText}
+                    </text>
+                  </g>
+                );
+              })()}
 
-            <text
-              x={W / 2}
-              y={BASE_Y + 48}
-              textAnchor="middle"
-              className="font-display font-bold"
-              fill="white"
-              fontSize="14"
-            >
-              Environmental Demand and Psychological Safety
-            </text>
-          </svg>
-        </div>
-
-        {/* ── Text panel ────────────────────────────────── */}
-        <div className="mt-6 min-h-[100px]">
-          <div
-            key={activeStage}
-            className="animate-fade-in"
-            style={{ animationDuration: "0.2s" }}
-          >
-            <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3">
-              {currentNarrative.heading}
-            </h3>
-            <p className="text-sm md:text-base text-primary-foreground/75 leading-relaxed">
-              {currentNarrative.description}
-            </p>
+              <text
+                x={W / 2}
+                y={BASE_Y + 48}
+                textAnchor="middle"
+                className="font-display font-bold"
+                fill="white"
+                fontSize="14"
+              >
+                Environmental Demand and Psychological Safety
+              </text>
+            </svg>
           </div>
-        </div>
 
-        {/* ── Callout ───────────────────────────────────── */}
-        <div
-          className="mt-6 transition-opacity duration-300"
-          style={{ opacity: showCallout ? 1 : 0, pointerEvents: showCallout ? "auto" : "none" }}
-        >
-          <p className="text-sm italic text-primary-foreground/60 border-l-2 border-accent pl-4 max-w-[52ch]">
-            The goal is not to manage neurodivergent people better. It is to build systems that work for everyone.
-          </p>
+          {/* Right: Narrative text + callout */}
+          <div className="w-full lg:w-[42%] lg:pt-4">
+            <div
+              key={activeStage}
+              className="animate-fade-in"
+              style={{ animationDuration: "0.2s" }}
+            >
+              <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3">
+                {currentNarrative.heading}
+              </h3>
+              <p className="text-sm md:text-base text-primary-foreground/75 leading-relaxed">
+                {currentNarrative.description}
+              </p>
+            </div>
+
+            {/* Callout */}
+            <div
+              className="mt-6 transition-opacity duration-300"
+              style={{ opacity: showCallout ? 1 : 0, pointerEvents: showCallout ? "auto" : "none" }}
+            >
+              <p className="text-sm italic text-primary-foreground/60 border-l-2 border-accent pl-4">
+                The goal is not to manage neurodivergent people better. It is to build systems that work for everyone.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* ── Navigation ────────────────────────────────── */}
         <div className="mt-6 flex items-center gap-3">
-          {/* Back */}
           <button
             onClick={handlePrev}
             className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground/70 transition-colors"
@@ -403,7 +400,6 @@ const InclusivePerformanceSection = () => {
             <ArrowLeft size={16} />
           </button>
 
-          {/* Play/Pause */}
           <button
             onClick={() => setIsPlaying((p) => !p)}
             className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground/70 transition-colors"
@@ -412,7 +408,6 @@ const InclusivePerformanceSection = () => {
             {isPlaying ? <Pause size={16} /> : <Play size={16} />}
           </button>
 
-          {/* Forward */}
           <button
             onClick={handleNext}
             className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground/70 transition-colors"
@@ -421,7 +416,6 @@ const InclusivePerformanceSection = () => {
             <ArrowRight size={16} />
           </button>
 
-          {/* Progress dots */}
           <div className="flex gap-1.5 ml-3">
             {narrativeStages.map((_, i) => (
               <button
