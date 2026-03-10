@@ -22,6 +22,16 @@ import IndustryHealthcareNHS from "./pages/IndustryHealthcareNHS";
 import IndustryEducation from "./pages/IndustryEducation";
 import IndustryPublicSector from "./pages/IndustryPublicSector";
 import IndustryTechnology from "./pages/IndustryTechnology";
+import IndustryEngineering from "./pages/IndustryEngineering";
+import IndustryCorporate from "./pages/IndustryCorporate";
+import IndustryCharity from "./pages/IndustryCharity";
+import IndustryLegal from "./pages/IndustryLegal";
+import IndustryEmergencyServices from "./pages/IndustryEmergencyServices";
+import IndustryRail from "./pages/IndustryRail";
+import IndustrySales from "./pages/IndustrySales";
+import IndustryContactCentres from "./pages/IndustryContactCentres";
+import IndustryDefence from "./pages/IndustryDefence";
+import IndustryRetailHospitality from "./pages/IndustryRetailHospitality";
 import KnowledgeBase from "./pages/KnowledgeBase";
 import Clients from "./pages/Clients";
 import Testimonials from "./pages/Testimonials";
@@ -99,6 +109,16 @@ const AppContent = () => {
             <Route path="/industries/education" element={<IndustryEducation />} />
             <Route path="/industries/public-sector" element={<IndustryPublicSector />} />
             <Route path="/industries/technology" element={<IndustryTechnology />} />
+            <Route path="/industries/engineering" element={<IndustryEngineering />} />
+            <Route path="/industries/corporate" element={<IndustryCorporate />} />
+            <Route path="/industries/charity" element={<IndustryCharity />} />
+            <Route path="/industries/legal" element={<IndustryLegal />} />
+            <Route path="/industries/emergency-services" element={<IndustryEmergencyServices />} />
+            <Route path="/industries/rail-transport" element={<IndustryRail />} />
+            <Route path="/industries/sales" element={<IndustrySales />} />
+            <Route path="/industries/contact-centres" element={<IndustryContactCentres />} />
+            <Route path="/industries/defence" element={<IndustryDefence />} />
+            <Route path="/industries/retail-hospitality" element={<IndustryRetailHospitality />} />
             <Route path="/neurodiversity-training" element={<NeurodiversityTraining />} />
             <Route path="/neurodiversity-consultancy" element={<NeurodiversityConsultancy />} />
           <Route path="/knowledge-base" element={<KnowledgeBase />} />
