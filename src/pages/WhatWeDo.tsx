@@ -42,6 +42,7 @@ import {
 import systemsImg from "@/assets/what-we-do-systems.jpg";
 import workshopImg from "@/assets/workshop-team-activity.jpg";
 import dashboardImg from "@/assets/inclusive-performance-curve.png";
+import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -662,21 +663,38 @@ const WhatWeDo = () => {
               </motion.div>
             </div>
 
-            {/* Bottom statement */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-10 rounded-xl border border-accent/20 bg-accent/10 p-6 max-w-xl"
-            >
-              <p className="font-display font-bold text-base text-primary-foreground">
-                Many organisations stop at awareness. We focus on what happens next.
-              </p>
-              <p className="text-sm text-primary-foreground/65 mt-1">
-                Neuroinclusion only matters if it improves how work actually gets done.
-              </p>
-            </motion.div>
+            {/* Bottom statement + logo */}
+            <div className="mt-10 grid lg:grid-cols-2 gap-6 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="rounded-xl border border-accent/20 bg-accent/10 p-6"
+              >
+                <p className="font-display font-bold text-base text-primary-foreground">
+                  Many organisations stop at awareness. We focus on what happens next.
+                </p>
+                <p className="text-sm text-primary-foreground/65 mt-1">
+                  Neuroinclusion only matters if it improves how work actually gets done.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="flex justify-center lg:justify-end"
+              >
+                <img
+                  src={ndgLogo}
+                  alt="Neurodiversity Global"
+                  className="h-16 lg:h-20 object-contain opacity-80"
+                  loading="lazy"
+                />
+              </motion.div>
+            </div>
           </div>
         </section>
 
