@@ -3793,6 +3793,407 @@ Sometimes it begins with asking the right question.
 
 *This article links to our [Role and Task Design Framework](/what-we-do#tools) and [Manager Conversation Guides](/what-we-do#tools) practical tools. Explore all eight tools on our What We Do page.*`,
   },
+  {
+    slug: "how-to-support-neurodivergent-employees",
+    title: "How to Support Neurodivergent Employees at Work",
+    metaTitle: "How to Support Neurodivergent Employees at Work | Practical Guide",
+    metaDescription: "Why support for neurodivergent employees often fails and what organisations can do differently. A practical guide covering communication, adjustments, and psychological safety.",
+    excerpt: "Most organisations want to support neurodivergent employees. Yet in practice support often fails. Not because organisations do not care. Usually because they misunderstand what support actually means.",
+    category: "Workplace",
+    readTime: "9 min read",
+    publishDate: "2025-12-08",
+    accentColor: "teal",
+    image: supportNdEmployeesImg,
+    content: `Most organisations want to support neurodivergent employees.
+
+Leaders recognise that different ways of thinking bring valuable perspective, creativity, and problem solving. Many organisations have also seen how neurodivergent employees can perform exceptionally well when the environment is right.
+
+Yet in practice support often fails.
+
+Not because organisations do not care. Usually because they misunderstand what support actually means.
+
+## Why support often breaks down
+
+Many workplaces approach neurodiversity as a knowledge problem.
+
+If people understand autism, ADHD, dyslexia, or other differences, the thinking goes, they will know how to respond.
+
+Awareness is useful. It helps people understand that different cognitive styles exist.
+
+But awareness alone rarely changes the day to day experience of work.
+
+The real barriers usually sit somewhere else.
+
+Communication is unclear. Expectations are vague. Meetings move quickly and rely on rapid verbal responses. Workloads are spread across multiple systems and channels.
+
+These patterns create friction for many employees. Neurodivergent employees simply experience that friction more intensely.
+
+The result is a situation many managers recognise. A capable employee begins to struggle even though their underlying ability is clear.
+
+Many organisations begin exploring this through [structured leadership workshops](/neurodiversity-training). Understanding the barriers is the first step towards removing them.
+
+## The workplace barriers organisations rarely see
+
+When people think about neurodiversity, they often imagine individual challenges.
+
+In reality many of the difficulties come from how work itself is structured.
+
+Instructions may arrive through several channels at once. Priorities change frequently. Meetings require quick responses rather than reflection.
+
+For some people these environments work reasonably well.
+
+For others they create constant uncertainty.
+
+Employees may not know which task matters most, how detailed a piece of work should be, or what the manager expects as an outcome.
+
+Over time that uncertainty turns into stress and inconsistent performance.
+
+## Communication and expectations matter more than labels
+
+One of the most useful shifts organisations can make is moving the conversation away from diagnosis.
+
+Instead of asking what condition someone has, it is often more helpful to ask how they work best.
+
+How do they process information? What type of instructions help them perform well? What environments allow them to focus?
+
+These questions move the discussion into practical territory. Managers and employees begin to look at the interaction between work design and individual thinking styles.
+
+That is where meaningful support begins.
+
+Managers often benefit from [practical training](/neurodiversity-training) that helps them approach these situations with confidence.
+
+## The role of psychological safety
+
+Support also depends on whether people feel safe speaking openly about their experience.
+
+If employees believe that raising a difficulty will damage how they are perceived, they usually stay silent.
+
+They adapt quietly. They mask. They work harder than necessary to fit systems that were never designed for them.
+
+Psychological safety changes that dynamic.
+
+When employees trust that their perspective will be heard without judgement, conversations about adjustments and working styles become far easier.
+
+And once those conversations begin, solutions are often surprisingly simple.
+
+## Small adjustments that unlock performance
+
+Workplace adjustments are often misunderstood.
+
+People imagine expensive equipment or complex processes. In reality many adjustments involve small changes to how work is organised.
+
+Clear written instructions. Information shared in advance of meetings. Predictable priorities rather than constantly shifting tasks. Quiet spaces for focused work.
+
+These adjustments remove unnecessary barriers and allow people to concentrate on what they do best.
+
+When organisations take this approach, performance tends to improve across the whole team.
+
+## Why structured tools help organisations move forward
+
+Many organisations recognise these challenges but are unsure where to begin.
+
+That is why structured tools are so valuable.
+
+Frameworks such as [strengths and challenges mapping](/what-we-do#tools) help managers understand how individuals work best. Communication frameworks help reduce misunderstandings across teams. Clear guidance around adjustments gives managers confidence to have practical conversations.
+
+Together these approaches move neuroinclusion from theory into everyday management practice.
+
+Organisations everywhere are beginning to recognise that understanding how people work is becoming a leadership capability.
+
+If your organisation is exploring how to support neurodivergent employees while improving performance and retention, you are welcome to [start a conversation with us](/#contact).`,
+  },
+  {
+    slug: "workplace-adjustments-adhd-autism",
+    title: "Workplace Adjustments for ADHD and Autism",
+    metaTitle: "Workplace Adjustments for ADHD and Autism | Practical Guide",
+    metaDescription: "Practical workplace adjustments for employees with ADHD and autism. How to approach adjustment conversations, examples that improve team performance, and why adjustments benefit everyone.",
+    excerpt: "Workplace adjustments are one of the most discussed areas of neurodiversity at work. Yet the conversation about adjustments can feel uncertain on both sides. Part of the difficulty is that the term itself is often misunderstood.",
+    category: "Workplace",
+    readTime: "8 min read",
+    publishDate: "2025-12-22",
+    accentColor: "gold",
+    image: adjustmentsAdhdAutismImg,
+    content: `Workplace adjustments are one of the most discussed areas of neurodiversity at work.
+
+Managers often want to help. Employees may know something is not working. Yet the conversation about adjustments can feel uncertain on both sides.
+
+Part of the difficulty is that the term itself is often misunderstood.
+
+## What workplace adjustments actually mean
+
+At its simplest, an adjustment is a change that removes unnecessary barriers so someone can perform effectively.
+
+It does not lower standards.
+
+It changes how work is structured so that expectations can be met more easily.
+
+For employees with ADHD or autism, adjustments often relate to how information is shared, how tasks are prioritised, and how the working environment supports focus.
+
+These changes allow people to apply their skills without constantly battling against systems that create friction.
+
+Many organisations find that our [Workplace Adjustment Guidance framework](/what-we-do#tools) provides a practical starting point for these conversations.
+
+## Why adjustments benefit entire teams
+
+One of the most common misunderstandings is that adjustments only help one individual.
+
+In practice many adjustments improve clarity and performance across the whole team.
+
+Clearer written instructions help everyone understand expectations. Structured meetings prevent misunderstandings. Predictable priorities reduce confusion.
+
+When organisations make these changes they often discover that the working environment becomes easier for everyone to navigate.
+
+## Examples of adjustments that improve performance
+
+Many adjustments are surprisingly straightforward.
+
+Managers might provide written summaries of key instructions so nothing is lost in conversation. Teams might share meeting agendas in advance so people have time to prepare their thoughts.
+
+Employees who struggle with constant interruptions may perform better with protected focus time during the day.
+
+These are not dramatic changes. They simply remove obstacles that make work harder than it needs to be.
+
+Managers often benefit from [practical training](/neurodiversity-training) that helps them approach these situations with confidence and clarity.
+
+## How managers should approach the conversation
+
+The most productive adjustment conversations begin with curiosity.
+
+Instead of assuming what someone needs, managers can ask simple questions.
+
+What parts of your work environment help you perform well?
+
+What situations make work unnecessarily difficult?
+
+What changes would make the biggest difference to how you approach your tasks?
+
+These discussions focus on practical improvements rather than medical explanations.
+
+Often the employee already understands what would help. They simply need the opportunity to explain it.
+
+Workplace adjustments work best when they are seen as part of good management rather than an exceptional process.
+
+If your organisation is exploring how to approach these conversations with confidence, you are welcome to [start a conversation with us](/#contact).`,
+  },
+  {
+    slug: "what-is-neurodiversity-in-the-workplace",
+    title: "What Is Neurodiversity in the Workplace",
+    metaTitle: "What Is Neurodiversity in the Workplace | Explained for Organisations",
+    metaDescription: "What neurodiversity means in practical terms for organisations. Why cognitive diversity matters, common misunderstandings, and why awareness is only the first step.",
+    excerpt: "The term neurodiversity appears everywhere in workplace conversations. Yet many organisations are still unsure what it actually means in practice.",
+    category: "Workplace",
+    readTime: "7 min read",
+    publishDate: "2026-01-05",
+    accentColor: "teal",
+    image: whatIsNdWorkplaceImg,
+    content: `The term neurodiversity appears everywhere in workplace conversations.
+
+Yet many organisations are still unsure what it actually means in practice.
+
+For some it is treated as a diversity topic similar to gender or ethnicity. For others it is associated mainly with recruitment programmes.
+
+In reality the concept is broader than both of those interpretations.
+
+## What neurodiversity means in practical terms
+
+Neurodiversity recognises that human brains do not all work in the same way.
+
+Different people process information differently, solve problems differently, and communicate differently.
+
+Conditions such as autism, ADHD, dyslexia, dyspraxia, and other neurological differences are part of that natural variation.
+
+In any organisation there will already be employees with these cognitive profiles.
+
+Some may have formal diagnoses. Many will not.
+
+The important point is that cognitive diversity already exists inside every workforce.
+
+## Why this matters for organisations
+
+Different ways of thinking often bring different strengths.
+
+Some people are exceptional at pattern recognition. Others excel at deep focus or creative problem solving. Some notice risks or inconsistencies that others overlook.
+
+These abilities can be extremely valuable in modern organisations.
+
+However they only appear when the working environment allows people to operate effectively.
+
+If systems are designed around one narrow style of thinking, many of these strengths remain hidden.
+
+Many organisations begin exploring this through [structured leadership workshops](/neurodiversity-training) that help leaders understand how cognitive diversity influences performance.
+
+## Common misunderstandings
+
+One misunderstanding is that neurodiversity programmes are about helping individuals overcome personal challenges.
+
+While support is important, the larger issue usually sits within the workplace environment.
+
+Communication structures, task design, and team culture all influence how people perform.
+
+When those systems work well, a wide range of thinking styles can contribute effectively.
+
+When they do not, capable people can appear to struggle.
+
+## Awareness is only the first step
+
+Many organisations begin their journey with awareness training.
+
+This helps employees understand that different cognitive styles exist and that neurodivergent colleagues may experience the workplace differently.
+
+But awareness alone rarely changes outcomes.
+
+Real progress happens when organisations examine how work is designed.
+
+Communication patterns, meeting structures, performance expectations, and recruitment processes all influence whether neurodivergent employees can contribute fully.
+
+Our [practical tools](/what-we-do#tools) help organisations move from awareness into everyday management practice, covering everything from strengths mapping to inclusive meeting design.
+
+Neurodiversity is ultimately about understanding how people think and how work environments interact with those differences.
+
+If your organisation is exploring how to apply these ideas in practice, you are welcome to [start a conversation with us](/#contact).`,
+  },
+  {
+    slug: "how-managers-can-support-neurodivergent-employees",
+    title: "How Managers Can Support Neurodivergent Employees",
+    metaTitle: "How Managers Can Support Neurodivergent Employees | Guide",
+    metaDescription: "Practical guidance for managers supporting neurodivergent employees. Covers communication, psychological safety, structured expectations, and practical tools.",
+    excerpt: "Managers often recognise when someone in their team is struggling. What they rarely receive is practical guidance on how to respond.",
+    category: "Workplace",
+    readTime: "8 min read",
+    publishDate: "2026-01-19",
+    accentColor: "gold",
+    image: managersSupportNdImg,
+    content: `Managers often recognise when someone in their team is struggling.
+
+What they rarely receive is practical guidance on how to respond.
+
+This can leave managers feeling uncertain even when their intentions are positive.
+
+## Why managers often feel unsure
+
+Most managers were never trained to support different cognitive working styles.
+
+They are expected to deliver results, manage performance, and maintain team cohesion.
+
+When a situation involves neurodiversity they may worry about saying the wrong thing or making incorrect assumptions.
+
+As a result some managers avoid the conversation entirely.
+
+Unfortunately this often makes the situation harder to resolve.
+
+Many organisations address this gap through [structured manager training](/neurodiversity-training) that gives practical tools and confidence.
+
+## Communication challenges
+
+Many difficulties between managers and employees come down to communication.
+
+Instructions may be unclear. Expectations may be assumed rather than explained. Feedback may be delivered in ways that are easily misunderstood.
+
+For neurodivergent employees these communication gaps can create significant uncertainty.
+
+They may not know exactly what the manager expects or how success will be evaluated.
+
+Over time this uncertainty affects confidence and performance.
+
+Our [Communication Tools for Managers](/what-we-do#tools) framework helps reduce these misunderstandings across teams.
+
+## Structuring expectations clearly
+
+One of the most helpful things managers can do is make expectations explicit.
+
+What is the priority? What outcome are we aiming for? When is the work required?
+
+Providing this clarity reduces guesswork and allows employees to focus on the task itself.
+
+Many managers are surprised how much performance improves when expectations are communicated in a structured way.
+
+## Psychological safety inside teams
+
+Support also depends on whether employees feel safe raising concerns.
+
+If people believe admitting difficulty will harm their reputation, they tend to stay silent.
+
+Psychological safety allows employees to discuss working styles, challenges, and potential adjustments openly.
+
+This transparency helps managers understand how best to support their team.
+
+## Practical tools that help managers
+
+Many organisations now use structured tools to help managers approach these situations with confidence.
+
+[Communication frameworks](/what-we-do#tools) help reduce misunderstandings. Inclusive meeting practices create space for different thinking styles to contribute. Structured conversations help managers explore strengths and challenges constructively.
+
+These approaches give managers practical ways to support their teams.
+
+Managers play a critical role in whether neurodivergent employees succeed.
+
+If your organisation is exploring how to equip managers with the skills and confidence to support their teams, you are welcome to [start a conversation with us](/#contact).`,
+  },
+  {
+    slug: "neurodiversity-and-productivity-at-work",
+    title: "Neurodiversity and Productivity at Work",
+    metaTitle: "Neurodiversity and Productivity at Work | Performance Guide",
+    metaDescription: "How neurodiversity influences workplace productivity. Why workplace design matters more than individual ability, and how inclusive practices improve performance for everyone.",
+    excerpt: "When organisations discuss neurodiversity, the conversation often focuses on inclusion. But there is another dimension that leaders are increasingly recognising. Neurodiversity also influences performance.",
+    category: "Workplace",
+    readTime: "7 min read",
+    publishDate: "2026-02-02",
+    accentColor: "teal",
+    image: ndProductivityImg,
+    content: `When organisations discuss neurodiversity, the conversation often focuses on inclusion.
+
+Inclusion matters. Every employee should feel respected and supported.
+
+But there is another dimension that leaders are increasingly recognising.
+
+Neurodiversity also influences performance.
+
+## Talent and environment
+
+Many organisations invest heavily in recruiting talented people.
+
+What they often overlook is how the workplace environment affects whether that talent can perform.
+
+Communication systems, meeting structures, and workload expectations all influence productivity.
+
+If those systems create friction, even highly capable employees can struggle.
+
+Understanding this dynamic is something many leaders begin exploring through [structured leadership workshops](/neurodiversity-training).
+
+## How workplace design reduces performance
+
+Many modern workplaces rely on constant communication and rapid task switching.
+
+Emails, messaging platforms, meetings, and project tools compete for attention throughout the day.
+
+For employees who rely on deep focus, this environment can make sustained thinking extremely difficult.
+
+Cognitive overload becomes a daily experience.
+
+Over time productivity suffers not because people lack ability, but because the environment prevents them from using it fully.
+
+## Communication friction
+
+Unclear communication is another major source of lost productivity.
+
+Vague instructions, shifting priorities, and informal expectations often lead to duplicated work or misunderstandings.
+
+Teams spend time correcting mistakes rather than moving forward.
+
+Clearer communication structures remove much of this friction and allow people to focus on meaningful work. Our [Communication Tools for Managers](/what-we-do#tools) and [Inclusive Meeting Frameworks](/what-we-do#tools) provide practical starting points.
+
+## Inclusive design improves performance
+
+Inclusive design focuses on creating working environments that support a wider range of thinking styles.
+
+Information is shared clearly. Meetings allow time for reflection as well as discussion. Tasks are structured in ways that align with how people concentrate best.
+
+When organisations adopt these practices, productivity often improves across the entire workforce.
+
+Neuroinclusion is increasingly being recognised as a performance strategy as well as an inclusion initiative.
+
+If your organisation is exploring how workplace design influences productivity, you are welcome to [start a conversation with us](/#contact).`,
+  },
 ];
 
 export const getBlogPost = (slug: string): BlogPost | undefined =>

@@ -153,4 +153,29 @@ export const blogFaqs: Record<string, { question: string; answer: string }[]> = 
     { question: "How do I know if a role needs redesigning?", answer: "If capable employees are consistently struggling, if the role has expanded significantly over time, or if performance issues keep recurring despite good people being in the job, the role itself may be the problem rather than the person." },
     { question: "What is the best way to start a difficult conversation with an employee?", answer: "Begin with curiosity rather than assumptions. A question like 'help me understand how this is working for you' opens the door to insight without putting the employee on the defensive." },
   ],
+  "how-to-support-neurodivergent-employees": [
+    { question: "Do employees have to disclose a diagnosis to receive support?", answer: "No. Many organisations focus on how someone works rather than whether they have a formal diagnosis. Practical conversations about working style can often lead to effective solutions without requiring disclosure." },
+    { question: "Are workplace adjustments expensive?", answer: "Most adjustments involve changes to communication or task structure rather than equipment. Many of the most effective changes cost nothing." },
+    { question: "What is the single most important thing an organisation can do?", answer: "Create an environment where people feel safe to talk about how they work best. Psychological safety is the foundation that makes everything else possible." },
+  ],
+  "workplace-adjustments-adhd-autism": [
+    { question: "Do adjustments require a formal diagnosis?", answer: "Not always. Many organisations focus on practical solutions based on how someone works rather than waiting for medical confirmation." },
+    { question: "Are adjustments permanent?", answer: "Some adjustments remain in place long term, while others evolve as roles change. The goal is to create conditions where people can perform effectively." },
+    { question: "Will adjustments create resentment from other team members?", answer: "When adjustments are framed as good management practice rather than special treatment, they are rarely seen as unfair. Many adjustments improve the experience for the whole team." },
+  ],
+  "what-is-neurodiversity-in-the-workplace": [
+    { question: "Is neurodiversity mainly about recruitment programmes?", answer: "Recruitment programmes can be helpful, but the wider environment matters just as much. Without supportive systems, new hires may struggle to succeed." },
+    { question: "Do all neurodivergent people need adjustments?", answer: "Not necessarily. Needs vary widely. The goal is to create environments flexible enough to support different working styles." },
+    { question: "How many employees are likely to be neurodivergent?", answer: "Research suggests around 15 to 20 per cent of the population are neurodivergent, though many people remain undiagnosed. The proportion in any workforce is likely higher than most organisations assume." },
+  ],
+  "how-managers-can-support-neurodivergent-employees": [
+    { question: "Should managers ask if someone is neurodivergent?", answer: "It is usually better to focus on how someone works rather than asking about diagnoses. Open questions about working preferences create a safer and more productive conversation." },
+    { question: "What if a manager feels unsure how to help?", answer: "Seeking guidance or training can give managers practical tools to handle these conversations with confidence. Starting with curiosity rather than assumptions is always a good first step." },
+    { question: "Can managers make adjustments without HR approval?", answer: "Many of the most effective adjustments are simple management practices like clearer instructions or flexible meeting formats. These rarely need formal approval and can be implemented immediately." },
+  ],
+  "neurodiversity-and-productivity-at-work": [
+    { question: "Does neurodiversity actually improve productivity?", answer: "Research and real world experience both suggest that diverse thinking styles can improve problem solving and innovation when environments support them effectively." },
+    { question: "Do these changes only help neurodivergent employees?", answer: "No. Many inclusive practices improve clarity and focus for all employees. Clearer communication and better meeting structures benefit everyone." },
+    { question: "How do you measure the productivity impact?", answer: "Organisations can track metrics such as task completion rates, error reduction, employee retention, and engagement scores. Many find that inclusive design improvements show measurable results within months." },
+  ],
 };
