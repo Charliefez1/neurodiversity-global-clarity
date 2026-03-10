@@ -185,7 +185,7 @@ const HeroSection = () => {
                   key={i}
                   src={img.src}
                   alt={img.alt}
-                  className={`rounded-xl shadow-md w-full h-40 object-cover ${img.offsetClass}`}
+                  className={`rounded-xl shadow-md w-full h-48 object-cover ${img.offsetClass}`}
                   loading="lazy"
                 />
               ))}
