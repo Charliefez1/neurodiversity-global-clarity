@@ -1,21 +1,24 @@
 
-## Add Image Next to "The Challenge" Title
 
-### What will change
-The uploaded image (showing training stats and a Teams call) will be placed alongside the "The challenge" section header in the ProblemSection, creating a side-by-side layout on desktop.
+## Replace Hero Collage Images with Group Photos
 
-### Implementation
+Currently the 2×2 hero collage uses two individual portraits (`portrait-1.jpg`, `portrait-3.jpg`) alongside two group shots. The plan is to swap all four to group/team images from the existing `src/assets/industries/` and `src/assets/` folders.
 
-1. **Copy the uploaded image** into `src/assets/challenge-stats.png`
+### Image Selection
 
-2. **Update `src/components/ProblemSection.tsx`**:
-   - Import the image as an ES6 module
-   - Change the header area (currently `max-w-2xl mb-16`) from a single-column layout to a two-column grid on larger screens (`grid lg:grid-cols-2 gap-8 items-center mb-16`)
-   - Left column: keep the existing badge, h2 title, description text, and audio player
-   - Right column: display the image with `rounded-xl` styling, appropriate alt text, and responsive sizing
-   - On mobile, the image will stack below the title text
+Available group images (excluding `diverse-professions-hero.png` which is reserved for other pages):
 
-### Visual result
-- Desktop: title/text on the left, image on the right, side by side
-- Mobile: title/text on top, image below
-- The three problem cards underneath remain unchanged
+| Slot | Current | Replacement | Source |
+|------|---------|-------------|--------|
+| 1 | `hero/team-workshop.jpg` | `industries/diverse-workforce.png` | Diverse workforce group |
+| 2 | `testimonials/portrait-1.jpg` | `industries/mixed-professions.png` | Mixed professions group |
+| 3 | `hero/consultant-speaking.jpg` | `workshop-hero-team.png` | Workshop team photo |
+| 4 | `testimonials/portrait-3.jpg` | `industries/community-workers.png` | Community workers group |
+
+### Changes
+
+**`src/components/HeroSection.tsx`** — single file edit:
+- Replace the 4 image imports (lines 14-19) with the new group images
+- Update the `collageImages` array alt text to match (lines 21-26)
+- Remove unused `portrait2`, `portrait4` imports
+
