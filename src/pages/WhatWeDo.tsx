@@ -29,7 +29,7 @@ import {
   BarChart3,
 } from "lucide-react";
 import systemsImg from "@/assets/what-we-do-systems.jpg";
-import workshopImg from "@/assets/workshop-hero-team.png";
+import workshopImg from "@/assets/workshop-team-activity.jpg";
 import dashboardImg from "@/assets/coaching-dashboard.png";
 
 const fadeUp = {
