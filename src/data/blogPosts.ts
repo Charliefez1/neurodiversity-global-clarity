@@ -30,6 +30,12 @@ import ndSalesImg from "@/assets/blog/neurodiversity-sales.jpg";
 import ndContactCentreImg from "@/assets/blog/neurodiversity-contact-centre.jpg";
 import ndDefenceImg from "@/assets/blog/neurodiversity-defence.jpg";
 import ndRetailImg from "@/assets/blog/neurodiversity-retail.jpg";
+import strengthsMappingImg from "@/assets/blog/strengths-challenges-mapping.jpg";
+import commToolsManagersImg from "@/assets/blog/communication-tools-managers.jpg";
+import inclusiveMeetingsImg from "@/assets/blog/inclusive-meeting-frameworks.jpg";
+import adjustmentGuidanceImg from "@/assets/blog/workplace-adjustment-guidance.jpg";
+import benchmarkingSafetyImg from "@/assets/blog/benchmarking-psychological-safety.jpg";
+import roleDesignGuidesImg from "@/assets/blog/role-design-conversation-guides.jpg";
 
 export interface BlogPost {
   slug: string;
