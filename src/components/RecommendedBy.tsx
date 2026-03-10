@@ -32,7 +32,7 @@ const RecommendedBy = () => (
             key={p.name}
             src={p.logo}
             alt={p.name}
-            className="h-10 w-auto object-contain"
+            className={`w-auto object-contain ${p.name === "Smartest Energy" ? "h-20" : "h-10"}`}
           />
         ))}
       </div>
