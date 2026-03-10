@@ -137,11 +137,11 @@ const BlogPost = () => {
           </div>
 
           {/* Questions leaders often ask */}
-          {post.faqItems && post.faqItems.length > 0 && (
+          {faqItems && faqItems.length > 0 && (
             <div className="mt-16 pt-10 border-t border-border">
               <h2 className="font-display font-bold text-xl md:text-2xl text-foreground mb-8">Questions leaders often ask</h2>
               <div className="space-y-6">
-                {post.faqItems.map((faq, i) => (
+                {faqItems.map((faq, i) => (
                   <div key={i} className="bg-card rounded-xl border border-border p-6 shadow-sm">
                     <h3 className="font-display font-bold text-sm md:text-base text-foreground mb-3">{faq.question}</h3>
                     <p className="text-sm text-muted-foreground leading-[1.8]">{faq.answer}</p>
