@@ -428,7 +428,7 @@ const InclusivePerformanceSection = () => {
               <button
                 key={i}
                 onClick={() => { setActiveStage(i); if (isPlaying) { clearTimer(); timerRef.current = setInterval(advance, AUTO_PLAY_MS); } }}
-                className={`h-1.5 rounded-full transition-all duration-300 ${i === activeStage ? "w-6 bg-accent" : "w-2 bg-foreground/15 hover:bg-foreground/25"}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${i === activeStage ? "w-6 bg-accent" : "w-2 bg-primary-foreground/15 hover:bg-primary-foreground/25"}`}
                 aria-label={`Go to stage ${i + 1}`}
               />
             ))}
