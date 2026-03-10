@@ -21,7 +21,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { organisationSchema } from "@/components/JsonLd";
 import NewsHeadlines from "@/components/NewsHeadlines";
-import AskQuestionCompact from "@/components/AskQuestionCompact";
+
 import { RegisterSections } from "@/contexts/PageSectionsContext";
 import { AlertTriangle, Settings, TrendingUp, Award, Heart, Phone, Sparkles, BookOpen, ArrowRight } from "lucide-react";
 
