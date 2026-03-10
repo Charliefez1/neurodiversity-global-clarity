@@ -1,7 +1,9 @@
-import { BookOpen, LayoutList, Volume2, Sun, Moon, Type, Zap } from "lucide-react";
+import { BookOpen, LayoutList, Volume2, Sun, Moon, Contrast, Type, Zap } from "lucide-react";
 import { useExperienceMode, type ExperienceMode } from "@/contexts/ExperienceModeContext";
 import { usePageSections } from "@/contexts/PageSectionsContext";
 import { useState, useEffect } from "react";
+
+type ThemeMode = "standard" | "light" | "dark";
 
 const modes: { value: ExperienceMode; label: string; icon: typeof BookOpen }[] = [
   { value: "read", label: "Read", icon: BookOpen },
@@ -13,16 +15,19 @@ const modes: { value: ExperienceMode; label: string; icon: typeof BookOpen }[] =
 const ExperienceSelector = () => {
   const { mode, setMode } = useExperienceMode();
   const { sections } = usePageSections();
-  const [dark, setDark] = useState(() => document.documentElement.classList.contains("dark"));
+  const [theme, setTheme] = useState<ThemeMode>(() => {
+    if (document.documentElement.classList.contains("dark")) return "dark";
+    if (document.documentElement.classList.contains("light")) return "light";
+    return "standard";
+  });
   const [textSize, setTextSize] = useState<"normal" | "large">("normal");
 
   useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+    document.documentElement.classList.remove("dark", "light");
+    if (theme !== "standard") {
+      document.documentElement.classList.add(theme);
     }
-  }, [dark]);
+  }, [theme]);
 
   useEffect(() => {
     document.documentElement.style.fontSize = textSize === "large" ? "112.5%" : "";
@@ -103,16 +108,30 @@ const ExperienceSelector = () => {
             <span className="hidden sm:inline">{textSize === "large" ? "A+" : "A"}</span>
           </button>
 
-          {/* Dark / Light */}
-          <button
-            onClick={() => setDark(!dark)}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded text-[11px] font-display font-semibold text-primary-foreground/50 hover:text-primary-foreground/80 transition-all"
-            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-            title={dark ? "Light mode" : "Dark mode"}
-          >
-            {dark ? <Sun size={12} aria-hidden="true" /> : <Moon size={12} aria-hidden="true" />}
-            <span className="hidden sm:inline">{dark ? "Light" : "Dark"}</span>
-          </button>
+          {/* Theme mode */}
+          {([
+            { value: "light" as ThemeMode, label: "Light", icon: Sun },
+            { value: "standard" as ThemeMode, label: "Standard", icon: Contrast },
+            { value: "dark" as ThemeMode, label: "Dark", icon: Moon },
+          ]).map((t) => {
+            const active = theme === t.value;
+            return (
+              <button
+                key={t.value}
+                onClick={() => setTheme(t.value)}
+                className={`inline-flex items-center gap-1 px-2.5 py-1 rounded text-[11px] font-display font-semibold transition-all ${
+                  active
+                    ? "bg-primary-foreground/15 text-primary-foreground"
+                    : "text-primary-foreground/50 hover:text-primary-foreground/80"
+                }`}
+                aria-label={`Switch to ${t.label} theme`}
+                title={t.label}
+              >
+                <t.icon size={12} aria-hidden="true" />
+                <span className="hidden sm:inline">{t.label}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>
