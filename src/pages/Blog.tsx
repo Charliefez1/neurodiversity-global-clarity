@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/components/JsonLd";
 import NewsHeadlines from "@/components/NewsHeadlines";
 import BlogSearch from "@/components/BlogSearch";
 import { blogPosts } from "@/data/blogPosts";
