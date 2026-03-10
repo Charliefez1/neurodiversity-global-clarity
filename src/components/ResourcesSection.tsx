@@ -41,10 +41,10 @@ const resources = [
 const ResourcesSection = () => (
   <section id="resources" className="bg-primary text-primary-foreground py-16 lg:py-20">
     <div className="mx-auto max-w-wide px-6 lg:px-10">
-      <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">
+      <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-3">
         Resources
       </p>
-      <h2 className="font-display font-bold text-lg md:text-xl leading-tight mb-8">
+      <h2 className="font-display font-bold text-lg md:text-xl leading-tight text-primary-foreground mb-8">
         Key resources from our team
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
