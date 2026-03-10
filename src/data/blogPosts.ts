@@ -20,6 +20,16 @@ import dopamineRiskImg from "@/assets/blog/dopamine-risk-adolescence.jpg";
 import parentCarerBurnoutImg from "@/assets/blog/parent-carer-burnout.jpg";
 import lateDiagnosisImg from "@/assets/blog/late-diagnosis-impact.jpg";
 import darkSideParentImg from "@/assets/blog/dark-side-parent-workshop.jpg";
+import ndEngineeringImg from "@/assets/blog/neurodiversity-engineering.jpg";
+import ndCorporateImg from "@/assets/blog/neurodiversity-corporate.jpg";
+import ndCharityImg from "@/assets/blog/neurodiversity-charity.jpg";
+import ndLegalImg from "@/assets/blog/neurodiversity-legal.jpg";
+import ndEmergencyImg from "@/assets/blog/neurodiversity-emergency.jpg";
+import ndRailImg from "@/assets/blog/neurodiversity-rail.jpg";
+import ndSalesImg from "@/assets/blog/neurodiversity-sales.jpg";
+import ndContactCentreImg from "@/assets/blog/neurodiversity-contact-centre.jpg";
+import ndDefenceImg from "@/assets/blog/neurodiversity-defence.jpg";
+import ndRetailImg from "@/assets/blog/neurodiversity-retail.jpg";
 
 export interface BlogPost {
   slug: string;
