@@ -8,7 +8,8 @@ const schema = z.object({
   question: z.string().trim().min(10, "Please write at least 10 characters").max(2000, "Maximum 2000 characters"),
 });
 
-const AskQuestionCompact = () => {
+const AskQuestionCompact = ({ variant = "light" }: { variant?: "light" | "dark" }) => {
+  const isDark = variant === "dark";
   const [value, setValue] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
