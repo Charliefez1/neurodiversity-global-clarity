@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/components/JsonLd";
 import NewsHeadlines from "@/components/NewsHeadlines";
 import BlogSearch from "@/components/BlogSearch";
 import { blogPosts } from "@/data/blogPosts";
@@ -79,7 +81,11 @@ const Blog = () => {
 
   return (
     <>
-      <SEOHead title="Blog | Neurodiversity Global" description="Expert articles on neurodiversity in the workplace and for children and young people." path="/blog" />
+      <SEOHead title="Neurodiversity Blog | Expert Articles" description="Evidence-informed articles on neurodiversity in the workplace and for children and young people. Practical guidance for HR, managers, and parents." path="/blog" />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://www.neurodiversityglobal.com/" },
+        { name: "Blog", url: "https://www.neurodiversityglobal.com/blog" },
+      ])} />
       <Navbar />
       <NewsHeadlines />
 
