@@ -31,7 +31,7 @@ const TrainingCatalogueBanner = () => {
                 </div>
                 <div>
                   <p className="font-display font-extrabold text-xl text-accent leading-none">50+</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">{t("hero.accreditedSessions")}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5 leading-snug">Neurodiversity In Work Training Sessions</p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed">
