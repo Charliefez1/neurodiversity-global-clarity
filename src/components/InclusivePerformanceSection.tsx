@@ -81,7 +81,7 @@ const narrativeStages: NarrativeStage[] = [
       "Burnout is not a personal failure. It is the predictable end point of a system that did not adapt. The cost to UK employers averages £2,646 per person per year in lost productivity and absence. Neurodiversity related employment tribunals have risen 164% in four years. By the time you are managing burnout, you have already lost.",
     activeZones: [0, 1, 2, 3, 4, 5],
     newZone: 5,
-    callout: "Neurodivergent employees twice as likely to burn out. Tribunals up 164% in 4 years.",
+    callout: "2× burnout risk. Tribunals up 164%.",
     calloutZone: 5,
   },
   {
@@ -110,7 +110,7 @@ function gauss(x: number) {
   return AMPLITUDE * Math.exp(-0.5 * ((x - PEAK) / SIGMA) ** 2);
 }
 
-const zoneEdges = [0, 100, 180, 260, 340, 420, 540, 600];
+const zoneEdges = [0, 95, 175, 255, 335, 415, 510, 600];
 
 function buildZonePath(zoneIndex: number): string {
   const x0 = zoneEdges[zoneIndex];
