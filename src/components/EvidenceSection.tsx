@@ -91,7 +91,7 @@ const EvidenceSection = () => {
             <Link
               key={ind.name}
               to={ind.href}
-              className="group rounded-xl border border-white/15 border-l-4 bg-white/10 backdrop-blur-md p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="group rounded-xl border border-white/15 border-l-4 bg-white/10 backdrop-blur-md p-5 lg:p-6 shadow-sm hover:shadow-md transition-shadow"
               style={{ borderLeftColor: NEURO_COLOURS[idx % NEURO_COLOURS.length] }}
             >
               <div className="w-10 h-10 rounded-md bg-accent/10 flex items-center justify-center mb-5">
