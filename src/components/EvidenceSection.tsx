@@ -108,7 +108,7 @@ const EvidenceSection = () => {
           ))}
           <Link
             to="/industries"
-            className="group rounded-xl border-2 border-dashed border-white/20 bg-white/5 backdrop-blur-md flex flex-col items-center justify-center p-7 lg:p-8 hover:bg-white/10 hover:border-white/30 transition-all duration-300"
+            className="group rounded-xl border-2 border-dashed border-white/20 bg-white/5 backdrop-blur-md flex flex-col items-center justify-center p-5 lg:p-6 hover:bg-white/10 hover:border-white/30 transition-all duration-300"
           >
             <div className="w-11 h-11 rounded-full bg-accent/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
               <ArrowRight size={18} className="text-accent" />
