@@ -15,6 +15,7 @@ import AccessibilitySection from "@/components/AccessibilitySection";
 import FinalCTA from "@/components/FinalCTA";
 import ResourcesSection from "@/components/ResourcesSection";
 import FloatingContactButton from "@/components/FloatingContactButton";
+import FeaturedClient from "@/components/FeaturedClient";
 
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
@@ -96,6 +97,7 @@ const Index = () => {
           <EvidenceSection />
         </div>
       </div>
+      <FeaturedClient />
       <NeuroFrameworkSection />
       <InclusivePerformanceSection />
 
