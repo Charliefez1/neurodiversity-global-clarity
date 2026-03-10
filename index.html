@@ -18,9 +18,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Noscript fallback for crawlers that cannot execute JS -->
+    <!-- Preload hero image for LCP -->
+    <link rel="preload" as="image" href="/src/assets/hero/team-workshop.jpg" />
+  </head>
+  <body>
     <noscript>
-      <meta name="description" content="Neurodiversity Global is a UK-based consultancy and training organisation specialising in neurodiversity in work, leadership, systems design and performance." />
       <style>body{font-family:sans-serif;padding:2rem;max-width:800px;margin:0 auto}</style>
       <h1>Neurodiversity Global</h1>
       <p>UK-based global consultancy specialising in neurodiversity in work, leadership, systems design and performance.</p>
@@ -46,11 +48,6 @@
       </ul>
       <p>Contact: <a href="mailto:hello@neurodiversityglobal.com">hello@neurodiversityglobal.com</a></p>
     </noscript>
-
-    <!-- Preload hero image for LCP -->
-    <link rel="preload" as="image" href="/src/assets/hero/team-workshop.jpg" />
-  </head>
-  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
