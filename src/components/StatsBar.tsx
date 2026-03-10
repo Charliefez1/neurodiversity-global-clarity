@@ -34,7 +34,7 @@ const stats = [
 
 const StatsBar = () => {
   return (
-    <section className="relative pt-0 pb-20 lg:pb-28">
+    <section className="relative pt-0 pb-10 lg:pb-14">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
         <div className="grid md:grid-cols-4 gap-8">
           {stats.map((stat, idx) => (
