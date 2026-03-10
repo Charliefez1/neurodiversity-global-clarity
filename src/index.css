@@ -60,6 +60,30 @@
     font-size: 17px;
   }
 
+  .light {
+    --background: 40 30% 97%;
+    --foreground: 220 30% 18%;
+    --card: 40 35% 96%;
+    --card-foreground: 220 30% 18%;
+    --popover: 40 35% 96%;
+    --popover-foreground: 220 30% 18%;
+    --primary: 220 30% 32%;
+    --primary-foreground: 40 30% 97%;
+    --secondary: 38 25% 93%;
+    --secondary-foreground: 220 30% 18%;
+    --muted: 38 20% 90%;
+    --muted-foreground: 220 15% 46%;
+    --accent: 170 85% 40%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 170 85% 40%;
+    --navy: 220 30% 32%;
+    --navy-light: 220 25% 42%;
+  }
+
   .dark {
     --background: 220 40% 7%;
     --foreground: 40 30% 95%;
@@ -80,6 +104,8 @@
     --border: 220 25% 20%;
     --input: 220 25% 20%;
     --ring: 170 85% 44%;
+    --navy: 220 40% 13%;
+    --navy-light: 220 30% 22%;
   }
 
   * {

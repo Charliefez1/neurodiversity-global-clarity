@@ -108,16 +108,30 @@ const ExperienceSelector = () => {
             <span className="hidden sm:inline">{textSize === "large" ? "A+" : "A"}</span>
           </button>
 
-          {/* Dark / Light */}
-          <button
-            onClick={() => setDark(!dark)}
-            className="inline-flex items-center gap-1 px-2.5 py-1 rounded text-[11px] font-display font-semibold text-primary-foreground/50 hover:text-primary-foreground/80 transition-all"
-            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-            title={dark ? "Light mode" : "Dark mode"}
-          >
-            {dark ? <Sun size={12} aria-hidden="true" /> : <Moon size={12} aria-hidden="true" />}
-            <span className="hidden sm:inline">{dark ? "Light" : "Dark"}</span>
-          </button>
+          {/* Theme mode */}
+          {([
+            { value: "light" as ThemeMode, label: "Light", icon: Sun },
+            { value: "standard" as ThemeMode, label: "Standard", icon: Contrast },
+            { value: "dark" as ThemeMode, label: "Dark", icon: Moon },
+          ]).map((t) => {
+            const active = theme === t.value;
+            return (
+              <button
+                key={t.value}
+                onClick={() => setTheme(t.value)}
+                className={`inline-flex items-center gap-1 px-2.5 py-1 rounded text-[11px] font-display font-semibold transition-all ${
+                  active
+                    ? "bg-primary-foreground/15 text-primary-foreground"
+                    : "text-primary-foreground/50 hover:text-primary-foreground/80"
+                }`}
+                aria-label={`Switch to ${t.label} theme`}
+                title={t.label}
+              >
+                <t.icon size={12} aria-hidden="true" />
+                <span className="hidden sm:inline">{t.label}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
     </div>
