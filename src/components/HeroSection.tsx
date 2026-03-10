@@ -178,16 +178,16 @@ const HeroSection = () => {
           </div>
 
           {/* Right column: photo collage */}
-          <div className="mt-10 lg:mt-0 lg:flex-shrink-0 lg:w-[440px] xl:w-[500px]">
-            <div className="grid grid-cols-2 gap-3">
+          <div className="mt-10 lg:mt-0 lg:flex-shrink-0 lg:w-[380px] xl:w-[420px]">
+            <div className="grid grid-cols-2 gap-4">
               {collageImages.map((img, i) => (
                 <img
                   key={i}
                   src={img.src}
                   alt={img.alt}
-                  width={240}
-                  height={192}
-                  className={`rounded-xl shadow-md w-full h-48 object-cover ${img.offsetClass}`}
+                  width={200}
+                  height={150}
+                  className={`rounded-xl shadow-md w-full h-40 object-cover ${img.offsetClass}`}
                   loading={i === 0 ? "eager" : "lazy"}
                   fetchPriority={i === 0 ? "high" : undefined}
                   decoding={i === 0 ? "sync" : "async"}
