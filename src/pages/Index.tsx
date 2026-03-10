@@ -1,29 +1,30 @@
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import TrainingCatalogueBanner from "@/components/TrainingCatalogueBanner";
-import PageContents from "@/components/PageContents";
-
-import InclusivePerformanceSection from "@/components/InclusivePerformanceSection";
-import ProblemSection from "@/components/ProblemSection";
-import challengeBg from "@/assets/challenge-bg.png";
-import industryBg from "@/assets/industry-bg.png";
-import StatsBar from "@/components/StatsBar";
-import ServicesSection from "@/components/ServicesSection";
-import ImpactSection from "@/components/ImpactSection";
-import EvidenceSection from "@/components/EvidenceSection";
-import AccessibilitySection from "@/components/AccessibilitySection";
-import FinalCTA from "@/components/FinalCTA";
-import ResourcesSection from "@/components/ResourcesSection";
-import FloatingContactButton from "@/components/FloatingContactButton";
-import FeaturedClient from "@/components/FeaturedClient";
-
-import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { organisationSchema } from "@/components/JsonLd";
-import NewsHeadlines from "@/components/NewsHeadlines";
-
 import { RegisterSections } from "@/contexts/PageSectionsContext";
-import { AlertTriangle, Settings, TrendingUp, Award, Heart, Phone, Sparkles, BookOpen, ArrowRight } from "lucide-react";
+import { AlertTriangle, Settings, TrendingUp, Award, Heart, Phone, BookOpen, ArrowRight } from "lucide-react";
+
+// Lazy-load all below-fold sections
+const TrainingCatalogueBanner = lazy(() => import("@/components/TrainingCatalogueBanner"));
+const PageContents = lazy(() => import("@/components/PageContents"));
+const FloatingContactButton = lazy(() => import("@/components/FloatingContactButton"));
+const ServicesSection = lazy(() => import("@/components/ServicesSection"));
+const ProblemSection = lazy(() => import("@/components/ProblemSection"));
+const StatsBar = lazy(() => import("@/components/StatsBar"));
+const ImpactSection = lazy(() => import("@/components/ImpactSection"));
+const EvidenceSection = lazy(() => import("@/components/EvidenceSection"));
+const FinalCTA = lazy(() => import("@/components/FinalCTA"));
+const ResourcesSection = lazy(() => import("@/components/ResourcesSection"));
+const FeaturedClient = lazy(() => import("@/components/FeaturedClient"));
+const InclusivePerformanceSection = lazy(() => import("@/components/InclusivePerformanceSection"));
+const Footer = lazy(() => import("@/components/Footer"));
+const NewsHeadlines = lazy(() => import("@/components/NewsHeadlines"));
+
+// Lazy-load heavy background images only when needed
+const challengeBg = new URL("@/assets/challenge-bg.png", import.meta.url).href;
+const industryBg = new URL("@/assets/industry-bg.png", import.meta.url).href;
 
 const indexSections = [
   { id: "problem", label: "The Challenge", icon: AlertTriangle },
@@ -32,9 +33,13 @@ const indexSections = [
   { id: "evidence", label: "Evidence", icon: Award },
   { id: "values", label: "Values", icon: Heart },
   { id: "contact", label: "Contact", icon: Phone },
-  
   { id: "resources", label: "Resources", icon: BookOpen },
 ];
+
+/** Invisible placeholder that reserves vertical space to prevent CLS */
+const SectionPlaceholder = () => (
+  <div className="min-h-[200px]" aria-hidden="true" />
+);
 
 const Index = () => {
   return (
@@ -47,63 +52,74 @@ const Index = () => {
       <JsonLd data={organisationSchema} />
       <RegisterSections sections={indexSections} />
       <Navbar />
-      <NewsHeadlines />
+
+      <Suspense fallback={null}>
+        <NewsHeadlines />
+      </Suspense>
+
       <HeroSection />
-      <TrainingCatalogueBanner />
-      <PageContents />
-      <FloatingContactButton />
-      {/* Ask Rich Anything — compact CTA */}
-      <section className="bg-primary py-10 lg:py-12">
-        <div className="mx-auto max-w-wide px-6 lg:px-10">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-12">
-            <div className="max-w-xl">
-              <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-accent mb-3">Ask Rich Anything</p>
-              <h2 className="font-display font-bold text-lg md:text-xl text-primary-foreground leading-tight">
-                Got a question about neurodiversity at work?
-              </h2>
-              <p className="mt-3 text-sm text-primary-foreground/70 leading-relaxed">
-                Search our knowledge base or ask Rich directly. Answers written personally by our co-founder. Always confidential.
-              </p>
+
+      {/* Below-fold content — lazy loaded */}
+      <Suspense fallback={<SectionPlaceholder />}>
+        <TrainingCatalogueBanner />
+        <PageContents />
+        <FloatingContactButton />
+
+        {/* Ask Rich Anything — compact CTA */}
+        <section className="bg-primary py-10 lg:py-12">
+          <div className="mx-auto max-w-wide px-6 lg:px-10">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-12">
+              <div className="max-w-xl">
+                <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-accent mb-3">Ask Rich Anything</p>
+                <h2 className="font-display font-bold text-lg md:text-xl text-primary-foreground leading-tight">
+                  Got a question about neurodiversity at work?
+                </h2>
+                <p className="mt-3 text-sm text-primary-foreground/70 leading-relaxed">
+                  Search our knowledge base or ask Rich directly. Answers written personally by our co-founder. Always confidential.
+                </p>
+              </div>
+              <a
+                href="/ask-rich"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-burnt-orange text-white font-display font-bold text-sm shadow-lg shadow-burnt-orange/30 hover:shadow-xl hover:shadow-burnt-orange/45 hover:scale-[1.02] transition-all shrink-0"
+              >
+                Ask Rich
+                <ArrowRight size={16} aria-hidden="true" />
+              </a>
             </div>
-            <a
-              href="/ask-rich"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-lg bg-burnt-orange text-white font-display font-bold text-sm shadow-lg shadow-burnt-orange/30 hover:shadow-xl hover:shadow-burnt-orange/45 hover:scale-[1.02] transition-all shrink-0"
-            >
-              Ask Rich
-              <ArrowRight size={16} aria-hidden="true" />
-            </a>
+          </div>
+        </section>
+
+        <ServicesSection />
+
+        <div
+          className="relative bg-cover bg-top bg-no-repeat"
+          style={{ backgroundImage: `url(${challengeBg})` }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative z-10">
+            <ProblemSection />
+            <StatsBar />
           </div>
         </div>
-      </section>
 
-      <ServicesSection />
-      <div
-        className="relative bg-cover bg-top bg-no-repeat"
-        style={{ backgroundImage: `url(${challengeBg})` }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10">
-          <ProblemSection />
-          <StatsBar />
-        </div>
-      </div>
-      <ImpactSection />
-      <div
-        className="relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${industryBg})` }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10">
-          <EvidenceSection />
-        </div>
-      </div>
-      <FeaturedClient />
-      <InclusivePerformanceSection />
+        <ImpactSection />
 
-      <FinalCTA />
-      
-      <ResourcesSection />
-      <Footer />
+        <div
+          className="relative bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${industryBg})` }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative z-10">
+            <EvidenceSection />
+          </div>
+        </div>
+
+        <FeaturedClient />
+        <InclusivePerformanceSection />
+        <FinalCTA />
+        <ResourcesSection />
+        <Footer />
+      </Suspense>
     </main>
   );
 };

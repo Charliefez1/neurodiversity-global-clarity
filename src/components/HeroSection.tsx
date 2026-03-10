@@ -185,8 +185,12 @@ const HeroSection = () => {
                   key={i}
                   src={img.src}
                   alt={img.alt}
+                  width={240}
+                  height={192}
                   className={`rounded-xl shadow-md w-full h-48 object-cover ${img.offsetClass}`}
-                  loading="lazy"
+                  loading={i === 0 ? "eager" : "lazy"}
+                  fetchPriority={i === 0 ? "high" : undefined}
+                  decoding={i === 0 ? "sync" : "async"}
                 />
               ))}
             </div>

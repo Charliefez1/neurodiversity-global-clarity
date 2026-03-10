@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,80 +8,89 @@ import { ExperienceModeProvider } from "@/contexts/ExperienceModeContext";
 import { PageSectionsProvider } from "@/contexts/PageSectionsContext";
 import { PortalAuthProvider } from "@/contexts/PortalAuthContext";
 import useLanguageDirection from "@/hooks/useLanguageDirection";
-import Index from "./pages/Index";
-import WhatWeDo from "./pages/WhatWeDo";
-import About from "./pages/About";
-import AboutTeam from "./pages/AboutTeam";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService";
-import AccessibilityStatement from "./pages/AccessibilityStatement";
-import CookiePolicy from "./pages/CookiePolicy";
-import Workshops from "./pages/Workshops";
-import IndustryTemplate from "./pages/IndustryTemplate";
-import Industries from "./pages/Industries";
-import IndustryHealthcareNHS from "./pages/IndustryHealthcareNHS";
-import IndustryEducation from "./pages/IndustryEducation";
-import IndustryPublicSector from "./pages/IndustryPublicSector";
-import IndustryTechnology from "./pages/IndustryTechnology";
-import IndustryEngineering from "./pages/IndustryEngineering";
-import IndustryCorporate from "./pages/IndustryCorporate";
-import IndustryCharity from "./pages/IndustryCharity";
-import IndustryLegal from "./pages/IndustryLegal";
-import IndustryEmergencyServices from "./pages/IndustryEmergencyServices";
-import IndustryRail from "./pages/IndustryRail";
-import IndustrySales from "./pages/IndustrySales";
-import IndustryContactCentres from "./pages/IndustryContactCentres";
-import IndustryDefence from "./pages/IndustryDefence";
-import IndustryRetailHospitality from "./pages/IndustryRetailHospitality";
-import KnowledgeBase from "./pages/KnowledgeBase";
-import Clients from "./pages/Clients";
-import Testimonials from "./pages/Testimonials";
-import AskRich from "./pages/AskRich";
-import QADetail from "./pages/QADetail";
-import NeurodiversityTraining from "./pages/NeurodiversityTraining";
-import NeurodiversityConsultancy from "./pages/NeurodiversityConsultancy";
-import AdminQA from "./pages/AdminQA";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
-import CommunityQuestions from "./pages/CommunityQuestions";
-import Sources from "./pages/Sources";
-import CaseStudies from "./pages/CaseStudies";
-import Feedback from "./pages/Feedback";
-
-import ForEmployers from "./pages/ForEmployers";
-import ForPublicSector from "./pages/ForPublicSector";
-import ForParents from "./pages/ForParents";
-import ParentPresentation from "./pages/ParentPresentation";
-import NotFound from "./pages/NotFound";
-import ExperienceSelector from "./components/ExperienceSelector";
-import ScanModeBanner from "./components/ScanModeBanner";
-import ListenModePlayer from "./components/ListenModePlayer";
 import ScrollToTop from "./components/ScrollToTop";
 
+// Only eagerly load the homepage — everything else is lazy
+import Index from "./pages/Index";
+
+// Lazy-loaded pages
+const WhatWeDo = lazy(() => import("./pages/WhatWeDo"));
+const About = lazy(() => import("./pages/About"));
+const AboutTeam = lazy(() => import("./pages/AboutTeam"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const AccessibilityStatement = lazy(() => import("./pages/AccessibilityStatement"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
+const Workshops = lazy(() => import("./pages/Workshops"));
+const Industries = lazy(() => import("./pages/Industries"));
+const IndustryTemplate = lazy(() => import("./pages/IndustryTemplate"));
+const IndustryHealthcareNHS = lazy(() => import("./pages/IndustryHealthcareNHS"));
+const IndustryEducation = lazy(() => import("./pages/IndustryEducation"));
+const IndustryPublicSector = lazy(() => import("./pages/IndustryPublicSector"));
+const IndustryTechnology = lazy(() => import("./pages/IndustryTechnology"));
+const IndustryEngineering = lazy(() => import("./pages/IndustryEngineering"));
+const IndustryCorporate = lazy(() => import("./pages/IndustryCorporate"));
+const IndustryCharity = lazy(() => import("./pages/IndustryCharity"));
+const IndustryLegal = lazy(() => import("./pages/IndustryLegal"));
+const IndustryEmergencyServices = lazy(() => import("./pages/IndustryEmergencyServices"));
+const IndustryRail = lazy(() => import("./pages/IndustryRail"));
+const IndustrySales = lazy(() => import("./pages/IndustrySales"));
+const IndustryContactCentres = lazy(() => import("./pages/IndustryContactCentres"));
+const IndustryDefence = lazy(() => import("./pages/IndustryDefence"));
+const IndustryRetailHospitality = lazy(() => import("./pages/IndustryRetailHospitality"));
+const KnowledgeBase = lazy(() => import("./pages/KnowledgeBase"));
+const Clients = lazy(() => import("./pages/Clients"));
+const Testimonials = lazy(() => import("./pages/Testimonials"));
+const AskRich = lazy(() => import("./pages/AskRich"));
+const QADetail = lazy(() => import("./pages/QADetail"));
+const NeurodiversityTraining = lazy(() => import("./pages/NeurodiversityTraining"));
+const NeurodiversityConsultancy = lazy(() => import("./pages/NeurodiversityConsultancy"));
+const AdminQA = lazy(() => import("./pages/AdminQA"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const CommunityQuestions = lazy(() => import("./pages/CommunityQuestions"));
+const Sources = lazy(() => import("./pages/Sources"));
+const CaseStudies = lazy(() => import("./pages/CaseStudies"));
+const Feedback = lazy(() => import("./pages/Feedback"));
+const ForEmployers = lazy(() => import("./pages/ForEmployers"));
+const ForPublicSector = lazy(() => import("./pages/ForPublicSector"));
+const ForParents = lazy(() => import("./pages/ForParents"));
+const ParentPresentation = lazy(() => import("./pages/ParentPresentation"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const ExperienceSelector = lazy(() => import("./components/ExperienceSelector"));
+const ScanModeBanner = lazy(() => import("./components/ScanModeBanner"));
+const ListenModePlayer = lazy(() => import("./components/ListenModePlayer"));
+
 // Portal pages
-import PortalLogin from "./pages/portal/Login";
-import PortalDashboard from "./pages/portal/Dashboard";
-import PortalRoute from "./components/portal/PortalRoute";
-import PortalBookSession from "./pages/portal/BookSession";
-import PortalMyBookings from "./pages/portal/MyBookings";
-import PortalLearningLibrary from "./pages/portal/LearningLibrary";
-import PortalAskAI from "./pages/portal/AskAI";
-import PortalCertificates from "./pages/portal/Certificates";
-import PortalSupport from "./pages/portal/Support";
-import PortalResources from "./pages/portal/Resources";
-import PortalCoaching from "./pages/portal/Coaching";
-import PortalCognassist from "./pages/portal/Cognassist";
-import PortalProgrammeCalendar from "./pages/portal/ProgrammeCalendar";
-// Portal admin pages
-import PortalAdminDashboard from "./pages/portal/admin/AdminDashboard";
-import PortalSessionManager from "./pages/portal/admin/SessionManager";
-import PortalAttendance from "./pages/portal/admin/Attendance";
-import PortalContentManager from "./pages/portal/admin/ContentManager";
-import PortalReporting from "./pages/portal/admin/Reporting";
-import PortalCoachingAdmin from "./pages/portal/admin/CoachingAdmin";
-import PortalCognassistAdmin from "./pages/portal/admin/CognassistAdmin";
+const PortalLogin = lazy(() => import("./pages/portal/Login"));
+const PortalDashboard = lazy(() => import("./pages/portal/Dashboard"));
+const PortalRoute = lazy(() => import("./components/portal/PortalRoute"));
+const PortalBookSession = lazy(() => import("./pages/portal/BookSession"));
+const PortalMyBookings = lazy(() => import("./pages/portal/MyBookings"));
+const PortalLearningLibrary = lazy(() => import("./pages/portal/LearningLibrary"));
+const PortalAskAI = lazy(() => import("./pages/portal/AskAI"));
+const PortalCertificates = lazy(() => import("./pages/portal/Certificates"));
+const PortalSupport = lazy(() => import("./pages/portal/Support"));
+const PortalResources = lazy(() => import("./pages/portal/Resources"));
+const PortalCoaching = lazy(() => import("./pages/portal/Coaching"));
+const PortalCognassist = lazy(() => import("./pages/portal/Cognassist"));
+const PortalProgrammeCalendar = lazy(() => import("./pages/portal/ProgrammeCalendar"));
+const PortalAdminDashboard = lazy(() => import("./pages/portal/admin/AdminDashboard"));
+const PortalSessionManager = lazy(() => import("./pages/portal/admin/SessionManager"));
+const PortalAttendance = lazy(() => import("./pages/portal/admin/Attendance"));
+const PortalContentManager = lazy(() => import("./pages/portal/admin/ContentManager"));
+const PortalReporting = lazy(() => import("./pages/portal/admin/Reporting"));
+const PortalCoachingAdmin = lazy(() => import("./pages/portal/admin/CoachingAdmin"));
+const PortalCognassistAdmin = lazy(() => import("./pages/portal/admin/CognassistAdmin"));
 
 const queryClient = new QueryClient();
+
+/** Minimal loading skeleton to prevent CLS */
+const PageFallback = () => (
+  <div className="min-h-screen bg-background" aria-busy="true" aria-label="Loading page">
+    <div className="h-16 bg-primary" /> {/* navbar placeholder */}
+  </div>
+);
 
 const AppContent = () => {
   useLanguageDirection();
@@ -90,19 +100,22 @@ const AppContent = () => {
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <ExperienceSelector />
-        <ScanModeBanner />
-        <ListenModePlayer />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/what-we-do" element={<WhatWeDo />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/about/team" element={<AboutTeam />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          <Route path="/accessibility-statement" element={<AccessibilityStatement />} />
-          <Route path="/cookie-policy" element={<CookiePolicy />} />
-          <Route path="/workshops" element={<Workshops />} />
+        <Suspense fallback={null}>
+          <ExperienceSelector />
+          <ScanModeBanner />
+          <ListenModePlayer />
+        </Suspense>
+        <Suspense fallback={<PageFallback />}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/what-we-do" element={<WhatWeDo />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/about/team" element={<AboutTeam />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/accessibility-statement" element={<AccessibilityStatement />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/workshops" element={<Workshops />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/industries/financial-services" element={<IndustryTemplate />} />
             <Route path="/industries/healthcare-nhs" element={<IndustryHealthcareNHS />} />
@@ -121,48 +134,48 @@ const AppContent = () => {
             <Route path="/industries/retail-hospitality" element={<IndustryRetailHospitality />} />
             <Route path="/neurodiversity-training" element={<NeurodiversityTraining />} />
             <Route path="/neurodiversity-consultancy" element={<NeurodiversityConsultancy />} />
-          <Route path="/knowledge-base" element={<KnowledgeBase />} />
-          <Route path="/clients" element={<Clients />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/ask-rich" element={<AskRich />} />
-          <Route path="/ask-rich/:slug" element={<QADetail />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/community-questions" element={<CommunityQuestions />} />
-          <Route path="/sources" element={<Sources />} />
-          <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/feedback" element={<Feedback />} />
-          
-          <Route path="/for-employers" element={<ForEmployers />} />
-          <Route path="/for-public-sector" element={<ForPublicSector />} />
-          <Route path="/for-parents" element={<ForParents />} />
-          <Route path="/for-parents/presentation" element={<ParentPresentation />} />
-          <Route path="/admin" element={<AdminQA />} />
-          {/* Portal routes */}
-          <Route path="/portal" element={<PortalLogin />} />
-          <Route path="/portal/login" element={<PortalLogin />} />
-          <Route path="/portal/dashboard" element={<PortalRoute><PortalDashboard /></PortalRoute>} />
-          <Route path="/portal/book-session" element={<PortalRoute><PortalBookSession /></PortalRoute>} />
-          <Route path="/portal/my-bookings" element={<PortalRoute><PortalMyBookings /></PortalRoute>} />
-          <Route path="/portal/learning-library" element={<PortalRoute><PortalLearningLibrary /></PortalRoute>} />
-          <Route path="/portal/ask-ai" element={<PortalRoute><PortalAskAI /></PortalRoute>} />
-          <Route path="/portal/certificates" element={<PortalRoute><PortalCertificates /></PortalRoute>} />
-          <Route path="/portal/support" element={<PortalRoute><PortalSupport /></PortalRoute>} />
-          <Route path="/portal/resources" element={<PortalRoute><PortalResources /></PortalRoute>} />
-          <Route path="/portal/coaching" element={<PortalRoute><PortalCoaching /></PortalRoute>} />
-          <Route path="/portal/cognassist" element={<PortalRoute><PortalCognassist /></PortalRoute>} />
-          <Route path="/portal/programme-calendar" element={<PortalRoute><PortalProgrammeCalendar /></PortalRoute>} />
-          {/* Portal admin routes */}
-          <Route path="/portal/admin" element={<PortalRoute><PortalAdminDashboard /></PortalRoute>} />
-          <Route path="/portal/admin/sessions" element={<PortalRoute><PortalSessionManager /></PortalRoute>} />
-          <Route path="/portal/admin/attendance" element={<PortalRoute><PortalAttendance /></PortalRoute>} />
-          <Route path="/portal/admin/content" element={<PortalRoute><PortalContentManager /></PortalRoute>} />
-          <Route path="/portal/admin/reporting" element={<PortalRoute><PortalReporting /></PortalRoute>} />
-          <Route path="/portal/admin/coaching" element={<PortalRoute><PortalCoachingAdmin /></PortalRoute>} />
-          <Route path="/portal/admin/cognassist" element={<PortalRoute><PortalCognassistAdmin /></PortalRoute>} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            <Route path="/knowledge-base" element={<KnowledgeBase />} />
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/ask-rich" element={<AskRich />} />
+            <Route path="/ask-rich/:slug" element={<QADetail />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/community-questions" element={<CommunityQuestions />} />
+            <Route path="/sources" element={<Sources />} />
+            <Route path="/case-studies" element={<CaseStudies />} />
+            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/for-employers" element={<ForEmployers />} />
+            <Route path="/for-public-sector" element={<ForPublicSector />} />
+            <Route path="/for-parents" element={<ForParents />} />
+            <Route path="/for-parents/presentation" element={<ParentPresentation />} />
+            <Route path="/admin" element={<AdminQA />} />
+            {/* Portal routes */}
+            <Route path="/portal" element={<PortalLogin />} />
+            <Route path="/portal/login" element={<PortalLogin />} />
+            <Route path="/portal/dashboard" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalDashboard /></PortalRoute></Suspense>} />
+            <Route path="/portal/book-session" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalBookSession /></PortalRoute></Suspense>} />
+            <Route path="/portal/my-bookings" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalMyBookings /></PortalRoute></Suspense>} />
+            <Route path="/portal/learning-library" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalLearningLibrary /></PortalRoute></Suspense>} />
+            <Route path="/portal/ask-ai" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalAskAI /></PortalRoute></Suspense>} />
+            <Route path="/portal/certificates" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalCertificates /></PortalRoute></Suspense>} />
+            <Route path="/portal/support" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalSupport /></PortalRoute></Suspense>} />
+            <Route path="/portal/resources" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalResources /></PortalRoute></Suspense>} />
+            <Route path="/portal/coaching" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalCoaching /></PortalRoute></Suspense>} />
+            <Route path="/portal/cognassist" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalCognassist /></PortalRoute></Suspense>} />
+            <Route path="/portal/programme-calendar" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalProgrammeCalendar /></PortalRoute></Suspense>} />
+            {/* Portal admin routes */}
+            <Route path="/portal/admin" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalAdminDashboard /></PortalRoute></Suspense>} />
+            <Route path="/portal/admin/sessions" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalSessionManager /></PortalRoute></Suspense>} />
+            <Route path="/portal/admin/attendance" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalAttendance /></PortalRoute></Suspense>} />
+            <Route path="/portal/admin/content" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalContentManager /></PortalRoute></Suspense>} />
+            <Route path="/portal/admin/reporting" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalReporting /></PortalRoute></Suspense>} />
+            <Route path="/portal/admin/coaching" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalCoachingAdmin /></PortalRoute></Suspense>} />
+            <Route path="/portal/admin/cognassist" element={<Suspense fallback={<PageFallback />}><PortalRoute><PortalCognassistAdmin /></PortalRoute></Suspense>} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </>
   );

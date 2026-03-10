@@ -12,9 +12,15 @@
     <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Preload primary font (display weight 700 = hero headlines) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap" as="style" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Preload hero image for LCP -->
+    <link rel="preload" as="image" href="/src/assets/hero/team-workshop.jpg" />
   </head>
   <body>
     <div id="root"></div>
