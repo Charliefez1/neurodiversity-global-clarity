@@ -54,21 +54,30 @@ const BlogPost = () => {
 
   return (
     <>
-      <SEOHead title={post.metaTitle} description={post.metaDescription} path={`/blog/${post.slug}`} type="article" />
+      <SEOHead title={post.metaTitle} description={post.metaDescription} path={`/blog/${post.slug}`} type="article" image={post.image} publishDate={post.publishDate} />
       <JsonLd data={{
         "@context": "https://schema.org",
         "@type": "Article",
         headline: post.title,
         description: post.metaDescription,
         datePublished: post.publishDate,
+        dateModified: post.publishDate,
+        image: post.image,
+        articleSection: post.category,
+        wordCount: post.content.split(/\s+/).length,
         author: [
-          { "@type": "Person", name: "Richard Ferriman", url: "https://www.linkedin.com/in/richardferriman/" },
-          { "@type": "Person", name: "Charlie Ferriman", url: "https://www.linkedin.com/in/charlieferriman/" },
+          { "@type": "Person", name: "Richard Ferriman", url: "https://www.linkedin.com/in/richardferriman/", jobTitle: "Co-founder, Neurodiversity Global" },
+          { "@type": "Person", name: "Charlie Ferriman", url: "https://www.linkedin.com/in/charlieferriman/", jobTitle: "Co-founder, Neurodiversity Global" },
         ],
-        publisher: { "@type": "Organization", name: "Neurodiversity Global", url: "https://www.neurodiversityglobal.com" },
-        mainEntityOfPage: `https://www.neurodiversityglobal.com/blog/${post.slug}`,
+        publisher: { "@type": "Organization", name: "Neurodiversity Global", url: "https://www.neurodiversityglobal.com", logo: { "@type": "ImageObject", url: "https://www.neurodiversityglobal.com/og-image.png" } },
+        mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.neurodiversityglobal.com/blog/${post.slug}` },
       }} />
       {faqJsonLd && <JsonLd data={faqJsonLd} />}
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://www.neurodiversityglobal.com/" },
+        { name: "Blog", url: "https://www.neurodiversityglobal.com/blog" },
+        { name: post.title, url: `https://www.neurodiversityglobal.com/blog/${post.slug}` },
+      ])} />
       <Navbar />
 
       {/* Hero with image */}

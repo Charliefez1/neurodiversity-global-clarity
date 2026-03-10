@@ -6,6 +6,8 @@ interface SEOHeadProps {
   path: string;
   type?: "website" | "article";
   noIndex?: boolean;
+  image?: string;
+  publishDate?: string;
 }
 
 /**
@@ -22,9 +24,12 @@ const SEOHead = ({
   path,
   type = "website",
   noIndex = false,
+  image,
+  publishDate,
 }: SEOHeadProps) => {
   const fullTitle = `${title} | Neurodiversity Global`;
   const canonicalUrl = `https://www.neurodiversityglobal.com${path}`;
+  const ogImage = image || "https://www.neurodiversityglobal.com/og-image.png";
 
   useEffect(() => {
     // Title
@@ -53,11 +58,20 @@ const SEOHead = ({
     setMeta("og:url", canonicalUrl, "property");
     setMeta("og:type", type, "property");
     setMeta("og:site_name", "Neurodiversity Global", "property");
+    setMeta("og:image", ogImage, "property");
 
     // Twitter
+    setMeta("twitter:card", "summary_large_image");
     setMeta("twitter:title", fullTitle);
     setMeta("twitter:description", description);
-  }, [fullTitle, description, canonicalUrl, type, noIndex]);
+    setMeta("twitter:image", ogImage);
+
+    // Article-specific meta
+    if (type === "article" && publishDate) {
+      setMeta("article:published_time", publishDate, "property");
+      setMeta("article:author", "https://www.linkedin.com/in/richardferriman/", "property");
+    }
+  }, [fullTitle, description, canonicalUrl, type, noIndex, ogImage, publishDate]);
 
   return null;
 };
