@@ -560,7 +560,7 @@ const WhatWeDo = () => {
         <section className="bg-background py-16 lg:py-24">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
             <RelevantWorkshops
-              workshopIds={["core-awareness", "champions", "managers", "leaders"]}
+              workshopIds={["awareness", "champions", "line-manager", "people-leader"]}
               title="Our core training programmes"
               description="Interactive, facilitator-led sessions delivered online or in person."
             />
