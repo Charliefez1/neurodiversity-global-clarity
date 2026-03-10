@@ -11,16 +11,16 @@ import conciergeTeam from "@/assets/concierge-team.png";
 import ndgLogo from "@/assets/logos/neurodiversity-global.png";
 import TrustIndicators from "@/components/TrustIndicators";
 
-import diverseWorkforce from "@/assets/industries/diverse-workforce.png";
-import mixedProfessions from "@/assets/industries/mixed-professions.png";
-import workshopTeam from "@/assets/workshop-hero-team.png";
-import communityWorkers from "@/assets/industries/community-workers.png";
+import teamGroupSelfie from "@/assets/hero/team-group-selfie.jpg";
+import teamConference from "@/assets/hero/team-conference.jpg";
+import keynoteSpeaking from "@/assets/hero/keynote-speaking.jpg";
+import umbrellaEvent from "@/assets/hero/umbrella-event.jpg";
 
 const collageImages = [
-  { src: diverseWorkforce, alt: "Diverse workforce collaborating together", offsetClass: "translate-y-4" },
-  { src: mixedProfessions, alt: "Professionals from mixed disciplines", offsetClass: "-translate-y-2" },
-  { src: workshopTeam, alt: "Team engaged in a neurodiversity workshop", offsetClass: "-translate-y-2" },
-  { src: communityWorkers, alt: "Community workers supporting inclusion", offsetClass: "translate-y-4" },
+  { src: teamGroupSelfie, alt: "Neurodiversity Global team group selfie", offsetClass: "translate-y-4" },
+  { src: keynoteSpeaking, alt: "Keynote presentation at Heritage Railway Association", offsetClass: "-translate-y-2" },
+  { src: teamConference, alt: "Team members at a neurodiversity conference", offsetClass: "-translate-y-2" },
+  { src: umbrellaEvent, alt: "Colourful ADHD Foundation umbrella display event", offsetClass: "translate-y-4" },
 ];
 
 const pathwayKeys = [
