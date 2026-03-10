@@ -1,21 +1,58 @@
 
-## Add Image Next to "The Challenge" Title
 
-### What will change
-The uploaded image (showing training stats and a Teams call) will be placed alongside the "The challenge" section header in the ProblemSection, creating a side-by-side layout on desktop.
+# Reduce padding and spacing across the homepage
 
-### Implementation
+The issue is consistent: sections use `py-20 lg:py-28` (80px/112px vertical padding), cards use `p-7 lg:p-8` or `p-7 lg:p-10`, and margins between header and content are `mb-12`/`mb-14`/`mb-16`. This creates an overly spacious, bloated feel.
 
-1. **Copy the uploaded image** into `src/assets/challenge-stats.png`
+## What changes
 
-2. **Update `src/components/ProblemSection.tsx`**:
-   - Import the image as an ES6 module
-   - Change the header area (currently `max-w-2xl mb-16`) from a single-column layout to a two-column grid on larger screens (`grid lg:grid-cols-2 gap-8 items-center mb-16`)
-   - Left column: keep the existing badge, h2 title, description text, and audio player
-   - Right column: display the image with `rounded-xl` styling, appropriate alt text, and responsive sizing
-   - On mobile, the image will stack below the title text
+**Section-level padding** — reduce vertical rhythm across all homepage sections:
 
-### Visual result
-- Desktop: title/text on the left, image on the right, side by side
-- Mobile: title/text on top, image below
-- The three problem cards underneath remain unchanged
+| Component | Current | Proposed |
+|-----------|---------|----------|
+| ServicesSection | `py-20 lg:py-28` | `py-12 lg:py-16` |
+| ImpactSection | `py-20 lg:py-28` | `py-12 lg:py-16` |
+| ProblemSection | `py-20 lg:py-28 pb-10 lg:pb-12` | `py-12 lg:py-16 pb-8 lg:pb-10` |
+| EvidenceSection | (similar) | `py-12 lg:py-16` |
+| InclusivePerformanceSection | (similar) | `py-12 lg:py-16` |
+| TrainingCatalogueBanner | `py-14 lg:py-20` | `py-10 lg:py-14` |
+| ResourcesSection | `py-16 lg:py-20` | `py-12 lg:py-16` |
+| FinalCTA | (similar) | `py-12 lg:py-16` |
+| HeroSection | `pt-16 lg:pt-24 pb-12 lg:pb-16` | `pt-12 lg:pt-16 pb-8 lg:pb-12` |
+| PageSection template | `py-16 lg:py-24` | `py-12 lg:py-16` |
+
+**Card-level padding** — tighten inner spacing:
+
+| Component | Current | Proposed |
+|-----------|---------|----------|
+| TrainingCatalogueBanner card | `p-7 lg:p-10` | `p-5 lg:p-7` |
+| Service cards | `p-7 lg:p-8` | `p-5 lg:p-6` |
+| Impact top cards | `p-5 lg:p-6` | `p-4 lg:p-5` |
+| Ask Rich CTA section | `py-14 lg:py-18` | `py-10 lg:py-12` |
+
+**Header margins** — reduce gap between section headers and content:
+
+| Location | Current | Proposed |
+|----------|---------|----------|
+| ServicesSection header | `mb-14` | `mb-8` |
+| ImpactSection header | `mb-12` | `mb-8` |
+| ProblemSection header | `mb-16` | `mb-10` |
+| PageSection template | `mb-12` | `mb-8` |
+
+## Files to edit
+
+- `src/components/ServicesSection.tsx`
+- `src/components/ImpactSection.tsx`
+- `src/components/ProblemSection.tsx`
+- `src/components/EvidenceSection.tsx`
+- `src/components/InclusivePerformanceSection.tsx`
+- `src/components/TrainingCatalogueBanner.tsx`
+- `src/components/ResourcesSection.tsx`
+- `src/components/FinalCTA.tsx`
+- `src/components/HeroSection.tsx`
+- `src/components/FeaturedClient.tsx`
+- `src/components/templates/PageSection.tsx`
+- `src/pages/Index.tsx` (Ask Rich CTA padding)
+
+All changes are class string updates only — no structural or logic changes.
+
