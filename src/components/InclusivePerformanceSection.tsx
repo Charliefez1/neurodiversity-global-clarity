@@ -213,8 +213,8 @@ const InclusivePerformanceSection = () => {
           Watch the stages unfold, or use the controls to explore at your own pace.
         </p>
 
-        {/* ── Chart ──────────────────────────────────────── */}
-        <div className="relative w-full">
+        {/* ── Chart (constrained width) ──────────────────── */}
+        <div className="relative w-full max-w-[960px]">
           <span
             className="absolute top-1/2 -translate-y-1/2 -rotate-90 origin-center text-sm font-display font-bold tracking-wide whitespace-nowrap select-none text-primary-foreground"
             style={{ left: "-44px" }}
