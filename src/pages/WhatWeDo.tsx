@@ -13,6 +13,12 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { NEURO_COLOURS } from "@/data/neuroColours";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   AlertTriangle,
   Target,
   GraduationCap,
@@ -27,6 +33,11 @@ import {
   Zap,
   Lightbulb,
   BarChart3,
+  MessageSquare,
+  LayoutGrid,
+  Compass,
+  Activity,
+  HeartHandshake,
 } from "lucide-react";
 import systemsImg from "@/assets/what-we-do-systems.jpg";
 import workshopImg from "@/assets/workshop-team-activity.jpg";
@@ -471,43 +482,201 @@ const WhatWeDo = () => {
           </div>
         </section>
 
-        {/* ═══════════ IMPLEMENTATION TOOLS — dark section ═══════════ */}
+        {/* ═══════════ IMPLEMENTATION TOOLS — accordion section ═══════════ */}
         <section id="tools" className="bg-primary py-20 lg:py-28" aria-labelledby="tools-heading">
           <div className="mx-auto max-w-wide px-6 lg:px-10">
-            <div className="max-w-2xl mb-14">
+            <div className="max-w-2xl mb-10">
               <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
                 Practical tools
               </p>
               <h2 id="tools-heading" className="font-display font-bold text-2xl md:text-3xl leading-tight text-primary-foreground">
-                Understanding is not enough.{" "}
+                Awareness is the easy part.{" "}
                 <span className="text-accent">Organisations need tools that work.</span>
               </h2>
+              <p className="mt-4 text-base text-primary-foreground/70 leading-relaxed">
+                Most organisations now understand that neurodiversity exists. Very few know what to actually do about it. We focus on practical tools that remove friction from how work actually happens.
+              </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {[
-                { text: "Strengths and challenges mapping", icon: BarChart3 },
-                { text: "Communication tools for managers", icon: Settings },
-                { text: "Inclusive meeting frameworks", icon: Users },
-                { text: "Workplace adjustment guidance", icon: Wrench },
-                { text: "Organisational benchmarking", icon: TrendingUp },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, margin: "-40px" }}
-                  variants={fadeUp}
-                  className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 p-5 flex gap-3 items-center hover:bg-primary-foreground/[0.1] transition-colors"
-                >
-                  <div className="w-9 h-9 rounded-lg bg-accent/15 flex items-center justify-center shrink-0">
-                    <item.icon size={16} className="text-accent" />
-                  </div>
-                  <p className="text-sm text-primary-foreground font-display font-bold">{item.text}</p>
-                </motion.div>
-              ))}
+            <div className="grid lg:grid-cols-2 gap-6">
+              {/* Left column */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <Accordion type="single" collapsible className="space-y-3">
+                  {[
+                    {
+                      id: "strengths",
+                      icon: BarChart3,
+                      colour: NEURO_COLOURS[0],
+                      title: "Strengths & Challenges Mapping",
+                      summary: "Understand how each person actually works — not through labels, but through a structured framework.",
+                      bullets: ["Cognitive strengths", "Areas where work becomes harder", "Communication preferences", "Environmental factors", "Energy and focus patterns"],
+                      outcome: "Better task design, clearer expectations, and stronger performance across the team.",
+                    },
+                    {
+                      id: "communication",
+                      icon: MessageSquare,
+                      colour: NEURO_COLOURS[1],
+                      title: "Communication Tools for Managers",
+                      summary: "Practical tools that improve clarity immediately and reduce workplace tension from unclear communication.",
+                      bullets: ["Structured task briefings", "Clear expectation frameworks", "Written follow-up methods", "Feedback approaches that remove ambiguity", "Strategies to reduce cognitive overload"],
+                      outcome: "When communication improves, performance improves.",
+                    },
+                    {
+                      id: "meetings",
+                      icon: LayoutGrid,
+                      colour: NEURO_COLOURS[2],
+                      title: "Inclusive Meeting Frameworks",
+                      summary: "Simple changes that transform participation — because meetings are one of the least inclusive parts of the workplace.",
+                      bullets: ["Agendas shared in advance", "Structured discussion formats", "Visual or written support where needed", "Clear decision-making processes", "Defined actions and summaries"],
+                      outcome: "Meetings become shorter, clearer, and more productive — for everyone.",
+                    },
+                    {
+                      id: "adjustments",
+                      icon: Wrench,
+                      colour: NEURO_COLOURS[3],
+                      title: "Workplace Adjustment Guidance",
+                      summary: "Practical guidance that removes uncertainty for managers who want to help but lack clear direction.",
+                      bullets: ["Common adjustments for ADHD, autism, dyslexia and other differences", "Environmental changes that reduce overload", "Task design strategies that support focus", "Flexible working approaches", "Assistive technology options"],
+                      outcome: "Small changes often remove the biggest barriers.",
+                    },
+                  ].map((tool) => (
+                    <AccordionItem
+                      key={tool.id}
+                      value={tool.id}
+                      className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 px-5 overflow-hidden"
+                    >
+                      <AccordionTrigger className="hover:no-underline py-5 gap-3 text-primary-foreground [&>svg]:text-primary-foreground/50">
+                        <div className="flex items-center gap-3 text-left">
+                          <div
+                            className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+                            style={{ backgroundColor: `${tool.colour}20`, color: tool.colour }}
+                          >
+                            <tool.icon size={16} />
+                          </div>
+                          <div>
+                            <p className="font-display font-bold text-sm text-primary-foreground">{tool.title}</p>
+                            <p className="text-xs text-primary-foreground/50 mt-0.5 font-normal">{tool.summary}</p>
+                          </div>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="pb-5">
+                        <ul className="space-y-1.5 mb-3">
+                          {tool.bullets.map((b) => (
+                            <li key={b} className="flex items-start gap-2 text-sm text-primary-foreground/70">
+                              <span className="block w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: tool.colour }} />
+                              {b}
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="text-sm text-accent font-display font-bold">{tool.outcome}</p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </motion.div>
+
+              {/* Right column */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <Accordion type="single" collapsible className="space-y-3">
+                  {[
+                    {
+                      id: "benchmarking",
+                      icon: TrendingUp,
+                      colour: NEURO_COLOURS[4],
+                      title: "Organisational Benchmarking",
+                      summary: "Most organisations believe they are inclusive. Few actually measure it.",
+                      bullets: ["Leadership confidence", "Team psychological safety", "Communication clarity", "Workplace adjustment processes", "Employee willingness to disclose"],
+                      outcome: "Creates a practical baseline showing where meaningful change will have the greatest impact.",
+                    },
+                    {
+                      id: "psych-safety",
+                      icon: Activity,
+                      colour: NEURO_COLOURS[0],
+                      title: "Team Environment & Psychological Safety Mapping",
+                      summary: "Identify where friction exists inside teams before it becomes a retention problem.",
+                      bullets: ["Trust levels within teams", "Communication patterns", "Decision-making behaviour", "Confidence in raising concerns", "Support for different working styles"],
+                      outcome: "Helps leaders address issues early rather than after they become performance problems.",
+                    },
+                    {
+                      id: "role-design",
+                      icon: Compass,
+                      colour: NEURO_COLOURS[1],
+                      title: "Role & Task Design Framework",
+                      summary: "Many workplace difficulties are not capability issues — they are design issues.",
+                      bullets: ["How tasks are allocated across a team", "Where cognitive overload is created", "How instructions and priorities are communicated", "Which tasks require deep focus versus collaboration", "Where strengths can be better used"],
+                      outcome: "Clearer roles, reduced friction, improved productivity, and better use of strengths.",
+                    },
+                    {
+                      id: "conversation",
+                      icon: HeartHandshake,
+                      colour: NEURO_COLOURS[2],
+                      title: "Manager Conversation Guides",
+                      summary: "Structured frameworks for the conversations managers know they need to have but lack confidence to start.",
+                      bullets: ["Discussing workload challenges", "Exploring potential adjustments", "Supporting employees who may be masking", "Addressing communication misunderstandings", "Reviewing strengths and development areas"],
+                      outcome: "Earlier support, reduced escalation to HR, more confident managers, stronger trust.",
+                    },
+                  ].map((tool) => (
+                    <AccordionItem
+                      key={tool.id}
+                      value={tool.id}
+                      className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 px-5 overflow-hidden"
+                    >
+                      <AccordionTrigger className="hover:no-underline py-5 gap-3 text-primary-foreground [&>svg]:text-primary-foreground/50">
+                        <div className="flex items-center gap-3 text-left">
+                          <div
+                            className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
+                            style={{ backgroundColor: `${tool.colour}20`, color: tool.colour }}
+                          >
+                            <tool.icon size={16} />
+                          </div>
+                          <div>
+                            <p className="font-display font-bold text-sm text-primary-foreground">{tool.title}</p>
+                            <p className="text-xs text-primary-foreground/50 mt-0.5 font-normal">{tool.summary}</p>
+                          </div>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="pb-5">
+                        <ul className="space-y-1.5 mb-3">
+                          {tool.bullets.map((b) => (
+                            <li key={b} className="flex items-start gap-2 text-sm text-primary-foreground/70">
+                              <span className="block w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: tool.colour }} />
+                              {b}
+                            </li>
+                          ))}
+                        </ul>
+                        <p className="text-sm text-accent font-display font-bold">{tool.outcome}</p>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </motion.div>
             </div>
+
+            {/* Bottom statement */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="mt-10 rounded-xl border border-accent/20 bg-accent/10 p-6 max-w-xl"
+            >
+              <p className="font-display font-bold text-base text-primary-foreground">
+                Many organisations stop at awareness. We focus on what happens next.
+              </p>
+              <p className="text-sm text-primary-foreground/65 mt-1">
+                Neuroinclusion only matters if it improves how work actually gets done.
+              </p>
+            </motion.div>
           </div>
         </section>
 
