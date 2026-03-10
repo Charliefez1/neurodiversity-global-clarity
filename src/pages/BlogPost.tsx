@@ -37,12 +37,13 @@ const BlogPost = () => {
   if (!post) return <Navigate to="/blog" replace />;
 
   const enrichedContent = splitContentForCTA(post.content, post.category);
+  const faqItems = slug ? blogFaqs[slug] : undefined;
 
-  const faqJsonLd = post.faqItems && post.faqItems.length > 0
+  const faqJsonLd = faqItems && faqItems.length > 0
     ? {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: post.faqItems.map((faq) => ({
+        mainEntity: faqItems.map((faq) => ({
           "@type": "Question",
           name: faq.question,
           acceptedAnswer: { "@type": "Answer", text: faq.answer },
