@@ -550,7 +550,7 @@ const WhatWeDo = () => {
                       value={tool.id}
                       className="rounded-xl bg-primary-foreground/[0.06] border border-primary-foreground/10 px-5 overflow-hidden"
                     >
-                      <AccordionTrigger className="hover:no-underline py-5 gap-3">
+                      <AccordionTrigger className="hover:no-underline py-5 gap-3 text-primary-foreground [&>svg]:text-primary-foreground/50">
                         <div className="flex items-center gap-3 text-left">
                           <div
                             className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0"
