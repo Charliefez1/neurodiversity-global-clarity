@@ -19,6 +19,16 @@ const BlogPost = () => {
   return (
     <>
       <SEOHead title={post.metaTitle} description={post.metaDescription} path={`/blog/${post.slug}`} type="article" />
+      <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.metaDescription,
+        datePublished: post.publishDate,
+        author: { "@type": "Person", name: "Rich Daly" },
+        publisher: { "@type": "Organization", name: "Neurodiversity Global", url: "https://www.neurodiversityglobal.com" },
+        mainEntityOfPage: `https://www.neurodiversityglobal.com/blog/${post.slug}`,
+      }} />
       <Navbar />
 
       {/* Hero with image */}
