@@ -203,7 +203,7 @@ const InclusivePerformanceSection = () => {
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
           The model
         </p>
-        <h2 className="font-display font-bold text-2xl md:text-3xl tracking-tight leading-[1.1] mb-4 max-w-2xl">
+        <h2 className="font-display font-bold text-lg md:text-xl tracking-tight leading-[1.1] mb-4 max-w-2xl">
           Inclusive Performance
         </h2>
         <p className="text-base font-display font-semibold text-primary-foreground mb-1">
