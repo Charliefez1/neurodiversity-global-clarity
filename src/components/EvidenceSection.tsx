@@ -119,7 +119,7 @@ const EvidenceSection = () => {
         </div>
 
         {/* Divider */}
-        <div className="border-b border-white/10 mb-14 mt-10" />
+        <div className="border-b border-white/10 mb-10 mt-8" />
 
         {/* Testimonials — carousel */}
         <TestimonialCarousel testimonials={testimonials} variant="dark" />

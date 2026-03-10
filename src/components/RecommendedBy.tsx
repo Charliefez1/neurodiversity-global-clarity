@@ -26,13 +26,13 @@ const RecommendedBy = () => (
       <p className="font-display font-semibold text-xs uppercase tracking-[0.15em] text-accent mb-8">
         Recommended by
       </p>
-      <div className="flex flex-wrap items-center gap-10 lg:gap-14 mb-8">
+      <div className="flex flex-wrap items-center gap-8 lg:gap-12 mb-8">
         {partners.map((p) => (
           <img
             key={p.name}
             src={p.logo}
             alt={p.name}
-            className={`w-auto object-contain ${p.name === "Smartest Energy" ? "h-40" : "h-10"}`}
+            className={`w-auto object-contain ${p.name === "Smartest Energy" ? "h-16" : "h-10"}`}
           />
         ))}
       </div>

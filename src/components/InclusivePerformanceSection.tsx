@@ -393,7 +393,7 @@ const InclusivePerformanceSection = () => {
         </div>
 
         {/* ── Navigation ────────────────────────────────── */}
-        <div className="mt-8 flex items-center gap-3">
+        <div className="mt-6 flex items-center gap-3">
           {/* Back */}
           <button
             onClick={handlePrev}

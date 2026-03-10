@@ -73,7 +73,7 @@ const ProblemSection = () => {
           {problems.map((p, idx) => (
             <article
               key={p.title}
-              className="rounded-xl border border-white/15 bg-white/10 backdrop-blur-md p-7 lg:p-8 shadow-sm hover:shadow-md transition-shadow"
+              className="rounded-xl border border-white/15 bg-white/10 backdrop-blur-md p-5 lg:p-6 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="w-10 h-10 rounded-md flex items-center justify-center mb-5" style={{ backgroundColor: `${NEURO_COLOURS[idx]}/20`.replace(')', '/0.2)').replace('hsl', 'hsla') }}>
                 <p.icon size={20} style={{ color: NEURO_COLOURS[idx] }} aria-hidden="true" />

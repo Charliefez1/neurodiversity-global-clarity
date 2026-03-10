@@ -247,7 +247,7 @@ const HeroSection = () => {
                  <Link
                    key={p.titleKey}
                    to={p.href}
-                   className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-7 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                   className="group flex flex-col rounded-xl border border-primary-foreground/12 bg-primary-foreground/[0.06] p-5 hover:bg-primary-foreground/[0.12] hover:border-primary-foreground/20 transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                  >
                    <div className="flex items-center gap-3 mb-3">
                      <p.icon size={20} className={`${p.accent} shrink-0`} aria-hidden="true" />
