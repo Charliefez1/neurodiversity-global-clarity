@@ -112,7 +112,7 @@ const ImpactSection = () => {
         {/* ── Top headline cards ── */}
         <div className="grid md:grid-cols-2 gap-4 mb-4">
           {/* Workforce card */}
-          <div className="relative overflow-hidden rounded-2xl border border-accent/40 bg-primary-foreground/[0.06] p-5 lg:p-6">
+          <div className="relative overflow-hidden rounded-2xl border border-accent/40 bg-primary-foreground/[0.06] p-4 lg:p-5">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 rounded-lg bg-accent/15 flex items-center justify-center">
                 <Users size={16} className="text-accent" />
