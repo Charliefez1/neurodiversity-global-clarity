@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TrainingCatalogueBanner from "@/components/TrainingCatalogueBanner";
 import PageContents from "@/components/PageContents";
-import NeuroFrameworkSection from "@/components/NeuroFrameworkSection";
+
 import InclusivePerformanceSection from "@/components/InclusivePerformanceSection";
 import ProblemSection from "@/components/ProblemSection";
 import challengeBg from "@/assets/challenge-bg.png";
@@ -21,7 +21,7 @@ import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import JsonLd, { organisationSchema } from "@/components/JsonLd";
 import NewsHeadlines from "@/components/NewsHeadlines";
-import AskQuestionCompact from "@/components/AskQuestionCompact";
+
 import { RegisterSections } from "@/contexts/PageSectionsContext";
 import { AlertTriangle, Settings, TrendingUp, Award, Heart, Phone, Sparkles, BookOpen, ArrowRight } from "lucide-react";
 
@@ -98,19 +98,11 @@ const Index = () => {
         </div>
       </div>
       <FeaturedClient />
-      <NeuroFrameworkSection />
       <InclusivePerformanceSection />
 
       <FinalCTA />
       
       <ResourcesSection />
-      <section className="py-12 lg:py-16 bg-muted">
-        <div className="mx-auto max-w-wide px-6 lg:px-10">
-          <div className="max-w-2xl mx-auto">
-            <AskQuestionCompact />
-          </div>
-        </div>
-      </section>
       <Footer />
     </main>
   );

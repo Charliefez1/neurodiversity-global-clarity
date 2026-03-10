@@ -39,12 +39,12 @@ const resources = [
 ];
 
 const ResourcesSection = () => (
-  <section id="resources" className="bg-warm-stone text-foreground py-16 lg:py-20">
+  <section id="resources" className="bg-primary text-primary-foreground py-16 lg:py-20">
     <div className="mx-auto max-w-wide px-6 lg:px-10">
-      <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">
+      <p className="font-display font-bold text-xs uppercase tracking-[0.15em] text-primary-foreground/40 mb-3">
         Resources
       </p>
-      <h2 className="font-display font-bold text-lg md:text-xl leading-tight mb-8">
+      <h2 className="font-display font-bold text-lg md:text-xl leading-tight text-primary-foreground mb-8">
         Key resources from our team
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -53,7 +53,7 @@ const ResourcesSection = () => (
             key={resource.title}
             href={resource.href}
             {...(resource.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            className="group flex flex-col rounded-xl border border-border bg-background/60 overflow-hidden hover:bg-background hover:border-border transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            className="group flex flex-col rounded-xl border border-primary-foreground/10 bg-primary-foreground/[0.06] overflow-hidden hover:bg-primary-foreground/[0.1] transition-all shadow-sm hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <div className="aspect-[16/10] overflow-hidden">
               <img
@@ -66,8 +66,8 @@ const ResourcesSection = () => (
               <span className="inline-block self-start px-2.5 py-1 rounded-md bg-accent/15 text-accent text-[11px] font-display font-bold uppercase tracking-wider mb-3">
                 {resource.badge}
               </span>
-              <h3 className="font-display font-bold text-sm leading-tight mb-2">{resource.title}</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed flex-1">{resource.description}</p>
+              <h3 className="font-display font-bold text-sm leading-tight mb-2 text-primary-foreground">{resource.title}</h3>
+              <p className="text-xs text-primary-foreground/60 leading-relaxed flex-1">{resource.description}</p>
               <span className="mt-4 inline-flex items-center gap-1.5 text-accent text-xs font-semibold group-hover:gap-2.5 transition-all">
                 {resource.external ? "Visit" : "Explore"} <ArrowRight size={14} aria-hidden="true" />
               </span>

@@ -8,7 +8,8 @@ const schema = z.object({
   question: z.string().trim().min(10, "Please write at least 10 characters").max(2000, "Maximum 2000 characters"),
 });
 
-const AskQuestionCompact = () => {
+const AskQuestionCompact = ({ variant = "light" }: { variant?: "light" | "dark" }) => {
+  const isDark = variant === "dark";
   const [value, setValue] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
@@ -53,10 +54,10 @@ const AskQuestionCompact = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-card border border-border rounded-xl p-4 shadow-md">
+    <form onSubmit={handleSubmit} className={`rounded-xl p-4 shadow-md ${isDark ? "bg-primary-foreground/[0.06] border border-primary-foreground/10" : "bg-card border border-border"}`}>
       <div className="flex items-center gap-2 mb-3">
         <MessageCircle size={14} className="text-accent" />
-        <span className="text-xs font-display font-bold uppercase tracking-widest text-muted-foreground">
+        <span className={`text-xs font-display font-bold uppercase tracking-widest ${isDark ? "text-primary-foreground/50" : "text-muted-foreground"}`}>
           Share your experience
         </span>
       </div>

@@ -1,5 +1,6 @@
 import { useExperienceMode } from "@/contexts/ExperienceModeContext";
 import SectionAudio from "@/components/SectionAudio";
+import AskQuestionCompact from "@/components/AskQuestionCompact";
 import { TrendingUp, Users, Shield, Zap, Award, BarChart3, PieChart, Activity } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
@@ -245,6 +246,11 @@ const ImpactSection = () => {
         <p className="mt-6 text-xs text-primary-foreground/35">
           Figures are indicative and based on aggregated client-reported data and published research including McKinsey (2024), Birkbeck University, and Neurodiversity in Business. Individual outcomes vary by context and scope.
         </p>
+
+        {/* Share your experience */}
+        <div className="mt-8">
+          <AskQuestionCompact variant="dark" />
+        </div>
       </div>
     </section>
   );

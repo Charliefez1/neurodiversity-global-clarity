@@ -198,7 +198,7 @@ const InclusivePerformanceSection = () => {
 
   return (
     <section className="py-16 lg:py-24 bg-primary text-primary-foreground" id="inclusive-performance">
-      <div className="mx-auto max-w-[960px] px-6">
+      <div className="mx-auto max-w-wide px-6 lg:px-10">
         {/* Section header */}
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
           The model
@@ -376,7 +376,7 @@ const InclusivePerformanceSection = () => {
             <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3">
               {currentNarrative.heading}
             </h3>
-            <p className="text-sm md:text-base text-primary-foreground/75 leading-relaxed max-w-[60ch]">
+            <p className="text-sm md:text-base text-primary-foreground/75 leading-relaxed max-w-[80ch]">
               {currentNarrative.description}
             </p>
           </div>
