@@ -85,7 +85,7 @@ const ImpactSection = () => {
   const outperform = useCountUp(42, 1200, visible);
 
   return (
-    <section ref={ref} id="impact" className="bg-primary text-primary-foreground py-20 lg:py-28" aria-labelledby="impact-heading">
+    <section ref={ref} id="impact" className="bg-primary text-primary-foreground py-12 lg:py-16" aria-labelledby="impact-heading">
       <div className="mx-auto max-w-wide px-6 lg:px-10">
 
         {/* Header row */}
