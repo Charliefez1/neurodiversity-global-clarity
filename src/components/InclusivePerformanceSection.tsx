@@ -110,7 +110,7 @@ function gauss(x: number) {
   return AMPLITUDE * Math.exp(-0.5 * ((x - PEAK) / SIGMA) ** 2);
 }
 
-const zoneEdges = [0, 100, 180, 260, 340, 420, 540, 600];
+const zoneEdges = [0, 95, 175, 255, 335, 415, 510, 600];
 
 function buildZonePath(zoneIndex: number): string {
   const x0 = zoneEdges[zoneIndex];
