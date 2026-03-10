@@ -197,7 +197,7 @@ const InclusivePerformanceSection = () => {
   const activeZoneSet = new Set(currentNarrative.activeZones);
 
   return (
-    <section className="py-16 lg:py-24 bg-background" id="inclusive-performance">
+    <section className="py-16 lg:py-24 bg-primary text-primary-foreground" id="inclusive-performance">
       <div className="mx-auto max-w-[960px] px-6">
         {/* Section header */}
         <p className="font-display font-bold text-sm uppercase tracking-[0.15em] text-accent mb-3">
@@ -206,10 +206,10 @@ const InclusivePerformanceSection = () => {
         <h2 className="font-display font-bold text-2xl md:text-3xl tracking-tight leading-[1.1] mb-4 max-w-2xl">
           Inclusive Performance
         </h2>
-        <p className="text-base font-display font-semibold text-foreground mb-1">
+        <p className="text-base font-display font-semibold text-primary-foreground mb-1">
           Most organisations are somewhere on this curve right now.
         </p>
-        <p className="text-sm text-foreground/80 mb-8">
+        <p className="text-sm text-primary-foreground/80 mb-8">
           Watch the stages unfold, or use the controls to explore at your own pace.
         </p>
 
@@ -228,10 +228,10 @@ const InclusivePerformanceSection = () => {
             aria-label="Inclusive Performance bell curve"
             role="img"
           >
-            <line x1="0" y1={BASE_Y} x2={W} y2={BASE_Y} stroke="currentColor" className="text-foreground/15" strokeWidth="1" />
-            <line x1="0" y1={BASE_Y} x2="0" y2="10" stroke="currentColor" className="text-foreground/15" strokeWidth="1" />
+            <line x1="0" y1={BASE_Y} x2={W} y2={BASE_Y} stroke="currentColor" className="text-primary-foreground/15" strokeWidth="1" />
+            <line x1="0" y1={BASE_Y} x2="0" y2="10" stroke="currentColor" className="text-primary-foreground/15" strokeWidth="1" />
 
-            <path d={fullCurvePath()} fill="none" stroke="currentColor" className="text-foreground/10" strokeWidth="1.5" />
+            <path d={fullCurvePath()} fill="none" stroke="currentColor" className="text-primary-foreground/10" strokeWidth="1.5" />
 
             {/* Zone fills */}
             {zones.map((zone, zi) => {
@@ -377,7 +377,7 @@ const InclusivePerformanceSection = () => {
             <h3 className="font-display font-bold text-xl md:text-2xl tracking-tight mb-3">
               {currentNarrative.heading}
             </h3>
-            <p className="text-sm md:text-base text-foreground/75 leading-relaxed max-w-[60ch]">
+            <p className="text-sm md:text-base text-primary-foreground/75 leading-relaxed max-w-[60ch]">
               {currentNarrative.description}
             </p>
           </div>
@@ -388,7 +388,7 @@ const InclusivePerformanceSection = () => {
           className="mt-6 transition-opacity duration-300"
           style={{ opacity: showCallout ? 1 : 0, pointerEvents: showCallout ? "auto" : "none" }}
         >
-          <p className="text-sm italic text-foreground/60 border-l-2 border-accent pl-4 max-w-[52ch]">
+          <p className="text-sm italic text-primary-foreground/60 border-l-2 border-accent pl-4 max-w-[52ch]">
             The goal is not to manage neurodivergent people better. It is to build systems that work for everyone.
           </p>
         </div>
@@ -398,7 +398,7 @@ const InclusivePerformanceSection = () => {
           {/* Back */}
           <button
             onClick={handlePrev}
-            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground/70 transition-colors"
             aria-label="Previous stage"
           >
             <ArrowLeft size={16} />
@@ -407,7 +407,7 @@ const InclusivePerformanceSection = () => {
           {/* Play/Pause */}
           <button
             onClick={() => setIsPlaying((p) => !p)}
-            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground/70 transition-colors"
             aria-label={isPlaying ? "Pause auto-play" : "Resume auto-play"}
           >
             {isPlaying ? <Pause size={16} /> : <Play size={16} />}
@@ -416,7 +416,7 @@ const InclusivePerformanceSection = () => {
           {/* Forward */}
           <button
             onClick={handleNext}
-            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted hover:bg-muted/80 text-muted-foreground transition-colors"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground/70 transition-colors"
             aria-label="Next stage"
           >
             <ArrowRight size={16} />
@@ -428,13 +428,13 @@ const InclusivePerformanceSection = () => {
               <button
                 key={i}
                 onClick={() => { setActiveStage(i); if (isPlaying) { clearTimer(); timerRef.current = setInterval(advance, AUTO_PLAY_MS); } }}
-                className={`h-1.5 rounded-full transition-all duration-300 ${i === activeStage ? "w-6 bg-accent" : "w-2 bg-foreground/15 hover:bg-foreground/25"}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${i === activeStage ? "w-6 bg-accent" : "w-2 bg-primary-foreground/15 hover:bg-primary-foreground/25"}`}
                 aria-label={`Go to stage ${i + 1}`}
               />
             ))}
           </div>
 
-          <span className="text-xs text-foreground/40 font-display font-semibold ml-auto">
+          <span className="text-xs text-primary-foreground/40 font-display font-semibold ml-auto">
             Stage {activeStage + 1} of 7
           </span>
         </div>
