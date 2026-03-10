@@ -1,7 +1,9 @@
-import { BookOpen, LayoutList, Volume2, Sun, Moon, Type, Zap } from "lucide-react";
+import { BookOpen, LayoutList, Volume2, Sun, Moon, Contrast, Type, Zap } from "lucide-react";
 import { useExperienceMode, type ExperienceMode } from "@/contexts/ExperienceModeContext";
 import { usePageSections } from "@/contexts/PageSectionsContext";
 import { useState, useEffect } from "react";
+
+type ThemeMode = "standard" | "light" | "dark";
 
 const modes: { value: ExperienceMode; label: string; icon: typeof BookOpen }[] = [
   { value: "read", label: "Read", icon: BookOpen },
