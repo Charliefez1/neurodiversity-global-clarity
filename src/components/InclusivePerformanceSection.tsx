@@ -78,7 +78,7 @@ const narrativeStages: NarrativeStage[] = [
   {
     heading: "Burnout",
     description:
-      "Burnout is not a personal failure. It is the predictable end point of a system that did not adapt. The cost to UK employers averages £2,646 per person per year in lost productivity and absence. Neurodiversity related employment tribunals have risen 164% in four years. By the time you are managing burnout, you have already lost.",
+      "Burnout is not a personal failure. It is the predictable end point of a system that did not adapt. Globally, burnout costs organisations an estimated 20% of workforce productivity, and neurodiversity related employment disputes have risen sharply in every major economy over the last four years. Absence, presenteeism, and attrition all increase when cognitive load is not managed. By the time you are managing burnout, you have already lost. The earlier you act, the lower the cost. To the person. To the team. To the organisation.",
     activeZones: [0, 1, 2, 3, 4, 5],
     newZone: 5,
     callout: "2× burnout risk. Tribunals up 164%.",
