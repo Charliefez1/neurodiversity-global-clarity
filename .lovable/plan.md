@@ -1,12 +1,21 @@
 
+## Add Image Next to "The Challenge" Title
 
-## Update Burnout copy in InclusivePerformanceSection
+### What will change
+The uploaded image (showing training stats and a Teams call) will be placed alongside the "The challenge" section header in the ProblemSection, creating a side-by-side layout on desktop.
 
-**File**: `src/components/InclusivePerformanceSection.tsx`, line 81
+### Implementation
 
-**Change**: Replace the current `description` string with the new globally-focused copy:
+1. **Copy the uploaded image** into `src/assets/challenge-stats.png`
 
-> Burnout is not a personal failure. It is the predictable end point of a system that did not adapt. Globally, burnout costs organisations an estimated 20% of workforce productivity, and neurodiversity related employment disputes have risen sharply in every major economy over the last four years. Absence, presenteeism, and attrition all increase when cognitive load is not managed. By the time you are managing burnout, you have already lost. The earlier you act, the lower the cost. To the person. To the team. To the organisation.
+2. **Update `src/components/ProblemSection.tsx`**:
+   - Import the image as an ES6 module
+   - Change the header area (currently `max-w-2xl mb-16`) from a single-column layout to a two-column grid on larger screens (`grid lg:grid-cols-2 gap-8 items-center mb-16`)
+   - Left column: keep the existing badge, h2 title, description text, and audio player
+   - Right column: display the image with `rounded-xl` styling, appropriate alt text, and responsive sizing
+   - On mobile, the image will stack below the title text
 
-Single line edit, no structural changes.
-
+### Visual result
+- Desktop: title/text on the left, image on the right, side by side
+- Mobile: title/text on top, image below
+- The three problem cards underneath remain unchanged
